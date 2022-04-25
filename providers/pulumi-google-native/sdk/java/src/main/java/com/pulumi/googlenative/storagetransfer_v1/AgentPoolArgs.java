@@ -30,6 +30,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bandwidthLimit")
     private @Nullable Output<BandwidthLimitArgs> bandwidthLimit;
 
+    /**
+     * @return Specifies the bandwidth limit details. If this field is unspecified, the default value is set as &#39;No Limit&#39;.
+     * 
+     */
     public Optional<Output<BandwidthLimitArgs>> bandwidthLimit() {
         return Optional.ofNullable(this.bandwidthLimit);
     }
@@ -41,6 +45,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Specifies the client-specified AgentPool description.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -52,6 +60,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Specifies a unique string that identifies the agent pool. Format: `projects/{project_id}/agentPools/{agent_pool_id}`
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -100,29 +112,65 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
             return agentPoolId(Output.of(agentPoolId));
         }
 
+        /**
+         * @param bandwidthLimit Specifies the bandwidth limit details. If this field is unspecified, the default value is set as &#39;No Limit&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthLimit(@Nullable Output<BandwidthLimitArgs> bandwidthLimit) {
             $.bandwidthLimit = bandwidthLimit;
             return this;
         }
 
+        /**
+         * @param bandwidthLimit Specifies the bandwidth limit details. If this field is unspecified, the default value is set as &#39;No Limit&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthLimit(BandwidthLimitArgs bandwidthLimit) {
             return bandwidthLimit(Output.of(bandwidthLimit));
         }
 
+        /**
+         * @param displayName Specifies the client-specified AgentPool description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Specifies the client-specified AgentPool description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param name Specifies a unique string that identifies the agent pool. Format: `projects/{project_id}/agentPools/{agent_pool_id}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Specifies a unique string that identifies the agent pool. Format: `projects/{project_id}/agentPools/{agent_pool_id}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

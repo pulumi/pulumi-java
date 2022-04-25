@@ -27,6 +27,10 @@ public final class HiveJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="continueOnFailure", required=true)
     private Boolean continueOnFailure;
 
+    /**
+     * @return Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
+     * 
+     */
     public Boolean continueOnFailure() {
         return this.continueOnFailure;
     }
@@ -38,6 +42,10 @@ public final class HiveJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="jarFileUris", required=true)
     private List<String> jarFileUris;
 
+    /**
+     * @return Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
+     * 
+     */
     public List<String> jarFileUris() {
         return this.jarFileUris;
     }
@@ -49,6 +57,10 @@ public final class HiveJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="properties", required=true)
     private Map<String,String> properties;
 
+    /**
+     * @return Optional. A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.
+     * 
+     */
     public Map<String,String> properties() {
         return this.properties;
     }
@@ -60,6 +72,10 @@ public final class HiveJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="queryFileUri", required=true)
     private String queryFileUri;
 
+    /**
+     * @return The HCFS URI of the script that contains Hive queries.
+     * 
+     */
     public String queryFileUri() {
         return this.queryFileUri;
     }
@@ -71,6 +87,10 @@ public final class HiveJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="queryList", required=true)
     private QueryListResponse queryList;
 
+    /**
+     * @return A list of queries.
+     * 
+     */
     public QueryListResponse queryList() {
         return this.queryList;
     }
@@ -82,6 +102,10 @@ public final class HiveJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scriptVariables", required=true)
     private Map<String,String> scriptVariables;
 
+    /**
+     * @return Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name=&#34;value&#34;;).
+     * 
+     */
     public Map<String,String> scriptVariables() {
         return this.scriptVariables;
     }
@@ -115,35 +139,77 @@ public final class HiveJobResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HiveJobResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param continueOnFailure Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder continueOnFailure(Boolean continueOnFailure) {
             $.continueOnFailure = continueOnFailure;
             return this;
         }
 
+        /**
+         * @param jarFileUris Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(List<String> jarFileUris) {
             $.jarFileUris = jarFileUris;
             return this;
         }
 
+        /**
+         * @param jarFileUris Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
 
+        /**
+         * @param properties Optional. A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param queryFileUri The HCFS URI of the script that contains Hive queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryFileUri(String queryFileUri) {
             $.queryFileUri = queryFileUri;
             return this;
         }
 
+        /**
+         * @param queryList A list of queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryList(QueryListResponse queryList) {
             $.queryList = queryList;
             return this;
         }
 
+        /**
+         * @param scriptVariables Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name=&#34;value&#34;;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptVariables(Map<String,String> scriptVariables) {
             $.scriptVariables = scriptVariables;
             return this;

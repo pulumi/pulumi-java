@@ -23,6 +23,10 @@ public final class NodeConfigDefaultsResponse extends com.pulumi.resources.Invok
     @Import(name="gcfsConfig", required=true)
     private GcfsConfigResponse gcfsConfig;
 
+    /**
+     * @return GCFS (Google Container File System, a.k.a Riptide) options.
+     * 
+     */
     public GcfsConfigResponse gcfsConfig() {
         return this.gcfsConfig;
     }
@@ -51,6 +55,12 @@ public final class NodeConfigDefaultsResponse extends com.pulumi.resources.Invok
             $ = new NodeConfigDefaultsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gcfsConfig GCFS (Google Container File System, a.k.a Riptide) options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcfsConfig(GcfsConfigResponse gcfsConfig) {
             $.gcfsConfig = gcfsConfig;
             return this;

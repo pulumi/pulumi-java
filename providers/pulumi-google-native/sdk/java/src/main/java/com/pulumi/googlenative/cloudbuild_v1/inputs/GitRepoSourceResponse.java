@@ -23,6 +23,10 @@ public final class GitRepoSourceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ref", required=true)
     private String ref;
 
+    /**
+     * @return The branch or tag to use. Must start with &#34;refs/&#34; (required).
+     * 
+     */
     public String ref() {
         return this.ref;
     }
@@ -34,6 +38,10 @@ public final class GitRepoSourceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="repoType", required=true)
     private String repoType;
 
+    /**
+     * @return See RepoType below.
+     * 
+     */
     public String repoType() {
         return this.repoType;
     }
@@ -45,6 +53,10 @@ public final class GitRepoSourceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return The URI of the repo (required).
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -75,16 +87,34 @@ public final class GitRepoSourceResponse extends com.pulumi.resources.InvokeArgs
             $ = new GitRepoSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ref The branch or tag to use. Must start with &#34;refs/&#34; (required).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ref(String ref) {
             $.ref = ref;
             return this;
         }
 
+        /**
+         * @param repoType See RepoType below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoType(String repoType) {
             $.repoType = repoType;
             return this;
         }
 
+        /**
+         * @param uri The URI of the repo (required).
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

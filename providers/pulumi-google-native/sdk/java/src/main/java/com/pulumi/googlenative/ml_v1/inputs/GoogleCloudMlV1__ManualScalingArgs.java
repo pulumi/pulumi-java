@@ -26,6 +26,10 @@ public final class GoogleCloudMlV1__ManualScalingArgs extends com.pulumi.resourc
     @Import(name="nodes")
     private @Nullable Output<Integer> nodes;
 
+    /**
+     * @return The number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed, so the cost of operating this model will be proportional to `nodes` * number of hours since last billing cycle plus the cost for each prediction performed.
+     * 
+     */
     public Optional<Output<Integer>> nodes() {
         return Optional.ofNullable(this.nodes);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudMlV1__ManualScalingArgs extends com.pulumi.resourc
             $ = new GoogleCloudMlV1__ManualScalingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nodes The number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed, so the cost of operating this model will be proportional to `nodes` * number of hours since last billing cycle plus the cost for each prediction performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(@Nullable Output<Integer> nodes) {
             $.nodes = nodes;
             return this;
         }
 
+        /**
+         * @param nodes The number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed, so the cost of operating this model will be proportional to `nodes` * number of hours since last billing cycle plus the cost for each prediction performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(Integer nodes) {
             return nodes(Output.of(nodes));
         }

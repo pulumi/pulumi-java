@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="knowledgeBases", required=true)
     private Output<List<String>> knowledgeBases;
 
+    /**
+     * @return Knowledge bases to query. Format: `projects//locations//knowledgeBases/`. Currently, only one knowledge base is supported.
+     * 
+     */
     public Output<List<String>> knowledgeBases() {
         return this.knowledgeBases;
     }
@@ -53,15 +57,33 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
             $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param knowledgeBases Knowledge bases to query. Format: `projects//locations//knowledgeBases/`. Currently, only one knowledge base is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder knowledgeBases(Output<List<String>> knowledgeBases) {
             $.knowledgeBases = knowledgeBases;
             return this;
         }
 
+        /**
+         * @param knowledgeBases Knowledge bases to query. Format: `projects//locations//knowledgeBases/`. Currently, only one knowledge base is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder knowledgeBases(List<String> knowledgeBases) {
             return knowledgeBases(Output.of(knowledgeBases));
         }
 
+        /**
+         * @param knowledgeBases Knowledge bases to query. Format: `projects//locations//knowledgeBases/`. Currently, only one knowledge base is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder knowledgeBases(String... knowledgeBases) {
             return knowledgeBases(List.of(knowledgeBases));
         }

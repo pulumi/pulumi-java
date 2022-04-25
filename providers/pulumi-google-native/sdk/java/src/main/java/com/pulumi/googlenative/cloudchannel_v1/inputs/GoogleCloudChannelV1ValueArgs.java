@@ -29,6 +29,10 @@ public final class GoogleCloudChannelV1ValueArgs extends com.pulumi.resources.Re
     @Import(name="boolValue")
     private @Nullable Output<Boolean> boolValue;
 
+    /**
+     * @return Represents a boolean value.
+     * 
+     */
     public Optional<Output<Boolean>> boolValue() {
         return Optional.ofNullable(this.boolValue);
     }
@@ -40,6 +44,10 @@ public final class GoogleCloudChannelV1ValueArgs extends com.pulumi.resources.Re
     @Import(name="doubleValue")
     private @Nullable Output<Double> doubleValue;
 
+    /**
+     * @return Represents a double value.
+     * 
+     */
     public Optional<Output<Double>> doubleValue() {
         return Optional.ofNullable(this.doubleValue);
     }
@@ -51,6 +59,10 @@ public final class GoogleCloudChannelV1ValueArgs extends com.pulumi.resources.Re
     @Import(name="int64Value")
     private @Nullable Output<String> int64Value;
 
+    /**
+     * @return Represents an int64 value.
+     * 
+     */
     public Optional<Output<String>> int64Value() {
         return Optional.ofNullable(this.int64Value);
     }
@@ -62,6 +74,10 @@ public final class GoogleCloudChannelV1ValueArgs extends com.pulumi.resources.Re
     @Import(name="protoValue")
     private @Nullable Output<Map<String,String>> protoValue;
 
+    /**
+     * @return Represents an &#39;Any&#39; proto value.
+     * 
+     */
     public Optional<Output<Map<String,String>>> protoValue() {
         return Optional.ofNullable(this.protoValue);
     }
@@ -73,6 +89,10 @@ public final class GoogleCloudChannelV1ValueArgs extends com.pulumi.resources.Re
     @Import(name="stringValue")
     private @Nullable Output<String> stringValue;
 
+    /**
+     * @return Represents a string value.
+     * 
+     */
     public Optional<Output<String>> stringValue() {
         return Optional.ofNullable(this.stringValue);
     }
@@ -105,47 +125,107 @@ public final class GoogleCloudChannelV1ValueArgs extends com.pulumi.resources.Re
             $ = new GoogleCloudChannelV1ValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param boolValue Represents a boolean value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boolValue(@Nullable Output<Boolean> boolValue) {
             $.boolValue = boolValue;
             return this;
         }
 
+        /**
+         * @param boolValue Represents a boolean value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boolValue(Boolean boolValue) {
             return boolValue(Output.of(boolValue));
         }
 
+        /**
+         * @param doubleValue Represents a double value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doubleValue(@Nullable Output<Double> doubleValue) {
             $.doubleValue = doubleValue;
             return this;
         }
 
+        /**
+         * @param doubleValue Represents a double value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doubleValue(Double doubleValue) {
             return doubleValue(Output.of(doubleValue));
         }
 
+        /**
+         * @param int64Value Represents an int64 value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder int64Value(@Nullable Output<String> int64Value) {
             $.int64Value = int64Value;
             return this;
         }
 
+        /**
+         * @param int64Value Represents an int64 value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder int64Value(String int64Value) {
             return int64Value(Output.of(int64Value));
         }
 
+        /**
+         * @param protoValue Represents an &#39;Any&#39; proto value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protoValue(@Nullable Output<Map<String,String>> protoValue) {
             $.protoValue = protoValue;
             return this;
         }
 
+        /**
+         * @param protoValue Represents an &#39;Any&#39; proto value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protoValue(Map<String,String> protoValue) {
             return protoValue(Output.of(protoValue));
         }
 
+        /**
+         * @param stringValue Represents a string value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(@Nullable Output<String> stringValue) {
             $.stringValue = stringValue;
             return this;
         }
 
+        /**
+         * @param stringValue Represents a string value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(String stringValue) {
             return stringValue(Output.of(stringValue));
         }

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class NodeConfigDefaultsResponse {
     /**
-     * GCFS (Google Container File System, a.k.a Riptide) options.
+     * @return GCFS (Google Container File System, a.k.a Riptide) options.
      * 
      */
     private final GcfsConfigResponse gcfsConfig;
@@ -21,9 +21,9 @@ public final class NodeConfigDefaultsResponse {
     }
 
     /**
-     * GCFS (Google Container File System, a.k.a Riptide) options.
+     * @return GCFS (Google Container File System, a.k.a Riptide) options.
      * 
-    */
+     */
     public GcfsConfigResponse gcfsConfig() {
         return this.gcfsConfig;
     }

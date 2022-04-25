@@ -23,6 +23,10 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeResponse extends co
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return End of time range. Range is inclusive.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeResponse extends co
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Start of time range. Range is inclusive.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeResponse extends co
             $ = new GoogleCloudRetailV2alphaConditionTimeRangeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime End of time range. Range is inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param startTime Start of time range. Range is inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

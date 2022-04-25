@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class SourceInfoResponse {
     /**
-     * All files used during config generation.
+     * @return All files used during config generation.
      * 
      */
     private final List<Map<String,String>> sourceFiles;
@@ -23,9 +23,9 @@ public final class SourceInfoResponse {
     }
 
     /**
-     * All files used during config generation.
+     * @return All files used during config generation.
      * 
-    */
+     */
     public List<Map<String,String>> sourceFiles() {
         return this.sourceFiles;
     }

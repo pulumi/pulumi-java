@@ -26,6 +26,10 @@ public final class CapacityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publishMibPerSec")
     private @Nullable Output<Integer> publishMibPerSec;
 
+    /**
+     * @return Publish throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.
+     * 
+     */
     public Optional<Output<Integer>> publishMibPerSec() {
         return Optional.ofNullable(this.publishMibPerSec);
     }
@@ -37,6 +41,10 @@ public final class CapacityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscribeMibPerSec")
     private @Nullable Output<Integer> subscribeMibPerSec;
 
+    /**
+     * @return Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 32.
+     * 
+     */
     public Optional<Output<Integer>> subscribeMibPerSec() {
         return Optional.ofNullable(this.subscribeMibPerSec);
     }
@@ -66,20 +74,44 @@ public final class CapacityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CapacityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publishMibPerSec Publish throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishMibPerSec(@Nullable Output<Integer> publishMibPerSec) {
             $.publishMibPerSec = publishMibPerSec;
             return this;
         }
 
+        /**
+         * @param publishMibPerSec Publish throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishMibPerSec(Integer publishMibPerSec) {
             return publishMibPerSec(Output.of(publishMibPerSec));
         }
 
+        /**
+         * @param subscribeMibPerSec Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 32.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscribeMibPerSec(@Nullable Output<Integer> subscribeMibPerSec) {
             $.subscribeMibPerSec = subscribeMibPerSec;
             return this;
         }
 
+        /**
+         * @param subscribeMibPerSec Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 32.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscribeMibPerSec(Integer subscribeMibPerSec) {
             return subscribeMibPerSec(Output.of(subscribeMibPerSec));
         }

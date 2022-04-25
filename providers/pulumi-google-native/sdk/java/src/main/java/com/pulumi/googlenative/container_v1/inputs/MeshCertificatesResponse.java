@@ -23,6 +23,10 @@ public final class MeshCertificatesResponse extends com.pulumi.resources.InvokeA
     @Import(name="enableCertificates", required=true)
     private Boolean enableCertificates;
 
+    /**
+     * @return enable_certificates controls issuance of workload mTLS certificates. If set, the GKE Workload Identity Certificates controller and node agent will be deployed in the cluster, which can then be configured by creating a WorkloadCertificateConfig Custom Resource. Requires Workload Identity (workload_pool must be non-empty).
+     * 
+     */
     public Boolean enableCertificates() {
         return this.enableCertificates;
     }
@@ -51,6 +55,12 @@ public final class MeshCertificatesResponse extends com.pulumi.resources.InvokeA
             $ = new MeshCertificatesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableCertificates enable_certificates controls issuance of workload mTLS certificates. If set, the GKE Workload Identity Certificates controller and node agent will be deployed in the cluster, which can then be configured by creating a WorkloadCertificateConfig Custom Resource. Requires Workload Identity (workload_pool must be non-empty).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCertificates(Boolean enableCertificates) {
             $.enableCertificates = enableCertificates;
             return this;

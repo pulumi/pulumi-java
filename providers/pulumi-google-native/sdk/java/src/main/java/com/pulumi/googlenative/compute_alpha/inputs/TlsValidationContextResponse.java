@@ -24,6 +24,10 @@ public final class TlsValidationContextResponse extends com.pulumi.resources.Inv
     @Import(name="certificatePath", required=true)
     private String certificatePath;
 
+    /**
+     * @return The path to the file holding the CA certificate to validate the client or server certificate.
+     * 
+     */
     public String certificatePath() {
         return this.certificatePath;
     }
@@ -35,6 +39,10 @@ public final class TlsValidationContextResponse extends com.pulumi.resources.Inv
     @Import(name="sdsConfig", required=true)
     private SdsConfigResponse sdsConfig;
 
+    /**
+     * @return Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
+     * 
+     */
     public SdsConfigResponse sdsConfig() {
         return this.sdsConfig;
     }
@@ -46,6 +54,10 @@ public final class TlsValidationContextResponse extends com.pulumi.resources.Inv
     @Import(name="validationSource", required=true)
     private String validationSource;
 
+    /**
+     * @return Defines how TLS certificates are obtained.
+     * 
+     */
     public String validationSource() {
         return this.validationSource;
     }
@@ -76,16 +88,34 @@ public final class TlsValidationContextResponse extends com.pulumi.resources.Inv
             $ = new TlsValidationContextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificatePath The path to the file holding the CA certificate to validate the client or server certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificatePath(String certificatePath) {
             $.certificatePath = certificatePath;
             return this;
         }
 
+        /**
+         * @param sdsConfig Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sdsConfig(SdsConfigResponse sdsConfig) {
             $.sdsConfig = sdsConfig;
             return this;
         }
 
+        /**
+         * @param validationSource Defines how TLS certificates are obtained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationSource(String validationSource) {
             $.validationSource = validationSource;
             return this;

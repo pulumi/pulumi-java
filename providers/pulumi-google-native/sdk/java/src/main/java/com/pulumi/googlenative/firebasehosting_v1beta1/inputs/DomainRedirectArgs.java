@@ -25,6 +25,10 @@ public final class DomainRedirectArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
+    /**
+     * @return The domain name to redirect to.
+     * 
+     */
     public Output<String> domainName() {
         return this.domainName;
     }
@@ -36,6 +40,10 @@ public final class DomainRedirectArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
     private Output<DomainRedirectType> type;
 
+    /**
+     * @return The redirect status code.
+     * 
+     */
     public Output<DomainRedirectType> type() {
         return this.type;
     }
@@ -65,20 +73,44 @@ public final class DomainRedirectArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DomainRedirectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName The domain name to redirect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The domain name to redirect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param type The redirect status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<DomainRedirectType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The redirect status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(DomainRedirectType type) {
             return type(Output.of(type));
         }

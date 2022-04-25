@@ -24,6 +24,10 @@ public final class AuthenticatorGroupsConfigResponse extends com.pulumi.resource
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether this cluster should return group membership lookups during authentication using a group of security groups.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -35,6 +39,10 @@ public final class AuthenticatorGroupsConfigResponse extends com.pulumi.resource
     @Import(name="securityGroup", required=true)
     private String securityGroup;
 
+    /**
+     * @return The name of the security group-of-groups to be used. Only relevant if enabled = true.
+     * 
+     */
     public String securityGroup() {
         return this.securityGroup;
     }
@@ -64,11 +72,23 @@ public final class AuthenticatorGroupsConfigResponse extends com.pulumi.resource
             $ = new AuthenticatorGroupsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether this cluster should return group membership lookups during authentication using a group of security groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param securityGroup The name of the security group-of-groups to be used. Only relevant if enabled = true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroup(String securityGroup) {
             $.securityGroup = securityGroup;
             return this;

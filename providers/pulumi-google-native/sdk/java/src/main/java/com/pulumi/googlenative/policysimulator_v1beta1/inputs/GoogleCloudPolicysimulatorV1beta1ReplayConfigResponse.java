@@ -24,6 +24,10 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse extends
     @Import(name="logSource", required=true)
     private String logSource;
 
+    /**
+     * @return The logs to use as input for the Replay.
+     * 
+     */
     public String logSource() {
         return this.logSource;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse extends
     @Import(name="policyOverlay", required=true)
     private Map<String,String> policyOverlay;
 
+    /**
+     * @return A mapping of the resources that you want to simulate policies for and the policies that you want to simulate. Keys are the full resource names for the resources. For example, `//cloudresourcemanager.googleapis.com/projects/my-project`. For examples of full resource names for Google Cloud services, see https://cloud.google.com/iam/help/troubleshooter/full-resource-names. Values are Policy objects representing the policies that you want to simulate. Replays automatically take into account any IAM policies inherited through the resource hierarchy, and any policies set on descendant resources. You do not need to include these policies in the policy overlay.
+     * 
+     */
     public Map<String,String> policyOverlay() {
         return this.policyOverlay;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse extends
             $ = new GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logSource The logs to use as input for the Replay.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logSource(String logSource) {
             $.logSource = logSource;
             return this;
         }
 
+        /**
+         * @param policyOverlay A mapping of the resources that you want to simulate policies for and the policies that you want to simulate. Keys are the full resource names for the resources. For example, `//cloudresourcemanager.googleapis.com/projects/my-project`. For examples of full resource names for Google Cloud services, see https://cloud.google.com/iam/help/troubleshooter/full-resource-names. Values are Policy objects representing the policies that you want to simulate. Replays automatically take into account any IAM policies inherited through the resource hierarchy, and any policies set on descendant resources. You do not need to include these policies in the policy overlay.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyOverlay(Map<String,String> policyOverlay) {
             $.policyOverlay = policyOverlay;
             return this;

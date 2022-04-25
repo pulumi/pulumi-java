@@ -23,6 +23,10 @@ public final class GcpUserAccessBindingArgs extends com.pulumi.resources.Resourc
     @Import(name="accessLevels", required=true)
     private Output<List<String>> accessLevels;
 
+    /**
+     * @return Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: &#34;accessPolicies/9522/accessLevels/device_trusted&#34;
+     * 
+     */
     public Output<List<String>> accessLevels() {
         return this.accessLevels;
     }
@@ -34,6 +38,10 @@ public final class GcpUserAccessBindingArgs extends com.pulumi.resources.Resourc
     @Import(name="groupKey", required=true)
     private Output<String> groupKey;
 
+    /**
+     * @return Immutable. Google Group id whose members are subject to this binding&#39;s restrictions. See &#34;id&#34; in the [G Suite Directory API&#39;s Groups resource] (https://developers.google.com/admin-sdk/directory/v1/reference/groups#resource). If a group&#39;s email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: &#34;01d520gv4vjcrht&#34;
+     * 
+     */
     public Output<String> groupKey() {
         return this.groupKey;
     }
@@ -45,6 +53,10 @@ public final class GcpUserAccessBindingArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved characters (as defined by [RFC 3986 Section 2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the client during creation. Example: &#34;organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N&#34;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,33 +95,75 @@ public final class GcpUserAccessBindingArgs extends com.pulumi.resources.Resourc
             $ = new GcpUserAccessBindingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessLevels Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: &#34;accessPolicies/9522/accessLevels/device_trusted&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLevels(Output<List<String>> accessLevels) {
             $.accessLevels = accessLevels;
             return this;
         }
 
+        /**
+         * @param accessLevels Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: &#34;accessPolicies/9522/accessLevels/device_trusted&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLevels(List<String> accessLevels) {
             return accessLevels(Output.of(accessLevels));
         }
 
+        /**
+         * @param accessLevels Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: &#34;accessPolicies/9522/accessLevels/device_trusted&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLevels(String... accessLevels) {
             return accessLevels(List.of(accessLevels));
         }
 
+        /**
+         * @param groupKey Immutable. Google Group id whose members are subject to this binding&#39;s restrictions. See &#34;id&#34; in the [G Suite Directory API&#39;s Groups resource] (https://developers.google.com/admin-sdk/directory/v1/reference/groups#resource). If a group&#39;s email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: &#34;01d520gv4vjcrht&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupKey(Output<String> groupKey) {
             $.groupKey = groupKey;
             return this;
         }
 
+        /**
+         * @param groupKey Immutable. Google Group id whose members are subject to this binding&#39;s restrictions. See &#34;id&#34; in the [G Suite Directory API&#39;s Groups resource] (https://developers.google.com/admin-sdk/directory/v1/reference/groups#resource). If a group&#39;s email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: &#34;01d520gv4vjcrht&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupKey(String groupKey) {
             return groupKey(Output.of(groupKey));
         }
 
+        /**
+         * @param name Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved characters (as defined by [RFC 3986 Section 2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the client during creation. Example: &#34;organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved characters (as defined by [RFC 3986 Section 2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the client during creation. Example: &#34;organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

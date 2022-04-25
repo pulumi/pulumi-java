@@ -24,6 +24,10 @@ public final class EncryptionInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="encryptionStatus", required=true)
     private StatusResponse encryptionStatus;
 
+    /**
+     * @return If present, the status of a recent encrypt/decrypt call on underlying data for this database or backup. Regardless of status, data is always encrypted at rest.
+     * 
+     */
     public StatusResponse encryptionStatus() {
         return this.encryptionStatus;
     }
@@ -35,6 +39,10 @@ public final class EncryptionInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="encryptionType", required=true)
     private String encryptionType;
 
+    /**
+     * @return The type of encryption.
+     * 
+     */
     public String encryptionType() {
         return this.encryptionType;
     }
@@ -46,6 +54,10 @@ public final class EncryptionInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="kmsKeyVersion", required=true)
     private String kmsKeyVersion;
 
+    /**
+     * @return A Cloud KMS key version that is being used to protect the database or backup.
+     * 
+     */
     public String kmsKeyVersion() {
         return this.kmsKeyVersion;
     }
@@ -76,16 +88,34 @@ public final class EncryptionInfoResponse extends com.pulumi.resources.InvokeArg
             $ = new EncryptionInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionStatus If present, the status of a recent encrypt/decrypt call on underlying data for this database or backup. Regardless of status, data is always encrypted at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionStatus(StatusResponse encryptionStatus) {
             $.encryptionStatus = encryptionStatus;
             return this;
         }
 
+        /**
+         * @param encryptionType The type of encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionType(String encryptionType) {
             $.encryptionType = encryptionType;
             return this;
         }
 
+        /**
+         * @param kmsKeyVersion A Cloud KMS key version that is being used to protect the database or backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyVersion(String kmsKeyVersion) {
             $.kmsKeyVersion = kmsKeyVersion;
             return this;

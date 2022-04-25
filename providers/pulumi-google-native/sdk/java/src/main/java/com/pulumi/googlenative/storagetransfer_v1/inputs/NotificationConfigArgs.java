@@ -29,6 +29,10 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="eventTypes")
     private @Nullable Output<List<NotificationConfigEventTypesItem>> eventTypes;
 
+    /**
+     * @return Event types for which a notification is desired. If empty, send notifications for all event types.
+     * 
+     */
     public Optional<Output<List<NotificationConfigEventTypesItem>>> eventTypes() {
         return Optional.ofNullable(this.eventTypes);
     }
@@ -40,6 +44,10 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="payloadFormat", required=true)
     private Output<NotificationConfigPayloadFormat> payloadFormat;
 
+    /**
+     * @return The desired format of the notification message payloads.
+     * 
+     */
     public Output<NotificationConfigPayloadFormat> payloadFormat() {
         return this.payloadFormat;
     }
@@ -51,6 +59,10 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="pubsubTopic", required=true)
     private Output<String> pubsubTopic;
 
+    /**
+     * @return The `Topic.name` of the Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format results in an INVALID_ARGUMENT error.
+     * 
+     */
     public Output<String> pubsubTopic() {
         return this.pubsubTopic;
     }
@@ -81,33 +93,75 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
             $ = new NotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventTypes Event types for which a notification is desired. If empty, send notifications for all event types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTypes(@Nullable Output<List<NotificationConfigEventTypesItem>> eventTypes) {
             $.eventTypes = eventTypes;
             return this;
         }
 
+        /**
+         * @param eventTypes Event types for which a notification is desired. If empty, send notifications for all event types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTypes(List<NotificationConfigEventTypesItem> eventTypes) {
             return eventTypes(Output.of(eventTypes));
         }
 
+        /**
+         * @param eventTypes Event types for which a notification is desired. If empty, send notifications for all event types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTypes(NotificationConfigEventTypesItem... eventTypes) {
             return eventTypes(List.of(eventTypes));
         }
 
+        /**
+         * @param payloadFormat The desired format of the notification message payloads.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payloadFormat(Output<NotificationConfigPayloadFormat> payloadFormat) {
             $.payloadFormat = payloadFormat;
             return this;
         }
 
+        /**
+         * @param payloadFormat The desired format of the notification message payloads.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payloadFormat(NotificationConfigPayloadFormat payloadFormat) {
             return payloadFormat(Output.of(payloadFormat));
         }
 
+        /**
+         * @param pubsubTopic The `Topic.name` of the Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format results in an INVALID_ARGUMENT error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubTopic(Output<String> pubsubTopic) {
             $.pubsubTopic = pubsubTopic;
             return this;
         }
 
+        /**
+         * @param pubsubTopic The `Topic.name` of the Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format results in an INVALID_ARGUMENT error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubTopic(String pubsubTopic) {
             return pubsubTopic(Output.of(pubsubTopic));
         }

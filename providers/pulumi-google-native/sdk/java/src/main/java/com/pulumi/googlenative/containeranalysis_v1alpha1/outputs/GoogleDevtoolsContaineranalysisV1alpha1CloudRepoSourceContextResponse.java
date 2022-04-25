@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse {
     /**
-     * An alias, which may be a branch or tag.
+     * @return An alias, which may be a branch or tag.
      * 
      */
     private final GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext;
     /**
-     * The ID of the repo.
+     * @return The ID of the repo.
      * 
      */
     private final GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId;
     /**
-     * A revision ID.
+     * @return A revision ID.
      * 
      */
     private final String revisionId;
@@ -38,23 +38,23 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
     }
 
     /**
-     * An alias, which may be a branch or tag.
+     * @return An alias, which may be a branch or tag.
      * 
-    */
+     */
     public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext() {
         return this.aliasContext;
     }
     /**
-     * The ID of the repo.
+     * @return The ID of the repo.
      * 
-    */
+     */
     public GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId() {
         return this.repoId;
     }
     /**
-     * A revision ID.
+     * @return A revision ID.
      * 
-    */
+     */
     public String revisionId() {
         return this.revisionId;
     }

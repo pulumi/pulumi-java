@@ -23,6 +23,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="externalIp", required=true)
     private String externalIp;
 
+    /**
+     * @return The external IP to define in the NIC.
+     * 
+     */
     public String externalIp() {
         return this.externalIp;
     }
@@ -34,6 +38,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="internalIp", required=true)
     private String internalIp;
 
+    /**
+     * @return The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a named address resource full path.
+     * 
+     */
     public String internalIp() {
         return this.internalIp;
     }
@@ -45,6 +53,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="network", required=true)
     private String network;
 
+    /**
+     * @return The network to connect the NIC to.
+     * 
+     */
     public String network() {
         return this.network;
     }
@@ -56,6 +68,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="subnetwork", required=true)
     private String subnetwork;
 
+    /**
+     * @return The subnetwork to connect the NIC to.
+     * 
+     */
     public String subnetwork() {
         return this.subnetwork;
     }
@@ -87,21 +103,45 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
             $ = new NetworkInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param externalIp The external IP to define in the NIC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalIp(String externalIp) {
             $.externalIp = externalIp;
             return this;
         }
 
+        /**
+         * @param internalIp The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a named address resource full path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalIp(String internalIp) {
             $.internalIp = internalIp;
             return this;
         }
 
+        /**
+         * @param network The network to connect the NIC to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param subnetwork The subnetwork to connect the NIC to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(String subnetwork) {
             $.subnetwork = subnetwork;
             return this;

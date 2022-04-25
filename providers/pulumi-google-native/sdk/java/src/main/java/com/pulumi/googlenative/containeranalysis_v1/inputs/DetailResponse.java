@@ -25,6 +25,10 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="affectedCpeUri", required=true)
     private String affectedCpeUri;
 
+    /**
+     * @return The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability affects.
+     * 
+     */
     public String affectedCpeUri() {
         return this.affectedCpeUri;
     }
@@ -36,6 +40,10 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="affectedPackage", required=true)
     private String affectedPackage;
 
+    /**
+     * @return The package this vulnerability affects.
+     * 
+     */
     public String affectedPackage() {
         return this.affectedPackage;
     }
@@ -47,6 +55,10 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="affectedVersionEnd", required=true)
     private VersionResponse affectedVersionEnd;
 
+    /**
+     * @return The version number at the end of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: [1.0.0-1.1.0], [2.4.6-2.4.8] and [4.5.6-4.6.8]) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.
+     * 
+     */
     public VersionResponse affectedVersionEnd() {
         return this.affectedVersionEnd;
     }
@@ -58,6 +70,10 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="affectedVersionStart", required=true)
     private VersionResponse affectedVersionStart;
 
+    /**
+     * @return The version number at the start of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: [1.0.0-1.1.0], [2.4.6-2.4.8] and [4.5.6-4.6.8]) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.
+     * 
+     */
     public VersionResponse affectedVersionStart() {
         return this.affectedVersionStart;
     }
@@ -69,6 +85,10 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return A vendor-specific description of this vulnerability.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -80,6 +100,10 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fixedCpeUri", required=true)
     private String fixedCpeUri;
 
+    /**
+     * @return The distro recommended [CPE URI](https://cpe.mitre.org/specification/) to update to that contains a fix for this vulnerability. It is possible for this to be different from the affected_cpe_uri.
+     * 
+     */
     public String fixedCpeUri() {
         return this.fixedCpeUri;
     }
@@ -91,6 +115,10 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fixedPackage", required=true)
     private String fixedPackage;
 
+    /**
+     * @return The distro recommended package to update to that contains a fix for this vulnerability. It is possible for this to be different from the affected_package.
+     * 
+     */
     public String fixedPackage() {
         return this.fixedPackage;
     }
@@ -102,6 +130,10 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fixedVersion", required=true)
     private VersionResponse fixedVersion;
 
+    /**
+     * @return The distro recommended version to update to that contains a fix for this vulnerability. Setting this to VersionKind.MAXIMUM means no such version is yet available.
+     * 
+     */
     public VersionResponse fixedVersion() {
         return this.fixedVersion;
     }
@@ -113,6 +145,10 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isObsolete", required=true)
     private Boolean isObsolete;
 
+    /**
+     * @return Whether this detail is obsolete. Occurrences are expected not to point to obsolete details.
+     * 
+     */
     public Boolean isObsolete() {
         return this.isObsolete;
     }
@@ -124,6 +160,10 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="packageType", required=true)
     private String packageType;
 
+    /**
+     * @return The type of package; whether native or non native (e.g., ruby gems, node.js packages, etc.).
+     * 
+     */
     public String packageType() {
         return this.packageType;
     }
@@ -135,6 +175,10 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="severityName", required=true)
     private String severityName;
 
+    /**
+     * @return The distro assigned severity of this vulnerability.
+     * 
+     */
     public String severityName() {
         return this.severityName;
     }
@@ -146,6 +190,10 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="source", required=true)
     private String source;
 
+    /**
+     * @return The source from which the information in this Detail was obtained.
+     * 
+     */
     public String source() {
         return this.source;
     }
@@ -157,6 +205,10 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceUpdateTime", required=true)
     private String sourceUpdateTime;
 
+    /**
+     * @return The time this information was last changed at the source. This is an upstream timestamp from the underlying information source - e.g. Ubuntu security tracker.
+     * 
+     */
     public String sourceUpdateTime() {
         return this.sourceUpdateTime;
     }
@@ -168,6 +220,10 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vendor", required=true)
     private String vendor;
 
+    /**
+     * @return The name of the vendor of the product.
+     * 
+     */
     public String vendor() {
         return this.vendor;
     }
@@ -209,71 +265,155 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DetailResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param affectedCpeUri The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability affects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affectedCpeUri(String affectedCpeUri) {
             $.affectedCpeUri = affectedCpeUri;
             return this;
         }
 
+        /**
+         * @param affectedPackage The package this vulnerability affects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affectedPackage(String affectedPackage) {
             $.affectedPackage = affectedPackage;
             return this;
         }
 
+        /**
+         * @param affectedVersionEnd The version number at the end of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: [1.0.0-1.1.0], [2.4.6-2.4.8] and [4.5.6-4.6.8]) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affectedVersionEnd(VersionResponse affectedVersionEnd) {
             $.affectedVersionEnd = affectedVersionEnd;
             return this;
         }
 
+        /**
+         * @param affectedVersionStart The version number at the start of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: [1.0.0-1.1.0], [2.4.6-2.4.8] and [4.5.6-4.6.8]) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affectedVersionStart(VersionResponse affectedVersionStart) {
             $.affectedVersionStart = affectedVersionStart;
             return this;
         }
 
+        /**
+         * @param description A vendor-specific description of this vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param fixedCpeUri The distro recommended [CPE URI](https://cpe.mitre.org/specification/) to update to that contains a fix for this vulnerability. It is possible for this to be different from the affected_cpe_uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedCpeUri(String fixedCpeUri) {
             $.fixedCpeUri = fixedCpeUri;
             return this;
         }
 
+        /**
+         * @param fixedPackage The distro recommended package to update to that contains a fix for this vulnerability. It is possible for this to be different from the affected_package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedPackage(String fixedPackage) {
             $.fixedPackage = fixedPackage;
             return this;
         }
 
+        /**
+         * @param fixedVersion The distro recommended version to update to that contains a fix for this vulnerability. Setting this to VersionKind.MAXIMUM means no such version is yet available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedVersion(VersionResponse fixedVersion) {
             $.fixedVersion = fixedVersion;
             return this;
         }
 
+        /**
+         * @param isObsolete Whether this detail is obsolete. Occurrences are expected not to point to obsolete details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isObsolete(Boolean isObsolete) {
             $.isObsolete = isObsolete;
             return this;
         }
 
+        /**
+         * @param packageType The type of package; whether native or non native (e.g., ruby gems, node.js packages, etc.).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageType(String packageType) {
             $.packageType = packageType;
             return this;
         }
 
+        /**
+         * @param severityName The distro assigned severity of this vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severityName(String severityName) {
             $.severityName = severityName;
             return this;
         }
 
+        /**
+         * @param source The source from which the information in this Detail was obtained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param sourceUpdateTime The time this information was last changed at the source. This is an upstream timestamp from the underlying information source - e.g. Ubuntu security tracker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUpdateTime(String sourceUpdateTime) {
             $.sourceUpdateTime = sourceUpdateTime;
             return this;
         }
 
+        /**
+         * @param vendor The name of the vendor of the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendor(String vendor) {
             $.vendor = vendor;
             return this;

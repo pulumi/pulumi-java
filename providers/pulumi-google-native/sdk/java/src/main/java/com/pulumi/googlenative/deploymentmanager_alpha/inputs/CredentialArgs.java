@@ -28,6 +28,10 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="basicAuth")
     private @Nullable Output<BasicAuthArgs> basicAuth;
 
+    /**
+     * @return Basic Auth Credential, only used by TypeProvider.
+     * 
+     */
     public Optional<Output<BasicAuthArgs>> basicAuth() {
         return Optional.ofNullable(this.basicAuth);
     }
@@ -39,6 +43,10 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
     private @Nullable Output<ServiceAccountArgs> serviceAccount;
 
+    /**
+     * @return Service Account Credential, only used by Deployment.
+     * 
+     */
     public Optional<Output<ServiceAccountArgs>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -50,6 +58,10 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="useProjectDefault")
     private @Nullable Output<Boolean> useProjectDefault;
 
+    /**
+     * @return Specify to use the project default credential, only supported by Deployment.
+     * 
+     */
     public Optional<Output<Boolean>> useProjectDefault() {
         return Optional.ofNullable(this.useProjectDefault);
     }
@@ -80,29 +92,65 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basicAuth Basic Auth Credential, only used by TypeProvider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicAuth(@Nullable Output<BasicAuthArgs> basicAuth) {
             $.basicAuth = basicAuth;
             return this;
         }
 
+        /**
+         * @param basicAuth Basic Auth Credential, only used by TypeProvider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicAuth(BasicAuthArgs basicAuth) {
             return basicAuth(Output.of(basicAuth));
         }
 
+        /**
+         * @param serviceAccount Service Account Credential, only used by Deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<ServiceAccountArgs> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount Service Account Credential, only used by Deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(ServiceAccountArgs serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
+        /**
+         * @param useProjectDefault Specify to use the project default credential, only supported by Deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useProjectDefault(@Nullable Output<Boolean> useProjectDefault) {
             $.useProjectDefault = useProjectDefault;
             return this;
         }
 
+        /**
+         * @param useProjectDefault Specify to use the project default credential, only supported by Deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useProjectDefault(Boolean useProjectDefault) {
             return useProjectDefault(Output.of(useProjectDefault));
         }

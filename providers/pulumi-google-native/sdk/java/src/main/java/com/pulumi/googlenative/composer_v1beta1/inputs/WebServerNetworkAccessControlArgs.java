@@ -27,6 +27,10 @@ public final class WebServerNetworkAccessControlArgs extends com.pulumi.resource
     @Import(name="allowedIpRanges")
     private @Nullable Output<List<AllowedIpRangeArgs>> allowedIpRanges;
 
+    /**
+     * @return A collection of allowed IP ranges with descriptions.
+     * 
+     */
     public Optional<Output<List<AllowedIpRangeArgs>>> allowedIpRanges() {
         return Optional.ofNullable(this.allowedIpRanges);
     }
@@ -55,15 +59,33 @@ public final class WebServerNetworkAccessControlArgs extends com.pulumi.resource
             $ = new WebServerNetworkAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedIpRanges A collection of allowed IP ranges with descriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedIpRanges(@Nullable Output<List<AllowedIpRangeArgs>> allowedIpRanges) {
             $.allowedIpRanges = allowedIpRanges;
             return this;
         }
 
+        /**
+         * @param allowedIpRanges A collection of allowed IP ranges with descriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedIpRanges(List<AllowedIpRangeArgs> allowedIpRanges) {
             return allowedIpRanges(Output.of(allowedIpRanges));
         }
 
+        /**
+         * @param allowedIpRanges A collection of allowed IP ranges with descriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedIpRanges(AllowedIpRangeArgs... allowedIpRanges) {
             return allowedIpRanges(List.of(allowedIpRanges));
         }

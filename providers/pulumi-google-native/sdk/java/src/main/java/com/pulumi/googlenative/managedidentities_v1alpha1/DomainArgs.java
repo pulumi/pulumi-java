@@ -25,6 +25,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="auditLogsEnabled")
     private @Nullable Output<Boolean> auditLogsEnabled;
 
+    /**
+     * @return Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is audit logs disabled.
+     * 
+     */
     public Optional<Output<Boolean>> auditLogsEnabled() {
         return Optional.ofNullable(this.auditLogsEnabled);
     }
@@ -36,6 +40,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizedNetworks")
     private @Nullable Output<List<String>> authorizedNetworks;
 
+    /**
+     * @return Optional. The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. Network can be added using UpdateDomain later. Domain is only available on network part of authorized_networks. Caller needs to make sure that CIDR subnets do not overlap between networks, else domain creation will fail.
+     * 
+     */
     public Optional<Output<List<String>>> authorizedNetworks() {
         return Optional.ofNullable(this.authorizedNetworks);
     }
@@ -54,6 +62,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. Resource labels to represent user provided metadata
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -65,6 +77,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locations", required=true)
     private Output<List<String>> locations;
 
+    /**
+     * @return Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
+     * 
+     */
     public Output<List<String>> locations() {
         return this.locations;
     }
@@ -76,6 +92,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedIdentitiesAdminName")
     private @Nullable Output<String> managedIdentitiesAdminName;
 
+    /**
+     * @return Optional. Name of customer-visible admin used to perform Active Directory operations. If not specified `setupadmin` would be used.
+     * 
+     */
     public Optional<Output<String>> managedIdentitiesAdminName() {
         return Optional.ofNullable(this.managedIdentitiesAdminName);
     }
@@ -94,6 +114,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reservedIpRange", required=true)
     private Output<String> reservedIpRange;
 
+    /**
+     * @return The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. Ranges must be unique and non-overlapping with existing subnets in [Domain].[authorized_networks].
+     * 
+     */
     public Output<String> reservedIpRange() {
         return this.reservedIpRange;
     }
@@ -129,24 +153,54 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DomainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auditLogsEnabled Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is audit logs disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditLogsEnabled(@Nullable Output<Boolean> auditLogsEnabled) {
             $.auditLogsEnabled = auditLogsEnabled;
             return this;
         }
 
+        /**
+         * @param auditLogsEnabled Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is audit logs disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditLogsEnabled(Boolean auditLogsEnabled) {
             return auditLogsEnabled(Output.of(auditLogsEnabled));
         }
 
+        /**
+         * @param authorizedNetworks Optional. The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. Network can be added using UpdateDomain later. Domain is only available on network part of authorized_networks. Caller needs to make sure that CIDR subnets do not overlap between networks, else domain creation will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedNetworks(@Nullable Output<List<String>> authorizedNetworks) {
             $.authorizedNetworks = authorizedNetworks;
             return this;
         }
 
+        /**
+         * @param authorizedNetworks Optional. The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. Network can be added using UpdateDomain later. Domain is only available on network part of authorized_networks. Caller needs to make sure that CIDR subnets do not overlap between networks, else domain creation will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedNetworks(List<String> authorizedNetworks) {
             return authorizedNetworks(Output.of(authorizedNetworks));
         }
 
+        /**
+         * @param authorizedNetworks Optional. The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. Network can be added using UpdateDomain later. Domain is only available on network part of authorized_networks. Caller needs to make sure that CIDR subnets do not overlap between networks, else domain creation will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedNetworks(String... authorizedNetworks) {
             return authorizedNetworks(List.of(authorizedNetworks));
         }
@@ -160,33 +214,75 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param labels Optional. Resource labels to represent user provided metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. Resource labels to represent user provided metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param locations Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(Output<List<String>> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(List<String> locations) {
             return locations(Output.of(locations));
         }
 
+        /**
+         * @param locations Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param managedIdentitiesAdminName Optional. Name of customer-visible admin used to perform Active Directory operations. If not specified `setupadmin` would be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedIdentitiesAdminName(@Nullable Output<String> managedIdentitiesAdminName) {
             $.managedIdentitiesAdminName = managedIdentitiesAdminName;
             return this;
         }
 
+        /**
+         * @param managedIdentitiesAdminName Optional. Name of customer-visible admin used to perform Active Directory operations. If not specified `setupadmin` would be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedIdentitiesAdminName(String managedIdentitiesAdminName) {
             return managedIdentitiesAdminName(Output.of(managedIdentitiesAdminName));
         }
@@ -200,11 +296,23 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param reservedIpRange The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. Ranges must be unique and non-overlapping with existing subnets in [Domain].[authorized_networks].
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservedIpRange(Output<String> reservedIpRange) {
             $.reservedIpRange = reservedIpRange;
             return this;
         }
 
+        /**
+         * @param reservedIpRange The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. Ranges must be unique and non-overlapping with existing subnets in [Domain].[authorized_networks].
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservedIpRange(String reservedIpRange) {
             return reservedIpRange(Output.of(reservedIpRange));
         }

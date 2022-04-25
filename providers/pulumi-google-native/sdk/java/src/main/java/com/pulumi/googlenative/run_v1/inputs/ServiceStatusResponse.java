@@ -28,6 +28,10 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="address", required=true)
     private AddressableResponse address;
 
+    /**
+     * @return From RouteStatus. Similar to url, information on where the service is available on HTTP.
+     * 
+     */
     public AddressableResponse address() {
         return this.address;
     }
@@ -39,6 +43,10 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="conditions", required=true)
     private List<GoogleCloudRunV1ConditionResponse> conditions;
 
+    /**
+     * @return Conditions communicates information about ongoing/complete reconciliation processes that bring the &#34;spec&#34; inline with the observed state of the world. Service-specific conditions include: * &#34;ConfigurationsReady&#34;: true when the underlying Configuration is ready. * &#34;RoutesReady&#34;: true when the underlying Route is ready. * &#34;Ready&#34;: true when both the underlying Route and Configuration are ready.
+     * 
+     */
     public List<GoogleCloudRunV1ConditionResponse> conditions() {
         return this.conditions;
     }
@@ -50,6 +58,10 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="latestCreatedRevisionName", required=true)
     private String latestCreatedRevisionName;
 
+    /**
+     * @return From ConfigurationStatus. LatestCreatedRevisionName is the last revision that was created from this Service&#39;s Configuration. It might not be ready yet, for that use LatestReadyRevisionName.
+     * 
+     */
     public String latestCreatedRevisionName() {
         return this.latestCreatedRevisionName;
     }
@@ -61,6 +73,10 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="latestReadyRevisionName", required=true)
     private String latestReadyRevisionName;
 
+    /**
+     * @return From ConfigurationStatus. LatestReadyRevisionName holds the name of the latest Revision stamped out from this Service&#39;s Configuration that has had its &#34;Ready&#34; condition become &#34;True&#34;.
+     * 
+     */
     public String latestReadyRevisionName() {
         return this.latestReadyRevisionName;
     }
@@ -72,6 +88,10 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="observedGeneration", required=true)
     private Integer observedGeneration;
 
+    /**
+     * @return ObservedGeneration is the &#39;Generation&#39; of the Route that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition&#39;s status is True or False.
+     * 
+     */
     public Integer observedGeneration() {
         return this.observedGeneration;
     }
@@ -83,6 +103,10 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="traffic", required=true)
     private List<TrafficTargetResponse> traffic;
 
+    /**
+     * @return From RouteStatus. Traffic holds the configured traffic distribution. These entries will always contain RevisionName references. When ConfigurationName appears in the spec, this will hold the LatestReadyRevisionName that we last observed.
+     * 
+     */
     public List<TrafficTargetResponse> traffic() {
         return this.traffic;
     }
@@ -94,6 +118,10 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return From RouteStatus. URL holds the url that will distribute traffic over the provided traffic targets. It generally has the form https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -128,44 +156,98 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
             $ = new ServiceStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address From RouteStatus. Similar to url, information on where the service is available on HTTP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(AddressableResponse address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param conditions Conditions communicates information about ongoing/complete reconciliation processes that bring the &#34;spec&#34; inline with the observed state of the world. Service-specific conditions include: * &#34;ConfigurationsReady&#34;: true when the underlying Configuration is ready. * &#34;RoutesReady&#34;: true when the underlying Route is ready. * &#34;Ready&#34;: true when both the underlying Route and Configuration are ready.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<GoogleCloudRunV1ConditionResponse> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Conditions communicates information about ongoing/complete reconciliation processes that bring the &#34;spec&#34; inline with the observed state of the world. Service-specific conditions include: * &#34;ConfigurationsReady&#34;: true when the underlying Configuration is ready. * &#34;RoutesReady&#34;: true when the underlying Route is ready. * &#34;Ready&#34;: true when both the underlying Route and Configuration are ready.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(GoogleCloudRunV1ConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param latestCreatedRevisionName From ConfigurationStatus. LatestCreatedRevisionName is the last revision that was created from this Service&#39;s Configuration. It might not be ready yet, for that use LatestReadyRevisionName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestCreatedRevisionName(String latestCreatedRevisionName) {
             $.latestCreatedRevisionName = latestCreatedRevisionName;
             return this;
         }
 
+        /**
+         * @param latestReadyRevisionName From ConfigurationStatus. LatestReadyRevisionName holds the name of the latest Revision stamped out from this Service&#39;s Configuration that has had its &#34;Ready&#34; condition become &#34;True&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestReadyRevisionName(String latestReadyRevisionName) {
             $.latestReadyRevisionName = latestReadyRevisionName;
             return this;
         }
 
+        /**
+         * @param observedGeneration ObservedGeneration is the &#39;Generation&#39; of the Route that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition&#39;s status is True or False.
+         * 
+         * @return builder
+         * 
+         */
         public Builder observedGeneration(Integer observedGeneration) {
             $.observedGeneration = observedGeneration;
             return this;
         }
 
+        /**
+         * @param traffic From RouteStatus. Traffic holds the configured traffic distribution. These entries will always contain RevisionName references. When ConfigurationName appears in the spec, this will hold the LatestReadyRevisionName that we last observed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder traffic(List<TrafficTargetResponse> traffic) {
             $.traffic = traffic;
             return this;
         }
 
+        /**
+         * @param traffic From RouteStatus. Traffic holds the configured traffic distribution. These entries will always contain RevisionName references. When ConfigurationName appears in the spec, this will hold the LatestReadyRevisionName that we last observed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder traffic(TrafficTargetResponse... traffic) {
             return traffic(List.of(traffic));
         }
 
+        /**
+         * @param url From RouteStatus. URL holds the url that will distribute traffic over the provided traffic targets. It generally has the form https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

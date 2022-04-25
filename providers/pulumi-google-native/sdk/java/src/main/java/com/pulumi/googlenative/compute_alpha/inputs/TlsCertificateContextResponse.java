@@ -25,6 +25,10 @@ public final class TlsCertificateContextResponse extends com.pulumi.resources.In
     @Import(name="certificatePaths", required=true)
     private TlsCertificatePathsResponse certificatePaths;
 
+    /**
+     * @return Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.
+     * 
+     */
     public TlsCertificatePathsResponse certificatePaths() {
         return this.certificatePaths;
     }
@@ -36,6 +40,10 @@ public final class TlsCertificateContextResponse extends com.pulumi.resources.In
     @Import(name="certificateSource", required=true)
     private String certificateSource;
 
+    /**
+     * @return Defines how TLS certificates are obtained.
+     * 
+     */
     public String certificateSource() {
         return this.certificateSource;
     }
@@ -47,6 +55,10 @@ public final class TlsCertificateContextResponse extends com.pulumi.resources.In
     @Import(name="sdsConfig", required=true)
     private SdsConfigResponse sdsConfig;
 
+    /**
+     * @return Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
+     * 
+     */
     public SdsConfigResponse sdsConfig() {
         return this.sdsConfig;
     }
@@ -77,16 +89,34 @@ public final class TlsCertificateContextResponse extends com.pulumi.resources.In
             $ = new TlsCertificateContextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificatePaths Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificatePaths(TlsCertificatePathsResponse certificatePaths) {
             $.certificatePaths = certificatePaths;
             return this;
         }
 
+        /**
+         * @param certificateSource Defines how TLS certificates are obtained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateSource(String certificateSource) {
             $.certificateSource = certificateSource;
             return this;
         }
 
+        /**
+         * @param sdsConfig Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sdsConfig(SdsConfigResponse sdsConfig) {
             $.sdsConfig = sdsConfig;
             return this;

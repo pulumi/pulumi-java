@@ -18,102 +18,102 @@ import java.util.Objects;
 @CustomType
 public final class ServiceResponse {
     /**
-     * A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
+     * @return A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
      * 
      */
     private final String artifactGcsUri;
     /**
-     * The time when the metastore service was created.
+     * @return The time when the metastore service was created.
      * 
      */
     private final String createTime;
     /**
-     * Immutable. The database type that the Metastore service stores its data.
+     * @return Immutable. The database type that the Metastore service stores its data.
      * 
      */
     private final String databaseType;
     /**
-     * Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.
+     * @return Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.
      * 
      */
     private final EncryptionConfigResponse encryptionConfig;
     /**
-     * The URI of the endpoint used to access the metastore service.
+     * @return The URI of the endpoint used to access the metastore service.
      * 
      */
     private final String endpointUri;
     /**
-     * Configuration information specific to running Hive metastore software as the metastore service.
+     * @return Configuration information specific to running Hive metastore software as the metastore service.
      * 
      */
     private final HiveMetastoreConfigResponse hiveMetastoreConfig;
     /**
-     * User-defined labels for the metastore service.
+     * @return User-defined labels for the metastore service.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.
+     * @return The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.
      * 
      */
     private final MaintenanceWindowResponse maintenanceWindow;
     /**
-     * The setting that defines how metastore metadata should be integrated with external services and systems.
+     * @return The setting that defines how metastore metadata should be integrated with external services and systems.
      * 
      */
     private final MetadataIntegrationResponse metadataIntegration;
     /**
-     * The metadata management activities of the metastore service.
+     * @return The metadata management activities of the metastore service.
      * 
      */
     private final MetadataManagementActivityResponse metadataManagementActivity;
     /**
-     * Immutable. The relative resource name of the metastore service, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+     * @return Immutable. The relative resource name of the metastore service, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}.
      * 
      */
     private final String name;
     /**
-     * Immutable. The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:projects/{project_number}/global/networks/{network_id}.
+     * @return Immutable. The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:projects/{project_number}/global/networks/{network_id}.
      * 
      */
     private final String network;
     /**
-     * Immutable. The configuration specifying the network settings for the Dataproc Metastore service.
+     * @return Immutable. The configuration specifying the network settings for the Dataproc Metastore service.
      * 
      */
     private final NetworkConfigResponse networkConfig;
     /**
-     * The TCP port at which the metastore service is reached. Default: 9083.
+     * @return The TCP port at which the metastore service is reached. Default: 9083.
      * 
      */
     private final Integer port;
     /**
-     * Immutable. The release channel of the service. If unspecified, defaults to STABLE.
+     * @return Immutable. The release channel of the service. If unspecified, defaults to STABLE.
      * 
      */
     private final String releaseChannel;
     /**
-     * The current state of the metastore service.
+     * @return The current state of the metastore service.
      * 
      */
     private final String state;
     /**
-     * Additional information about the current state of the metastore service, if available.
+     * @return Additional information about the current state of the metastore service, if available.
      * 
      */
     private final String stateMessage;
     /**
-     * The tier of the service.
+     * @return The tier of the service.
      * 
      */
     private final String tier;
     /**
-     * The globally unique resource identifier of the metastore service.
+     * @return The globally unique resource identifier of the metastore service.
      * 
      */
     private final String uid;
     /**
-     * The time when the metastore service was last updated.
+     * @return The time when the metastore service was last updated.
      * 
      */
     private final String updateTime;
@@ -163,142 +163,142 @@ public final class ServiceResponse {
     }
 
     /**
-     * A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
+     * @return A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
      * 
-    */
+     */
     public String artifactGcsUri() {
         return this.artifactGcsUri;
     }
     /**
-     * The time when the metastore service was created.
+     * @return The time when the metastore service was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Immutable. The database type that the Metastore service stores its data.
+     * @return Immutable. The database type that the Metastore service stores its data.
      * 
-    */
+     */
     public String databaseType() {
         return this.databaseType;
     }
     /**
-     * Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.
+     * @return Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.
      * 
-    */
+     */
     public EncryptionConfigResponse encryptionConfig() {
         return this.encryptionConfig;
     }
     /**
-     * The URI of the endpoint used to access the metastore service.
+     * @return The URI of the endpoint used to access the metastore service.
      * 
-    */
+     */
     public String endpointUri() {
         return this.endpointUri;
     }
     /**
-     * Configuration information specific to running Hive metastore software as the metastore service.
+     * @return Configuration information specific to running Hive metastore software as the metastore service.
      * 
-    */
+     */
     public HiveMetastoreConfigResponse hiveMetastoreConfig() {
         return this.hiveMetastoreConfig;
     }
     /**
-     * User-defined labels for the metastore service.
+     * @return User-defined labels for the metastore service.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.
+     * @return The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.
      * 
-    */
+     */
     public MaintenanceWindowResponse maintenanceWindow() {
         return this.maintenanceWindow;
     }
     /**
-     * The setting that defines how metastore metadata should be integrated with external services and systems.
+     * @return The setting that defines how metastore metadata should be integrated with external services and systems.
      * 
-    */
+     */
     public MetadataIntegrationResponse metadataIntegration() {
         return this.metadataIntegration;
     }
     /**
-     * The metadata management activities of the metastore service.
+     * @return The metadata management activities of the metastore service.
      * 
-    */
+     */
     public MetadataManagementActivityResponse metadataManagementActivity() {
         return this.metadataManagementActivity;
     }
     /**
-     * Immutable. The relative resource name of the metastore service, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+     * @return Immutable. The relative resource name of the metastore service, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Immutable. The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:projects/{project_number}/global/networks/{network_id}.
+     * @return Immutable. The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:projects/{project_number}/global/networks/{network_id}.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
     /**
-     * Immutable. The configuration specifying the network settings for the Dataproc Metastore service.
+     * @return Immutable. The configuration specifying the network settings for the Dataproc Metastore service.
      * 
-    */
+     */
     public NetworkConfigResponse networkConfig() {
         return this.networkConfig;
     }
     /**
-     * The TCP port at which the metastore service is reached. Default: 9083.
+     * @return The TCP port at which the metastore service is reached. Default: 9083.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * Immutable. The release channel of the service. If unspecified, defaults to STABLE.
+     * @return Immutable. The release channel of the service. If unspecified, defaults to STABLE.
      * 
-    */
+     */
     public String releaseChannel() {
         return this.releaseChannel;
     }
     /**
-     * The current state of the metastore service.
+     * @return The current state of the metastore service.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Additional information about the current state of the metastore service, if available.
+     * @return Additional information about the current state of the metastore service, if available.
      * 
-    */
+     */
     public String stateMessage() {
         return this.stateMessage;
     }
     /**
-     * The tier of the service.
+     * @return The tier of the service.
      * 
-    */
+     */
     public String tier() {
         return this.tier;
     }
     /**
-     * The globally unique resource identifier of the metastore service.
+     * @return The globally unique resource identifier of the metastore service.
      * 
-    */
+     */
     public String uid() {
         return this.uid;
     }
     /**
-     * The time when the metastore service was last updated.
+     * @return The time when the metastore service was last updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

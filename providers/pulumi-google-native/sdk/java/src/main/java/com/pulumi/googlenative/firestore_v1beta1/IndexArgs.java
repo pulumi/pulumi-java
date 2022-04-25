@@ -25,6 +25,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="collectionId")
     private @Nullable Output<String> collectionId;
 
+    /**
+     * @return The collection ID to which this index applies. Required.
+     * 
+     */
     public Optional<Output<String>> collectionId() {
         return Optional.ofNullable(this.collectionId);
     }
@@ -43,6 +47,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fields")
     private @Nullable Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields;
 
+    /**
+     * @return The fields to index.
+     * 
+     */
     public Optional<Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>>> fields() {
         return Optional.ofNullable(this.fields);
     }
@@ -54,6 +62,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the index. Output only.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -72,6 +84,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<IndexState> state;
 
+    /**
+     * @return The state of the index. Output only.
+     * 
+     */
     public Optional<Output<IndexState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -105,11 +121,23 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IndexArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param collectionId The collection ID to which this index applies. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectionId(@Nullable Output<String> collectionId) {
             $.collectionId = collectionId;
             return this;
         }
 
+        /**
+         * @param collectionId The collection ID to which this index applies. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectionId(String collectionId) {
             return collectionId(Output.of(collectionId));
         }
@@ -123,24 +151,54 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
             return databaseId(Output.of(databaseId));
         }
 
+        /**
+         * @param fields The fields to index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(@Nullable Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param fields The fields to index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(List<GoogleFirestoreAdminV1beta1IndexFieldArgs> fields) {
             return fields(Output.of(fields));
         }
 
+        /**
+         * @param fields The fields to index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(GoogleFirestoreAdminV1beta1IndexFieldArgs... fields) {
             return fields(List.of(fields));
         }
 
+        /**
+         * @param name The resource name of the index. Output only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the index. Output only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -154,11 +212,23 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param state The state of the index. Output only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<IndexState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of the index. Output only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(IndexState state) {
             return state(Output.of(state));
         }

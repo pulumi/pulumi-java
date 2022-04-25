@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class SoftwareRecipeStepInstallMsiResponse {
     /**
-     * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * @return Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
      * 
      */
     private final List<Integer> allowedExitCodes;
     /**
-     * The id of the relevant artifact in the recipe.
+     * @return The id of the relevant artifact in the recipe.
      * 
      */
     private final String artifactId;
     /**
-     * The flags to use when installing the MSI defaults to [&#34;/i&#34;] (i.e. the install flag).
+     * @return The flags to use when installing the MSI defaults to [&#34;/i&#34;] (i.e. the install flag).
      * 
      */
     private final List<String> flags;
@@ -38,23 +38,23 @@ public final class SoftwareRecipeStepInstallMsiResponse {
     }
 
     /**
-     * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * @return Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
      * 
-    */
+     */
     public List<Integer> allowedExitCodes() {
         return this.allowedExitCodes;
     }
     /**
-     * The id of the relevant artifact in the recipe.
+     * @return The id of the relevant artifact in the recipe.
      * 
-    */
+     */
     public String artifactId() {
         return this.artifactId;
     }
     /**
-     * The flags to use when installing the MSI defaults to [&#34;/i&#34;] (i.e. the install flag).
+     * @return The flags to use when installing the MSI defaults to [&#34;/i&#34;] (i.e. the install flag).
      * 
-    */
+     */
     public List<String> flags() {
         return this.flags;
     }

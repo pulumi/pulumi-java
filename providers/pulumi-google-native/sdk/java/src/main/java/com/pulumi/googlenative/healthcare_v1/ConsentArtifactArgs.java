@@ -26,6 +26,10 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="consentContentScreenshots")
     private @Nullable Output<List<ImageArgs>> consentContentScreenshots;
 
+    /**
+     * @return Optional. Screenshots, PDFs, or other binary information documenting the user&#39;s consent.
+     * 
+     */
     public Optional<Output<List<ImageArgs>>> consentContentScreenshots() {
         return Optional.ofNullable(this.consentContentScreenshots);
     }
@@ -37,6 +41,10 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="consentContentVersion")
     private @Nullable Output<String> consentContentVersion;
 
+    /**
+     * @return Optional. An string indicating the version of the consent information shown to the user.
+     * 
+     */
     public Optional<Output<String>> consentContentVersion() {
         return Optional.ofNullable(this.consentContentVersion);
     }
@@ -62,6 +70,10 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="guardianSignature")
     private @Nullable Output<SignatureArgs> guardianSignature;
 
+    /**
+     * @return Optional. A signature from a guardian.
+     * 
+     */
     public Optional<Output<SignatureArgs>> guardianSignature() {
         return Optional.ofNullable(this.guardianSignature);
     }
@@ -80,6 +92,10 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -91,6 +107,10 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -109,6 +129,10 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="userId", required=true)
     private Output<String> userId;
 
+    /**
+     * @return User&#39;s UUID provided by the client.
+     * 
+     */
     public Output<String> userId() {
         return this.userId;
     }
@@ -120,6 +144,10 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="userSignature")
     private @Nullable Output<SignatureArgs> userSignature;
 
+    /**
+     * @return Optional. User&#39;s signature.
+     * 
+     */
     public Optional<Output<SignatureArgs>> userSignature() {
         return Optional.ofNullable(this.userSignature);
     }
@@ -131,6 +159,10 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="witnessSignature")
     private @Nullable Output<SignatureArgs> witnessSignature;
 
+    /**
+     * @return Optional. A signature from a witness.
+     * 
+     */
     public Optional<Output<SignatureArgs>> witnessSignature() {
         return Optional.ofNullable(this.witnessSignature);
     }
@@ -170,24 +202,54 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
             $ = new ConsentArtifactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consentContentScreenshots Optional. Screenshots, PDFs, or other binary information documenting the user&#39;s consent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consentContentScreenshots(@Nullable Output<List<ImageArgs>> consentContentScreenshots) {
             $.consentContentScreenshots = consentContentScreenshots;
             return this;
         }
 
+        /**
+         * @param consentContentScreenshots Optional. Screenshots, PDFs, or other binary information documenting the user&#39;s consent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consentContentScreenshots(List<ImageArgs> consentContentScreenshots) {
             return consentContentScreenshots(Output.of(consentContentScreenshots));
         }
 
+        /**
+         * @param consentContentScreenshots Optional. Screenshots, PDFs, or other binary information documenting the user&#39;s consent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consentContentScreenshots(ImageArgs... consentContentScreenshots) {
             return consentContentScreenshots(List.of(consentContentScreenshots));
         }
 
+        /**
+         * @param consentContentVersion Optional. An string indicating the version of the consent information shown to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consentContentVersion(@Nullable Output<String> consentContentVersion) {
             $.consentContentVersion = consentContentVersion;
             return this;
         }
 
+        /**
+         * @param consentContentVersion Optional. An string indicating the version of the consent information shown to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consentContentVersion(String consentContentVersion) {
             return consentContentVersion(Output.of(consentContentVersion));
         }
@@ -210,11 +272,23 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param guardianSignature Optional. A signature from a guardian.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guardianSignature(@Nullable Output<SignatureArgs> guardianSignature) {
             $.guardianSignature = guardianSignature;
             return this;
         }
 
+        /**
+         * @param guardianSignature Optional. A signature from a guardian.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guardianSignature(SignatureArgs guardianSignature) {
             return guardianSignature(Output.of(guardianSignature));
         }
@@ -228,20 +302,44 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
             return location(Output.of(location));
         }
 
+        /**
+         * @param metadata Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param name Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -255,29 +353,65 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
             return project(Output.of(project));
         }
 
+        /**
+         * @param userId User&#39;s UUID provided by the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(Output<String> userId) {
             $.userId = userId;
             return this;
         }
 
+        /**
+         * @param userId User&#39;s UUID provided by the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             return userId(Output.of(userId));
         }
 
+        /**
+         * @param userSignature Optional. User&#39;s signature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userSignature(@Nullable Output<SignatureArgs> userSignature) {
             $.userSignature = userSignature;
             return this;
         }
 
+        /**
+         * @param userSignature Optional. User&#39;s signature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userSignature(SignatureArgs userSignature) {
             return userSignature(Output.of(userSignature));
         }
 
+        /**
+         * @param witnessSignature Optional. A signature from a witness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder witnessSignature(@Nullable Output<SignatureArgs> witnessSignature) {
             $.witnessSignature = witnessSignature;
             return this;
         }
 
+        /**
+         * @param witnessSignature Optional. A signature from a witness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder witnessSignature(SignatureArgs witnessSignature) {
             return witnessSignature(Output.of(witnessSignature));
         }

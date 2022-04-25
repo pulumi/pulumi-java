@@ -23,6 +23,10 @@ public final class ErrorHandlerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="errorCode", required=true)
     private String errorCode;
 
+    /**
+     * @return Error condition this handler applies to.
+     * 
+     */
     public String errorCode() {
         return this.errorCode;
     }
@@ -34,6 +38,10 @@ public final class ErrorHandlerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="mimeType", required=true)
     private String mimeType;
 
+    /**
+     * @return MIME type of file. Defaults to text/html.
+     * 
+     */
     public String mimeType() {
         return this.mimeType;
     }
@@ -45,6 +53,10 @@ public final class ErrorHandlerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="staticFile", required=true)
     private String staticFile;
 
+    /**
+     * @return Static file content to be served for this error.
+     * 
+     */
     public String staticFile() {
         return this.staticFile;
     }
@@ -75,16 +87,34 @@ public final class ErrorHandlerResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ErrorHandlerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorCode Error condition this handler applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCode(String errorCode) {
             $.errorCode = errorCode;
             return this;
         }
 
+        /**
+         * @param mimeType MIME type of file. Defaults to text/html.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mimeType(String mimeType) {
             $.mimeType = mimeType;
             return this;
         }
 
+        /**
+         * @param staticFile Static file content to be served for this error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticFile(String staticFile) {
             $.staticFile = staticFile;
             return this;

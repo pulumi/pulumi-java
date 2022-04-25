@@ -24,6 +24,10 @@ public final class SegmentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fields", required=true)
     private Map<String,String> fields;
 
+    /**
+     * @return A mapping from the positional location to the value. The key string uses zero-based indexes separated by dots to identify Fields, components and sub-components. A bracket notation is also used to identify different instances of a repeated field. Regex for key: (\d+)(\[\d+\])?(.\d+)?(.\d+)? Examples of (key, value) pairs: * (0.1, &#34;hemoglobin&#34;) denotes that the first component of Field 0 has the value &#34;hemoglobin&#34;. * (1.1.2, &#34;CBC&#34;) denotes that the second sub-component of the first component of Field 1 has the value &#34;CBC&#34;. * (1[0].1, &#34;HbA1c&#34;) denotes that the first component of the first Instance of Field 1, which is repeated, has the value &#34;HbA1c&#34;.
+     * 
+     */
     public Map<String,String> fields() {
         return this.fields;
     }
@@ -35,6 +39,10 @@ public final class SegmentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="segmentId", required=true)
     private String segmentId;
 
+    /**
+     * @return A string that indicates the type of segment. For example, EVN or PID.
+     * 
+     */
     public String segmentId() {
         return this.segmentId;
     }
@@ -46,6 +54,10 @@ public final class SegmentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="setId", required=true)
     private String setId;
 
+    /**
+     * @return Set ID for segments that can be in a set. This can be empty if it&#39;s missing or isn&#39;t applicable.
+     * 
+     */
     public String setId() {
         return this.setId;
     }
@@ -76,16 +88,34 @@ public final class SegmentResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SegmentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fields A mapping from the positional location to the value. The key string uses zero-based indexes separated by dots to identify Fields, components and sub-components. A bracket notation is also used to identify different instances of a repeated field. Regex for key: (\d+)(\[\d+\])?(.\d+)?(.\d+)? Examples of (key, value) pairs: * (0.1, &#34;hemoglobin&#34;) denotes that the first component of Field 0 has the value &#34;hemoglobin&#34;. * (1.1.2, &#34;CBC&#34;) denotes that the second sub-component of the first component of Field 1 has the value &#34;CBC&#34;. * (1[0].1, &#34;HbA1c&#34;) denotes that the first component of the first Instance of Field 1, which is repeated, has the value &#34;HbA1c&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(Map<String,String> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param segmentId A string that indicates the type of segment. For example, EVN or PID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentId(String segmentId) {
             $.segmentId = segmentId;
             return this;
         }
 
+        /**
+         * @param setId Set ID for segments that can be in a set. This can be empty if it&#39;s missing or isn&#39;t applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setId(String setId) {
             $.setId = setId;
             return this;

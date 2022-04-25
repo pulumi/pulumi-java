@@ -26,6 +26,10 @@ public final class GoogleCloudChannelV1AssociationInfoArgs extends com.pulumi.re
     @Import(name="baseEntitlement")
     private @Nullable Output<String> baseEntitlement;
 
+    /**
+     * @return The name of the base entitlement, for which this entitlement is an add-on.
+     * 
+     */
     public Optional<Output<String>> baseEntitlement() {
         return Optional.ofNullable(this.baseEntitlement);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudChannelV1AssociationInfoArgs extends com.pulumi.re
             $ = new GoogleCloudChannelV1AssociationInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseEntitlement The name of the base entitlement, for which this entitlement is an add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseEntitlement(@Nullable Output<String> baseEntitlement) {
             $.baseEntitlement = baseEntitlement;
             return this;
         }
 
+        /**
+         * @param baseEntitlement The name of the base entitlement, for which this entitlement is an add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseEntitlement(String baseEntitlement) {
             return baseEntitlement(Output.of(baseEntitlement));
         }

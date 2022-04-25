@@ -23,6 +23,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cronJobDuration", required=true)
     private String cronJobDuration;
 
+    /**
+     * @return The duration for the cron job event. The duration of the event is effective after the cron job&#39;s start time.
+     * 
+     */
     public String cronJobDuration() {
         return this.cronJobDuration;
     }
@@ -34,6 +38,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cronSpec", required=true)
     private String cronSpec;
 
+    /**
+     * @return The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.
+     * 
+     */
     public String cronSpec() {
         return this.cronSpec;
     }
@@ -45,6 +53,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return The end time of the event.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -56,6 +68,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The start time of the event.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -87,21 +103,45 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cronJobDuration The duration for the cron job event. The duration of the event is effective after the cron job&#39;s start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cronJobDuration(String cronJobDuration) {
             $.cronJobDuration = cronJobDuration;
             return this;
         }
 
+        /**
+         * @param cronSpec The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cronSpec(String cronSpec) {
             $.cronSpec = cronSpec;
             return this;
         }
 
+        /**
+         * @param endTime The end time of the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param startTime The start time of the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

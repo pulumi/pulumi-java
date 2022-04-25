@@ -24,6 +24,10 @@ public final class BigtableOptionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="columnFamilies")
     private @Nullable Output<List<BigtableColumnFamilyArgs>> columnFamilies;
 
+    /**
+     * @return [Optional] List of column families to expose in the table schema along with their types. This list restricts the column families that can be referenced in queries and specifies their value types. You can use this list to do type conversions - see the &#39;type&#39; field for more details. If you leave this list empty, all column families are present in the table schema and their values are read as BYTES. During a query only the column families referenced in that query are read from Bigtable.
+     * 
+     */
     public Optional<Output<List<BigtableColumnFamilyArgs>>> columnFamilies() {
         return Optional.ofNullable(this.columnFamilies);
     }
@@ -35,6 +39,10 @@ public final class BigtableOptionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ignoreUnspecifiedColumnFamilies")
     private @Nullable Output<Boolean> ignoreUnspecifiedColumnFamilies;
 
+    /**
+     * @return [Optional] If field is true, then the column families that are not specified in columnFamilies list are not exposed in the table schema. Otherwise, they are read with BYTES type values. The default value is false.
+     * 
+     */
     public Optional<Output<Boolean>> ignoreUnspecifiedColumnFamilies() {
         return Optional.ofNullable(this.ignoreUnspecifiedColumnFamilies);
     }
@@ -46,6 +54,10 @@ public final class BigtableOptionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="readRowkeyAsString")
     private @Nullable Output<Boolean> readRowkeyAsString;
 
+    /**
+     * @return [Optional] If field is true, then the rowkey column families will be read and converted to string. Otherwise they are read with BYTES type values and users need to manually cast them with CAST if necessary. The default value is false.
+     * 
+     */
     public Optional<Output<Boolean>> readRowkeyAsString() {
         return Optional.ofNullable(this.readRowkeyAsString);
     }
@@ -76,33 +88,75 @@ public final class BigtableOptionsArgs extends com.pulumi.resources.ResourceArgs
             $ = new BigtableOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columnFamilies [Optional] List of column families to expose in the table schema along with their types. This list restricts the column families that can be referenced in queries and specifies their value types. You can use this list to do type conversions - see the &#39;type&#39; field for more details. If you leave this list empty, all column families are present in the table schema and their values are read as BYTES. During a query only the column families referenced in that query are read from Bigtable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnFamilies(@Nullable Output<List<BigtableColumnFamilyArgs>> columnFamilies) {
             $.columnFamilies = columnFamilies;
             return this;
         }
 
+        /**
+         * @param columnFamilies [Optional] List of column families to expose in the table schema along with their types. This list restricts the column families that can be referenced in queries and specifies their value types. You can use this list to do type conversions - see the &#39;type&#39; field for more details. If you leave this list empty, all column families are present in the table schema and their values are read as BYTES. During a query only the column families referenced in that query are read from Bigtable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnFamilies(List<BigtableColumnFamilyArgs> columnFamilies) {
             return columnFamilies(Output.of(columnFamilies));
         }
 
+        /**
+         * @param columnFamilies [Optional] List of column families to expose in the table schema along with their types. This list restricts the column families that can be referenced in queries and specifies their value types. You can use this list to do type conversions - see the &#39;type&#39; field for more details. If you leave this list empty, all column families are present in the table schema and their values are read as BYTES. During a query only the column families referenced in that query are read from Bigtable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnFamilies(BigtableColumnFamilyArgs... columnFamilies) {
             return columnFamilies(List.of(columnFamilies));
         }
 
+        /**
+         * @param ignoreUnspecifiedColumnFamilies [Optional] If field is true, then the column families that are not specified in columnFamilies list are not exposed in the table schema. Otherwise, they are read with BYTES type values. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreUnspecifiedColumnFamilies(@Nullable Output<Boolean> ignoreUnspecifiedColumnFamilies) {
             $.ignoreUnspecifiedColumnFamilies = ignoreUnspecifiedColumnFamilies;
             return this;
         }
 
+        /**
+         * @param ignoreUnspecifiedColumnFamilies [Optional] If field is true, then the column families that are not specified in columnFamilies list are not exposed in the table schema. Otherwise, they are read with BYTES type values. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreUnspecifiedColumnFamilies(Boolean ignoreUnspecifiedColumnFamilies) {
             return ignoreUnspecifiedColumnFamilies(Output.of(ignoreUnspecifiedColumnFamilies));
         }
 
+        /**
+         * @param readRowkeyAsString [Optional] If field is true, then the rowkey column families will be read and converted to string. Otherwise they are read with BYTES type values and users need to manually cast them with CAST if necessary. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readRowkeyAsString(@Nullable Output<Boolean> readRowkeyAsString) {
             $.readRowkeyAsString = readRowkeyAsString;
             return this;
         }
 
+        /**
+         * @param readRowkeyAsString [Optional] If field is true, then the rowkey column families will be read and converted to string. Otherwise they are read with BYTES type values and users need to manually cast them with CAST if necessary. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readRowkeyAsString(Boolean readRowkeyAsString) {
             return readRowkeyAsString(Output.of(readRowkeyAsString));
         }

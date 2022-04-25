@@ -27,6 +27,10 @@ public final class CisBenchmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileLevel")
     private @Nullable Output<Integer> profileLevel;
 
+    /**
+     * @return The profile level of this CIS benchmark check.
+     * 
+     */
     public Optional<Output<Integer>> profileLevel() {
         return Optional.ofNullable(this.profileLevel);
     }
@@ -38,6 +42,10 @@ public final class CisBenchmarkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="severity")
     private @Nullable Output<CisBenchmarkSeverity> severity;
 
+    /**
+     * @return The severity level of this CIS benchmark check.
+     * 
+     */
     public Optional<Output<CisBenchmarkSeverity>> severity() {
         return Optional.ofNullable(this.severity);
     }
@@ -67,20 +75,44 @@ public final class CisBenchmarkArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CisBenchmarkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param profileLevel The profile level of this CIS benchmark check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileLevel(@Nullable Output<Integer> profileLevel) {
             $.profileLevel = profileLevel;
             return this;
         }
 
+        /**
+         * @param profileLevel The profile level of this CIS benchmark check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileLevel(Integer profileLevel) {
             return profileLevel(Output.of(profileLevel));
         }
 
+        /**
+         * @param severity The severity level of this CIS benchmark check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(@Nullable Output<CisBenchmarkSeverity> severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param severity The severity level of this CIS benchmark check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(CisBenchmarkSeverity severity) {
             return severity(Output.of(severity));
         }

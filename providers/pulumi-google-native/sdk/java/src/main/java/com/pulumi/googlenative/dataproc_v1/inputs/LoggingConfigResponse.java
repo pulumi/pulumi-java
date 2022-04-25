@@ -24,6 +24,10 @@ public final class LoggingConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="driverLogLevels", required=true)
     private Map<String,String> driverLogLevels;
 
+    /**
+     * @return The per-package log levels for the driver. This may include &#34;root&#34; package name to configure rootLogger. Examples: &#39;com.google = FATAL&#39;, &#39;root = INFO&#39;, &#39;org.apache = DEBUG&#39;
+     * 
+     */
     public Map<String,String> driverLogLevels() {
         return this.driverLogLevels;
     }
@@ -52,6 +56,12 @@ public final class LoggingConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new LoggingConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param driverLogLevels The per-package log levels for the driver. This may include &#34;root&#34; package name to configure rootLogger. Examples: &#39;com.google = FATAL&#39;, &#39;root = INFO&#39;, &#39;org.apache = DEBUG&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder driverLogLevels(Map<String,String> driverLogLevels) {
             $.driverLogLevels = driverLogLevels;
             return this;

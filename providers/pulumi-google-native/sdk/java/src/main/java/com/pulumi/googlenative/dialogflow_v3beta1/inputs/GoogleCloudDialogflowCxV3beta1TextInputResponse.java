@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowCxV3beta1TextInputResponse extends com.p
     @Import(name="text", required=true)
     private String text;
 
+    /**
+     * @return The UTF-8 encoded natural language text to be processed. Text length must not exceed 256 characters.
+     * 
+     */
     public String text() {
         return this.text;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowCxV3beta1TextInputResponse extends com.p
             $ = new GoogleCloudDialogflowCxV3beta1TextInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param text The UTF-8 encoded natural language text to be processed. Text length must not exceed 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             $.text = text;
             return this;

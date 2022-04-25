@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class ShareSettingsResponse {
     /**
-     * A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+     * @return A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
      * 
      */
     private final Map<String,String> projectMap;
     /**
-     * A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+     * @return A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
      * 
      */
     private final List<String> projects;
     /**
-     * Type of sharing for this shared-reservation
+     * @return Type of sharing for this shared-reservation
      * 
      */
     private final String shareType;
@@ -38,23 +38,23 @@ public final class ShareSettingsResponse {
     }
 
     /**
-     * A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+     * @return A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
      * 
-    */
+     */
     public Map<String,String> projectMap() {
         return this.projectMap;
     }
     /**
-     * A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+     * @return A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
      * 
-    */
+     */
     public List<String> projects() {
         return this.projects;
     }
     /**
-     * Type of sharing for this shared-reservation
+     * @return Type of sharing for this shared-reservation
      * 
-    */
+     */
     public String shareType() {
         return this.shareType;
     }

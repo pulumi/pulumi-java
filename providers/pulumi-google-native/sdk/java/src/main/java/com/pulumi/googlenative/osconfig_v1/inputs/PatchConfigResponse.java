@@ -30,6 +30,10 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="apt", required=true)
     private AptSettingsResponse apt;
 
+    /**
+     * @return Apt update settings. Use this setting to override the default `apt` patch rules.
+     * 
+     */
     public AptSettingsResponse apt() {
         return this.apt;
     }
@@ -41,6 +45,10 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="goo", required=true)
     private GooSettingsResponse goo;
 
+    /**
+     * @return Goo update settings. Use this setting to override the default `goo` patch rules.
+     * 
+     */
     public GooSettingsResponse goo() {
         return this.goo;
     }
@@ -52,6 +60,10 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="migInstancesAllowed", required=true)
     private Boolean migInstancesAllowed;
 
+    /**
+     * @return Allows the patch job to run on Managed instance groups (MIGs).
+     * 
+     */
     public Boolean migInstancesAllowed() {
         return this.migInstancesAllowed;
     }
@@ -63,6 +75,10 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="postStep", required=true)
     private ExecStepResponse postStep;
 
+    /**
+     * @return The `ExecStep` to run after the patch update.
+     * 
+     */
     public ExecStepResponse postStep() {
         return this.postStep;
     }
@@ -74,6 +90,10 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="preStep", required=true)
     private ExecStepResponse preStep;
 
+    /**
+     * @return The `ExecStep` to run before the patch update.
+     * 
+     */
     public ExecStepResponse preStep() {
         return this.preStep;
     }
@@ -85,6 +105,10 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rebootConfig", required=true)
     private String rebootConfig;
 
+    /**
+     * @return Post-patch reboot settings.
+     * 
+     */
     public String rebootConfig() {
         return this.rebootConfig;
     }
@@ -96,6 +120,10 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="windowsUpdate", required=true)
     private WindowsUpdateSettingsResponse windowsUpdate;
 
+    /**
+     * @return Windows update settings. Use this override the default windows patch rules.
+     * 
+     */
     public WindowsUpdateSettingsResponse windowsUpdate() {
         return this.windowsUpdate;
     }
@@ -107,6 +135,10 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="yum", required=true)
     private YumSettingsResponse yum;
 
+    /**
+     * @return Yum update settings. Use this setting to override the default `yum` patch rules.
+     * 
+     */
     public YumSettingsResponse yum() {
         return this.yum;
     }
@@ -118,6 +150,10 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="zypper", required=true)
     private ZypperSettingsResponse zypper;
 
+    /**
+     * @return Zypper update settings. Use this setting to override the default `zypper` patch rules.
+     * 
+     */
     public ZypperSettingsResponse zypper() {
         return this.zypper;
     }
@@ -154,46 +190,100 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PatchConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apt Apt update settings. Use this setting to override the default `apt` patch rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apt(AptSettingsResponse apt) {
             $.apt = apt;
             return this;
         }
 
+        /**
+         * @param goo Goo update settings. Use this setting to override the default `goo` patch rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goo(GooSettingsResponse goo) {
             $.goo = goo;
             return this;
         }
 
+        /**
+         * @param migInstancesAllowed Allows the patch job to run on Managed instance groups (MIGs).
+         * 
+         * @return builder
+         * 
+         */
         public Builder migInstancesAllowed(Boolean migInstancesAllowed) {
             $.migInstancesAllowed = migInstancesAllowed;
             return this;
         }
 
+        /**
+         * @param postStep The `ExecStep` to run after the patch update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postStep(ExecStepResponse postStep) {
             $.postStep = postStep;
             return this;
         }
 
+        /**
+         * @param preStep The `ExecStep` to run before the patch update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preStep(ExecStepResponse preStep) {
             $.preStep = preStep;
             return this;
         }
 
+        /**
+         * @param rebootConfig Post-patch reboot settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rebootConfig(String rebootConfig) {
             $.rebootConfig = rebootConfig;
             return this;
         }
 
+        /**
+         * @param windowsUpdate Windows update settings. Use this override the default windows patch rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsUpdate(WindowsUpdateSettingsResponse windowsUpdate) {
             $.windowsUpdate = windowsUpdate;
             return this;
         }
 
+        /**
+         * @param yum Yum update settings. Use this setting to override the default `yum` patch rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yum(YumSettingsResponse yum) {
             $.yum = yum;
             return this;
         }
 
+        /**
+         * @param zypper Zypper update settings. Use this setting to override the default `zypper` patch rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zypper(ZypperSettingsResponse zypper) {
             $.zypper = zypper;
             return this;

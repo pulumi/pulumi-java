@@ -23,6 +23,10 @@ public final class LogConfigDataAccessOptionsResponse extends com.pulumi.resourc
     @Import(name="logMode", required=true)
     private String logMode;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public String logMode() {
         return this.logMode;
     }
@@ -51,6 +55,12 @@ public final class LogConfigDataAccessOptionsResponse extends com.pulumi.resourc
             $ = new LogConfigDataAccessOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logMode This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logMode(String logMode) {
             $.logMode = logMode;
             return this;

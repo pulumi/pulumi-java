@@ -27,6 +27,10 @@ public final class SecretVolumeSourceResponse extends com.pulumi.resources.Invok
     @Import(name="defaultMode", required=true)
     private Integer defaultMode;
 
+    /**
+     * @return Integer representation of mode bits to use on created files by default. Must be a value between 01 and 0777 (octal). If 0 or not set, it will default to 0644. Directories within the path are not affected by this setting. Notes * Internally, a umask of 0222 will be applied to any non-zero value. * This is an integer representation of the mode bits. So, the octal integer value should look exactly as the chmod numeric notation with a leading zero. Some examples: for chmod 777 (a=rwx), set to 0777 (octal) or 511 (base-10). For chmod 640 (u=rw,g=r), set to 0640 (octal) or 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493 (base-10). * This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+     * 
+     */
     public Integer defaultMode() {
         return this.defaultMode;
     }
@@ -38,6 +42,10 @@ public final class SecretVolumeSourceResponse extends com.pulumi.resources.Invok
     @Import(name="items", required=true)
     private List<KeyToPathResponse> items;
 
+    /**
+     * @return (Optional) If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.
+     * 
+     */
     public List<KeyToPathResponse> items() {
         return this.items;
     }
@@ -49,6 +57,10 @@ public final class SecretVolumeSourceResponse extends com.pulumi.resources.Invok
     @Import(name="optional", required=true)
     private Boolean optional;
 
+    /**
+     * @return (Optional) Specify whether the Secret or its keys must be defined.
+     * 
+     */
     public Boolean optional() {
         return this.optional;
     }
@@ -60,6 +72,10 @@ public final class SecretVolumeSourceResponse extends com.pulumi.resources.Invok
     @Import(name="secretName", required=true)
     private String secretName;
 
+    /**
+     * @return The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Name of the secret in the container&#39;s namespace to use.
+     * 
+     */
     public String secretName() {
         return this.secretName;
     }
@@ -91,25 +107,55 @@ public final class SecretVolumeSourceResponse extends com.pulumi.resources.Invok
             $ = new SecretVolumeSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultMode Integer representation of mode bits to use on created files by default. Must be a value between 01 and 0777 (octal). If 0 or not set, it will default to 0644. Directories within the path are not affected by this setting. Notes * Internally, a umask of 0222 will be applied to any non-zero value. * This is an integer representation of the mode bits. So, the octal integer value should look exactly as the chmod numeric notation with a leading zero. Some examples: for chmod 777 (a=rwx), set to 0777 (octal) or 511 (base-10). For chmod 640 (u=rw,g=r), set to 0640 (octal) or 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493 (base-10). * This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMode(Integer defaultMode) {
             $.defaultMode = defaultMode;
             return this;
         }
 
+        /**
+         * @param items (Optional) If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<KeyToPathResponse> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items (Optional) If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(KeyToPathResponse... items) {
             return items(List.of(items));
         }
 
+        /**
+         * @param optional (Optional) Specify whether the Secret or its keys must be defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder optional(Boolean optional) {
             $.optional = optional;
             return this;
         }
 
+        /**
+         * @param secretName The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Name of the secret in the container&#39;s namespace to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(String secretName) {
             $.secretName = secretName;
             return this;

@@ -23,6 +23,10 @@ public final class AppEngineRoutingResponse extends com.pulumi.resources.InvokeA
     @Import(name="host", required=true)
     private String host;
 
+    /**
+     * @return The host that the task is sent to. For more information, see [How Requests are Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed). The host is constructed as: * `host = [application_domain_name]` `| [service] + &#39;.&#39; + [application_domain_name]` `| [version] + &#39;.&#39; + [application_domain_name]` `| [version_dot_service]+ &#39;.&#39; + [application_domain_name]` `| [instance] + &#39;.&#39; + [application_domain_name]` `| [instance_dot_service] + &#39;.&#39; + [application_domain_name]` `| [instance_dot_version] + &#39;.&#39; + [application_domain_name]` `| [instance_dot_version_dot_service] + &#39;.&#39; + [application_domain_name]` * `application_domain_name` = The domain name of the app, for example .appspot.com, which is associated with the queue&#39;s project ID. Some tasks which were created using the App Engine SDK use a custom domain name. * `service =` service * `version =` version * `version_dot_service =` version `+ &#39;.&#39; +` service * `instance =` instance * `instance_dot_service =` instance `+ &#39;.&#39; +` service * `instance_dot_version =` instance `+ &#39;.&#39; +` version * `instance_dot_version_dot_service =` instance `+ &#39;.&#39; +` version `+ &#39;.&#39; +` service If service is empty, then the task will be sent to the service which is the default service when the task is attempted. If version is empty, then the task will be sent to the version which is the default version when the task is attempted. If instance is empty, then the task will be sent to an instance which is available when the task is attempted. If service, version, or instance is invalid, then the task will be sent to the default version of the default service when the task is attempted.
+     * 
+     */
     public String host() {
         return this.host;
     }
@@ -34,6 +38,10 @@ public final class AppEngineRoutingResponse extends com.pulumi.resources.InvokeA
     @Import(name="instance", required=true)
     private String instance;
 
+    /**
+     * @return App instance. By default, the task is sent to an instance which is available when the task is attempted. Requests can only be sent to a specific instance if [manual scaling is used in App Engine Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-engine?hl=en_US#scaling_types_and_instance_classes). App Engine Flex does not support instances. For more information, see [App Engine Standard request routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and [App Engine Flex request routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).
+     * 
+     */
     public String instance() {
         return this.instance;
     }
@@ -45,6 +53,10 @@ public final class AppEngineRoutingResponse extends com.pulumi.resources.InvokeA
     @Import(name="service", required=true)
     private String service;
 
+    /**
+     * @return App service. By default, the task is sent to the service which is the default service when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.
+     * 
+     */
     public String service() {
         return this.service;
     }
@@ -56,6 +68,10 @@ public final class AppEngineRoutingResponse extends com.pulumi.resources.InvokeA
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return App version. By default, the task is sent to the version which is the default version when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -87,21 +103,45 @@ public final class AppEngineRoutingResponse extends com.pulumi.resources.InvokeA
             $ = new AppEngineRoutingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param host The host that the task is sent to. For more information, see [How Requests are Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed). The host is constructed as: * `host = [application_domain_name]` `| [service] + &#39;.&#39; + [application_domain_name]` `| [version] + &#39;.&#39; + [application_domain_name]` `| [version_dot_service]+ &#39;.&#39; + [application_domain_name]` `| [instance] + &#39;.&#39; + [application_domain_name]` `| [instance_dot_service] + &#39;.&#39; + [application_domain_name]` `| [instance_dot_version] + &#39;.&#39; + [application_domain_name]` `| [instance_dot_version_dot_service] + &#39;.&#39; + [application_domain_name]` * `application_domain_name` = The domain name of the app, for example .appspot.com, which is associated with the queue&#39;s project ID. Some tasks which were created using the App Engine SDK use a custom domain name. * `service =` service * `version =` version * `version_dot_service =` version `+ &#39;.&#39; +` service * `instance =` instance * `instance_dot_service =` instance `+ &#39;.&#39; +` service * `instance_dot_version =` instance `+ &#39;.&#39; +` version * `instance_dot_version_dot_service =` instance `+ &#39;.&#39; +` version `+ &#39;.&#39; +` service If service is empty, then the task will be sent to the service which is the default service when the task is attempted. If version is empty, then the task will be sent to the version which is the default version when the task is attempted. If instance is empty, then the task will be sent to an instance which is available when the task is attempted. If service, version, or instance is invalid, then the task will be sent to the default version of the default service when the task is attempted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param instance App instance. By default, the task is sent to an instance which is available when the task is attempted. Requests can only be sent to a specific instance if [manual scaling is used in App Engine Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-engine?hl=en_US#scaling_types_and_instance_classes). App Engine Flex does not support instances. For more information, see [App Engine Standard request routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and [App Engine Flex request routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param service App service. By default, the task is sent to the service which is the default service when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param version App version. By default, the task is sent to the version which is the default version when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

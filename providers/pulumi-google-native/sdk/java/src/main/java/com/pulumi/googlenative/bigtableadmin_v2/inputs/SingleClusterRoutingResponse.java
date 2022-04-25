@@ -24,6 +24,10 @@ public final class SingleClusterRoutingResponse extends com.pulumi.resources.Inv
     @Import(name="allowTransactionalWrites", required=true)
     private Boolean allowTransactionalWrites;
 
+    /**
+     * @return Whether or not `CheckAndMutateRow` and `ReadModifyWriteRow` requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.
+     * 
+     */
     public Boolean allowTransactionalWrites() {
         return this.allowTransactionalWrites;
     }
@@ -35,6 +39,10 @@ public final class SingleClusterRoutingResponse extends com.pulumi.resources.Inv
     @Import(name="clusterId", required=true)
     private String clusterId;
 
+    /**
+     * @return The cluster to which read/write requests should be routed.
+     * 
+     */
     public String clusterId() {
         return this.clusterId;
     }
@@ -64,11 +72,23 @@ public final class SingleClusterRoutingResponse extends com.pulumi.resources.Inv
             $ = new SingleClusterRoutingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowTransactionalWrites Whether or not `CheckAndMutateRow` and `ReadModifyWriteRow` requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowTransactionalWrites(Boolean allowTransactionalWrites) {
             $.allowTransactionalWrites = allowTransactionalWrites;
             return this;
         }
 
+        /**
+         * @param clusterId The cluster to which read/write requests should be routed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(String clusterId) {
             $.clusterId = clusterId;
             return this;

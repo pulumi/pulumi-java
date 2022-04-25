@@ -28,6 +28,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
     @Import(name="launchParameter", required=true)
     private Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter;
 
+    /**
+     * @return Parameter to launch a job from a Flex Template.
+     * 
+     */
     public Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter() {
         return this.launchParameter;
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request. For example, `us-central1`, `us-west1`.
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
     @Import(name="project", required=true)
     private Output<String> project;
 
+    /**
+     * @return The ID of the Cloud Platform project that the job belongs to.
+     * 
+     */
     public Output<String> project() {
         return this.project;
     }
@@ -61,6 +73,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
     @Import(name="validateOnly")
     private @Nullable Output<Boolean> validateOnly;
 
+    /**
+     * @return If true, the request is validated but not actually executed. Defaults to false.
+     * 
+     */
     public Optional<Output<Boolean>> validateOnly() {
         return Optional.ofNullable(this.validateOnly);
     }
@@ -92,38 +108,86 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
             $ = new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param launchParameter Parameter to launch a job from a Flex Template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchParameter(Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter) {
             $.launchParameter = launchParameter;
             return this;
         }
 
+        /**
+         * @param launchParameter Parameter to launch a job from a Flex Template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchParameter(GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs launchParameter) {
             return launchParameter(Output.of(launchParameter));
         }
 
+        /**
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request. For example, `us-central1`, `us-west1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request. For example, `us-central1`, `us-west1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param project The ID of the Cloud Platform project that the job belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the Cloud Platform project that the job belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param validateOnly If true, the request is validated but not actually executed. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(@Nullable Output<Boolean> validateOnly) {
             $.validateOnly = validateOnly;
             return this;
         }
 
+        /**
+         * @param validateOnly If true, the request is validated but not actually executed. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(Boolean validateOnly) {
             return validateOnly(Output.of(validateOnly));
         }

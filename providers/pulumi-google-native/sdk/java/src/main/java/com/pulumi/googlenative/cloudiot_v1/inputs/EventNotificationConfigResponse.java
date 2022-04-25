@@ -23,6 +23,10 @@ public final class EventNotificationConfigResponse extends com.pulumi.resources.
     @Import(name="pubsubTopicName", required=true)
     private String pubsubTopicName;
 
+    /**
+     * @return A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
+     * 
+     */
     public String pubsubTopicName() {
         return this.pubsubTopicName;
     }
@@ -34,6 +38,10 @@ public final class EventNotificationConfigResponse extends com.pulumi.resources.
     @Import(name="subfolderMatches", required=true)
     private String subfolderMatches;
 
+    /**
+     * @return If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading &#39;/&#39; character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.
+     * 
+     */
     public String subfolderMatches() {
         return this.subfolderMatches;
     }
@@ -63,11 +71,23 @@ public final class EventNotificationConfigResponse extends com.pulumi.resources.
             $ = new EventNotificationConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pubsubTopicName A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubTopicName(String pubsubTopicName) {
             $.pubsubTopicName = pubsubTopicName;
             return this;
         }
 
+        /**
+         * @param subfolderMatches If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading &#39;/&#39; character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subfolderMatches(String subfolderMatches) {
             $.subfolderMatches = subfolderMatches;
             return this;

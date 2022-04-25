@@ -13,17 +13,17 @@ import java.util.Objects;
 @CustomType
 public final class PipelineDescriptionResponse {
     /**
-     * Pipeline level display data.
+     * @return Pipeline level display data.
      * 
      */
     private final List<DisplayDataResponse> displayData;
     /**
-     * Description of each stage of execution of the pipeline.
+     * @return Description of each stage of execution of the pipeline.
      * 
      */
     private final List<ExecutionStageSummaryResponse> executionPipelineStage;
     /**
-     * Description of each transform in the pipeline and collections between them.
+     * @return Description of each transform in the pipeline and collections between them.
      * 
      */
     private final List<TransformSummaryResponse> originalPipelineTransform;
@@ -39,23 +39,23 @@ public final class PipelineDescriptionResponse {
     }
 
     /**
-     * Pipeline level display data.
+     * @return Pipeline level display data.
      * 
-    */
+     */
     public List<DisplayDataResponse> displayData() {
         return this.displayData;
     }
     /**
-     * Description of each stage of execution of the pipeline.
+     * @return Description of each stage of execution of the pipeline.
      * 
-    */
+     */
     public List<ExecutionStageSummaryResponse> executionPipelineStage() {
         return this.executionPipelineStage;
     }
     /**
-     * Description of each transform in the pipeline and collections between them.
+     * @return Description of each transform in the pipeline and collections between them.
      * 
-    */
+     */
     public List<TransformSummaryResponse> originalPipelineTransform() {
         return this.originalPipelineTransform;
     }

@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartRespons
     @Import(name="parameterId", required=true)
     private String parameterId;
 
+    /**
+     * @return The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
+     * 
+     */
     public String parameterId() {
         return this.parameterId;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartRespons
     @Import(name="text", required=true)
     private String text;
 
+    /**
+     * @return The text for this part.
+     * 
+     */
     public String text() {
         return this.text;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartRespons
             $ = new GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameterId The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterId(String parameterId) {
             $.parameterId = parameterId;
             return this;
         }
 
+        /**
+         * @param text The text for this part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             $.text = text;
             return this;

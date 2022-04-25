@@ -36,6 +36,10 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends com.pul
     @Import(name="categoricalValueSpec")
     private @Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs> categoricalValueSpec;
 
+    /**
+     * @return The value spec for a &#39;CATEGORICAL&#39; parameter.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs>> categoricalValueSpec() {
         return Optional.ofNullable(this.categoricalValueSpec);
     }
@@ -47,6 +51,10 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends com.pul
     @Import(name="childParameterSpecs")
     private @Nullable Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> childParameterSpecs;
 
+    /**
+     * @return A child node is active if the parameter&#39;s value matches the child node&#39;s matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.
+     * 
+     */
     public Optional<Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>>> childParameterSpecs() {
         return Optional.ofNullable(this.childParameterSpecs);
     }
@@ -58,6 +66,10 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends com.pul
     @Import(name="discreteValueSpec")
     private @Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs> discreteValueSpec;
 
+    /**
+     * @return The value spec for a &#39;DISCRETE&#39; parameter.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs>> discreteValueSpec() {
         return Optional.ofNullable(this.discreteValueSpec);
     }
@@ -69,6 +81,10 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends com.pul
     @Import(name="doubleValueSpec")
     private @Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs> doubleValueSpec;
 
+    /**
+     * @return The value spec for a &#39;DOUBLE&#39; parameter.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs>> doubleValueSpec() {
         return Optional.ofNullable(this.doubleValueSpec);
     }
@@ -80,6 +96,10 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends com.pul
     @Import(name="integerValueSpec")
     private @Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs> integerValueSpec;
 
+    /**
+     * @return The value spec for an &#39;INTEGER&#39; parameter.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs>> integerValueSpec() {
         return Optional.ofNullable(this.integerValueSpec);
     }
@@ -91,6 +111,10 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends com.pul
     @Import(name="parameter", required=true)
     private Output<String> parameter;
 
+    /**
+     * @return The parameter name must be unique amongst all ParameterSpecs.
+     * 
+     */
     public Output<String> parameter() {
         return this.parameter;
     }
@@ -123,6 +147,10 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends com.pul
     @Import(name="scaleType")
     private @Nullable Output<GoogleCloudMlV1_StudyConfig_ParameterSpecScaleType> scaleType;
 
+    /**
+     * @return How the parameter should be scaled. Leave unset for categorical parameters.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1_StudyConfig_ParameterSpecScaleType>> scaleType() {
         return Optional.ofNullable(this.scaleType);
     }
@@ -134,6 +162,10 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends com.pul
     @Import(name="type", required=true)
     private Output<GoogleCloudMlV1_StudyConfig_ParameterSpecType> type;
 
+    /**
+     * @return The type of the parameter.
+     * 
+     */
     public Output<GoogleCloudMlV1_StudyConfig_ParameterSpecType> type() {
         return this.type;
     }
@@ -172,60 +204,138 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends com.pul
             $ = new GoogleCloudMlV1_StudyConfig_ParameterSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param categoricalValueSpec The value spec for a &#39;CATEGORICAL&#39; parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categoricalValueSpec(@Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs> categoricalValueSpec) {
             $.categoricalValueSpec = categoricalValueSpec;
             return this;
         }
 
+        /**
+         * @param categoricalValueSpec The value spec for a &#39;CATEGORICAL&#39; parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categoricalValueSpec(GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs categoricalValueSpec) {
             return categoricalValueSpec(Output.of(categoricalValueSpec));
         }
 
+        /**
+         * @param childParameterSpecs A child node is active if the parameter&#39;s value matches the child node&#39;s matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder childParameterSpecs(@Nullable Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> childParameterSpecs) {
             $.childParameterSpecs = childParameterSpecs;
             return this;
         }
 
+        /**
+         * @param childParameterSpecs A child node is active if the parameter&#39;s value matches the child node&#39;s matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder childParameterSpecs(List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs> childParameterSpecs) {
             return childParameterSpecs(Output.of(childParameterSpecs));
         }
 
+        /**
+         * @param childParameterSpecs A child node is active if the parameter&#39;s value matches the child node&#39;s matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder childParameterSpecs(GoogleCloudMlV1_StudyConfig_ParameterSpecArgs... childParameterSpecs) {
             return childParameterSpecs(List.of(childParameterSpecs));
         }
 
+        /**
+         * @param discreteValueSpec The value spec for a &#39;DISCRETE&#39; parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discreteValueSpec(@Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs> discreteValueSpec) {
             $.discreteValueSpec = discreteValueSpec;
             return this;
         }
 
+        /**
+         * @param discreteValueSpec The value spec for a &#39;DISCRETE&#39; parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discreteValueSpec(GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs discreteValueSpec) {
             return discreteValueSpec(Output.of(discreteValueSpec));
         }
 
+        /**
+         * @param doubleValueSpec The value spec for a &#39;DOUBLE&#39; parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doubleValueSpec(@Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs> doubleValueSpec) {
             $.doubleValueSpec = doubleValueSpec;
             return this;
         }
 
+        /**
+         * @param doubleValueSpec The value spec for a &#39;DOUBLE&#39; parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doubleValueSpec(GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs doubleValueSpec) {
             return doubleValueSpec(Output.of(doubleValueSpec));
         }
 
+        /**
+         * @param integerValueSpec The value spec for an &#39;INTEGER&#39; parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integerValueSpec(@Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs> integerValueSpec) {
             $.integerValueSpec = integerValueSpec;
             return this;
         }
 
+        /**
+         * @param integerValueSpec The value spec for an &#39;INTEGER&#39; parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integerValueSpec(GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs integerValueSpec) {
             return integerValueSpec(Output.of(integerValueSpec));
         }
 
+        /**
+         * @param parameter The parameter name must be unique amongst all ParameterSpecs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameter(Output<String> parameter) {
             $.parameter = parameter;
             return this;
         }
 
+        /**
+         * @param parameter The parameter name must be unique amongst all ParameterSpecs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameter(String parameter) {
             return parameter(Output.of(parameter));
         }
@@ -257,20 +367,44 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends com.pul
             return parentIntValues(Output.of(parentIntValues));
         }
 
+        /**
+         * @param scaleType How the parameter should be scaled. Leave unset for categorical parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleType(@Nullable Output<GoogleCloudMlV1_StudyConfig_ParameterSpecScaleType> scaleType) {
             $.scaleType = scaleType;
             return this;
         }
 
+        /**
+         * @param scaleType How the parameter should be scaled. Leave unset for categorical parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleType(GoogleCloudMlV1_StudyConfig_ParameterSpecScaleType scaleType) {
             return scaleType(Output.of(scaleType));
         }
 
+        /**
+         * @param type The type of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<GoogleCloudMlV1_StudyConfig_ParameterSpecType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(GoogleCloudMlV1_StudyConfig_ParameterSpecType type) {
             return type(Output.of(type));
         }

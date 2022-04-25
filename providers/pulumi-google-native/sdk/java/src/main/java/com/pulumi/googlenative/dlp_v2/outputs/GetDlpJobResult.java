@@ -14,52 +14,52 @@ import java.util.Objects;
 @CustomType
 public final class GetDlpJobResult {
     /**
-     * Time when the job was created.
+     * @return Time when the job was created.
      * 
      */
     private final String createTime;
     /**
-     * Time when the job finished.
+     * @return Time when the job finished.
      * 
      */
     private final String endTime;
     /**
-     * A stream of errors encountered running the job.
+     * @return A stream of errors encountered running the job.
      * 
      */
     private final List<GooglePrivacyDlpV2ErrorResponse> errors;
     /**
-     * Results from inspecting a data source.
+     * @return Results from inspecting a data source.
      * 
      */
     private final GooglePrivacyDlpV2InspectDataSourceDetailsResponse inspectDetails;
     /**
-     * If created by a job trigger, the resource name of the trigger that instantiated the job.
+     * @return If created by a job trigger, the resource name of the trigger that instantiated the job.
      * 
      */
     private final String jobTriggerName;
     /**
-     * The server-assigned name.
+     * @return The server-assigned name.
      * 
      */
     private final String name;
     /**
-     * Results from analyzing risk of a data source.
+     * @return Results from analyzing risk of a data source.
      * 
      */
     private final GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse riskDetails;
     /**
-     * Time when the job started.
+     * @return Time when the job started.
      * 
      */
     private final String startTime;
     /**
-     * State of a job.
+     * @return State of a job.
      * 
      */
     private final String state;
     /**
-     * The type of job.
+     * @return The type of job.
      * 
      */
     private final String type;
@@ -89,72 +89,72 @@ public final class GetDlpJobResult {
     }
 
     /**
-     * Time when the job was created.
+     * @return Time when the job was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Time when the job finished.
+     * @return Time when the job finished.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * A stream of errors encountered running the job.
+     * @return A stream of errors encountered running the job.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2ErrorResponse> errors() {
         return this.errors;
     }
     /**
-     * Results from inspecting a data source.
+     * @return Results from inspecting a data source.
      * 
-    */
+     */
     public GooglePrivacyDlpV2InspectDataSourceDetailsResponse inspectDetails() {
         return this.inspectDetails;
     }
     /**
-     * If created by a job trigger, the resource name of the trigger that instantiated the job.
+     * @return If created by a job trigger, the resource name of the trigger that instantiated the job.
      * 
-    */
+     */
     public String jobTriggerName() {
         return this.jobTriggerName;
     }
     /**
-     * The server-assigned name.
+     * @return The server-assigned name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Results from analyzing risk of a data source.
+     * @return Results from analyzing risk of a data source.
      * 
-    */
+     */
     public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse riskDetails() {
         return this.riskDetails;
     }
     /**
-     * Time when the job started.
+     * @return Time when the job started.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * State of a job.
+     * @return State of a job.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The type of job.
+     * @return The type of job.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

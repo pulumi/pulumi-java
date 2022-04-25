@@ -23,6 +23,10 @@ public final class GoogleCloudRetailV2PriceInfoPriceRangeResponse extends com.pu
     @Import(name="originalPrice", required=true)
     private GoogleCloudRetailV2IntervalResponse originalPrice;
 
+    /**
+     * @return The inclusive Product.pricing_info.original_price internal of all variant Product having the same Product.primary_product_id.
+     * 
+     */
     public GoogleCloudRetailV2IntervalResponse originalPrice() {
         return this.originalPrice;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudRetailV2PriceInfoPriceRangeResponse extends com.pu
     @Import(name="price", required=true)
     private GoogleCloudRetailV2IntervalResponse price;
 
+    /**
+     * @return The inclusive Product.pricing_info.price interval of all variant Product having the same Product.primary_product_id.
+     * 
+     */
     public GoogleCloudRetailV2IntervalResponse price() {
         return this.price;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudRetailV2PriceInfoPriceRangeResponse extends com.pu
             $ = new GoogleCloudRetailV2PriceInfoPriceRangeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param originalPrice The inclusive Product.pricing_info.original_price internal of all variant Product having the same Product.primary_product_id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalPrice(GoogleCloudRetailV2IntervalResponse originalPrice) {
             $.originalPrice = originalPrice;
             return this;
         }
 
+        /**
+         * @param price The inclusive Product.pricing_info.price interval of all variant Product having the same Product.primary_product_id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder price(GoogleCloudRetailV2IntervalResponse price) {
             $.price = price;
             return this;

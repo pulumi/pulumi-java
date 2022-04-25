@@ -27,6 +27,10 @@ public final class AndroidRoboTestArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="appInitialActivity")
     private @Nullable Output<String> appInitialActivity;
 
+    /**
+     * @return The initial activity that should be used to start the app. Optional
+     * 
+     */
     public Optional<Output<String>> appInitialActivity() {
         return Optional.ofNullable(this.appInitialActivity);
     }
@@ -38,6 +42,10 @@ public final class AndroidRoboTestArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="bootstrapPackageId")
     private @Nullable Output<String> bootstrapPackageId;
 
+    /**
+     * @return The java package for the bootstrap. Optional
+     * 
+     */
     public Optional<Output<String>> bootstrapPackageId() {
         return Optional.ofNullable(this.bootstrapPackageId);
     }
@@ -49,6 +57,10 @@ public final class AndroidRoboTestArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="bootstrapRunnerClass")
     private @Nullable Output<String> bootstrapRunnerClass;
 
+    /**
+     * @return The runner class for the bootstrap. Optional
+     * 
+     */
     public Optional<Output<String>> bootstrapRunnerClass() {
         return Optional.ofNullable(this.bootstrapRunnerClass);
     }
@@ -60,6 +72,10 @@ public final class AndroidRoboTestArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="maxDepth")
     private @Nullable Output<Integer> maxDepth;
 
+    /**
+     * @return The max depth of the traversal stack Robo can explore. Optional
+     * 
+     */
     public Optional<Output<Integer>> maxDepth() {
         return Optional.ofNullable(this.maxDepth);
     }
@@ -71,6 +87,10 @@ public final class AndroidRoboTestArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="maxSteps")
     private @Nullable Output<Integer> maxSteps;
 
+    /**
+     * @return The max number of steps/actions Robo can execute. Default is no limit (0). Optional
+     * 
+     */
     public Optional<Output<Integer>> maxSteps() {
         return Optional.ofNullable(this.maxSteps);
     }
@@ -103,47 +123,107 @@ public final class AndroidRoboTestArgs extends com.pulumi.resources.ResourceArgs
             $ = new AndroidRoboTestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appInitialActivity The initial activity that should be used to start the app. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder appInitialActivity(@Nullable Output<String> appInitialActivity) {
             $.appInitialActivity = appInitialActivity;
             return this;
         }
 
+        /**
+         * @param appInitialActivity The initial activity that should be used to start the app. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder appInitialActivity(String appInitialActivity) {
             return appInitialActivity(Output.of(appInitialActivity));
         }
 
+        /**
+         * @param bootstrapPackageId The java package for the bootstrap. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapPackageId(@Nullable Output<String> bootstrapPackageId) {
             $.bootstrapPackageId = bootstrapPackageId;
             return this;
         }
 
+        /**
+         * @param bootstrapPackageId The java package for the bootstrap. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapPackageId(String bootstrapPackageId) {
             return bootstrapPackageId(Output.of(bootstrapPackageId));
         }
 
+        /**
+         * @param bootstrapRunnerClass The runner class for the bootstrap. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapRunnerClass(@Nullable Output<String> bootstrapRunnerClass) {
             $.bootstrapRunnerClass = bootstrapRunnerClass;
             return this;
         }
 
+        /**
+         * @param bootstrapRunnerClass The runner class for the bootstrap. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapRunnerClass(String bootstrapRunnerClass) {
             return bootstrapRunnerClass(Output.of(bootstrapRunnerClass));
         }
 
+        /**
+         * @param maxDepth The max depth of the traversal stack Robo can explore. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDepth(@Nullable Output<Integer> maxDepth) {
             $.maxDepth = maxDepth;
             return this;
         }
 
+        /**
+         * @param maxDepth The max depth of the traversal stack Robo can explore. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDepth(Integer maxDepth) {
             return maxDepth(Output.of(maxDepth));
         }
 
+        /**
+         * @param maxSteps The max number of steps/actions Robo can execute. Default is no limit (0). Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSteps(@Nullable Output<Integer> maxSteps) {
             $.maxSteps = maxSteps;
             return this;
         }
 
+        /**
+         * @param maxSteps The max number of steps/actions Robo can execute. Default is no limit (0). Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSteps(Integer maxSteps) {
             return maxSteps(Output.of(maxSteps));
         }

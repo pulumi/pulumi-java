@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2DetectionRuleArgs extends com.pulumi.resour
     @Import(name="hotwordRule")
     private @Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule;
 
+    /**
+     * @return Hotword-based detection rule.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2HotwordRuleArgs>> hotwordRule() {
         return Optional.ofNullable(this.hotwordRule);
     }
@@ -54,11 +58,23 @@ public final class GooglePrivacyDlpV2DetectionRuleArgs extends com.pulumi.resour
             $ = new GooglePrivacyDlpV2DetectionRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hotwordRule Hotword-based detection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hotwordRule(@Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule) {
             $.hotwordRule = hotwordRule;
             return this;
         }
 
+        /**
+         * @param hotwordRule Hotword-based detection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hotwordRule(GooglePrivacyDlpV2HotwordRuleArgs hotwordRule) {
             return hotwordRule(Output.of(hotwordRule));
         }

@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
     @Import(name="fileUri", required=true)
     private Output<String> fileUri;
 
+    /**
+     * @return Publicly reachable URI of the file. The RBM platform determines the MIME type of the file from the content-type field in the HTTP headers when the platform fetches the file. The content-type field must be present and accurate in the HTTP response from the URL.
+     * 
+     */
     public Output<String> fileUri() {
         return this.fileUri;
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
     @Import(name="height")
     private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> height;
 
+    /**
+     * @return Required for cards with vertical orientation. The height of the media within a rich card with a vertical layout. For a standalone card with horizontal layout, height is not customizable, and this field is ignored.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight>> height() {
         return Optional.ofNullable(this.height);
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
     @Import(name="thumbnailUri")
     private @Nullable Output<String> thumbnailUri;
 
+    /**
+     * @return Optional. Publicly reachable URI of the thumbnail.If you don&#39;t provide a thumbnail URI, the RBM platform displays a blank placeholder thumbnail until the user&#39;s device downloads the file. Depending on the user&#39;s setting, the file may not download automatically and may require the user to tap a download button.
+     * 
+     */
     public Optional<Output<String>> thumbnailUri() {
         return Optional.ofNullable(this.thumbnailUri);
     }
@@ -79,29 +91,65 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
             $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileUri Publicly reachable URI of the file. The RBM platform determines the MIME type of the file from the content-type field in the HTTP headers when the platform fetches the file. The content-type field must be present and accurate in the HTTP response from the URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUri(Output<String> fileUri) {
             $.fileUri = fileUri;
             return this;
         }
 
+        /**
+         * @param fileUri Publicly reachable URI of the file. The RBM platform determines the MIME type of the file from the content-type field in the HTTP headers when the platform fetches the file. The content-type field must be present and accurate in the HTTP response from the URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUri(String fileUri) {
             return fileUri(Output.of(fileUri));
         }
 
+        /**
+         * @param height Required for cards with vertical orientation. The height of the media within a rich card with a vertical layout. For a standalone card with horizontal layout, height is not customizable, and this field is ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> height) {
             $.height = height;
             return this;
         }
 
+        /**
+         * @param height Required for cards with vertical orientation. The height of the media within a rich card with a vertical layout. For a standalone card with horizontal layout, height is not customizable, and this field is ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight height) {
             return height(Output.of(height));
         }
 
+        /**
+         * @param thumbnailUri Optional. Publicly reachable URI of the thumbnail.If you don&#39;t provide a thumbnail URI, the RBM platform displays a blank placeholder thumbnail until the user&#39;s device downloads the file. Depending on the user&#39;s setting, the file may not download automatically and may require the user to tap a download button.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbnailUri(@Nullable Output<String> thumbnailUri) {
             $.thumbnailUri = thumbnailUri;
             return this;
         }
 
+        /**
+         * @param thumbnailUri Optional. Publicly reachable URI of the thumbnail.If you don&#39;t provide a thumbnail URI, the RBM platform displays a blank placeholder thumbnail until the user&#39;s device downloads the file. Depending on the user&#39;s setting, the file may not download automatically and may require the user to tap a download button.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbnailUri(String thumbnailUri) {
             return thumbnailUri(Output.of(thumbnailUri));
         }

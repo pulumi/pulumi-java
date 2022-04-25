@@ -27,6 +27,10 @@ public final class EnvironmentConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="executionConfig")
     private @Nullable Output<ExecutionConfigArgs> executionConfig;
 
+    /**
+     * @return Optional. Execution configuration for a workload.
+     * 
+     */
     public Optional<Output<ExecutionConfigArgs>> executionConfig() {
         return Optional.ofNullable(this.executionConfig);
     }
@@ -38,6 +42,10 @@ public final class EnvironmentConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="peripheralsConfig")
     private @Nullable Output<PeripheralsConfigArgs> peripheralsConfig;
 
+    /**
+     * @return Optional. Peripherals configuration that workload has access to.
+     * 
+     */
     public Optional<Output<PeripheralsConfigArgs>> peripheralsConfig() {
         return Optional.ofNullable(this.peripheralsConfig);
     }
@@ -67,20 +75,44 @@ public final class EnvironmentConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new EnvironmentConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param executionConfig Optional. Execution configuration for a workload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionConfig(@Nullable Output<ExecutionConfigArgs> executionConfig) {
             $.executionConfig = executionConfig;
             return this;
         }
 
+        /**
+         * @param executionConfig Optional. Execution configuration for a workload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionConfig(ExecutionConfigArgs executionConfig) {
             return executionConfig(Output.of(executionConfig));
         }
 
+        /**
+         * @param peripheralsConfig Optional. Peripherals configuration that workload has access to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peripheralsConfig(@Nullable Output<PeripheralsConfigArgs> peripheralsConfig) {
             $.peripheralsConfig = peripheralsConfig;
             return this;
         }
 
+        /**
+         * @param peripheralsConfig Optional. Peripherals configuration that workload has access to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peripheralsConfig(PeripheralsConfigArgs peripheralsConfig) {
             return peripheralsConfig(Output.of(peripheralsConfig));
         }

@@ -26,6 +26,10 @@ public final class SearchParameterArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="canonicalUrl")
     private @Nullable Output<String> canonicalUrl;
 
+    /**
+     * @return The canonical url of the search parameter resource.
+     * 
+     */
     public Optional<Output<String>> canonicalUrl() {
         return Optional.ofNullable(this.canonicalUrl);
     }
@@ -37,6 +41,10 @@ public final class SearchParameterArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="parameter")
     private @Nullable Output<String> parameter;
 
+    /**
+     * @return The versioned name of the search parameter resource. The format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/_history/{version-id} For fhir stores with disable_resource_versioning=true, the format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/
+     * 
+     */
     public Optional<Output<String>> parameter() {
         return Optional.ofNullable(this.parameter);
     }
@@ -66,20 +74,44 @@ public final class SearchParameterArgs extends com.pulumi.resources.ResourceArgs
             $ = new SearchParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canonicalUrl The canonical url of the search parameter resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canonicalUrl(@Nullable Output<String> canonicalUrl) {
             $.canonicalUrl = canonicalUrl;
             return this;
         }
 
+        /**
+         * @param canonicalUrl The canonical url of the search parameter resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canonicalUrl(String canonicalUrl) {
             return canonicalUrl(Output.of(canonicalUrl));
         }
 
+        /**
+         * @param parameter The versioned name of the search parameter resource. The format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/_history/{version-id} For fhir stores with disable_resource_versioning=true, the format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameter(@Nullable Output<String> parameter) {
             $.parameter = parameter;
             return this;
         }
 
+        /**
+         * @param parameter The versioned name of the search parameter resource. The format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/_history/{version-id} For fhir stores with disable_resource_versioning=true, the format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameter(String parameter) {
             return parameter(Output.of(parameter));
         }

@@ -26,6 +26,10 @@ public final class TimeZoneArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return IANA Time Zone Database time zone, e.g. &#34;America/New_York&#34;.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class TimeZoneArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Optional. IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -66,20 +74,44 @@ public final class TimeZoneArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TimeZoneArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id IANA Time Zone Database time zone, e.g. &#34;America/New_York&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id IANA Time Zone Database time zone, e.g. &#34;America/New_York&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param version Optional. IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Optional. IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

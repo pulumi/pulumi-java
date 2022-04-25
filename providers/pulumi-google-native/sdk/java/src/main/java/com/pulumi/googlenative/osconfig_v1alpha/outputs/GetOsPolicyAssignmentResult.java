@@ -15,67 +15,67 @@ import java.util.Objects;
 @CustomType
 public final class GetOsPolicyAssignmentResult {
     /**
-     * Indicates that this revision has been successfully rolled out in this zone and new VMs will be assigned OS policies from this revision. For a given OS policy assignment, there is only one revision with a value of `true` for this field.
+     * @return Indicates that this revision has been successfully rolled out in this zone and new VMs will be assigned OS policies from this revision. For a given OS policy assignment, there is only one revision with a value of `true` for this field.
      * 
      */
     private final Boolean baseline;
     /**
-     * Indicates that this revision deletes the OS policy assignment.
+     * @return Indicates that this revision deletes the OS policy assignment.
      * 
      */
     private final Boolean deleted;
     /**
-     * OS policy assignment description. Length of the description is limited to 1024 characters.
+     * @return OS policy assignment description. Length of the description is limited to 1024 characters.
      * 
      */
     private final String description;
     /**
-     * The etag for this OS policy assignment. If this is provided on update, it must match the server&#39;s etag.
+     * @return The etag for this OS policy assignment. If this is provided on update, it must match the server&#39;s etag.
      * 
      */
     private final String etag;
     /**
-     * Filter to select VMs.
+     * @return Filter to select VMs.
      * 
      */
     private final OSPolicyAssignmentInstanceFilterResponse instanceFilter;
     /**
-     * Resource name. Format: `projects/{project_number}/locations/{location}/osPolicyAssignments/{os_policy_assignment_id}` This field is ignored when you create an OS policy assignment.
+     * @return Resource name. Format: `projects/{project_number}/locations/{location}/osPolicyAssignments/{os_policy_assignment_id}` This field is ignored when you create an OS policy assignment.
      * 
      */
     private final String name;
     /**
-     * List of OS policies to be applied to the VMs.
+     * @return List of OS policies to be applied to the VMs.
      * 
      */
     private final List<OSPolicyResponse> osPolicies;
     /**
-     * Indicates that reconciliation is in progress for the revision. This value is `true` when the `rollout_state` is one of: * IN_PROGRESS * CANCELLING
+     * @return Indicates that reconciliation is in progress for the revision. This value is `true` when the `rollout_state` is one of: * IN_PROGRESS * CANCELLING
      * 
      */
     private final Boolean reconciling;
     /**
-     * The timestamp that the revision was created.
+     * @return The timestamp that the revision was created.
      * 
      */
     private final String revisionCreateTime;
     /**
-     * The assignment revision ID A new revision is committed whenever a rollout is triggered for a OS policy assignment
+     * @return The assignment revision ID A new revision is committed whenever a rollout is triggered for a OS policy assignment
      * 
      */
     private final String revisionId;
     /**
-     * Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
+     * @return Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
      * 
      */
     private final OSPolicyAssignmentRolloutResponse rollout;
     /**
-     * OS policy assignment rollout state
+     * @return OS policy assignment rollout state
      * 
      */
     private final String rolloutState;
     /**
-     * Server generated unique id for the OS policy assignment resource.
+     * @return Server generated unique id for the OS policy assignment resource.
      * 
      */
     private final String uid;
@@ -111,93 +111,93 @@ public final class GetOsPolicyAssignmentResult {
     }
 
     /**
-     * Indicates that this revision has been successfully rolled out in this zone and new VMs will be assigned OS policies from this revision. For a given OS policy assignment, there is only one revision with a value of `true` for this field.
+     * @return Indicates that this revision has been successfully rolled out in this zone and new VMs will be assigned OS policies from this revision. For a given OS policy assignment, there is only one revision with a value of `true` for this field.
      * 
-    */
+     */
     public Boolean baseline() {
         return this.baseline;
     }
     /**
-     * Indicates that this revision deletes the OS policy assignment.
+     * @return Indicates that this revision deletes the OS policy assignment.
      * 
-    */
+     */
     public Boolean deleted() {
         return this.deleted;
     }
     /**
-     * OS policy assignment description. Length of the description is limited to 1024 characters.
+     * @return OS policy assignment description. Length of the description is limited to 1024 characters.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The etag for this OS policy assignment. If this is provided on update, it must match the server&#39;s etag.
+     * @return The etag for this OS policy assignment. If this is provided on update, it must match the server&#39;s etag.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Filter to select VMs.
+     * @return Filter to select VMs.
      * 
-    */
+     */
     public OSPolicyAssignmentInstanceFilterResponse instanceFilter() {
         return this.instanceFilter;
     }
     /**
-     * Resource name. Format: `projects/{project_number}/locations/{location}/osPolicyAssignments/{os_policy_assignment_id}` This field is ignored when you create an OS policy assignment.
+     * @return Resource name. Format: `projects/{project_number}/locations/{location}/osPolicyAssignments/{os_policy_assignment_id}` This field is ignored when you create an OS policy assignment.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of OS policies to be applied to the VMs.
+     * @return List of OS policies to be applied to the VMs.
      * 
-    */
+     */
     public List<OSPolicyResponse> osPolicies() {
         return this.osPolicies;
     }
     /**
-     * Indicates that reconciliation is in progress for the revision. This value is `true` when the `rollout_state` is one of: * IN_PROGRESS * CANCELLING
+     * @return Indicates that reconciliation is in progress for the revision. This value is `true` when the `rollout_state` is one of: * IN_PROGRESS * CANCELLING
      * 
-    */
+     */
     public Boolean reconciling() {
         return this.reconciling;
     }
     /**
-     * The timestamp that the revision was created.
+     * @return The timestamp that the revision was created.
      * 
-    */
+     */
     public String revisionCreateTime() {
         return this.revisionCreateTime;
     }
     /**
-     * The assignment revision ID A new revision is committed whenever a rollout is triggered for a OS policy assignment
+     * @return The assignment revision ID A new revision is committed whenever a rollout is triggered for a OS policy assignment
      * 
-    */
+     */
     public String revisionId() {
         return this.revisionId;
     }
     /**
-     * Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
+     * @return Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
      * 
-    */
+     */
     public OSPolicyAssignmentRolloutResponse rollout() {
         return this.rollout;
     }
     /**
-     * OS policy assignment rollout state
+     * @return OS policy assignment rollout state
      * 
-    */
+     */
     public String rolloutState() {
         return this.rolloutState;
     }
     /**
-     * Server generated unique id for the OS policy assignment resource.
+     * @return Server generated unique id for the OS policy assignment resource.
      * 
-    */
+     */
     public String uid() {
         return this.uid;
     }

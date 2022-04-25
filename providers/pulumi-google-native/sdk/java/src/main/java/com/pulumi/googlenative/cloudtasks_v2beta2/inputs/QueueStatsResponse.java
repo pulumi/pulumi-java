@@ -24,6 +24,10 @@ public final class QueueStatsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="concurrentDispatchesCount", required=true)
     private String concurrentDispatchesCount;
 
+    /**
+     * @return The number of requests that the queue has dispatched but has not received a reply for yet.
+     * 
+     */
     public String concurrentDispatchesCount() {
         return this.concurrentDispatchesCount;
     }
@@ -35,6 +39,10 @@ public final class QueueStatsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="effectiveExecutionRate", required=true)
     private Double effectiveExecutionRate;
 
+    /**
+     * @return The current maximum number of tasks per second executed by the queue. The maximum value of this variable is controlled by the RateLimits of the Queue. However, this value could be less to avoid overloading the endpoints tasks in the queue are targeting.
+     * 
+     */
     public Double effectiveExecutionRate() {
         return this.effectiveExecutionRate;
     }
@@ -46,6 +54,10 @@ public final class QueueStatsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="executedLastMinuteCount", required=true)
     private String executedLastMinuteCount;
 
+    /**
+     * @return The number of tasks that the queue has dispatched and received a reply for during the last minute. This variable counts both successful and non-successful executions.
+     * 
+     */
     public String executedLastMinuteCount() {
         return this.executedLastMinuteCount;
     }
@@ -57,6 +69,10 @@ public final class QueueStatsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="oldestEstimatedArrivalTime", required=true)
     private String oldestEstimatedArrivalTime;
 
+    /**
+     * @return An estimation of the nearest time in the future where a task in the queue is scheduled to be executed.
+     * 
+     */
     public String oldestEstimatedArrivalTime() {
         return this.oldestEstimatedArrivalTime;
     }
@@ -68,6 +84,10 @@ public final class QueueStatsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tasksCount", required=true)
     private String tasksCount;
 
+    /**
+     * @return An estimation of the number of tasks in the queue, that is, the tasks in the queue that haven&#39;t been executed, the tasks in the queue which the queue has dispatched but has not yet received a reply for, and the failed tasks that the queue is retrying.
+     * 
+     */
     public String tasksCount() {
         return this.tasksCount;
     }
@@ -100,26 +120,56 @@ public final class QueueStatsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new QueueStatsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param concurrentDispatchesCount The number of requests that the queue has dispatched but has not received a reply for yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder concurrentDispatchesCount(String concurrentDispatchesCount) {
             $.concurrentDispatchesCount = concurrentDispatchesCount;
             return this;
         }
 
+        /**
+         * @param effectiveExecutionRate The current maximum number of tasks per second executed by the queue. The maximum value of this variable is controlled by the RateLimits of the Queue. However, this value could be less to avoid overloading the endpoints tasks in the queue are targeting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder effectiveExecutionRate(Double effectiveExecutionRate) {
             $.effectiveExecutionRate = effectiveExecutionRate;
             return this;
         }
 
+        /**
+         * @param executedLastMinuteCount The number of tasks that the queue has dispatched and received a reply for during the last minute. This variable counts both successful and non-successful executions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executedLastMinuteCount(String executedLastMinuteCount) {
             $.executedLastMinuteCount = executedLastMinuteCount;
             return this;
         }
 
+        /**
+         * @param oldestEstimatedArrivalTime An estimation of the nearest time in the future where a task in the queue is scheduled to be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oldestEstimatedArrivalTime(String oldestEstimatedArrivalTime) {
             $.oldestEstimatedArrivalTime = oldestEstimatedArrivalTime;
             return this;
         }
 
+        /**
+         * @param tasksCount An estimation of the number of tasks in the queue, that is, the tasks in the queue that haven&#39;t been executed, the tasks in the queue which the queue has dispatched but has not yet received a reply for, and the failed tasks that the queue is retrying.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tasksCount(String tasksCount) {
             $.tasksCount = tasksCount;
             return this;

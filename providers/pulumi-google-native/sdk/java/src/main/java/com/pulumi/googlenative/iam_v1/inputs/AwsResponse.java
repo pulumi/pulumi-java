@@ -23,6 +23,10 @@ public final class AwsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountId", required=true)
     private String accountId;
 
+    /**
+     * @return The AWS account ID.
+     * 
+     */
     public String accountId() {
         return this.accountId;
     }
@@ -51,6 +55,12 @@ public final class AwsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AwsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The AWS account ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             $.accountId = accountId;
             return this;

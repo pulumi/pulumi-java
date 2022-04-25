@@ -21,6 +21,10 @@ public final class QueryParameterResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a query.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -32,6 +36,10 @@ public final class QueryParameterResponse extends com.pulumi.resources.InvokeArg
     @Import(name="parameterType", required=true)
     private QueryParameterTypeResponse parameterType;
 
+    /**
+     * @return [Required] The type of this parameter.
+     * 
+     */
     public QueryParameterTypeResponse parameterType() {
         return this.parameterType;
     }
@@ -43,6 +51,10 @@ public final class QueryParameterResponse extends com.pulumi.resources.InvokeArg
     @Import(name="parameterValue", required=true)
     private QueryParameterValueResponse parameterValue;
 
+    /**
+     * @return [Required] The value of this parameter.
+     * 
+     */
     public QueryParameterValueResponse parameterValue() {
         return this.parameterValue;
     }
@@ -73,16 +85,34 @@ public final class QueryParameterResponse extends com.pulumi.resources.InvokeArg
             $ = new QueryParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parameterType [Required] The type of this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterType(QueryParameterTypeResponse parameterType) {
             $.parameterType = parameterType;
             return this;
         }
 
+        /**
+         * @param parameterValue [Required] The value of this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterValue(QueryParameterValueResponse parameterValue) {
             $.parameterValue = parameterValue;
             return this;

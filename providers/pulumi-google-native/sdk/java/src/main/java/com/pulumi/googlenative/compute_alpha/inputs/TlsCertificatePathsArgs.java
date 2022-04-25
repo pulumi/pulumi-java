@@ -26,6 +26,10 @@ public final class TlsCertificatePathsArgs extends com.pulumi.resources.Resource
     @Import(name="certificatePath")
     private @Nullable Output<String> certificatePath;
 
+    /**
+     * @return The path to the file holding the client or server TLS certificate to use.
+     * 
+     */
     public Optional<Output<String>> certificatePath() {
         return Optional.ofNullable(this.certificatePath);
     }
@@ -37,6 +41,10 @@ public final class TlsCertificatePathsArgs extends com.pulumi.resources.Resource
     @Import(name="privateKeyPath")
     private @Nullable Output<String> privateKeyPath;
 
+    /**
+     * @return The path to the file holding the client or server private key.
+     * 
+     */
     public Optional<Output<String>> privateKeyPath() {
         return Optional.ofNullable(this.privateKeyPath);
     }
@@ -66,20 +74,44 @@ public final class TlsCertificatePathsArgs extends com.pulumi.resources.Resource
             $ = new TlsCertificatePathsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificatePath The path to the file holding the client or server TLS certificate to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificatePath(@Nullable Output<String> certificatePath) {
             $.certificatePath = certificatePath;
             return this;
         }
 
+        /**
+         * @param certificatePath The path to the file holding the client or server TLS certificate to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificatePath(String certificatePath) {
             return certificatePath(Output.of(certificatePath));
         }
 
+        /**
+         * @param privateKeyPath The path to the file holding the client or server private key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyPath(@Nullable Output<String> privateKeyPath) {
             $.privateKeyPath = privateKeyPath;
             return this;
         }
 
+        /**
+         * @param privateKeyPath The path to the file holding the client or server private key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyPath(String privateKeyPath) {
             return privateKeyPath(Output.of(privateKeyPath));
         }

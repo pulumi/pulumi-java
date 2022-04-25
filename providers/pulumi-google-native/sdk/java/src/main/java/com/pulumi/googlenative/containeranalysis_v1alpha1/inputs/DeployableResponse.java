@@ -24,6 +24,10 @@ public final class DeployableResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceUri", required=true)
     private List<String> resourceUri;
 
+    /**
+     * @return Resource URI for the artifact being deployed.
+     * 
+     */
     public List<String> resourceUri() {
         return this.resourceUri;
     }
@@ -52,11 +56,23 @@ public final class DeployableResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DeployableResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceUri Resource URI for the artifact being deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(List<String> resourceUri) {
             $.resourceUri = resourceUri;
             return this;
         }
 
+        /**
+         * @param resourceUri Resource URI for the artifact being deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String... resourceUri) {
             return resourceUri(List.of(resourceUri));
         }

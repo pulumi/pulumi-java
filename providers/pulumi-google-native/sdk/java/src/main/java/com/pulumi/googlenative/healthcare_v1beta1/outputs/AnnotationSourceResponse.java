@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class AnnotationSourceResponse {
     /**
-     * Cloud Healthcare API resource.
+     * @return Cloud Healthcare API resource.
      * 
      */
     private final CloudHealthcareSourceResponse cloudHealthcareSource;
@@ -21,9 +21,9 @@ public final class AnnotationSourceResponse {
     }
 
     /**
-     * Cloud Healthcare API resource.
+     * @return Cloud Healthcare API resource.
      * 
-    */
+     */
     public CloudHealthcareSourceResponse cloudHealthcareSource() {
         return this.cloudHealthcareSource;
     }

@@ -23,6 +23,10 @@ public final class GoogleCloudRetailV2alphaRuleFilterActionResponse extends com.
     @Import(name="filter", required=true)
     private String filter;
 
+    /**
+     * @return A filter to apply on the matching condition results. Supported features: * filter must be set. * Filter syntax is identical to SearchRequest.filter. See more details at the Retail Search [user guide](/retail/search/docs/filter-and-order#filter). * To filter products with product ID &#34;product_1&#34; or &#34;product_2&#34;, and color &#34;Red&#34; or &#34;Blue&#34;: *(id: ANY(&#34;product_1&#34;, &#34;product_2&#34;)) * *AND * *(colorFamilies: ANY(&#34;Red&#34;, &#34;Blue&#34;)) *
+     * 
+     */
     public String filter() {
         return this.filter;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudRetailV2alphaRuleFilterActionResponse extends com.
             $ = new GoogleCloudRetailV2alphaRuleFilterActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filter A filter to apply on the matching condition results. Supported features: * filter must be set. * Filter syntax is identical to SearchRequest.filter. See more details at the Retail Search [user guide](/retail/search/docs/filter-and-order#filter). * To filter products with product ID &#34;product_1&#34; or &#34;product_2&#34;, and color &#34;Red&#34; or &#34;Blue&#34;: *(id: ANY(&#34;product_1&#34;, &#34;product_2&#34;)) * *AND * *(colorFamilies: ANY(&#34;Red&#34;, &#34;Blue&#34;)) *
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             $.filter = filter;
             return this;

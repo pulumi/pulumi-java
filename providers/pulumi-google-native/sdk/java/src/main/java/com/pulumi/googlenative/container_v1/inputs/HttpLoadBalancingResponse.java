@@ -23,6 +23,10 @@ public final class HttpLoadBalancingResponse extends com.pulumi.resources.Invoke
     @Import(name="disabled", required=true)
     private Boolean disabled;
 
+    /**
+     * @return Whether the HTTP Load Balancing controller is enabled in the cluster. When enabled, it runs a small pod in the cluster that manages the load balancers.
+     * 
+     */
     public Boolean disabled() {
         return this.disabled;
     }
@@ -51,6 +55,12 @@ public final class HttpLoadBalancingResponse extends com.pulumi.resources.Invoke
             $ = new HttpLoadBalancingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disabled Whether the HTTP Load Balancing controller is enabled in the cluster. When enabled, it runs a small pod in the cluster that manages the load balancers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             $.disabled = disabled;
             return this;

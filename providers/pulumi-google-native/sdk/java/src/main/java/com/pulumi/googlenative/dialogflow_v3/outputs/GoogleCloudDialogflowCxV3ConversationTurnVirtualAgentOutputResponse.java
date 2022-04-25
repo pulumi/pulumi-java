@@ -17,37 +17,37 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse {
     /**
-     * The Page on which the utterance was spoken. Only name and displayName will be set.
+     * @return The Page on which the utterance was spoken. Only name and displayName will be set.
      * 
      */
     private final GoogleCloudDialogflowCxV3PageResponse currentPage;
     /**
-     * Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.
+     * @return Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.
      * 
      */
     private final Map<String,String> diagnosticInfo;
     /**
-     * If this is part of a result conversation turn, the list of differences between the original run and the replay for this output, if any.
+     * @return If this is part of a result conversation turn, the list of differences between the original run and the replay for this output, if any.
      * 
      */
     private final List<GoogleCloudDialogflowCxV3TestRunDifferenceResponse> differences;
     /**
-     * The session parameters available to the bot at this point.
+     * @return The session parameters available to the bot at this point.
      * 
      */
     private final Map<String,String> sessionParameters;
     /**
-     * Response error from the agent in the test result. If set, other output is empty.
+     * @return Response error from the agent in the test result. If set, other output is empty.
      * 
      */
     private final GoogleRpcStatusResponse status;
     /**
-     * The text responses from the agent for the turn.
+     * @return The text responses from the agent for the turn.
      * 
      */
     private final List<GoogleCloudDialogflowCxV3ResponseMessageTextResponse> textResponses;
     /**
-     * The Intent that triggered the response. Only name and displayName will be set.
+     * @return The Intent that triggered the response. Only name and displayName will be set.
      * 
      */
     private final GoogleCloudDialogflowCxV3IntentResponse triggeredIntent;
@@ -71,51 +71,51 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
     }
 
     /**
-     * The Page on which the utterance was spoken. Only name and displayName will be set.
+     * @return The Page on which the utterance was spoken. Only name and displayName will be set.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3PageResponse currentPage() {
         return this.currentPage;
     }
     /**
-     * Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.
+     * @return Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.
      * 
-    */
+     */
     public Map<String,String> diagnosticInfo() {
         return this.diagnosticInfo;
     }
     /**
-     * If this is part of a result conversation turn, the list of differences between the original run and the replay for this output, if any.
+     * @return If this is part of a result conversation turn, the list of differences between the original run and the replay for this output, if any.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowCxV3TestRunDifferenceResponse> differences() {
         return this.differences;
     }
     /**
-     * The session parameters available to the bot at this point.
+     * @return The session parameters available to the bot at this point.
      * 
-    */
+     */
     public Map<String,String> sessionParameters() {
         return this.sessionParameters;
     }
     /**
-     * Response error from the agent in the test result. If set, other output is empty.
+     * @return Response error from the agent in the test result. If set, other output is empty.
      * 
-    */
+     */
     public GoogleRpcStatusResponse status() {
         return this.status;
     }
     /**
-     * The text responses from the agent for the turn.
+     * @return The text responses from the agent for the turn.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowCxV3ResponseMessageTextResponse> textResponses() {
         return this.textResponses;
     }
     /**
-     * The Intent that triggered the response. Only name and displayName will be set.
+     * @return The Intent that triggered the response. Only name and displayName will be set.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3IntentResponse triggeredIntent() {
         return this.triggeredIntent;
     }

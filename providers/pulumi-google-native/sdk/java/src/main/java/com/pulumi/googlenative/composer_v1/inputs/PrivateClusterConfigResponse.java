@@ -24,6 +24,10 @@ public final class PrivateClusterConfigResponse extends com.pulumi.resources.Inv
     @Import(name="enablePrivateEndpoint", required=true)
     private Boolean enablePrivateEndpoint;
 
+    /**
+     * @return Optional. If `true`, access to the public endpoint of the GKE cluster is denied.
+     * 
+     */
     public Boolean enablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
@@ -35,6 +39,10 @@ public final class PrivateClusterConfigResponse extends com.pulumi.resources.Inv
     @Import(name="masterIpv4CidrBlock", required=true)
     private String masterIpv4CidrBlock;
 
+    /**
+     * @return Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If left blank, the default value of &#39;172.16.0.0/23&#39; is used.
+     * 
+     */
     public String masterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
     }
@@ -46,6 +54,10 @@ public final class PrivateClusterConfigResponse extends com.pulumi.resources.Inv
     @Import(name="masterIpv4ReservedRange", required=true)
     private String masterIpv4ReservedRange;
 
+    /**
+     * @return The IP range in CIDR notation to use for the hosted master network. This range is used for assigning internal IP addresses to the GKE cluster master or set of masters and to the internal load balancer virtual IP. This range must not overlap with any other ranges in use within the cluster&#39;s network.
+     * 
+     */
     public String masterIpv4ReservedRange() {
         return this.masterIpv4ReservedRange;
     }
@@ -76,16 +88,34 @@ public final class PrivateClusterConfigResponse extends com.pulumi.resources.Inv
             $ = new PrivateClusterConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enablePrivateEndpoint Optional. If `true`, access to the public endpoint of the GKE cluster is denied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePrivateEndpoint(Boolean enablePrivateEndpoint) {
             $.enablePrivateEndpoint = enablePrivateEndpoint;
             return this;
         }
 
+        /**
+         * @param masterIpv4CidrBlock Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If left blank, the default value of &#39;172.16.0.0/23&#39; is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterIpv4CidrBlock(String masterIpv4CidrBlock) {
             $.masterIpv4CidrBlock = masterIpv4CidrBlock;
             return this;
         }
 
+        /**
+         * @param masterIpv4ReservedRange The IP range in CIDR notation to use for the hosted master network. This range is used for assigning internal IP addresses to the GKE cluster master or set of masters and to the internal load balancer virtual IP. This range must not overlap with any other ranges in use within the cluster&#39;s network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterIpv4ReservedRange(String masterIpv4ReservedRange) {
             $.masterIpv4ReservedRange = masterIpv4ReservedRange;
             return this;

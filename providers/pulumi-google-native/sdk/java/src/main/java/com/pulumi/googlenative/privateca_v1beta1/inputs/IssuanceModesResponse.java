@@ -23,6 +23,10 @@ public final class IssuanceModesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="allowConfigBasedIssuance", required=true)
     private Boolean allowConfigBasedIssuance;
 
+    /**
+     * @return When true, allows callers to create Certificates by specifying a CertificateConfig.
+     * 
+     */
     public Boolean allowConfigBasedIssuance() {
         return this.allowConfigBasedIssuance;
     }
@@ -34,6 +38,10 @@ public final class IssuanceModesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="allowCsrBasedIssuance", required=true)
     private Boolean allowCsrBasedIssuance;
 
+    /**
+     * @return When true, allows callers to create Certificates by specifying a CSR.
+     * 
+     */
     public Boolean allowCsrBasedIssuance() {
         return this.allowCsrBasedIssuance;
     }
@@ -63,11 +71,23 @@ public final class IssuanceModesResponse extends com.pulumi.resources.InvokeArgs
             $ = new IssuanceModesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowConfigBasedIssuance When true, allows callers to create Certificates by specifying a CertificateConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowConfigBasedIssuance(Boolean allowConfigBasedIssuance) {
             $.allowConfigBasedIssuance = allowConfigBasedIssuance;
             return this;
         }
 
+        /**
+         * @param allowCsrBasedIssuance When true, allows callers to create Certificates by specifying a CSR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowCsrBasedIssuance(Boolean allowCsrBasedIssuance) {
             $.allowCsrBasedIssuance = allowCsrBasedIssuance;
             return this;

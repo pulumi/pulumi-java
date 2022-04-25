@@ -24,6 +24,10 @@ public final class IngressPolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ingressFrom", required=true)
     private IngressFromResponse ingressFrom;
 
+    /**
+     * @return Defines the conditions on the source of a request causing this IngressPolicy to apply.
+     * 
+     */
     public IngressFromResponse ingressFrom() {
         return this.ingressFrom;
     }
@@ -35,6 +39,10 @@ public final class IngressPolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ingressTo", required=true)
     private IngressToResponse ingressTo;
 
+    /**
+     * @return Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply.
+     * 
+     */
     public IngressToResponse ingressTo() {
         return this.ingressTo;
     }
@@ -64,11 +72,23 @@ public final class IngressPolicyResponse extends com.pulumi.resources.InvokeArgs
             $ = new IngressPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ingressFrom Defines the conditions on the source of a request causing this IngressPolicy to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressFrom(IngressFromResponse ingressFrom) {
             $.ingressFrom = ingressFrom;
             return this;
         }
 
+        /**
+         * @param ingressTo Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressTo(IngressToResponse ingressTo) {
             $.ingressTo = ingressTo;
             return this;

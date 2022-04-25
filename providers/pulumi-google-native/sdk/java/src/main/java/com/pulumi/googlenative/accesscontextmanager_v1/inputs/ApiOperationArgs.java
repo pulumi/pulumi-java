@@ -28,6 +28,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="methodSelectors")
     private @Nullable Output<List<MethodSelectorArgs>> methodSelectors;
 
+    /**
+     * @return API methods or permissions to allow. Method or permission must belong to the service specified by `service_name` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `service_name`.
+     * 
+     */
     public Optional<Output<List<MethodSelectorArgs>>> methodSelectors() {
         return Optional.ofNullable(this.methodSelectors);
     }
@@ -39,6 +43,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
     private @Nullable Output<String> serviceName;
 
+    /**
+     * @return The name of the API whose methods or permissions the IngressPolicy or EgressPolicy want to allow. A single ApiOperation with `service_name` field set to `*` will allow all methods AND permissions for all services.
+     * 
+     */
     public Optional<Output<String>> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -68,24 +76,54 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApiOperationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param methodSelectors API methods or permissions to allow. Method or permission must belong to the service specified by `service_name` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `service_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodSelectors(@Nullable Output<List<MethodSelectorArgs>> methodSelectors) {
             $.methodSelectors = methodSelectors;
             return this;
         }
 
+        /**
+         * @param methodSelectors API methods or permissions to allow. Method or permission must belong to the service specified by `service_name` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `service_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodSelectors(List<MethodSelectorArgs> methodSelectors) {
             return methodSelectors(Output.of(methodSelectors));
         }
 
+        /**
+         * @param methodSelectors API methods or permissions to allow. Method or permission must belong to the service specified by `service_name` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `service_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodSelectors(MethodSelectorArgs... methodSelectors) {
             return methodSelectors(List.of(methodSelectors));
         }
 
+        /**
+         * @param serviceName The name of the API whose methods or permissions the IngressPolicy or EgressPolicy want to allow. A single ApiOperation with `service_name` field set to `*` will allow all methods AND permissions for all services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API whose methods or permissions the IngressPolicy or EgressPolicy want to allow. A single ApiOperation with `service_name` field set to `*` will allow all methods AND permissions for all services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

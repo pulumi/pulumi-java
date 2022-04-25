@@ -25,6 +25,10 @@ public final class CounterOptionsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="customFields", required=true)
     private List<CustomFieldResponse> customFields;
 
+    /**
+     * @return Custom fields.
+     * 
+     */
     public List<CustomFieldResponse> customFields() {
         return this.customFields;
     }
@@ -36,6 +40,10 @@ public final class CounterOptionsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="field", required=true)
     private String field;
 
+    /**
+     * @return The field value to attribute.
+     * 
+     */
     public String field() {
         return this.field;
     }
@@ -47,6 +55,10 @@ public final class CounterOptionsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="metric", required=true)
     private String metric;
 
+    /**
+     * @return The metric to update.
+     * 
+     */
     public String metric() {
         return this.metric;
     }
@@ -77,20 +89,44 @@ public final class CounterOptionsResponse extends com.pulumi.resources.InvokeArg
             $ = new CounterOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customFields Custom fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFields(List<CustomFieldResponse> customFields) {
             $.customFields = customFields;
             return this;
         }
 
+        /**
+         * @param customFields Custom fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFields(CustomFieldResponse... customFields) {
             return customFields(List.of(customFields));
         }
 
+        /**
+         * @param field The field value to attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(String field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param metric The metric to update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(String metric) {
             $.metric = metric;
             return this;

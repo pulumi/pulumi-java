@@ -26,6 +26,10 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hosts", required=true)
     private List<String> hosts;
 
+    /**
+     * @return List of host names to match. Matched against the &#34;:authority&#34; header in http requests. At least one host should match. Each host can be an exact match, or a prefix match (example &#34;mydomain.*&#34;) or a suffix match (example // *.myorg.com&#34;) or a presence(any) match &#34;*&#34;.
+     * 
+     */
     public List<String> hosts() {
         return this.hosts;
     }
@@ -37,6 +41,10 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="httpHeaderMatch", required=true)
     private HttpHeaderMatchResponse httpHeaderMatch;
 
+    /**
+     * @return Optional. Match against key:value pair in http header. Provides a flexible match based on HTTP headers, for potentially advanced use cases. At least one header should match. Avoid using header matches to make authorization decisions unless there is a strong guarantee that requests arrive through a trusted client or proxy.
+     * 
+     */
     public HttpHeaderMatchResponse httpHeaderMatch() {
         return this.httpHeaderMatch;
     }
@@ -48,6 +56,10 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="methods", required=true)
     private List<String> methods;
 
+    /**
+     * @return Optional. A list of HTTP methods to match. At least one method should match. Should not be set for gRPC services.
+     * 
+     */
     public List<String> methods() {
         return this.methods;
     }
@@ -59,6 +71,10 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ports", required=true)
     private List<Integer> ports;
 
+    /**
+     * @return List of destination ports to match. At least one port should match.
+     * 
+     */
     public List<Integer> ports() {
         return this.ports;
     }
@@ -90,34 +106,76 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hosts List of host names to match. Matched against the &#34;:authority&#34; header in http requests. At least one host should match. Each host can be an exact match, or a prefix match (example &#34;mydomain.*&#34;) or a suffix match (example // *.myorg.com&#34;) or a presence(any) match &#34;*&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(List<String> hosts) {
             $.hosts = hosts;
             return this;
         }
 
+        /**
+         * @param hosts List of host names to match. Matched against the &#34;:authority&#34; header in http requests. At least one host should match. Each host can be an exact match, or a prefix match (example &#34;mydomain.*&#34;) or a suffix match (example // *.myorg.com&#34;) or a presence(any) match &#34;*&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(String... hosts) {
             return hosts(List.of(hosts));
         }
 
+        /**
+         * @param httpHeaderMatch Optional. Match against key:value pair in http header. Provides a flexible match based on HTTP headers, for potentially advanced use cases. At least one header should match. Avoid using header matches to make authorization decisions unless there is a strong guarantee that requests arrive through a trusted client or proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeaderMatch(HttpHeaderMatchResponse httpHeaderMatch) {
             $.httpHeaderMatch = httpHeaderMatch;
             return this;
         }
 
+        /**
+         * @param methods Optional. A list of HTTP methods to match. At least one method should match. Should not be set for gRPC services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(List<String> methods) {
             $.methods = methods;
             return this;
         }
 
+        /**
+         * @param methods Optional. A list of HTTP methods to match. At least one method should match. Should not be set for gRPC services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(String... methods) {
             return methods(List.of(methods));
         }
 
+        /**
+         * @param ports List of destination ports to match. At least one port should match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<Integer> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports List of destination ports to match. At least one port should match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(Integer... ports) {
             return ports(List.of(ports));
         }

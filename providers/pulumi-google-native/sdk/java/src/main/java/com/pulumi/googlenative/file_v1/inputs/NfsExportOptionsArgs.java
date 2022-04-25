@@ -29,6 +29,10 @@ public final class NfsExportOptionsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="accessMode")
     private @Nullable Output<NfsExportOptionsAccessMode> accessMode;
 
+    /**
+     * @return Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.
+     * 
+     */
     public Optional<Output<NfsExportOptionsAccessMode>> accessMode() {
         return Optional.ofNullable(this.accessMode);
     }
@@ -40,6 +44,10 @@ public final class NfsExportOptionsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="anonGid")
     private @Nullable Output<String> anonGid;
 
+    /**
+     * @return An integer representing the anonymous group id with a default value of 65534. Anon_gid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.
+     * 
+     */
     public Optional<Output<String>> anonGid() {
         return Optional.ofNullable(this.anonGid);
     }
@@ -51,6 +59,10 @@ public final class NfsExportOptionsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="anonUid")
     private @Nullable Output<String> anonUid;
 
+    /**
+     * @return An integer representing the anonymous user id with a default value of 65534. Anon_uid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.
+     * 
+     */
     public Optional<Output<String>> anonUid() {
         return Optional.ofNullable(this.anonUid);
     }
@@ -62,6 +74,10 @@ public final class NfsExportOptionsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ipRanges")
     private @Nullable Output<List<String>> ipRanges;
 
+    /**
+     * @return List of either an IPv4 addresses in the format `{octet1}.{octet2}.{octet3}.{octet4}` or CIDR ranges in the format `{octet1}.{octet2}.{octet3}.{octet4}/{mask size}` which may mount the file share. Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned. The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
+     * 
+     */
     public Optional<Output<List<String>>> ipRanges() {
         return Optional.ofNullable(this.ipRanges);
     }
@@ -73,6 +89,10 @@ public final class NfsExportOptionsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="squashMode")
     private @Nullable Output<NfsExportOptionsSquashMode> squashMode;
 
+    /**
+     * @return Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH, for not allowing root access. The default is NO_ROOT_SQUASH.
+     * 
+     */
     public Optional<Output<NfsExportOptionsSquashMode>> squashMode() {
         return Optional.ofNullable(this.squashMode);
     }
@@ -105,51 +125,117 @@ public final class NfsExportOptionsArgs extends com.pulumi.resources.ResourceArg
             $ = new NfsExportOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessMode Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessMode(@Nullable Output<NfsExportOptionsAccessMode> accessMode) {
             $.accessMode = accessMode;
             return this;
         }
 
+        /**
+         * @param accessMode Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessMode(NfsExportOptionsAccessMode accessMode) {
             return accessMode(Output.of(accessMode));
         }
 
+        /**
+         * @param anonGid An integer representing the anonymous group id with a default value of 65534. Anon_gid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder anonGid(@Nullable Output<String> anonGid) {
             $.anonGid = anonGid;
             return this;
         }
 
+        /**
+         * @param anonGid An integer representing the anonymous group id with a default value of 65534. Anon_gid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder anonGid(String anonGid) {
             return anonGid(Output.of(anonGid));
         }
 
+        /**
+         * @param anonUid An integer representing the anonymous user id with a default value of 65534. Anon_uid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder anonUid(@Nullable Output<String> anonUid) {
             $.anonUid = anonUid;
             return this;
         }
 
+        /**
+         * @param anonUid An integer representing the anonymous user id with a default value of 65534. Anon_uid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder anonUid(String anonUid) {
             return anonUid(Output.of(anonUid));
         }
 
+        /**
+         * @param ipRanges List of either an IPv4 addresses in the format `{octet1}.{octet2}.{octet3}.{octet4}` or CIDR ranges in the format `{octet1}.{octet2}.{octet3}.{octet4}/{mask size}` which may mount the file share. Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned. The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRanges(@Nullable Output<List<String>> ipRanges) {
             $.ipRanges = ipRanges;
             return this;
         }
 
+        /**
+         * @param ipRanges List of either an IPv4 addresses in the format `{octet1}.{octet2}.{octet3}.{octet4}` or CIDR ranges in the format `{octet1}.{octet2}.{octet3}.{octet4}/{mask size}` which may mount the file share. Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned. The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRanges(List<String> ipRanges) {
             return ipRanges(Output.of(ipRanges));
         }
 
+        /**
+         * @param ipRanges List of either an IPv4 addresses in the format `{octet1}.{octet2}.{octet3}.{octet4}` or CIDR ranges in the format `{octet1}.{octet2}.{octet3}.{octet4}/{mask size}` which may mount the file share. Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned. The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRanges(String... ipRanges) {
             return ipRanges(List.of(ipRanges));
         }
 
+        /**
+         * @param squashMode Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH, for not allowing root access. The default is NO_ROOT_SQUASH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder squashMode(@Nullable Output<NfsExportOptionsSquashMode> squashMode) {
             $.squashMode = squashMode;
             return this;
         }
 
+        /**
+         * @param squashMode Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH, for not allowing root access. The default is NO_ROOT_SQUASH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder squashMode(NfsExportOptionsSquashMode squashMode) {
             return squashMode(Output.of(squashMode));
         }

@@ -25,6 +25,10 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
     @Import(name="cloudComposerConnectionSubnetwork", required=true)
     private String cloudComposerConnectionSubnetwork;
 
+    /**
+     * @return Optional. When specified, the environment will use Private Service Connect instead of VPC peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer Project will use an IP address from this subnetwork.
+     * 
+     */
     public String cloudComposerConnectionSubnetwork() {
         return this.cloudComposerConnectionSubnetwork;
     }
@@ -36,6 +40,10 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
     @Import(name="cloudComposerNetworkIpv4CidrBlock", required=true)
     private String cloudComposerNetworkIpv4CidrBlock;
 
+    /**
+     * @return Optional. The CIDR block from which IP range for Cloud Composer Network in tenant project will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+     * 
+     */
     public String cloudComposerNetworkIpv4CidrBlock() {
         return this.cloudComposerNetworkIpv4CidrBlock;
     }
@@ -47,6 +55,10 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
     @Import(name="cloudComposerNetworkIpv4ReservedRange", required=true)
     private String cloudComposerNetworkIpv4ReservedRange;
 
+    /**
+     * @return The IP range reserved for the tenant project&#39;s Cloud Composer network. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+     * 
+     */
     public String cloudComposerNetworkIpv4ReservedRange() {
         return this.cloudComposerNetworkIpv4ReservedRange;
     }
@@ -58,6 +70,10 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
     @Import(name="cloudSqlIpv4CidrBlock", required=true)
     private String cloudSqlIpv4CidrBlock;
 
+    /**
+     * @return Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from web_server_ipv4_cidr_block
+     * 
+     */
     public String cloudSqlIpv4CidrBlock() {
         return this.cloudSqlIpv4CidrBlock;
     }
@@ -69,6 +85,10 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
     @Import(name="enablePrivateEnvironment", required=true)
     private Boolean enablePrivateEnvironment;
 
+    /**
+     * @return Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set to true, `IPAllocationPolicy.use_ip_aliases` must be set to true for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * 
+     */
     public Boolean enablePrivateEnvironment() {
         return this.enablePrivateEnvironment;
     }
@@ -80,6 +100,10 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
     @Import(name="enablePrivatelyUsedPublicIps", required=true)
     private Boolean enablePrivatelyUsedPublicIps;
 
+    /**
+     * @return Optional. When enabled, IPs from public (non-RFC1918) ranges can be used for `IPAllocationPolicy.cluster_ipv4_cidr_block` and `IPAllocationPolicy.service_ipv4_cidr_block`.
+     * 
+     */
     public Boolean enablePrivatelyUsedPublicIps() {
         return this.enablePrivatelyUsedPublicIps;
     }
@@ -91,6 +115,10 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
     @Import(name="privateClusterConfig", required=true)
     private PrivateClusterConfigResponse privateClusterConfig;
 
+    /**
+     * @return Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer environment.
+     * 
+     */
     public PrivateClusterConfigResponse privateClusterConfig() {
         return this.privateClusterConfig;
     }
@@ -102,6 +130,10 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
     @Import(name="webServerIpv4CidrBlock", required=true)
     private String webServerIpv4CidrBlock;
 
+    /**
+     * @return Optional. The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * 
+     */
     public String webServerIpv4CidrBlock() {
         return this.webServerIpv4CidrBlock;
     }
@@ -113,6 +145,10 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
     @Import(name="webServerIpv4ReservedRange", required=true)
     private String webServerIpv4ReservedRange;
 
+    /**
+     * @return The IP range reserved for the tenant project&#39;s App Engine VMs. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * 
+     */
     public String webServerIpv4ReservedRange() {
         return this.webServerIpv4ReservedRange;
     }
@@ -149,46 +185,100 @@ public final class PrivateEnvironmentConfigResponse extends com.pulumi.resources
             $ = new PrivateEnvironmentConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudComposerConnectionSubnetwork Optional. When specified, the environment will use Private Service Connect instead of VPC peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer Project will use an IP address from this subnetwork.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudComposerConnectionSubnetwork(String cloudComposerConnectionSubnetwork) {
             $.cloudComposerConnectionSubnetwork = cloudComposerConnectionSubnetwork;
             return this;
         }
 
+        /**
+         * @param cloudComposerNetworkIpv4CidrBlock Optional. The CIDR block from which IP range for Cloud Composer Network in tenant project will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudComposerNetworkIpv4CidrBlock(String cloudComposerNetworkIpv4CidrBlock) {
             $.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
             return this;
         }
 
+        /**
+         * @param cloudComposerNetworkIpv4ReservedRange The IP range reserved for the tenant project&#39;s Cloud Composer network. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudComposerNetworkIpv4ReservedRange(String cloudComposerNetworkIpv4ReservedRange) {
             $.cloudComposerNetworkIpv4ReservedRange = cloudComposerNetworkIpv4ReservedRange;
             return this;
         }
 
+        /**
+         * @param cloudSqlIpv4CidrBlock Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from web_server_ipv4_cidr_block
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSqlIpv4CidrBlock(String cloudSqlIpv4CidrBlock) {
             $.cloudSqlIpv4CidrBlock = cloudSqlIpv4CidrBlock;
             return this;
         }
 
+        /**
+         * @param enablePrivateEnvironment Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set to true, `IPAllocationPolicy.use_ip_aliases` must be set to true for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePrivateEnvironment(Boolean enablePrivateEnvironment) {
             $.enablePrivateEnvironment = enablePrivateEnvironment;
             return this;
         }
 
+        /**
+         * @param enablePrivatelyUsedPublicIps Optional. When enabled, IPs from public (non-RFC1918) ranges can be used for `IPAllocationPolicy.cluster_ipv4_cidr_block` and `IPAllocationPolicy.service_ipv4_cidr_block`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePrivatelyUsedPublicIps(Boolean enablePrivatelyUsedPublicIps) {
             $.enablePrivatelyUsedPublicIps = enablePrivatelyUsedPublicIps;
             return this;
         }
 
+        /**
+         * @param privateClusterConfig Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateClusterConfig(PrivateClusterConfigResponse privateClusterConfig) {
             $.privateClusterConfig = privateClusterConfig;
             return this;
         }
 
+        /**
+         * @param webServerIpv4CidrBlock Optional. The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webServerIpv4CidrBlock(String webServerIpv4CidrBlock) {
             $.webServerIpv4CidrBlock = webServerIpv4CidrBlock;
             return this;
         }
 
+        /**
+         * @param webServerIpv4ReservedRange The IP range reserved for the tenant project&#39;s App Engine VMs. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webServerIpv4ReservedRange(String webServerIpv4ReservedRange) {
             $.webServerIpv4ReservedRange = webServerIpv4ReservedRange;
             return this;

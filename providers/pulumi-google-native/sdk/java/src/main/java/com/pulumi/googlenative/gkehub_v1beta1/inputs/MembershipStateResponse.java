@@ -23,6 +23,10 @@ public final class MembershipStateResponse extends com.pulumi.resources.InvokeAr
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return The current state of the Membership resource.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -34,6 +38,10 @@ public final class MembershipStateResponse extends com.pulumi.resources.InvokeAr
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return This field is never set by the Hub Service.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -45,6 +53,10 @@ public final class MembershipStateResponse extends com.pulumi.resources.InvokeAr
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return This field is never set by the Hub Service.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -75,16 +87,34 @@ public final class MembershipStateResponse extends com.pulumi.resources.InvokeAr
             $ = new MembershipStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code The current state of the Membership resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param description This field is never set by the Hub Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param updateTime This field is never set by the Hub Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;

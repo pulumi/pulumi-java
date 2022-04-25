@@ -33,6 +33,10 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attestation")
     private @Nullable Output<AttestationOccurrenceArgs> attestation;
 
+    /**
+     * @return Describes an attestation of an artifact.
+     * 
+     */
     public Optional<Output<AttestationOccurrenceArgs>> attestation() {
         return Optional.ofNullable(this.attestation);
     }
@@ -44,6 +48,10 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="build")
     private @Nullable Output<BuildOccurrenceArgs> build;
 
+    /**
+     * @return Describes a verifiable build.
+     * 
+     */
     public Optional<Output<BuildOccurrenceArgs>> build() {
         return Optional.ofNullable(this.build);
     }
@@ -55,6 +63,10 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="compliance")
     private @Nullable Output<ComplianceOccurrenceArgs> compliance;
 
+    /**
+     * @return Describes a compliance violation on a linked resource.
+     * 
+     */
     public Optional<Output<ComplianceOccurrenceArgs>> compliance() {
         return Optional.ofNullable(this.compliance);
     }
@@ -66,6 +78,10 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deployment")
     private @Nullable Output<DeploymentOccurrenceArgs> deployment;
 
+    /**
+     * @return Describes the deployment of an artifact on a runtime.
+     * 
+     */
     public Optional<Output<DeploymentOccurrenceArgs>> deployment() {
         return Optional.ofNullable(this.deployment);
     }
@@ -77,6 +93,10 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="discovery")
     private @Nullable Output<DiscoveryOccurrenceArgs> discovery;
 
+    /**
+     * @return Describes when a resource was discovered.
+     * 
+     */
     public Optional<Output<DiscoveryOccurrenceArgs>> discovery() {
         return Optional.ofNullable(this.discovery);
     }
@@ -88,6 +108,10 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dsseAttestation")
     private @Nullable Output<DSSEAttestationOccurrenceArgs> dsseAttestation;
 
+    /**
+     * @return Describes an attestation of an artifact using dsse.
+     * 
+     */
     public Optional<Output<DSSEAttestationOccurrenceArgs>> dsseAttestation() {
         return Optional.ofNullable(this.dsseAttestation);
     }
@@ -99,6 +123,10 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="envelope")
     private @Nullable Output<EnvelopeArgs> envelope;
 
+    /**
+     * @return https://github.com/secure-systems-lab/dsse
+     * 
+     */
     public Optional<Output<EnvelopeArgs>> envelope() {
         return Optional.ofNullable(this.envelope);
     }
@@ -110,6 +138,10 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="image")
     private @Nullable Output<ImageOccurrenceArgs> image;
 
+    /**
+     * @return Describes how this resource derives from the basis in the associated note.
+     * 
+     */
     public Optional<Output<ImageOccurrenceArgs>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -121,6 +153,10 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="noteName", required=true)
     private Output<String> noteName;
 
+    /**
+     * @return Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
+     * 
+     */
     public Output<String> noteName() {
         return this.noteName;
     }
@@ -132,6 +168,10 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="package")
     private @Nullable Output<PackageOccurrenceArgs> package_;
 
+    /**
+     * @return Describes the installation of a package on the linked resource.
+     * 
+     */
     public Optional<Output<PackageOccurrenceArgs>> package_() {
         return Optional.ofNullable(this.package_);
     }
@@ -150,6 +190,10 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="remediation")
     private @Nullable Output<String> remediation;
 
+    /**
+     * @return A description of actions that can be taken to remedy the note.
+     * 
+     */
     public Optional<Output<String>> remediation() {
         return Optional.ofNullable(this.remediation);
     }
@@ -161,6 +205,10 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceUri", required=true)
     private Output<String> resourceUri;
 
+    /**
+     * @return Immutable. A URI that represents the resource for which the occurrence applies. For example, `https://gcr.io/project/image@sha256:123abc` for a Docker image.
+     * 
+     */
     public Output<String> resourceUri() {
         return this.resourceUri;
     }
@@ -172,6 +220,10 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="upgrade")
     private @Nullable Output<UpgradeOccurrenceArgs> upgrade;
 
+    /**
+     * @return Describes an available package upgrade on the linked resource.
+     * 
+     */
     public Optional<Output<UpgradeOccurrenceArgs>> upgrade() {
         return Optional.ofNullable(this.upgrade);
     }
@@ -183,6 +235,10 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vulnerability")
     private @Nullable Output<VulnerabilityOccurrenceArgs> vulnerability;
 
+    /**
+     * @return Describes a security vulnerability.
+     * 
+     */
     public Optional<Output<VulnerabilityOccurrenceArgs>> vulnerability() {
         return Optional.ofNullable(this.vulnerability);
     }
@@ -225,92 +281,212 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attestation Describes an attestation of an artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestation(@Nullable Output<AttestationOccurrenceArgs> attestation) {
             $.attestation = attestation;
             return this;
         }
 
+        /**
+         * @param attestation Describes an attestation of an artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestation(AttestationOccurrenceArgs attestation) {
             return attestation(Output.of(attestation));
         }
 
+        /**
+         * @param build Describes a verifiable build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder build(@Nullable Output<BuildOccurrenceArgs> build) {
             $.build = build;
             return this;
         }
 
+        /**
+         * @param build Describes a verifiable build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder build(BuildOccurrenceArgs build) {
             return build(Output.of(build));
         }
 
+        /**
+         * @param compliance Describes a compliance violation on a linked resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compliance(@Nullable Output<ComplianceOccurrenceArgs> compliance) {
             $.compliance = compliance;
             return this;
         }
 
+        /**
+         * @param compliance Describes a compliance violation on a linked resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compliance(ComplianceOccurrenceArgs compliance) {
             return compliance(Output.of(compliance));
         }
 
+        /**
+         * @param deployment Describes the deployment of an artifact on a runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deployment(@Nullable Output<DeploymentOccurrenceArgs> deployment) {
             $.deployment = deployment;
             return this;
         }
 
+        /**
+         * @param deployment Describes the deployment of an artifact on a runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deployment(DeploymentOccurrenceArgs deployment) {
             return deployment(Output.of(deployment));
         }
 
+        /**
+         * @param discovery Describes when a resource was discovered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discovery(@Nullable Output<DiscoveryOccurrenceArgs> discovery) {
             $.discovery = discovery;
             return this;
         }
 
+        /**
+         * @param discovery Describes when a resource was discovered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discovery(DiscoveryOccurrenceArgs discovery) {
             return discovery(Output.of(discovery));
         }
 
+        /**
+         * @param dsseAttestation Describes an attestation of an artifact using dsse.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dsseAttestation(@Nullable Output<DSSEAttestationOccurrenceArgs> dsseAttestation) {
             $.dsseAttestation = dsseAttestation;
             return this;
         }
 
+        /**
+         * @param dsseAttestation Describes an attestation of an artifact using dsse.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dsseAttestation(DSSEAttestationOccurrenceArgs dsseAttestation) {
             return dsseAttestation(Output.of(dsseAttestation));
         }
 
+        /**
+         * @param envelope https://github.com/secure-systems-lab/dsse
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelope(@Nullable Output<EnvelopeArgs> envelope) {
             $.envelope = envelope;
             return this;
         }
 
+        /**
+         * @param envelope https://github.com/secure-systems-lab/dsse
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelope(EnvelopeArgs envelope) {
             return envelope(Output.of(envelope));
         }
 
+        /**
+         * @param image Describes how this resource derives from the basis in the associated note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<ImageOccurrenceArgs> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image Describes how this resource derives from the basis in the associated note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(ImageOccurrenceArgs image) {
             return image(Output.of(image));
         }
 
+        /**
+         * @param noteName Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteName(Output<String> noteName) {
             $.noteName = noteName;
             return this;
         }
 
+        /**
+         * @param noteName Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteName(String noteName) {
             return noteName(Output.of(noteName));
         }
 
+        /**
+         * @param package_ Describes the installation of a package on the linked resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder package_(@Nullable Output<PackageOccurrenceArgs> package_) {
             $.package_ = package_;
             return this;
         }
 
+        /**
+         * @param package_ Describes the installation of a package on the linked resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder package_(PackageOccurrenceArgs package_) {
             return package_(Output.of(package_));
         }
@@ -324,38 +500,86 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param remediation A description of actions that can be taken to remedy the note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediation(@Nullable Output<String> remediation) {
             $.remediation = remediation;
             return this;
         }
 
+        /**
+         * @param remediation A description of actions that can be taken to remedy the note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediation(String remediation) {
             return remediation(Output.of(remediation));
         }
 
+        /**
+         * @param resourceUri Immutable. A URI that represents the resource for which the occurrence applies. For example, `https://gcr.io/project/image@sha256:123abc` for a Docker image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(Output<String> resourceUri) {
             $.resourceUri = resourceUri;
             return this;
         }
 
+        /**
+         * @param resourceUri Immutable. A URI that represents the resource for which the occurrence applies. For example, `https://gcr.io/project/image@sha256:123abc` for a Docker image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             return resourceUri(Output.of(resourceUri));
         }
 
+        /**
+         * @param upgrade Describes an available package upgrade on the linked resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgrade(@Nullable Output<UpgradeOccurrenceArgs> upgrade) {
             $.upgrade = upgrade;
             return this;
         }
 
+        /**
+         * @param upgrade Describes an available package upgrade on the linked resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgrade(UpgradeOccurrenceArgs upgrade) {
             return upgrade(Output.of(upgrade));
         }
 
+        /**
+         * @param vulnerability Describes a security vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vulnerability(@Nullable Output<VulnerabilityOccurrenceArgs> vulnerability) {
             $.vulnerability = vulnerability;
             return this;
         }
 
+        /**
+         * @param vulnerability Describes a security vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vulnerability(VulnerabilityOccurrenceArgs vulnerability) {
             return vulnerability(Output.of(vulnerability));
         }

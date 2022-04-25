@@ -23,6 +23,10 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
     @Import(name="dataset", required=true)
     private String dataset;
 
+    /**
+     * @return The Data Catalog resource name of the dataset entry the current table belongs to, for example, `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`.
+     * 
+     */
     public String dataset() {
         return this.dataset;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
     @Import(name="shardCount", required=true)
     private String shardCount;
 
+    /**
+     * @return Total number of shards.
+     * 
+     */
     public String shardCount() {
         return this.shardCount;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
     @Import(name="tablePrefix", required=true)
     private String tablePrefix;
 
+    /**
+     * @return The table name prefix of the shards. The name of any given shard is `[table_prefix]YYYYMMDD`, for example, for shard `MyTable20180101`, the `table_prefix` is `MyTable`.
+     * 
+     */
     public String tablePrefix() {
         return this.tablePrefix;
     }
@@ -75,16 +87,34 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
             $ = new GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataset The Data Catalog resource name of the dataset entry the current table belongs to, for example, `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(String dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param shardCount Total number of shards.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shardCount(String shardCount) {
             $.shardCount = shardCount;
             return this;
         }
 
+        /**
+         * @param tablePrefix The table name prefix of the shards. The name of any given shard is `[table_prefix]YYYYMMDD`, for example, for shard `MyTable20180101`, the `table_prefix` is `MyTable`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tablePrefix(String tablePrefix) {
             $.tablePrefix = tablePrefix;
             return this;

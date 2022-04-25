@@ -24,6 +24,10 @@ public final class SearchConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="searchParameters", required=true)
     private List<SearchParameterResponse> searchParameters;
 
+    /**
+     * @return A list of search parameters in this FHIR store that are used to configure this FHIR store.
+     * 
+     */
     public List<SearchParameterResponse> searchParameters() {
         return this.searchParameters;
     }
@@ -52,11 +56,23 @@ public final class SearchConfigResponse extends com.pulumi.resources.InvokeArgs 
             $ = new SearchConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param searchParameters A list of search parameters in this FHIR store that are used to configure this FHIR store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchParameters(List<SearchParameterResponse> searchParameters) {
             $.searchParameters = searchParameters;
             return this;
         }
 
+        /**
+         * @param searchParameters A list of search parameters in this FHIR store that are used to configure this FHIR store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchParameters(SearchParameterResponse... searchParameters) {
             return searchParameters(List.of(searchParameters));
         }

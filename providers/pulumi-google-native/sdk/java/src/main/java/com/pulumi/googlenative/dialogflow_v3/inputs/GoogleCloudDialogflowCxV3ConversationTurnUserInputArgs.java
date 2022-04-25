@@ -29,6 +29,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
     @Import(name="enableSentimentAnalysis")
     private @Nullable Output<Boolean> enableSentimentAnalysis;
 
+    /**
+     * @return Whether sentiment analysis is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableSentimentAnalysis() {
         return Optional.ofNullable(this.enableSentimentAnalysis);
     }
@@ -40,6 +44,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
     @Import(name="injectedParameters")
     private @Nullable Output<Map<String,String>> injectedParameters;
 
+    /**
+     * @return Parameters that need to be injected into the conversation during intent detection.
+     * 
+     */
     public Optional<Output<Map<String,String>>> injectedParameters() {
         return Optional.ofNullable(this.injectedParameters);
     }
@@ -51,6 +59,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
     @Import(name="input")
     private @Nullable Output<GoogleCloudDialogflowCxV3QueryInputArgs> input;
 
+    /**
+     * @return Supports text input, event input, dtmf input in the test case.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3QueryInputArgs>> input() {
         return Optional.ofNullable(this.input);
     }
@@ -62,6 +74,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
     @Import(name="isWebhookEnabled")
     private @Nullable Output<Boolean> isWebhookEnabled;
 
+    /**
+     * @return If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.
+     * 
+     */
     public Optional<Output<Boolean>> isWebhookEnabled() {
         return Optional.ofNullable(this.isWebhookEnabled);
     }
@@ -93,38 +109,86 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
             $ = new GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableSentimentAnalysis Whether sentiment analysis is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSentimentAnalysis(@Nullable Output<Boolean> enableSentimentAnalysis) {
             $.enableSentimentAnalysis = enableSentimentAnalysis;
             return this;
         }
 
+        /**
+         * @param enableSentimentAnalysis Whether sentiment analysis is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSentimentAnalysis(Boolean enableSentimentAnalysis) {
             return enableSentimentAnalysis(Output.of(enableSentimentAnalysis));
         }
 
+        /**
+         * @param injectedParameters Parameters that need to be injected into the conversation during intent detection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder injectedParameters(@Nullable Output<Map<String,String>> injectedParameters) {
             $.injectedParameters = injectedParameters;
             return this;
         }
 
+        /**
+         * @param injectedParameters Parameters that need to be injected into the conversation during intent detection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder injectedParameters(Map<String,String> injectedParameters) {
             return injectedParameters(Output.of(injectedParameters));
         }
 
+        /**
+         * @param input Supports text input, event input, dtmf input in the test case.
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(@Nullable Output<GoogleCloudDialogflowCxV3QueryInputArgs> input) {
             $.input = input;
             return this;
         }
 
+        /**
+         * @param input Supports text input, event input, dtmf input in the test case.
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(GoogleCloudDialogflowCxV3QueryInputArgs input) {
             return input(Output.of(input));
         }
 
+        /**
+         * @param isWebhookEnabled If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isWebhookEnabled(@Nullable Output<Boolean> isWebhookEnabled) {
             $.isWebhookEnabled = isWebhookEnabled;
             return this;
         }
 
+        /**
+         * @param isWebhookEnabled If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isWebhookEnabled(Boolean isWebhookEnabled) {
             return isWebhookEnabled(Output.of(isWebhookEnabled));
         }

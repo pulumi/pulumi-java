@@ -23,6 +23,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetTag")
     private @Nullable Output<String> assetTag;
 
+    /**
+     * @return Asset tag of the device.
+     * 
+     */
     public Optional<Output<String>> assetTag() {
         return Optional.ofNullable(this.assetTag);
     }
@@ -41,6 +45,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastSyncTime")
     private @Nullable Output<String> lastSyncTime;
 
+    /**
+     * @return Most recent time when device synced with this service.
+     * 
+     */
     public Optional<Output<String>> lastSyncTime() {
         return Optional.ofNullable(this.lastSyncTime);
     }
@@ -52,6 +60,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serialNumber")
     private @Nullable Output<String> serialNumber;
 
+    /**
+     * @return Serial Number of device. Example: HT82V1A01076.
+     * 
+     */
     public Optional<Output<String>> serialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }
@@ -63,6 +75,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="wifiMacAddresses")
     private @Nullable Output<List<String>> wifiMacAddresses;
 
+    /**
+     * @return WiFi MAC addresses of device.
+     * 
+     */
     public Optional<Output<List<String>>> wifiMacAddresses() {
         return Optional.ofNullable(this.wifiMacAddresses);
     }
@@ -95,11 +111,23 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetTag Asset tag of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetTag(@Nullable Output<String> assetTag) {
             $.assetTag = assetTag;
             return this;
         }
 
+        /**
+         * @param assetTag Asset tag of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetTag(String assetTag) {
             return assetTag(Output.of(assetTag));
         }
@@ -113,33 +141,75 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
             return customer(Output.of(customer));
         }
 
+        /**
+         * @param lastSyncTime Most recent time when device synced with this service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSyncTime(@Nullable Output<String> lastSyncTime) {
             $.lastSyncTime = lastSyncTime;
             return this;
         }
 
+        /**
+         * @param lastSyncTime Most recent time when device synced with this service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSyncTime(String lastSyncTime) {
             return lastSyncTime(Output.of(lastSyncTime));
         }
 
+        /**
+         * @param serialNumber Serial Number of device. Example: HT82V1A01076.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialNumber(@Nullable Output<String> serialNumber) {
             $.serialNumber = serialNumber;
             return this;
         }
 
+        /**
+         * @param serialNumber Serial Number of device. Example: HT82V1A01076.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialNumber(String serialNumber) {
             return serialNumber(Output.of(serialNumber));
         }
 
+        /**
+         * @param wifiMacAddresses WiFi MAC addresses of device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wifiMacAddresses(@Nullable Output<List<String>> wifiMacAddresses) {
             $.wifiMacAddresses = wifiMacAddresses;
             return this;
         }
 
+        /**
+         * @param wifiMacAddresses WiFi MAC addresses of device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wifiMacAddresses(List<String> wifiMacAddresses) {
             return wifiMacAddresses(Output.of(wifiMacAddresses));
         }
 
+        /**
+         * @param wifiMacAddresses WiFi MAC addresses of device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wifiMacAddresses(String... wifiMacAddresses) {
             return wifiMacAddresses(List.of(wifiMacAddresses));
         }

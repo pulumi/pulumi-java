@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class ContextRuleResponse {
     /**
-     * A list of full type names or extension IDs of extensions allowed in grpc side channel from client to backend.
+     * @return A list of full type names or extension IDs of extensions allowed in grpc side channel from client to backend.
      * 
      */
     private final List<String> allowedRequestExtensions;
     /**
-     * A list of full type names or extension IDs of extensions allowed in grpc side channel from backend to client.
+     * @return A list of full type names or extension IDs of extensions allowed in grpc side channel from backend to client.
      * 
      */
     private final List<String> allowedResponseExtensions;
     /**
-     * A list of full type names of provided contexts.
+     * @return A list of full type names of provided contexts.
      * 
      */
     private final List<String> provided;
     /**
-     * A list of full type names of requested contexts.
+     * @return A list of full type names of requested contexts.
      * 
      */
     private final List<String> requested;
     /**
-     * Selects the methods to which this rule applies. Refer to selector for syntax details.
+     * @return Selects the methods to which this rule applies. Refer to selector for syntax details.
      * 
      */
     private final String selector;
@@ -51,37 +51,37 @@ public final class ContextRuleResponse {
     }
 
     /**
-     * A list of full type names or extension IDs of extensions allowed in grpc side channel from client to backend.
+     * @return A list of full type names or extension IDs of extensions allowed in grpc side channel from client to backend.
      * 
-    */
+     */
     public List<String> allowedRequestExtensions() {
         return this.allowedRequestExtensions;
     }
     /**
-     * A list of full type names or extension IDs of extensions allowed in grpc side channel from backend to client.
+     * @return A list of full type names or extension IDs of extensions allowed in grpc side channel from backend to client.
      * 
-    */
+     */
     public List<String> allowedResponseExtensions() {
         return this.allowedResponseExtensions;
     }
     /**
-     * A list of full type names of provided contexts.
+     * @return A list of full type names of provided contexts.
      * 
-    */
+     */
     public List<String> provided() {
         return this.provided;
     }
     /**
-     * A list of full type names of requested contexts.
+     * @return A list of full type names of requested contexts.
      * 
-    */
+     */
     public List<String> requested() {
         return this.requested;
     }
     /**
-     * Selects the methods to which this rule applies. Refer to selector for syntax details.
+     * @return Selects the methods to which this rule applies. Refer to selector for syntax details.
      * 
-    */
+     */
     public String selector() {
         return this.selector;
     }

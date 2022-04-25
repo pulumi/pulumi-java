@@ -12,22 +12,22 @@ import java.util.Objects;
 @CustomType
 public final class SignatureResponse {
     /**
-     * Optional. An image of the user&#39;s signature.
+     * @return Optional. An image of the user&#39;s signature.
      * 
      */
     private final ImageResponse image;
     /**
-     * Optional. Metadata associated with the user&#39;s signature. For example, the user&#39;s name or the user&#39;s title.
+     * @return Optional. Metadata associated with the user&#39;s signature. For example, the user&#39;s name or the user&#39;s title.
      * 
      */
     private final Map<String,String> metadata;
     /**
-     * Optional. Timestamp of the signature.
+     * @return Optional. Timestamp of the signature.
      * 
      */
     private final String signatureTime;
     /**
-     * User&#39;s UUID provided by the client.
+     * @return User&#39;s UUID provided by the client.
      * 
      */
     private final String userId;
@@ -45,30 +45,30 @@ public final class SignatureResponse {
     }
 
     /**
-     * Optional. An image of the user&#39;s signature.
+     * @return Optional. An image of the user&#39;s signature.
      * 
-    */
+     */
     public ImageResponse image() {
         return this.image;
     }
     /**
-     * Optional. Metadata associated with the user&#39;s signature. For example, the user&#39;s name or the user&#39;s title.
+     * @return Optional. Metadata associated with the user&#39;s signature. For example, the user&#39;s name or the user&#39;s title.
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
     /**
-     * Optional. Timestamp of the signature.
+     * @return Optional. Timestamp of the signature.
      * 
-    */
+     */
     public String signatureTime() {
         return this.signatureTime;
     }
     /**
-     * User&#39;s UUID provided by the client.
+     * @return User&#39;s UUID provided by the client.
      * 
-    */
+     */
     public String userId() {
         return this.userId;
     }

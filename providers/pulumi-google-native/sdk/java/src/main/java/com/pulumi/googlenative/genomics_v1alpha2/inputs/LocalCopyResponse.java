@@ -23,6 +23,10 @@ public final class LocalCopyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="disk", required=true)
     private String disk;
 
+    /**
+     * @return The name of the disk where this parameter is located. Can be the name of one of the disks specified in the Resources field, or &#34;boot&#34;, which represents the Docker instance&#39;s boot disk and has a mount point of `/`.
+     * 
+     */
     public String disk() {
         return this.disk;
     }
@@ -34,6 +38,10 @@ public final class LocalCopyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The path within the user&#39;s docker container where this input should be localized to and from, relative to the specified disk&#39;s mount point. For example: file.txt,
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -63,11 +71,23 @@ public final class LocalCopyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LocalCopyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disk The name of the disk where this parameter is located. Can be the name of one of the disks specified in the Resources field, or &#34;boot&#34;, which represents the Docker instance&#39;s boot disk and has a mount point of `/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disk(String disk) {
             $.disk = disk;
             return this;
         }
 
+        /**
+         * @param path The path within the user&#39;s docker container where this input should be localized to and from, relative to the specified disk&#39;s mount point. For example: file.txt,
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;

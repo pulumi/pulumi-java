@@ -24,6 +24,10 @@ public final class ArgumentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="argumentKind", required=true)
     private String argumentKind;
 
+    /**
+     * @return Optional. Defaults to FIXED_TYPE.
+     * 
+     */
     public String argumentKind() {
         return this.argumentKind;
     }
@@ -35,6 +39,10 @@ public final class ArgumentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataType", required=true)
     private StandardSqlDataTypeResponse dataType;
 
+    /**
+     * @return Required unless argument_kind = ANY_TYPE.
+     * 
+     */
     public StandardSqlDataTypeResponse dataType() {
         return this.dataType;
     }
@@ -46,6 +54,10 @@ public final class ArgumentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return Optional. Specifies whether the argument is input or output. Can be set for procedures only.
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -57,6 +69,10 @@ public final class ArgumentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Optional. The name of this argument. Can be absent for function return argument.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -88,21 +104,45 @@ public final class ArgumentResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ArgumentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param argumentKind Optional. Defaults to FIXED_TYPE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder argumentKind(String argumentKind) {
             $.argumentKind = argumentKind;
             return this;
         }
 
+        /**
+         * @param dataType Required unless argument_kind = ANY_TYPE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(StandardSqlDataTypeResponse dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param mode Optional. Specifies whether the argument is input or output. Can be set for procedures only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param name Optional. The name of this argument. Can be absent for function return argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

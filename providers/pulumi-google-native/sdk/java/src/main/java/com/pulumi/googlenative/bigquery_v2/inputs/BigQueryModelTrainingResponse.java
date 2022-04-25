@@ -20,6 +20,10 @@ public final class BigQueryModelTrainingResponse extends com.pulumi.resources.In
     @Import(name="currentIteration", required=true)
     private Integer currentIteration;
 
+    /**
+     * @return [Output-only, Beta] Index of current ML training iteration. Updated during create model query job to show job progress.
+     * 
+     */
     public Integer currentIteration() {
         return this.currentIteration;
     }
@@ -31,6 +35,10 @@ public final class BigQueryModelTrainingResponse extends com.pulumi.resources.In
     @Import(name="expectedTotalIterations", required=true)
     private String expectedTotalIterations;
 
+    /**
+     * @return [Output-only, Beta] Expected number of iterations for the create model query job specified as num_iterations in the input query. The actual total number of iterations may be less than this number due to early stop.
+     * 
+     */
     public String expectedTotalIterations() {
         return this.expectedTotalIterations;
     }
@@ -60,11 +68,23 @@ public final class BigQueryModelTrainingResponse extends com.pulumi.resources.In
             $ = new BigQueryModelTrainingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentIteration [Output-only, Beta] Index of current ML training iteration. Updated during create model query job to show job progress.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentIteration(Integer currentIteration) {
             $.currentIteration = currentIteration;
             return this;
         }
 
+        /**
+         * @param expectedTotalIterations [Output-only, Beta] Expected number of iterations for the create model query job specified as num_iterations in the input query. The actual total number of iterations may be less than this number due to early stop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedTotalIterations(String expectedTotalIterations) {
             $.expectedTotalIterations = expectedTotalIterations;
             return this;

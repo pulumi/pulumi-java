@@ -31,6 +31,10 @@ public final class ExecutionStageSummaryArgs extends com.pulumi.resources.Resour
     @Import(name="componentSource")
     private @Nullable Output<List<ComponentSourceArgs>> componentSource;
 
+    /**
+     * @return Collections produced and consumed by component transforms of this stage.
+     * 
+     */
     public Optional<Output<List<ComponentSourceArgs>>> componentSource() {
         return Optional.ofNullable(this.componentSource);
     }
@@ -42,6 +46,10 @@ public final class ExecutionStageSummaryArgs extends com.pulumi.resources.Resour
     @Import(name="componentTransform")
     private @Nullable Output<List<ComponentTransformArgs>> componentTransform;
 
+    /**
+     * @return Transforms that comprise this execution stage.
+     * 
+     */
     public Optional<Output<List<ComponentTransformArgs>>> componentTransform() {
         return Optional.ofNullable(this.componentTransform);
     }
@@ -53,6 +61,10 @@ public final class ExecutionStageSummaryArgs extends com.pulumi.resources.Resour
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Dataflow service generated id for this stage.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -64,6 +76,10 @@ public final class ExecutionStageSummaryArgs extends com.pulumi.resources.Resour
     @Import(name="inputSource")
     private @Nullable Output<List<StageSourceArgs>> inputSource;
 
+    /**
+     * @return Input sources for this stage.
+     * 
+     */
     public Optional<Output<List<StageSourceArgs>>> inputSource() {
         return Optional.ofNullable(this.inputSource);
     }
@@ -75,6 +91,10 @@ public final class ExecutionStageSummaryArgs extends com.pulumi.resources.Resour
     @Import(name="kind")
     private @Nullable Output<ExecutionStageSummaryKind> kind;
 
+    /**
+     * @return Type of transform this stage is executing.
+     * 
+     */
     public Optional<Output<ExecutionStageSummaryKind>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -86,6 +106,10 @@ public final class ExecutionStageSummaryArgs extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Dataflow service generated name for this stage.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -97,6 +121,10 @@ public final class ExecutionStageSummaryArgs extends com.pulumi.resources.Resour
     @Import(name="outputSource")
     private @Nullable Output<List<StageSourceArgs>> outputSource;
 
+    /**
+     * @return Output sources for this stage.
+     * 
+     */
     public Optional<Output<List<StageSourceArgs>>> outputSource() {
         return Optional.ofNullable(this.outputSource);
     }
@@ -108,6 +136,10 @@ public final class ExecutionStageSummaryArgs extends com.pulumi.resources.Resour
     @Import(name="prerequisiteStage")
     private @Nullable Output<List<String>> prerequisiteStage;
 
+    /**
+     * @return Other stages that must complete before this stage can run.
+     * 
+     */
     public Optional<Output<List<String>>> prerequisiteStage() {
         return Optional.ofNullable(this.prerequisiteStage);
     }
@@ -143,94 +175,220 @@ public final class ExecutionStageSummaryArgs extends com.pulumi.resources.Resour
             $ = new ExecutionStageSummaryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentSource Collections produced and consumed by component transforms of this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentSource(@Nullable Output<List<ComponentSourceArgs>> componentSource) {
             $.componentSource = componentSource;
             return this;
         }
 
+        /**
+         * @param componentSource Collections produced and consumed by component transforms of this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentSource(List<ComponentSourceArgs> componentSource) {
             return componentSource(Output.of(componentSource));
         }
 
+        /**
+         * @param componentSource Collections produced and consumed by component transforms of this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentSource(ComponentSourceArgs... componentSource) {
             return componentSource(List.of(componentSource));
         }
 
+        /**
+         * @param componentTransform Transforms that comprise this execution stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentTransform(@Nullable Output<List<ComponentTransformArgs>> componentTransform) {
             $.componentTransform = componentTransform;
             return this;
         }
 
+        /**
+         * @param componentTransform Transforms that comprise this execution stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentTransform(List<ComponentTransformArgs> componentTransform) {
             return componentTransform(Output.of(componentTransform));
         }
 
+        /**
+         * @param componentTransform Transforms that comprise this execution stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentTransform(ComponentTransformArgs... componentTransform) {
             return componentTransform(List.of(componentTransform));
         }
 
+        /**
+         * @param id Dataflow service generated id for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Dataflow service generated id for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param inputSource Input sources for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSource(@Nullable Output<List<StageSourceArgs>> inputSource) {
             $.inputSource = inputSource;
             return this;
         }
 
+        /**
+         * @param inputSource Input sources for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSource(List<StageSourceArgs> inputSource) {
             return inputSource(Output.of(inputSource));
         }
 
+        /**
+         * @param inputSource Input sources for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSource(StageSourceArgs... inputSource) {
             return inputSource(List.of(inputSource));
         }
 
+        /**
+         * @param kind Type of transform this stage is executing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<ExecutionStageSummaryKind> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Type of transform this stage is executing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(ExecutionStageSummaryKind kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name Dataflow service generated name for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Dataflow service generated name for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param outputSource Output sources for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputSource(@Nullable Output<List<StageSourceArgs>> outputSource) {
             $.outputSource = outputSource;
             return this;
         }
 
+        /**
+         * @param outputSource Output sources for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputSource(List<StageSourceArgs> outputSource) {
             return outputSource(Output.of(outputSource));
         }
 
+        /**
+         * @param outputSource Output sources for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputSource(StageSourceArgs... outputSource) {
             return outputSource(List.of(outputSource));
         }
 
+        /**
+         * @param prerequisiteStage Other stages that must complete before this stage can run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prerequisiteStage(@Nullable Output<List<String>> prerequisiteStage) {
             $.prerequisiteStage = prerequisiteStage;
             return this;
         }
 
+        /**
+         * @param prerequisiteStage Other stages that must complete before this stage can run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prerequisiteStage(List<String> prerequisiteStage) {
             return prerequisiteStage(Output.of(prerequisiteStage));
         }
 
+        /**
+         * @param prerequisiteStage Other stages that must complete before this stage can run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prerequisiteStage(String... prerequisiteStage) {
             return prerequisiteStage(List.of(prerequisiteStage));
         }

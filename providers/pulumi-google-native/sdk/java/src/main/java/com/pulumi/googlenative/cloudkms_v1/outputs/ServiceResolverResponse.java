@@ -12,22 +12,22 @@ import java.util.Objects;
 @CustomType
 public final class ServiceResolverResponse {
     /**
-     * Optional. The filter applied to the endpoints of the resolved service. If no filter is specified, all endpoints will be considered. An endpoint will be chosen arbitrarily from the filtered list for each request. For endpoint filter syntax and examples, see https://cloud.google.com/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#resolveservicerequest.
+     * @return Optional. The filter applied to the endpoints of the resolved service. If no filter is specified, all endpoints will be considered. An endpoint will be chosen arbitrarily from the filtered list for each request. For endpoint filter syntax and examples, see https://cloud.google.com/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#resolveservicerequest.
      * 
      */
     private final String endpointFilter;
     /**
-     * The hostname of the EKM replica used at TLS and HTTP layers.
+     * @return The hostname of the EKM replica used at TLS and HTTP layers.
      * 
      */
     private final String hostname;
     /**
-     * A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
+     * @return A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
      * 
      */
     private final List<CertificateResponse> serverCertificates;
     /**
-     * The resource name of the Service Directory service pointing to an EKM replica, in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
+     * @return The resource name of the Service Directory service pointing to an EKM replica, in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
      * 
      */
     private final String serviceDirectoryService;
@@ -45,30 +45,30 @@ public final class ServiceResolverResponse {
     }
 
     /**
-     * Optional. The filter applied to the endpoints of the resolved service. If no filter is specified, all endpoints will be considered. An endpoint will be chosen arbitrarily from the filtered list for each request. For endpoint filter syntax and examples, see https://cloud.google.com/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#resolveservicerequest.
+     * @return Optional. The filter applied to the endpoints of the resolved service. If no filter is specified, all endpoints will be considered. An endpoint will be chosen arbitrarily from the filtered list for each request. For endpoint filter syntax and examples, see https://cloud.google.com/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#resolveservicerequest.
      * 
-    */
+     */
     public String endpointFilter() {
         return this.endpointFilter;
     }
     /**
-     * The hostname of the EKM replica used at TLS and HTTP layers.
+     * @return The hostname of the EKM replica used at TLS and HTTP layers.
      * 
-    */
+     */
     public String hostname() {
         return this.hostname;
     }
     /**
-     * A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
+     * @return A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
      * 
-    */
+     */
     public List<CertificateResponse> serverCertificates() {
         return this.serverCertificates;
     }
     /**
-     * The resource name of the Service Directory service pointing to an EKM replica, in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
+     * @return The resource name of the Service Directory service pointing to an EKM replica, in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
      * 
-    */
+     */
     public String serviceDirectoryService() {
         return this.serviceDirectoryService;
     }

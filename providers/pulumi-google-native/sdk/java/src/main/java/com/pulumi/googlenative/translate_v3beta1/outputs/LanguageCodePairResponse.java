@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class LanguageCodePairResponse {
     /**
-     * The BCP-47 language code of the input text, for example, &#34;en-US&#34;. Expected to be an exact match for GlossaryTerm.language_code.
+     * @return The BCP-47 language code of the input text, for example, &#34;en-US&#34;. Expected to be an exact match for GlossaryTerm.language_code.
      * 
      */
     private final String sourceLanguageCode;
     /**
-     * The BCP-47 language code for translation output, for example, &#34;zh-CN&#34;. Expected to be an exact match for GlossaryTerm.language_code.
+     * @return The BCP-47 language code for translation output, for example, &#34;zh-CN&#34;. Expected to be an exact match for GlossaryTerm.language_code.
      * 
      */
     private final String targetLanguageCode;
@@ -29,16 +29,16 @@ public final class LanguageCodePairResponse {
     }
 
     /**
-     * The BCP-47 language code of the input text, for example, &#34;en-US&#34;. Expected to be an exact match for GlossaryTerm.language_code.
+     * @return The BCP-47 language code of the input text, for example, &#34;en-US&#34;. Expected to be an exact match for GlossaryTerm.language_code.
      * 
-    */
+     */
     public String sourceLanguageCode() {
         return this.sourceLanguageCode;
     }
     /**
-     * The BCP-47 language code for translation output, for example, &#34;zh-CN&#34;. Expected to be an exact match for GlossaryTerm.language_code.
+     * @return The BCP-47 language code for translation output, for example, &#34;zh-CN&#34;. Expected to be an exact match for GlossaryTerm.language_code.
      * 
-    */
+     */
     public String targetLanguageCode() {
         return this.targetLanguageCode;
     }

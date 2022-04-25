@@ -24,6 +24,10 @@ public final class IdentitySelectorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="identity", required=true)
     private Output<String> identity;
 
+    /**
+     * @return The identity appear in the form of principals in [IAM policy binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported forms are: &#34;user:mike@example.com&#34;, &#34;group:admins@example.com&#34;, &#34;domain:google.com&#34;, &#34;serviceAccount:my-project-id@appspot.gserviceaccount.com&#34;. Notice that wildcard characters (such as * and ?) are not supported. You must give a specific identity.
+     * 
+     */
     public Output<String> identity() {
         return this.identity;
     }
@@ -52,11 +56,23 @@ public final class IdentitySelectorArgs extends com.pulumi.resources.ResourceArg
             $ = new IdentitySelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identity The identity appear in the form of principals in [IAM policy binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported forms are: &#34;user:mike@example.com&#34;, &#34;group:admins@example.com&#34;, &#34;domain:google.com&#34;, &#34;serviceAccount:my-project-id@appspot.gserviceaccount.com&#34;. Notice that wildcard characters (such as * and ?) are not supported. You must give a specific identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(Output<String> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity appear in the form of principals in [IAM policy binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported forms are: &#34;user:mike@example.com&#34;, &#34;group:admins@example.com&#34;, &#34;domain:google.com&#34;, &#34;serviceAccount:my-project-id@appspot.gserviceaccount.com&#34;. Notice that wildcard characters (such as * and ?) are not supported. You must give a specific identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(String identity) {
             return identity(Output.of(identity));
         }

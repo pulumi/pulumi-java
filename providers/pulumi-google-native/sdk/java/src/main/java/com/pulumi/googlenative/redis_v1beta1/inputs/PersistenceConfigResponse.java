@@ -23,6 +23,10 @@ public final class PersistenceConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="persistenceMode", required=true)
     private String persistenceMode;
 
+    /**
+     * @return Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.
+     * 
+     */
     public String persistenceMode() {
         return this.persistenceMode;
     }
@@ -34,6 +38,10 @@ public final class PersistenceConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="rdbNextSnapshotTime", required=true)
     private String rdbNextSnapshotTime;
 
+    /**
+     * @return The next time that a snapshot attempt is scheduled to occur.
+     * 
+     */
     public String rdbNextSnapshotTime() {
         return this.rdbNextSnapshotTime;
     }
@@ -45,6 +53,10 @@ public final class PersistenceConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="rdbSnapshotPeriod", required=true)
     private String rdbSnapshotPeriod;
 
+    /**
+     * @return Optional. Period between RDB snapshots. Snapshots will be attempted every period starting from the provided snapshot start time. For example, a start time of 01/01/2033 06:45 and SIX_HOURS snapshot period will do nothing until 01/01/2033, and then trigger snapshots every day at 06:45, 12:45, 18:45, and 00:45 the next day, and so on. If not provided, TWENTY_FOUR_HOURS will be used as default.
+     * 
+     */
     public String rdbSnapshotPeriod() {
         return this.rdbSnapshotPeriod;
     }
@@ -56,6 +68,10 @@ public final class PersistenceConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="rdbSnapshotStartTime", required=true)
     private String rdbSnapshotStartTime;
 
+    /**
+     * @return Optional. Date and time that the first snapshot was/will be attempted, and to which future snapshots will be aligned. If not provided, the current time will be used.
+     * 
+     */
     public String rdbSnapshotStartTime() {
         return this.rdbSnapshotStartTime;
     }
@@ -87,21 +103,45 @@ public final class PersistenceConfigResponse extends com.pulumi.resources.Invoke
             $ = new PersistenceConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param persistenceMode Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder persistenceMode(String persistenceMode) {
             $.persistenceMode = persistenceMode;
             return this;
         }
 
+        /**
+         * @param rdbNextSnapshotTime The next time that a snapshot attempt is scheduled to occur.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbNextSnapshotTime(String rdbNextSnapshotTime) {
             $.rdbNextSnapshotTime = rdbNextSnapshotTime;
             return this;
         }
 
+        /**
+         * @param rdbSnapshotPeriod Optional. Period between RDB snapshots. Snapshots will be attempted every period starting from the provided snapshot start time. For example, a start time of 01/01/2033 06:45 and SIX_HOURS snapshot period will do nothing until 01/01/2033, and then trigger snapshots every day at 06:45, 12:45, 18:45, and 00:45 the next day, and so on. If not provided, TWENTY_FOUR_HOURS will be used as default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbSnapshotPeriod(String rdbSnapshotPeriod) {
             $.rdbSnapshotPeriod = rdbSnapshotPeriod;
             return this;
         }
 
+        /**
+         * @param rdbSnapshotStartTime Optional. Date and time that the first snapshot was/will be attempted, and to which future snapshots will be aligned. If not provided, the current time will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbSnapshotStartTime(String rdbSnapshotStartTime) {
             $.rdbSnapshotStartTime = rdbSnapshotStartTime;
             return this;

@@ -28,6 +28,10 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
     @Import(name="acceleratorCount", required=true)
     private String acceleratorCount;
 
+    /**
+     * @return Optional. The number of accelerators of the specified type to attach. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit.
+     * 
+     */
     public String acceleratorCount() {
         return this.acceleratorCount;
     }
@@ -39,6 +43,10 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
     @Import(name="acceleratorType", required=true)
     private String acceleratorType;
 
+    /**
+     * @return Optional. The Compute Engine defined accelerator type. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit. Please see https://cloud.google.com/compute/docs/gpus/ for a list of available accelerator types.
+     * 
+     */
     public String acceleratorType() {
         return this.acceleratorType;
     }
@@ -50,6 +58,10 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
     @Import(name="bootDiskSizeGb", required=true)
     private Integer bootDiskSizeGb;
 
+    /**
+     * @return The size of the boot disk. Defaults to 10 (GB).
+     * 
+     */
     public Integer bootDiskSizeGb() {
         return this.bootDiskSizeGb;
     }
@@ -61,6 +73,10 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
     @Import(name="disks", required=true)
     private List<DiskResponse> disks;
 
+    /**
+     * @return Disks to attach.
+     * 
+     */
     public List<DiskResponse> disks() {
         return this.disks;
     }
@@ -72,6 +88,10 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
     @Import(name="minimumCpuCores", required=true)
     private Integer minimumCpuCores;
 
+    /**
+     * @return The minimum number of cores to use. Defaults to 1.
+     * 
+     */
     public Integer minimumCpuCores() {
         return this.minimumCpuCores;
     }
@@ -83,6 +103,10 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
     @Import(name="minimumRamGb", required=true)
     private Double minimumRamGb;
 
+    /**
+     * @return The minimum amount of RAM to use. Defaults to 3.75 (GB)
+     * 
+     */
     public Double minimumRamGb() {
         return this.minimumRamGb;
     }
@@ -94,6 +118,10 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
     @Import(name="noAddress", required=true)
     private Boolean noAddress;
 
+    /**
+     * @return Whether to assign an external IP to the instance. This is an experimental feature that may go away. Defaults to false. Corresponds to `--no_address` flag for [gcloud compute instances create] (https://cloud.google.com/sdk/gcloud/reference/compute/instances/create). In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time. If you need to ssh into a private IP VM for debugging, you can ssh to a public VM and then ssh into the private VM&#39;s Internal IP. If noAddress is set, this pipeline run may only load docker images from Google Container Registry and not Docker Hub. Before using this, you must [configure access to Google services from internal IPs](https://cloud.google.com/compute/docs/configure-private-google-access#configuring_access_to_google_services_from_internal_ips).
+     * 
+     */
     public Boolean noAddress() {
         return this.noAddress;
     }
@@ -105,6 +133,10 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
     @Import(name="preemptible", required=true)
     private Boolean preemptible;
 
+    /**
+     * @return Whether to use preemptible VMs. Defaults to `false`. In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time.
+     * 
+     */
     public Boolean preemptible() {
         return this.preemptible;
     }
@@ -116,6 +148,10 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
     @Import(name="zones", required=true)
     private List<String> zones;
 
+    /**
+     * @return List of Google Compute Engine availability zones to which resource creation will restricted. If empty, any zone may be chosen.
+     * 
+     */
     public List<String> zones() {
         return this.zones;
     }
@@ -152,55 +188,121 @@ public final class PipelineResourcesResponse extends com.pulumi.resources.Invoke
             $ = new PipelineResourcesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorCount Optional. The number of accelerators of the specified type to attach. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorCount(String acceleratorCount) {
             $.acceleratorCount = acceleratorCount;
             return this;
         }
 
+        /**
+         * @param acceleratorType Optional. The Compute Engine defined accelerator type. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit. Please see https://cloud.google.com/compute/docs/gpus/ for a list of available accelerator types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(String acceleratorType) {
             $.acceleratorType = acceleratorType;
             return this;
         }
 
+        /**
+         * @param bootDiskSizeGb The size of the boot disk. Defaults to 10 (GB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskSizeGb(Integer bootDiskSizeGb) {
             $.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
 
+        /**
+         * @param disks Disks to attach.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(List<DiskResponse> disks) {
             $.disks = disks;
             return this;
         }
 
+        /**
+         * @param disks Disks to attach.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(DiskResponse... disks) {
             return disks(List.of(disks));
         }
 
+        /**
+         * @param minimumCpuCores The minimum number of cores to use. Defaults to 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumCpuCores(Integer minimumCpuCores) {
             $.minimumCpuCores = minimumCpuCores;
             return this;
         }
 
+        /**
+         * @param minimumRamGb The minimum amount of RAM to use. Defaults to 3.75 (GB)
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumRamGb(Double minimumRamGb) {
             $.minimumRamGb = minimumRamGb;
             return this;
         }
 
+        /**
+         * @param noAddress Whether to assign an external IP to the instance. This is an experimental feature that may go away. Defaults to false. Corresponds to `--no_address` flag for [gcloud compute instances create] (https://cloud.google.com/sdk/gcloud/reference/compute/instances/create). In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time. If you need to ssh into a private IP VM for debugging, you can ssh to a public VM and then ssh into the private VM&#39;s Internal IP. If noAddress is set, this pipeline run may only load docker images from Google Container Registry and not Docker Hub. Before using this, you must [configure access to Google services from internal IPs](https://cloud.google.com/compute/docs/configure-private-google-access#configuring_access_to_google_services_from_internal_ips).
+         * 
+         * @return builder
+         * 
+         */
         public Builder noAddress(Boolean noAddress) {
             $.noAddress = noAddress;
             return this;
         }
 
+        /**
+         * @param preemptible Whether to use preemptible VMs. Defaults to `false`. In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptible(Boolean preemptible) {
             $.preemptible = preemptible;
             return this;
         }
 
+        /**
+         * @param zones List of Google Compute Engine availability zones to which resource creation will restricted. If empty, any zone may be chosen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(List<String> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones List of Google Compute Engine availability zones to which resource creation will restricted. If empty, any zone may be chosen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

@@ -26,6 +26,10 @@ public final class GoogleCloudMlV1__ContainerPortArgs extends com.pulumi.resourc
     @Import(name="containerPort")
     private @Nullable Output<Integer> containerPort;
 
+    /**
+     * @return Number of the port to expose on the container. This must be a valid port number: 0 &lt; PORT_NUMBER &lt; 65536.
+     * 
+     */
     public Optional<Output<Integer>> containerPort() {
         return Optional.ofNullable(this.containerPort);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudMlV1__ContainerPortArgs extends com.pulumi.resourc
             $ = new GoogleCloudMlV1__ContainerPortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerPort Number of the port to expose on the container. This must be a valid port number: 0 &lt; PORT_NUMBER &lt; 65536.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerPort(@Nullable Output<Integer> containerPort) {
             $.containerPort = containerPort;
             return this;
         }
 
+        /**
+         * @param containerPort Number of the port to expose on the container. This must be a valid port number: 0 &lt; PORT_NUMBER &lt; 65536.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerPort(Integer containerPort) {
             return containerPort(Output.of(containerPort));
         }

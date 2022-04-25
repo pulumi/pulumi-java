@@ -23,6 +23,10 @@ public final class JobConfigurationTableCopyResponse extends com.pulumi.resource
     @Import(name="createDisposition", required=true)
     private String createDisposition;
 
+    /**
+     * @return [Optional] Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a &#39;notFound&#39; error is returned in the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion.
+     * 
+     */
     public String createDisposition() {
         return this.createDisposition;
     }
@@ -34,6 +38,10 @@ public final class JobConfigurationTableCopyResponse extends com.pulumi.resource
     @Import(name="destinationEncryptionConfiguration", required=true)
     private EncryptionConfigurationResponse destinationEncryptionConfiguration;
 
+    /**
+     * @return Custom encryption configuration (e.g., Cloud KMS keys).
+     * 
+     */
     public EncryptionConfigurationResponse destinationEncryptionConfiguration() {
         return this.destinationEncryptionConfiguration;
     }
@@ -45,6 +53,10 @@ public final class JobConfigurationTableCopyResponse extends com.pulumi.resource
     @Import(name="destinationExpirationTime", required=true)
     private Object destinationExpirationTime;
 
+    /**
+     * @return [Optional] The time when the destination table expires. Expired tables will be deleted and their storage reclaimed.
+     * 
+     */
     public Object destinationExpirationTime() {
         return this.destinationExpirationTime;
     }
@@ -56,6 +68,10 @@ public final class JobConfigurationTableCopyResponse extends com.pulumi.resource
     @Import(name="destinationTable", required=true)
     private TableReferenceResponse destinationTable;
 
+    /**
+     * @return [Required] The destination table
+     * 
+     */
     public TableReferenceResponse destinationTable() {
         return this.destinationTable;
     }
@@ -67,6 +83,10 @@ public final class JobConfigurationTableCopyResponse extends com.pulumi.resource
     @Import(name="operationType", required=true)
     private String operationType;
 
+    /**
+     * @return [Optional] Supported operation types in table copy job.
+     * 
+     */
     public String operationType() {
         return this.operationType;
     }
@@ -78,6 +98,10 @@ public final class JobConfigurationTableCopyResponse extends com.pulumi.resource
     @Import(name="sourceTable", required=true)
     private TableReferenceResponse sourceTable;
 
+    /**
+     * @return [Pick one] Source table to copy.
+     * 
+     */
     public TableReferenceResponse sourceTable() {
         return this.sourceTable;
     }
@@ -89,6 +113,10 @@ public final class JobConfigurationTableCopyResponse extends com.pulumi.resource
     @Import(name="sourceTables", required=true)
     private List<TableReferenceResponse> sourceTables;
 
+    /**
+     * @return [Pick one] Source tables to copy.
+     * 
+     */
     public List<TableReferenceResponse> sourceTables() {
         return this.sourceTables;
     }
@@ -100,6 +128,10 @@ public final class JobConfigurationTableCopyResponse extends com.pulumi.resource
     @Import(name="writeDisposition", required=true)
     private String writeDisposition;
 
+    /**
+     * @return [Optional] Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a &#39;duplicate&#39; error is returned in the job result. The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion.
+     * 
+     */
     public String writeDisposition() {
         return this.writeDisposition;
     }
@@ -135,45 +167,99 @@ public final class JobConfigurationTableCopyResponse extends com.pulumi.resource
             $ = new JobConfigurationTableCopyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createDisposition [Optional] Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a &#39;notFound&#39; error is returned in the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createDisposition(String createDisposition) {
             $.createDisposition = createDisposition;
             return this;
         }
 
+        /**
+         * @param destinationEncryptionConfiguration Custom encryption configuration (e.g., Cloud KMS keys).
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationEncryptionConfiguration(EncryptionConfigurationResponse destinationEncryptionConfiguration) {
             $.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
 
+        /**
+         * @param destinationExpirationTime [Optional] The time when the destination table expires. Expired tables will be deleted and their storage reclaimed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationExpirationTime(Object destinationExpirationTime) {
             $.destinationExpirationTime = destinationExpirationTime;
             return this;
         }
 
+        /**
+         * @param destinationTable [Required] The destination table
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationTable(TableReferenceResponse destinationTable) {
             $.destinationTable = destinationTable;
             return this;
         }
 
+        /**
+         * @param operationType [Optional] Supported operation types in table copy job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationType(String operationType) {
             $.operationType = operationType;
             return this;
         }
 
+        /**
+         * @param sourceTable [Pick one] Source table to copy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTable(TableReferenceResponse sourceTable) {
             $.sourceTable = sourceTable;
             return this;
         }
 
+        /**
+         * @param sourceTables [Pick one] Source tables to copy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTables(List<TableReferenceResponse> sourceTables) {
             $.sourceTables = sourceTables;
             return this;
         }
 
+        /**
+         * @param sourceTables [Pick one] Source tables to copy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTables(TableReferenceResponse... sourceTables) {
             return sourceTables(List.of(sourceTables));
         }
 
+        /**
+         * @param writeDisposition [Optional] Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a &#39;duplicate&#39; error is returned in the job result. The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeDisposition(String writeDisposition) {
             $.writeDisposition = writeDisposition;
             return this;

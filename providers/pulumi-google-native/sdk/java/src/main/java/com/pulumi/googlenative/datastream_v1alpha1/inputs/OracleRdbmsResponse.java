@@ -24,6 +24,10 @@ public final class OracleRdbmsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="oracleSchemas", required=true)
     private List<OracleSchemaResponse> oracleSchemas;
 
+    /**
+     * @return Oracle schemas/databases in the database server.
+     * 
+     */
     public List<OracleSchemaResponse> oracleSchemas() {
         return this.oracleSchemas;
     }
@@ -52,11 +56,23 @@ public final class OracleRdbmsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OracleRdbmsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oracleSchemas Oracle schemas/databases in the database server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleSchemas(List<OracleSchemaResponse> oracleSchemas) {
             $.oracleSchemas = oracleSchemas;
             return this;
         }
 
+        /**
+         * @param oracleSchemas Oracle schemas/databases in the database server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleSchemas(OracleSchemaResponse... oracleSchemas) {
             return oracleSchemas(List.of(oracleSchemas));
         }

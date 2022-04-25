@@ -28,6 +28,10 @@ public final class ServicePerimeterConfigArgs extends com.pulumi.resources.Resou
     @Import(name="accessLevels")
     private @Nullable Output<List<String>> accessLevels;
 
+    /**
+     * @return A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `&#34;accessPolicies/MY_POLICY/accessLevels/MY_LEVEL&#34;`. For Service Perimeter Bridge, must be empty.
+     * 
+     */
     public Optional<Output<List<String>>> accessLevels() {
         return Optional.ofNullable(this.accessLevels);
     }
@@ -39,6 +43,10 @@ public final class ServicePerimeterConfigArgs extends com.pulumi.resources.Resou
     @Import(name="resources")
     private @Nullable Output<List<String>> resources;
 
+    /**
+     * @return A list of Google Cloud resources that are inside of the service perimeter. Currently only projects are allowed. Format: `projects/{project_number}`
+     * 
+     */
     public Optional<Output<List<String>>> resources() {
         return Optional.ofNullable(this.resources);
     }
@@ -50,6 +58,10 @@ public final class ServicePerimeterConfigArgs extends com.pulumi.resources.Resou
     @Import(name="restrictedServices")
     private @Nullable Output<List<String>> restrictedServices;
 
+    /**
+     * @return Google Cloud services that are subject to the Service Perimeter restrictions. Must contain a list of services. For example, if `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must meet the perimeter&#39;s access restrictions.
+     * 
+     */
     public Optional<Output<List<String>>> restrictedServices() {
         return Optional.ofNullable(this.restrictedServices);
     }
@@ -61,6 +73,10 @@ public final class ServicePerimeterConfigArgs extends com.pulumi.resources.Resou
     @Import(name="vpcAccessibleServices")
     private @Nullable Output<VpcAccessibleServicesArgs> vpcAccessibleServices;
 
+    /**
+     * @return Beta. Configuration for APIs allowed within Perimeter.
+     * 
+     */
     public Optional<Output<VpcAccessibleServicesArgs>> vpcAccessibleServices() {
         return Optional.ofNullable(this.vpcAccessibleServices);
     }
@@ -92,50 +108,116 @@ public final class ServicePerimeterConfigArgs extends com.pulumi.resources.Resou
             $ = new ServicePerimeterConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessLevels A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `&#34;accessPolicies/MY_POLICY/accessLevels/MY_LEVEL&#34;`. For Service Perimeter Bridge, must be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLevels(@Nullable Output<List<String>> accessLevels) {
             $.accessLevels = accessLevels;
             return this;
         }
 
+        /**
+         * @param accessLevels A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `&#34;accessPolicies/MY_POLICY/accessLevels/MY_LEVEL&#34;`. For Service Perimeter Bridge, must be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLevels(List<String> accessLevels) {
             return accessLevels(Output.of(accessLevels));
         }
 
+        /**
+         * @param accessLevels A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `&#34;accessPolicies/MY_POLICY/accessLevels/MY_LEVEL&#34;`. For Service Perimeter Bridge, must be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLevels(String... accessLevels) {
             return accessLevels(List.of(accessLevels));
         }
 
+        /**
+         * @param resources A list of Google Cloud resources that are inside of the service perimeter. Currently only projects are allowed. Format: `projects/{project_number}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(@Nullable Output<List<String>> resources) {
             $.resources = resources;
             return this;
         }
 
+        /**
+         * @param resources A list of Google Cloud resources that are inside of the service perimeter. Currently only projects are allowed. Format: `projects/{project_number}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(List<String> resources) {
             return resources(Output.of(resources));
         }
 
+        /**
+         * @param resources A list of Google Cloud resources that are inside of the service perimeter. Currently only projects are allowed. Format: `projects/{project_number}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(String... resources) {
             return resources(List.of(resources));
         }
 
+        /**
+         * @param restrictedServices Google Cloud services that are subject to the Service Perimeter restrictions. Must contain a list of services. For example, if `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must meet the perimeter&#39;s access restrictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictedServices(@Nullable Output<List<String>> restrictedServices) {
             $.restrictedServices = restrictedServices;
             return this;
         }
 
+        /**
+         * @param restrictedServices Google Cloud services that are subject to the Service Perimeter restrictions. Must contain a list of services. For example, if `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must meet the perimeter&#39;s access restrictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictedServices(List<String> restrictedServices) {
             return restrictedServices(Output.of(restrictedServices));
         }
 
+        /**
+         * @param restrictedServices Google Cloud services that are subject to the Service Perimeter restrictions. Must contain a list of services. For example, if `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must meet the perimeter&#39;s access restrictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictedServices(String... restrictedServices) {
             return restrictedServices(List.of(restrictedServices));
         }
 
+        /**
+         * @param vpcAccessibleServices Beta. Configuration for APIs allowed within Perimeter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcAccessibleServices(@Nullable Output<VpcAccessibleServicesArgs> vpcAccessibleServices) {
             $.vpcAccessibleServices = vpcAccessibleServices;
             return this;
         }
 
+        /**
+         * @param vpcAccessibleServices Beta. Configuration for APIs allowed within Perimeter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcAccessibleServices(VpcAccessibleServicesArgs vpcAccessibleServices) {
             return vpcAccessibleServices(Output.of(vpcAccessibleServices));
         }

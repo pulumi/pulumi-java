@@ -13,27 +13,27 @@ import java.util.Objects;
 @CustomType
 public final class GetApiResult {
     /**
-     * User labels applied to this API Proxy.
+     * @return User labels applied to this API Proxy.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The id of the most recently created revision for this api proxy.
+     * @return The id of the most recently created revision for this api proxy.
      * 
      */
     private final String latestRevisionId;
     /**
-     * Metadata describing the API proxy.
+     * @return Metadata describing the API proxy.
      * 
      */
     private final GoogleCloudApigeeV1EntityMetadataResponse metaData;
     /**
-     * Name of the API proxy.
+     * @return Name of the API proxy.
      * 
      */
     private final String name;
     /**
-     * List of revisons defined for the API proxy.
+     * @return List of revisons defined for the API proxy.
      * 
      */
     private final List<String> revision;
@@ -53,37 +53,37 @@ public final class GetApiResult {
     }
 
     /**
-     * User labels applied to this API Proxy.
+     * @return User labels applied to this API Proxy.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The id of the most recently created revision for this api proxy.
+     * @return The id of the most recently created revision for this api proxy.
      * 
-    */
+     */
     public String latestRevisionId() {
         return this.latestRevisionId;
     }
     /**
-     * Metadata describing the API proxy.
+     * @return Metadata describing the API proxy.
      * 
-    */
+     */
     public GoogleCloudApigeeV1EntityMetadataResponse metaData() {
         return this.metaData;
     }
     /**
-     * Name of the API proxy.
+     * @return Name of the API proxy.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of revisons defined for the API proxy.
+     * @return List of revisons defined for the API proxy.
      * 
-    */
+     */
     public List<String> revision() {
         return this.revision;
     }

@@ -23,6 +23,10 @@ public final class SqlServerAuditConfigResponse extends com.pulumi.resources.Inv
     @Import(name="bucket", required=true)
     private String bucket;
 
+    /**
+     * @return The name of the destination bucket (e.g., gs://mybucket).
+     * 
+     */
     public String bucket() {
         return this.bucket;
     }
@@ -34,6 +38,10 @@ public final class SqlServerAuditConfigResponse extends com.pulumi.resources.Inv
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return This is always sql#sqlServerAuditConfig
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -63,11 +71,23 @@ public final class SqlServerAuditConfigResponse extends com.pulumi.resources.Inv
             $ = new SqlServerAuditConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The name of the destination bucket (e.g., gs://mybucket).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param kind This is always sql#sqlServerAuditConfig
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;

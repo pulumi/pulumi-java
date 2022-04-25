@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse {
     /**
-     * The list of simple responses.
+     * @return The list of simple responses.
      * 
      */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses;
@@ -22,9 +22,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesRespo
     }
 
     /**
-     * The list of simple responses.
+     * @return The list of simple responses.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses() {
         return this.simpleResponses;
     }

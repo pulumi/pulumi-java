@@ -36,6 +36,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="adBreaks")
     private @Nullable Output<List<AdBreakArgs>> adBreaks;
 
+    /**
+     * @return List of ad breaks. Specifies where to insert ad break tags in the output manifests.
+     * 
+     */
     public Optional<Output<List<AdBreakArgs>>> adBreaks() {
         return Optional.ofNullable(this.adBreaks);
     }
@@ -47,6 +51,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="editList")
     private @Nullable Output<List<EditAtomArgs>> editList;
 
+    /**
+     * @return List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
+     * 
+     */
     public Optional<Output<List<EditAtomArgs>>> editList() {
         return Optional.ofNullable(this.editList);
     }
@@ -58,6 +66,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="elementaryStreams")
     private @Nullable Output<List<ElementaryStreamArgs>> elementaryStreams;
 
+    /**
+     * @return List of elementary streams.
+     * 
+     */
     public Optional<Output<List<ElementaryStreamArgs>>> elementaryStreams() {
         return Optional.ofNullable(this.elementaryStreams);
     }
@@ -69,6 +81,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputs")
     private @Nullable Output<List<InputArgs>> inputs;
 
+    /**
+     * @return List of input assets stored in Cloud Storage.
+     * 
+     */
     public Optional<Output<List<InputArgs>>> inputs() {
         return Optional.ofNullable(this.inputs);
     }
@@ -80,6 +96,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="manifests")
     private @Nullable Output<List<ManifestArgs>> manifests;
 
+    /**
+     * @return List of output manifests.
+     * 
+     */
     public Optional<Output<List<ManifestArgs>>> manifests() {
         return Optional.ofNullable(this.manifests);
     }
@@ -91,6 +111,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="muxStreams")
     private @Nullable Output<List<MuxStreamArgs>> muxStreams;
 
+    /**
+     * @return List of multiplexing settings for output streams.
+     * 
+     */
     public Optional<Output<List<MuxStreamArgs>>> muxStreams() {
         return Optional.ofNullable(this.muxStreams);
     }
@@ -102,6 +126,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="output")
     private @Nullable Output<OutputArgs> output;
 
+    /**
+     * @return Output configuration.
+     * 
+     */
     public Optional<Output<OutputArgs>> output() {
         return Optional.ofNullable(this.output);
     }
@@ -113,6 +141,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="overlays")
     private @Nullable Output<List<OverlayArgs>> overlays;
 
+    /**
+     * @return List of overlays on the output video, in descending Z-order.
+     * 
+     */
     public Optional<Output<List<OverlayArgs>>> overlays() {
         return Optional.ofNullable(this.overlays);
     }
@@ -124,6 +156,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pubsubDestination")
     private @Nullable Output<PubsubDestinationArgs> pubsubDestination;
 
+    /**
+     * @return Destination on Pub/Sub.
+     * 
+     */
     public Optional<Output<PubsubDestinationArgs>> pubsubDestination() {
         return Optional.ofNullable(this.pubsubDestination);
     }
@@ -135,6 +171,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spriteSheets")
     private @Nullable Output<List<SpriteSheetArgs>> spriteSheets;
 
+    /**
+     * @return List of output sprite sheets.
+     * 
+     */
     public Optional<Output<List<SpriteSheetArgs>>> spriteSheets() {
         return Optional.ofNullable(this.spriteSheets);
     }
@@ -172,124 +212,292 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adBreaks List of ad breaks. Specifies where to insert ad break tags in the output manifests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adBreaks(@Nullable Output<List<AdBreakArgs>> adBreaks) {
             $.adBreaks = adBreaks;
             return this;
         }
 
+        /**
+         * @param adBreaks List of ad breaks. Specifies where to insert ad break tags in the output manifests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adBreaks(List<AdBreakArgs> adBreaks) {
             return adBreaks(Output.of(adBreaks));
         }
 
+        /**
+         * @param adBreaks List of ad breaks. Specifies where to insert ad break tags in the output manifests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adBreaks(AdBreakArgs... adBreaks) {
             return adBreaks(List.of(adBreaks));
         }
 
+        /**
+         * @param editList List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder editList(@Nullable Output<List<EditAtomArgs>> editList) {
             $.editList = editList;
             return this;
         }
 
+        /**
+         * @param editList List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder editList(List<EditAtomArgs> editList) {
             return editList(Output.of(editList));
         }
 
+        /**
+         * @param editList List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder editList(EditAtomArgs... editList) {
             return editList(List.of(editList));
         }
 
+        /**
+         * @param elementaryStreams List of elementary streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elementaryStreams(@Nullable Output<List<ElementaryStreamArgs>> elementaryStreams) {
             $.elementaryStreams = elementaryStreams;
             return this;
         }
 
+        /**
+         * @param elementaryStreams List of elementary streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elementaryStreams(List<ElementaryStreamArgs> elementaryStreams) {
             return elementaryStreams(Output.of(elementaryStreams));
         }
 
+        /**
+         * @param elementaryStreams List of elementary streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elementaryStreams(ElementaryStreamArgs... elementaryStreams) {
             return elementaryStreams(List.of(elementaryStreams));
         }
 
+        /**
+         * @param inputs List of input assets stored in Cloud Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(@Nullable Output<List<InputArgs>> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs List of input assets stored in Cloud Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(List<InputArgs> inputs) {
             return inputs(Output.of(inputs));
         }
 
+        /**
+         * @param inputs List of input assets stored in Cloud Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(InputArgs... inputs) {
             return inputs(List.of(inputs));
         }
 
+        /**
+         * @param manifests List of output manifests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifests(@Nullable Output<List<ManifestArgs>> manifests) {
             $.manifests = manifests;
             return this;
         }
 
+        /**
+         * @param manifests List of output manifests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifests(List<ManifestArgs> manifests) {
             return manifests(Output.of(manifests));
         }
 
+        /**
+         * @param manifests List of output manifests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifests(ManifestArgs... manifests) {
             return manifests(List.of(manifests));
         }
 
+        /**
+         * @param muxStreams List of multiplexing settings for output streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder muxStreams(@Nullable Output<List<MuxStreamArgs>> muxStreams) {
             $.muxStreams = muxStreams;
             return this;
         }
 
+        /**
+         * @param muxStreams List of multiplexing settings for output streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder muxStreams(List<MuxStreamArgs> muxStreams) {
             return muxStreams(Output.of(muxStreams));
         }
 
+        /**
+         * @param muxStreams List of multiplexing settings for output streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder muxStreams(MuxStreamArgs... muxStreams) {
             return muxStreams(List.of(muxStreams));
         }
 
+        /**
+         * @param output Output configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(@Nullable Output<OutputArgs> output) {
             $.output = output;
             return this;
         }
 
+        /**
+         * @param output Output configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(OutputArgs output) {
             return output(Output.of(output));
         }
 
+        /**
+         * @param overlays List of overlays on the output video, in descending Z-order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overlays(@Nullable Output<List<OverlayArgs>> overlays) {
             $.overlays = overlays;
             return this;
         }
 
+        /**
+         * @param overlays List of overlays on the output video, in descending Z-order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overlays(List<OverlayArgs> overlays) {
             return overlays(Output.of(overlays));
         }
 
+        /**
+         * @param overlays List of overlays on the output video, in descending Z-order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overlays(OverlayArgs... overlays) {
             return overlays(List.of(overlays));
         }
 
+        /**
+         * @param pubsubDestination Destination on Pub/Sub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubDestination(@Nullable Output<PubsubDestinationArgs> pubsubDestination) {
             $.pubsubDestination = pubsubDestination;
             return this;
         }
 
+        /**
+         * @param pubsubDestination Destination on Pub/Sub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubDestination(PubsubDestinationArgs pubsubDestination) {
             return pubsubDestination(Output.of(pubsubDestination));
         }
 
+        /**
+         * @param spriteSheets List of output sprite sheets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spriteSheets(@Nullable Output<List<SpriteSheetArgs>> spriteSheets) {
             $.spriteSheets = spriteSheets;
             return this;
         }
 
+        /**
+         * @param spriteSheets List of output sprite sheets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spriteSheets(List<SpriteSheetArgs> spriteSheets) {
             return spriteSheets(Output.of(spriteSheets));
         }
 
+        /**
+         * @param spriteSheets List of output sprite sheets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spriteSheets(SpriteSheetArgs... spriteSheets) {
             return spriteSheets(List.of(spriteSheets));
         }

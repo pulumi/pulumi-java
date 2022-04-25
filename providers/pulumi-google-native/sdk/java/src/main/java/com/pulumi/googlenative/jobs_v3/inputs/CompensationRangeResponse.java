@@ -23,6 +23,10 @@ public final class CompensationRangeResponse extends com.pulumi.resources.Invoke
     @Import(name="maxCompensation", required=true)
     private MoneyResponse maxCompensation;
 
+    /**
+     * @return Optional. The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.
+     * 
+     */
     public MoneyResponse maxCompensation() {
         return this.maxCompensation;
     }
@@ -34,6 +38,10 @@ public final class CompensationRangeResponse extends com.pulumi.resources.Invoke
     @Import(name="minCompensation", required=true)
     private MoneyResponse minCompensation;
 
+    /**
+     * @return Optional. The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.
+     * 
+     */
     public MoneyResponse minCompensation() {
         return this.minCompensation;
     }
@@ -63,11 +71,23 @@ public final class CompensationRangeResponse extends com.pulumi.resources.Invoke
             $ = new CompensationRangeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxCompensation Optional. The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCompensation(MoneyResponse maxCompensation) {
             $.maxCompensation = maxCompensation;
             return this;
         }
 
+        /**
+         * @param minCompensation Optional. The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCompensation(MoneyResponse minCompensation) {
             $.minCompensation = minCompensation;
             return this;

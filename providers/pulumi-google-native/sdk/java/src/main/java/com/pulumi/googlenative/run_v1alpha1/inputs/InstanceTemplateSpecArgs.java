@@ -26,6 +26,10 @@ public final class InstanceTemplateSpecArgs extends com.pulumi.resources.Resourc
     @Import(name="spec")
     private @Nullable Output<InstanceSpecArgs> spec;
 
+    /**
+     * @return Optional. Specification of the desired behavior of the instance. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status +optional
+     * 
+     */
     public Optional<Output<InstanceSpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
@@ -54,11 +58,23 @@ public final class InstanceTemplateSpecArgs extends com.pulumi.resources.Resourc
             $ = new InstanceTemplateSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param spec Optional. Specification of the desired behavior of the instance. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(@Nullable Output<InstanceSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
 
+        /**
+         * @param spec Optional. Specification of the desired behavior of the instance. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(InstanceSpecArgs spec) {
             return spec(Output.of(spec));
         }

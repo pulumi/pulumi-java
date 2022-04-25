@@ -27,6 +27,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="active", required=true)
     private Integer active;
 
+    /**
+     * @return Optional. The number of actively running instances. +optional
+     * 
+     */
     public Integer active() {
         return this.active;
     }
@@ -38,6 +42,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="completionTime", required=true)
     private String completionTime;
 
+    /**
+     * @return Optional. Represents time when the job was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+     * 
+     */
     public String completionTime() {
         return this.completionTime;
     }
@@ -49,6 +57,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="conditions", required=true)
     private List<JobConditionResponse> conditions;
 
+    /**
+     * @return Optional. The latest available observations of a job&#39;s current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+     * 
+     */
     public List<JobConditionResponse> conditions() {
         return this.conditions;
     }
@@ -60,6 +72,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="failed", required=true)
     private Integer failed;
 
+    /**
+     * @return Optional. The number of instances which reached phase Failed. +optional
+     * 
+     */
     public Integer failed() {
         return this.failed;
     }
@@ -71,6 +87,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="imageDigest", required=true)
     private String imageDigest;
 
+    /**
+     * @return Optional. ImageDigest holds the resolved digest for the image specified within .Spec.Template.Spec.Container.Image. The digest is resolved during the creation of the Job. This field holds the digest value regardless of whether a tag or digest was originally specified in the Container object.
+     * 
+     */
     public String imageDigest() {
         return this.imageDigest;
     }
@@ -82,6 +102,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="instances", required=true)
     private List<InstanceStatusResponse> instances;
 
+    /**
+     * @return Optional. Status of completed, failed, and running instances. +optional
+     * 
+     */
     public List<InstanceStatusResponse> instances() {
         return this.instances;
     }
@@ -93,6 +117,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="observedGeneration", required=true)
     private Integer observedGeneration;
 
+    /**
+     * @return Optional. The &#39;generation&#39; of the job that was last processed by the controller.
+     * 
+     */
     public Integer observedGeneration() {
         return this.observedGeneration;
     }
@@ -104,6 +132,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Optional. Represents time when the job was acknowledged by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -115,6 +147,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="succeeded", required=true)
     private Integer succeeded;
 
+    /**
+     * @return Optional. The number of instances which reached phase Succeeded. +optional
+     * 
+     */
     public Integer succeeded() {
         return this.succeeded;
     }
@@ -151,54 +187,120 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JobStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param active Optional. The number of actively running instances. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder active(Integer active) {
             $.active = active;
             return this;
         }
 
+        /**
+         * @param completionTime Optional. Represents time when the job was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder completionTime(String completionTime) {
             $.completionTime = completionTime;
             return this;
         }
 
+        /**
+         * @param conditions Optional. The latest available observations of a job&#39;s current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<JobConditionResponse> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Optional. The latest available observations of a job&#39;s current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(JobConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param failed Optional. The number of instances which reached phase Failed. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder failed(Integer failed) {
             $.failed = failed;
             return this;
         }
 
+        /**
+         * @param imageDigest Optional. ImageDigest holds the resolved digest for the image specified within .Spec.Template.Spec.Container.Image. The digest is resolved during the creation of the Job. This field holds the digest value regardless of whether a tag or digest was originally specified in the Container object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageDigest(String imageDigest) {
             $.imageDigest = imageDigest;
             return this;
         }
 
+        /**
+         * @param instances Optional. Status of completed, failed, and running instances. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<InstanceStatusResponse> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances Optional. Status of completed, failed, and running instances. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(InstanceStatusResponse... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param observedGeneration Optional. The &#39;generation&#39; of the job that was last processed by the controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder observedGeneration(Integer observedGeneration) {
             $.observedGeneration = observedGeneration;
             return this;
         }
 
+        /**
+         * @param startTime Optional. Represents time when the job was acknowledged by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param succeeded Optional. The number of instances which reached phase Succeeded. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder succeeded(Integer succeeded) {
             $.succeeded = succeeded;
             return this;

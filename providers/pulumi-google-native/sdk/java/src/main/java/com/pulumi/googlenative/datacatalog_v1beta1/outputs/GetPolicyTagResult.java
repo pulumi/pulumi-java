@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class GetPolicyTagResult {
     /**
-     * Resource names of child policy tags of this policy tag.
+     * @return Resource names of child policy tags of this policy tag.
      * 
      */
     private final List<String> childPolicyTags;
     /**
-     * Description of this policy tag. It must: contain only unicode characters, tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes long when encoded in UTF-8. If not set, defaults to an empty description. If not set, defaults to an empty description.
+     * @return Description of this policy tag. It must: contain only unicode characters, tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes long when encoded in UTF-8. If not set, defaults to an empty description. If not set, defaults to an empty description.
      * 
      */
     private final String description;
     /**
-     * User defined name of this policy tag. It must: be unique within the parent taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces; not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
+     * @return User defined name of this policy tag. It must: be unique within the parent taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces; not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
      * 
      */
     private final String displayName;
     /**
-     * Resource name of this policy tag, whose format is: &#34;projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}&#34;.
+     * @return Resource name of this policy tag, whose format is: &#34;projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}&#34;.
      * 
      */
     private final String name;
     /**
-     * Resource name of this policy tag&#39;s parent policy tag (e.g. for the &#34;LatLong&#34; policy tag in the example above, this field contains the resource name of the &#34;Geolocation&#34; policy tag). If empty, it means this policy tag is a top level policy tag (e.g. this field is empty for the &#34;Geolocation&#34; policy tag in the example above). If not set, defaults to an empty string.
+     * @return Resource name of this policy tag&#39;s parent policy tag (e.g. for the &#34;LatLong&#34; policy tag in the example above, this field contains the resource name of the &#34;Geolocation&#34; policy tag). If empty, it means this policy tag is a top level policy tag (e.g. this field is empty for the &#34;Geolocation&#34; policy tag in the example above). If not set, defaults to an empty string.
      * 
      */
     private final String parentPolicyTag;
@@ -51,37 +51,37 @@ public final class GetPolicyTagResult {
     }
 
     /**
-     * Resource names of child policy tags of this policy tag.
+     * @return Resource names of child policy tags of this policy tag.
      * 
-    */
+     */
     public List<String> childPolicyTags() {
         return this.childPolicyTags;
     }
     /**
-     * Description of this policy tag. It must: contain only unicode characters, tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes long when encoded in UTF-8. If not set, defaults to an empty description. If not set, defaults to an empty description.
+     * @return Description of this policy tag. It must: contain only unicode characters, tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes long when encoded in UTF-8. If not set, defaults to an empty description. If not set, defaults to an empty description.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * User defined name of this policy tag. It must: be unique within the parent taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces; not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
+     * @return User defined name of this policy tag. It must: be unique within the parent taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces; not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Resource name of this policy tag, whose format is: &#34;projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}&#34;.
+     * @return Resource name of this policy tag, whose format is: &#34;projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}&#34;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource name of this policy tag&#39;s parent policy tag (e.g. for the &#34;LatLong&#34; policy tag in the example above, this field contains the resource name of the &#34;Geolocation&#34; policy tag). If empty, it means this policy tag is a top level policy tag (e.g. this field is empty for the &#34;Geolocation&#34; policy tag in the example above). If not set, defaults to an empty string.
+     * @return Resource name of this policy tag&#39;s parent policy tag (e.g. for the &#34;LatLong&#34; policy tag in the example above, this field contains the resource name of the &#34;Geolocation&#34; policy tag). If empty, it means this policy tag is a top level policy tag (e.g. this field is empty for the &#34;Geolocation&#34; policy tag in the example above). If not set, defaults to an empty string.
      * 
-    */
+     */
     public String parentPolicyTag() {
         return this.parentPolicyTag;
     }

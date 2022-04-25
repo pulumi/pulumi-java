@@ -30,6 +30,10 @@ public final class AndroidTestLoopArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="appApk")
     private @Nullable Output<FileReferenceArgs> appApk;
 
+    /**
+     * @return The APK for the application under test.
+     * 
+     */
     public Optional<Output<FileReferenceArgs>> appApk() {
         return Optional.ofNullable(this.appApk);
     }
@@ -41,6 +45,10 @@ public final class AndroidTestLoopArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="appBundle")
     private @Nullable Output<AppBundleArgs> appBundle;
 
+    /**
+     * @return A multi-apk app bundle for the application under test.
+     * 
+     */
     public Optional<Output<AppBundleArgs>> appBundle() {
         return Optional.ofNullable(this.appBundle);
     }
@@ -52,6 +60,10 @@ public final class AndroidTestLoopArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="appPackageId")
     private @Nullable Output<String> appPackageId;
 
+    /**
+     * @return The java package for the application under test. The default is determined by examining the application&#39;s manifest.
+     * 
+     */
     public Optional<Output<String>> appPackageId() {
         return Optional.ofNullable(this.appPackageId);
     }
@@ -63,6 +75,10 @@ public final class AndroidTestLoopArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scenarioLabels")
     private @Nullable Output<List<String>> scenarioLabels;
 
+    /**
+     * @return The list of scenario labels that should be run during the test. The scenario labels should map to labels defined in the application&#39;s manifest. For example, player_experience and com.google.test.loops.player_experience add all of the loops labeled in the manifest with the com.google.test.loops.player_experience name to the execution. Scenarios can also be specified in the scenarios field.
+     * 
+     */
     public Optional<Output<List<String>>> scenarioLabels() {
         return Optional.ofNullable(this.scenarioLabels);
     }
@@ -74,6 +90,10 @@ public final class AndroidTestLoopArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scenarios")
     private @Nullable Output<List<Integer>> scenarios;
 
+    /**
+     * @return The list of scenarios that should be run during the test. The default is all test loops, derived from the application&#39;s manifest.
+     * 
+     */
     public Optional<Output<List<Integer>>> scenarios() {
         return Optional.ofNullable(this.scenarios);
     }
@@ -106,55 +126,127 @@ public final class AndroidTestLoopArgs extends com.pulumi.resources.ResourceArgs
             $ = new AndroidTestLoopArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appApk The APK for the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appApk(@Nullable Output<FileReferenceArgs> appApk) {
             $.appApk = appApk;
             return this;
         }
 
+        /**
+         * @param appApk The APK for the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appApk(FileReferenceArgs appApk) {
             return appApk(Output.of(appApk));
         }
 
+        /**
+         * @param appBundle A multi-apk app bundle for the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appBundle(@Nullable Output<AppBundleArgs> appBundle) {
             $.appBundle = appBundle;
             return this;
         }
 
+        /**
+         * @param appBundle A multi-apk app bundle for the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appBundle(AppBundleArgs appBundle) {
             return appBundle(Output.of(appBundle));
         }
 
+        /**
+         * @param appPackageId The java package for the application under test. The default is determined by examining the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appPackageId(@Nullable Output<String> appPackageId) {
             $.appPackageId = appPackageId;
             return this;
         }
 
+        /**
+         * @param appPackageId The java package for the application under test. The default is determined by examining the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appPackageId(String appPackageId) {
             return appPackageId(Output.of(appPackageId));
         }
 
+        /**
+         * @param scenarioLabels The list of scenario labels that should be run during the test. The scenario labels should map to labels defined in the application&#39;s manifest. For example, player_experience and com.google.test.loops.player_experience add all of the loops labeled in the manifest with the com.google.test.loops.player_experience name to the execution. Scenarios can also be specified in the scenarios field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scenarioLabels(@Nullable Output<List<String>> scenarioLabels) {
             $.scenarioLabels = scenarioLabels;
             return this;
         }
 
+        /**
+         * @param scenarioLabels The list of scenario labels that should be run during the test. The scenario labels should map to labels defined in the application&#39;s manifest. For example, player_experience and com.google.test.loops.player_experience add all of the loops labeled in the manifest with the com.google.test.loops.player_experience name to the execution. Scenarios can also be specified in the scenarios field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scenarioLabels(List<String> scenarioLabels) {
             return scenarioLabels(Output.of(scenarioLabels));
         }
 
+        /**
+         * @param scenarioLabels The list of scenario labels that should be run during the test. The scenario labels should map to labels defined in the application&#39;s manifest. For example, player_experience and com.google.test.loops.player_experience add all of the loops labeled in the manifest with the com.google.test.loops.player_experience name to the execution. Scenarios can also be specified in the scenarios field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scenarioLabels(String... scenarioLabels) {
             return scenarioLabels(List.of(scenarioLabels));
         }
 
+        /**
+         * @param scenarios The list of scenarios that should be run during the test. The default is all test loops, derived from the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scenarios(@Nullable Output<List<Integer>> scenarios) {
             $.scenarios = scenarios;
             return this;
         }
 
+        /**
+         * @param scenarios The list of scenarios that should be run during the test. The default is all test loops, derived from the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scenarios(List<Integer> scenarios) {
             return scenarios(Output.of(scenarios));
         }
 
+        /**
+         * @param scenarios The list of scenarios that should be run during the test. The default is all test loops, derived from the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scenarios(Integer... scenarios) {
             return scenarios(List.of(scenarios));
         }

@@ -23,6 +23,10 @@ public final class PrivatePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="artifactStorage", required=true)
     private String artifactStorage;
 
+    /**
+     * @return Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
+     * 
+     */
     public String artifactStorage() {
         return this.artifactStorage;
     }
@@ -34,6 +38,10 @@ public final class PrivatePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceAccount", required=true)
     private String serviceAccount;
 
+    /**
+     * @return Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
+     * 
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
@@ -45,6 +53,10 @@ public final class PrivatePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="workerPool", required=true)
     private String workerPool;
 
+    /**
+     * @return Resource name of the Cloud Build worker pool to use. The format is `projects/{project}/locations/{location}/workerPools/{pool}`.
+     * 
+     */
     public String workerPool() {
         return this.workerPool;
     }
@@ -75,16 +87,34 @@ public final class PrivatePoolResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PrivatePoolResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactStorage Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactStorage(String artifactStorage) {
             $.artifactStorage = artifactStorage;
             return this;
         }
 
+        /**
+         * @param serviceAccount Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param workerPool Resource name of the Cloud Build worker pool to use. The format is `projects/{project}/locations/{location}/workerPools/{pool}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerPool(String workerPool) {
             $.workerPool = workerPool;
             return this;

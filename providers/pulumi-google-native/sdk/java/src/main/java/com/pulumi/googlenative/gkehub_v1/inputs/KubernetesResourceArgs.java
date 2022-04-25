@@ -27,6 +27,10 @@ public final class KubernetesResourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="membershipCrManifest")
     private @Nullable Output<String> membershipCrManifest;
 
+    /**
+     * @return Input only. The YAML representation of the Membership CR. This field is ignored for GKE clusters where Hub can read the CR directly. Callers should provide the CR that is currently present in the cluster during CreateMembership or UpdateMembership, or leave this field empty if none exists. The CR manifest is used to validate the cluster has not been registered with another Membership.
+     * 
+     */
     public Optional<Output<String>> membershipCrManifest() {
         return Optional.ofNullable(this.membershipCrManifest);
     }
@@ -38,6 +42,10 @@ public final class KubernetesResourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceOptions")
     private @Nullable Output<ResourceOptionsArgs> resourceOptions;
 
+    /**
+     * @return Optional. Options for Kubernetes resource generation.
+     * 
+     */
     public Optional<Output<ResourceOptionsArgs>> resourceOptions() {
         return Optional.ofNullable(this.resourceOptions);
     }
@@ -67,20 +75,44 @@ public final class KubernetesResourceArgs extends com.pulumi.resources.ResourceA
             $ = new KubernetesResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param membershipCrManifest Input only. The YAML representation of the Membership CR. This field is ignored for GKE clusters where Hub can read the CR directly. Callers should provide the CR that is currently present in the cluster during CreateMembership or UpdateMembership, or leave this field empty if none exists. The CR manifest is used to validate the cluster has not been registered with another Membership.
+         * 
+         * @return builder
+         * 
+         */
         public Builder membershipCrManifest(@Nullable Output<String> membershipCrManifest) {
             $.membershipCrManifest = membershipCrManifest;
             return this;
         }
 
+        /**
+         * @param membershipCrManifest Input only. The YAML representation of the Membership CR. This field is ignored for GKE clusters where Hub can read the CR directly. Callers should provide the CR that is currently present in the cluster during CreateMembership or UpdateMembership, or leave this field empty if none exists. The CR manifest is used to validate the cluster has not been registered with another Membership.
+         * 
+         * @return builder
+         * 
+         */
         public Builder membershipCrManifest(String membershipCrManifest) {
             return membershipCrManifest(Output.of(membershipCrManifest));
         }
 
+        /**
+         * @param resourceOptions Optional. Options for Kubernetes resource generation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceOptions(@Nullable Output<ResourceOptionsArgs> resourceOptions) {
             $.resourceOptions = resourceOptions;
             return this;
         }
 
+        /**
+         * @param resourceOptions Optional. Options for Kubernetes resource generation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceOptions(ResourceOptionsArgs resourceOptions) {
             return resourceOptions(Output.of(resourceOptions));
         }

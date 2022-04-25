@@ -24,6 +24,10 @@ public final class NetworkPolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether network policy is enabled on the cluster.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -35,6 +39,10 @@ public final class NetworkPolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="provider", required=true)
     private String provider;
 
+    /**
+     * @return The selected network policy provider.
+     * 
+     */
     public String provider() {
         return this.provider;
     }
@@ -64,11 +72,23 @@ public final class NetworkPolicyResponse extends com.pulumi.resources.InvokeArgs
             $ = new NetworkPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether network policy is enabled on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param provider The selected network policy provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(String provider) {
             $.provider = provider;
             return this;

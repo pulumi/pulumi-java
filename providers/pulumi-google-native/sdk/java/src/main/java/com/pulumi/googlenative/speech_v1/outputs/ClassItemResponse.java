@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ClassItemResponse {
     /**
-     * The class item&#39;s value.
+     * @return The class item&#39;s value.
      * 
      */
     private final String value;
@@ -21,9 +21,9 @@ public final class ClassItemResponse {
     }
 
     /**
-     * The class item&#39;s value.
+     * @return The class item&#39;s value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

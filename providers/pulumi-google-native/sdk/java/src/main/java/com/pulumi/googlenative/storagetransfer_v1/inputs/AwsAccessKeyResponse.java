@@ -23,6 +23,10 @@ public final class AwsAccessKeyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="accessKeyId", required=true)
     private String accessKeyId;
 
+    /**
+     * @return AWS access key ID.
+     * 
+     */
     public String accessKeyId() {
         return this.accessKeyId;
     }
@@ -34,6 +38,10 @@ public final class AwsAccessKeyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="secretAccessKey", required=true)
     private String secretAccessKey;
 
+    /**
+     * @return AWS secret access key. This field is not returned in RPC responses.
+     * 
+     */
     public String secretAccessKey() {
         return this.secretAccessKey;
     }
@@ -63,11 +71,23 @@ public final class AwsAccessKeyResponse extends com.pulumi.resources.InvokeArgs 
             $ = new AwsAccessKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessKeyId AWS access key ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKeyId(String accessKeyId) {
             $.accessKeyId = accessKeyId;
             return this;
         }
 
+        /**
+         * @param secretAccessKey AWS secret access key. This field is not returned in RPC responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretAccessKey(String secretAccessKey) {
             $.secretAccessKey = secretAccessKey;
             return this;

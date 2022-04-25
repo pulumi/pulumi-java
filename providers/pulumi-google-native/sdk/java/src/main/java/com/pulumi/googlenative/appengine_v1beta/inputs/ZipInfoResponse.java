@@ -24,6 +24,10 @@ public final class ZipInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="filesCount", required=true)
     private Integer filesCount;
 
+    /**
+     * @return An estimate of the number of files in a zip for a zip deployment. If set, must be greater than or equal to the actual number of files. Used for optimizing performance; if not provided, deployment may be slow.
+     * 
+     */
     public Integer filesCount() {
         return this.filesCount;
     }
@@ -35,6 +39,10 @@ public final class ZipInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceUrl", required=true)
     private String sourceUrl;
 
+    /**
+     * @return URL of the zip file to deploy from. Must be a URL to a resource in Google Cloud Storage in the form &#39;http(s)://storage.googleapis.com//&#39;.
+     * 
+     */
     public String sourceUrl() {
         return this.sourceUrl;
     }
@@ -64,11 +72,23 @@ public final class ZipInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ZipInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filesCount An estimate of the number of files in a zip for a zip deployment. If set, must be greater than or equal to the actual number of files. Used for optimizing performance; if not provided, deployment may be slow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesCount(Integer filesCount) {
             $.filesCount = filesCount;
             return this;
         }
 
+        /**
+         * @param sourceUrl URL of the zip file to deploy from. Must be a URL to a resource in Google Cloud Storage in the form &#39;http(s)://storage.googleapis.com//&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUrl(String sourceUrl) {
             $.sourceUrl = sourceUrl;
             return this;

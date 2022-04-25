@@ -27,6 +27,10 @@ public final class ApplicationInfoArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="emails")
     private @Nullable Output<List<String>> emails;
 
+    /**
+     * @return Use this field to specify email address(es) to which resumes or applications can be sent. The maximum number of allowed characters for each entry is 255.
+     * 
+     */
     public Optional<Output<List<String>>> emails() {
         return Optional.ofNullable(this.emails);
     }
@@ -38,6 +42,10 @@ public final class ApplicationInfoArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="instruction")
     private @Nullable Output<String> instruction;
 
+    /**
+     * @return Use this field to provide instructions, such as &#34;Mail your application to ...&#34;, that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.
+     * 
+     */
     public Optional<Output<String>> instruction() {
         return Optional.ofNullable(this.instruction);
     }
@@ -49,6 +57,10 @@ public final class ApplicationInfoArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="uris")
     private @Nullable Output<List<String>> uris;
 
+    /**
+     * @return Use this URI field to direct an applicant to a website, for example to link to an online application form. The maximum number of allowed characters for each entry is 2,000.
+     * 
+     */
     public Optional<Output<List<String>>> uris() {
         return Optional.ofNullable(this.uris);
     }
@@ -79,37 +91,85 @@ public final class ApplicationInfoArgs extends com.pulumi.resources.ResourceArgs
             $ = new ApplicationInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emails Use this field to specify email address(es) to which resumes or applications can be sent. The maximum number of allowed characters for each entry is 255.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emails(@Nullable Output<List<String>> emails) {
             $.emails = emails;
             return this;
         }
 
+        /**
+         * @param emails Use this field to specify email address(es) to which resumes or applications can be sent. The maximum number of allowed characters for each entry is 255.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emails(List<String> emails) {
             return emails(Output.of(emails));
         }
 
+        /**
+         * @param emails Use this field to specify email address(es) to which resumes or applications can be sent. The maximum number of allowed characters for each entry is 255.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emails(String... emails) {
             return emails(List.of(emails));
         }
 
+        /**
+         * @param instruction Use this field to provide instructions, such as &#34;Mail your application to ...&#34;, that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instruction(@Nullable Output<String> instruction) {
             $.instruction = instruction;
             return this;
         }
 
+        /**
+         * @param instruction Use this field to provide instructions, such as &#34;Mail your application to ...&#34;, that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instruction(String instruction) {
             return instruction(Output.of(instruction));
         }
 
+        /**
+         * @param uris Use this URI field to direct an applicant to a website, for example to link to an online application form. The maximum number of allowed characters for each entry is 2,000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(@Nullable Output<List<String>> uris) {
             $.uris = uris;
             return this;
         }
 
+        /**
+         * @param uris Use this URI field to direct an applicant to a website, for example to link to an online application form. The maximum number of allowed characters for each entry is 2,000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(List<String> uris) {
             return uris(Output.of(uris));
         }
 
+        /**
+         * @param uris Use this URI field to direct an applicant to a website, for example to link to an online application form. The maximum number of allowed characters for each entry is 2,000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(String... uris) {
             return uris(List.of(uris));
         }

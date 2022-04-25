@@ -25,6 +25,10 @@ public final class MetadataFilterResponse extends com.pulumi.resources.InvokeArg
     @Import(name="filterLabels", required=true)
     private List<MetadataFilterLabelMatchResponse> filterLabels;
 
+    /**
+     * @return The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria This list must not be empty and can have at the most 64 entries.
+     * 
+     */
     public List<MetadataFilterLabelMatchResponse> filterLabels() {
         return this.filterLabels;
     }
@@ -36,6 +40,10 @@ public final class MetadataFilterResponse extends com.pulumi.resources.InvokeArg
     @Import(name="filterMatchCriteria", required=true)
     private String filterMatchCriteria;
 
+    /**
+     * @return Specifies how individual filter label matches within the list of filterLabels and contributes toward the overall metadataFilter match. Supported values are: - MATCH_ANY: at least one of the filterLabels must have a matching label in the provided metadata. - MATCH_ALL: all filterLabels must have matching labels in the provided metadata.
+     * 
+     */
     public String filterMatchCriteria() {
         return this.filterMatchCriteria;
     }
@@ -65,15 +73,33 @@ public final class MetadataFilterResponse extends com.pulumi.resources.InvokeArg
             $ = new MetadataFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filterLabels The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria This list must not be empty and can have at the most 64 entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterLabels(List<MetadataFilterLabelMatchResponse> filterLabels) {
             $.filterLabels = filterLabels;
             return this;
         }
 
+        /**
+         * @param filterLabels The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria This list must not be empty and can have at the most 64 entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterLabels(MetadataFilterLabelMatchResponse... filterLabels) {
             return filterLabels(List.of(filterLabels));
         }
 
+        /**
+         * @param filterMatchCriteria Specifies how individual filter label matches within the list of filterLabels and contributes toward the overall metadataFilter match. Supported values are: - MATCH_ANY: at least one of the filterLabels must have a matching label in the provided metadata. - MATCH_ALL: all filterLabels must have matching labels in the provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterMatchCriteria(String filterMatchCriteria) {
             $.filterMatchCriteria = filterMatchCriteria;
             return this;

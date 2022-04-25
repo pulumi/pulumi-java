@@ -24,6 +24,10 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional textual description of the resource; provided by the client when the resource is created.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -67,6 +75,10 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transferable")
     private @Nullable Output<Boolean> transferable;
 
+    /**
+     * @return If false, licenses will not be copied from the source resource when creating an image from a disk, disk from snapshot, or snapshot from disk.
+     * 
+     */
     public Optional<Output<Boolean>> transferable() {
         return Optional.ofNullable(this.transferable);
     }
@@ -100,20 +112,44 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LicenseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional textual description of the resource; provided by the client when the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional textual description of the resource; provided by the client when the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -145,11 +181,23 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
             return resourceRequirements(Output.of(resourceRequirements));
         }
 
+        /**
+         * @param transferable If false, licenses will not be copied from the source resource when creating an image from a disk, disk from snapshot, or snapshot from disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferable(@Nullable Output<Boolean> transferable) {
             $.transferable = transferable;
             return this;
         }
 
+        /**
+         * @param transferable If false, licenses will not be copied from the source resource when creating an image from a disk, disk from snapshot, or snapshot from disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferable(Boolean transferable) {
             return transferable(Output.of(transferable));
         }

@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs extend
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return A unique key that will be sent back to the agent if this response is given.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs extend
     @Import(name="synonyms")
     private @Nullable Output<List<String>> synonyms;
 
+    /**
+     * @return Optional. A list of synonyms that can also be used to trigger this item in dialog.
+     * 
+     */
     public Optional<Output<List<String>>> synonyms() {
         return Optional.ofNullable(this.synonyms);
     }
@@ -67,24 +75,54 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs extend
             $ = new GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key A unique key that will be sent back to the agent if this response is given.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key A unique key that will be sent back to the agent if this response is given.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param synonyms Optional. A list of synonyms that can also be used to trigger this item in dialog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(@Nullable Output<List<String>> synonyms) {
             $.synonyms = synonyms;
             return this;
         }
 
+        /**
+         * @param synonyms Optional. A list of synonyms that can also be used to trigger this item in dialog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(List<String> synonyms) {
             return synonyms(Output.of(synonyms));
         }
 
+        /**
+         * @param synonyms Optional. A list of synonyms that can also be used to trigger this item in dialog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
         }

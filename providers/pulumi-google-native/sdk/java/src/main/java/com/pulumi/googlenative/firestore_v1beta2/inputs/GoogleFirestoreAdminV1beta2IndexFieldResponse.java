@@ -23,6 +23,10 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse extends com.pul
     @Import(name="arrayConfig", required=true)
     private String arrayConfig;
 
+    /**
+     * @return Indicates that this field supports operations on `array_value`s.
+     * 
+     */
     public String arrayConfig() {
         return this.arrayConfig;
     }
@@ -34,6 +38,10 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse extends com.pul
     @Import(name="fieldPath", required=true)
     private String fieldPath;
 
+    /**
+     * @return Can be __name__. For single field indexes, this must match the name of the field or may be omitted.
+     * 
+     */
     public String fieldPath() {
         return this.fieldPath;
     }
@@ -45,6 +53,10 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse extends com.pul
     @Import(name="order", required=true)
     private String order;
 
+    /**
+     * @return Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
+     * 
+     */
     public String order() {
         return this.order;
     }
@@ -75,16 +87,34 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse extends com.pul
             $ = new GoogleFirestoreAdminV1beta2IndexFieldResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arrayConfig Indicates that this field supports operations on `array_value`s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arrayConfig(String arrayConfig) {
             $.arrayConfig = arrayConfig;
             return this;
         }
 
+        /**
+         * @param fieldPath Can be __name__. For single field indexes, this must match the name of the field or may be omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldPath(String fieldPath) {
             $.fieldPath = fieldPath;
             return this;
         }
 
+        /**
+         * @param order Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(String order) {
             $.order = order;
             return this;

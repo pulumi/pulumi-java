@@ -29,6 +29,10 @@ public final class DocumentationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentationRootUrl")
     private @Nullable Output<String> documentationRootUrl;
 
+    /**
+     * @return The URL to the root of documentation.
+     * 
+     */
     public Optional<Output<String>> documentationRootUrl() {
         return Optional.ofNullable(this.documentationRootUrl);
     }
@@ -40,6 +44,10 @@ public final class DocumentationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="overview")
     private @Nullable Output<String> overview;
 
+    /**
+     * @return Declares a single overview page. For example: documentation: summary: ... overview: (== include overview.md ==) This is a shortcut for the following declaration (using pages style): documentation: summary: ... pages: - name: Overview content: (== include overview.md ==) Note: you cannot specify both `overview` field and `pages` field.
+     * 
+     */
     public Optional<Output<String>> overview() {
         return Optional.ofNullable(this.overview);
     }
@@ -51,6 +59,10 @@ public final class DocumentationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pages")
     private @Nullable Output<List<PageArgs>> pages;
 
+    /**
+     * @return The top level pages for the documentation set.
+     * 
+     */
     public Optional<Output<List<PageArgs>>> pages() {
         return Optional.ofNullable(this.pages);
     }
@@ -62,6 +74,10 @@ public final class DocumentationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
     private @Nullable Output<List<DocumentationRuleArgs>> rules;
 
+    /**
+     * @return A list of documentation rules that apply to individual API elements. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+     * 
+     */
     public Optional<Output<List<DocumentationRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -73,6 +89,10 @@ public final class DocumentationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceRootUrl")
     private @Nullable Output<String> serviceRootUrl;
 
+    /**
+     * @return Specifies the service root url if the default one (the service name from the yaml file) is not suitable. This can be seen in any fully specified service urls as well as sections that show a base that other urls are relative to.
+     * 
+     */
     public Optional<Output<String>> serviceRootUrl() {
         return Optional.ofNullable(this.serviceRootUrl);
     }
@@ -84,6 +104,10 @@ public final class DocumentationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="summary")
     private @Nullable Output<String> summary;
 
+    /**
+     * @return A short description of what the service does. The summary must be plain text. It becomes the overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to the standard field `description`.
+     * 
+     */
     public Optional<Output<String>> summary() {
         return Optional.ofNullable(this.summary);
     }
@@ -117,64 +141,148 @@ public final class DocumentationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DocumentationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param documentationRootUrl The URL to the root of documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentationRootUrl(@Nullable Output<String> documentationRootUrl) {
             $.documentationRootUrl = documentationRootUrl;
             return this;
         }
 
+        /**
+         * @param documentationRootUrl The URL to the root of documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentationRootUrl(String documentationRootUrl) {
             return documentationRootUrl(Output.of(documentationRootUrl));
         }
 
+        /**
+         * @param overview Declares a single overview page. For example: documentation: summary: ... overview: (== include overview.md ==) This is a shortcut for the following declaration (using pages style): documentation: summary: ... pages: - name: Overview content: (== include overview.md ==) Note: you cannot specify both `overview` field and `pages` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overview(@Nullable Output<String> overview) {
             $.overview = overview;
             return this;
         }
 
+        /**
+         * @param overview Declares a single overview page. For example: documentation: summary: ... overview: (== include overview.md ==) This is a shortcut for the following declaration (using pages style): documentation: summary: ... pages: - name: Overview content: (== include overview.md ==) Note: you cannot specify both `overview` field and `pages` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overview(String overview) {
             return overview(Output.of(overview));
         }
 
+        /**
+         * @param pages The top level pages for the documentation set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pages(@Nullable Output<List<PageArgs>> pages) {
             $.pages = pages;
             return this;
         }
 
+        /**
+         * @param pages The top level pages for the documentation set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pages(List<PageArgs> pages) {
             return pages(Output.of(pages));
         }
 
+        /**
+         * @param pages The top level pages for the documentation set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pages(PageArgs... pages) {
             return pages(List.of(pages));
         }
 
+        /**
+         * @param rules A list of documentation rules that apply to individual API elements. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<DocumentationRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of documentation rules that apply to individual API elements. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<DocumentationRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules A list of documentation rules that apply to individual API elements. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(DocumentationRuleArgs... rules) {
             return rules(List.of(rules));
         }
 
+        /**
+         * @param serviceRootUrl Specifies the service root url if the default one (the service name from the yaml file) is not suitable. This can be seen in any fully specified service urls as well as sections that show a base that other urls are relative to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRootUrl(@Nullable Output<String> serviceRootUrl) {
             $.serviceRootUrl = serviceRootUrl;
             return this;
         }
 
+        /**
+         * @param serviceRootUrl Specifies the service root url if the default one (the service name from the yaml file) is not suitable. This can be seen in any fully specified service urls as well as sections that show a base that other urls are relative to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRootUrl(String serviceRootUrl) {
             return serviceRootUrl(Output.of(serviceRootUrl));
         }
 
+        /**
+         * @param summary A short description of what the service does. The summary must be plain text. It becomes the overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to the standard field `description`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder summary(@Nullable Output<String> summary) {
             $.summary = summary;
             return this;
         }
 
+        /**
+         * @param summary A short description of what the service does. The summary must be plain text. It becomes the overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to the standard field `description`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder summary(String summary) {
             return summary(Output.of(summary));
         }

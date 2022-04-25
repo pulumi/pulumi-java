@@ -24,6 +24,10 @@ public final class AttributeDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="allowedValues", required=true)
     private Output<List<String>> allowedValues;
 
+    /**
+     * @return Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.
+     * 
+     */
     public Output<List<String>> allowedValues() {
         return this.allowedValues;
     }
@@ -42,6 +46,10 @@ public final class AttributeDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="category", required=true)
     private Output<AttributeDefinitionCategory> category;
 
+    /**
+     * @return The category of the attribute. The value of this field cannot be changed after creation.
+     * 
+     */
     public Output<AttributeDefinitionCategory> category() {
         return this.category;
     }
@@ -53,6 +61,10 @@ public final class AttributeDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="consentDefaultValues")
     private @Nullable Output<List<String>> consentDefaultValues;
 
+    /**
+     * @return Optional. Default values of the attribute in Consents. If no default values are specified, it defaults to an empty value.
+     * 
+     */
     public Optional<Output<List<String>>> consentDefaultValues() {
         return Optional.ofNullable(this.consentDefaultValues);
     }
@@ -71,6 +83,10 @@ public final class AttributeDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="dataMappingDefaultValue")
     private @Nullable Output<String> dataMappingDefaultValue;
 
+    /**
+     * @return Optional. Default value of the attribute in User data mappings. If no default value is specified, it defaults to an empty value. This field is only applicable to attributes of the category `RESOURCE`.
+     * 
+     */
     public Optional<Output<String>> dataMappingDefaultValue() {
         return Optional.ofNullable(this.dataMappingDefaultValue);
     }
@@ -89,6 +105,10 @@ public final class AttributeDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. A description of the attribute.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -107,6 +127,10 @@ public final class AttributeDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_definition_id}`. Cannot be changed after creation.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -152,15 +176,33 @@ public final class AttributeDefinitionArgs extends com.pulumi.resources.Resource
             $ = new AttributeDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedValues Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(Output<List<String>> allowedValues) {
             $.allowedValues = allowedValues;
             return this;
         }
 
+        /**
+         * @param allowedValues Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(List<String> allowedValues) {
             return allowedValues(Output.of(allowedValues));
         }
 
+        /**
+         * @param allowedValues Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(String... allowedValues) {
             return allowedValues(List.of(allowedValues));
         }
@@ -174,24 +216,54 @@ public final class AttributeDefinitionArgs extends com.pulumi.resources.Resource
             return attributeDefinitionId(Output.of(attributeDefinitionId));
         }
 
+        /**
+         * @param category The category of the attribute. The value of this field cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(Output<AttributeDefinitionCategory> category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param category The category of the attribute. The value of this field cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(AttributeDefinitionCategory category) {
             return category(Output.of(category));
         }
 
+        /**
+         * @param consentDefaultValues Optional. Default values of the attribute in Consents. If no default values are specified, it defaults to an empty value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consentDefaultValues(@Nullable Output<List<String>> consentDefaultValues) {
             $.consentDefaultValues = consentDefaultValues;
             return this;
         }
 
+        /**
+         * @param consentDefaultValues Optional. Default values of the attribute in Consents. If no default values are specified, it defaults to an empty value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consentDefaultValues(List<String> consentDefaultValues) {
             return consentDefaultValues(Output.of(consentDefaultValues));
         }
 
+        /**
+         * @param consentDefaultValues Optional. Default values of the attribute in Consents. If no default values are specified, it defaults to an empty value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consentDefaultValues(String... consentDefaultValues) {
             return consentDefaultValues(List.of(consentDefaultValues));
         }
@@ -205,11 +277,23 @@ public final class AttributeDefinitionArgs extends com.pulumi.resources.Resource
             return consentStoreId(Output.of(consentStoreId));
         }
 
+        /**
+         * @param dataMappingDefaultValue Optional. Default value of the attribute in User data mappings. If no default value is specified, it defaults to an empty value. This field is only applicable to attributes of the category `RESOURCE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataMappingDefaultValue(@Nullable Output<String> dataMappingDefaultValue) {
             $.dataMappingDefaultValue = dataMappingDefaultValue;
             return this;
         }
 
+        /**
+         * @param dataMappingDefaultValue Optional. Default value of the attribute in User data mappings. If no default value is specified, it defaults to an empty value. This field is only applicable to attributes of the category `RESOURCE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataMappingDefaultValue(String dataMappingDefaultValue) {
             return dataMappingDefaultValue(Output.of(dataMappingDefaultValue));
         }
@@ -223,11 +307,23 @@ public final class AttributeDefinitionArgs extends com.pulumi.resources.Resource
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param description Optional. A description of the attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. A description of the attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
@@ -241,11 +337,23 @@ public final class AttributeDefinitionArgs extends com.pulumi.resources.Resource
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_definition_id}`. Cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_definition_id}`. Cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

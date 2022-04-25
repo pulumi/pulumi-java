@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
     @Import(name="bucketSize", required=true)
     private String bucketSize;
 
+    /**
+     * @return Total number of values in this bucket.
+     * 
+     */
     public String bucketSize() {
         return this.bucketSize;
     }
@@ -36,6 +40,10 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
     @Import(name="bucketValueCount", required=true)
     private String bucketValueCount;
 
+    /**
+     * @return Total number of distinct values in this bucket.
+     * 
+     */
     public String bucketValueCount() {
         return this.bucketValueCount;
     }
@@ -47,6 +55,10 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
     @Import(name="bucketValues", required=true)
     private List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues;
 
+    /**
+     * @return Sample of value frequencies in this bucket. The total number of values returned per bucket is capped at 20.
+     * 
+     */
     public List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues() {
         return this.bucketValues;
     }
@@ -58,6 +70,10 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
     @Import(name="valueFrequencyLowerBound", required=true)
     private String valueFrequencyLowerBound;
 
+    /**
+     * @return Lower bound on the value frequency of the values in this bucket.
+     * 
+     */
     public String valueFrequencyLowerBound() {
         return this.valueFrequencyLowerBound;
     }
@@ -69,6 +85,10 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
     @Import(name="valueFrequencyUpperBound", required=true)
     private String valueFrequencyUpperBound;
 
+    /**
+     * @return Upper bound on the value frequency of the values in this bucket.
+     * 
+     */
     public String valueFrequencyUpperBound() {
         return this.valueFrequencyUpperBound;
     }
@@ -101,30 +121,66 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
             $ = new GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketSize Total number of values in this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketSize(String bucketSize) {
             $.bucketSize = bucketSize;
             return this;
         }
 
+        /**
+         * @param bucketValueCount Total number of distinct values in this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketValueCount(String bucketValueCount) {
             $.bucketValueCount = bucketValueCount;
             return this;
         }
 
+        /**
+         * @param bucketValues Sample of value frequencies in this bucket. The total number of values returned per bucket is capped at 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketValues(List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues) {
             $.bucketValues = bucketValues;
             return this;
         }
 
+        /**
+         * @param bucketValues Sample of value frequencies in this bucket. The total number of values returned per bucket is capped at 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketValues(GooglePrivacyDlpV2ValueFrequencyResponse... bucketValues) {
             return bucketValues(List.of(bucketValues));
         }
 
+        /**
+         * @param valueFrequencyLowerBound Lower bound on the value frequency of the values in this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueFrequencyLowerBound(String valueFrequencyLowerBound) {
             $.valueFrequencyLowerBound = valueFrequencyLowerBound;
             return this;
         }
 
+        /**
+         * @param valueFrequencyUpperBound Upper bound on the value frequency of the values in this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueFrequencyUpperBound(String valueFrequencyUpperBound) {
             $.valueFrequencyUpperBound = valueFrequencyUpperBound;
             return this;

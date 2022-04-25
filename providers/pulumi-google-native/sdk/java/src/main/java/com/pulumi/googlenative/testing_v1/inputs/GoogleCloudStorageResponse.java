@@ -23,6 +23,10 @@ public final class GoogleCloudStorageResponse extends com.pulumi.resources.Invok
     @Import(name="gcsPath", required=true)
     private String gcsPath;
 
+    /**
+     * @return The path to a directory in GCS that will eventually contain the results for this test. The requesting user must have write access on the bucket in the supplied path.
+     * 
+     */
     public String gcsPath() {
         return this.gcsPath;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudStorageResponse extends com.pulumi.resources.Invok
             $ = new GoogleCloudStorageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gcsPath The path to a directory in GCS that will eventually contain the results for this test. The requesting user must have write access on the bucket in the supplied path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsPath(String gcsPath) {
             $.gcsPath = gcsPath;
             return this;

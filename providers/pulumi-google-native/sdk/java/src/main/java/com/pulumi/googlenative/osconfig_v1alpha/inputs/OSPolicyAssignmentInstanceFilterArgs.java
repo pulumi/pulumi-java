@@ -29,6 +29,10 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends com.pulumi.resou
     @Import(name="all")
     private @Nullable Output<Boolean> all;
 
+    /**
+     * @return Target all VMs in the project. If true, no other criteria is permitted.
+     * 
+     */
     public Optional<Output<Boolean>> all() {
         return Optional.ofNullable(this.all);
     }
@@ -40,6 +44,10 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends com.pulumi.resou
     @Import(name="exclusionLabels")
     private @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels;
 
+    /**
+     * @return List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM.
+     * 
+     */
     public Optional<Output<List<OSPolicyAssignmentLabelSetArgs>>> exclusionLabels() {
         return Optional.ofNullable(this.exclusionLabels);
     }
@@ -51,6 +59,10 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends com.pulumi.resou
     @Import(name="inclusionLabels")
     private @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels;
 
+    /**
+     * @return List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM.
+     * 
+     */
     public Optional<Output<List<OSPolicyAssignmentLabelSetArgs>>> inclusionLabels() {
         return Optional.ofNullable(this.inclusionLabels);
     }
@@ -62,6 +74,10 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends com.pulumi.resou
     @Import(name="inventories")
     private @Nullable Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories;
 
+    /**
+     * @return List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories.
+     * 
+     */
     public Optional<Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>>> inventories() {
         return Optional.ofNullable(this.inventories);
     }
@@ -93,50 +109,116 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends com.pulumi.resou
             $ = new OSPolicyAssignmentInstanceFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param all Target all VMs in the project. If true, no other criteria is permitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder all(@Nullable Output<Boolean> all) {
             $.all = all;
             return this;
         }
 
+        /**
+         * @param all Target all VMs in the project. If true, no other criteria is permitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder all(Boolean all) {
             return all(Output.of(all));
         }
 
+        /**
+         * @param exclusionLabels List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusionLabels(@Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels) {
             $.exclusionLabels = exclusionLabels;
             return this;
         }
 
+        /**
+         * @param exclusionLabels List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusionLabels(List<OSPolicyAssignmentLabelSetArgs> exclusionLabels) {
             return exclusionLabels(Output.of(exclusionLabels));
         }
 
+        /**
+         * @param exclusionLabels List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusionLabels(OSPolicyAssignmentLabelSetArgs... exclusionLabels) {
             return exclusionLabels(List.of(exclusionLabels));
         }
 
+        /**
+         * @param inclusionLabels List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inclusionLabels(@Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels) {
             $.inclusionLabels = inclusionLabels;
             return this;
         }
 
+        /**
+         * @param inclusionLabels List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inclusionLabels(List<OSPolicyAssignmentLabelSetArgs> inclusionLabels) {
             return inclusionLabels(Output.of(inclusionLabels));
         }
 
+        /**
+         * @param inclusionLabels List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inclusionLabels(OSPolicyAssignmentLabelSetArgs... inclusionLabels) {
             return inclusionLabels(List.of(inclusionLabels));
         }
 
+        /**
+         * @param inventories List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inventories(@Nullable Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories) {
             $.inventories = inventories;
             return this;
         }
 
+        /**
+         * @param inventories List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inventories(List<OSPolicyAssignmentInstanceFilterInventoryArgs> inventories) {
             return inventories(Output.of(inventories));
         }
 
+        /**
+         * @param inventories List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inventories(OSPolicyAssignmentInstanceFilterInventoryArgs... inventories) {
             return inventories(List.of(inventories));
         }

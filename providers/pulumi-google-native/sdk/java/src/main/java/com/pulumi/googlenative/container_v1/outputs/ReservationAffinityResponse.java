@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class ReservationAffinityResponse {
     /**
-     * Corresponds to the type of reservation consumption.
+     * @return Corresponds to the type of reservation consumption.
      * 
      */
     private final String consumeReservationType;
     /**
-     * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify &#34;googleapis.com/reservation-name&#34; as the key and specify the name of your reservation as its value.
+     * @return Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify &#34;googleapis.com/reservation-name&#34; as the key and specify the name of your reservation as its value.
      * 
      */
     private final String key;
     /**
-     * Corresponds to the label value(s) of reservation resource(s).
+     * @return Corresponds to the label value(s) of reservation resource(s).
      * 
      */
     private final List<String> values;
@@ -37,23 +37,23 @@ public final class ReservationAffinityResponse {
     }
 
     /**
-     * Corresponds to the type of reservation consumption.
+     * @return Corresponds to the type of reservation consumption.
      * 
-    */
+     */
     public String consumeReservationType() {
         return this.consumeReservationType;
     }
     /**
-     * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify &#34;googleapis.com/reservation-name&#34; as the key and specify the name of your reservation as its value.
+     * @return Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify &#34;googleapis.com/reservation-name&#34; as the key and specify the name of your reservation as its value.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Corresponds to the label value(s) of reservation resource(s).
+     * @return Corresponds to the label value(s) of reservation resource(s).
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

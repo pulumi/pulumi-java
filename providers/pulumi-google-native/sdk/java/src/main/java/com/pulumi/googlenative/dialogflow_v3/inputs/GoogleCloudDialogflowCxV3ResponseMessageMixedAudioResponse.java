@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse ex
     @Import(name="segments", required=true)
     private List<GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse> segments;
 
+    /**
+     * @return Segments this audio response is composed of.
+     * 
+     */
     public List<GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse> segments() {
         return this.segments;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse ex
             $ = new GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param segments Segments this audio response is composed of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segments(List<GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse> segments) {
             $.segments = segments;
             return this;
         }
 
+        /**
+         * @param segments Segments this audio response is composed of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segments(GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse... segments) {
             return segments(List.of(segments));
         }

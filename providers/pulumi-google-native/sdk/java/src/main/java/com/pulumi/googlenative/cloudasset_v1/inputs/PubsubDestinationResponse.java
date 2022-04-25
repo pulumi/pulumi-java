@@ -23,6 +23,10 @@ public final class PubsubDestinationResponse extends com.pulumi.resources.Invoke
     @Import(name="topic", required=true)
     private String topic;
 
+    /**
+     * @return The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.
+     * 
+     */
     public String topic() {
         return this.topic;
     }
@@ -51,6 +55,12 @@ public final class PubsubDestinationResponse extends com.pulumi.resources.Invoke
             $ = new PubsubDestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param topic The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             $.topic = topic;
             return this;

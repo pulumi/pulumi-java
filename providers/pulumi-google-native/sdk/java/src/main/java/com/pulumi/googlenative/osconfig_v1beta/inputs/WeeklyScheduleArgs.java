@@ -24,6 +24,10 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dayOfWeek", required=true)
     private Output<WeeklyScheduleDayOfWeek> dayOfWeek;
 
+    /**
+     * @return Day of the week.
+     * 
+     */
     public Output<WeeklyScheduleDayOfWeek> dayOfWeek() {
         return this.dayOfWeek;
     }
@@ -52,11 +56,23 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
             $ = new WeeklyScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dayOfWeek Day of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(Output<WeeklyScheduleDayOfWeek> dayOfWeek) {
             $.dayOfWeek = dayOfWeek;
             return this;
         }
 
+        /**
+         * @param dayOfWeek Day of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(WeeklyScheduleDayOfWeek dayOfWeek) {
             return dayOfWeek(Output.of(dayOfWeek));
         }

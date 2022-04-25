@@ -28,6 +28,10 @@ public final class IosXcTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="testSpecialEntitlements")
     private @Nullable Output<Boolean> testSpecialEntitlements;
 
+    /**
+     * @return The option to test special app entitlements. Setting this would re-sign the app having special entitlements with an explicit application-identifier. Currently supports testing aps-environment entitlement.
+     * 
+     */
     public Optional<Output<Boolean>> testSpecialEntitlements() {
         return Optional.ofNullable(this.testSpecialEntitlements);
     }
@@ -39,6 +43,10 @@ public final class IosXcTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="testsZip", required=true)
     private Output<FileReferenceArgs> testsZip;
 
+    /**
+     * @return The .zip containing the .xctestrun file and the contents of the DerivedData/Build/Products directory. The .xctestrun file in this zip is ignored if the xctestrun field is specified.
+     * 
+     */
     public Output<FileReferenceArgs> testsZip() {
         return this.testsZip;
     }
@@ -50,6 +58,10 @@ public final class IosXcTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="xcodeVersion")
     private @Nullable Output<String> xcodeVersion;
 
+    /**
+     * @return The Xcode version that should be used for the test. Use the TestEnvironmentDiscoveryService to get supported options. Defaults to the latest Xcode version Firebase Test Lab supports.
+     * 
+     */
     public Optional<Output<String>> xcodeVersion() {
         return Optional.ofNullable(this.xcodeVersion);
     }
@@ -61,6 +73,10 @@ public final class IosXcTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="xctestrun")
     private @Nullable Output<FileReferenceArgs> xctestrun;
 
+    /**
+     * @return An .xctestrun file that will override the .xctestrun file in the tests zip. Because the .xctestrun file contains environment variables along with test methods to run and/or ignore, this can be useful for sharding tests. Default is taken from the tests zip.
+     * 
+     */
     public Optional<Output<FileReferenceArgs>> xctestrun() {
         return Optional.ofNullable(this.xctestrun);
     }
@@ -92,38 +108,86 @@ public final class IosXcTestArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IosXcTestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param testSpecialEntitlements The option to test special app entitlements. Setting this would re-sign the app having special entitlements with an explicit application-identifier. Currently supports testing aps-environment entitlement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSpecialEntitlements(@Nullable Output<Boolean> testSpecialEntitlements) {
             $.testSpecialEntitlements = testSpecialEntitlements;
             return this;
         }
 
+        /**
+         * @param testSpecialEntitlements The option to test special app entitlements. Setting this would re-sign the app having special entitlements with an explicit application-identifier. Currently supports testing aps-environment entitlement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSpecialEntitlements(Boolean testSpecialEntitlements) {
             return testSpecialEntitlements(Output.of(testSpecialEntitlements));
         }
 
+        /**
+         * @param testsZip The .zip containing the .xctestrun file and the contents of the DerivedData/Build/Products directory. The .xctestrun file in this zip is ignored if the xctestrun field is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testsZip(Output<FileReferenceArgs> testsZip) {
             $.testsZip = testsZip;
             return this;
         }
 
+        /**
+         * @param testsZip The .zip containing the .xctestrun file and the contents of the DerivedData/Build/Products directory. The .xctestrun file in this zip is ignored if the xctestrun field is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testsZip(FileReferenceArgs testsZip) {
             return testsZip(Output.of(testsZip));
         }
 
+        /**
+         * @param xcodeVersion The Xcode version that should be used for the test. Use the TestEnvironmentDiscoveryService to get supported options. Defaults to the latest Xcode version Firebase Test Lab supports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xcodeVersion(@Nullable Output<String> xcodeVersion) {
             $.xcodeVersion = xcodeVersion;
             return this;
         }
 
+        /**
+         * @param xcodeVersion The Xcode version that should be used for the test. Use the TestEnvironmentDiscoveryService to get supported options. Defaults to the latest Xcode version Firebase Test Lab supports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xcodeVersion(String xcodeVersion) {
             return xcodeVersion(Output.of(xcodeVersion));
         }
 
+        /**
+         * @param xctestrun An .xctestrun file that will override the .xctestrun file in the tests zip. Because the .xctestrun file contains environment variables along with test methods to run and/or ignore, this can be useful for sharding tests. Default is taken from the tests zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xctestrun(@Nullable Output<FileReferenceArgs> xctestrun) {
             $.xctestrun = xctestrun;
             return this;
         }
 
+        /**
+         * @param xctestrun An .xctestrun file that will override the .xctestrun file in the tests zip. Because the .xctestrun file contains environment variables along with test methods to run and/or ignore, this can be useful for sharding tests. Default is taken from the tests zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xctestrun(FileReferenceArgs xctestrun) {
             return xctestrun(Output.of(xctestrun));
         }

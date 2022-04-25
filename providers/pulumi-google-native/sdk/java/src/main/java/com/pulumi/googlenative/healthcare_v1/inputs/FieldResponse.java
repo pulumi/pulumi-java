@@ -24,6 +24,10 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxOccurs", required=true)
     private Integer maxOccurs;
 
+    /**
+     * @return The maximum number of times this field can be repeated. 0 or -1 means unbounded.
+     * 
+     */
     public Integer maxOccurs() {
         return this.maxOccurs;
     }
@@ -35,6 +39,10 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minOccurs", required=true)
     private Integer minOccurs;
 
+    /**
+     * @return The minimum number of times this field must be present/repeated.
+     * 
+     */
     public Integer minOccurs() {
         return this.minOccurs;
     }
@@ -46,6 +54,10 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the field. For example, &#34;PID-1&#34; or just &#34;1&#34;.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -57,6 +69,10 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="table", required=true)
     private String table;
 
+    /**
+     * @return The HL7v2 table this field refers to. For example, PID-15 (Patient&#39;s Primary Language) usually refers to table &#34;0296&#34;.
+     * 
+     */
     public String table() {
         return this.table;
     }
@@ -68,6 +84,10 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of this field. A Type with this name must be defined in an Hl7TypesConfig.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -100,26 +120,56 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
             $ = new FieldResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxOccurs The maximum number of times this field can be repeated. 0 or -1 means unbounded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxOccurs(Integer maxOccurs) {
             $.maxOccurs = maxOccurs;
             return this;
         }
 
+        /**
+         * @param minOccurs The minimum number of times this field must be present/repeated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minOccurs(Integer minOccurs) {
             $.minOccurs = minOccurs;
             return this;
         }
 
+        /**
+         * @param name The name of the field. For example, &#34;PID-1&#34; or just &#34;1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param table The HL7v2 table this field refers to. For example, PID-15 (Patient&#39;s Primary Language) usually refers to table &#34;0296&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(String table) {
             $.table = table;
             return this;
         }
 
+        /**
+         * @param type The type of this field. A Type with this name must be defined in an Hl7TypesConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

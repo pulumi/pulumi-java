@@ -27,6 +27,10 @@ public final class LoggingComponentConfigArgs extends com.pulumi.resources.Resou
     @Import(name="enableComponents")
     private @Nullable Output<List<LoggingComponentConfigEnableComponentsItem>> enableComponents;
 
+    /**
+     * @return Select components to collect logs. An empty set would disable all logging.
+     * 
+     */
     public Optional<Output<List<LoggingComponentConfigEnableComponentsItem>>> enableComponents() {
         return Optional.ofNullable(this.enableComponents);
     }
@@ -55,15 +59,33 @@ public final class LoggingComponentConfigArgs extends com.pulumi.resources.Resou
             $ = new LoggingComponentConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableComponents Select components to collect logs. An empty set would disable all logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableComponents(@Nullable Output<List<LoggingComponentConfigEnableComponentsItem>> enableComponents) {
             $.enableComponents = enableComponents;
             return this;
         }
 
+        /**
+         * @param enableComponents Select components to collect logs. An empty set would disable all logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableComponents(List<LoggingComponentConfigEnableComponentsItem> enableComponents) {
             return enableComponents(Output.of(enableComponents));
         }
 
+        /**
+         * @param enableComponents Select components to collect logs. An empty set would disable all logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableComponents(LoggingComponentConfigEnableComponentsItem... enableComponents) {
             return enableComponents(List.of(enableComponents));
         }

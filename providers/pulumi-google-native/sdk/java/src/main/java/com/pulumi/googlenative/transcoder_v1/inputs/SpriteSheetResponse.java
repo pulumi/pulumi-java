@@ -24,6 +24,10 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="columnCount", required=true)
     private Integer columnCount;
 
+    /**
+     * @return The maximum number of sprites per row in a sprite sheet. The default is 0, which indicates no maximum limit.
+     * 
+     */
     public Integer columnCount() {
         return this.columnCount;
     }
@@ -35,6 +39,10 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endTimeOffset", required=true)
     private String endTimeOffset;
 
+    /**
+     * @return End time in seconds, relative to the output file timeline. When `end_time_offset` is not specified, the sprites are generated until the end of the output file.
+     * 
+     */
     public String endTimeOffset() {
         return this.endTimeOffset;
     }
@@ -46,6 +54,10 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="filePrefix", required=true)
     private String filePrefix;
 
+    /**
+     * @return File name prefix for the generated sprite sheets. Each sprite sheet has an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `sprite_sheet0000000123.jpeg`.
+     * 
+     */
     public String filePrefix() {
         return this.filePrefix;
     }
@@ -57,6 +69,10 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="format", required=true)
     private String format;
 
+    /**
+     * @return Format type. The default is `jpeg`. Supported formats: - `jpeg`
+     * 
+     */
     public String format() {
         return this.format;
     }
@@ -68,6 +84,10 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="interval", required=true)
     private String interval;
 
+    /**
+     * @return Starting from `0s`, create sprites at regular intervals. Specify the interval value in seconds.
+     * 
+     */
     public String interval() {
         return this.interval;
     }
@@ -79,6 +99,10 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="quality", required=true)
     private Integer quality;
 
+    /**
+     * @return The quality of the generated sprite sheet. Enter a value between 1 and 100, where 1 is the lowest quality and 100 is the highest quality. The default is 100. A high quality value corresponds to a low image data compression ratio.
+     * 
+     */
     public Integer quality() {
         return this.quality;
     }
@@ -90,6 +114,10 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rowCount", required=true)
     private Integer rowCount;
 
+    /**
+     * @return The maximum number of rows per sprite sheet. When the sprite sheet is full, a new sprite sheet is created. The default is 0, which indicates no maximum limit.
+     * 
+     */
     public Integer rowCount() {
         return this.rowCount;
     }
@@ -101,6 +129,10 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="spriteHeightPixels", required=true)
     private Integer spriteHeightPixels;
 
+    /**
+     * @return The height of sprite in pixels. Must be an even integer. To preserve the source aspect ratio, set the SpriteSheet.sprite_height_pixels field or the SpriteSheet.sprite_width_pixels field, but not both (the API will automatically calculate the missing field).
+     * 
+     */
     public Integer spriteHeightPixels() {
         return this.spriteHeightPixels;
     }
@@ -112,6 +144,10 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="spriteWidthPixels", required=true)
     private Integer spriteWidthPixels;
 
+    /**
+     * @return The width of sprite in pixels. Must be an even integer. To preserve the source aspect ratio, set the SpriteSheet.sprite_width_pixels field or the SpriteSheet.sprite_height_pixels field, but not both (the API will automatically calculate the missing field).
+     * 
+     */
     public Integer spriteWidthPixels() {
         return this.spriteWidthPixels;
     }
@@ -123,6 +159,10 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="startTimeOffset", required=true)
     private String startTimeOffset;
 
+    /**
+     * @return Start time in seconds, relative to the output file timeline. Determines the first sprite to pick. The default is `0s`.
+     * 
+     */
     public String startTimeOffset() {
         return this.startTimeOffset;
     }
@@ -134,6 +174,10 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="totalCount", required=true)
     private Integer totalCount;
 
+    /**
+     * @return Total number of sprites. Create the specified number of sprites distributed evenly across the timeline of the output media. The default is 100.
+     * 
+     */
     public Integer totalCount() {
         return this.totalCount;
     }
@@ -172,56 +216,122 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SpriteSheetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columnCount The maximum number of sprites per row in a sprite sheet. The default is 0, which indicates no maximum limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnCount(Integer columnCount) {
             $.columnCount = columnCount;
             return this;
         }
 
+        /**
+         * @param endTimeOffset End time in seconds, relative to the output file timeline. When `end_time_offset` is not specified, the sprites are generated until the end of the output file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTimeOffset(String endTimeOffset) {
             $.endTimeOffset = endTimeOffset;
             return this;
         }
 
+        /**
+         * @param filePrefix File name prefix for the generated sprite sheets. Each sprite sheet has an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `sprite_sheet0000000123.jpeg`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePrefix(String filePrefix) {
             $.filePrefix = filePrefix;
             return this;
         }
 
+        /**
+         * @param format Format type. The default is `jpeg`. Supported formats: - `jpeg`
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param interval Starting from `0s`, create sprites at regular intervals. Specify the interval value in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(String interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param quality The quality of the generated sprite sheet. Enter a value between 1 and 100, where 1 is the lowest quality and 100 is the highest quality. The default is 100. A high quality value corresponds to a low image data compression ratio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quality(Integer quality) {
             $.quality = quality;
             return this;
         }
 
+        /**
+         * @param rowCount The maximum number of rows per sprite sheet. When the sprite sheet is full, a new sprite sheet is created. The default is 0, which indicates no maximum limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rowCount(Integer rowCount) {
             $.rowCount = rowCount;
             return this;
         }
 
+        /**
+         * @param spriteHeightPixels The height of sprite in pixels. Must be an even integer. To preserve the source aspect ratio, set the SpriteSheet.sprite_height_pixels field or the SpriteSheet.sprite_width_pixels field, but not both (the API will automatically calculate the missing field).
+         * 
+         * @return builder
+         * 
+         */
         public Builder spriteHeightPixels(Integer spriteHeightPixels) {
             $.spriteHeightPixels = spriteHeightPixels;
             return this;
         }
 
+        /**
+         * @param spriteWidthPixels The width of sprite in pixels. Must be an even integer. To preserve the source aspect ratio, set the SpriteSheet.sprite_width_pixels field or the SpriteSheet.sprite_height_pixels field, but not both (the API will automatically calculate the missing field).
+         * 
+         * @return builder
+         * 
+         */
         public Builder spriteWidthPixels(Integer spriteWidthPixels) {
             $.spriteWidthPixels = spriteWidthPixels;
             return this;
         }
 
+        /**
+         * @param startTimeOffset Start time in seconds, relative to the output file timeline. Determines the first sprite to pick. The default is `0s`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeOffset(String startTimeOffset) {
             $.startTimeOffset = startTimeOffset;
             return this;
         }
 
+        /**
+         * @param totalCount Total number of sprites. Create the specified number of sprites distributed evenly across the timeline of the output media. The default is 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalCount(Integer totalCount) {
             $.totalCount = totalCount;
             return this;

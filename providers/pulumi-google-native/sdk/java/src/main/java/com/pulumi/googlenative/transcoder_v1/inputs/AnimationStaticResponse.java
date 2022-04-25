@@ -24,6 +24,10 @@ public final class AnimationStaticResponse extends com.pulumi.resources.InvokeAr
     @Import(name="startTimeOffset", required=true)
     private String startTimeOffset;
 
+    /**
+     * @return The time to start displaying the overlay object, in seconds. Default: 0
+     * 
+     */
     public String startTimeOffset() {
         return this.startTimeOffset;
     }
@@ -35,6 +39,10 @@ public final class AnimationStaticResponse extends com.pulumi.resources.InvokeAr
     @Import(name="xy", required=true)
     private NormalizedCoordinateResponse xy;
 
+    /**
+     * @return Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.
+     * 
+     */
     public NormalizedCoordinateResponse xy() {
         return this.xy;
     }
@@ -64,11 +72,23 @@ public final class AnimationStaticResponse extends com.pulumi.resources.InvokeAr
             $ = new AnimationStaticResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param startTimeOffset The time to start displaying the overlay object, in seconds. Default: 0
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeOffset(String startTimeOffset) {
             $.startTimeOffset = startTimeOffset;
             return this;
         }
 
+        /**
+         * @param xy Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xy(NormalizedCoordinateResponse xy) {
             $.xy = xy;
             return this;

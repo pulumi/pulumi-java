@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs ext
     @Import(name="endUserSuggestionConfig")
     private @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> endUserSuggestionConfig;
 
+    /**
+     * @return Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs>> endUserSuggestionConfig() {
         return Optional.ofNullable(this.endUserSuggestionConfig);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs ext
     @Import(name="humanAgentSuggestionConfig")
     private @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> humanAgentSuggestionConfig;
 
+    /**
+     * @return Configuration for agent assistance of human agent participant.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs>> humanAgentSuggestionConfig() {
         return Optional.ofNullable(this.humanAgentSuggestionConfig);
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs ext
     @Import(name="messageAnalysisConfig")
     private @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs> messageAnalysisConfig;
 
+    /**
+     * @return Configuration for message analysis.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs>> messageAnalysisConfig() {
         return Optional.ofNullable(this.messageAnalysisConfig);
     }
@@ -61,6 +73,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs ext
     @Import(name="notificationConfig")
     private @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig;
 
+    /**
+     * @return Pub/Sub topic on which to publish new agent assistant events.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs>> notificationConfig() {
         return Optional.ofNullable(this.notificationConfig);
     }
@@ -92,38 +108,86 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs ext
             $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endUserSuggestionConfig Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endUserSuggestionConfig(@Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> endUserSuggestionConfig) {
             $.endUserSuggestionConfig = endUserSuggestionConfig;
             return this;
         }
 
+        /**
+         * @param endUserSuggestionConfig Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endUserSuggestionConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs endUserSuggestionConfig) {
             return endUserSuggestionConfig(Output.of(endUserSuggestionConfig));
         }
 
+        /**
+         * @param humanAgentSuggestionConfig Configuration for agent assistance of human agent participant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanAgentSuggestionConfig(@Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> humanAgentSuggestionConfig) {
             $.humanAgentSuggestionConfig = humanAgentSuggestionConfig;
             return this;
         }
 
+        /**
+         * @param humanAgentSuggestionConfig Configuration for agent assistance of human agent participant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanAgentSuggestionConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs humanAgentSuggestionConfig) {
             return humanAgentSuggestionConfig(Output.of(humanAgentSuggestionConfig));
         }
 
+        /**
+         * @param messageAnalysisConfig Configuration for message analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageAnalysisConfig(@Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs> messageAnalysisConfig) {
             $.messageAnalysisConfig = messageAnalysisConfig;
             return this;
         }
 
+        /**
+         * @param messageAnalysisConfig Configuration for message analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageAnalysisConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs messageAnalysisConfig) {
             return messageAnalysisConfig(Output.of(messageAnalysisConfig));
         }
 
+        /**
+         * @param notificationConfig Pub/Sub topic on which to publish new agent assistant events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationConfig(@Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig) {
             $.notificationConfig = notificationConfig;
             return this;
         }
 
+        /**
+         * @param notificationConfig Pub/Sub topic on which to publish new agent assistant events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationConfig(GoogleCloudDialogflowV2beta1NotificationConfigArgs notificationConfig) {
             return notificationConfig(Output.of(notificationConfig));
         }

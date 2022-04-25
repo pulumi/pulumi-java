@@ -27,6 +27,10 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assignment", required=true)
     private Output<AssignmentArgs> assignment;
 
+    /**
+     * @return Specifies the VM instances that are assigned to this policy. This allows you to target sets or groups of VM instances by different parameters such as labels, names, OS, or zones. If left empty, all VM instances underneath this policy are targeted. At the same level in the resource hierarchy (that is within a project), the service prevents the creation of multiple policies that conflict with each other. For more information, see how the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
+     * 
+     */
     public Output<AssignmentArgs> assignment() {
         return this.assignment;
     }
@@ -38,6 +42,10 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the guest policy. Length of the description is limited to 1024 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return The etag for this guest policy. If this is provided on update, it must match the server&#39;s etag.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -67,6 +79,10 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Unique name of the resource in this project using one of the following forms: `projects/{project_number}/guestPolicies/{guest_policy_id}`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -78,6 +94,10 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packageRepositories")
     private @Nullable Output<List<PackageRepositoryArgs>> packageRepositories;
 
+    /**
+     * @return A list of package repositories to configure on the VM instance. This is done before any other configs are applied so they can use these repos. Package repositories are only configured if the corresponding package manager(s) are available.
+     * 
+     */
     public Optional<Output<List<PackageRepositoryArgs>>> packageRepositories() {
         return Optional.ofNullable(this.packageRepositories);
     }
@@ -89,6 +109,10 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packages")
     private @Nullable Output<List<PackageArgs>> packages;
 
+    /**
+     * @return The software packages to be managed by this policy.
+     * 
+     */
     public Optional<Output<List<PackageArgs>>> packages() {
         return Optional.ofNullable(this.packages);
     }
@@ -107,6 +131,10 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recipes")
     private @Nullable Output<List<SoftwareRecipeArgs>> recipes;
 
+    /**
+     * @return A list of Recipes to install on the VM instance.
+     * 
+     */
     public Optional<Output<List<SoftwareRecipeArgs>>> recipes() {
         return Optional.ofNullable(this.recipes);
     }
@@ -143,29 +171,65 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GuestPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignment Specifies the VM instances that are assigned to this policy. This allows you to target sets or groups of VM instances by different parameters such as labels, names, OS, or zones. If left empty, all VM instances underneath this policy are targeted. At the same level in the resource hierarchy (that is within a project), the service prevents the creation of multiple policies that conflict with each other. For more information, see how the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignment(Output<AssignmentArgs> assignment) {
             $.assignment = assignment;
             return this;
         }
 
+        /**
+         * @param assignment Specifies the VM instances that are assigned to this policy. This allows you to target sets or groups of VM instances by different parameters such as labels, names, OS, or zones. If left empty, all VM instances underneath this policy are targeted. At the same level in the resource hierarchy (that is within a project), the service prevents the creation of multiple policies that conflict with each other. For more information, see how the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignment(AssignmentArgs assignment) {
             return assignment(Output.of(assignment));
         }
 
+        /**
+         * @param description Description of the guest policy. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the guest policy. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param etag The etag for this guest policy. If this is provided on update, it must match the server&#39;s etag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag The etag for this guest policy. If this is provided on update, it must match the server&#39;s etag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
@@ -179,37 +243,85 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
             return guestPolicyId(Output.of(guestPolicyId));
         }
 
+        /**
+         * @param name Unique name of the resource in this project using one of the following forms: `projects/{project_number}/guestPolicies/{guest_policy_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique name of the resource in this project using one of the following forms: `projects/{project_number}/guestPolicies/{guest_policy_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param packageRepositories A list of package repositories to configure on the VM instance. This is done before any other configs are applied so they can use these repos. Package repositories are only configured if the corresponding package manager(s) are available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageRepositories(@Nullable Output<List<PackageRepositoryArgs>> packageRepositories) {
             $.packageRepositories = packageRepositories;
             return this;
         }
 
+        /**
+         * @param packageRepositories A list of package repositories to configure on the VM instance. This is done before any other configs are applied so they can use these repos. Package repositories are only configured if the corresponding package manager(s) are available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageRepositories(List<PackageRepositoryArgs> packageRepositories) {
             return packageRepositories(Output.of(packageRepositories));
         }
 
+        /**
+         * @param packageRepositories A list of package repositories to configure on the VM instance. This is done before any other configs are applied so they can use these repos. Package repositories are only configured if the corresponding package manager(s) are available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageRepositories(PackageRepositoryArgs... packageRepositories) {
             return packageRepositories(List.of(packageRepositories));
         }
 
+        /**
+         * @param packages The software packages to be managed by this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packages(@Nullable Output<List<PackageArgs>> packages) {
             $.packages = packages;
             return this;
         }
 
+        /**
+         * @param packages The software packages to be managed by this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packages(List<PackageArgs> packages) {
             return packages(Output.of(packages));
         }
 
+        /**
+         * @param packages The software packages to be managed by this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packages(PackageArgs... packages) {
             return packages(List.of(packages));
         }
@@ -223,15 +335,33 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param recipes A list of Recipes to install on the VM instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipes(@Nullable Output<List<SoftwareRecipeArgs>> recipes) {
             $.recipes = recipes;
             return this;
         }
 
+        /**
+         * @param recipes A list of Recipes to install on the VM instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipes(List<SoftwareRecipeArgs> recipes) {
             return recipes(Output.of(recipes));
         }
 
+        /**
+         * @param recipes A list of Recipes to install on the VM instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipes(SoftwareRecipeArgs... recipes) {
             return recipes(List.of(recipes));
         }

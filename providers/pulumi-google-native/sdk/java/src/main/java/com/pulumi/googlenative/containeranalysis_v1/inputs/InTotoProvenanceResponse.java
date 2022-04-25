@@ -23,6 +23,10 @@ public final class InTotoProvenanceResponse extends com.pulumi.resources.InvokeA
     @Import(name="builderConfig", required=true)
     private BuilderConfigResponse builderConfig;
 
+    /**
+     * @return required
+     * 
+     */
     public BuilderConfigResponse builderConfig() {
         return this.builderConfig;
     }
@@ -34,6 +38,10 @@ public final class InTotoProvenanceResponse extends com.pulumi.resources.InvokeA
     @Import(name="materials", required=true)
     private List<String> materials;
 
+    /**
+     * @return The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
+     * 
+     */
     public List<String> materials() {
         return this.materials;
     }
@@ -52,6 +60,10 @@ public final class InTotoProvenanceResponse extends com.pulumi.resources.InvokeA
     @Import(name="recipe", required=true)
     private RecipeResponse recipe;
 
+    /**
+     * @return Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
+     * 
+     */
     public RecipeResponse recipe() {
         return this.recipe;
     }
@@ -83,16 +95,34 @@ public final class InTotoProvenanceResponse extends com.pulumi.resources.InvokeA
             $ = new InTotoProvenanceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param builderConfig required
+         * 
+         * @return builder
+         * 
+         */
         public Builder builderConfig(BuilderConfigResponse builderConfig) {
             $.builderConfig = builderConfig;
             return this;
         }
 
+        /**
+         * @param materials The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder materials(List<String> materials) {
             $.materials = materials;
             return this;
         }
 
+        /**
+         * @param materials The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder materials(String... materials) {
             return materials(List.of(materials));
         }
@@ -102,6 +132,12 @@ public final class InTotoProvenanceResponse extends com.pulumi.resources.InvokeA
             return this;
         }
 
+        /**
+         * @param recipe Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipe(RecipeResponse recipe) {
             $.recipe = recipe;
             return this;

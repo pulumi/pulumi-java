@@ -26,6 +26,10 @@ public final class StackdriverLoggingConfigArgs extends com.pulumi.resources.Res
     @Import(name="samplingRatio")
     private @Nullable Output<Double> samplingRatio;
 
+    /**
+     * @return Specifies the fraction of operations to write to [Stackdriver Logging](https://cloud.google.com/logging/docs/). This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the default and means that no operations are logged.
+     * 
+     */
     public Optional<Output<Double>> samplingRatio() {
         return Optional.ofNullable(this.samplingRatio);
     }
@@ -54,11 +58,23 @@ public final class StackdriverLoggingConfigArgs extends com.pulumi.resources.Res
             $ = new StackdriverLoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param samplingRatio Specifies the fraction of operations to write to [Stackdriver Logging](https://cloud.google.com/logging/docs/). This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the default and means that no operations are logged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingRatio(@Nullable Output<Double> samplingRatio) {
             $.samplingRatio = samplingRatio;
             return this;
         }
 
+        /**
+         * @param samplingRatio Specifies the fraction of operations to write to [Stackdriver Logging](https://cloud.google.com/logging/docs/). This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the default and means that no operations are logged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingRatio(Double samplingRatio) {
             return samplingRatio(Output.of(samplingRatio));
         }

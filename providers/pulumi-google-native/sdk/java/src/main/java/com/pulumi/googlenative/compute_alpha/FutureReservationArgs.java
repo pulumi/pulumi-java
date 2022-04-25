@@ -25,6 +25,10 @@ public final class FutureReservationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the future reservation.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -43,6 +47,10 @@ public final class FutureReservationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -54,6 +62,10 @@ public final class FutureReservationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="namePrefix")
     private @Nullable Output<String> namePrefix;
 
+    /**
+     * @return Name prefix for the reservations to be created at the time of delivery. The name prefix must comply with RFC1035. Maximum allowed length for name prefix is 20. Automatically created reservations name format will be -date-####.
+     * 
+     */
     public Optional<Output<String>> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
@@ -79,6 +91,10 @@ public final class FutureReservationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="shareSettings")
     private @Nullable Output<ShareSettingsArgs> shareSettings;
 
+    /**
+     * @return List of Projects/Folders to share with.
+     * 
+     */
     public Optional<Output<ShareSettingsArgs>> shareSettings() {
         return Optional.ofNullable(this.shareSettings);
     }
@@ -90,6 +106,10 @@ public final class FutureReservationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="specificSkuProperties")
     private @Nullable Output<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties;
 
+    /**
+     * @return Future Reservation configuration to indicate instance properties and total count.
+     * 
+     */
     public Optional<Output<FutureReservationSpecificSKUPropertiesArgs>> specificSkuProperties() {
         return Optional.ofNullable(this.specificSkuProperties);
     }
@@ -101,6 +121,10 @@ public final class FutureReservationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="timeWindow")
     private @Nullable Output<FutureReservationTimeWindowArgs> timeWindow;
 
+    /**
+     * @return Time window for this Future Reservation.
+     * 
+     */
     public Optional<Output<FutureReservationTimeWindowArgs>> timeWindow() {
         return Optional.ofNullable(this.timeWindow);
     }
@@ -145,11 +169,23 @@ public final class FutureReservationArgs extends com.pulumi.resources.ResourceAr
             $ = new FutureReservationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the future reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the future reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
@@ -163,20 +199,44 @@ public final class FutureReservationArgs extends com.pulumi.resources.ResourceAr
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namePrefix Name prefix for the reservations to be created at the time of delivery. The name prefix must comply with RFC1035. Maximum allowed length for name prefix is 20. Automatically created reservations name format will be -date-####.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param namePrefix Name prefix for the reservations to be created at the time of delivery. The name prefix must comply with RFC1035. Maximum allowed length for name prefix is 20. Automatically created reservations name format will be -date-####.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
@@ -199,29 +259,65 @@ public final class FutureReservationArgs extends com.pulumi.resources.ResourceAr
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param shareSettings List of Projects/Folders to share with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSettings(@Nullable Output<ShareSettingsArgs> shareSettings) {
             $.shareSettings = shareSettings;
             return this;
         }
 
+        /**
+         * @param shareSettings List of Projects/Folders to share with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSettings(ShareSettingsArgs shareSettings) {
             return shareSettings(Output.of(shareSettings));
         }
 
+        /**
+         * @param specificSkuProperties Future Reservation configuration to indicate instance properties and total count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specificSkuProperties(@Nullable Output<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties) {
             $.specificSkuProperties = specificSkuProperties;
             return this;
         }
 
+        /**
+         * @param specificSkuProperties Future Reservation configuration to indicate instance properties and total count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specificSkuProperties(FutureReservationSpecificSKUPropertiesArgs specificSkuProperties) {
             return specificSkuProperties(Output.of(specificSkuProperties));
         }
 
+        /**
+         * @param timeWindow Time window for this Future Reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeWindow(@Nullable Output<FutureReservationTimeWindowArgs> timeWindow) {
             $.timeWindow = timeWindow;
             return this;
         }
 
+        /**
+         * @param timeWindow Time window for this Future Reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeWindow(FutureReservationTimeWindowArgs timeWindow) {
             return timeWindow(Output.of(timeWindow));
         }

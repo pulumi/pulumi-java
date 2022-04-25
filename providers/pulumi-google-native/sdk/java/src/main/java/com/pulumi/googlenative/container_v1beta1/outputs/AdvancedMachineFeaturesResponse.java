@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class AdvancedMachineFeaturesResponse {
     /**
-     * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+     * @return The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
      * 
      */
     private final String threadsPerCore;
@@ -21,9 +21,9 @@ public final class AdvancedMachineFeaturesResponse {
     }
 
     /**
-     * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+     * @return The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
      * 
-    */
+     */
     public String threadsPerCore() {
         return this.threadsPerCore;
     }

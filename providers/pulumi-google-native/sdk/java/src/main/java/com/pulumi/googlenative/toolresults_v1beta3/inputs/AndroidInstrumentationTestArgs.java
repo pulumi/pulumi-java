@@ -28,6 +28,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
     @Import(name="testPackageId")
     private @Nullable Output<String> testPackageId;
 
+    /**
+     * @return The java package for the test to be executed. Required
+     * 
+     */
     public Optional<Output<String>> testPackageId() {
         return Optional.ofNullable(this.testPackageId);
     }
@@ -39,6 +43,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
     @Import(name="testRunnerClass")
     private @Nullable Output<String> testRunnerClass;
 
+    /**
+     * @return The InstrumentationTestRunner class. Required
+     * 
+     */
     public Optional<Output<String>> testRunnerClass() {
         return Optional.ofNullable(this.testRunnerClass);
     }
@@ -50,6 +58,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
     @Import(name="testTargets")
     private @Nullable Output<List<String>> testTargets;
 
+    /**
+     * @return Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
+     * 
+     */
     public Optional<Output<List<String>>> testTargets() {
         return Optional.ofNullable(this.testTargets);
     }
@@ -61,6 +73,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
     @Import(name="useOrchestrator")
     private @Nullable Output<Boolean> useOrchestrator;
 
+    /**
+     * @return The flag indicates whether Android Test Orchestrator will be used to run test or not.
+     * 
+     */
     public Optional<Output<Boolean>> useOrchestrator() {
         return Optional.ofNullable(this.useOrchestrator);
     }
@@ -92,42 +108,96 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
             $ = new AndroidInstrumentationTestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param testPackageId The java package for the test to be executed. Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder testPackageId(@Nullable Output<String> testPackageId) {
             $.testPackageId = testPackageId;
             return this;
         }
 
+        /**
+         * @param testPackageId The java package for the test to be executed. Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder testPackageId(String testPackageId) {
             return testPackageId(Output.of(testPackageId));
         }
 
+        /**
+         * @param testRunnerClass The InstrumentationTestRunner class. Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder testRunnerClass(@Nullable Output<String> testRunnerClass) {
             $.testRunnerClass = testRunnerClass;
             return this;
         }
 
+        /**
+         * @param testRunnerClass The InstrumentationTestRunner class. Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder testRunnerClass(String testRunnerClass) {
             return testRunnerClass(Output.of(testRunnerClass));
         }
 
+        /**
+         * @param testTargets Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTargets(@Nullable Output<List<String>> testTargets) {
             $.testTargets = testTargets;
             return this;
         }
 
+        /**
+         * @param testTargets Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTargets(List<String> testTargets) {
             return testTargets(Output.of(testTargets));
         }
 
+        /**
+         * @param testTargets Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTargets(String... testTargets) {
             return testTargets(List.of(testTargets));
         }
 
+        /**
+         * @param useOrchestrator The flag indicates whether Android Test Orchestrator will be used to run test or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useOrchestrator(@Nullable Output<Boolean> useOrchestrator) {
             $.useOrchestrator = useOrchestrator;
             return this;
         }
 
+        /**
+         * @param useOrchestrator The flag indicates whether Android Test Orchestrator will be used to run test or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useOrchestrator(Boolean useOrchestrator) {
             return useOrchestrator(Output.of(useOrchestrator));
         }

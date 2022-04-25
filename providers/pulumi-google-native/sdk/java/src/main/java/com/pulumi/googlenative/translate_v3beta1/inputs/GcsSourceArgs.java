@@ -24,6 +24,10 @@ public final class GcsSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputUri", required=true)
     private Output<String> inputUri;
 
+    /**
+     * @return Source data URI. For example, `gs://my_bucket/my_object`.
+     * 
+     */
     public Output<String> inputUri() {
         return this.inputUri;
     }
@@ -52,11 +56,23 @@ public final class GcsSourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GcsSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputUri Source data URI. For example, `gs://my_bucket/my_object`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputUri(Output<String> inputUri) {
             $.inputUri = inputUri;
             return this;
         }
 
+        /**
+         * @param inputUri Source data URI. For example, `gs://my_bucket/my_object`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputUri(String inputUri) {
             return inputUri(Output.of(inputUri));
         }

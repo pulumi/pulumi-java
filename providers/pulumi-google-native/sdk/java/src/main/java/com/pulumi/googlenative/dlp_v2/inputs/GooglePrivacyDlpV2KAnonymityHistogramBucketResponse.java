@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends c
     @Import(name="bucketSize", required=true)
     private String bucketSize;
 
+    /**
+     * @return Total number of equivalence classes in this bucket.
+     * 
+     */
     public String bucketSize() {
         return this.bucketSize;
     }
@@ -36,6 +40,10 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends c
     @Import(name="bucketValueCount", required=true)
     private String bucketValueCount;
 
+    /**
+     * @return Total number of distinct equivalence classes in this bucket.
+     * 
+     */
     public String bucketValueCount() {
         return this.bucketValueCount;
     }
@@ -47,6 +55,10 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends c
     @Import(name="bucketValues", required=true)
     private List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues;
 
+    /**
+     * @return Sample of equivalence classes in this bucket. The total number of classes returned per bucket is capped at 20.
+     * 
+     */
     public List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues() {
         return this.bucketValues;
     }
@@ -58,6 +70,10 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends c
     @Import(name="equivalenceClassSizeLowerBound", required=true)
     private String equivalenceClassSizeLowerBound;
 
+    /**
+     * @return Lower bound on the size of the equivalence classes in this bucket.
+     * 
+     */
     public String equivalenceClassSizeLowerBound() {
         return this.equivalenceClassSizeLowerBound;
     }
@@ -69,6 +85,10 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends c
     @Import(name="equivalenceClassSizeUpperBound", required=true)
     private String equivalenceClassSizeUpperBound;
 
+    /**
+     * @return Upper bound on the size of the equivalence classes in this bucket.
+     * 
+     */
     public String equivalenceClassSizeUpperBound() {
         return this.equivalenceClassSizeUpperBound;
     }
@@ -101,30 +121,66 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends c
             $ = new GooglePrivacyDlpV2KAnonymityHistogramBucketResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketSize Total number of equivalence classes in this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketSize(String bucketSize) {
             $.bucketSize = bucketSize;
             return this;
         }
 
+        /**
+         * @param bucketValueCount Total number of distinct equivalence classes in this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketValueCount(String bucketValueCount) {
             $.bucketValueCount = bucketValueCount;
             return this;
         }
 
+        /**
+         * @param bucketValues Sample of equivalence classes in this bucket. The total number of classes returned per bucket is capped at 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketValues(List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues) {
             $.bucketValues = bucketValues;
             return this;
         }
 
+        /**
+         * @param bucketValues Sample of equivalence classes in this bucket. The total number of classes returned per bucket is capped at 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketValues(GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse... bucketValues) {
             return bucketValues(List.of(bucketValues));
         }
 
+        /**
+         * @param equivalenceClassSizeLowerBound Lower bound on the size of the equivalence classes in this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder equivalenceClassSizeLowerBound(String equivalenceClassSizeLowerBound) {
             $.equivalenceClassSizeLowerBound = equivalenceClassSizeLowerBound;
             return this;
         }
 
+        /**
+         * @param equivalenceClassSizeUpperBound Upper bound on the size of the equivalence classes in this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder equivalenceClassSizeUpperBound(String equivalenceClassSizeUpperBound) {
             $.equivalenceClassSizeUpperBound = equivalenceClassSizeUpperBound;
             return this;

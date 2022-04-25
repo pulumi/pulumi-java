@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowCxV3beta1FormArgs extends com.pulumi.res
     @Import(name="parameters")
     private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> parameters;
 
+    /**
+     * @return Parameters to collect from the user.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -55,15 +59,33 @@ public final class GoogleCloudDialogflowCxV3beta1FormArgs extends com.pulumi.res
             $ = new GoogleCloudDialogflowCxV3beta1FormArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameters Parameters to collect from the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters to collect from the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<GoogleCloudDialogflowCxV3beta1FormParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters Parameters to collect from the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(GoogleCloudDialogflowCxV3beta1FormParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }

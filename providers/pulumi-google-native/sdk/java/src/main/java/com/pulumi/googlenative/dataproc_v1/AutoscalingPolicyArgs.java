@@ -32,6 +32,10 @@ public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return The policy id.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -43,6 +47,10 @@ public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. The labels to associate with this autoscaling policy. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with an autoscaling policy.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -68,6 +76,10 @@ public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="secondaryWorkerConfig")
     private @Nullable Output<InstanceGroupAutoscalingPolicyConfigArgs> secondaryWorkerConfig;
 
+    /**
+     * @return Optional. Describes how the autoscaler will operate for secondary workers.
+     * 
+     */
     public Optional<Output<InstanceGroupAutoscalingPolicyConfigArgs>> secondaryWorkerConfig() {
         return Optional.ofNullable(this.secondaryWorkerConfig);
     }
@@ -79,6 +91,10 @@ public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="workerConfig", required=true)
     private Output<InstanceGroupAutoscalingPolicyConfigArgs> workerConfig;
 
+    /**
+     * @return Describes how the autoscaler will operate for primary workers.
+     * 
+     */
     public Output<InstanceGroupAutoscalingPolicyConfigArgs> workerConfig() {
         return this.workerConfig;
     }
@@ -122,20 +138,44 @@ public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceAr
             return basicAlgorithm(Output.of(basicAlgorithm));
         }
 
+        /**
+         * @param id The policy id.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The policy id.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param labels Optional. The labels to associate with this autoscaling policy. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with an autoscaling policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. The labels to associate with this autoscaling policy. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with an autoscaling policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -158,20 +198,44 @@ public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceAr
             return project(Output.of(project));
         }
 
+        /**
+         * @param secondaryWorkerConfig Optional. Describes how the autoscaler will operate for secondary workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryWorkerConfig(@Nullable Output<InstanceGroupAutoscalingPolicyConfigArgs> secondaryWorkerConfig) {
             $.secondaryWorkerConfig = secondaryWorkerConfig;
             return this;
         }
 
+        /**
+         * @param secondaryWorkerConfig Optional. Describes how the autoscaler will operate for secondary workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryWorkerConfig(InstanceGroupAutoscalingPolicyConfigArgs secondaryWorkerConfig) {
             return secondaryWorkerConfig(Output.of(secondaryWorkerConfig));
         }
 
+        /**
+         * @param workerConfig Describes how the autoscaler will operate for primary workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(Output<InstanceGroupAutoscalingPolicyConfigArgs> workerConfig) {
             $.workerConfig = workerConfig;
             return this;
         }
 
+        /**
+         * @param workerConfig Describes how the autoscaler will operate for primary workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(InstanceGroupAutoscalingPolicyConfigArgs workerConfig) {
             return workerConfig(Output.of(workerConfig));
         }

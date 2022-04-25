@@ -23,6 +23,10 @@ public final class SecurityConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="kerberosConfig", required=true)
     private KerberosConfigResponse kerberosConfig;
 
+    /**
+     * @return Optional. Kerberos related configuration.
+     * 
+     */
     public KerberosConfigResponse kerberosConfig() {
         return this.kerberosConfig;
     }
@@ -51,6 +55,12 @@ public final class SecurityConfigResponse extends com.pulumi.resources.InvokeArg
             $ = new SecurityConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kerberosConfig Optional. Kerberos related configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosConfig(KerberosConfigResponse kerberosConfig) {
             $.kerberosConfig = kerberosConfig;
             return this;

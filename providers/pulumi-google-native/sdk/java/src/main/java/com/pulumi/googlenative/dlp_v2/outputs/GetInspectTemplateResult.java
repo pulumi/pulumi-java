@@ -11,32 +11,32 @@ import java.util.Objects;
 @CustomType
 public final class GetInspectTemplateResult {
     /**
-     * The creation timestamp of an inspectTemplate.
+     * @return The creation timestamp of an inspectTemplate.
      * 
      */
     private final String createTime;
     /**
-     * Short description (max 256 chars).
+     * @return Short description (max 256 chars).
      * 
      */
     private final String description;
     /**
-     * Display name (max 256 chars).
+     * @return Display name (max 256 chars).
      * 
      */
     private final String displayName;
     /**
-     * The core content of the template. Configuration of the scanning process.
+     * @return The core content of the template. Configuration of the scanning process.
      * 
      */
     private final GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
     /**
-     * The template name. The template will have one of the following formats: `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
+     * @return The template name. The template will have one of the following formats: `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
      * 
      */
     private final String name;
     /**
-     * The last update timestamp of an inspectTemplate.
+     * @return The last update timestamp of an inspectTemplate.
      * 
      */
     private final String updateTime;
@@ -58,44 +58,44 @@ public final class GetInspectTemplateResult {
     }
 
     /**
-     * The creation timestamp of an inspectTemplate.
+     * @return The creation timestamp of an inspectTemplate.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Short description (max 256 chars).
+     * @return Short description (max 256 chars).
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Display name (max 256 chars).
+     * @return Display name (max 256 chars).
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The core content of the template. Configuration of the scanning process.
+     * @return The core content of the template. Configuration of the scanning process.
      * 
-    */
+     */
     public GooglePrivacyDlpV2InspectConfigResponse inspectConfig() {
         return this.inspectConfig;
     }
     /**
-     * The template name. The template will have one of the following formats: `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
+     * @return The template name. The template will have one of the following formats: `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The last update timestamp of an inspectTemplate.
+     * @return The last update timestamp of an inspectTemplate.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

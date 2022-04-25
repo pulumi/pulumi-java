@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class SparkHistoryServerConfigResponse {
     /**
-     * Optional. Resource name of an existing Dataproc Cluster to act as a Spark History Server for the workload.Example: projects/[project_id]/regions/[region]/clusters/[cluster_name]
+     * @return Optional. Resource name of an existing Dataproc Cluster to act as a Spark History Server for the workload.Example: projects/[project_id]/regions/[region]/clusters/[cluster_name]
      * 
      */
     private final String dataprocCluster;
@@ -21,9 +21,9 @@ public final class SparkHistoryServerConfigResponse {
     }
 
     /**
-     * Optional. Resource name of an existing Dataproc Cluster to act as a Spark History Server for the workload.Example: projects/[project_id]/regions/[region]/clusters/[cluster_name]
+     * @return Optional. Resource name of an existing Dataproc Cluster to act as a Spark History Server for the workload.Example: projects/[project_id]/regions/[region]/clusters/[cluster_name]
      * 
-    */
+     */
     public String dataprocCluster() {
         return this.dataprocCluster;
     }

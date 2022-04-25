@@ -23,6 +23,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends c
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return Specifies whether the argument is input or output.
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends c
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the argument. A return argument of a function might not have a name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends c
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the argument. The exact value depends on the source system and the language.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -75,16 +87,34 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends c
             $ = new GoogleCloudDatacatalogV1RoutineSpecArgumentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode Specifies whether the argument is input or output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param name The name of the argument. A return argument of a function might not have a name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Type of the argument. The exact value depends on the source system and the language.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

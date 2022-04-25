@@ -27,6 +27,10 @@ public final class LogConfigCloudAuditOptionsArgs extends com.pulumi.resources.R
     @Import(name="authorizationLoggingOptions")
     private @Nullable Output<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<AuthorizationLoggingOptionsArgs>> authorizationLoggingOptions() {
         return Optional.ofNullable(this.authorizationLoggingOptions);
     }
@@ -38,6 +42,10 @@ public final class LogConfigCloudAuditOptionsArgs extends com.pulumi.resources.R
     @Import(name="logName")
     private @Nullable Output<LogConfigCloudAuditOptionsLogName> logName;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<LogConfigCloudAuditOptionsLogName>> logName() {
         return Optional.ofNullable(this.logName);
     }
@@ -67,20 +75,44 @@ public final class LogConfigCloudAuditOptionsArgs extends com.pulumi.resources.R
             $ = new LogConfigCloudAuditOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationLoggingOptions This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationLoggingOptions(@Nullable Output<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions) {
             $.authorizationLoggingOptions = authorizationLoggingOptions;
             return this;
         }
 
+        /**
+         * @param authorizationLoggingOptions This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationLoggingOptions(AuthorizationLoggingOptionsArgs authorizationLoggingOptions) {
             return authorizationLoggingOptions(Output.of(authorizationLoggingOptions));
         }
 
+        /**
+         * @param logName This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logName(@Nullable Output<LogConfigCloudAuditOptionsLogName> logName) {
             $.logName = logName;
             return this;
         }
 
+        /**
+         * @param logName This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logName(LogConfigCloudAuditOptionsLogName logName) {
             return logName(Output.of(logName));
         }

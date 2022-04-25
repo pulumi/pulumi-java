@@ -24,6 +24,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rawDer", required=true)
     private Output<String> rawDer;
 
+    /**
+     * @return The raw certificate bytes in DER format.
+     * 
+     */
     public Output<String> rawDer() {
         return this.rawDer;
     }
@@ -52,11 +56,23 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rawDer The raw certificate bytes in DER format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawDer(Output<String> rawDer) {
             $.rawDer = rawDer;
             return this;
         }
 
+        /**
+         * @param rawDer The raw certificate bytes in DER format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawDer(String rawDer) {
             return rawDer(Output.of(rawDer));
         }

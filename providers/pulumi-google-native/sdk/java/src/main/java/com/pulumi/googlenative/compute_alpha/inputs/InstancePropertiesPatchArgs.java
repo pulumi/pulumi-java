@@ -27,6 +27,10 @@ public final class InstancePropertiesPatchArgs extends com.pulumi.resources.Reso
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The label key-value pairs that you want to patch onto the instance.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -38,6 +42,10 @@ public final class InstancePropertiesPatchArgs extends com.pulumi.resources.Reso
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -67,20 +75,44 @@ public final class InstancePropertiesPatchArgs extends com.pulumi.resources.Reso
             $ = new InstancePropertiesPatchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labels The label key-value pairs that you want to patch onto the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The label key-value pairs that you want to patch onto the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param metadata The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }

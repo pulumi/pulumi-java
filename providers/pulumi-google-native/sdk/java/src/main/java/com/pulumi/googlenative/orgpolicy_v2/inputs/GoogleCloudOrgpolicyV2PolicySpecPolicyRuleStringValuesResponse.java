@@ -24,6 +24,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
     @Import(name="allowedValues", required=true)
     private List<String> allowedValues;
 
+    /**
+     * @return List of values allowed at this resource.
+     * 
+     */
     public List<String> allowedValues() {
         return this.allowedValues;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
     @Import(name="deniedValues", required=true)
     private List<String> deniedValues;
 
+    /**
+     * @return List of values denied at this resource.
+     * 
+     */
     public List<String> deniedValues() {
         return this.deniedValues;
     }
@@ -64,20 +72,44 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
             $ = new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedValues List of values allowed at this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(List<String> allowedValues) {
             $.allowedValues = allowedValues;
             return this;
         }
 
+        /**
+         * @param allowedValues List of values allowed at this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(String... allowedValues) {
             return allowedValues(List.of(allowedValues));
         }
 
+        /**
+         * @param deniedValues List of values denied at this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deniedValues(List<String> deniedValues) {
             $.deniedValues = deniedValues;
             return this;
         }
 
+        /**
+         * @param deniedValues List of values denied at this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deniedValues(String... deniedValues) {
             return deniedValues(List.of(deniedValues));
         }

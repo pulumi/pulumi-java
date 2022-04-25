@@ -23,6 +23,10 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends com.pulumi
     @Import(name="bucketName", required=true)
     private String bucketName;
 
+    /**
+     * @return Name of the Cloud Storage bucket. Required for `gcs` target_type.
+     * 
+     */
     public String bucketName() {
         return this.bucketName;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends com.pulumi
     @Import(name="datasetName", required=true)
     private String datasetName;
 
+    /**
+     * @return BigQuery dataset name Required for `bigquery` target_type.
+     * 
+     */
     public String datasetName() {
         return this.datasetName;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends com.pulumi
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return Path of Cloud Storage bucket Required for `gcs` target_type.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -56,6 +68,10 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends com.pulumi
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return GCP project in which the datastore exists
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -67,6 +83,10 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends com.pulumi
     @Import(name="tablePrefix", required=true)
     private String tablePrefix;
 
+    /**
+     * @return Prefix of BigQuery table Required for `bigquery` target_type.
+     * 
+     */
     public String tablePrefix() {
         return this.tablePrefix;
     }
@@ -99,26 +119,56 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends com.pulumi
             $ = new GoogleCloudApigeeV1DatastoreConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName Name of the Cloud Storage bucket. Required for `gcs` target_type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param datasetName BigQuery dataset name Required for `bigquery` target_type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetName(String datasetName) {
             $.datasetName = datasetName;
             return this;
         }
 
+        /**
+         * @param path Path of Cloud Storage bucket Required for `gcs` target_type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param project GCP project in which the datastore exists
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param tablePrefix Prefix of BigQuery table Required for `bigquery` target_type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tablePrefix(String tablePrefix) {
             $.tablePrefix = tablePrefix;
             return this;

@@ -27,6 +27,10 @@ public final class GoogleCloudMlV1__MetricSpecArgs extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable Output<GoogleCloudMlV1__MetricSpecName> name;
 
+    /**
+     * @return metric name.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1__MetricSpecName>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudMlV1__MetricSpecArgs extends com.pulumi.resources.
     @Import(name="target")
     private @Nullable Output<Integer> target;
 
+    /**
+     * @return Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.
+     * 
+     */
     public Optional<Output<Integer>> target() {
         return Optional.ofNullable(this.target);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudMlV1__MetricSpecArgs extends com.pulumi.resources.
             $ = new GoogleCloudMlV1__MetricSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name metric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<GoogleCloudMlV1__MetricSpecName> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name metric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(GoogleCloudMlV1__MetricSpecName name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param target Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable Output<Integer> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(Integer target) {
             return target(Output.of(target));
         }

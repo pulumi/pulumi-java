@@ -27,6 +27,10 @@ public final class AudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="highBoost")
     private @Nullable Output<Boolean> highBoost;
 
+    /**
+     * @return Enable boosting high frequency components. The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> highBoost() {
         return Optional.ofNullable(this.highBoost);
     }
@@ -38,6 +42,10 @@ public final class AudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lowBoost")
     private @Nullable Output<Boolean> lowBoost;
 
+    /**
+     * @return Enable boosting low frequency components. The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> lowBoost() {
         return Optional.ofNullable(this.lowBoost);
     }
@@ -49,6 +57,10 @@ public final class AudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lufs")
     private @Nullable Output<Double> lufs;
 
+    /**
+     * @return Specify audio loudness normalization in loudness units relative to full scale (LUFS). Enter a value between -24 and 0 (the default), where: * -24 is the Advanced Television Systems Committee (ATSC A/85) standard * -23 is the EU R128 broadcast standard * -19 is the prior standard for online mono audio * -18 is the ReplayGain standard * -16 is the prior standard for stereo audio * -14 is the new online audio standard recommended by Spotify, as well as Amazon Echo * 0 disables normalization
+     * 
+     */
     public Optional<Output<Double>> lufs() {
         return Optional.ofNullable(this.lufs);
     }
@@ -79,29 +91,65 @@ public final class AudioArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AudioArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param highBoost Enable boosting high frequency components. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder highBoost(@Nullable Output<Boolean> highBoost) {
             $.highBoost = highBoost;
             return this;
         }
 
+        /**
+         * @param highBoost Enable boosting high frequency components. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder highBoost(Boolean highBoost) {
             return highBoost(Output.of(highBoost));
         }
 
+        /**
+         * @param lowBoost Enable boosting low frequency components. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowBoost(@Nullable Output<Boolean> lowBoost) {
             $.lowBoost = lowBoost;
             return this;
         }
 
+        /**
+         * @param lowBoost Enable boosting low frequency components. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowBoost(Boolean lowBoost) {
             return lowBoost(Output.of(lowBoost));
         }
 
+        /**
+         * @param lufs Specify audio loudness normalization in loudness units relative to full scale (LUFS). Enter a value between -24 and 0 (the default), where: * -24 is the Advanced Television Systems Committee (ATSC A/85) standard * -23 is the EU R128 broadcast standard * -19 is the prior standard for online mono audio * -18 is the ReplayGain standard * -16 is the prior standard for stereo audio * -14 is the new online audio standard recommended by Spotify, as well as Amazon Echo * 0 disables normalization
+         * 
+         * @return builder
+         * 
+         */
         public Builder lufs(@Nullable Output<Double> lufs) {
             $.lufs = lufs;
             return this;
         }
 
+        /**
+         * @param lufs Specify audio loudness normalization in loudness units relative to full scale (LUFS). Enter a value between -24 and 0 (the default), where: * -24 is the Advanced Television Systems Committee (ATSC A/85) standard * -23 is the EU R128 broadcast standard * -19 is the prior standard for online mono audio * -18 is the ReplayGain standard * -16 is the prior standard for stereo audio * -14 is the new online audio standard recommended by Spotify, as well as Amazon Echo * 0 disables normalization
+         * 
+         * @return builder
+         * 
+         */
         public Builder lufs(Double lufs) {
             return lufs(Output.of(lufs));
         }

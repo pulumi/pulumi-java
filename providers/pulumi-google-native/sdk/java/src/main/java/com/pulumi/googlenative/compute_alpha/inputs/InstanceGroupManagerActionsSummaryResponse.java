@@ -19,6 +19,10 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
     @Import(name="abandoning", required=true)
     private Integer abandoning;
 
+    /**
+     * @return The total number of instances in the managed instance group that are scheduled to be abandoned. Abandoning an instance removes it from the managed instance group without deleting it.
+     * 
+     */
     public Integer abandoning() {
         return this.abandoning;
     }
@@ -30,6 +34,10 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
     @Import(name="creating", required=true)
     private Integer creating;
 
+    /**
+     * @return The number of instances in the managed instance group that are scheduled to be created or are currently being created. If the group fails to create any of these instances, it tries again until it creates the instance successfully. If you have disabled creation retries, this field will not be populated; instead, the creatingWithoutRetries field will be populated.
+     * 
+     */
     public Integer creating() {
         return this.creating;
     }
@@ -41,6 +49,10 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
     @Import(name="creatingWithoutRetries", required=true)
     private Integer creatingWithoutRetries;
 
+    /**
+     * @return The number of instances that the managed instance group will attempt to create. The group attempts to create each instance only once. If the group fails to create any of these instances, it decreases the group&#39;s targetSize value accordingly.
+     * 
+     */
     public Integer creatingWithoutRetries() {
         return this.creatingWithoutRetries;
     }
@@ -52,6 +64,10 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
     @Import(name="deleting", required=true)
     private Integer deleting;
 
+    /**
+     * @return The number of instances in the managed instance group that are scheduled to be deleted or are currently being deleted.
+     * 
+     */
     public Integer deleting() {
         return this.deleting;
     }
@@ -63,6 +79,10 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
     @Import(name="none", required=true)
     private Integer none;
 
+    /**
+     * @return The number of instances in the managed instance group that are running and have no scheduled actions.
+     * 
+     */
     public Integer none() {
         return this.none;
     }
@@ -74,6 +94,10 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
     @Import(name="recreating", required=true)
     private Integer recreating;
 
+    /**
+     * @return The number of instances in the managed instance group that are scheduled to be recreated or are currently being being recreated. Recreating an instance deletes the existing root persistent disk and creates a new disk from the image that is defined in the instance template.
+     * 
+     */
     public Integer recreating() {
         return this.recreating;
     }
@@ -85,6 +109,10 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
     @Import(name="refreshing", required=true)
     private Integer refreshing;
 
+    /**
+     * @return The number of instances in the managed instance group that are being reconfigured with properties that do not require a restart or a recreate action. For example, setting or removing target pools for the instance.
+     * 
+     */
     public Integer refreshing() {
         return this.refreshing;
     }
@@ -96,6 +124,10 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
     @Import(name="restarting", required=true)
     private Integer restarting;
 
+    /**
+     * @return The number of instances in the managed instance group that are scheduled to be restarted or are currently being restarted.
+     * 
+     */
     public Integer restarting() {
         return this.restarting;
     }
@@ -107,6 +139,10 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
     @Import(name="resuming", required=true)
     private Integer resuming;
 
+    /**
+     * @return The number of instances in the managed instance group that are scheduled to be resumed or are currently being resumed.
+     * 
+     */
     public Integer resuming() {
         return this.resuming;
     }
@@ -118,6 +154,10 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
     @Import(name="starting", required=true)
     private Integer starting;
 
+    /**
+     * @return The number of instances in the managed instance group that are scheduled to be started or are currently being started.
+     * 
+     */
     public Integer starting() {
         return this.starting;
     }
@@ -129,6 +169,10 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
     @Import(name="stopping", required=true)
     private Integer stopping;
 
+    /**
+     * @return The number of instances in the managed instance group that are scheduled to be stopped or are currently being stopped.
+     * 
+     */
     public Integer stopping() {
         return this.stopping;
     }
@@ -140,6 +184,10 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
     @Import(name="suspending", required=true)
     private Integer suspending;
 
+    /**
+     * @return The number of instances in the managed instance group that are scheduled to be suspended or are currently being suspended.
+     * 
+     */
     public Integer suspending() {
         return this.suspending;
     }
@@ -151,6 +199,10 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
     @Import(name="verifying", required=true)
     private Integer verifying;
 
+    /**
+     * @return The number of instances in the managed instance group that are being verified. See the managedInstances[].currentAction property in the listManagedInstances method documentation.
+     * 
+     */
     public Integer verifying() {
         return this.verifying;
     }
@@ -191,66 +243,144 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
             $ = new InstanceGroupManagerActionsSummaryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param abandoning The total number of instances in the managed instance group that are scheduled to be abandoned. Abandoning an instance removes it from the managed instance group without deleting it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abandoning(Integer abandoning) {
             $.abandoning = abandoning;
             return this;
         }
 
+        /**
+         * @param creating The number of instances in the managed instance group that are scheduled to be created or are currently being created. If the group fails to create any of these instances, it tries again until it creates the instance successfully. If you have disabled creation retries, this field will not be populated; instead, the creatingWithoutRetries field will be populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creating(Integer creating) {
             $.creating = creating;
             return this;
         }
 
+        /**
+         * @param creatingWithoutRetries The number of instances that the managed instance group will attempt to create. The group attempts to create each instance only once. If the group fails to create any of these instances, it decreases the group&#39;s targetSize value accordingly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creatingWithoutRetries(Integer creatingWithoutRetries) {
             $.creatingWithoutRetries = creatingWithoutRetries;
             return this;
         }
 
+        /**
+         * @param deleting The number of instances in the managed instance group that are scheduled to be deleted or are currently being deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleting(Integer deleting) {
             $.deleting = deleting;
             return this;
         }
 
+        /**
+         * @param none The number of instances in the managed instance group that are running and have no scheduled actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder none(Integer none) {
             $.none = none;
             return this;
         }
 
+        /**
+         * @param recreating The number of instances in the managed instance group that are scheduled to be recreated or are currently being being recreated. Recreating an instance deletes the existing root persistent disk and creates a new disk from the image that is defined in the instance template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recreating(Integer recreating) {
             $.recreating = recreating;
             return this;
         }
 
+        /**
+         * @param refreshing The number of instances in the managed instance group that are being reconfigured with properties that do not require a restart or a recreate action. For example, setting or removing target pools for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshing(Integer refreshing) {
             $.refreshing = refreshing;
             return this;
         }
 
+        /**
+         * @param restarting The number of instances in the managed instance group that are scheduled to be restarted or are currently being restarted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restarting(Integer restarting) {
             $.restarting = restarting;
             return this;
         }
 
+        /**
+         * @param resuming The number of instances in the managed instance group that are scheduled to be resumed or are currently being resumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resuming(Integer resuming) {
             $.resuming = resuming;
             return this;
         }
 
+        /**
+         * @param starting The number of instances in the managed instance group that are scheduled to be started or are currently being started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder starting(Integer starting) {
             $.starting = starting;
             return this;
         }
 
+        /**
+         * @param stopping The number of instances in the managed instance group that are scheduled to be stopped or are currently being stopped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stopping(Integer stopping) {
             $.stopping = stopping;
             return this;
         }
 
+        /**
+         * @param suspending The number of instances in the managed instance group that are scheduled to be suspended or are currently being suspended.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspending(Integer suspending) {
             $.suspending = suspending;
             return this;
         }
 
+        /**
+         * @param verifying The number of instances in the managed instance group that are being verified. See the managedInstances[].currentAction property in the listManagedInstances method documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verifying(Integer verifying) {
             $.verifying = verifying;
             return this;

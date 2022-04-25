@@ -23,6 +23,10 @@ public final class FixedOrPercentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="fixed", required=true)
     private Integer fixed;
 
+    /**
+     * @return Specifies a fixed value.
+     * 
+     */
     public Integer fixed() {
         return this.fixed;
     }
@@ -34,6 +38,10 @@ public final class FixedOrPercentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="percent", required=true)
     private Integer percent;
 
+    /**
+     * @return Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+     * 
+     */
     public Integer percent() {
         return this.percent;
     }
@@ -63,11 +71,23 @@ public final class FixedOrPercentResponse extends com.pulumi.resources.InvokeArg
             $ = new FixedOrPercentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fixed Specifies a fixed value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixed(Integer fixed) {
             $.fixed = fixed;
             return this;
         }
 
+        /**
+         * @param percent Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percent(Integer percent) {
             $.percent = percent;
             return this;

@@ -23,6 +23,10 @@ public final class RouterApplianceInstanceResponse extends com.pulumi.resources.
     @Import(name="ipAddress", required=true)
     private String ipAddress;
 
+    /**
+     * @return The IP address of the network interface to use for peering.
+     * 
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
@@ -41,6 +45,10 @@ public final class RouterApplianceInstanceResponse extends com.pulumi.resources.
     @Import(name="virtualMachine", required=true)
     private String virtualMachine;
 
+    /**
+     * @return The URI of the virtual machine resource
+     * 
+     */
     public String virtualMachine() {
         return this.virtualMachine;
     }
@@ -71,6 +79,12 @@ public final class RouterApplianceInstanceResponse extends com.pulumi.resources.
             $ = new RouterApplianceInstanceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAddress The IP address of the network interface to use for peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
@@ -81,6 +95,12 @@ public final class RouterApplianceInstanceResponse extends com.pulumi.resources.
             return this;
         }
 
+        /**
+         * @param virtualMachine The URI of the virtual machine resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachine(String virtualMachine) {
             $.virtualMachine = virtualMachine;
             return this;

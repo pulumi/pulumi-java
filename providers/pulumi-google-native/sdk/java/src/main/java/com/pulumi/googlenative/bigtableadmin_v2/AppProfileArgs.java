@@ -31,6 +31,10 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Long form description of the use case for this AppProfile.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -42,6 +46,10 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -67,6 +75,10 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="multiClusterRoutingUseAny")
     private @Nullable Output<MultiClusterRoutingUseAnyArgs> multiClusterRoutingUseAny;
 
+    /**
+     * @return Use a multi-cluster routing policy.
+     * 
+     */
     public Optional<Output<MultiClusterRoutingUseAnyArgs>> multiClusterRoutingUseAny() {
         return Optional.ofNullable(this.multiClusterRoutingUseAny);
     }
@@ -78,6 +90,10 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The unique name of the app profile. Values are of the form `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -96,6 +112,10 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="singleClusterRouting")
     private @Nullable Output<SingleClusterRoutingArgs> singleClusterRouting;
 
+    /**
+     * @return Use a single-cluster routing policy.
+     * 
+     */
     public Optional<Output<SingleClusterRoutingArgs>> singleClusterRouting() {
         return Optional.ofNullable(this.singleClusterRouting);
     }
@@ -141,20 +161,44 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
             return appProfileId(Output.of(appProfileId));
         }
 
+        /**
+         * @param description Long form description of the use case for this AppProfile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Long form description of the use case for this AppProfile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param etag Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
@@ -177,20 +221,44 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param multiClusterRoutingUseAny Use a multi-cluster routing policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiClusterRoutingUseAny(@Nullable Output<MultiClusterRoutingUseAnyArgs> multiClusterRoutingUseAny) {
             $.multiClusterRoutingUseAny = multiClusterRoutingUseAny;
             return this;
         }
 
+        /**
+         * @param multiClusterRoutingUseAny Use a multi-cluster routing policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiClusterRoutingUseAny(MultiClusterRoutingUseAnyArgs multiClusterRoutingUseAny) {
             return multiClusterRoutingUseAny(Output.of(multiClusterRoutingUseAny));
         }
 
+        /**
+         * @param name The unique name of the app profile. Values are of the form `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique name of the app profile. Values are of the form `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -204,11 +272,23 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param singleClusterRouting Use a single-cluster routing policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleClusterRouting(@Nullable Output<SingleClusterRoutingArgs> singleClusterRouting) {
             $.singleClusterRouting = singleClusterRouting;
             return this;
         }
 
+        /**
+         * @param singleClusterRouting Use a single-cluster routing policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleClusterRouting(SingleClusterRoutingArgs singleClusterRouting) {
             return singleClusterRouting(Output.of(singleClusterRouting));
         }

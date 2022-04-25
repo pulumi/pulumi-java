@@ -28,6 +28,10 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends com.pulumi.res
     @Import(name="integratedGradientsAttribution")
     private @Nullable Output<GoogleCloudMlV1__IntegratedGradientsAttributionArgs> integratedGradientsAttribution;
 
+    /**
+     * @return Attributes credit by computing the Aumann-Shapley value taking advantage of the model&#39;s fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1__IntegratedGradientsAttributionArgs>> integratedGradientsAttribution() {
         return Optional.ofNullable(this.integratedGradientsAttribution);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends com.pulumi.res
     @Import(name="sampledShapleyAttribution")
     private @Nullable Output<GoogleCloudMlV1__SampledShapleyAttributionArgs> sampledShapleyAttribution;
 
+    /**
+     * @return An attribution method that approximates Shapley values for features that contribute to the label being predicted. A sampling strategy is used to approximate the value rather than considering all subsets of features.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1__SampledShapleyAttributionArgs>> sampledShapleyAttribution() {
         return Optional.ofNullable(this.sampledShapleyAttribution);
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends com.pulumi.res
     @Import(name="xraiAttribution")
     private @Nullable Output<GoogleCloudMlV1__XraiAttributionArgs> xraiAttribution;
 
+    /**
+     * @return Attributes credit by computing the XRAI taking advantage of the model&#39;s fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1__XraiAttributionArgs>> xraiAttribution() {
         return Optional.ofNullable(this.xraiAttribution);
     }
@@ -80,29 +92,65 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends com.pulumi.res
             $ = new GoogleCloudMlV1__ExplanationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param integratedGradientsAttribution Attributes credit by computing the Aumann-Shapley value taking advantage of the model&#39;s fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365
+         * 
+         * @return builder
+         * 
+         */
         public Builder integratedGradientsAttribution(@Nullable Output<GoogleCloudMlV1__IntegratedGradientsAttributionArgs> integratedGradientsAttribution) {
             $.integratedGradientsAttribution = integratedGradientsAttribution;
             return this;
         }
 
+        /**
+         * @param integratedGradientsAttribution Attributes credit by computing the Aumann-Shapley value taking advantage of the model&#39;s fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365
+         * 
+         * @return builder
+         * 
+         */
         public Builder integratedGradientsAttribution(GoogleCloudMlV1__IntegratedGradientsAttributionArgs integratedGradientsAttribution) {
             return integratedGradientsAttribution(Output.of(integratedGradientsAttribution));
         }
 
+        /**
+         * @param sampledShapleyAttribution An attribution method that approximates Shapley values for features that contribute to the label being predicted. A sampling strategy is used to approximate the value rather than considering all subsets of features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampledShapleyAttribution(@Nullable Output<GoogleCloudMlV1__SampledShapleyAttributionArgs> sampledShapleyAttribution) {
             $.sampledShapleyAttribution = sampledShapleyAttribution;
             return this;
         }
 
+        /**
+         * @param sampledShapleyAttribution An attribution method that approximates Shapley values for features that contribute to the label being predicted. A sampling strategy is used to approximate the value rather than considering all subsets of features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampledShapleyAttribution(GoogleCloudMlV1__SampledShapleyAttributionArgs sampledShapleyAttribution) {
             return sampledShapleyAttribution(Output.of(sampledShapleyAttribution));
         }
 
+        /**
+         * @param xraiAttribution Attributes credit by computing the XRAI taking advantage of the model&#39;s fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xraiAttribution(@Nullable Output<GoogleCloudMlV1__XraiAttributionArgs> xraiAttribution) {
             $.xraiAttribution = xraiAttribution;
             return this;
         }
 
+        /**
+         * @param xraiAttribution Attributes credit by computing the XRAI taking advantage of the model&#39;s fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xraiAttribution(GoogleCloudMlV1__XraiAttributionArgs xraiAttribution) {
             return xraiAttribution(Output.of(xraiAttribution));
         }

@@ -25,6 +25,10 @@ public final class ObjectIdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectIdPath", required=true)
     private Output<List<Integer>> objectIdPath;
 
+    /**
+     * @return The parts of an OID path. The most significant parts of the path come first.
+     * 
+     */
     public Output<List<Integer>> objectIdPath() {
         return this.objectIdPath;
     }
@@ -53,15 +57,33 @@ public final class ObjectIdArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ObjectIdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectIdPath The parts of an OID path. The most significant parts of the path come first.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectIdPath(Output<List<Integer>> objectIdPath) {
             $.objectIdPath = objectIdPath;
             return this;
         }
 
+        /**
+         * @param objectIdPath The parts of an OID path. The most significant parts of the path come first.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectIdPath(List<Integer> objectIdPath) {
             return objectIdPath(Output.of(objectIdPath));
         }
 
+        /**
+         * @param objectIdPath The parts of an OID path. The most significant parts of the path come first.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectIdPath(Integer... objectIdPath) {
             return objectIdPath(List.of(objectIdPath));
         }

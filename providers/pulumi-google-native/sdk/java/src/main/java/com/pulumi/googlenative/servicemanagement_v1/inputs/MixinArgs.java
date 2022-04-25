@@ -26,6 +26,10 @@ public final class MixinArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The fully qualified name of the interface which is included.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class MixinArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="root")
     private @Nullable Output<String> root;
 
+    /**
+     * @return If non-empty specifies a path under which inherited HTTP paths are rooted.
+     * 
+     */
     public Optional<Output<String>> root() {
         return Optional.ofNullable(this.root);
     }
@@ -66,20 +74,44 @@ public final class MixinArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MixinArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The fully qualified name of the interface which is included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The fully qualified name of the interface which is included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param root If non-empty specifies a path under which inherited HTTP paths are rooted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder root(@Nullable Output<String> root) {
             $.root = root;
             return this;
         }
 
+        /**
+         * @param root If non-empty specifies a path under which inherited HTTP paths are rooted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder root(String root) {
             return root(Output.of(root));
         }

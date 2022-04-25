@@ -27,6 +27,10 @@ public final class RouterNatLogConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
+    /**
+     * @return Indicates whether or not to export logs. This is false by default.
+     * 
+     */
     public Optional<Output<Boolean>> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -38,6 +42,10 @@ public final class RouterNatLogConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="filter")
     private @Nullable Output<RouterNatLogConfigFilter> filter;
 
+    /**
+     * @return Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: - ERRORS_ONLY: Export logs only for connection failures. - TRANSLATIONS_ONLY: Export logs only for successful connections. - ALL: Export logs for all connections, successful and unsuccessful.
+     * 
+     */
     public Optional<Output<RouterNatLogConfigFilter>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -67,20 +75,44 @@ public final class RouterNatLogConfigArgs extends com.pulumi.resources.ResourceA
             $ = new RouterNatLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enable Indicates whether or not to export logs. This is false by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable Indicates whether or not to export logs. This is false by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param filter Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: - ERRORS_ONLY: Export logs only for connection failures. - TRANSLATIONS_ONLY: Export logs only for successful connections. - ALL: Export logs for all connections, successful and unsuccessful.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<RouterNatLogConfigFilter> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: - ERRORS_ONLY: Export logs only for connection failures. - TRANSLATIONS_ONLY: Export logs only for successful connections. - ALL: Export logs for all connections, successful and unsuccessful.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(RouterNatLogConfigFilter filter) {
             return filter(Output.of(filter));
         }

@@ -25,6 +25,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="files", required=true)
     private Output<List<FileArgs>> files;
 
+    /**
+     * @return `File` set constituting the `Source` bundle.
+     * 
+     */
     public Output<List<FileArgs>> files() {
         return this.files;
     }
@@ -53,15 +57,33 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param files `File` set constituting the `Source` bundle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(Output<List<FileArgs>> files) {
             $.files = files;
             return this;
         }
 
+        /**
+         * @param files `File` set constituting the `Source` bundle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(List<FileArgs> files) {
             return files(Output.of(files));
         }
 
+        /**
+         * @param files `File` set constituting the `Source` bundle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(FileArgs... files) {
             return files(List.of(files));
         }

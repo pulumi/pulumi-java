@@ -23,6 +23,10 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The customer account contact&#39;s display name, formatted as a combination of the customer&#39;s first and last name.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
     @Import(name="email", required=true)
     private String email;
 
+    /**
+     * @return The customer account&#39;s contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer&#39;s username for those accounts. Use this email to invite Team customers.
+     * 
+     */
     public String email() {
         return this.email;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
     @Import(name="firstName", required=true)
     private String firstName;
 
+    /**
+     * @return The customer account contact&#39;s first name. Optional for Team customers.
+     * 
+     */
     public String firstName() {
         return this.firstName;
     }
@@ -56,6 +68,10 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
     @Import(name="lastName", required=true)
     private String lastName;
 
+    /**
+     * @return The customer account contact&#39;s last name. Optional for Team customers.
+     * 
+     */
     public String lastName() {
         return this.lastName;
     }
@@ -67,6 +83,10 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
     @Import(name="phone", required=true)
     private String phone;
 
+    /**
+     * @return The customer account&#39;s contact phone number.
+     * 
+     */
     public String phone() {
         return this.phone;
     }
@@ -78,6 +98,10 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return Optional. The customer account contact&#39;s job title.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -111,31 +135,67 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
             $ = new GoogleCloudChannelV1ContactInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The customer account contact&#39;s display name, formatted as a combination of the customer&#39;s first and last name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param email The customer account&#39;s contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer&#39;s username for those accounts. Use this email to invite Team customers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param firstName The customer account contact&#39;s first name. Optional for Team customers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstName(String firstName) {
             $.firstName = firstName;
             return this;
         }
 
+        /**
+         * @param lastName The customer account contact&#39;s last name. Optional for Team customers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastName(String lastName) {
             $.lastName = lastName;
             return this;
         }
 
+        /**
+         * @param phone The customer account&#39;s contact phone number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(String phone) {
             $.phone = phone;
             return this;
         }
 
+        /**
+         * @param title Optional. The customer account contact&#39;s job title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

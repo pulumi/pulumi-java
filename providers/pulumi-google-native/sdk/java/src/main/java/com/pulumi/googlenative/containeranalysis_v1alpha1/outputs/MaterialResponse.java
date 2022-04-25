@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class MaterialResponse {
     /**
-     * digest is a map from a hash algorithm (e.g. sha256) to the value in the material
+     * @return digest is a map from a hash algorithm (e.g. sha256) to the value in the material
      * 
      */
     private final Map<String,String> digest;
     /**
-     * uri is the uri of the material
+     * @return uri is the uri of the material
      * 
      */
     private final String uri;
@@ -30,16 +30,16 @@ public final class MaterialResponse {
     }
 
     /**
-     * digest is a map from a hash algorithm (e.g. sha256) to the value in the material
+     * @return digest is a map from a hash algorithm (e.g. sha256) to the value in the material
      * 
-    */
+     */
     public Map<String,String> digest() {
         return this.digest;
     }
     /**
-     * uri is the uri of the material
+     * @return uri is the uri of the material
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

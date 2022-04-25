@@ -25,6 +25,10 @@ public final class ShareSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="folderMap", required=true)
     private Map<String,String> folderMap;
 
+    /**
+     * @return A map of folder id and folder config to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS. Folder id should be a string of number, and without &#34;folders/&#34; prefix.
+     * 
+     */
     public Map<String,String> folderMap() {
         return this.folderMap;
     }
@@ -36,6 +40,10 @@ public final class ShareSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="projectMap", required=true)
     private Map<String,String> projectMap;
 
+    /**
+     * @return A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+     * 
+     */
     public Map<String,String> projectMap() {
         return this.projectMap;
     }
@@ -47,6 +55,10 @@ public final class ShareSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="projects", required=true)
     private List<String> projects;
 
+    /**
+     * @return A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+     * 
+     */
     public List<String> projects() {
         return this.projects;
     }
@@ -58,6 +70,10 @@ public final class ShareSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="shareType", required=true)
     private String shareType;
 
+    /**
+     * @return Type of sharing for this shared-reservation
+     * 
+     */
     public String shareType() {
         return this.shareType;
     }
@@ -89,25 +105,55 @@ public final class ShareSettingsResponse extends com.pulumi.resources.InvokeArgs
             $ = new ShareSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param folderMap A map of folder id and folder config to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS. Folder id should be a string of number, and without &#34;folders/&#34; prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderMap(Map<String,String> folderMap) {
             $.folderMap = folderMap;
             return this;
         }
 
+        /**
+         * @param projectMap A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectMap(Map<String,String> projectMap) {
             $.projectMap = projectMap;
             return this;
         }
 
+        /**
+         * @param projects A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projects(List<String> projects) {
             $.projects = projects;
             return this;
         }
 
+        /**
+         * @param projects A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projects(String... projects) {
             return projects(List.of(projects));
         }
 
+        /**
+         * @param shareType Type of sharing for this shared-reservation
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareType(String shareType) {
             $.shareType = shareType;
             return this;

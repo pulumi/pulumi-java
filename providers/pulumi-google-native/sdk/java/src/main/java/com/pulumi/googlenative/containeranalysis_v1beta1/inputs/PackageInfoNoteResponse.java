@@ -27,6 +27,10 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="analyzed", required=true)
     private Boolean analyzed;
 
+    /**
+     * @return Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document
+     * 
+     */
     public Boolean analyzed() {
         return this.analyzed;
     }
@@ -38,6 +42,10 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="attribution", required=true)
     private String attribution;
 
+    /**
+     * @return A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts
+     * 
+     */
     public String attribution() {
         return this.attribution;
     }
@@ -49,6 +57,10 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="checksum", required=true)
     private String checksum;
 
+    /**
+     * @return Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file
+     * 
+     */
     public String checksum() {
         return this.checksum;
     }
@@ -60,6 +72,10 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="copyright", required=true)
     private String copyright;
 
+    /**
+     * @return Identify the copyright holders of the package, as well as any dates present
+     * 
+     */
     public String copyright() {
         return this.copyright;
     }
@@ -71,6 +87,10 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="detailedDescription", required=true)
     private String detailedDescription;
 
+    /**
+     * @return A more detailed description of the package
+     * 
+     */
     public String detailedDescription() {
         return this.detailedDescription;
     }
@@ -82,6 +102,10 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="downloadLocation", required=true)
     private String downloadLocation;
 
+    /**
+     * @return This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created
+     * 
+     */
     public String downloadLocation() {
         return this.downloadLocation;
     }
@@ -93,6 +117,10 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="externalRefs", required=true)
     private List<ExternalRefResponse> externalRefs;
 
+    /**
+     * @return ExternalRef
+     * 
+     */
     public List<ExternalRefResponse> externalRefs() {
         return this.externalRefs;
     }
@@ -104,6 +132,10 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="filesLicenseInfo", required=true)
     private List<String> filesLicenseInfo;
 
+    /**
+     * @return Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found
+     * 
+     */
     public List<String> filesLicenseInfo() {
         return this.filesLicenseInfo;
     }
@@ -115,6 +147,10 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="homePage", required=true)
     private String homePage;
 
+    /**
+     * @return Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
+     * 
+     */
     public String homePage() {
         return this.homePage;
     }
@@ -126,6 +162,10 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="licenseDeclared", required=true)
     private LicenseResponse licenseDeclared;
 
+    /**
+     * @return List the licenses that have been declared by the authors of the package
+     * 
+     */
     public LicenseResponse licenseDeclared() {
         return this.licenseDeclared;
     }
@@ -137,6 +177,10 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="originator", required=true)
     private String originator;
 
+    /**
+     * @return If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came
+     * 
+     */
     public String originator() {
         return this.originator;
     }
@@ -148,6 +192,10 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="packageType", required=true)
     private String packageType;
 
+    /**
+     * @return The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
+     * 
+     */
     public String packageType() {
         return this.packageType;
     }
@@ -159,6 +207,10 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="summaryDescription", required=true)
     private String summaryDescription;
 
+    /**
+     * @return A short description of the package
+     * 
+     */
     public String summaryDescription() {
         return this.summaryDescription;
     }
@@ -170,6 +222,10 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="supplier", required=true)
     private String supplier;
 
+    /**
+     * @return Identify the actual distribution source for the package/directory identified in the SPDX file
+     * 
+     */
     public String supplier() {
         return this.supplier;
     }
@@ -181,6 +237,10 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return Identify the full name of the package as given by the Package Originator
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -192,6 +252,10 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="verificationCode", required=true)
     private String verificationCode;
 
+    /**
+     * @return This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file
+     * 
+     */
     public String verificationCode() {
         return this.verificationCode;
     }
@@ -203,6 +267,10 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Identify the version of the package
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -247,94 +315,208 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
             $ = new PackageInfoNoteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analyzed Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document
+         * 
+         * @return builder
+         * 
+         */
         public Builder analyzed(Boolean analyzed) {
             $.analyzed = analyzed;
             return this;
         }
 
+        /**
+         * @param attribution A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts
+         * 
+         * @return builder
+         * 
+         */
         public Builder attribution(String attribution) {
             $.attribution = attribution;
             return this;
         }
 
+        /**
+         * @param checksum Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file
+         * 
+         * @return builder
+         * 
+         */
         public Builder checksum(String checksum) {
             $.checksum = checksum;
             return this;
         }
 
+        /**
+         * @param copyright Identify the copyright holders of the package, as well as any dates present
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyright(String copyright) {
             $.copyright = copyright;
             return this;
         }
 
+        /**
+         * @param detailedDescription A more detailed description of the package
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailedDescription(String detailedDescription) {
             $.detailedDescription = detailedDescription;
             return this;
         }
 
+        /**
+         * @param downloadLocation This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created
+         * 
+         * @return builder
+         * 
+         */
         public Builder downloadLocation(String downloadLocation) {
             $.downloadLocation = downloadLocation;
             return this;
         }
 
+        /**
+         * @param externalRefs ExternalRef
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalRefs(List<ExternalRefResponse> externalRefs) {
             $.externalRefs = externalRefs;
             return this;
         }
 
+        /**
+         * @param externalRefs ExternalRef
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalRefs(ExternalRefResponse... externalRefs) {
             return externalRefs(List.of(externalRefs));
         }
 
+        /**
+         * @param filesLicenseInfo Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesLicenseInfo(List<String> filesLicenseInfo) {
             $.filesLicenseInfo = filesLicenseInfo;
             return this;
         }
 
+        /**
+         * @param filesLicenseInfo Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesLicenseInfo(String... filesLicenseInfo) {
             return filesLicenseInfo(List.of(filesLicenseInfo));
         }
 
+        /**
+         * @param homePage Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
+         * 
+         * @return builder
+         * 
+         */
         public Builder homePage(String homePage) {
             $.homePage = homePage;
             return this;
         }
 
+        /**
+         * @param licenseDeclared List the licenses that have been declared by the authors of the package
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseDeclared(LicenseResponse licenseDeclared) {
             $.licenseDeclared = licenseDeclared;
             return this;
         }
 
+        /**
+         * @param originator If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came
+         * 
+         * @return builder
+         * 
+         */
         public Builder originator(String originator) {
             $.originator = originator;
             return this;
         }
 
+        /**
+         * @param packageType The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageType(String packageType) {
             $.packageType = packageType;
             return this;
         }
 
+        /**
+         * @param summaryDescription A short description of the package
+         * 
+         * @return builder
+         * 
+         */
         public Builder summaryDescription(String summaryDescription) {
             $.summaryDescription = summaryDescription;
             return this;
         }
 
+        /**
+         * @param supplier Identify the actual distribution source for the package/directory identified in the SPDX file
+         * 
+         * @return builder
+         * 
+         */
         public Builder supplier(String supplier) {
             $.supplier = supplier;
             return this;
         }
 
+        /**
+         * @param title Identify the full name of the package as given by the Package Originator
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param verificationCode This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file
+         * 
+         * @return builder
+         * 
+         */
         public Builder verificationCode(String verificationCode) {
             $.verificationCode = verificationCode;
             return this;
         }
 
+        /**
+         * @param version Identify the version of the package
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

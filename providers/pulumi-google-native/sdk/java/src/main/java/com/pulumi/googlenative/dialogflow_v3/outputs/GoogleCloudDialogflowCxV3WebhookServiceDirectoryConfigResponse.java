@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse {
     /**
-     * Generic Service configuration of this webhook.
+     * @return Generic Service configuration of this webhook.
      * 
      */
     private final GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService;
     /**
-     * The name of [Service Directory](https://cloud.google.com/service-directory) service. Format: `projects//locations//namespaces//services/`. `Location ID` of the service directory must be the same as the location of the agent.
+     * @return The name of [Service Directory](https://cloud.google.com/service-directory) service. Format: `projects//locations//namespaces//services/`. `Location ID` of the service directory must be the same as the location of the agent.
      * 
      */
     private final String service;
@@ -30,16 +30,16 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigRespons
     }
 
     /**
-     * Generic Service configuration of this webhook.
+     * @return Generic Service configuration of this webhook.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService() {
         return this.genericWebService;
     }
     /**
-     * The name of [Service Directory](https://cloud.google.com/service-directory) service. Format: `projects//locations//namespaces//services/`. `Location ID` of the service directory must be the same as the location of the agent.
+     * @return The name of [Service Directory](https://cloud.google.com/service-directory) service. Format: `projects//locations//namespaces//services/`. `Location ID` of the service directory must be the same as the location of the agent.
      * 
-    */
+     */
     public String service() {
         return this.service;
     }

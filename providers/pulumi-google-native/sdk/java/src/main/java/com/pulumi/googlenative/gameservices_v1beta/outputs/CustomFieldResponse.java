@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class CustomFieldResponse {
     /**
-     * Name is the field name.
+     * @return Name is the field name.
      * 
      */
     private final String name;
     /**
-     * Value is the field value. It is important that in contrast to the CounterOptions.field, the value here is a constant that is not derived from the IAMContext.
+     * @return Value is the field value. It is important that in contrast to the CounterOptions.field, the value here is a constant that is not derived from the IAMContext.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class CustomFieldResponse {
     }
 
     /**
-     * Name is the field name.
+     * @return Name is the field name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Value is the field value. It is important that in contrast to the CounterOptions.field, the value here is a constant that is not derived from the IAMContext.
+     * @return Value is the field value. It is important that in contrast to the CounterOptions.field, the value here is a constant that is not derived from the IAMContext.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

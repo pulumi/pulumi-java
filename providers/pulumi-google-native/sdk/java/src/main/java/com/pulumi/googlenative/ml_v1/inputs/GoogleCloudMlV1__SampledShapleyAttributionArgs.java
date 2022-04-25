@@ -26,6 +26,10 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends com.pu
     @Import(name="numPaths")
     private @Nullable Output<Integer> numPaths;
 
+    /**
+     * @return The number of feature permutations to consider when approximating the Shapley values.
+     * 
+     */
     public Optional<Output<Integer>> numPaths() {
         return Optional.ofNullable(this.numPaths);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends com.pu
             $ = new GoogleCloudMlV1__SampledShapleyAttributionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param numPaths The number of feature permutations to consider when approximating the Shapley values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numPaths(@Nullable Output<Integer> numPaths) {
             $.numPaths = numPaths;
             return this;
         }
 
+        /**
+         * @param numPaths The number of feature permutations to consider when approximating the Shapley values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numPaths(Integer numPaths) {
             return numPaths(Output.of(numPaths));
         }

@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
     @Import(name="recentSentencesCount")
     private @Nullable Output<Integer> recentSentencesCount;
 
+    /**
+     * @return Number of recent non-small-talk sentences to use as context for article and FAQ suggestion
+     * 
+     */
     public Optional<Output<Integer>> recentSentencesCount() {
         return Optional.ofNullable(this.recentSentencesCount);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
             $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recentSentencesCount Number of recent non-small-talk sentences to use as context for article and FAQ suggestion
+         * 
+         * @return builder
+         * 
+         */
         public Builder recentSentencesCount(@Nullable Output<Integer> recentSentencesCount) {
             $.recentSentencesCount = recentSentencesCount;
             return this;
         }
 
+        /**
+         * @param recentSentencesCount Number of recent non-small-talk sentences to use as context for article and FAQ suggestion
+         * 
+         * @return builder
+         * 
+         */
         public Builder recentSentencesCount(Integer recentSentencesCount) {
             return recentSentencesCount(Output.of(recentSentencesCount));
         }

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class LogConfigCloudAuditOptionsResponse {
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
      */
     private final AuthorizationLoggingOptionsResponse authorizationLoggingOptions;
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
      */
     private final String logName;
@@ -30,16 +30,16 @@ public final class LogConfigCloudAuditOptionsResponse {
     }
 
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public AuthorizationLoggingOptionsResponse authorizationLoggingOptions() {
         return this.authorizationLoggingOptions;
     }
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public String logName() {
         return this.logName;
     }

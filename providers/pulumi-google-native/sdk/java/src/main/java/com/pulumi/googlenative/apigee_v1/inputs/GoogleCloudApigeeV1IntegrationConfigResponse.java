@@ -23,6 +23,10 @@ public final class GoogleCloudApigeeV1IntegrationConfigResponse extends com.pulu
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Flag that specifies whether the Integration add-on is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudApigeeV1IntegrationConfigResponse extends com.pulu
             $ = new GoogleCloudApigeeV1IntegrationConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Flag that specifies whether the Integration add-on is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

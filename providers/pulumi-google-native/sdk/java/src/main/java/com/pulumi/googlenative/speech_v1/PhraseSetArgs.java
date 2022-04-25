@@ -25,6 +25,10 @@ public final class PhraseSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="boost")
     private @Nullable Output<Double> boost;
 
+    /**
+     * @return Hint Boost. Positive value will increase the probability that a specific phrase will be recognized over other similar sounding phrases. The higher the boost, the higher the chance of false positive recognition as well. Negative boost values would correspond to anti-biasing. Anti-biasing is not enabled, so negative boost will simply be ignored. Though `boost` can accept a wide range of positive values, most use cases are best served with values between 0 (exclusive) and 20. We recommend using a binary search approach to finding the optimal value for your use case. Speech recognition will skip PhraseSets with a boost value of 0.
+     * 
+     */
     public Optional<Output<Double>> boost() {
         return Optional.ofNullable(this.boost);
     }
@@ -43,6 +47,10 @@ public final class PhraseSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the phrase set.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -54,6 +62,10 @@ public final class PhraseSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="phraseSetId", required=true)
     private Output<String> phraseSetId;
 
+    /**
+     * @return The ID to use for the phrase set, which will become the final component of the phrase set&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+     * 
+     */
     public Output<String> phraseSetId() {
         return this.phraseSetId;
     }
@@ -65,6 +77,10 @@ public final class PhraseSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="phrases")
     private @Nullable Output<List<PhraseArgs>> phrases;
 
+    /**
+     * @return A list of word and phrases.
+     * 
+     */
     public Optional<Output<List<PhraseArgs>>> phrases() {
         return Optional.ofNullable(this.phrases);
     }
@@ -105,11 +121,23 @@ public final class PhraseSetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PhraseSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param boost Hint Boost. Positive value will increase the probability that a specific phrase will be recognized over other similar sounding phrases. The higher the boost, the higher the chance of false positive recognition as well. Negative boost values would correspond to anti-biasing. Anti-biasing is not enabled, so negative boost will simply be ignored. Though `boost` can accept a wide range of positive values, most use cases are best served with values between 0 (exclusive) and 20. We recommend using a binary search approach to finding the optimal value for your use case. Speech recognition will skip PhraseSets with a boost value of 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boost(@Nullable Output<Double> boost) {
             $.boost = boost;
             return this;
         }
 
+        /**
+         * @param boost Hint Boost. Positive value will increase the probability that a specific phrase will be recognized over other similar sounding phrases. The higher the boost, the higher the chance of false positive recognition as well. Negative boost values would correspond to anti-biasing. Anti-biasing is not enabled, so negative boost will simply be ignored. Though `boost` can accept a wide range of positive values, most use cases are best served with values between 0 (exclusive) and 20. We recommend using a binary search approach to finding the optimal value for your use case. Speech recognition will skip PhraseSets with a boost value of 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boost(Double boost) {
             return boost(Output.of(boost));
         }
@@ -123,33 +151,75 @@ public final class PhraseSetArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the phrase set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the phrase set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param phraseSetId The ID to use for the phrase set, which will become the final component of the phrase set&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseSetId(Output<String> phraseSetId) {
             $.phraseSetId = phraseSetId;
             return this;
         }
 
+        /**
+         * @param phraseSetId The ID to use for the phrase set, which will become the final component of the phrase set&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseSetId(String phraseSetId) {
             return phraseSetId(Output.of(phraseSetId));
         }
 
+        /**
+         * @param phrases A list of word and phrases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phrases(@Nullable Output<List<PhraseArgs>> phrases) {
             $.phrases = phrases;
             return this;
         }
 
+        /**
+         * @param phrases A list of word and phrases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phrases(List<PhraseArgs> phrases) {
             return phrases(Output.of(phrases));
         }
 
+        /**
+         * @param phrases A list of word and phrases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phrases(PhraseArgs... phrases) {
             return phrases(List.of(phrases));
         }

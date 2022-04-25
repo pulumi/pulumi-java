@@ -24,6 +24,10 @@ public final class EnvVarSourceResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="configMapKeyRef", required=true)
     private ConfigMapKeySelectorResponse configMapKeyRef;
 
+    /**
+     * @return (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
+     * 
+     */
     public ConfigMapKeySelectorResponse configMapKeyRef() {
         return this.configMapKeyRef;
     }
@@ -35,6 +39,10 @@ public final class EnvVarSourceResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="secretKeyRef", required=true)
     private SecretKeySelectorResponse secretKeyRef;
 
+    /**
+     * @return (Optional) Selects a key (version) of a secret in Secret Manager.
+     * 
+     */
     public SecretKeySelectorResponse secretKeyRef() {
         return this.secretKeyRef;
     }
@@ -64,11 +72,23 @@ public final class EnvVarSourceResponse extends com.pulumi.resources.InvokeArgs 
             $ = new EnvVarSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configMapKeyRef (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configMapKeyRef(ConfigMapKeySelectorResponse configMapKeyRef) {
             $.configMapKeyRef = configMapKeyRef;
             return this;
         }
 
+        /**
+         * @param secretKeyRef (Optional) Selects a key (version) of a secret in Secret Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretKeyRef(SecretKeySelectorResponse secretKeyRef) {
             $.secretKeyRef = secretKeyRef;
             return this;

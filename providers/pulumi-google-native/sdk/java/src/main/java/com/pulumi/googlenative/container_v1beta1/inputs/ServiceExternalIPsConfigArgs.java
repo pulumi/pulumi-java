@@ -26,6 +26,10 @@ public final class ServiceExternalIPsConfigArgs extends com.pulumi.resources.Res
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether Services with ExternalIPs field are allowed or not.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -54,11 +58,23 @@ public final class ServiceExternalIPsConfigArgs extends com.pulumi.resources.Res
             $ = new ServiceExternalIPsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether Services with ExternalIPs field are allowed or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether Services with ExternalIPs field are allowed or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

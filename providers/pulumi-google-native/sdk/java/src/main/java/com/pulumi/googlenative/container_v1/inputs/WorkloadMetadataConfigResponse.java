@@ -23,6 +23,10 @@ public final class WorkloadMetadataConfigResponse extends com.pulumi.resources.I
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return Mode is the configuration for how to expose metadata to workloads running on the node pool.
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -51,6 +55,12 @@ public final class WorkloadMetadataConfigResponse extends com.pulumi.resources.I
             $ = new WorkloadMetadataConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode Mode is the configuration for how to expose metadata to workloads running on the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;

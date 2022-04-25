@@ -11,37 +11,37 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceBindingResult {
     /**
-     * The timestamp when the resource was created.
+     * @return The timestamp when the resource was created.
      * 
      */
     private final String createTime;
     /**
-     * Optional. A free-text description of the resource. Max length 1024 characters.
+     * @return Optional. A free-text description of the resource. Max length 1024 characters.
      * 
      */
     private final String description;
     /**
-     * Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
+     * @return Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
      * 
      */
     private final String endpointFilter;
     /**
-     * Optional. Set of label tags associated with the ServiceBinding resource.
+     * @return Optional. Set of label tags associated with the ServiceBinding resource.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name&gt;`.
+     * @return Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name&gt;`.
      * 
      */
     private final String name;
     /**
-     * The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
+     * @return The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
      * 
      */
     private final String service;
     /**
-     * The timestamp when the resource was updated.
+     * @return The timestamp when the resource was updated.
      * 
      */
     private final String updateTime;
@@ -65,51 +65,51 @@ public final class GetServiceBindingResult {
     }
 
     /**
-     * The timestamp when the resource was created.
+     * @return The timestamp when the resource was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Optional. A free-text description of the resource. Max length 1024 characters.
+     * @return Optional. A free-text description of the resource. Max length 1024 characters.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
+     * @return Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
      * 
-    */
+     */
     public String endpointFilter() {
         return this.endpointFilter;
     }
     /**
-     * Optional. Set of label tags associated with the ServiceBinding resource.
+     * @return Optional. Set of label tags associated with the ServiceBinding resource.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name&gt;`.
+     * @return Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name&gt;`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
+     * @return The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
      * 
-    */
+     */
     public String service() {
         return this.service;
     }
     /**
-     * The timestamp when the resource was updated.
+     * @return The timestamp when the resource was updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

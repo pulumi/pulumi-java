@@ -26,6 +26,10 @@ public final class RoutingVPCArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return The URI of the VPC network.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -54,11 +58,23 @@ public final class RoutingVPCArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RoutingVPCArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param uri The URI of the VPC network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The URI of the VPC network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

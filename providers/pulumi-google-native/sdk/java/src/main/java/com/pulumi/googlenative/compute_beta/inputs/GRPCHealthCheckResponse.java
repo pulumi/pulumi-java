@@ -20,6 +20,10 @@ public final class GRPCHealthCheckResponse extends com.pulumi.resources.InvokeAr
     @Import(name="grpcServiceName", required=true)
     private String grpcServiceName;
 
+    /**
+     * @return The gRPC service name for the health check. This field is optional. The value of grpc_service_name has the following meanings by convention: - Empty service_name means the overall status of all services at the backend. - Non-empty service_name means the health of that gRPC service, as defined by the owner of the service. The grpc_service_name can only be ASCII.
+     * 
+     */
     public String grpcServiceName() {
         return this.grpcServiceName;
     }
@@ -31,6 +35,10 @@ public final class GRPCHealthCheckResponse extends com.pulumi.resources.InvokeAr
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return The port number for the health check request. Must be specified if port_name and port_specification are not set or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -42,6 +50,10 @@ public final class GRPCHealthCheckResponse extends com.pulumi.resources.InvokeAr
     @Import(name="portName", required=true)
     private String portName;
 
+    /**
+     * @return Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence. The port_name should conform to RFC1035.
+     * 
+     */
     public String portName() {
         return this.portName;
     }
@@ -53,6 +65,10 @@ public final class GRPCHealthCheckResponse extends com.pulumi.resources.InvokeAr
     @Import(name="portSpecification", required=true)
     private String portSpecification;
 
+    /**
+     * @return Specifies how port is selected for health checking, can be one of following values: USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. If not specified, gRPC health check follows behavior specified in port and portName fields.
+     * 
+     */
     public String portSpecification() {
         return this.portSpecification;
     }
@@ -84,21 +100,45 @@ public final class GRPCHealthCheckResponse extends com.pulumi.resources.InvokeAr
             $ = new GRPCHealthCheckResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param grpcServiceName The gRPC service name for the health check. This field is optional. The value of grpc_service_name has the following meanings by convention: - Empty service_name means the overall status of all services at the backend. - Non-empty service_name means the health of that gRPC service, as defined by the owner of the service. The grpc_service_name can only be ASCII.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grpcServiceName(String grpcServiceName) {
             $.grpcServiceName = grpcServiceName;
             return this;
         }
 
+        /**
+         * @param port The port number for the health check request. Must be specified if port_name and port_specification are not set or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param portName Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence. The port_name should conform to RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portName(String portName) {
             $.portName = portName;
             return this;
         }
 
+        /**
+         * @param portSpecification Specifies how port is selected for health checking, can be one of following values: USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. If not specified, gRPC health check follows behavior specified in port and portName fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portSpecification(String portSpecification) {
             $.portSpecification = portSpecification;
             return this;

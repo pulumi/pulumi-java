@@ -21,6 +21,10 @@ public final class BiEngineStatisticsResponse extends com.pulumi.resources.Invok
     @Import(name="biEngineMode", required=true)
     private String biEngineMode;
 
+    /**
+     * @return Specifies which mode of BI Engine acceleration was performed (if any).
+     * 
+     */
     public String biEngineMode() {
         return this.biEngineMode;
     }
@@ -32,6 +36,10 @@ public final class BiEngineStatisticsResponse extends com.pulumi.resources.Invok
     @Import(name="biEngineReasons", required=true)
     private List<BiEngineReasonResponse> biEngineReasons;
 
+    /**
+     * @return In case of DISABLED or PARTIAL bi_engine_mode, these contain the explanatory reasons as to why BI Engine could not accelerate. In case the full query was accelerated, this field is not populated.
+     * 
+     */
     public List<BiEngineReasonResponse> biEngineReasons() {
         return this.biEngineReasons;
     }
@@ -61,16 +69,34 @@ public final class BiEngineStatisticsResponse extends com.pulumi.resources.Invok
             $ = new BiEngineStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param biEngineMode Specifies which mode of BI Engine acceleration was performed (if any).
+         * 
+         * @return builder
+         * 
+         */
         public Builder biEngineMode(String biEngineMode) {
             $.biEngineMode = biEngineMode;
             return this;
         }
 
+        /**
+         * @param biEngineReasons In case of DISABLED or PARTIAL bi_engine_mode, these contain the explanatory reasons as to why BI Engine could not accelerate. In case the full query was accelerated, this field is not populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder biEngineReasons(List<BiEngineReasonResponse> biEngineReasons) {
             $.biEngineReasons = biEngineReasons;
             return this;
         }
 
+        /**
+         * @param biEngineReasons In case of DISABLED or PARTIAL bi_engine_mode, these contain the explanatory reasons as to why BI Engine could not accelerate. In case the full query was accelerated, this field is not populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder biEngineReasons(BiEngineReasonResponse... biEngineReasons) {
             return biEngineReasons(List.of(biEngineReasons));
         }

@@ -24,6 +24,10 @@ public final class GoogleCloudRetailV2betaRuleIgnoreActionResponse extends com.p
     @Import(name="ignoreTerms", required=true)
     private List<String> ignoreTerms;
 
+    /**
+     * @return Terms to ignore in the search query.
+     * 
+     */
     public List<String> ignoreTerms() {
         return this.ignoreTerms;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudRetailV2betaRuleIgnoreActionResponse extends com.p
             $ = new GoogleCloudRetailV2betaRuleIgnoreActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ignoreTerms Terms to ignore in the search query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreTerms(List<String> ignoreTerms) {
             $.ignoreTerms = ignoreTerms;
             return this;
         }
 
+        /**
+         * @param ignoreTerms Terms to ignore in the search query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreTerms(String... ignoreTerms) {
             return ignoreTerms(List.of(ignoreTerms));
         }

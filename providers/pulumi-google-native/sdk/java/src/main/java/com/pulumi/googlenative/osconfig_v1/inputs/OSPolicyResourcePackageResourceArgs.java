@@ -33,6 +33,10 @@ public final class OSPolicyResourcePackageResourceArgs extends com.pulumi.resour
     @Import(name="apt")
     private @Nullable Output<OSPolicyResourcePackageResourceAPTArgs> apt;
 
+    /**
+     * @return A package managed by Apt.
+     * 
+     */
     public Optional<Output<OSPolicyResourcePackageResourceAPTArgs>> apt() {
         return Optional.ofNullable(this.apt);
     }
@@ -44,6 +48,10 @@ public final class OSPolicyResourcePackageResourceArgs extends com.pulumi.resour
     @Import(name="deb")
     private @Nullable Output<OSPolicyResourcePackageResourceDebArgs> deb;
 
+    /**
+     * @return A deb package file.
+     * 
+     */
     public Optional<Output<OSPolicyResourcePackageResourceDebArgs>> deb() {
         return Optional.ofNullable(this.deb);
     }
@@ -55,6 +63,10 @@ public final class OSPolicyResourcePackageResourceArgs extends com.pulumi.resour
     @Import(name="desiredState", required=true)
     private Output<OSPolicyResourcePackageResourceDesiredState> desiredState;
 
+    /**
+     * @return The desired state the agent should maintain for this package.
+     * 
+     */
     public Output<OSPolicyResourcePackageResourceDesiredState> desiredState() {
         return this.desiredState;
     }
@@ -66,6 +78,10 @@ public final class OSPolicyResourcePackageResourceArgs extends com.pulumi.resour
     @Import(name="googet")
     private @Nullable Output<OSPolicyResourcePackageResourceGooGetArgs> googet;
 
+    /**
+     * @return A package managed by GooGet.
+     * 
+     */
     public Optional<Output<OSPolicyResourcePackageResourceGooGetArgs>> googet() {
         return Optional.ofNullable(this.googet);
     }
@@ -77,6 +93,10 @@ public final class OSPolicyResourcePackageResourceArgs extends com.pulumi.resour
     @Import(name="msi")
     private @Nullable Output<OSPolicyResourcePackageResourceMSIArgs> msi;
 
+    /**
+     * @return An MSI package.
+     * 
+     */
     public Optional<Output<OSPolicyResourcePackageResourceMSIArgs>> msi() {
         return Optional.ofNullable(this.msi);
     }
@@ -88,6 +108,10 @@ public final class OSPolicyResourcePackageResourceArgs extends com.pulumi.resour
     @Import(name="rpm")
     private @Nullable Output<OSPolicyResourcePackageResourceRPMArgs> rpm;
 
+    /**
+     * @return An rpm package file.
+     * 
+     */
     public Optional<Output<OSPolicyResourcePackageResourceRPMArgs>> rpm() {
         return Optional.ofNullable(this.rpm);
     }
@@ -99,6 +123,10 @@ public final class OSPolicyResourcePackageResourceArgs extends com.pulumi.resour
     @Import(name="yum")
     private @Nullable Output<OSPolicyResourcePackageResourceYUMArgs> yum;
 
+    /**
+     * @return A package managed by YUM.
+     * 
+     */
     public Optional<Output<OSPolicyResourcePackageResourceYUMArgs>> yum() {
         return Optional.ofNullable(this.yum);
     }
@@ -110,6 +138,10 @@ public final class OSPolicyResourcePackageResourceArgs extends com.pulumi.resour
     @Import(name="zypper")
     private @Nullable Output<OSPolicyResourcePackageResourceZypperArgs> zypper;
 
+    /**
+     * @return A package managed by Zypper.
+     * 
+     */
     public Optional<Output<OSPolicyResourcePackageResourceZypperArgs>> zypper() {
         return Optional.ofNullable(this.zypper);
     }
@@ -145,74 +177,170 @@ public final class OSPolicyResourcePackageResourceArgs extends com.pulumi.resour
             $ = new OSPolicyResourcePackageResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apt A package managed by Apt.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apt(@Nullable Output<OSPolicyResourcePackageResourceAPTArgs> apt) {
             $.apt = apt;
             return this;
         }
 
+        /**
+         * @param apt A package managed by Apt.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apt(OSPolicyResourcePackageResourceAPTArgs apt) {
             return apt(Output.of(apt));
         }
 
+        /**
+         * @param deb A deb package file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deb(@Nullable Output<OSPolicyResourcePackageResourceDebArgs> deb) {
             $.deb = deb;
             return this;
         }
 
+        /**
+         * @param deb A deb package file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deb(OSPolicyResourcePackageResourceDebArgs deb) {
             return deb(Output.of(deb));
         }
 
+        /**
+         * @param desiredState The desired state the agent should maintain for this package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredState(Output<OSPolicyResourcePackageResourceDesiredState> desiredState) {
             $.desiredState = desiredState;
             return this;
         }
 
+        /**
+         * @param desiredState The desired state the agent should maintain for this package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredState(OSPolicyResourcePackageResourceDesiredState desiredState) {
             return desiredState(Output.of(desiredState));
         }
 
+        /**
+         * @param googet A package managed by GooGet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googet(@Nullable Output<OSPolicyResourcePackageResourceGooGetArgs> googet) {
             $.googet = googet;
             return this;
         }
 
+        /**
+         * @param googet A package managed by GooGet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googet(OSPolicyResourcePackageResourceGooGetArgs googet) {
             return googet(Output.of(googet));
         }
 
+        /**
+         * @param msi An MSI package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder msi(@Nullable Output<OSPolicyResourcePackageResourceMSIArgs> msi) {
             $.msi = msi;
             return this;
         }
 
+        /**
+         * @param msi An MSI package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder msi(OSPolicyResourcePackageResourceMSIArgs msi) {
             return msi(Output.of(msi));
         }
 
+        /**
+         * @param rpm An rpm package file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpm(@Nullable Output<OSPolicyResourcePackageResourceRPMArgs> rpm) {
             $.rpm = rpm;
             return this;
         }
 
+        /**
+         * @param rpm An rpm package file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpm(OSPolicyResourcePackageResourceRPMArgs rpm) {
             return rpm(Output.of(rpm));
         }
 
+        /**
+         * @param yum A package managed by YUM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yum(@Nullable Output<OSPolicyResourcePackageResourceYUMArgs> yum) {
             $.yum = yum;
             return this;
         }
 
+        /**
+         * @param yum A package managed by YUM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yum(OSPolicyResourcePackageResourceYUMArgs yum) {
             return yum(Output.of(yum));
         }
 
+        /**
+         * @param zypper A package managed by Zypper.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zypper(@Nullable Output<OSPolicyResourcePackageResourceZypperArgs> zypper) {
             $.zypper = zypper;
             return this;
         }
 
+        /**
+         * @param zypper A package managed by Zypper.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zypper(OSPolicyResourcePackageResourceZypperArgs zypper) {
             return zypper(Output.of(zypper));
         }

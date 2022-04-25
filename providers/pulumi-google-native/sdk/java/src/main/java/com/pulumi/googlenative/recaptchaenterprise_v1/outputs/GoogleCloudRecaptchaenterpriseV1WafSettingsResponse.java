@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse {
     /**
-     * The WAF feature for which this key is enabled.
+     * @return The WAF feature for which this key is enabled.
      * 
      */
     private final String wafFeature;
     /**
-     * The WAF service that uses this key.
+     * @return The WAF service that uses this key.
      * 
      */
     private final String wafService;
@@ -29,16 +29,16 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse {
     }
 
     /**
-     * The WAF feature for which this key is enabled.
+     * @return The WAF feature for which this key is enabled.
      * 
-    */
+     */
     public String wafFeature() {
         return this.wafFeature;
     }
     /**
-     * The WAF service that uses this key.
+     * @return The WAF service that uses this key.
      * 
-    */
+     */
     public String wafService() {
         return this.wafService;
     }

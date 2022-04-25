@@ -24,6 +24,10 @@ public final class GlueRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hostName", required=true)
     private String hostName;
 
+    /**
+     * @return Domain name of the host in Punycode format.
+     * 
+     */
     public String hostName() {
         return this.hostName;
     }
@@ -35,6 +39,10 @@ public final class GlueRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipv4Addresses", required=true)
     private List<String> ipv4Addresses;
 
+    /**
+     * @return List of IPv4 addresses corresponding to this host in the standard decimal format (e.g. `198.51.100.1`). At least one of `ipv4_address` and `ipv6_address` must be set.
+     * 
+     */
     public List<String> ipv4Addresses() {
         return this.ipv4Addresses;
     }
@@ -46,6 +54,10 @@ public final class GlueRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipv6Addresses", required=true)
     private List<String> ipv6Addresses;
 
+    /**
+     * @return List of IPv6 addresses corresponding to this host in the standard hexadecimal format (e.g. `2001:db8::`). At least one of `ipv4_address` and `ipv6_address` must be set.
+     * 
+     */
     public List<String> ipv6Addresses() {
         return this.ipv6Addresses;
     }
@@ -76,25 +88,55 @@ public final class GlueRecordResponse extends com.pulumi.resources.InvokeArgs {
             $ = new GlueRecordResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostName Domain name of the host in Punycode format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(String hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param ipv4Addresses List of IPv4 addresses corresponding to this host in the standard decimal format (e.g. `198.51.100.1`). At least one of `ipv4_address` and `ipv6_address` must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Addresses(List<String> ipv4Addresses) {
             $.ipv4Addresses = ipv4Addresses;
             return this;
         }
 
+        /**
+         * @param ipv4Addresses List of IPv4 addresses corresponding to this host in the standard decimal format (e.g. `198.51.100.1`). At least one of `ipv4_address` and `ipv6_address` must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Addresses(String... ipv4Addresses) {
             return ipv4Addresses(List.of(ipv4Addresses));
         }
 
+        /**
+         * @param ipv6Addresses List of IPv6 addresses corresponding to this host in the standard hexadecimal format (e.g. `2001:db8::`). At least one of `ipv4_address` and `ipv6_address` must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6Addresses(List<String> ipv6Addresses) {
             $.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
+        /**
+         * @param ipv6Addresses List of IPv6 addresses corresponding to this host in the standard hexadecimal format (e.g. `2001:db8::`). At least one of `ipv4_address` and `ipv6_address` must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6Addresses(String... ipv6Addresses) {
             return ipv6Addresses(List.of(ipv6Addresses));
         }

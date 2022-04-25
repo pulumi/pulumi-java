@@ -27,6 +27,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskEncryptionKey")
     private @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey;
 
+    /**
+     * @return Encrypts the disk using a customer-supplied encryption key or a customer-managed encryption key. Encryption keys do not protect access to metadata of the disk. After you encrypt a disk with a customer-supplied key, you must provide the same key if you use the disk later. For example, to create a disk snapshot, to create a disk image, to create a machine image, or to attach the disk to a virtual machine. After you encrypt a disk with a customer-managed key, the diskEncryptionKey.kmsKeyName is set to a key *version* name once the disk is created. The disk is encrypted with this version of the key. In the response, diskEncryptionKey.kmsKeyName appears in the following format: &#34;diskEncryptionKey.kmsKeyName&#34;: &#34;projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key /cryptoKeysVersions/version If you do not provide an encryption key when creating the disk, then the disk is encrypted using an automatically generated key and you don&#39;t need to provide a key to use the disk later.
+     * 
+     */
     public Optional<Output<CustomerEncryptionKeyArgs>> diskEncryptionKey() {
         return Optional.ofNullable(this.diskEncryptionKey);
     }
@@ -49,6 +57,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eraseWindowsVssSignature")
     private @Nullable Output<Boolean> eraseWindowsVssSignature;
 
+    /**
+     * @return Specifies whether the disk restored from a source snapshot should erase Windows specific VSS signature.
+     * 
+     */
     public Optional<Output<Boolean>> eraseWindowsVssSignature() {
         return Optional.ofNullable(this.eraseWindowsVssSignature);
     }
@@ -60,6 +72,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="guestOsFeatures")
     private @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
 
+    /**
+     * @return A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+     * 
+     */
     public Optional<Output<List<GuestOsFeatureArgs>>> guestOsFeatures() {
         return Optional.ofNullable(this.guestOsFeatures);
     }
@@ -71,6 +87,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels to apply to this disk. These can be later modified by the setLabels method.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -82,6 +102,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="licenseCodes")
     private @Nullable Output<List<String>> licenseCodes;
 
+    /**
+     * @return Integer license codes indicating which licenses are attached to this disk.
+     * 
+     */
     public Optional<Output<List<String>>> licenseCodes() {
         return Optional.ofNullable(this.licenseCodes);
     }
@@ -93,6 +117,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="licenses")
     private @Nullable Output<List<String>> licenses;
 
+    /**
+     * @return A list of publicly visible licenses. Reserved for Google&#39;s use.
+     * 
+     */
     public Optional<Output<List<String>>> licenses() {
         return Optional.ofNullable(this.licenses);
     }
@@ -104,6 +132,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locationHint")
     private @Nullable Output<String> locationHint;
 
+    /**
+     * @return An opaque location hint used to place the disk close to other resources. This field is for use by internal tools that use the public API.
+     * 
+     */
     public Optional<Output<String>> locationHint() {
         return Optional.ofNullable(this.locationHint);
     }
@@ -115,6 +147,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="multiWriter")
     private @Nullable Output<Boolean> multiWriter;
 
+    /**
+     * @return Indicates whether or not the disk can be read/write attached to more than one instance.
+     * 
+     */
     public Optional<Output<Boolean>> multiWriter() {
         return Optional.ofNullable(this.multiWriter);
     }
@@ -126,6 +162,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -137,6 +177,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="options")
     private @Nullable Output<String> options;
 
+    /**
+     * @return Internal use only.
+     * 
+     */
     public Optional<Output<String>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -148,6 +192,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="physicalBlockSizeBytes")
     private @Nullable Output<String> physicalBlockSizeBytes;
 
+    /**
+     * @return Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. The currently supported size is 4096, other sizes may be added in the future. If an unsupported value is requested, the error message will list the supported values for the caller&#39;s project.
+     * 
+     */
     public Optional<Output<String>> physicalBlockSizeBytes() {
         return Optional.ofNullable(this.physicalBlockSizeBytes);
     }
@@ -166,6 +214,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisionedIops")
     private @Nullable Output<String> provisionedIops;
 
+    /**
+     * @return Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per second that the disk can handle. Values must be between 10,000 and 120,000. For more details, see the Extreme persistent disk documentation.
+     * 
+     */
     public Optional<Output<String>> provisionedIops() {
         return Optional.ofNullable(this.provisionedIops);
     }
@@ -184,6 +236,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicaZones")
     private @Nullable Output<List<String>> replicaZones;
 
+    /**
+     * @return URLs of the zones where the disk should be replicated to. Only applicable for regional resources.
+     * 
+     */
     public Optional<Output<List<String>>> replicaZones() {
         return Optional.ofNullable(this.replicaZones);
     }
@@ -202,6 +258,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourcePolicies")
     private @Nullable Output<List<String>> resourcePolicies;
 
+    /**
+     * @return Resource policies applied to this disk for automatic snapshot creations.
+     * 
+     */
     public Optional<Output<List<String>>> resourcePolicies() {
         return Optional.ofNullable(this.resourcePolicies);
     }
@@ -213,6 +273,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sizeGb")
     private @Nullable Output<String> sizeGb;
 
+    /**
+     * @return Size, in GB, of the persistent disk. You can specify this field when creating a persistent disk using the sourceImage, sourceSnapshot, or sourceDisk parameter, or specify it alone to create an empty persistent disk. If you specify this field along with a source, the value of sizeGb must not be less than the size of the source. Acceptable values are 1 to 65536, inclusive.
+     * 
+     */
     public Optional<Output<String>> sizeGb() {
         return Optional.ofNullable(this.sizeGb);
     }
@@ -224,6 +288,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDisk")
     private @Nullable Output<String> sourceDisk;
 
+    /**
+     * @return The source disk used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk - projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk - zones/zone/disks/disk - regions/region/disks/disk
+     * 
+     */
     public Optional<Output<String>> sourceDisk() {
         return Optional.ofNullable(this.sourceDisk);
     }
@@ -235,6 +303,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceImage")
     private @Nullable Output<String> sourceImage;
 
+    /**
+     * @return The source image used to create this disk. If the source image is deleted, this field will not be set. To create a disk with one of the public operating system images, specify the image by its family name. For example, specify family/debian-9 to use the latest Debian 9 image: projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific version of a public operating system image: projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD To create a disk with a custom image that you created, specify the image name in the following format: global/images/my-custom-image You can also specify a custom image by its image family, which returns the latest version of the image in that family. Replace the image name with family/family-name: global/images/family/my-image-family
+     * 
+     */
     public Optional<Output<String>> sourceImage() {
         return Optional.ofNullable(this.sourceImage);
     }
@@ -246,6 +318,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceImageEncryptionKey")
     private @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
 
+    /**
+     * @return The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.
+     * 
+     */
     public Optional<Output<CustomerEncryptionKeyArgs>> sourceImageEncryptionKey() {
         return Optional.ofNullable(this.sourceImageEncryptionKey);
     }
@@ -257,6 +333,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceSnapshot")
     private @Nullable Output<String> sourceSnapshot;
 
+    /**
+     * @return The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project /global/snapshots/snapshot - projects/project/global/snapshots/snapshot - global/snapshots/snapshot
+     * 
+     */
     public Optional<Output<String>> sourceSnapshot() {
         return Optional.ofNullable(this.sourceSnapshot);
     }
@@ -268,6 +348,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceSnapshotEncryptionKey")
     private @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
+    /**
+     * @return The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key.
+     * 
+     */
     public Optional<Output<CustomerEncryptionKeyArgs>> sourceSnapshotEncryptionKey() {
         return Optional.ofNullable(this.sourceSnapshotEncryptionKey);
     }
@@ -279,6 +363,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceStorageObject")
     private @Nullable Output<String> sourceStorageObject;
 
+    /**
+     * @return The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk. Valid URIs may start with gs:// or https://storage.googleapis.com/. This flag is not optimized for creating multiple disks from a source storage object. To create many disks from a source storage object, use gcloud compute images import instead.
+     * 
+     */
     public Optional<Output<String>> sourceStorageObject() {
         return Optional.ofNullable(this.sourceStorageObject);
     }
@@ -290,6 +378,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk. For example: projects/project /zones/zone/diskTypes/pd-ssd . See Persistent disk types.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -301,6 +393,10 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userLicenses")
     private @Nullable Output<List<String>> userLicenses;
 
+    /**
+     * @return A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can be modified after the disk is created. This includes a list of URLs to the license resource. For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch
+     * 
+     */
     public Optional<Output<List<String>>> userLicenses() {
         return Optional.ofNullable(this.userLicenses);
     }
@@ -355,122 +451,284 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RegionDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param diskEncryptionKey Encrypts the disk using a customer-supplied encryption key or a customer-managed encryption key. Encryption keys do not protect access to metadata of the disk. After you encrypt a disk with a customer-supplied key, you must provide the same key if you use the disk later. For example, to create a disk snapshot, to create a disk image, to create a machine image, or to attach the disk to a virtual machine. After you encrypt a disk with a customer-managed key, the diskEncryptionKey.kmsKeyName is set to a key *version* name once the disk is created. The disk is encrypted with this version of the key. In the response, diskEncryptionKey.kmsKeyName appears in the following format: &#34;diskEncryptionKey.kmsKeyName&#34;: &#34;projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key /cryptoKeysVersions/version If you do not provide an encryption key when creating the disk, then the disk is encrypted using an automatically generated key and you don&#39;t need to provide a key to use the disk later.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey) {
             $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
+        /**
+         * @param diskEncryptionKey Encrypts the disk using a customer-supplied encryption key or a customer-managed encryption key. Encryption keys do not protect access to metadata of the disk. After you encrypt a disk with a customer-supplied key, you must provide the same key if you use the disk later. For example, to create a disk snapshot, to create a disk image, to create a machine image, or to attach the disk to a virtual machine. After you encrypt a disk with a customer-managed key, the diskEncryptionKey.kmsKeyName is set to a key *version* name once the disk is created. The disk is encrypted with this version of the key. In the response, diskEncryptionKey.kmsKeyName appears in the following format: &#34;diskEncryptionKey.kmsKeyName&#34;: &#34;projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key /cryptoKeysVersions/version If you do not provide an encryption key when creating the disk, then the disk is encrypted using an automatically generated key and you don&#39;t need to provide a key to use the disk later.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKey(CustomerEncryptionKeyArgs diskEncryptionKey) {
             return diskEncryptionKey(Output.of(diskEncryptionKey));
         }
 
+        /**
+         * @param eraseWindowsVssSignature Specifies whether the disk restored from a source snapshot should erase Windows specific VSS signature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eraseWindowsVssSignature(@Nullable Output<Boolean> eraseWindowsVssSignature) {
             $.eraseWindowsVssSignature = eraseWindowsVssSignature;
             return this;
         }
 
+        /**
+         * @param eraseWindowsVssSignature Specifies whether the disk restored from a source snapshot should erase Windows specific VSS signature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eraseWindowsVssSignature(Boolean eraseWindowsVssSignature) {
             return eraseWindowsVssSignature(Output.of(eraseWindowsVssSignature));
         }
 
+        /**
+         * @param guestOsFeatures A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestOsFeatures(@Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures) {
             $.guestOsFeatures = guestOsFeatures;
             return this;
         }
 
+        /**
+         * @param guestOsFeatures A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestOsFeatures(List<GuestOsFeatureArgs> guestOsFeatures) {
             return guestOsFeatures(Output.of(guestOsFeatures));
         }
 
+        /**
+         * @param guestOsFeatures A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestOsFeatures(GuestOsFeatureArgs... guestOsFeatures) {
             return guestOsFeatures(List.of(guestOsFeatures));
         }
 
+        /**
+         * @param labels Labels to apply to this disk. These can be later modified by the setLabels method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels to apply to this disk. These can be later modified by the setLabels method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param licenseCodes Integer license codes indicating which licenses are attached to this disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseCodes(@Nullable Output<List<String>> licenseCodes) {
             $.licenseCodes = licenseCodes;
             return this;
         }
 
+        /**
+         * @param licenseCodes Integer license codes indicating which licenses are attached to this disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseCodes(List<String> licenseCodes) {
             return licenseCodes(Output.of(licenseCodes));
         }
 
+        /**
+         * @param licenseCodes Integer license codes indicating which licenses are attached to this disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseCodes(String... licenseCodes) {
             return licenseCodes(List.of(licenseCodes));
         }
 
+        /**
+         * @param licenses A list of publicly visible licenses. Reserved for Google&#39;s use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenses(@Nullable Output<List<String>> licenses) {
             $.licenses = licenses;
             return this;
         }
 
+        /**
+         * @param licenses A list of publicly visible licenses. Reserved for Google&#39;s use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenses(List<String> licenses) {
             return licenses(Output.of(licenses));
         }
 
+        /**
+         * @param licenses A list of publicly visible licenses. Reserved for Google&#39;s use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenses(String... licenses) {
             return licenses(List.of(licenses));
         }
 
+        /**
+         * @param locationHint An opaque location hint used to place the disk close to other resources. This field is for use by internal tools that use the public API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationHint(@Nullable Output<String> locationHint) {
             $.locationHint = locationHint;
             return this;
         }
 
+        /**
+         * @param locationHint An opaque location hint used to place the disk close to other resources. This field is for use by internal tools that use the public API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationHint(String locationHint) {
             return locationHint(Output.of(locationHint));
         }
 
+        /**
+         * @param multiWriter Indicates whether or not the disk can be read/write attached to more than one instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiWriter(@Nullable Output<Boolean> multiWriter) {
             $.multiWriter = multiWriter;
             return this;
         }
 
+        /**
+         * @param multiWriter Indicates whether or not the disk can be read/write attached to more than one instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiWriter(Boolean multiWriter) {
             return multiWriter(Output.of(multiWriter));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param options Internal use only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<String> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Internal use only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(String options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param physicalBlockSizeBytes Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. The currently supported size is 4096, other sizes may be added in the future. If an unsupported value is requested, the error message will list the supported values for the caller&#39;s project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder physicalBlockSizeBytes(@Nullable Output<String> physicalBlockSizeBytes) {
             $.physicalBlockSizeBytes = physicalBlockSizeBytes;
             return this;
         }
 
+        /**
+         * @param physicalBlockSizeBytes Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. The currently supported size is 4096, other sizes may be added in the future. If an unsupported value is requested, the error message will list the supported values for the caller&#39;s project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder physicalBlockSizeBytes(String physicalBlockSizeBytes) {
             return physicalBlockSizeBytes(Output.of(physicalBlockSizeBytes));
         }
@@ -484,11 +742,23 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param provisionedIops Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per second that the disk can handle. Values must be between 10,000 and 120,000. For more details, see the Extreme persistent disk documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionedIops(@Nullable Output<String> provisionedIops) {
             $.provisionedIops = provisionedIops;
             return this;
         }
 
+        /**
+         * @param provisionedIops Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per second that the disk can handle. Values must be between 10,000 and 120,000. For more details, see the Extreme persistent disk documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionedIops(String provisionedIops) {
             return provisionedIops(Output.of(provisionedIops));
         }
@@ -502,15 +772,33 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
             return region(Output.of(region));
         }
 
+        /**
+         * @param replicaZones URLs of the zones where the disk should be replicated to. Only applicable for regional resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaZones(@Nullable Output<List<String>> replicaZones) {
             $.replicaZones = replicaZones;
             return this;
         }
 
+        /**
+         * @param replicaZones URLs of the zones where the disk should be replicated to. Only applicable for regional resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaZones(List<String> replicaZones) {
             return replicaZones(Output.of(replicaZones));
         }
 
+        /**
+         * @param replicaZones URLs of the zones where the disk should be replicated to. Only applicable for regional resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaZones(String... replicaZones) {
             return replicaZones(List.of(replicaZones));
         }
@@ -524,100 +812,232 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param resourcePolicies Resource policies applied to this disk for automatic snapshot creations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(@Nullable Output<List<String>> resourcePolicies) {
             $.resourcePolicies = resourcePolicies;
             return this;
         }
 
+        /**
+         * @param resourcePolicies Resource policies applied to this disk for automatic snapshot creations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(List<String> resourcePolicies) {
             return resourcePolicies(Output.of(resourcePolicies));
         }
 
+        /**
+         * @param resourcePolicies Resource policies applied to this disk for automatic snapshot creations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(String... resourcePolicies) {
             return resourcePolicies(List.of(resourcePolicies));
         }
 
+        /**
+         * @param sizeGb Size, in GB, of the persistent disk. You can specify this field when creating a persistent disk using the sourceImage, sourceSnapshot, or sourceDisk parameter, or specify it alone to create an empty persistent disk. If you specify this field along with a source, the value of sizeGb must not be less than the size of the source. Acceptable values are 1 to 65536, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeGb(@Nullable Output<String> sizeGb) {
             $.sizeGb = sizeGb;
             return this;
         }
 
+        /**
+         * @param sizeGb Size, in GB, of the persistent disk. You can specify this field when creating a persistent disk using the sourceImage, sourceSnapshot, or sourceDisk parameter, or specify it alone to create an empty persistent disk. If you specify this field along with a source, the value of sizeGb must not be less than the size of the source. Acceptable values are 1 to 65536, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeGb(String sizeGb) {
             return sizeGb(Output.of(sizeGb));
         }
 
+        /**
+         * @param sourceDisk The source disk used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk - projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk - zones/zone/disks/disk - regions/region/disks/disk
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
             $.sourceDisk = sourceDisk;
             return this;
         }
 
+        /**
+         * @param sourceDisk The source disk used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk - projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk - zones/zone/disks/disk - regions/region/disks/disk
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDisk(String sourceDisk) {
             return sourceDisk(Output.of(sourceDisk));
         }
 
+        /**
+         * @param sourceImage The source image used to create this disk. If the source image is deleted, this field will not be set. To create a disk with one of the public operating system images, specify the image by its family name. For example, specify family/debian-9 to use the latest Debian 9 image: projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific version of a public operating system image: projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD To create a disk with a custom image that you created, specify the image name in the following format: global/images/my-custom-image You can also specify a custom image by its image family, which returns the latest version of the image in that family. Replace the image name with family/family-name: global/images/family/my-image-family
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImage(@Nullable Output<String> sourceImage) {
             $.sourceImage = sourceImage;
             return this;
         }
 
+        /**
+         * @param sourceImage The source image used to create this disk. If the source image is deleted, this field will not be set. To create a disk with one of the public operating system images, specify the image by its family name. For example, specify family/debian-9 to use the latest Debian 9 image: projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific version of a public operating system image: projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD To create a disk with a custom image that you created, specify the image name in the following format: global/images/my-custom-image You can also specify a custom image by its image family, which returns the latest version of the image in that family. Replace the image name with family/family-name: global/images/family/my-image-family
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImage(String sourceImage) {
             return sourceImage(Output.of(sourceImage));
         }
 
+        /**
+         * @param sourceImageEncryptionKey The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
             $.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
 
+        /**
+         * @param sourceImageEncryptionKey The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImageEncryptionKey(CustomerEncryptionKeyArgs sourceImageEncryptionKey) {
             return sourceImageEncryptionKey(Output.of(sourceImageEncryptionKey));
         }
 
+        /**
+         * @param sourceSnapshot The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project /global/snapshots/snapshot - projects/project/global/snapshots/snapshot - global/snapshots/snapshot
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshot(@Nullable Output<String> sourceSnapshot) {
             $.sourceSnapshot = sourceSnapshot;
             return this;
         }
 
+        /**
+         * @param sourceSnapshot The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project /global/snapshots/snapshot - projects/project/global/snapshots/snapshot - global/snapshots/snapshot
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshot(String sourceSnapshot) {
             return sourceSnapshot(Output.of(sourceSnapshot));
         }
 
+        /**
+         * @param sourceSnapshotEncryptionKey The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshotEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
             $.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
 
+        /**
+         * @param sourceSnapshotEncryptionKey The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshotEncryptionKey(CustomerEncryptionKeyArgs sourceSnapshotEncryptionKey) {
             return sourceSnapshotEncryptionKey(Output.of(sourceSnapshotEncryptionKey));
         }
 
+        /**
+         * @param sourceStorageObject The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk. Valid URIs may start with gs:// or https://storage.googleapis.com/. This flag is not optimized for creating multiple disks from a source storage object. To create many disks from a source storage object, use gcloud compute images import instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceStorageObject(@Nullable Output<String> sourceStorageObject) {
             $.sourceStorageObject = sourceStorageObject;
             return this;
         }
 
+        /**
+         * @param sourceStorageObject The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk. Valid URIs may start with gs:// or https://storage.googleapis.com/. This flag is not optimized for creating multiple disks from a source storage object. To create many disks from a source storage object, use gcloud compute images import instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceStorageObject(String sourceStorageObject) {
             return sourceStorageObject(Output.of(sourceStorageObject));
         }
 
+        /**
+         * @param type URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk. For example: projects/project /zones/zone/diskTypes/pd-ssd . See Persistent disk types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk. For example: projects/project /zones/zone/diskTypes/pd-ssd . See Persistent disk types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userLicenses A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can be modified after the disk is created. This includes a list of URLs to the license resource. For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch
+         * 
+         * @return builder
+         * 
+         */
         public Builder userLicenses(@Nullable Output<List<String>> userLicenses) {
             $.userLicenses = userLicenses;
             return this;
         }
 
+        /**
+         * @param userLicenses A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can be modified after the disk is created. This includes a list of URLs to the license resource. For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch
+         * 
+         * @return builder
+         * 
+         */
         public Builder userLicenses(List<String> userLicenses) {
             return userLicenses(Output.of(userLicenses));
         }
 
+        /**
+         * @param userLicenses A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can be modified after the disk is created. This includes a list of URLs to the license resource. For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch
+         * 
+         * @return builder
+         * 
+         */
         public Builder userLicenses(String... userLicenses) {
             return userLicenses(List.of(userLicenses));
         }

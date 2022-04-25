@@ -26,6 +26,10 @@ public final class PadArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bottomPixels")
     private @Nullable Output<Integer> bottomPixels;
 
+    /**
+     * @return The number of pixels to add to the bottom. The default is 0.
+     * 
+     */
     public Optional<Output<Integer>> bottomPixels() {
         return Optional.ofNullable(this.bottomPixels);
     }
@@ -37,6 +41,10 @@ public final class PadArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="leftPixels")
     private @Nullable Output<Integer> leftPixels;
 
+    /**
+     * @return The number of pixels to add to the left. The default is 0.
+     * 
+     */
     public Optional<Output<Integer>> leftPixels() {
         return Optional.ofNullable(this.leftPixels);
     }
@@ -48,6 +56,10 @@ public final class PadArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rightPixels")
     private @Nullable Output<Integer> rightPixels;
 
+    /**
+     * @return The number of pixels to add to the right. The default is 0.
+     * 
+     */
     public Optional<Output<Integer>> rightPixels() {
         return Optional.ofNullable(this.rightPixels);
     }
@@ -59,6 +71,10 @@ public final class PadArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topPixels")
     private @Nullable Output<Integer> topPixels;
 
+    /**
+     * @return The number of pixels to add to the top. The default is 0.
+     * 
+     */
     public Optional<Output<Integer>> topPixels() {
         return Optional.ofNullable(this.topPixels);
     }
@@ -90,38 +106,86 @@ public final class PadArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PadArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bottomPixels The number of pixels to add to the bottom. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bottomPixels(@Nullable Output<Integer> bottomPixels) {
             $.bottomPixels = bottomPixels;
             return this;
         }
 
+        /**
+         * @param bottomPixels The number of pixels to add to the bottom. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bottomPixels(Integer bottomPixels) {
             return bottomPixels(Output.of(bottomPixels));
         }
 
+        /**
+         * @param leftPixels The number of pixels to add to the left. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder leftPixels(@Nullable Output<Integer> leftPixels) {
             $.leftPixels = leftPixels;
             return this;
         }
 
+        /**
+         * @param leftPixels The number of pixels to add to the left. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder leftPixels(Integer leftPixels) {
             return leftPixels(Output.of(leftPixels));
         }
 
+        /**
+         * @param rightPixels The number of pixels to add to the right. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rightPixels(@Nullable Output<Integer> rightPixels) {
             $.rightPixels = rightPixels;
             return this;
         }
 
+        /**
+         * @param rightPixels The number of pixels to add to the right. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rightPixels(Integer rightPixels) {
             return rightPixels(Output.of(rightPixels));
         }
 
+        /**
+         * @param topPixels The number of pixels to add to the top. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topPixels(@Nullable Output<Integer> topPixels) {
             $.topPixels = topPixels;
             return this;
         }
 
+        /**
+         * @param topPixels The number of pixels to add to the top. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topPixels(Integer topPixels) {
             return topPixels(Output.of(topPixels));
         }

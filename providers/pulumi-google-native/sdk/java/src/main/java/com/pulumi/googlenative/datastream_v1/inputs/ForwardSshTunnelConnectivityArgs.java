@@ -27,6 +27,10 @@ public final class ForwardSshTunnelConnectivityArgs extends com.pulumi.resources
     @Import(name="hostname", required=true)
     private Output<String> hostname;
 
+    /**
+     * @return Hostname for the SSH tunnel.
+     * 
+     */
     public Output<String> hostname() {
         return this.hostname;
     }
@@ -38,6 +42,10 @@ public final class ForwardSshTunnelConnectivityArgs extends com.pulumi.resources
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Input only. SSH password.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -49,6 +57,10 @@ public final class ForwardSshTunnelConnectivityArgs extends com.pulumi.resources
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return Port for the SSH tunnel, default value is 22.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -60,6 +72,10 @@ public final class ForwardSshTunnelConnectivityArgs extends com.pulumi.resources
     @Import(name="privateKey")
     private @Nullable Output<String> privateKey;
 
+    /**
+     * @return Input only. SSH private key.
+     * 
+     */
     public Optional<Output<String>> privateKey() {
         return Optional.ofNullable(this.privateKey);
     }
@@ -71,6 +87,10 @@ public final class ForwardSshTunnelConnectivityArgs extends com.pulumi.resources
     @Import(name="username", required=true)
     private Output<String> username;
 
+    /**
+     * @return Username for the SSH tunnel.
+     * 
+     */
     public Output<String> username() {
         return this.username;
     }
@@ -103,47 +123,107 @@ public final class ForwardSshTunnelConnectivityArgs extends com.pulumi.resources
             $ = new ForwardSshTunnelConnectivityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostname Hostname for the SSH tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param hostname Hostname for the SSH tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }
 
+        /**
+         * @param password Input only. SSH password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Input only. SSH password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param port Port for the SSH tunnel, default value is 22.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Port for the SSH tunnel, default value is 22.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param privateKey Input only. SSH private key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(@Nullable Output<String> privateKey) {
             $.privateKey = privateKey;
             return this;
         }
 
+        /**
+         * @param privateKey Input only. SSH private key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(String privateKey) {
             return privateKey(Output.of(privateKey));
         }
 
+        /**
+         * @param username Username for the SSH tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Username for the SSH tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

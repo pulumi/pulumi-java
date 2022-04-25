@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse exte
     @Import(name="enableTextToSpeech", required=true)
     private Boolean enableTextToSpeech;
 
+    /**
+     * @return Optional. Indicates whether text to speech is enabled. Even when this field is false, other settings in this proto are still retained.
+     * 
+     */
     public Boolean enableTextToSpeech() {
         return this.enableTextToSpeech;
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse exte
     @Import(name="outputAudioEncoding", required=true)
     private String outputAudioEncoding;
 
+    /**
+     * @return Audio encoding of the synthesized audio content.
+     * 
+     */
     public String outputAudioEncoding() {
         return this.outputAudioEncoding;
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse exte
     @Import(name="sampleRateHertz", required=true)
     private Integer sampleRateHertz;
 
+    /**
+     * @return Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice&#39;s natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
+     * 
+     */
     public Integer sampleRateHertz() {
         return this.sampleRateHertz;
     }
@@ -59,6 +71,10 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse exte
     @Import(name="synthesizeSpeechConfigs", required=true)
     private Map<String,String> synthesizeSpeechConfigs;
 
+    /**
+     * @return Optional. Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.
+     * 
+     */
     public Map<String,String> synthesizeSpeechConfigs() {
         return this.synthesizeSpeechConfigs;
     }
@@ -90,21 +106,45 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse exte
             $ = new GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableTextToSpeech Optional. Indicates whether text to speech is enabled. Even when this field is false, other settings in this proto are still retained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableTextToSpeech(Boolean enableTextToSpeech) {
             $.enableTextToSpeech = enableTextToSpeech;
             return this;
         }
 
+        /**
+         * @param outputAudioEncoding Audio encoding of the synthesized audio content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputAudioEncoding(String outputAudioEncoding) {
             $.outputAudioEncoding = outputAudioEncoding;
             return this;
         }
 
+        /**
+         * @param sampleRateHertz Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice&#39;s natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleRateHertz(Integer sampleRateHertz) {
             $.sampleRateHertz = sampleRateHertz;
             return this;
         }
 
+        /**
+         * @param synthesizeSpeechConfigs Optional. Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synthesizeSpeechConfigs(Map<String,String> synthesizeSpeechConfigs) {
             $.synthesizeSpeechConfigs = synthesizeSpeechConfigs;
             return this;

@@ -25,6 +25,10 @@ public final class TextStreamResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="codec", required=true)
     private String codec;
 
+    /**
+     * @return The codec for this text stream. The default is `webvtt`. Supported text codecs: - `srt` - `ttml` - `cea608` - `cea708` - `webvtt`
+     * 
+     */
     public String codec() {
         return this.codec;
     }
@@ -36,6 +40,10 @@ public final class TextStreamResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mapping", required=true)
     private List<TextMappingResponse> mapping;
 
+    /**
+     * @return The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
+     * 
+     */
     public List<TextMappingResponse> mapping() {
         return this.mapping;
     }
@@ -65,16 +73,34 @@ public final class TextStreamResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TextStreamResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param codec The codec for this text stream. The default is `webvtt`. Supported text codecs: - `srt` - `ttml` - `cea608` - `cea708` - `webvtt`
+         * 
+         * @return builder
+         * 
+         */
         public Builder codec(String codec) {
             $.codec = codec;
             return this;
         }
 
+        /**
+         * @param mapping The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapping(List<TextMappingResponse> mapping) {
             $.mapping = mapping;
             return this;
         }
 
+        /**
+         * @param mapping The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapping(TextMappingResponse... mapping) {
             return mapping(List.of(mapping));
         }

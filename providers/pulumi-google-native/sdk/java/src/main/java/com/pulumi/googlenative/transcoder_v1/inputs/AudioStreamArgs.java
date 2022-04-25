@@ -29,6 +29,10 @@ public final class AudioStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bitrateBps", required=true)
     private Output<Integer> bitrateBps;
 
+    /**
+     * @return Audio bitrate in bits per second. Must be between 1 and 10,000,000.
+     * 
+     */
     public Output<Integer> bitrateBps() {
         return this.bitrateBps;
     }
@@ -40,6 +44,10 @@ public final class AudioStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="channelCount")
     private @Nullable Output<Integer> channelCount;
 
+    /**
+     * @return Number of audio channels. Must be between 1 and 6. The default is 2.
+     * 
+     */
     public Optional<Output<Integer>> channelCount() {
         return Optional.ofNullable(this.channelCount);
     }
@@ -51,6 +59,10 @@ public final class AudioStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="channelLayout")
     private @Nullable Output<List<String>> channelLayout;
 
+    /**
+     * @return A list of channel names specifying layout of the audio channels. This only affects the metadata embedded in the container headers, if supported by the specified format. The default is `[&#34;fl&#34;, &#34;fr&#34;]`. Supported channel names: - `fl` - Front left channel - `fr` - Front right channel - `sl` - Side left channel - `sr` - Side right channel - `fc` - Front center channel - `lfe` - Low frequency
+     * 
+     */
     public Optional<Output<List<String>>> channelLayout() {
         return Optional.ofNullable(this.channelLayout);
     }
@@ -62,6 +74,10 @@ public final class AudioStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="codec")
     private @Nullable Output<String> codec;
 
+    /**
+     * @return The codec for this audio stream. The default is `aac`. Supported audio codecs: - `aac` - `aac-he` - `aac-he-v2` - `mp3` - `ac3` - `eac3`
+     * 
+     */
     public Optional<Output<String>> codec() {
         return Optional.ofNullable(this.codec);
     }
@@ -73,6 +89,10 @@ public final class AudioStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mapping")
     private @Nullable Output<List<AudioMappingArgs>> mapping;
 
+    /**
+     * @return The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
+     * 
+     */
     public Optional<Output<List<AudioMappingArgs>>> mapping() {
         return Optional.ofNullable(this.mapping);
     }
@@ -84,6 +104,10 @@ public final class AudioStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sampleRateHertz")
     private @Nullable Output<Integer> sampleRateHertz;
 
+    /**
+     * @return The audio sample rate in Hertz. The default is 48000 Hertz.
+     * 
+     */
     public Optional<Output<Integer>> sampleRateHertz() {
         return Optional.ofNullable(this.sampleRateHertz);
     }
@@ -117,64 +141,148 @@ public final class AudioStreamArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AudioStreamArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bitrateBps Audio bitrate in bits per second. Must be between 1 and 10,000,000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrateBps(Output<Integer> bitrateBps) {
             $.bitrateBps = bitrateBps;
             return this;
         }
 
+        /**
+         * @param bitrateBps Audio bitrate in bits per second. Must be between 1 and 10,000,000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrateBps(Integer bitrateBps) {
             return bitrateBps(Output.of(bitrateBps));
         }
 
+        /**
+         * @param channelCount Number of audio channels. Must be between 1 and 6. The default is 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelCount(@Nullable Output<Integer> channelCount) {
             $.channelCount = channelCount;
             return this;
         }
 
+        /**
+         * @param channelCount Number of audio channels. Must be between 1 and 6. The default is 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelCount(Integer channelCount) {
             return channelCount(Output.of(channelCount));
         }
 
+        /**
+         * @param channelLayout A list of channel names specifying layout of the audio channels. This only affects the metadata embedded in the container headers, if supported by the specified format. The default is `[&#34;fl&#34;, &#34;fr&#34;]`. Supported channel names: - `fl` - Front left channel - `fr` - Front right channel - `sl` - Side left channel - `sr` - Side right channel - `fc` - Front center channel - `lfe` - Low frequency
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelLayout(@Nullable Output<List<String>> channelLayout) {
             $.channelLayout = channelLayout;
             return this;
         }
 
+        /**
+         * @param channelLayout A list of channel names specifying layout of the audio channels. This only affects the metadata embedded in the container headers, if supported by the specified format. The default is `[&#34;fl&#34;, &#34;fr&#34;]`. Supported channel names: - `fl` - Front left channel - `fr` - Front right channel - `sl` - Side left channel - `sr` - Side right channel - `fc` - Front center channel - `lfe` - Low frequency
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelLayout(List<String> channelLayout) {
             return channelLayout(Output.of(channelLayout));
         }
 
+        /**
+         * @param channelLayout A list of channel names specifying layout of the audio channels. This only affects the metadata embedded in the container headers, if supported by the specified format. The default is `[&#34;fl&#34;, &#34;fr&#34;]`. Supported channel names: - `fl` - Front left channel - `fr` - Front right channel - `sl` - Side left channel - `sr` - Side right channel - `fc` - Front center channel - `lfe` - Low frequency
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelLayout(String... channelLayout) {
             return channelLayout(List.of(channelLayout));
         }
 
+        /**
+         * @param codec The codec for this audio stream. The default is `aac`. Supported audio codecs: - `aac` - `aac-he` - `aac-he-v2` - `mp3` - `ac3` - `eac3`
+         * 
+         * @return builder
+         * 
+         */
         public Builder codec(@Nullable Output<String> codec) {
             $.codec = codec;
             return this;
         }
 
+        /**
+         * @param codec The codec for this audio stream. The default is `aac`. Supported audio codecs: - `aac` - `aac-he` - `aac-he-v2` - `mp3` - `ac3` - `eac3`
+         * 
+         * @return builder
+         * 
+         */
         public Builder codec(String codec) {
             return codec(Output.of(codec));
         }
 
+        /**
+         * @param mapping The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapping(@Nullable Output<List<AudioMappingArgs>> mapping) {
             $.mapping = mapping;
             return this;
         }
 
+        /**
+         * @param mapping The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapping(List<AudioMappingArgs> mapping) {
             return mapping(Output.of(mapping));
         }
 
+        /**
+         * @param mapping The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapping(AudioMappingArgs... mapping) {
             return mapping(List.of(mapping));
         }
 
+        /**
+         * @param sampleRateHertz The audio sample rate in Hertz. The default is 48000 Hertz.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleRateHertz(@Nullable Output<Integer> sampleRateHertz) {
             $.sampleRateHertz = sampleRateHertz;
             return this;
         }
 
+        /**
+         * @param sampleRateHertz The audio sample rate in Hertz. The default is 48000 Hertz.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleRateHertz(Integer sampleRateHertz) {
             return sampleRateHertz(Output.of(sampleRateHertz));
         }

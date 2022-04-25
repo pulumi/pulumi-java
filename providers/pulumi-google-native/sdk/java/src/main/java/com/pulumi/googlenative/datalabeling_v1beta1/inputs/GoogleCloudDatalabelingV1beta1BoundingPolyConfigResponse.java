@@ -23,6 +23,10 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse exte
     @Import(name="annotationSpecSet", required=true)
     private String annotationSpecSet;
 
+    /**
+     * @return Annotation spec set resource name.
+     * 
+     */
     public String annotationSpecSet() {
         return this.annotationSpecSet;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse exte
     @Import(name="instructionMessage", required=true)
     private String instructionMessage;
 
+    /**
+     * @return Optional. Instruction message showed on contributors UI.
+     * 
+     */
     public String instructionMessage() {
         return this.instructionMessage;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse exte
             $ = new GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotationSpecSet Annotation spec set resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationSpecSet(String annotationSpecSet) {
             $.annotationSpecSet = annotationSpecSet;
             return this;
         }
 
+        /**
+         * @param instructionMessage Optional. Instruction message showed on contributors UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instructionMessage(String instructionMessage) {
             $.instructionMessage = instructionMessage;
             return this;

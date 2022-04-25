@@ -24,6 +24,10 @@ public final class MonitoringResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="consumerDestinations", required=true)
     private List<MonitoringDestinationResponse> consumerDestinations;
 
+    /**
+     * @return Monitoring configurations for sending metrics to the consumer project. There can be multiple consumer destinations. A monitored resource type may appear in multiple monitoring destinations if different aggregations are needed for different sets of metrics associated with that monitored resource type. A monitored resource and metric pair may only be used once in the Monitoring configuration.
+     * 
+     */
     public List<MonitoringDestinationResponse> consumerDestinations() {
         return this.consumerDestinations;
     }
@@ -35,6 +39,10 @@ public final class MonitoringResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="producerDestinations", required=true)
     private List<MonitoringDestinationResponse> producerDestinations;
 
+    /**
+     * @return Monitoring configurations for sending metrics to the producer project. There can be multiple producer destinations. A monitored resource type may appear in multiple monitoring destinations if different aggregations are needed for different sets of metrics associated with that monitored resource type. A monitored resource and metric pair may only be used once in the Monitoring configuration.
+     * 
+     */
     public List<MonitoringDestinationResponse> producerDestinations() {
         return this.producerDestinations;
     }
@@ -64,20 +72,44 @@ public final class MonitoringResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MonitoringResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumerDestinations Monitoring configurations for sending metrics to the consumer project. There can be multiple consumer destinations. A monitored resource type may appear in multiple monitoring destinations if different aggregations are needed for different sets of metrics associated with that monitored resource type. A monitored resource and metric pair may only be used once in the Monitoring configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerDestinations(List<MonitoringDestinationResponse> consumerDestinations) {
             $.consumerDestinations = consumerDestinations;
             return this;
         }
 
+        /**
+         * @param consumerDestinations Monitoring configurations for sending metrics to the consumer project. There can be multiple consumer destinations. A monitored resource type may appear in multiple monitoring destinations if different aggregations are needed for different sets of metrics associated with that monitored resource type. A monitored resource and metric pair may only be used once in the Monitoring configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerDestinations(MonitoringDestinationResponse... consumerDestinations) {
             return consumerDestinations(List.of(consumerDestinations));
         }
 
+        /**
+         * @param producerDestinations Monitoring configurations for sending metrics to the producer project. There can be multiple producer destinations. A monitored resource type may appear in multiple monitoring destinations if different aggregations are needed for different sets of metrics associated with that monitored resource type. A monitored resource and metric pair may only be used once in the Monitoring configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder producerDestinations(List<MonitoringDestinationResponse> producerDestinations) {
             $.producerDestinations = producerDestinations;
             return this;
         }
 
+        /**
+         * @param producerDestinations Monitoring configurations for sending metrics to the producer project. There can be multiple producer destinations. A monitored resource type may appear in multiple monitoring destinations if different aggregations are needed for different sets of metrics associated with that monitored resource type. A monitored resource and metric pair may only be used once in the Monitoring configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder producerDestinations(MonitoringDestinationResponse... producerDestinations) {
             return producerDestinations(List.of(producerDestinations));
         }

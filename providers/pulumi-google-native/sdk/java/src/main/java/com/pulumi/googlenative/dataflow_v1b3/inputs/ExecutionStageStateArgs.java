@@ -27,6 +27,10 @@ public final class ExecutionStageStateArgs extends com.pulumi.resources.Resource
     @Import(name="currentStateTime")
     private @Nullable Output<String> currentStateTime;
 
+    /**
+     * @return The time at which the stage transitioned to this state.
+     * 
+     */
     public Optional<Output<String>> currentStateTime() {
         return Optional.ofNullable(this.currentStateTime);
     }
@@ -38,6 +42,10 @@ public final class ExecutionStageStateArgs extends com.pulumi.resources.Resource
     @Import(name="executionStageName")
     private @Nullable Output<String> executionStageName;
 
+    /**
+     * @return The name of the execution stage.
+     * 
+     */
     public Optional<Output<String>> executionStageName() {
         return Optional.ofNullable(this.executionStageName);
     }
@@ -49,6 +57,10 @@ public final class ExecutionStageStateArgs extends com.pulumi.resources.Resource
     @Import(name="executionStageState")
     private @Nullable Output<ExecutionStageStateExecutionStageState> executionStageState;
 
+    /**
+     * @return Executions stage states allow the same set of values as JobState.
+     * 
+     */
     public Optional<Output<ExecutionStageStateExecutionStageState>> executionStageState() {
         return Optional.ofNullable(this.executionStageState);
     }
@@ -79,29 +91,65 @@ public final class ExecutionStageStateArgs extends com.pulumi.resources.Resource
             $ = new ExecutionStageStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentStateTime The time at which the stage transitioned to this state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentStateTime(@Nullable Output<String> currentStateTime) {
             $.currentStateTime = currentStateTime;
             return this;
         }
 
+        /**
+         * @param currentStateTime The time at which the stage transitioned to this state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentStateTime(String currentStateTime) {
             return currentStateTime(Output.of(currentStateTime));
         }
 
+        /**
+         * @param executionStageName The name of the execution stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionStageName(@Nullable Output<String> executionStageName) {
             $.executionStageName = executionStageName;
             return this;
         }
 
+        /**
+         * @param executionStageName The name of the execution stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionStageName(String executionStageName) {
             return executionStageName(Output.of(executionStageName));
         }
 
+        /**
+         * @param executionStageState Executions stage states allow the same set of values as JobState.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionStageState(@Nullable Output<ExecutionStageStateExecutionStageState> executionStageState) {
             $.executionStageState = executionStageState;
             return this;
         }
 
+        /**
+         * @param executionStageState Executions stage states allow the same set of values as JobState.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionStageState(ExecutionStageStateExecutionStageState executionStageState) {
             return executionStageState(Output.of(executionStageState));
         }

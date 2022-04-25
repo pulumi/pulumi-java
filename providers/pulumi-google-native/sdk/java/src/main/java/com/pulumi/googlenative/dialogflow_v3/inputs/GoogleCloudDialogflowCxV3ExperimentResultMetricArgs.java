@@ -29,6 +29,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends c
     @Import(name="confidenceInterval")
     private @Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs> confidenceInterval;
 
+    /**
+     * @return The probability that the treatment is better than all other treatments in the experiment
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs>> confidenceInterval() {
         return Optional.ofNullable(this.confidenceInterval);
     }
@@ -40,6 +44,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends c
     @Import(name="count")
     private @Nullable Output<Double> count;
 
+    /**
+     * @return Count value of a metric.
+     * 
+     */
     public Optional<Output<Double>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -51,6 +59,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends c
     @Import(name="countType")
     private @Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultMetricCountType> countType;
 
+    /**
+     * @return Count-based metric type. Only one of type or count_type is specified in each Metric.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3ExperimentResultMetricCountType>> countType() {
         return Optional.ofNullable(this.countType);
     }
@@ -62,6 +74,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends c
     @Import(name="ratio")
     private @Nullable Output<Double> ratio;
 
+    /**
+     * @return Ratio value of a metric.
+     * 
+     */
     public Optional<Output<Double>> ratio() {
         return Optional.ofNullable(this.ratio);
     }
@@ -73,6 +89,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends c
     @Import(name="type")
     private @Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultMetricType> type;
 
+    /**
+     * @return Ratio-based metric type. Only one of type or count_type is specified in each Metric.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3ExperimentResultMetricType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -105,47 +125,107 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends c
             $ = new GoogleCloudDialogflowCxV3ExperimentResultMetricArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param confidenceInterval The probability that the treatment is better than all other treatments in the experiment
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidenceInterval(@Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs> confidenceInterval) {
             $.confidenceInterval = confidenceInterval;
             return this;
         }
 
+        /**
+         * @param confidenceInterval The probability that the treatment is better than all other treatments in the experiment
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidenceInterval(GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs confidenceInterval) {
             return confidenceInterval(Output.of(confidenceInterval));
         }
 
+        /**
+         * @param count Count value of a metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<Double> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Count value of a metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Double count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param countType Count-based metric type. Only one of type or count_type is specified in each Metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countType(@Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultMetricCountType> countType) {
             $.countType = countType;
             return this;
         }
 
+        /**
+         * @param countType Count-based metric type. Only one of type or count_type is specified in each Metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countType(GoogleCloudDialogflowCxV3ExperimentResultMetricCountType countType) {
             return countType(Output.of(countType));
         }
 
+        /**
+         * @param ratio Ratio value of a metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ratio(@Nullable Output<Double> ratio) {
             $.ratio = ratio;
             return this;
         }
 
+        /**
+         * @param ratio Ratio value of a metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ratio(Double ratio) {
             return ratio(Output.of(ratio));
         }
 
+        /**
+         * @param type Ratio-based metric type. Only one of type or count_type is specified in each Metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultMetricType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Ratio-based metric type. Only one of type or count_type is specified in each Metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(GoogleCloudDialogflowCxV3ExperimentResultMetricType type) {
             return type(Output.of(type));
         }

@@ -24,6 +24,10 @@ public final class GoogleCloudRetailV2betaConditionQueryTermResponse extends com
     @Import(name="fullMatch", required=true)
     private Boolean fullMatch;
 
+    /**
+     * @return Whether this is supposed to be a full or partial match.
+     * 
+     */
     public Boolean fullMatch() {
         return this.fullMatch;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudRetailV2betaConditionQueryTermResponse extends com
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value of the term to match on. Value cannot be empty. Value can have at most 3 terms if specified as a partial match. Each space separated string is considered as one term. Example) &#34;a b c&#34; is 3 terms and allowed, &#34; a b c d&#34; is 4 terms and not allowed for partial match.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudRetailV2betaConditionQueryTermResponse extends com
             $ = new GoogleCloudRetailV2betaConditionQueryTermResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fullMatch Whether this is supposed to be a full or partial match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullMatch(Boolean fullMatch) {
             $.fullMatch = fullMatch;
             return this;
         }
 
+        /**
+         * @param value The value of the term to match on. Value cannot be empty. Value can have at most 3 terms if specified as a partial match. Each space separated string is considered as one term. Example) &#34;a b c&#34; is 3 terms and allowed, &#34; a b c d&#34; is 4 terms and not allowed for partial match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

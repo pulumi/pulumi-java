@@ -25,6 +25,10 @@ public final class NetworkEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="accessConfig", required=true)
     private AccessConfigResponse accessConfig;
 
+    /**
+     * @return The access config for the TPU worker.
+     * 
+     */
     public AccessConfigResponse accessConfig() {
         return this.accessConfig;
     }
@@ -36,6 +40,10 @@ public final class NetworkEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ipAddress", required=true)
     private String ipAddress;
 
+    /**
+     * @return The internal IP address of this network endpoint.
+     * 
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
@@ -47,6 +55,10 @@ public final class NetworkEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return The port of this network endpoint.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -77,16 +89,34 @@ public final class NetworkEndpointResponse extends com.pulumi.resources.InvokeAr
             $ = new NetworkEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessConfig The access config for the TPU worker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessConfig(AccessConfigResponse accessConfig) {
             $.accessConfig = accessConfig;
             return this;
         }
 
+        /**
+         * @param ipAddress The internal IP address of this network endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param port The port of this network endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;

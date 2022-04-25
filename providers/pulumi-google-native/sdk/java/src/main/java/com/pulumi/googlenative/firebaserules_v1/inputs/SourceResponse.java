@@ -24,6 +24,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="files", required=true)
     private List<FileResponse> files;
 
+    /**
+     * @return `File` set constituting the `Source` bundle.
+     * 
+     */
     public List<FileResponse> files() {
         return this.files;
     }
@@ -52,11 +56,23 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param files `File` set constituting the `Source` bundle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(List<FileResponse> files) {
             $.files = files;
             return this;
         }
 
+        /**
+         * @param files `File` set constituting the `Source` bundle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(FileResponse... files) {
             return files(List.of(files));
         }

@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsResponse extends com
     @Import(name="classificationThreshold", required=true)
     private Double classificationThreshold;
 
+    /**
+     * @return To filter out false positive results and still get variety in matched natural language inputs for your agent, you can tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a no-match event will be triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
+     * 
+     */
     public Double classificationThreshold() {
         return this.classificationThreshold;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsResponse extends com
     @Import(name="modelTrainingMode", required=true)
     private String modelTrainingMode;
 
+    /**
+     * @return Indicates NLU model training mode.
+     * 
+     */
     public String modelTrainingMode() {
         return this.modelTrainingMode;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsResponse extends com
     @Import(name="modelType", required=true)
     private String modelType;
 
+    /**
+     * @return Indicates the type of NLU model.
+     * 
+     */
     public String modelType() {
         return this.modelType;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsResponse extends com
             $ = new GoogleCloudDialogflowCxV3beta1NluSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param classificationThreshold To filter out false positive results and still get variety in matched natural language inputs for your agent, you can tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a no-match event will be triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationThreshold(Double classificationThreshold) {
             $.classificationThreshold = classificationThreshold;
             return this;
         }
 
+        /**
+         * @param modelTrainingMode Indicates NLU model training mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelTrainingMode(String modelTrainingMode) {
             $.modelTrainingMode = modelTrainingMode;
             return this;
         }
 
+        /**
+         * @param modelType Indicates the type of NLU model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelType(String modelType) {
             $.modelType = modelType;
             return this;

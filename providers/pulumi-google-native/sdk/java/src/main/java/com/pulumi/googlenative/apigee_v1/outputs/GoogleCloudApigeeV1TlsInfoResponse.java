@@ -13,47 +13,47 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudApigeeV1TlsInfoResponse {
     /**
-     * The SSL/TLS cipher suites to be used. Must be one of the cipher suite names listed in: http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites
+     * @return The SSL/TLS cipher suites to be used. Must be one of the cipher suite names listed in: http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites
      * 
      */
     private final List<String> ciphers;
     /**
-     * Optional. Enables two-way TLS.
+     * @return Optional. Enables two-way TLS.
      * 
      */
     private final Boolean clientAuthEnabled;
     /**
-     * The TLS Common Name of the certificate.
+     * @return The TLS Common Name of the certificate.
      * 
      */
     private final GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName;
     /**
-     * Enables TLS. If false, neither one-way nor two-way TLS will be enabled.
+     * @return Enables TLS. If false, neither one-way nor two-way TLS will be enabled.
      * 
      */
     private final Boolean enabled;
     /**
-     * If true, Edge ignores TLS certificate errors. Valid when configuring TLS for target servers and target endpoints, and when configuring virtual hosts that use 2-way TLS. When used with a target endpoint/target server, if the backend system uses SNI and returns a cert with a subject Distinguished Name (DN) that does not match the hostname, there is no way to ignore the error and the connection fails.
+     * @return If true, Edge ignores TLS certificate errors. Valid when configuring TLS for target servers and target endpoints, and when configuring virtual hosts that use 2-way TLS. When used with a target endpoint/target server, if the backend system uses SNI and returns a cert with a subject Distinguished Name (DN) that does not match the hostname, there is no way to ignore the error and the connection fails.
      * 
      */
     private final Boolean ignoreValidationErrors;
     /**
-     * Required if `client_auth_enabled` is true. The resource ID for the alias containing the private key and cert.
+     * @return Required if `client_auth_enabled` is true. The resource ID for the alias containing the private key and cert.
      * 
      */
     private final String keyAlias;
     /**
-     * Required if `client_auth_enabled` is true. The resource ID of the keystore.
+     * @return Required if `client_auth_enabled` is true. The resource ID of the keystore.
      * 
      */
     private final String keyStore;
     /**
-     * The TLS versioins to be used.
+     * @return The TLS versioins to be used.
      * 
      */
     private final List<String> protocols;
     /**
-     * The resource ID of the truststore.
+     * @return The resource ID of the truststore.
      * 
      */
     private final String trustStore;
@@ -81,65 +81,65 @@ public final class GoogleCloudApigeeV1TlsInfoResponse {
     }
 
     /**
-     * The SSL/TLS cipher suites to be used. Must be one of the cipher suite names listed in: http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites
+     * @return The SSL/TLS cipher suites to be used. Must be one of the cipher suite names listed in: http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites
      * 
-    */
+     */
     public List<String> ciphers() {
         return this.ciphers;
     }
     /**
-     * Optional. Enables two-way TLS.
+     * @return Optional. Enables two-way TLS.
      * 
-    */
+     */
     public Boolean clientAuthEnabled() {
         return this.clientAuthEnabled;
     }
     /**
-     * The TLS Common Name of the certificate.
+     * @return The TLS Common Name of the certificate.
      * 
-    */
+     */
     public GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName() {
         return this.commonName;
     }
     /**
-     * Enables TLS. If false, neither one-way nor two-way TLS will be enabled.
+     * @return Enables TLS. If false, neither one-way nor two-way TLS will be enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * If true, Edge ignores TLS certificate errors. Valid when configuring TLS for target servers and target endpoints, and when configuring virtual hosts that use 2-way TLS. When used with a target endpoint/target server, if the backend system uses SNI and returns a cert with a subject Distinguished Name (DN) that does not match the hostname, there is no way to ignore the error and the connection fails.
+     * @return If true, Edge ignores TLS certificate errors. Valid when configuring TLS for target servers and target endpoints, and when configuring virtual hosts that use 2-way TLS. When used with a target endpoint/target server, if the backend system uses SNI and returns a cert with a subject Distinguished Name (DN) that does not match the hostname, there is no way to ignore the error and the connection fails.
      * 
-    */
+     */
     public Boolean ignoreValidationErrors() {
         return this.ignoreValidationErrors;
     }
     /**
-     * Required if `client_auth_enabled` is true. The resource ID for the alias containing the private key and cert.
+     * @return Required if `client_auth_enabled` is true. The resource ID for the alias containing the private key and cert.
      * 
-    */
+     */
     public String keyAlias() {
         return this.keyAlias;
     }
     /**
-     * Required if `client_auth_enabled` is true. The resource ID of the keystore.
+     * @return Required if `client_auth_enabled` is true. The resource ID of the keystore.
      * 
-    */
+     */
     public String keyStore() {
         return this.keyStore;
     }
     /**
-     * The TLS versioins to be used.
+     * @return The TLS versioins to be used.
      * 
-    */
+     */
     public List<String> protocols() {
         return this.protocols;
     }
     /**
-     * The resource ID of the truststore.
+     * @return The resource ID of the truststore.
      * 
-    */
+     */
     public String trustStore() {
         return this.trustStore;
     }

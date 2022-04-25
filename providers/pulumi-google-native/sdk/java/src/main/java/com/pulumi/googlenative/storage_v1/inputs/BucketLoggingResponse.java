@@ -23,6 +23,10 @@ public final class BucketLoggingResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="logBucket", required=true)
     private String logBucket;
 
+    /**
+     * @return The destination bucket where the current bucket&#39;s logs should be placed.
+     * 
+     */
     public String logBucket() {
         return this.logBucket;
     }
@@ -34,6 +38,10 @@ public final class BucketLoggingResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="logObjectPrefix", required=true)
     private String logObjectPrefix;
 
+    /**
+     * @return A prefix for log object names.
+     * 
+     */
     public String logObjectPrefix() {
         return this.logObjectPrefix;
     }
@@ -63,11 +71,23 @@ public final class BucketLoggingResponse extends com.pulumi.resources.InvokeArgs
             $ = new BucketLoggingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logBucket The destination bucket where the current bucket&#39;s logs should be placed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logBucket(String logBucket) {
             $.logBucket = logBucket;
             return this;
         }
 
+        /**
+         * @param logObjectPrefix A prefix for log object names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logObjectPrefix(String logObjectPrefix) {
             $.logObjectPrefix = logObjectPrefix;
             return this;

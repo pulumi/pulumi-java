@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GkeBackupAgentConfigResponse {
     /**
-     * Whether the Backup for GKE agent is enabled for this cluster.
+     * @return Whether the Backup for GKE agent is enabled for this cluster.
      * 
      */
     private final Boolean enabled;
@@ -21,9 +21,9 @@ public final class GkeBackupAgentConfigResponse {
     }
 
     /**
-     * Whether the Backup for GKE agent is enabled for this cluster.
+     * @return Whether the Backup for GKE agent is enabled for this cluster.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

@@ -30,6 +30,10 @@ public final class SourceContextArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudRepo")
     private @Nullable Output<CloudRepoSourceContextArgs> cloudRepo;
 
+    /**
+     * @return A SourceContext referring to a revision in a Google Cloud Source Repo.
+     * 
+     */
     public Optional<Output<CloudRepoSourceContextArgs>> cloudRepo() {
         return Optional.ofNullable(this.cloudRepo);
     }
@@ -41,6 +45,10 @@ public final class SourceContextArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gerrit")
     private @Nullable Output<GerritSourceContextArgs> gerrit;
 
+    /**
+     * @return A SourceContext referring to a Gerrit project.
+     * 
+     */
     public Optional<Output<GerritSourceContextArgs>> gerrit() {
         return Optional.ofNullable(this.gerrit);
     }
@@ -52,6 +60,10 @@ public final class SourceContextArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="git")
     private @Nullable Output<GitSourceContextArgs> git;
 
+    /**
+     * @return A SourceContext referring to any third party Git repo (e.g., GitHub).
+     * 
+     */
     public Optional<Output<GitSourceContextArgs>> git() {
         return Optional.ofNullable(this.git);
     }
@@ -63,6 +75,10 @@ public final class SourceContextArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels with user defined metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -94,38 +110,86 @@ public final class SourceContextArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SourceContextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudRepo A SourceContext referring to a revision in a Google Cloud Source Repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRepo(@Nullable Output<CloudRepoSourceContextArgs> cloudRepo) {
             $.cloudRepo = cloudRepo;
             return this;
         }
 
+        /**
+         * @param cloudRepo A SourceContext referring to a revision in a Google Cloud Source Repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRepo(CloudRepoSourceContextArgs cloudRepo) {
             return cloudRepo(Output.of(cloudRepo));
         }
 
+        /**
+         * @param gerrit A SourceContext referring to a Gerrit project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gerrit(@Nullable Output<GerritSourceContextArgs> gerrit) {
             $.gerrit = gerrit;
             return this;
         }
 
+        /**
+         * @param gerrit A SourceContext referring to a Gerrit project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gerrit(GerritSourceContextArgs gerrit) {
             return gerrit(Output.of(gerrit));
         }
 
+        /**
+         * @param git A SourceContext referring to any third party Git repo (e.g., GitHub).
+         * 
+         * @return builder
+         * 
+         */
         public Builder git(@Nullable Output<GitSourceContextArgs> git) {
             $.git = git;
             return this;
         }
 
+        /**
+         * @param git A SourceContext referring to any third party Git repo (e.g., GitHub).
+         * 
+         * @return builder
+         * 
+         */
         public Builder git(GitSourceContextArgs git) {
             return git(Output.of(git));
         }
 
+        /**
+         * @param labels Labels with user defined metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels with user defined metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }

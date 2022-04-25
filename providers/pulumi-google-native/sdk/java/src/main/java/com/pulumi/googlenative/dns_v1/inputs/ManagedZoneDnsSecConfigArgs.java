@@ -26,6 +26,10 @@ public final class ManagedZoneDnsSecConfigArgs extends com.pulumi.resources.Reso
     @Import(name="defaultKeySpecs")
     private @Nullable Output<List<DnsKeySpecArgs>> defaultKeySpecs;
 
+    /**
+     * @return Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.
+     * 
+     */
     public Optional<Output<List<DnsKeySpecArgs>>> defaultKeySpecs() {
         return Optional.ofNullable(this.defaultKeySpecs);
     }
@@ -44,6 +48,10 @@ public final class ManagedZoneDnsSecConfigArgs extends com.pulumi.resources.Reso
     @Import(name="nonExistence")
     private @Nullable Output<ManagedZoneDnsSecConfigNonExistence> nonExistence;
 
+    /**
+     * @return Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.
+     * 
+     */
     public Optional<Output<ManagedZoneDnsSecConfigNonExistence>> nonExistence() {
         return Optional.ofNullable(this.nonExistence);
     }
@@ -55,6 +63,10 @@ public final class ManagedZoneDnsSecConfigArgs extends com.pulumi.resources.Reso
     @Import(name="state")
     private @Nullable Output<ManagedZoneDnsSecConfigState> state;
 
+    /**
+     * @return Specifies whether DNSSEC is enabled, and what mode it is in.
+     * 
+     */
     public Optional<Output<ManagedZoneDnsSecConfigState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -86,15 +98,33 @@ public final class ManagedZoneDnsSecConfigArgs extends com.pulumi.resources.Reso
             $ = new ManagedZoneDnsSecConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultKeySpecs Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultKeySpecs(@Nullable Output<List<DnsKeySpecArgs>> defaultKeySpecs) {
             $.defaultKeySpecs = defaultKeySpecs;
             return this;
         }
 
+        /**
+         * @param defaultKeySpecs Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultKeySpecs(List<DnsKeySpecArgs> defaultKeySpecs) {
             return defaultKeySpecs(Output.of(defaultKeySpecs));
         }
 
+        /**
+         * @param defaultKeySpecs Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultKeySpecs(DnsKeySpecArgs... defaultKeySpecs) {
             return defaultKeySpecs(List.of(defaultKeySpecs));
         }
@@ -108,20 +138,44 @@ public final class ManagedZoneDnsSecConfigArgs extends com.pulumi.resources.Reso
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param nonExistence Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonExistence(@Nullable Output<ManagedZoneDnsSecConfigNonExistence> nonExistence) {
             $.nonExistence = nonExistence;
             return this;
         }
 
+        /**
+         * @param nonExistence Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonExistence(ManagedZoneDnsSecConfigNonExistence nonExistence) {
             return nonExistence(Output.of(nonExistence));
         }
 
+        /**
+         * @param state Specifies whether DNSSEC is enabled, and what mode it is in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<ManagedZoneDnsSecConfigState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Specifies whether DNSSEC is enabled, and what mode it is in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(ManagedZoneDnsSecConfigState state) {
             return state(Output.of(state));
         }

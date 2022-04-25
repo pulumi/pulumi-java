@@ -30,6 +30,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends com.pulumi.re
     @Import(name="bigqueryRoutineSpec")
     private @Nullable Output<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> bigqueryRoutineSpec;
 
+    /**
+     * @return Fields specific for BigQuery routines.
+     * 
+     */
     public Optional<Output<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs>> bigqueryRoutineSpec() {
         return Optional.ofNullable(this.bigqueryRoutineSpec);
     }
@@ -41,6 +45,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends com.pulumi.re
     @Import(name="definitionBody")
     private @Nullable Output<String> definitionBody;
 
+    /**
+     * @return The body of the routine.
+     * 
+     */
     public Optional<Output<String>> definitionBody() {
         return Optional.ofNullable(this.definitionBody);
     }
@@ -52,6 +60,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends com.pulumi.re
     @Import(name="language")
     private @Nullable Output<String> language;
 
+    /**
+     * @return The language the routine is written in. The exact value depends on the source system. For BigQuery routines, possible values are: * `SQL` * `JAVASCRIPT`
+     * 
+     */
     public Optional<Output<String>> language() {
         return Optional.ofNullable(this.language);
     }
@@ -63,6 +75,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends com.pulumi.re
     @Import(name="returnType")
     private @Nullable Output<String> returnType;
 
+    /**
+     * @return Return type of the argument. The exact value depends on the source system and the language.
+     * 
+     */
     public Optional<Output<String>> returnType() {
         return Optional.ofNullable(this.returnType);
     }
@@ -74,6 +90,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends com.pulumi.re
     @Import(name="routineArguments")
     private @Nullable Output<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> routineArguments;
 
+    /**
+     * @return Arguments of the routine.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>>> routineArguments() {
         return Optional.ofNullable(this.routineArguments);
     }
@@ -85,6 +105,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends com.pulumi.re
     @Import(name="routineType")
     private @Nullable Output<GoogleCloudDatacatalogV1RoutineSpecRoutineType> routineType;
 
+    /**
+     * @return The type of the routine.
+     * 
+     */
     public Optional<Output<GoogleCloudDatacatalogV1RoutineSpecRoutineType>> routineType() {
         return Optional.ofNullable(this.routineType);
     }
@@ -118,60 +142,138 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends com.pulumi.re
             $ = new GoogleCloudDatacatalogV1RoutineSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bigqueryRoutineSpec Fields specific for BigQuery routines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryRoutineSpec(@Nullable Output<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> bigqueryRoutineSpec) {
             $.bigqueryRoutineSpec = bigqueryRoutineSpec;
             return this;
         }
 
+        /**
+         * @param bigqueryRoutineSpec Fields specific for BigQuery routines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryRoutineSpec(GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs bigqueryRoutineSpec) {
             return bigqueryRoutineSpec(Output.of(bigqueryRoutineSpec));
         }
 
+        /**
+         * @param definitionBody The body of the routine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definitionBody(@Nullable Output<String> definitionBody) {
             $.definitionBody = definitionBody;
             return this;
         }
 
+        /**
+         * @param definitionBody The body of the routine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definitionBody(String definitionBody) {
             return definitionBody(Output.of(definitionBody));
         }
 
+        /**
+         * @param language The language the routine is written in. The exact value depends on the source system. For BigQuery routines, possible values are: * `SQL` * `JAVASCRIPT`
+         * 
+         * @return builder
+         * 
+         */
         public Builder language(@Nullable Output<String> language) {
             $.language = language;
             return this;
         }
 
+        /**
+         * @param language The language the routine is written in. The exact value depends on the source system. For BigQuery routines, possible values are: * `SQL` * `JAVASCRIPT`
+         * 
+         * @return builder
+         * 
+         */
         public Builder language(String language) {
             return language(Output.of(language));
         }
 
+        /**
+         * @param returnType Return type of the argument. The exact value depends on the source system and the language.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnType(@Nullable Output<String> returnType) {
             $.returnType = returnType;
             return this;
         }
 
+        /**
+         * @param returnType Return type of the argument. The exact value depends on the source system and the language.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnType(String returnType) {
             return returnType(Output.of(returnType));
         }
 
+        /**
+         * @param routineArguments Arguments of the routine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routineArguments(@Nullable Output<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> routineArguments) {
             $.routineArguments = routineArguments;
             return this;
         }
 
+        /**
+         * @param routineArguments Arguments of the routine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routineArguments(List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs> routineArguments) {
             return routineArguments(Output.of(routineArguments));
         }
 
+        /**
+         * @param routineArguments Arguments of the routine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routineArguments(GoogleCloudDatacatalogV1RoutineSpecArgumentArgs... routineArguments) {
             return routineArguments(List.of(routineArguments));
         }
 
+        /**
+         * @param routineType The type of the routine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routineType(@Nullable Output<GoogleCloudDatacatalogV1RoutineSpecRoutineType> routineType) {
             $.routineType = routineType;
             return this;
         }
 
+        /**
+         * @param routineType The type of the routine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routineType(GoogleCloudDatacatalogV1RoutineSpecRoutineType routineType) {
             return routineType(Output.of(routineType));
         }

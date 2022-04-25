@@ -23,6 +23,10 @@ public final class TelemetryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The full name of the resource that defines this service. Formatted as described in https://cloud.google.com/apis/design/resource_names.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -51,6 +55,12 @@ public final class TelemetryResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TelemetryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceName The full name of the resource that defines this service. Formatted as described in https://cloud.google.com/apis/design/resource_names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

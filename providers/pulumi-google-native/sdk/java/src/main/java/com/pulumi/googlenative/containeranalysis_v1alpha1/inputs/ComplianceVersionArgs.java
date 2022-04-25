@@ -26,6 +26,10 @@ public final class ComplianceVersionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="cpeUri")
     private @Nullable Output<String> cpeUri;
 
+    /**
+     * @return The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
+     * 
+     */
     public Optional<Output<String>> cpeUri() {
         return Optional.ofNullable(this.cpeUri);
     }
@@ -37,6 +41,10 @@ public final class ComplianceVersionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The version of the benchmark. This is set to the version of the OS-specific CIS document the benchmark is defined in.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -66,20 +74,44 @@ public final class ComplianceVersionArgs extends com.pulumi.resources.ResourceAr
             $ = new ComplianceVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpeUri The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpeUri(@Nullable Output<String> cpeUri) {
             $.cpeUri = cpeUri;
             return this;
         }
 
+        /**
+         * @param cpeUri The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpeUri(String cpeUri) {
             return cpeUri(Output.of(cpeUri));
         }
 
+        /**
+         * @param version The version of the benchmark. This is set to the version of the OS-specific CIS document the benchmark is defined in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version of the benchmark. This is set to the version of the OS-specific CIS document the benchmark is defined in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

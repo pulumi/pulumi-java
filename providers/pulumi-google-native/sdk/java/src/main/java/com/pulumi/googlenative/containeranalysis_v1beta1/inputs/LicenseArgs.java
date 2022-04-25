@@ -26,6 +26,10 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="comments")
     private @Nullable Output<String> comments;
 
+    /**
+     * @return Comments
+     * 
+     */
     public Optional<Output<String>> comments() {
         return Optional.ofNullable(this.comments);
     }
@@ -37,6 +41,10 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expression")
     private @Nullable Output<String> expression;
 
+    /**
+     * @return Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
+     * 
+     */
     public Optional<Output<String>> expression() {
         return Optional.ofNullable(this.expression);
     }
@@ -66,20 +74,44 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LicenseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param comments Comments
+         * 
+         * @return builder
+         * 
+         */
         public Builder comments(@Nullable Output<String> comments) {
             $.comments = comments;
             return this;
         }
 
+        /**
+         * @param comments Comments
+         * 
+         * @return builder
+         * 
+         */
         public Builder comments(String comments) {
             return comments(Output.of(comments));
         }
 
+        /**
+         * @param expression Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(@Nullable Output<String> expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param expression Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(String expression) {
             return expression(Output.of(expression));
         }

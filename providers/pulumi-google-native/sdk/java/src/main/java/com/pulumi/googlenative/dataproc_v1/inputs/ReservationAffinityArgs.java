@@ -28,6 +28,10 @@ public final class ReservationAffinityArgs extends com.pulumi.resources.Resource
     @Import(name="consumeReservationType")
     private @Nullable Output<ReservationAffinityConsumeReservationType> consumeReservationType;
 
+    /**
+     * @return Optional. Type of reservation to consume
+     * 
+     */
     public Optional<Output<ReservationAffinityConsumeReservationType>> consumeReservationType() {
         return Optional.ofNullable(this.consumeReservationType);
     }
@@ -39,6 +43,10 @@ public final class ReservationAffinityArgs extends com.pulumi.resources.Resource
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return Optional. Corresponds to the label key of reservation resource.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -50,6 +58,10 @@ public final class ReservationAffinityArgs extends com.pulumi.resources.Resource
     @Import(name="values")
     private @Nullable Output<List<String>> values;
 
+    /**
+     * @return Optional. Corresponds to the label values of reservation resource.
+     * 
+     */
     public Optional<Output<List<String>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -80,33 +92,75 @@ public final class ReservationAffinityArgs extends com.pulumi.resources.Resource
             $ = new ReservationAffinityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumeReservationType Optional. Type of reservation to consume
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumeReservationType(@Nullable Output<ReservationAffinityConsumeReservationType> consumeReservationType) {
             $.consumeReservationType = consumeReservationType;
             return this;
         }
 
+        /**
+         * @param consumeReservationType Optional. Type of reservation to consume
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumeReservationType(ReservationAffinityConsumeReservationType consumeReservationType) {
             return consumeReservationType(Output.of(consumeReservationType));
         }
 
+        /**
+         * @param key Optional. Corresponds to the label key of reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Optional. Corresponds to the label key of reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param values Optional. Corresponds to the label values of reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Optional. Corresponds to the label values of reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values Optional. Corresponds to the label values of reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

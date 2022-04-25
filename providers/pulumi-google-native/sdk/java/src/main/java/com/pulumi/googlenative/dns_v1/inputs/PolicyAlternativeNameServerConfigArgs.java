@@ -31,6 +31,10 @@ public final class PolicyAlternativeNameServerConfigArgs extends com.pulumi.reso
     @Import(name="targetNameServers")
     private @Nullable Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
 
+    /**
+     * @return Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
+     * 
+     */
     public Optional<Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>>> targetNameServers() {
         return Optional.ofNullable(this.targetNameServers);
     }
@@ -69,15 +73,33 @@ public final class PolicyAlternativeNameServerConfigArgs extends com.pulumi.reso
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param targetNameServers Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNameServers(@Nullable Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers) {
             $.targetNameServers = targetNameServers;
             return this;
         }
 
+        /**
+         * @param targetNameServers Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNameServers(List<PolicyAlternativeNameServerConfigTargetNameServerArgs> targetNameServers) {
             return targetNameServers(Output.of(targetNameServers));
         }
 
+        /**
+         * @param targetNameServers Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNameServers(PolicyAlternativeNameServerConfigTargetNameServerArgs... targetNameServers) {
             return targetNameServers(List.of(targetNameServers));
         }

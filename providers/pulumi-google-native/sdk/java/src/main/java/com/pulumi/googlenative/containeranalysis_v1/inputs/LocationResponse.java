@@ -24,6 +24,10 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cpeUri", required=true)
     private String cpeUri;
 
+    /**
+     * @return The CPE URI in [CPE format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
+     * 
+     */
     public String cpeUri() {
         return this.cpeUri;
     }
@@ -35,6 +39,10 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The path from which we gathered that this package/version is installed.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -46,6 +54,10 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
     private VersionResponse version;
 
+    /**
+     * @return The version installed at this location.
+     * 
+     */
     public VersionResponse version() {
         return this.version;
     }
@@ -76,16 +88,34 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LocationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpeUri The CPE URI in [CPE format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpeUri(String cpeUri) {
             $.cpeUri = cpeUri;
             return this;
         }
 
+        /**
+         * @param path The path from which we gathered that this package/version is installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param version The version installed at this location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(VersionResponse version) {
             $.version = version;
             return this;

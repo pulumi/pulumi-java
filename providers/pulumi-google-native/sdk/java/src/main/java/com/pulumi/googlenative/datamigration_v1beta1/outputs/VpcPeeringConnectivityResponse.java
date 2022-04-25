@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class VpcPeeringConnectivityResponse {
     /**
-     * The name of the VPC network to peer with the Cloud SQL private network.
+     * @return The name of the VPC network to peer with the Cloud SQL private network.
      * 
      */
     private final String vpc;
@@ -21,9 +21,9 @@ public final class VpcPeeringConnectivityResponse {
     }
 
     /**
-     * The name of the VPC network to peer with the Cloud SQL private network.
+     * @return The name of the VPC network to peer with the Cloud SQL private network.
      * 
-    */
+     */
     public String vpc() {
         return this.vpc;
     }

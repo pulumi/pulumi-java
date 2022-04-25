@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class CategoryResponse {
     /**
-     * The identifier of the category.
+     * @return The identifier of the category.
      * 
      */
     private final String categoryId;
     /**
-     * The localized name of the category.
+     * @return The localized name of the category.
      * 
      */
     private final String name;
@@ -29,16 +29,16 @@ public final class CategoryResponse {
     }
 
     /**
-     * The identifier of the category.
+     * @return The identifier of the category.
      * 
-    */
+     */
     public String categoryId() {
         return this.categoryId;
     }
     /**
-     * The localized name of the category.
+     * @return The localized name of the category.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

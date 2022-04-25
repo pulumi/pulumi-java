@@ -27,6 +27,10 @@ public final class ValidationOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="schemaValidation")
     private @Nullable Output<ValidationOptionsSchemaValidation> schemaValidation;
 
+    /**
+     * @return Customize how deployment manager will validate the resource against schema errors.
+     * 
+     */
     public Optional<Output<ValidationOptionsSchemaValidation>> schemaValidation() {
         return Optional.ofNullable(this.schemaValidation);
     }
@@ -38,6 +42,10 @@ public final class ValidationOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="undeclaredProperties")
     private @Nullable Output<ValidationOptionsUndeclaredProperties> undeclaredProperties;
 
+    /**
+     * @return Specify what to do with extra properties when executing a request.
+     * 
+     */
     public Optional<Output<ValidationOptionsUndeclaredProperties>> undeclaredProperties() {
         return Optional.ofNullable(this.undeclaredProperties);
     }
@@ -67,20 +75,44 @@ public final class ValidationOptionsArgs extends com.pulumi.resources.ResourceAr
             $ = new ValidationOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param schemaValidation Customize how deployment manager will validate the resource against schema errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaValidation(@Nullable Output<ValidationOptionsSchemaValidation> schemaValidation) {
             $.schemaValidation = schemaValidation;
             return this;
         }
 
+        /**
+         * @param schemaValidation Customize how deployment manager will validate the resource against schema errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaValidation(ValidationOptionsSchemaValidation schemaValidation) {
             return schemaValidation(Output.of(schemaValidation));
         }
 
+        /**
+         * @param undeclaredProperties Specify what to do with extra properties when executing a request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder undeclaredProperties(@Nullable Output<ValidationOptionsUndeclaredProperties> undeclaredProperties) {
             $.undeclaredProperties = undeclaredProperties;
             return this;
         }
 
+        /**
+         * @param undeclaredProperties Specify what to do with extra properties when executing a request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder undeclaredProperties(ValidationOptionsUndeclaredProperties undeclaredProperties) {
             return undeclaredProperties(Output.of(undeclaredProperties));
         }

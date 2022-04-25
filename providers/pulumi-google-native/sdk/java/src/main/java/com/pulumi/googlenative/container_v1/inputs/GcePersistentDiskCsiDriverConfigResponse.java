@@ -23,6 +23,10 @@ public final class GcePersistentDiskCsiDriverConfigResponse extends com.pulumi.r
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether the Compute Engine PD CSI driver is enabled for this cluster.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class GcePersistentDiskCsiDriverConfigResponse extends com.pulumi.r
             $ = new GcePersistentDiskCsiDriverConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether the Compute Engine PD CSI driver is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

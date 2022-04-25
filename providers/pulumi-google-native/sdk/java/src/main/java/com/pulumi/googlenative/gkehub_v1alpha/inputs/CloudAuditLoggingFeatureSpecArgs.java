@@ -27,6 +27,10 @@ public final class CloudAuditLoggingFeatureSpecArgs extends com.pulumi.resources
     @Import(name="allowlistedServiceAccounts")
     private @Nullable Output<List<String>> allowlistedServiceAccounts;
 
+    /**
+     * @return Service account that should be allowlisted to send the audit logs; eg cloudauditlogging@gcp-project.iam.gserviceaccount.com. These accounts must already exist, but do not need to have any permissions granted to them. The customer&#39;s entitlements will be checked prior to allowlisting (i.e. the customer must be an Anthos customer.)
+     * 
+     */
     public Optional<Output<List<String>>> allowlistedServiceAccounts() {
         return Optional.ofNullable(this.allowlistedServiceAccounts);
     }
@@ -55,15 +59,33 @@ public final class CloudAuditLoggingFeatureSpecArgs extends com.pulumi.resources
             $ = new CloudAuditLoggingFeatureSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowlistedServiceAccounts Service account that should be allowlisted to send the audit logs; eg cloudauditlogging@gcp-project.iam.gserviceaccount.com. These accounts must already exist, but do not need to have any permissions granted to them. The customer&#39;s entitlements will be checked prior to allowlisting (i.e. the customer must be an Anthos customer.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowlistedServiceAccounts(@Nullable Output<List<String>> allowlistedServiceAccounts) {
             $.allowlistedServiceAccounts = allowlistedServiceAccounts;
             return this;
         }
 
+        /**
+         * @param allowlistedServiceAccounts Service account that should be allowlisted to send the audit logs; eg cloudauditlogging@gcp-project.iam.gserviceaccount.com. These accounts must already exist, but do not need to have any permissions granted to them. The customer&#39;s entitlements will be checked prior to allowlisting (i.e. the customer must be an Anthos customer.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowlistedServiceAccounts(List<String> allowlistedServiceAccounts) {
             return allowlistedServiceAccounts(Output.of(allowlistedServiceAccounts));
         }
 
+        /**
+         * @param allowlistedServiceAccounts Service account that should be allowlisted to send the audit logs; eg cloudauditlogging@gcp-project.iam.gserviceaccount.com. These accounts must already exist, but do not need to have any permissions granted to them. The customer&#39;s entitlements will be checked prior to allowlisting (i.e. the customer must be an Anthos customer.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowlistedServiceAccounts(String... allowlistedServiceAccounts) {
             return allowlistedServiceAccounts(List.of(allowlistedServiceAccounts));
         }

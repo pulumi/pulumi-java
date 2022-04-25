@@ -28,6 +28,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="additionalBindings")
     private @Nullable Output<List<HttpRuleArgs>> additionalBindings;
 
+    /**
+     * @return Additional HTTP bindings for the selector. Nested bindings must not contain an `additional_bindings` field themselves (that is, the nesting may only be one level deep).
+     * 
+     */
     public Optional<Output<List<HttpRuleArgs>>> additionalBindings() {
         return Optional.ofNullable(this.additionalBindings);
     }
@@ -39,6 +43,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="body")
     private @Nullable Output<String> body;
 
+    /**
+     * @return The name of the request field whose value is mapped to the HTTP request body, or `*` for mapping all request fields not captured by the path pattern to the HTTP body, or omitted for not having any HTTP request body. NOTE: the referred field must be present at the top-level of the request message type.
+     * 
+     */
     public Optional<Output<String>> body() {
         return Optional.ofNullable(this.body);
     }
@@ -50,6 +58,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="custom")
     private @Nullable Output<CustomHttpPatternArgs> custom;
 
+    /**
+     * @return The custom pattern is used for specifying an HTTP method that is not included in the `pattern` field, such as HEAD, or &#34;*&#34; to leave the HTTP method unspecified for this rule. The wild-card rule is useful for services that provide content to Web (HTML) clients.
+     * 
+     */
     public Optional<Output<CustomHttpPatternArgs>> custom() {
         return Optional.ofNullable(this.custom);
     }
@@ -61,6 +73,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="delete")
     private @Nullable Output<String> delete;
 
+    /**
+     * @return Maps to HTTP DELETE. Used for deleting a resource.
+     * 
+     */
     public Optional<Output<String>> delete() {
         return Optional.ofNullable(this.delete);
     }
@@ -72,6 +88,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="get")
     private @Nullable Output<String> get;
 
+    /**
+     * @return Maps to HTTP GET. Used for listing and getting information about resources.
+     * 
+     */
     public Optional<Output<String>> get() {
         return Optional.ofNullable(this.get);
     }
@@ -83,6 +103,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="patch")
     private @Nullable Output<String> patch;
 
+    /**
+     * @return Maps to HTTP PATCH. Used for updating a resource.
+     * 
+     */
     public Optional<Output<String>> patch() {
         return Optional.ofNullable(this.patch);
     }
@@ -94,6 +118,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="post")
     private @Nullable Output<String> post;
 
+    /**
+     * @return Maps to HTTP POST. Used for creating a resource or performing an action.
+     * 
+     */
     public Optional<Output<String>> post() {
         return Optional.ofNullable(this.post);
     }
@@ -105,6 +133,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="put")
     private @Nullable Output<String> put;
 
+    /**
+     * @return Maps to HTTP PUT. Used for replacing a resource.
+     * 
+     */
     public Optional<Output<String>> put() {
         return Optional.ofNullable(this.put);
     }
@@ -116,6 +148,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="responseBody")
     private @Nullable Output<String> responseBody;
 
+    /**
+     * @return Optional. The name of the response field whose value is mapped to the HTTP response body. When omitted, the entire response message will be used as the HTTP response body. NOTE: The referred field must be present at the top-level of the response message type.
+     * 
+     */
     public Optional<Output<String>> responseBody() {
         return Optional.ofNullable(this.responseBody);
     }
@@ -127,6 +163,10 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="selector")
     private @Nullable Output<String> selector;
 
+    /**
+     * @return Selects a method to which this rule applies. Refer to selector for syntax details.
+     * 
+     */
     public Optional<Output<String>> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -164,96 +204,222 @@ public final class HttpRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HttpRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalBindings Additional HTTP bindings for the selector. Nested bindings must not contain an `additional_bindings` field themselves (that is, the nesting may only be one level deep).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalBindings(@Nullable Output<List<HttpRuleArgs>> additionalBindings) {
             $.additionalBindings = additionalBindings;
             return this;
         }
 
+        /**
+         * @param additionalBindings Additional HTTP bindings for the selector. Nested bindings must not contain an `additional_bindings` field themselves (that is, the nesting may only be one level deep).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalBindings(List<HttpRuleArgs> additionalBindings) {
             return additionalBindings(Output.of(additionalBindings));
         }
 
+        /**
+         * @param additionalBindings Additional HTTP bindings for the selector. Nested bindings must not contain an `additional_bindings` field themselves (that is, the nesting may only be one level deep).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalBindings(HttpRuleArgs... additionalBindings) {
             return additionalBindings(List.of(additionalBindings));
         }
 
+        /**
+         * @param body The name of the request field whose value is mapped to the HTTP request body, or `*` for mapping all request fields not captured by the path pattern to the HTTP body, or omitted for not having any HTTP request body. NOTE: the referred field must be present at the top-level of the request message type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Output<String> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body The name of the request field whose value is mapped to the HTTP request body, or `*` for mapping all request fields not captured by the path pattern to the HTTP body, or omitted for not having any HTTP request body. NOTE: the referred field must be present at the top-level of the request message type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(String body) {
             return body(Output.of(body));
         }
 
+        /**
+         * @param custom The custom pattern is used for specifying an HTTP method that is not included in the `pattern` field, such as HEAD, or &#34;*&#34; to leave the HTTP method unspecified for this rule. The wild-card rule is useful for services that provide content to Web (HTML) clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder custom(@Nullable Output<CustomHttpPatternArgs> custom) {
             $.custom = custom;
             return this;
         }
 
+        /**
+         * @param custom The custom pattern is used for specifying an HTTP method that is not included in the `pattern` field, such as HEAD, or &#34;*&#34; to leave the HTTP method unspecified for this rule. The wild-card rule is useful for services that provide content to Web (HTML) clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder custom(CustomHttpPatternArgs custom) {
             return custom(Output.of(custom));
         }
 
+        /**
+         * @param delete Maps to HTTP DELETE. Used for deleting a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delete(@Nullable Output<String> delete) {
             $.delete = delete;
             return this;
         }
 
+        /**
+         * @param delete Maps to HTTP DELETE. Used for deleting a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delete(String delete) {
             return delete(Output.of(delete));
         }
 
+        /**
+         * @param get Maps to HTTP GET. Used for listing and getting information about resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder get(@Nullable Output<String> get) {
             $.get = get;
             return this;
         }
 
+        /**
+         * @param get Maps to HTTP GET. Used for listing and getting information about resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder get(String get) {
             return get(Output.of(get));
         }
 
+        /**
+         * @param patch Maps to HTTP PATCH. Used for updating a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patch(@Nullable Output<String> patch) {
             $.patch = patch;
             return this;
         }
 
+        /**
+         * @param patch Maps to HTTP PATCH. Used for updating a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patch(String patch) {
             return patch(Output.of(patch));
         }
 
+        /**
+         * @param post Maps to HTTP POST. Used for creating a resource or performing an action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder post(@Nullable Output<String> post) {
             $.post = post;
             return this;
         }
 
+        /**
+         * @param post Maps to HTTP POST. Used for creating a resource or performing an action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder post(String post) {
             return post(Output.of(post));
         }
 
+        /**
+         * @param put Maps to HTTP PUT. Used for replacing a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder put(@Nullable Output<String> put) {
             $.put = put;
             return this;
         }
 
+        /**
+         * @param put Maps to HTTP PUT. Used for replacing a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder put(String put) {
             return put(Output.of(put));
         }
 
+        /**
+         * @param responseBody Optional. The name of the response field whose value is mapped to the HTTP response body. When omitted, the entire response message will be used as the HTTP response body. NOTE: The referred field must be present at the top-level of the response message type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseBody(@Nullable Output<String> responseBody) {
             $.responseBody = responseBody;
             return this;
         }
 
+        /**
+         * @param responseBody Optional. The name of the response field whose value is mapped to the HTTP response body. When omitted, the entire response message will be used as the HTTP response body. NOTE: The referred field must be present at the top-level of the response message type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseBody(String responseBody) {
             return responseBody(Output.of(responseBody));
         }
 
+        /**
+         * @param selector Selects a method to which this rule applies. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable Output<String> selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selector Selects a method to which this rule applies. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             return selector(Output.of(selector));
         }

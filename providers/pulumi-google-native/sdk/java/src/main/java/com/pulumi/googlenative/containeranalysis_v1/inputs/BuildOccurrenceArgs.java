@@ -28,6 +28,10 @@ public final class BuildOccurrenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="intotoStatement")
     private @Nullable Output<InTotoStatementArgs> intotoStatement;
 
+    /**
+     * @return In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence&#39;s envelope.
+     * 
+     */
     public Optional<Output<InTotoStatementArgs>> intotoStatement() {
         return Optional.ofNullable(this.intotoStatement);
     }
@@ -39,6 +43,10 @@ public final class BuildOccurrenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="provenance")
     private @Nullable Output<BuildProvenanceArgs> provenance;
 
+    /**
+     * @return The actual provenance for the build.
+     * 
+     */
     public Optional<Output<BuildProvenanceArgs>> provenance() {
         return Optional.ofNullable(this.provenance);
     }
@@ -50,6 +58,10 @@ public final class BuildOccurrenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="provenanceBytes")
     private @Nullable Output<String> provenanceBytes;
 
+    /**
+     * @return Serialized JSON representation of the provenance, used in generating the build signature in the corresponding build note. After verifying the signature, `provenance_bytes` can be unmarshalled and compared to the provenance to confirm that it is unchanged. A base64-encoded string representation of the provenance bytes is used for the signature in order to interoperate with openssl which expects this format for signature verification. The serialized form is captured both to avoid ambiguity in how the provenance is marshalled to json as well to prevent incompatibilities with future changes.
+     * 
+     */
     public Optional<Output<String>> provenanceBytes() {
         return Optional.ofNullable(this.provenanceBytes);
     }
@@ -80,29 +92,65 @@ public final class BuildOccurrenceArgs extends com.pulumi.resources.ResourceArgs
             $ = new BuildOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param intotoStatement In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence&#39;s envelope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intotoStatement(@Nullable Output<InTotoStatementArgs> intotoStatement) {
             $.intotoStatement = intotoStatement;
             return this;
         }
 
+        /**
+         * @param intotoStatement In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence&#39;s envelope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intotoStatement(InTotoStatementArgs intotoStatement) {
             return intotoStatement(Output.of(intotoStatement));
         }
 
+        /**
+         * @param provenance The actual provenance for the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provenance(@Nullable Output<BuildProvenanceArgs> provenance) {
             $.provenance = provenance;
             return this;
         }
 
+        /**
+         * @param provenance The actual provenance for the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provenance(BuildProvenanceArgs provenance) {
             return provenance(Output.of(provenance));
         }
 
+        /**
+         * @param provenanceBytes Serialized JSON representation of the provenance, used in generating the build signature in the corresponding build note. After verifying the signature, `provenance_bytes` can be unmarshalled and compared to the provenance to confirm that it is unchanged. A base64-encoded string representation of the provenance bytes is used for the signature in order to interoperate with openssl which expects this format for signature verification. The serialized form is captured both to avoid ambiguity in how the provenance is marshalled to json as well to prevent incompatibilities with future changes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provenanceBytes(@Nullable Output<String> provenanceBytes) {
             $.provenanceBytes = provenanceBytes;
             return this;
         }
 
+        /**
+         * @param provenanceBytes Serialized JSON representation of the provenance, used in generating the build signature in the corresponding build note. After verifying the signature, `provenance_bytes` can be unmarshalled and compared to the provenance to confirm that it is unchanged. A base64-encoded string representation of the provenance bytes is used for the signature in order to interoperate with openssl which expects this format for signature verification. The serialized form is captured both to avoid ambiguity in how the provenance is marshalled to json as well to prevent incompatibilities with future changes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provenanceBytes(String provenanceBytes) {
             return provenanceBytes(Output.of(provenanceBytes));
         }

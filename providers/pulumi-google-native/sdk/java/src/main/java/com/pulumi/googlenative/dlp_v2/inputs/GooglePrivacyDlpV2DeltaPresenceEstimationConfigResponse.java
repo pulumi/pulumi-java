@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse exten
     @Import(name="auxiliaryTables", required=true)
     private List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables;
 
+    /**
+     * @return Several auxiliary tables can be used in the analysis. Each custom_tag used to tag a quasi-identifiers field must appear in exactly one field of one auxiliary table.
+     * 
+     */
     public List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables() {
         return this.auxiliaryTables;
     }
@@ -37,6 +41,10 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse exten
     @Import(name="quasiIds", required=true)
     private List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds;
 
+    /**
+     * @return Fields considered to be quasi-identifiers. No two fields can have the same tag.
+     * 
+     */
     public List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds() {
         return this.quasiIds;
     }
@@ -48,6 +56,10 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse exten
     @Import(name="regionCode", required=true)
     private String regionCode;
 
+    /**
+     * @return ISO 3166-1 alpha-2 region code to use in the statistical modeling. Set if no column is tagged with a region-specific InfoType (like US_ZIP_5) or a region code.
+     * 
+     */
     public String regionCode() {
         return this.regionCode;
     }
@@ -78,24 +90,54 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse exten
             $ = new GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auxiliaryTables Several auxiliary tables can be used in the analysis. Each custom_tag used to tag a quasi-identifiers field must appear in exactly one field of one auxiliary table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auxiliaryTables(List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables) {
             $.auxiliaryTables = auxiliaryTables;
             return this;
         }
 
+        /**
+         * @param auxiliaryTables Several auxiliary tables can be used in the analysis. Each custom_tag used to tag a quasi-identifiers field must appear in exactly one field of one auxiliary table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auxiliaryTables(GooglePrivacyDlpV2StatisticalTableResponse... auxiliaryTables) {
             return auxiliaryTables(List.of(auxiliaryTables));
         }
 
+        /**
+         * @param quasiIds Fields considered to be quasi-identifiers. No two fields can have the same tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIds(List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds) {
             $.quasiIds = quasiIds;
             return this;
         }
 
+        /**
+         * @param quasiIds Fields considered to be quasi-identifiers. No two fields can have the same tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIds(GooglePrivacyDlpV2QuasiIdResponse... quasiIds) {
             return quasiIds(List.of(quasiIds));
         }
 
+        /**
+         * @param regionCode ISO 3166-1 alpha-2 region code to use in the statistical modeling. Set if no column is tagged with a region-specific InfoType (like US_ZIP_5) or a region code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionCode(String regionCode) {
             $.regionCode = regionCode;
             return this;

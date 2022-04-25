@@ -27,6 +27,10 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends com.pulumi.resou
     @Import(name="algorithm", required=true)
     private String algorithm;
 
+    /**
+     * @return The search algorithm specified for the study.
+     * 
+     */
     public String algorithm() {
         return this.algorithm;
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends com.pulumi.resou
     @Import(name="automatedStoppingConfig", required=true)
     private GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig;
 
+    /**
+     * @return Configuration for automated stopping of unpromising Trials.
+     * 
+     */
     public GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig() {
         return this.automatedStoppingConfig;
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends com.pulumi.resou
     @Import(name="metrics", required=true)
     private List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics;
 
+    /**
+     * @return Metric specs for the study.
+     * 
+     */
     public List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics() {
         return this.metrics;
     }
@@ -60,6 +72,10 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends com.pulumi.resou
     @Import(name="parameters", required=true)
     private List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters;
 
+    /**
+     * @return The set of parameters to tune.
+     * 
+     */
     public List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters() {
         return this.parameters;
     }
@@ -91,30 +107,66 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends com.pulumi.resou
             $ = new GoogleCloudMlV1__StudyConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm The search algorithm specified for the study.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(String algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param automatedStoppingConfig Configuration for automated stopping of unpromising Trials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automatedStoppingConfig(GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig) {
             $.automatedStoppingConfig = automatedStoppingConfig;
             return this;
         }
 
+        /**
+         * @param metrics Metric specs for the study.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics) {
             $.metrics = metrics;
             return this;
         }
 
+        /**
+         * @param metrics Metric specs for the study.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(GoogleCloudMlV1_StudyConfig_MetricSpecResponse... metrics) {
             return metrics(List.of(metrics));
         }
 
+        /**
+         * @param parameters The set of parameters to tune.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The set of parameters to tune.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(GoogleCloudMlV1_StudyConfig_ParameterSpecResponse... parameters) {
             return parameters(List.of(parameters));
         }

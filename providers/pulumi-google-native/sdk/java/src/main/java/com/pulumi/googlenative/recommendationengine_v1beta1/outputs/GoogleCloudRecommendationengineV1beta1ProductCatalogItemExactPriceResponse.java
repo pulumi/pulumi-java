@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse {
     /**
-     * Optional. Display price of the product.
+     * @return Optional. Display price of the product.
      * 
      */
     private final Double displayPrice;
     /**
-     * Optional. Price of the product without any discount. If zero, by default set to be the &#39;displayPrice&#39;.
+     * @return Optional. Price of the product without any discount. If zero, by default set to be the &#39;displayPrice&#39;.
      * 
      */
     private final Double originalPrice;
@@ -29,16 +29,16 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
     }
 
     /**
-     * Optional. Display price of the product.
+     * @return Optional. Display price of the product.
      * 
-    */
+     */
     public Double displayPrice() {
         return this.displayPrice;
     }
     /**
-     * Optional. Price of the product without any discount. If zero, by default set to be the &#39;displayPrice&#39;.
+     * @return Optional. Price of the product without any discount. If zero, by default set to be the &#39;displayPrice&#39;.
      * 
-    */
+     */
     public Double originalPrice() {
         return this.originalPrice;
     }

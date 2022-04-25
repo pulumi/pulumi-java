@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ReleaseChannelResponse {
     /**
-     * channel specifies which release channel the cluster is subscribed to.
+     * @return channel specifies which release channel the cluster is subscribed to.
      * 
      */
     private final String channel;
@@ -21,9 +21,9 @@ public final class ReleaseChannelResponse {
     }
 
     /**
-     * channel specifies which release channel the cluster is subscribed to.
+     * @return channel specifies which release channel the cluster is subscribed to.
      * 
-    */
+     */
     public String channel() {
         return this.channel;
     }

@@ -27,6 +27,10 @@ public final class AccessSelectorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="permissions")
     private @Nullable Output<List<String>> permissions;
 
+    /**
+     * @return Optional. The permissions to appear in result.
+     * 
+     */
     public Optional<Output<List<String>>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -38,6 +42,10 @@ public final class AccessSelectorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="roles")
     private @Nullable Output<List<String>> roles;
 
+    /**
+     * @return Optional. The roles to appear in result.
+     * 
+     */
     public Optional<Output<List<String>>> roles() {
         return Optional.ofNullable(this.roles);
     }
@@ -67,28 +75,64 @@ public final class AccessSelectorArgs extends com.pulumi.resources.ResourceArgs 
             $ = new AccessSelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param permissions Optional. The permissions to appear in result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable Output<List<String>> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions Optional. The permissions to appear in result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<String> permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param permissions Optional. The permissions to appear in result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
         }
 
+        /**
+         * @param roles Optional. The roles to appear in result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(@Nullable Output<List<String>> roles) {
             $.roles = roles;
             return this;
         }
 
+        /**
+         * @param roles Optional. The roles to appear in result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(List<String> roles) {
             return roles(Output.of(roles));
         }
 
+        /**
+         * @param roles Optional. The roles to appear in result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(String... roles) {
             return roles(List.of(roles));
         }

@@ -26,6 +26,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destination", required=true)
     private Output<DestinationArgs> destination;
 
+    /**
+     * @return Destination specifies where the events should be sent to.
+     * 
+     */
     public Output<DestinationArgs> destination() {
         return this.destination;
     }
@@ -37,6 +41,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. User labels attached to the triggers that can be used to group resources.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -55,6 +63,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="matchingCriteria", required=true)
     private Output<List<MatchingCriteriaArgs>> matchingCriteria;
 
+    /**
+     * @return null The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
+     * 
+     */
     public Output<List<MatchingCriteriaArgs>> matchingCriteria() {
         return this.matchingCriteria;
     }
@@ -66,6 +78,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the trigger. Must be unique within the location on the project and must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -84,6 +100,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
     private @Nullable Output<String> serviceAccount;
 
+    /**
+     * @return Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have &#39;eventarc.events.receiveAuditLogV1Written&#39; permission.
+     * 
+     */
     public Optional<Output<String>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -134,20 +154,44 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Destination specifies where the events should be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(Output<DestinationArgs> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination Destination specifies where the events should be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(DestinationArgs destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param labels Optional. User labels attached to the triggers that can be used to group resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. User labels attached to the triggers that can be used to group resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -161,24 +205,54 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param matchingCriteria null The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchingCriteria(Output<List<MatchingCriteriaArgs>> matchingCriteria) {
             $.matchingCriteria = matchingCriteria;
             return this;
         }
 
+        /**
+         * @param matchingCriteria null The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchingCriteria(List<MatchingCriteriaArgs> matchingCriteria) {
             return matchingCriteria(Output.of(matchingCriteria));
         }
 
+        /**
+         * @param matchingCriteria null The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchingCriteria(MatchingCriteriaArgs... matchingCriteria) {
             return matchingCriteria(List.of(matchingCriteria));
         }
 
+        /**
+         * @param name The resource name of the trigger. Must be unique within the location on the project and must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the trigger. Must be unique within the location on the project and must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -192,11 +266,23 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param serviceAccount Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have &#39;eventarc.events.receiveAuditLogV1Written&#39; permission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have &#39;eventarc.events.receiveAuditLogV1Written&#39; permission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }

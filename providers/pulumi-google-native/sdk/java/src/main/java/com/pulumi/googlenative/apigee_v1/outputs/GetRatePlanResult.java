@@ -15,92 +15,92 @@ import java.util.Objects;
 @CustomType
 public final class GetRatePlanResult {
     /**
-     * Name of the API product that the rate plan is associated with.
+     * @return Name of the API product that the rate plan is associated with.
      * 
      */
     private final String apiproduct;
     /**
-     * Frequency at which the customer will be billed.
+     * @return Frequency at which the customer will be billed.
      * 
      */
     private final String billingPeriod;
     /**
-     * API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ &#34;start&#34;: 1, &#34;end&#34;: 100, &#34;fee&#34;: 75 }, { &#34;start&#34;: 101, &#34;end&#34;: 200, &#34;fee&#34;: 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
+     * @return API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ &#34;start&#34;: 1, &#34;end&#34;: 100, &#34;fee&#34;: 75 }, { &#34;start&#34;: 101, &#34;end&#34;: 200, &#34;fee&#34;: 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
      * 
      */
     private final List<GoogleCloudApigeeV1RateRangeResponse> consumptionPricingRates;
     /**
-     * Pricing model used for consumption-based charges.
+     * @return Pricing model used for consumption-based charges.
      * 
      */
     private final String consumptionPricingType;
     /**
-     * Time that the rate plan was created in milliseconds since epoch.
+     * @return Time that the rate plan was created in milliseconds since epoch.
      * 
      */
     private final String createdAt;
     /**
-     * Currency to be used for billing. Consists of a three-letter code as defined by the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) standard.
+     * @return Currency to be used for billing. Consists of a three-letter code as defined by the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) standard.
      * 
      */
     private final String currencyCode;
     /**
-     * Description of the rate plan.
+     * @return Description of the rate plan.
      * 
      */
     private final String description;
     /**
-     * Display name of the rate plan.
+     * @return Display name of the rate plan.
      * 
      */
     private final String displayName;
     /**
-     * Time when the rate plan will expire in milliseconds since epoch. Set to 0 or `null` to indicate that the rate plan should never expire.
+     * @return Time when the rate plan will expire in milliseconds since epoch. Set to 0 or `null` to indicate that the rate plan should never expire.
      * 
      */
     private final String endTime;
     /**
-     * Frequency at which the fixed fee is charged.
+     * @return Frequency at which the fixed fee is charged.
      * 
      */
     private final Integer fixedFeeFrequency;
     /**
-     * Fixed amount that is charged at a defined interval and billed in advance of use of the API product. The fee will be prorated for the first billing period.
+     * @return Fixed amount that is charged at a defined interval and billed in advance of use of the API product. The fee will be prorated for the first billing period.
      * 
      */
     private final GoogleTypeMoneyResponse fixedRecurringFee;
     /**
-     * Time the rate plan was last modified in milliseconds since epoch.
+     * @return Time the rate plan was last modified in milliseconds since epoch.
      * 
      */
     private final String lastModifiedAt;
     /**
-     * Name of the rate plan.
+     * @return Name of the rate plan.
      * 
      */
     private final String name;
     /**
-     * Details of the revenue sharing model.
+     * @return Details of the revenue sharing model.
      * 
      */
     private final List<GoogleCloudApigeeV1RevenueShareRangeResponse> revenueShareRates;
     /**
-     * Method used to calculate the revenue that is shared with developers.
+     * @return Method used to calculate the revenue that is shared with developers.
      * 
      */
     private final String revenueShareType;
     /**
-     * Initial, one-time fee paid when purchasing the API product.
+     * @return Initial, one-time fee paid when purchasing the API product.
      * 
      */
     private final GoogleTypeMoneyResponse setupFee;
     /**
-     * Time when the rate plan becomes active in milliseconds since epoch.
+     * @return Time when the rate plan becomes active in milliseconds since epoch.
      * 
      */
     private final String startTime;
     /**
-     * Current state of the rate plan (draft or published).
+     * @return Current state of the rate plan (draft or published).
      * 
      */
     private final String state;
@@ -146,128 +146,128 @@ public final class GetRatePlanResult {
     }
 
     /**
-     * Name of the API product that the rate plan is associated with.
+     * @return Name of the API product that the rate plan is associated with.
      * 
-    */
+     */
     public String apiproduct() {
         return this.apiproduct;
     }
     /**
-     * Frequency at which the customer will be billed.
+     * @return Frequency at which the customer will be billed.
      * 
-    */
+     */
     public String billingPeriod() {
         return this.billingPeriod;
     }
     /**
-     * API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ &#34;start&#34;: 1, &#34;end&#34;: 100, &#34;fee&#34;: 75 }, { &#34;start&#34;: 101, &#34;end&#34;: 200, &#34;fee&#34;: 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
+     * @return API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ &#34;start&#34;: 1, &#34;end&#34;: 100, &#34;fee&#34;: 75 }, { &#34;start&#34;: 101, &#34;end&#34;: 200, &#34;fee&#34;: 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
      * 
-    */
+     */
     public List<GoogleCloudApigeeV1RateRangeResponse> consumptionPricingRates() {
         return this.consumptionPricingRates;
     }
     /**
-     * Pricing model used for consumption-based charges.
+     * @return Pricing model used for consumption-based charges.
      * 
-    */
+     */
     public String consumptionPricingType() {
         return this.consumptionPricingType;
     }
     /**
-     * Time that the rate plan was created in milliseconds since epoch.
+     * @return Time that the rate plan was created in milliseconds since epoch.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * Currency to be used for billing. Consists of a three-letter code as defined by the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) standard.
+     * @return Currency to be used for billing. Consists of a three-letter code as defined by the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) standard.
      * 
-    */
+     */
     public String currencyCode() {
         return this.currencyCode;
     }
     /**
-     * Description of the rate plan.
+     * @return Description of the rate plan.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Display name of the rate plan.
+     * @return Display name of the rate plan.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Time when the rate plan will expire in milliseconds since epoch. Set to 0 or `null` to indicate that the rate plan should never expire.
+     * @return Time when the rate plan will expire in milliseconds since epoch. Set to 0 or `null` to indicate that the rate plan should never expire.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * Frequency at which the fixed fee is charged.
+     * @return Frequency at which the fixed fee is charged.
      * 
-    */
+     */
     public Integer fixedFeeFrequency() {
         return this.fixedFeeFrequency;
     }
     /**
-     * Fixed amount that is charged at a defined interval and billed in advance of use of the API product. The fee will be prorated for the first billing period.
+     * @return Fixed amount that is charged at a defined interval and billed in advance of use of the API product. The fee will be prorated for the first billing period.
      * 
-    */
+     */
     public GoogleTypeMoneyResponse fixedRecurringFee() {
         return this.fixedRecurringFee;
     }
     /**
-     * Time the rate plan was last modified in milliseconds since epoch.
+     * @return Time the rate plan was last modified in milliseconds since epoch.
      * 
-    */
+     */
     public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
-     * Name of the rate plan.
+     * @return Name of the rate plan.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Details of the revenue sharing model.
+     * @return Details of the revenue sharing model.
      * 
-    */
+     */
     public List<GoogleCloudApigeeV1RevenueShareRangeResponse> revenueShareRates() {
         return this.revenueShareRates;
     }
     /**
-     * Method used to calculate the revenue that is shared with developers.
+     * @return Method used to calculate the revenue that is shared with developers.
      * 
-    */
+     */
     public String revenueShareType() {
         return this.revenueShareType;
     }
     /**
-     * Initial, one-time fee paid when purchasing the API product.
+     * @return Initial, one-time fee paid when purchasing the API product.
      * 
-    */
+     */
     public GoogleTypeMoneyResponse setupFee() {
         return this.setupFee;
     }
     /**
-     * Time when the rate plan becomes active in milliseconds since epoch.
+     * @return Time when the rate plan becomes active in milliseconds since epoch.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Current state of the rate plan (draft or published).
+     * @return Current state of the rate plan (draft or published).
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

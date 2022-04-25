@@ -23,6 +23,10 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="backup", required=true)
     private String backup;
 
+    /**
+     * @return Name of the backup.
+     * 
+     */
     public String backup() {
         return this.backup;
     }
@@ -34,6 +38,10 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return This time that the backup was finished. Row data in the backup will be no newer than this timestamp.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -45,6 +53,10 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceTable", required=true)
     private String sourceTable;
 
+    /**
+     * @return Name of the table the backup was created from.
+     * 
+     */
     public String sourceTable() {
         return this.sourceTable;
     }
@@ -56,6 +68,10 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The time that the backup was started. Row data in the backup will be no older than this timestamp.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -87,21 +103,45 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BackupInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backup Name of the backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backup(String backup) {
             $.backup = backup;
             return this;
         }
 
+        /**
+         * @param endTime This time that the backup was finished. Row data in the backup will be no newer than this timestamp.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param sourceTable Name of the table the backup was created from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTable(String sourceTable) {
             $.sourceTable = sourceTable;
             return this;
         }
 
+        /**
+         * @param startTime The time that the backup was started. Row data in the backup will be no older than this timestamp.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

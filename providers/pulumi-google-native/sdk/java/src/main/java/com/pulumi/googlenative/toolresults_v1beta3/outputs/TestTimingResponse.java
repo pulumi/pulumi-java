@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class TestTimingResponse {
     /**
-     * How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
+     * @return How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
      * 
      */
     private final DurationResponse testProcessDuration;
@@ -21,9 +21,9 @@ public final class TestTimingResponse {
     }
 
     /**
-     * How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
+     * @return How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
      * 
-    */
+     */
     public DurationResponse testProcessDuration() {
         return this.testProcessDuration;
     }

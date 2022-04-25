@@ -31,6 +31,10 @@ public final class FeedbackMessageArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="body")
     private @Nullable Output<String> body;
 
+    /**
+     * @return String content of the feedback. Maximum of 10000 characters.
+     * 
+     */
     public Optional<Output<String>> body() {
         return Optional.ofNullable(this.body);
     }
@@ -42,6 +46,10 @@ public final class FeedbackMessageArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return Create time.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -67,6 +75,10 @@ public final class FeedbackMessageArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="image")
     private @Nullable Output<String> image;
 
+    /**
+     * @return The image storing this feedback if the feedback is an image representing operator&#39;s comments.
+     * 
+     */
     public Optional<Output<String>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -78,6 +90,10 @@ public final class FeedbackMessageArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the feedback message in a feedback thread. Format: &#39;project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}&#39;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -145,20 +161,44 @@ public final class FeedbackMessageArgs extends com.pulumi.resources.ResourceArgs
             return annotatedDatasetId(Output.of(annotatedDatasetId));
         }
 
+        /**
+         * @param body String content of the feedback. Maximum of 10000 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Output<String> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body String content of the feedback. Maximum of 10000 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(String body) {
             return body(Output.of(body));
         }
 
+        /**
+         * @param createTime Create time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime Create time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
@@ -181,20 +221,44 @@ public final class FeedbackMessageArgs extends com.pulumi.resources.ResourceArgs
             return feedbackThreadId(Output.of(feedbackThreadId));
         }
 
+        /**
+         * @param image The image storing this feedback if the feedback is an image representing operator&#39;s comments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<String> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image The image storing this feedback if the feedback is an image representing operator&#39;s comments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             return image(Output.of(image));
         }
 
+        /**
+         * @param name Name of the feedback message in a feedback thread. Format: &#39;project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the feedback message in a feedback thread. Format: &#39;project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

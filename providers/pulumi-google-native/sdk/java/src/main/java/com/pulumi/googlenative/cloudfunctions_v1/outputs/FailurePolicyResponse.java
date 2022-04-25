@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class FailurePolicyResponse {
     /**
-     * If specified, then the function will be retried in case of a failure.
+     * @return If specified, then the function will be retried in case of a failure.
      * 
      */
     private final RetryResponse retry;
@@ -21,9 +21,9 @@ public final class FailurePolicyResponse {
     }
 
     /**
-     * If specified, then the function will be retried in case of a failure.
+     * @return If specified, then the function will be retried in case of a failure.
      * 
-    */
+     */
     public RetryResponse retry() {
         return this.retry;
     }

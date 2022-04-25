@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2KindExpressionResponse extends com.pulumi.r
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the kind.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2KindExpressionResponse extends com.pulumi.r
             $ = new GooglePrivacyDlpV2KindExpressionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the kind.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

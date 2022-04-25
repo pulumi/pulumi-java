@@ -29,6 +29,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="access")
     private @Nullable Output<List<DatasetAccessItemArgs>> access;
 
+    /**
+     * @return [Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
+     * 
+     */
     public Optional<Output<List<DatasetAccessItemArgs>>> access() {
         return Optional.ofNullable(this.access);
     }
@@ -40,6 +44,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasetReference")
     private @Nullable Output<DatasetReferenceArgs> datasetReference;
 
+    /**
+     * @return [Required] A reference that identifies the dataset.
+     * 
+     */
     public Optional<Output<DatasetReferenceArgs>> datasetReference() {
         return Optional.ofNullable(this.datasetReference);
     }
@@ -58,6 +66,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultPartitionExpirationMs")
     private @Nullable Output<String> defaultPartitionExpirationMs;
 
+    /**
+     * @return [Optional] The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set, all newly-created partitioned tables in the dataset will have an expirationMs property in the timePartitioning settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of defaultTableExpirationMs for partitioned tables: only one of defaultTableExpirationMs and defaultPartitionExpirationMs will be used for any new partitioned table. If you provide an explicit timePartitioning.expirationMs when creating or updating a partitioned table, that value takes precedence over the default partition expiration time indicated by this property.
+     * 
+     */
     public Optional<Output<String>> defaultPartitionExpirationMs() {
         return Optional.ofNullable(this.defaultPartitionExpirationMs);
     }
@@ -69,6 +81,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultTableExpirationMs")
     private @Nullable Output<String> defaultTableExpirationMs;
 
+    /**
+     * @return [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables in the dataset will have an expirationTime property set to the creation time plus the value in this property, and changing the value will only affect new tables, not existing ones. When the expirationTime for a given table is reached, that table will be deleted automatically. If a table&#39;s expirationTime is modified or removed before the table expires, or if you provide an explicit expirationTime when creating a table, that value takes precedence over the default expiration time indicated by this property.
+     * 
+     */
     public Optional<Output<String>> defaultTableExpirationMs() {
         return Optional.ofNullable(this.defaultTableExpirationMs);
     }
@@ -80,6 +96,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return [Optional] A user-friendly description of the dataset.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -91,6 +111,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return [Optional] A descriptive name for the dataset.
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -102,6 +126,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isCaseInsensitive")
     private @Nullable Output<Boolean> isCaseInsensitive;
 
+    /**
+     * @return [Optional] Indicates if table names are case insensitive in the dataset.
+     * 
+     */
     public Optional<Output<Boolean>> isCaseInsensitive() {
         return Optional.ofNullable(this.isCaseInsensitive);
     }
@@ -113,6 +141,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The labels associated with this dataset. You can use these to organize and group your datasets. You can set this property when inserting or updating a dataset. See Creating and Updating Dataset Labels for more information.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -124,6 +156,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geographic location where the dataset should reside. The default value is US. See details at https://cloud.google.com/bigquery/docs/locations.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -142,6 +178,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DatasetTagsItemArgs>> tags;
 
+    /**
+     * @return [Optional]The tags associated with this dataset. Tag keys are globally unique.
+     * 
+     */
     public Optional<Output<List<DatasetTagsItemArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -181,24 +221,54 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatasetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param access [Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
+         * 
+         * @return builder
+         * 
+         */
         public Builder access(@Nullable Output<List<DatasetAccessItemArgs>> access) {
             $.access = access;
             return this;
         }
 
+        /**
+         * @param access [Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
+         * 
+         * @return builder
+         * 
+         */
         public Builder access(List<DatasetAccessItemArgs> access) {
             return access(Output.of(access));
         }
 
+        /**
+         * @param access [Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
+         * 
+         * @return builder
+         * 
+         */
         public Builder access(DatasetAccessItemArgs... access) {
             return access(List.of(access));
         }
 
+        /**
+         * @param datasetReference [Required] A reference that identifies the dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetReference(@Nullable Output<DatasetReferenceArgs> datasetReference) {
             $.datasetReference = datasetReference;
             return this;
         }
 
+        /**
+         * @param datasetReference [Required] A reference that identifies the dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetReference(DatasetReferenceArgs datasetReference) {
             return datasetReference(Output.of(datasetReference));
         }
@@ -212,65 +282,149 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
             return defaultEncryptionConfiguration(Output.of(defaultEncryptionConfiguration));
         }
 
+        /**
+         * @param defaultPartitionExpirationMs [Optional] The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set, all newly-created partitioned tables in the dataset will have an expirationMs property in the timePartitioning settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of defaultTableExpirationMs for partitioned tables: only one of defaultTableExpirationMs and defaultPartitionExpirationMs will be used for any new partitioned table. If you provide an explicit timePartitioning.expirationMs when creating or updating a partitioned table, that value takes precedence over the default partition expiration time indicated by this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPartitionExpirationMs(@Nullable Output<String> defaultPartitionExpirationMs) {
             $.defaultPartitionExpirationMs = defaultPartitionExpirationMs;
             return this;
         }
 
+        /**
+         * @param defaultPartitionExpirationMs [Optional] The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set, all newly-created partitioned tables in the dataset will have an expirationMs property in the timePartitioning settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of defaultTableExpirationMs for partitioned tables: only one of defaultTableExpirationMs and defaultPartitionExpirationMs will be used for any new partitioned table. If you provide an explicit timePartitioning.expirationMs when creating or updating a partitioned table, that value takes precedence over the default partition expiration time indicated by this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPartitionExpirationMs(String defaultPartitionExpirationMs) {
             return defaultPartitionExpirationMs(Output.of(defaultPartitionExpirationMs));
         }
 
+        /**
+         * @param defaultTableExpirationMs [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables in the dataset will have an expirationTime property set to the creation time plus the value in this property, and changing the value will only affect new tables, not existing ones. When the expirationTime for a given table is reached, that table will be deleted automatically. If a table&#39;s expirationTime is modified or removed before the table expires, or if you provide an explicit expirationTime when creating a table, that value takes precedence over the default expiration time indicated by this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultTableExpirationMs(@Nullable Output<String> defaultTableExpirationMs) {
             $.defaultTableExpirationMs = defaultTableExpirationMs;
             return this;
         }
 
+        /**
+         * @param defaultTableExpirationMs [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables in the dataset will have an expirationTime property set to the creation time plus the value in this property, and changing the value will only affect new tables, not existing ones. When the expirationTime for a given table is reached, that table will be deleted automatically. If a table&#39;s expirationTime is modified or removed before the table expires, or if you provide an explicit expirationTime when creating a table, that value takes precedence over the default expiration time indicated by this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultTableExpirationMs(String defaultTableExpirationMs) {
             return defaultTableExpirationMs(Output.of(defaultTableExpirationMs));
         }
 
+        /**
+         * @param description [Optional] A user-friendly description of the dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description [Optional] A user-friendly description of the dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param friendlyName [Optional] A descriptive name for the dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName [Optional] A descriptive name for the dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param isCaseInsensitive [Optional] Indicates if table names are case insensitive in the dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCaseInsensitive(@Nullable Output<Boolean> isCaseInsensitive) {
             $.isCaseInsensitive = isCaseInsensitive;
             return this;
         }
 
+        /**
+         * @param isCaseInsensitive [Optional] Indicates if table names are case insensitive in the dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCaseInsensitive(Boolean isCaseInsensitive) {
             return isCaseInsensitive(Output.of(isCaseInsensitive));
         }
 
+        /**
+         * @param labels The labels associated with this dataset. You can use these to organize and group your datasets. You can set this property when inserting or updating a dataset. See Creating and Updating Dataset Labels for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The labels associated with this dataset. You can use these to organize and group your datasets. You can set this property when inserting or updating a dataset. See Creating and Updating Dataset Labels for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param location The geographic location where the dataset should reside. The default value is US. See details at https://cloud.google.com/bigquery/docs/locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geographic location where the dataset should reside. The default value is US. See details at https://cloud.google.com/bigquery/docs/locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
@@ -284,15 +438,33 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param tags [Optional]The tags associated with this dataset. Tag keys are globally unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DatasetTagsItemArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags [Optional]The tags associated with this dataset. Tag keys are globally unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DatasetTagsItemArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags [Optional]The tags associated with this dataset. Tag keys are globally unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DatasetTagsItemArgs... tags) {
             return tags(List.of(tags));
         }

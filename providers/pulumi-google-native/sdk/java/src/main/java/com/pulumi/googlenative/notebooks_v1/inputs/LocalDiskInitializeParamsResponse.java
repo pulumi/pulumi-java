@@ -24,6 +24,10 @@ public final class LocalDiskInitializeParamsResponse extends com.pulumi.resource
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Optional. Provide this property when creating the disk.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -35,6 +39,10 @@ public final class LocalDiskInitializeParamsResponse extends com.pulumi.resource
     @Import(name="diskName", required=true)
     private String diskName;
 
+    /**
+     * @return Optional. Specifies the disk name. If not specified, the default is to use the name of the instance. If the disk with the instance name exists already in the given zone/region, a new name will be automatically generated.
+     * 
+     */
     public String diskName() {
         return this.diskName;
     }
@@ -46,6 +54,10 @@ public final class LocalDiskInitializeParamsResponse extends com.pulumi.resource
     @Import(name="diskSizeGb", required=true)
     private String diskSizeGb;
 
+    /**
+     * @return Optional. Specifies the size of the disk in base-2 GB. If not specified, the disk will be the same size as the image (usually 10GB). If specified, the size must be equal to or larger than 10GB. Default 100 GB.
+     * 
+     */
     public String diskSizeGb() {
         return this.diskSizeGb;
     }
@@ -57,6 +69,10 @@ public final class LocalDiskInitializeParamsResponse extends com.pulumi.resource
     @Import(name="diskType", required=true)
     private String diskType;
 
+    /**
+     * @return Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
+     * 
+     */
     public String diskType() {
         return this.diskType;
     }
@@ -68,6 +84,10 @@ public final class LocalDiskInitializeParamsResponse extends com.pulumi.resource
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return Optional. Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -100,26 +120,56 @@ public final class LocalDiskInitializeParamsResponse extends com.pulumi.resource
             $ = new LocalDiskInitializeParamsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. Provide this property when creating the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param diskName Optional. Specifies the disk name. If not specified, the default is to use the name of the instance. If the disk with the instance name exists already in the given zone/region, a new name will be automatically generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(String diskName) {
             $.diskName = diskName;
             return this;
         }
 
+        /**
+         * @param diskSizeGb Optional. Specifies the size of the disk in base-2 GB. If not specified, the disk will be the same size as the image (usually 10GB). If specified, the size must be equal to or larger than 10GB. Default 100 GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(String diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param diskType Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param labels Optional. Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;

@@ -24,6 +24,10 @@ public final class MaintenanceScheduleResponse extends com.pulumi.resources.Invo
     @Import(name="canReschedule", required=true)
     private Boolean canReschedule;
 
+    /**
+     * @return If the scheduled maintenance can be rescheduled, default is true.
+     * 
+     */
     public Boolean canReschedule() {
         return this.canReschedule;
     }
@@ -35,6 +39,10 @@ public final class MaintenanceScheduleResponse extends com.pulumi.resources.Invo
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return The end time of any upcoming scheduled maintenance for this instance.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -46,6 +54,10 @@ public final class MaintenanceScheduleResponse extends com.pulumi.resources.Invo
     @Import(name="scheduleDeadlineTime", required=true)
     private String scheduleDeadlineTime;
 
+    /**
+     * @return The deadline that the maintenance schedule start time can not go beyond, including reschedule.
+     * 
+     */
     public String scheduleDeadlineTime() {
         return this.scheduleDeadlineTime;
     }
@@ -57,6 +69,10 @@ public final class MaintenanceScheduleResponse extends com.pulumi.resources.Invo
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The start time of any upcoming scheduled maintenance for this instance.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -88,21 +104,45 @@ public final class MaintenanceScheduleResponse extends com.pulumi.resources.Invo
             $ = new MaintenanceScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canReschedule If the scheduled maintenance can be rescheduled, default is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canReschedule(Boolean canReschedule) {
             $.canReschedule = canReschedule;
             return this;
         }
 
+        /**
+         * @param endTime The end time of any upcoming scheduled maintenance for this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param scheduleDeadlineTime The deadline that the maintenance schedule start time can not go beyond, including reschedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleDeadlineTime(String scheduleDeadlineTime) {
             $.scheduleDeadlineTime = scheduleDeadlineTime;
             return this;
         }
 
+        /**
+         * @param startTime The start time of any upcoming scheduled maintenance for this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

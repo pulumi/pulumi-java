@@ -28,6 +28,10 @@ public final class PerformanceThresholdArgs extends com.pulumi.resources.Resourc
     @Import(name="basicSliPerformance")
     private @Nullable Output<BasicSliArgs> basicSliPerformance;
 
+    /**
+     * @return BasicSli to evaluate to judge window quality.
+     * 
+     */
     public Optional<Output<BasicSliArgs>> basicSliPerformance() {
         return Optional.ofNullable(this.basicSliPerformance);
     }
@@ -39,6 +43,10 @@ public final class PerformanceThresholdArgs extends com.pulumi.resources.Resourc
     @Import(name="performance")
     private @Nullable Output<RequestBasedSliArgs> performance;
 
+    /**
+     * @return RequestBasedSli to evaluate to judge window quality.
+     * 
+     */
     public Optional<Output<RequestBasedSliArgs>> performance() {
         return Optional.ofNullable(this.performance);
     }
@@ -50,6 +58,10 @@ public final class PerformanceThresholdArgs extends com.pulumi.resources.Resourc
     @Import(name="threshold")
     private @Nullable Output<Double> threshold;
 
+    /**
+     * @return If window performance &gt;= threshold, the window is counted as good.
+     * 
+     */
     public Optional<Output<Double>> threshold() {
         return Optional.ofNullable(this.threshold);
     }
@@ -80,29 +92,65 @@ public final class PerformanceThresholdArgs extends com.pulumi.resources.Resourc
             $ = new PerformanceThresholdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basicSliPerformance BasicSli to evaluate to judge window quality.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicSliPerformance(@Nullable Output<BasicSliArgs> basicSliPerformance) {
             $.basicSliPerformance = basicSliPerformance;
             return this;
         }
 
+        /**
+         * @param basicSliPerformance BasicSli to evaluate to judge window quality.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicSliPerformance(BasicSliArgs basicSliPerformance) {
             return basicSliPerformance(Output.of(basicSliPerformance));
         }
 
+        /**
+         * @param performance RequestBasedSli to evaluate to judge window quality.
+         * 
+         * @return builder
+         * 
+         */
         public Builder performance(@Nullable Output<RequestBasedSliArgs> performance) {
             $.performance = performance;
             return this;
         }
 
+        /**
+         * @param performance RequestBasedSli to evaluate to judge window quality.
+         * 
+         * @return builder
+         * 
+         */
         public Builder performance(RequestBasedSliArgs performance) {
             return performance(Output.of(performance));
         }
 
+        /**
+         * @param threshold If window performance &gt;= threshold, the window is counted as good.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(@Nullable Output<Double> threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param threshold If window performance &gt;= threshold, the window is counted as good.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Double threshold) {
             return threshold(Output.of(threshold));
         }

@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
     @Import(name="confidenceLevel", required=true)
     private Double confidenceLevel;
 
+    /**
+     * @return The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.
+     * 
+     */
     public Double confidenceLevel() {
         return this.confidenceLevel;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
     @Import(name="lowerBound", required=true)
     private Double lowerBound;
 
+    /**
+     * @return Lower bound of the interval.
+     * 
+     */
     public Double lowerBound() {
         return this.lowerBound;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
     @Import(name="ratio", required=true)
     private Double ratio;
 
+    /**
+     * @return The percent change between an experiment metric&#39;s value and the value for its control.
+     * 
+     */
     public Double ratio() {
         return this.ratio;
     }
@@ -56,6 +68,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
     @Import(name="upperBound", required=true)
     private Double upperBound;
 
+    /**
+     * @return Upper bound of the interval.
+     * 
+     */
     public Double upperBound() {
         return this.upperBound;
     }
@@ -87,21 +103,45 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
             $ = new GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param confidenceLevel The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidenceLevel(Double confidenceLevel) {
             $.confidenceLevel = confidenceLevel;
             return this;
         }
 
+        /**
+         * @param lowerBound Lower bound of the interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowerBound(Double lowerBound) {
             $.lowerBound = lowerBound;
             return this;
         }
 
+        /**
+         * @param ratio The percent change between an experiment metric&#39;s value and the value for its control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ratio(Double ratio) {
             $.ratio = ratio;
             return this;
         }
 
+        /**
+         * @param upperBound Upper bound of the interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upperBound(Double upperBound) {
             $.upperBound = upperBound;
             return this;

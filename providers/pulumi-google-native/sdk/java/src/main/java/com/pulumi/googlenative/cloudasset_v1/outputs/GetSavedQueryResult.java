@@ -12,42 +12,42 @@ import java.util.Objects;
 @CustomType
 public final class GetSavedQueryResult {
     /**
-     * The query content.
+     * @return The query content.
      * 
      */
     private final QueryContentResponse content;
     /**
-     * The create time of this saved query.
+     * @return The create time of this saved query.
      * 
      */
     private final String createTime;
     /**
-     * The account&#39;s email address who has created this saved query.
+     * @return The account&#39;s email address who has created this saved query.
      * 
      */
     private final String creator;
     /**
-     * The description of this saved query. This value should be fewer than 255 characters.
+     * @return The description of this saved query. This value should be fewer than 255 characters.
      * 
      */
     private final String description;
     /**
-     * Labels applied on the resource. This value should not contain more than 10 entries. The key and value of each entry must be non-empty and fewer than 64 characters.
+     * @return Labels applied on the resource. This value should not contain more than 10 entries. The key and value of each entry must be non-empty and fewer than 64 characters.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The last update time of this saved query.
+     * @return The last update time of this saved query.
      * 
      */
     private final String lastUpdateTime;
     /**
-     * The account&#39;s email address who has updated this saved query most recently.
+     * @return The account&#39;s email address who has updated this saved query most recently.
      * 
      */
     private final String lastUpdater;
     /**
-     * The resource name of the saved query. The format must be: * projects/project_number/savedQueries/saved_query_id * folders/folder_number/savedQueries/saved_query_id * organizations/organization_number/savedQueries/saved_query_id
+     * @return The resource name of the saved query. The format must be: * projects/project_number/savedQueries/saved_query_id * folders/folder_number/savedQueries/saved_query_id * organizations/organization_number/savedQueries/saved_query_id
      * 
      */
     private final String name;
@@ -73,58 +73,58 @@ public final class GetSavedQueryResult {
     }
 
     /**
-     * The query content.
+     * @return The query content.
      * 
-    */
+     */
     public QueryContentResponse content() {
         return this.content;
     }
     /**
-     * The create time of this saved query.
+     * @return The create time of this saved query.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The account&#39;s email address who has created this saved query.
+     * @return The account&#39;s email address who has created this saved query.
      * 
-    */
+     */
     public String creator() {
         return this.creator;
     }
     /**
-     * The description of this saved query. This value should be fewer than 255 characters.
+     * @return The description of this saved query. This value should be fewer than 255 characters.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Labels applied on the resource. This value should not contain more than 10 entries. The key and value of each entry must be non-empty and fewer than 64 characters.
+     * @return Labels applied on the resource. This value should not contain more than 10 entries. The key and value of each entry must be non-empty and fewer than 64 characters.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The last update time of this saved query.
+     * @return The last update time of this saved query.
      * 
-    */
+     */
     public String lastUpdateTime() {
         return this.lastUpdateTime;
     }
     /**
-     * The account&#39;s email address who has updated this saved query most recently.
+     * @return The account&#39;s email address who has updated this saved query most recently.
      * 
-    */
+     */
     public String lastUpdater() {
         return this.lastUpdater;
     }
     /**
-     * The resource name of the saved query. The format must be: * projects/project_number/savedQueries/saved_query_id * folders/folder_number/savedQueries/saved_query_id * organizations/organization_number/savedQueries/saved_query_id
+     * @return The resource name of the saved query. The format must be: * projects/project_number/savedQueries/saved_query_id * folders/folder_number/savedQueries/saved_query_id * organizations/organization_number/savedQueries/saved_query_id
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

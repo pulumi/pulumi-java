@@ -22,6 +22,10 @@ public final class PacketMirroringNetworkInfoArgs extends com.pulumi.resources.R
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return URL of the network resource.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -50,11 +54,23 @@ public final class PacketMirroringNetworkInfoArgs extends com.pulumi.resources.R
             $ = new PacketMirroringNetworkInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param url URL of the network resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url URL of the network resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

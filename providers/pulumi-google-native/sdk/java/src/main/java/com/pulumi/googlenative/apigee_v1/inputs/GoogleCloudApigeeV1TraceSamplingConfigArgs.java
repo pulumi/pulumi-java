@@ -27,6 +27,10 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends com.pulumi
     @Import(name="sampler")
     private @Nullable Output<GoogleCloudApigeeV1TraceSamplingConfigSampler> sampler;
 
+    /**
+     * @return Sampler of distributed tracing. OFF is the default value.
+     * 
+     */
     public Optional<Output<GoogleCloudApigeeV1TraceSamplingConfigSampler>> sampler() {
         return Optional.ofNullable(this.sampler);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends com.pulumi
     @Import(name="samplingRate")
     private @Nullable Output<Double> samplingRate;
 
+    /**
+     * @return Field sampling rate. This value is only applicable when using the PROBABILITY sampler. The supported values are &gt; 0 and &lt;= 0.5.
+     * 
+     */
     public Optional<Output<Double>> samplingRate() {
         return Optional.ofNullable(this.samplingRate);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends com.pulumi
             $ = new GoogleCloudApigeeV1TraceSamplingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sampler Sampler of distributed tracing. OFF is the default value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampler(@Nullable Output<GoogleCloudApigeeV1TraceSamplingConfigSampler> sampler) {
             $.sampler = sampler;
             return this;
         }
 
+        /**
+         * @param sampler Sampler of distributed tracing. OFF is the default value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampler(GoogleCloudApigeeV1TraceSamplingConfigSampler sampler) {
             return sampler(Output.of(sampler));
         }
 
+        /**
+         * @param samplingRate Field sampling rate. This value is only applicable when using the PROBABILITY sampler. The supported values are &gt; 0 and &lt;= 0.5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingRate(@Nullable Output<Double> samplingRate) {
             $.samplingRate = samplingRate;
             return this;
         }
 
+        /**
+         * @param samplingRate Field sampling rate. This value is only applicable when using the PROBABILITY sampler. The supported values are &gt; 0 and &lt;= 0.5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingRate(Double samplingRate) {
             return samplingRate(Output.of(samplingRate));
         }

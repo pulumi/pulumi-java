@@ -28,6 +28,10 @@ public final class BasicAutoscalingAlgorithmArgs extends com.pulumi.resources.Re
     @Import(name="cooldownPeriod")
     private @Nullable Output<String> cooldownPeriod;
 
+    /**
+     * @return Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
+     * 
+     */
     public Optional<Output<String>> cooldownPeriod() {
         return Optional.ofNullable(this.cooldownPeriod);
     }
@@ -39,6 +43,10 @@ public final class BasicAutoscalingAlgorithmArgs extends com.pulumi.resources.Re
     @Import(name="sparkStandaloneConfig")
     private @Nullable Output<SparkStandaloneAutoscalingConfigArgs> sparkStandaloneConfig;
 
+    /**
+     * @return Optional. Spark Standalone autoscaling configuration
+     * 
+     */
     public Optional<Output<SparkStandaloneAutoscalingConfigArgs>> sparkStandaloneConfig() {
         return Optional.ofNullable(this.sparkStandaloneConfig);
     }
@@ -50,6 +58,10 @@ public final class BasicAutoscalingAlgorithmArgs extends com.pulumi.resources.Re
     @Import(name="yarnConfig")
     private @Nullable Output<BasicYarnAutoscalingConfigArgs> yarnConfig;
 
+    /**
+     * @return Optional. YARN autoscaling configuration.
+     * 
+     */
     public Optional<Output<BasicYarnAutoscalingConfigArgs>> yarnConfig() {
         return Optional.ofNullable(this.yarnConfig);
     }
@@ -80,29 +92,65 @@ public final class BasicAutoscalingAlgorithmArgs extends com.pulumi.resources.Re
             $ = new BasicAutoscalingAlgorithmArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cooldownPeriod Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cooldownPeriod(@Nullable Output<String> cooldownPeriod) {
             $.cooldownPeriod = cooldownPeriod;
             return this;
         }
 
+        /**
+         * @param cooldownPeriod Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cooldownPeriod(String cooldownPeriod) {
             return cooldownPeriod(Output.of(cooldownPeriod));
         }
 
+        /**
+         * @param sparkStandaloneConfig Optional. Spark Standalone autoscaling configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkStandaloneConfig(@Nullable Output<SparkStandaloneAutoscalingConfigArgs> sparkStandaloneConfig) {
             $.sparkStandaloneConfig = sparkStandaloneConfig;
             return this;
         }
 
+        /**
+         * @param sparkStandaloneConfig Optional. Spark Standalone autoscaling configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkStandaloneConfig(SparkStandaloneAutoscalingConfigArgs sparkStandaloneConfig) {
             return sparkStandaloneConfig(Output.of(sparkStandaloneConfig));
         }
 
+        /**
+         * @param yarnConfig Optional. YARN autoscaling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yarnConfig(@Nullable Output<BasicYarnAutoscalingConfigArgs> yarnConfig) {
             $.yarnConfig = yarnConfig;
             return this;
         }
 
+        /**
+         * @param yarnConfig Optional. YARN autoscaling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yarnConfig(BasicYarnAutoscalingConfigArgs yarnConfig) {
             return yarnConfig(Output.of(yarnConfig));
         }

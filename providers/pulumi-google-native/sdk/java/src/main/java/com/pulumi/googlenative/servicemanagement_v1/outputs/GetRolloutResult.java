@@ -12,32 +12,32 @@ import java.util.Objects;
 @CustomType
 public final class GetRolloutResult {
     /**
-     * Creation time of the rollout. Readonly.
+     * @return Creation time of the rollout. Readonly.
      * 
      */
     private final String createTime;
     /**
-     * The strategy associated with a rollout to delete a `ManagedService`. Readonly.
+     * @return The strategy associated with a rollout to delete a `ManagedService`. Readonly.
      * 
      */
     private final DeleteServiceStrategyResponse deleteServiceStrategy;
     /**
-     * Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only lower case letters, digits, &#39;.&#39;, &#39;_&#39; and &#39;-&#39; are allowed. If not specified by client, the server will generate one. The generated id will have the form of , where &#34;date&#34; is the create date in ISO 8601 format. &#34;revision number&#34; is a monotonically increasing positive number that is reset every day for each service. An example of the generated rollout_id is &#39;2016-02-16r1&#39;
+     * @return Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only lower case letters, digits, &#39;.&#39;, &#39;_&#39; and &#39;-&#39; are allowed. If not specified by client, the server will generate one. The generated id will have the form of , where &#34;date&#34; is the create date in ISO 8601 format. &#34;revision number&#34; is a monotonically increasing positive number that is reset every day for each service. An example of the generated rollout_id is &#39;2016-02-16r1&#39;
      * 
      */
     private final String rolloutId;
     /**
-     * The name of the service associated with this Rollout.
+     * @return The name of the service associated with this Rollout.
      * 
      */
     private final String serviceName;
     /**
-     * The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.
+     * @return The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.
      * 
      */
     private final String status;
     /**
-     * Google Service Control selects service configurations based on traffic percentage.
+     * @return Google Service Control selects service configurations based on traffic percentage.
      * 
      */
     private final TrafficPercentStrategyResponse trafficPercentStrategy;
@@ -59,44 +59,44 @@ public final class GetRolloutResult {
     }
 
     /**
-     * Creation time of the rollout. Readonly.
+     * @return Creation time of the rollout. Readonly.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The strategy associated with a rollout to delete a `ManagedService`. Readonly.
+     * @return The strategy associated with a rollout to delete a `ManagedService`. Readonly.
      * 
-    */
+     */
     public DeleteServiceStrategyResponse deleteServiceStrategy() {
         return this.deleteServiceStrategy;
     }
     /**
-     * Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only lower case letters, digits, &#39;.&#39;, &#39;_&#39; and &#39;-&#39; are allowed. If not specified by client, the server will generate one. The generated id will have the form of , where &#34;date&#34; is the create date in ISO 8601 format. &#34;revision number&#34; is a monotonically increasing positive number that is reset every day for each service. An example of the generated rollout_id is &#39;2016-02-16r1&#39;
+     * @return Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only lower case letters, digits, &#39;.&#39;, &#39;_&#39; and &#39;-&#39; are allowed. If not specified by client, the server will generate one. The generated id will have the form of , where &#34;date&#34; is the create date in ISO 8601 format. &#34;revision number&#34; is a monotonically increasing positive number that is reset every day for each service. An example of the generated rollout_id is &#39;2016-02-16r1&#39;
      * 
-    */
+     */
     public String rolloutId() {
         return this.rolloutId;
     }
     /**
-     * The name of the service associated with this Rollout.
+     * @return The name of the service associated with this Rollout.
      * 
-    */
+     */
     public String serviceName() {
         return this.serviceName;
     }
     /**
-     * The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.
+     * @return The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Google Service Control selects service configurations based on traffic percentage.
+     * @return Google Service Control selects service configurations based on traffic percentage.
      * 
-    */
+     */
     public TrafficPercentStrategyResponse trafficPercentStrategy() {
         return this.trafficPercentStrategy;
     }

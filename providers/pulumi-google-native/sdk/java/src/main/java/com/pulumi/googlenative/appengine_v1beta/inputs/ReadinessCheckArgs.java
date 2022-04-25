@@ -27,6 +27,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="appStartTimeout")
     private @Nullable Output<String> appStartTimeout;
 
+    /**
+     * @return A maximum time limit on application initialization, measured from moment the application successfully replies to a healthcheck until it is ready to serve traffic.
+     * 
+     */
     public Optional<Output<String>> appStartTimeout() {
         return Optional.ofNullable(this.appStartTimeout);
     }
@@ -38,6 +42,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="checkInterval")
     private @Nullable Output<String> checkInterval;
 
+    /**
+     * @return Interval between health checks.
+     * 
+     */
     public Optional<Output<String>> checkInterval() {
         return Optional.ofNullable(this.checkInterval);
     }
@@ -49,6 +57,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="failureThreshold")
     private @Nullable Output<Integer> failureThreshold;
 
+    /**
+     * @return Number of consecutive failed checks required before removing traffic.
+     * 
+     */
     public Optional<Output<Integer>> failureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
@@ -60,6 +72,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="host")
     private @Nullable Output<String> host;
 
+    /**
+     * @return Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
+     * 
+     */
     public Optional<Output<String>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -71,6 +87,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The request path.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -82,6 +102,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="successThreshold")
     private @Nullable Output<Integer> successThreshold;
 
+    /**
+     * @return Number of consecutive successful checks required before receiving traffic.
+     * 
+     */
     public Optional<Output<Integer>> successThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
@@ -93,6 +117,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="timeout")
     private @Nullable Output<String> timeout;
 
+    /**
+     * @return Time before the check is considered failed.
+     * 
+     */
     public Optional<Output<String>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -127,65 +155,149 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ReadinessCheckArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appStartTimeout A maximum time limit on application initialization, measured from moment the application successfully replies to a healthcheck until it is ready to serve traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appStartTimeout(@Nullable Output<String> appStartTimeout) {
             $.appStartTimeout = appStartTimeout;
             return this;
         }
 
+        /**
+         * @param appStartTimeout A maximum time limit on application initialization, measured from moment the application successfully replies to a healthcheck until it is ready to serve traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appStartTimeout(String appStartTimeout) {
             return appStartTimeout(Output.of(appStartTimeout));
         }
 
+        /**
+         * @param checkInterval Interval between health checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkInterval(@Nullable Output<String> checkInterval) {
             $.checkInterval = checkInterval;
             return this;
         }
 
+        /**
+         * @param checkInterval Interval between health checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkInterval(String checkInterval) {
             return checkInterval(Output.of(checkInterval));
         }
 
+        /**
+         * @param failureThreshold Number of consecutive failed checks required before removing traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
             $.failureThreshold = failureThreshold;
             return this;
         }
 
+        /**
+         * @param failureThreshold Number of consecutive failed checks required before removing traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureThreshold(Integer failureThreshold) {
             return failureThreshold(Output.of(failureThreshold));
         }
 
+        /**
+         * @param host Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param path The request path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The request path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param successThreshold Number of consecutive successful checks required before receiving traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successThreshold(@Nullable Output<Integer> successThreshold) {
             $.successThreshold = successThreshold;
             return this;
         }
 
+        /**
+         * @param successThreshold Number of consecutive successful checks required before receiving traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successThreshold(Integer successThreshold) {
             return successThreshold(Output.of(successThreshold));
         }
 
+        /**
+         * @param timeout Time before the check is considered failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<String> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Time before the check is considered failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(String timeout) {
             return timeout(Output.of(timeout));
         }

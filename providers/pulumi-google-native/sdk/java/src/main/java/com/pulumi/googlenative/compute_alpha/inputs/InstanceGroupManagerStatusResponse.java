@@ -23,6 +23,10 @@ public final class InstanceGroupManagerStatusResponse extends com.pulumi.resourc
     @Import(name="allInstancesConfig", required=true)
     private InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig;
 
+    /**
+     * @return A status of consistency of Instances&#39; config applied to instances with Instances&#39; config defined in managed instance group.
+     * 
+     */
     public InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig() {
         return this.allInstancesConfig;
     }
@@ -34,6 +38,10 @@ public final class InstanceGroupManagerStatusResponse extends com.pulumi.resourc
     @Import(name="autoscaler", required=true)
     private String autoscaler;
 
+    /**
+     * @return The URL of the Autoscaler that targets this instance group manager.
+     * 
+     */
     public String autoscaler() {
         return this.autoscaler;
     }
@@ -45,6 +53,10 @@ public final class InstanceGroupManagerStatusResponse extends com.pulumi.resourc
     @Import(name="isStable", required=true)
     private Boolean isStable;
 
+    /**
+     * @return A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
+     * 
+     */
     public Boolean isStable() {
         return this.isStable;
     }
@@ -56,6 +68,10 @@ public final class InstanceGroupManagerStatusResponse extends com.pulumi.resourc
     @Import(name="stateful", required=true)
     private InstanceGroupManagerStatusStatefulResponse stateful;
 
+    /**
+     * @return Stateful status of the given Instance Group Manager.
+     * 
+     */
     public InstanceGroupManagerStatusStatefulResponse stateful() {
         return this.stateful;
     }
@@ -67,6 +83,10 @@ public final class InstanceGroupManagerStatusResponse extends com.pulumi.resourc
     @Import(name="versionTarget", required=true)
     private InstanceGroupManagerStatusVersionTargetResponse versionTarget;
 
+    /**
+     * @return A status of consistency of Instances&#39; versions with their target version specified by version field on Instance Group Manager.
+     * 
+     */
     public InstanceGroupManagerStatusVersionTargetResponse versionTarget() {
         return this.versionTarget;
     }
@@ -99,26 +119,56 @@ public final class InstanceGroupManagerStatusResponse extends com.pulumi.resourc
             $ = new InstanceGroupManagerStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allInstancesConfig A status of consistency of Instances&#39; config applied to instances with Instances&#39; config defined in managed instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allInstancesConfig(InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig) {
             $.allInstancesConfig = allInstancesConfig;
             return this;
         }
 
+        /**
+         * @param autoscaler The URL of the Autoscaler that targets this instance group manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaler(String autoscaler) {
             $.autoscaler = autoscaler;
             return this;
         }
 
+        /**
+         * @param isStable A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isStable(Boolean isStable) {
             $.isStable = isStable;
             return this;
         }
 
+        /**
+         * @param stateful Stateful status of the given Instance Group Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateful(InstanceGroupManagerStatusStatefulResponse stateful) {
             $.stateful = stateful;
             return this;
         }
 
+        /**
+         * @param versionTarget A status of consistency of Instances&#39; versions with their target version specified by version field on Instance Group Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionTarget(InstanceGroupManagerStatusVersionTargetResponse versionTarget) {
             $.versionTarget = versionTarget;
             return this;

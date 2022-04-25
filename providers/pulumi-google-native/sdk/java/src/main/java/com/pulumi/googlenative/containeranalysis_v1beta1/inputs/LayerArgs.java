@@ -27,6 +27,10 @@ public final class LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="arguments")
     private @Nullable Output<String> arguments;
 
+    /**
+     * @return The recovered arguments to the Dockerfile directive.
+     * 
+     */
     public Optional<Output<String>> arguments() {
         return Optional.ofNullable(this.arguments);
     }
@@ -38,6 +42,10 @@ public final class LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="directive", required=true)
     private Output<LayerDirective> directive;
 
+    /**
+     * @return The recovered Dockerfile directive used to construct this layer.
+     * 
+     */
     public Output<LayerDirective> directive() {
         return this.directive;
     }
@@ -67,20 +75,44 @@ public final class LayerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LayerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arguments The recovered arguments to the Dockerfile directive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(@Nullable Output<String> arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param arguments The recovered arguments to the Dockerfile directive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(String arguments) {
             return arguments(Output.of(arguments));
         }
 
+        /**
+         * @param directive The recovered Dockerfile directive used to construct this layer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directive(Output<LayerDirective> directive) {
             $.directive = directive;
             return this;
         }
 
+        /**
+         * @param directive The recovered Dockerfile directive used to construct this layer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directive(LayerDirective directive) {
             return directive(Output.of(directive));
         }

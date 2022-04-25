@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse extends com.pulumi
     @Import(name="kind", required=true)
     private GooglePrivacyDlpV2KindExpressionResponse kind;
 
+    /**
+     * @return The kind to process.
+     * 
+     */
     public GooglePrivacyDlpV2KindExpressionResponse kind() {
         return this.kind;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse extends com.pulumi
     @Import(name="partitionId", required=true)
     private GooglePrivacyDlpV2PartitionIdResponse partitionId;
 
+    /**
+     * @return A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty.
+     * 
+     */
     public GooglePrivacyDlpV2PartitionIdResponse partitionId() {
         return this.partitionId;
     }
@@ -64,11 +72,23 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse extends com.pulumi
             $ = new GooglePrivacyDlpV2DatastoreOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind The kind to process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(GooglePrivacyDlpV2KindExpressionResponse kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param partitionId A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionId(GooglePrivacyDlpV2PartitionIdResponse partitionId) {
             $.partitionId = partitionId;
             return this;

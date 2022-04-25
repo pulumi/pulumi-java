@@ -23,6 +23,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse ext
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The human-readable name of the phrase matcher.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse ext
     @Import(name="phraseMatcher", required=true)
     private String phraseMatcher;
 
+    /**
+     * @return The unique identifier (the resource name) of the phrase matcher.
+     * 
+     */
     public String phraseMatcher() {
         return this.phraseMatcher;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse ext
             $ = new GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The human-readable name of the phrase matcher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param phraseMatcher The unique identifier (the resource name) of the phrase matcher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseMatcher(String phraseMatcher) {
             $.phraseMatcher = phraseMatcher;
             return this;

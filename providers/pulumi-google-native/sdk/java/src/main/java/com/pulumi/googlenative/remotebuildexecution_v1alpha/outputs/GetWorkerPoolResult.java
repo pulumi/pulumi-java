@@ -12,32 +12,32 @@ import java.util.Objects;
 @CustomType
 public final class GetWorkerPoolResult {
     /**
-     * The autoscale policy to apply on a pool.
+     * @return The autoscale policy to apply on a pool.
      * 
      */
     private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse autoscale;
     /**
-     * Channel specifies the release channel of the pool.
+     * @return Channel specifies the release channel of the pool.
      * 
      */
     private final String channel;
     /**
-     * WorkerPool resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be populated when creating a worker pool since it is provided in the `poolId` field.
+     * @return WorkerPool resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be populated when creating a worker pool since it is provided in the `poolId` field.
      * 
      */
     private final String name;
     /**
-     * State of the worker pool.
+     * @return State of the worker pool.
      * 
      */
     private final String state;
     /**
-     * Specifies the properties, such as machine type and disk size, used for creating workers in a worker pool.
+     * @return Specifies the properties, such as machine type and disk size, used for creating workers in a worker pool.
      * 
      */
     private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse workerConfig;
     /**
-     * The desired number of workers in the worker pool. Must be a value between 0 and 15000.
+     * @return The desired number of workers in the worker pool. Must be a value between 0 and 15000.
      * 
      */
     private final String workerCount;
@@ -59,44 +59,44 @@ public final class GetWorkerPoolResult {
     }
 
     /**
-     * The autoscale policy to apply on a pool.
+     * @return The autoscale policy to apply on a pool.
      * 
-    */
+     */
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse autoscale() {
         return this.autoscale;
     }
     /**
-     * Channel specifies the release channel of the pool.
+     * @return Channel specifies the release channel of the pool.
      * 
-    */
+     */
     public String channel() {
         return this.channel;
     }
     /**
-     * WorkerPool resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be populated when creating a worker pool since it is provided in the `poolId` field.
+     * @return WorkerPool resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be populated when creating a worker pool since it is provided in the `poolId` field.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * State of the worker pool.
+     * @return State of the worker pool.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Specifies the properties, such as machine type and disk size, used for creating workers in a worker pool.
+     * @return Specifies the properties, such as machine type and disk size, used for creating workers in a worker pool.
      * 
-    */
+     */
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse workerConfig() {
         return this.workerConfig;
     }
     /**
-     * The desired number of workers in the worker pool. Must be a value between 0 and 15000.
+     * @return The desired number of workers in the worker pool. Must be a value between 0 and 15000.
      * 
-    */
+     */
     public String workerCount() {
         return this.workerCount;
     }

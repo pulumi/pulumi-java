@@ -25,6 +25,10 @@ public final class VmUtilizationInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="utilization", required=true)
     private VmUtilizationMetricsResponse utilization;
 
+    /**
+     * @return Utilization metrics for this VM.
+     * 
+     */
     public VmUtilizationMetricsResponse utilization() {
         return this.utilization;
     }
@@ -36,6 +40,10 @@ public final class VmUtilizationInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="vmId", required=true)
     private String vmId;
 
+    /**
+     * @return The VM&#39;s ID in the source.
+     * 
+     */
     public String vmId() {
         return this.vmId;
     }
@@ -47,6 +55,10 @@ public final class VmUtilizationInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="vmwareVmDetails", required=true)
     private VmwareVmDetailsResponse vmwareVmDetails;
 
+    /**
+     * @return The description of the VM in a Source of type Vmware.
+     * 
+     */
     public VmwareVmDetailsResponse vmwareVmDetails() {
         return this.vmwareVmDetails;
     }
@@ -77,16 +89,34 @@ public final class VmUtilizationInfoResponse extends com.pulumi.resources.Invoke
             $ = new VmUtilizationInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param utilization Utilization metrics for this VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder utilization(VmUtilizationMetricsResponse utilization) {
             $.utilization = utilization;
             return this;
         }
 
+        /**
+         * @param vmId The VM&#39;s ID in the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmId(String vmId) {
             $.vmId = vmId;
             return this;
         }
 
+        /**
+         * @param vmwareVmDetails The description of the VM in a Source of type Vmware.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmwareVmDetails(VmwareVmDetailsResponse vmwareVmDetails) {
             $.vmwareVmDetails = vmwareVmDetails;
             return this;

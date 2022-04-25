@@ -23,6 +23,10 @@ public final class ReleaseChannelResponse extends com.pulumi.resources.InvokeArg
     @Import(name="channel", required=true)
     private String channel;
 
+    /**
+     * @return channel specifies which release channel the cluster is subscribed to.
+     * 
+     */
     public String channel() {
         return this.channel;
     }
@@ -51,6 +55,12 @@ public final class ReleaseChannelResponse extends com.pulumi.resources.InvokeArg
             $ = new ReleaseChannelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channel channel specifies which release channel the cluster is subscribed to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channel(String channel) {
             $.channel = channel;
             return this;

@@ -27,6 +27,10 @@ public final class TableDisplayOptionsArgs extends com.pulumi.resources.Resource
     @Import(name="shownColumns")
     private @Nullable Output<List<String>> shownColumns;
 
+    /**
+     * @return Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.
+     * 
+     */
     public Optional<Output<List<String>>> shownColumns() {
         return Optional.ofNullable(this.shownColumns);
     }
@@ -55,15 +59,33 @@ public final class TableDisplayOptionsArgs extends com.pulumi.resources.Resource
             $ = new TableDisplayOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param shownColumns Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shownColumns(@Nullable Output<List<String>> shownColumns) {
             $.shownColumns = shownColumns;
             return this;
         }
 
+        /**
+         * @param shownColumns Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shownColumns(List<String> shownColumns) {
             return shownColumns(Output.of(shownColumns));
         }
 
+        /**
+         * @param shownColumns Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shownColumns(String... shownColumns) {
             return shownColumns(List.of(shownColumns));
         }

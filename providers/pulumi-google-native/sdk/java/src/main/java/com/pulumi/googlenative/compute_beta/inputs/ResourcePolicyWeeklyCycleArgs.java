@@ -27,6 +27,10 @@ public final class ResourcePolicyWeeklyCycleArgs extends com.pulumi.resources.Re
     @Import(name="dayOfWeeks")
     private @Nullable Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks;
 
+    /**
+     * @return Up to 7 intervals/windows, one for each day of the week.
+     * 
+     */
     public Optional<Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>>> dayOfWeeks() {
         return Optional.ofNullable(this.dayOfWeeks);
     }
@@ -55,15 +59,33 @@ public final class ResourcePolicyWeeklyCycleArgs extends com.pulumi.resources.Re
             $ = new ResourcePolicyWeeklyCycleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dayOfWeeks Up to 7 intervals/windows, one for each day of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeeks(@Nullable Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks) {
             $.dayOfWeeks = dayOfWeeks;
             return this;
         }
 
+        /**
+         * @param dayOfWeeks Up to 7 intervals/windows, one for each day of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeeks(List<ResourcePolicyWeeklyCycleDayOfWeekArgs> dayOfWeeks) {
             return dayOfWeeks(Output.of(dayOfWeeks));
         }
 
+        /**
+         * @param dayOfWeeks Up to 7 intervals/windows, one for each day of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeeks(ResourcePolicyWeeklyCycleDayOfWeekArgs... dayOfWeeks) {
             return dayOfWeeks(List.of(dayOfWeeks));
         }

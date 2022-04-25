@@ -23,6 +23,10 @@ public final class VmImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="imageFamily", required=true)
     private String imageFamily;
 
+    /**
+     * @return Use this VM image family to find the image; the newest image in this family will be used.
+     * 
+     */
     public String imageFamily() {
         return this.imageFamily;
     }
@@ -34,6 +38,10 @@ public final class VmImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="imageName", required=true)
     private String imageName;
 
+    /**
+     * @return Use VM image name to find the image.
+     * 
+     */
     public String imageName() {
         return this.imageName;
     }
@@ -45,6 +53,10 @@ public final class VmImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return The name of the Google Cloud project that this VM image belongs to. Format: `projects/{project_id}`
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -75,16 +87,34 @@ public final class VmImageResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VmImageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageFamily Use this VM image family to find the image; the newest image in this family will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageFamily(String imageFamily) {
             $.imageFamily = imageFamily;
             return this;
         }
 
+        /**
+         * @param imageName Use VM image name to find the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(String imageName) {
             $.imageName = imageName;
             return this;
         }
 
+        /**
+         * @param project The name of the Google Cloud project that this VM image belongs to. Format: `projects/{project_id}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;

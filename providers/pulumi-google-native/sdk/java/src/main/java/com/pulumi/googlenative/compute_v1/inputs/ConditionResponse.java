@@ -24,6 +24,10 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="iam", required=true)
     private String iam;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public String iam() {
         return this.iam;
     }
@@ -35,6 +39,10 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="op", required=true)
     private String op;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public String op() {
         return this.op;
     }
@@ -46,6 +54,10 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="svc", required=true)
     private String svc;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public String svc() {
         return this.svc;
     }
@@ -57,6 +69,10 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sys", required=true)
     private String sys;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public String sys() {
         return this.sys;
     }
@@ -68,6 +84,10 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="values", required=true)
     private List<String> values;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public List<String> values() {
         return this.values;
     }
@@ -100,31 +120,67 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param iam This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iam(String iam) {
             $.iam = iam;
             return this;
         }
 
+        /**
+         * @param op This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder op(String op) {
             $.op = op;
             return this;
         }
 
+        /**
+         * @param svc This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder svc(String svc) {
             $.svc = svc;
             return this;
         }
 
+        /**
+         * @param sys This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sys(String sys) {
             $.sys = sys;
             return this;
         }
 
+        /**
+         * @param values This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

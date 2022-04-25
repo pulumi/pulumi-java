@@ -27,6 +27,10 @@ public final class LabelSelectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Resource labels for this selector.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -55,11 +59,23 @@ public final class LabelSelectorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LabelSelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labels Resource labels for this selector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Resource labels for this selector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }

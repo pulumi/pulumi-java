@@ -26,6 +26,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
     @Import(name="containerSpecGcsPath", required=true)
     private String containerSpecGcsPath;
 
+    /**
+     * @return Cloud Storage path to a file with a JSON-serialized ContainerSpec as content.
+     * 
+     */
     public String containerSpecGcsPath() {
         return this.containerSpecGcsPath;
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
     @Import(name="environment", required=true)
     private GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment;
 
+    /**
+     * @return The runtime environment for the Flex Template job.
+     * 
+     */
     public GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment() {
         return this.environment;
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
     @Import(name="jobName", required=true)
     private String jobName;
 
+    /**
+     * @return The job name to use for the created job. For an update job request, the job name should be the same as the existing running job.
+     * 
+     */
     public String jobName() {
         return this.jobName;
     }
@@ -59,6 +71,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
     @Import(name="launchOptions", required=true)
     private Map<String,String> launchOptions;
 
+    /**
+     * @return Launch options for this Flex Template job. This is a common set of options across languages and templates. This should not be used to pass job parameters.
+     * 
+     */
     public Map<String,String> launchOptions() {
         return this.launchOptions;
     }
@@ -70,6 +86,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
     @Import(name="parameters", required=true)
     private Map<String,String> parameters;
 
+    /**
+     * @return The parameters for the Flex Template. Example: `{&#34;num_workers&#34;:&#34;5&#34;}`
+     * 
+     */
     public Map<String,String> parameters() {
         return this.parameters;
     }
@@ -81,6 +101,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
     @Import(name="transformNameMappings", required=true)
     private Map<String,String> transformNameMappings;
 
+    /**
+     * @return Use this to pass transform name mappings for streaming update jobs. Example: `{&#34;oldTransformName&#34;:&#34;newTransformName&#34;,...}`
+     * 
+     */
     public Map<String,String> transformNameMappings() {
         return this.transformNameMappings;
     }
@@ -92,6 +116,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
     @Import(name="update", required=true)
     private Boolean update;
 
+    /**
+     * @return Set this to true if you are sending a request to update a running streaming job. When set, the job name should be the same as the running job.
+     * 
+     */
     public Boolean update() {
         return this.update;
     }
@@ -126,36 +154,78 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
             $ = new GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerSpecGcsPath Cloud Storage path to a file with a JSON-serialized ContainerSpec as content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerSpecGcsPath(String containerSpecGcsPath) {
             $.containerSpecGcsPath = containerSpecGcsPath;
             return this;
         }
 
+        /**
+         * @param environment The runtime environment for the Flex Template job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param jobName The job name to use for the created job. For an update job request, the job name should be the same as the existing running job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(String jobName) {
             $.jobName = jobName;
             return this;
         }
 
+        /**
+         * @param launchOptions Launch options for this Flex Template job. This is a common set of options across languages and templates. This should not be used to pass job parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchOptions(Map<String,String> launchOptions) {
             $.launchOptions = launchOptions;
             return this;
         }
 
+        /**
+         * @param parameters The parameters for the Flex Template. Example: `{&#34;num_workers&#34;:&#34;5&#34;}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,String> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param transformNameMappings Use this to pass transform name mappings for streaming update jobs. Example: `{&#34;oldTransformName&#34;:&#34;newTransformName&#34;,...}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformNameMappings(Map<String,String> transformNameMappings) {
             $.transformNameMappings = transformNameMappings;
             return this;
         }
 
+        /**
+         * @param update Set this to true if you are sending a request to update a running streaming job. When set, the job name should be the same as the running job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder update(Boolean update) {
             $.update = update;
             return this;

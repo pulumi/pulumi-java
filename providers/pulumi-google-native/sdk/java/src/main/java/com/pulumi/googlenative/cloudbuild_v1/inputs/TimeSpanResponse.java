@@ -23,6 +23,10 @@ public final class TimeSpanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return End of time span.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -34,6 +38,10 @@ public final class TimeSpanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Start of time span.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -63,11 +71,23 @@ public final class TimeSpanResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TimeSpanResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime End of time span.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param startTime Start of time span.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

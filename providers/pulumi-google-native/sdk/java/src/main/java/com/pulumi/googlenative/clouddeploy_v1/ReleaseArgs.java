@@ -25,6 +25,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
     private @Nullable Output<Map<String,String>> annotations;
 
+    /**
+     * @return User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+     * 
+     */
     public Optional<Output<Map<String,String>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -36,6 +40,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="buildArtifacts")
     private @Nullable Output<List<BuildArtifactArgs>> buildArtifacts;
 
+    /**
+     * @return List of artifacts to pass through to Skaffold command.
+     * 
+     */
     public Optional<Output<List<BuildArtifactArgs>>> buildArtifacts() {
         return Optional.ofNullable(this.buildArtifacts);
     }
@@ -54,6 +62,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the `Release`. Max length is 255 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -65,6 +77,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -76,6 +92,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -94,6 +114,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Optional. Name of the `Release`. Format is projects/{project}/ locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/a-z{0,62}.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -126,6 +150,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="skaffoldConfigPath")
     private @Nullable Output<String> skaffoldConfigPath;
 
+    /**
+     * @return Filepath of the Skaffold config inside of the config URI.
+     * 
+     */
     public Optional<Output<String>> skaffoldConfigPath() {
         return Optional.ofNullable(this.skaffoldConfigPath);
     }
@@ -137,6 +165,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="skaffoldConfigUri")
     private @Nullable Output<String> skaffoldConfigUri;
 
+    /**
+     * @return Cloud Storage URI of tar.gz archive containing Skaffold configuration.
+     * 
+     */
     public Optional<Output<String>> skaffoldConfigUri() {
         return Optional.ofNullable(this.skaffoldConfigUri);
     }
@@ -148,6 +180,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="skaffoldVersion")
     private @Nullable Output<String> skaffoldVersion;
 
+    /**
+     * @return The Skaffold version to use when operating on this release, such as &#34;1.20.0&#34;. Not all versions are valid; Google Cloud Deploy supports a specific set of versions. If unset, the most recent supported Skaffold version will be used.
+     * 
+     */
     public Optional<Output<String>> skaffoldVersion() {
         return Optional.ofNullable(this.skaffoldVersion);
     }
@@ -197,24 +233,54 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReleaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Map<String,String> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param buildArtifacts List of artifacts to pass through to Skaffold command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildArtifacts(@Nullable Output<List<BuildArtifactArgs>> buildArtifacts) {
             $.buildArtifacts = buildArtifacts;
             return this;
         }
 
+        /**
+         * @param buildArtifacts List of artifacts to pass through to Skaffold command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildArtifacts(List<BuildArtifactArgs> buildArtifacts) {
             return buildArtifacts(Output.of(buildArtifacts));
         }
 
+        /**
+         * @param buildArtifacts List of artifacts to pass through to Skaffold command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildArtifacts(BuildArtifactArgs... buildArtifacts) {
             return buildArtifacts(List.of(buildArtifacts));
         }
@@ -228,29 +294,65 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
             return deliveryPipelineId(Output.of(deliveryPipelineId));
         }
 
+        /**
+         * @param description Description of the `Release`. Max length is 255 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the `Release`. Max length is 255 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param etag This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param labels Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -264,11 +366,23 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Optional. Name of the `Release`. Format is projects/{project}/ locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/a-z{0,62}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Optional. Name of the `Release`. Format is projects/{project}/ locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/a-z{0,62}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -300,29 +414,65 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param skaffoldConfigPath Filepath of the Skaffold config inside of the config URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skaffoldConfigPath(@Nullable Output<String> skaffoldConfigPath) {
             $.skaffoldConfigPath = skaffoldConfigPath;
             return this;
         }
 
+        /**
+         * @param skaffoldConfigPath Filepath of the Skaffold config inside of the config URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skaffoldConfigPath(String skaffoldConfigPath) {
             return skaffoldConfigPath(Output.of(skaffoldConfigPath));
         }
 
+        /**
+         * @param skaffoldConfigUri Cloud Storage URI of tar.gz archive containing Skaffold configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skaffoldConfigUri(@Nullable Output<String> skaffoldConfigUri) {
             $.skaffoldConfigUri = skaffoldConfigUri;
             return this;
         }
 
+        /**
+         * @param skaffoldConfigUri Cloud Storage URI of tar.gz archive containing Skaffold configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skaffoldConfigUri(String skaffoldConfigUri) {
             return skaffoldConfigUri(Output.of(skaffoldConfigUri));
         }
 
+        /**
+         * @param skaffoldVersion The Skaffold version to use when operating on this release, such as &#34;1.20.0&#34;. Not all versions are valid; Google Cloud Deploy supports a specific set of versions. If unset, the most recent supported Skaffold version will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skaffoldVersion(@Nullable Output<String> skaffoldVersion) {
             $.skaffoldVersion = skaffoldVersion;
             return this;
         }
 
+        /**
+         * @param skaffoldVersion The Skaffold version to use when operating on this release, such as &#34;1.20.0&#34;. Not all versions are valid; Google Cloud Deploy supports a specific set of versions. If unset, the most recent supported Skaffold version will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skaffoldVersion(String skaffoldVersion) {
             return skaffoldVersion(Output.of(skaffoldVersion));
         }

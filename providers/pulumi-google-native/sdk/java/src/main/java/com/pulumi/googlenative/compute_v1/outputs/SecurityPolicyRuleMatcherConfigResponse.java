@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class SecurityPolicyRuleMatcherConfigResponse {
     /**
-     * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
+     * @return CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
      * 
      */
     private final List<String> srcIpRanges;
@@ -22,9 +22,9 @@ public final class SecurityPolicyRuleMatcherConfigResponse {
     }
 
     /**
-     * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
+     * @return CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
      * 
-    */
+     */
     public List<String> srcIpRanges() {
         return this.srcIpRanges;
     }

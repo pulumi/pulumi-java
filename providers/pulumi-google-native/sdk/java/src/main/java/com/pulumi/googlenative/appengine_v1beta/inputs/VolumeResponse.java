@@ -24,6 +24,10 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Unique name for the volume.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sizeGb", required=true)
     private Double sizeGb;
 
+    /**
+     * @return Volume size in gigabytes.
+     * 
+     */
     public Double sizeGb() {
         return this.sizeGb;
     }
@@ -46,6 +54,10 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="volumeType", required=true)
     private String volumeType;
 
+    /**
+     * @return Underlying volume type, e.g. &#39;tmpfs&#39;.
+     * 
+     */
     public String volumeType() {
         return this.volumeType;
     }
@@ -76,16 +88,34 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VolumeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Unique name for the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param sizeGb Volume size in gigabytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeGb(Double sizeGb) {
             $.sizeGb = sizeGb;
             return this;
         }
 
+        /**
+         * @param volumeType Underlying volume type, e.g. &#39;tmpfs&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeType(String volumeType) {
             $.volumeType = volumeType;
             return this;

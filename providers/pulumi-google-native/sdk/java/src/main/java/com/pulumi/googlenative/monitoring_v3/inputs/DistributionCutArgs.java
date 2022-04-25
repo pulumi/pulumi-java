@@ -27,6 +27,10 @@ public final class DistributionCutArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="distributionFilter")
     private @Nullable Output<String> distributionFilter;
 
+    /**
+     * @return A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries aggregating values. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.
+     * 
+     */
     public Optional<Output<String>> distributionFilter() {
         return Optional.ofNullable(this.distributionFilter);
     }
@@ -38,6 +42,10 @@ public final class DistributionCutArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="range")
     private @Nullable Output<GoogleMonitoringV3RangeArgs> range;
 
+    /**
+     * @return Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
+     * 
+     */
     public Optional<Output<GoogleMonitoringV3RangeArgs>> range() {
         return Optional.ofNullable(this.range);
     }
@@ -67,20 +75,44 @@ public final class DistributionCutArgs extends com.pulumi.resources.ResourceArgs
             $ = new DistributionCutArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributionFilter A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries aggregating values. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionFilter(@Nullable Output<String> distributionFilter) {
             $.distributionFilter = distributionFilter;
             return this;
         }
 
+        /**
+         * @param distributionFilter A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries aggregating values. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionFilter(String distributionFilter) {
             return distributionFilter(Output.of(distributionFilter));
         }
 
+        /**
+         * @param range Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(@Nullable Output<GoogleMonitoringV3RangeArgs> range) {
             $.range = range;
             return this;
         }
 
+        /**
+         * @param range Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(GoogleMonitoringV3RangeArgs range) {
             return range(Output.of(range));
         }

@@ -24,6 +24,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscre
     @Import(name="values", required=true)
     private List<Double> values;
 
+    /**
+     * @return Matches values of the parent parameter with type &#39;DISCRETE&#39;. All values must exist in `discrete_value_spec` of parent parameter.
+     * 
+     */
     public List<Double> values() {
         return this.values;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscre
             $ = new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param values Matches values of the parent parameter with type &#39;DISCRETE&#39;. All values must exist in `discrete_value_spec` of parent parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<Double> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Matches values of the parent parameter with type &#39;DISCRETE&#39;. All values must exist in `discrete_value_spec` of parent parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Double... values) {
             return values(List.of(values));
         }

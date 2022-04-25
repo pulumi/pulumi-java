@@ -24,6 +24,10 @@ public final class TileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="height", required=true)
     private Integer height;
 
+    /**
+     * @return The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
+     * 
+     */
     public Integer height() {
         return this.height;
     }
@@ -35,6 +39,10 @@ public final class TileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="widget", required=true)
     private WidgetResponse widget;
 
+    /**
+     * @return The informational widget contained in the tile. For example an XyChart.
+     * 
+     */
     public WidgetResponse widget() {
         return this.widget;
     }
@@ -46,6 +54,10 @@ public final class TileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="width", required=true)
     private Integer width;
 
+    /**
+     * @return The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
+     * 
+     */
     public Integer width() {
         return this.width;
     }
@@ -57,6 +69,10 @@ public final class TileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="xPos", required=true)
     private Integer xPos;
 
+    /**
+     * @return The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.
+     * 
+     */
     public Integer xPos() {
         return this.xPos;
     }
@@ -68,6 +84,10 @@ public final class TileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="yPos", required=true)
     private Integer yPos;
 
+    /**
+     * @return The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.
+     * 
+     */
     public Integer yPos() {
         return this.yPos;
     }
@@ -100,26 +120,56 @@ public final class TileResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param height The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(Integer height) {
             $.height = height;
             return this;
         }
 
+        /**
+         * @param widget The informational widget contained in the tile. For example an XyChart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widget(WidgetResponse widget) {
             $.widget = widget;
             return this;
         }
 
+        /**
+         * @param width The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(Integer width) {
             $.width = width;
             return this;
         }
 
+        /**
+         * @param xPos The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xPos(Integer xPos) {
             $.xPos = xPos;
             return this;
         }
 
+        /**
+         * @param yPos The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yPos(Integer yPos) {
             $.yPos = yPos;
             return this;

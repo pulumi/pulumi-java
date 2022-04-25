@@ -23,6 +23,10 @@ public final class DomainRedirectResponse extends com.pulumi.resources.InvokeArg
     @Import(name="domainName", required=true)
     private String domainName;
 
+    /**
+     * @return The domain name to redirect to.
+     * 
+     */
     public String domainName() {
         return this.domainName;
     }
@@ -34,6 +38,10 @@ public final class DomainRedirectResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The redirect status code.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -63,11 +71,23 @@ public final class DomainRedirectResponse extends com.pulumi.resources.InvokeArg
             $ = new DomainRedirectResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName The domain name to redirect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param type The redirect status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

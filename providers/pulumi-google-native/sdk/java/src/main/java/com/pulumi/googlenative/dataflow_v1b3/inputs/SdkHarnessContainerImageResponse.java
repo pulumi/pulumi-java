@@ -24,6 +24,10 @@ public final class SdkHarnessContainerImageResponse extends com.pulumi.resources
     @Import(name="containerImage", required=true)
     private String containerImage;
 
+    /**
+     * @return A docker container image that resides in Google Container Registry.
+     * 
+     */
     public String containerImage() {
         return this.containerImage;
     }
@@ -35,6 +39,10 @@ public final class SdkHarnessContainerImageResponse extends com.pulumi.resources
     @Import(name="environmentId", required=true)
     private String environmentId;
 
+    /**
+     * @return Environment ID for the Beam runner API proto Environment that corresponds to the current SDK Harness.
+     * 
+     */
     public String environmentId() {
         return this.environmentId;
     }
@@ -46,6 +54,10 @@ public final class SdkHarnessContainerImageResponse extends com.pulumi.resources
     @Import(name="useSingleCorePerContainer", required=true)
     private Boolean useSingleCorePerContainer;
 
+    /**
+     * @return If true, recommends the Dataflow service to use only one core per SDK container instance with this image. If false (or unset) recommends using more than one core per SDK container instance with this image for efficiency. Note that Dataflow service may choose to override this property if needed.
+     * 
+     */
     public Boolean useSingleCorePerContainer() {
         return this.useSingleCorePerContainer;
     }
@@ -76,16 +88,34 @@ public final class SdkHarnessContainerImageResponse extends com.pulumi.resources
             $ = new SdkHarnessContainerImageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerImage A docker container image that resides in Google Container Registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImage(String containerImage) {
             $.containerImage = containerImage;
             return this;
         }
 
+        /**
+         * @param environmentId Environment ID for the Beam runner API proto Environment that corresponds to the current SDK Harness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(String environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
+        /**
+         * @param useSingleCorePerContainer If true, recommends the Dataflow service to use only one core per SDK container instance with this image. If false (or unset) recommends using more than one core per SDK container instance with this image for efficiency. Note that Dataflow service may choose to override this property if needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useSingleCorePerContainer(Boolean useSingleCorePerContainer) {
             $.useSingleCorePerContainer = useSingleCorePerContainer;
             return this;

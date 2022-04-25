@@ -22,6 +22,10 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends com.pulumi
     @Import(name="gkeClusters", required=true)
     private List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters;
 
+    /**
+     * @return The list of Google Kubernetes Engine clusters that can see this zone.
+     * 
+     */
     public List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters() {
         return this.gkeClusters;
     }
@@ -40,6 +44,10 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends com.pulumi
     @Import(name="networks", required=true)
     private List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
 
+    /**
+     * @return The list of VPC networks that can see this zone.
+     * 
+     */
     public List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks() {
         return this.networks;
     }
@@ -70,11 +78,23 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends com.pulumi
             $ = new ManagedZonePrivateVisibilityConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gkeClusters The list of Google Kubernetes Engine clusters that can see this zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusters(List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters) {
             $.gkeClusters = gkeClusters;
             return this;
         }
 
+        /**
+         * @param gkeClusters The list of Google Kubernetes Engine clusters that can see this zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusters(ManagedZonePrivateVisibilityConfigGKEClusterResponse... gkeClusters) {
             return gkeClusters(List.of(gkeClusters));
         }
@@ -84,11 +104,23 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends com.pulumi
             return this;
         }
 
+        /**
+         * @param networks The list of VPC networks that can see this zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
             $.networks = networks;
             return this;
         }
 
+        /**
+         * @param networks The list of VPC networks that can see this zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(ManagedZonePrivateVisibilityConfigNetworkResponse... networks) {
             return networks(List.of(networks));
         }

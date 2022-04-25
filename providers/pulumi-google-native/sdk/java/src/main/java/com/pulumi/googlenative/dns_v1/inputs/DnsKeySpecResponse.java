@@ -24,6 +24,10 @@ public final class DnsKeySpecResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="algorithm", required=true)
     private String algorithm;
 
+    /**
+     * @return String mnemonic specifying the DNSSEC algorithm of this key.
+     * 
+     */
     public String algorithm() {
         return this.algorithm;
     }
@@ -35,6 +39,10 @@ public final class DnsKeySpecResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyLength", required=true)
     private Integer keyLength;
 
+    /**
+     * @return Length of the keys in bits.
+     * 
+     */
     public Integer keyLength() {
         return this.keyLength;
     }
@@ -46,6 +54,10 @@ public final class DnsKeySpecResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyType", required=true)
     private String keyType;
 
+    /**
+     * @return Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.
+     * 
+     */
     public String keyType() {
         return this.keyType;
     }
@@ -84,16 +96,34 @@ public final class DnsKeySpecResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DnsKeySpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm String mnemonic specifying the DNSSEC algorithm of this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(String algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param keyLength Length of the keys in bits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyLength(Integer keyLength) {
             $.keyLength = keyLength;
             return this;
         }
 
+        /**
+         * @param keyType Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(String keyType) {
             $.keyType = keyType;
             return this;

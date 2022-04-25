@@ -23,6 +23,10 @@ public final class CircuitBreakersResponse extends com.pulumi.resources.InvokeAr
     @Import(name="maxConnections", required=true)
     private Integer maxConnections;
 
+    /**
+     * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * 
+     */
     public Integer maxConnections() {
         return this.maxConnections;
     }
@@ -34,6 +38,10 @@ public final class CircuitBreakersResponse extends com.pulumi.resources.InvokeAr
     @Import(name="maxPendingRequests", required=true)
     private Integer maxPendingRequests;
 
+    /**
+     * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * 
+     */
     public Integer maxPendingRequests() {
         return this.maxPendingRequests;
     }
@@ -45,6 +53,10 @@ public final class CircuitBreakersResponse extends com.pulumi.resources.InvokeAr
     @Import(name="maxRequests", required=true)
     private Integer maxRequests;
 
+    /**
+     * @return The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.
+     * 
+     */
     public Integer maxRequests() {
         return this.maxRequests;
     }
@@ -56,6 +68,10 @@ public final class CircuitBreakersResponse extends com.pulumi.resources.InvokeAr
     @Import(name="maxRequestsPerConnection", required=true)
     private Integer maxRequestsPerConnection;
 
+    /**
+     * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * 
+     */
     public Integer maxRequestsPerConnection() {
         return this.maxRequestsPerConnection;
     }
@@ -67,6 +83,10 @@ public final class CircuitBreakersResponse extends com.pulumi.resources.InvokeAr
     @Import(name="maxRetries", required=true)
     private Integer maxRetries;
 
+    /**
+     * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * 
+     */
     public Integer maxRetries() {
         return this.maxRetries;
     }
@@ -99,26 +119,56 @@ public final class CircuitBreakersResponse extends com.pulumi.resources.InvokeAr
             $ = new CircuitBreakersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxConnections Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConnections(Integer maxConnections) {
             $.maxConnections = maxConnections;
             return this;
         }
 
+        /**
+         * @param maxPendingRequests Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPendingRequests(Integer maxPendingRequests) {
             $.maxPendingRequests = maxPendingRequests;
             return this;
         }
 
+        /**
+         * @param maxRequests The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRequests(Integer maxRequests) {
             $.maxRequests = maxRequests;
             return this;
         }
 
+        /**
+         * @param maxRequestsPerConnection Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRequestsPerConnection(Integer maxRequestsPerConnection) {
             $.maxRequestsPerConnection = maxRequestsPerConnection;
             return this;
         }
 
+        /**
+         * @param maxRetries Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRetries(Integer maxRetries) {
             $.maxRetries = maxRetries;
             return this;

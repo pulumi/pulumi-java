@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ShareSettingsResponse {
     /**
-     * A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+     * @return A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
      * 
      */
     private final Map<String,String> projectMap;
     /**
-     * Type of sharing for this shared-reservation
+     * @return Type of sharing for this shared-reservation
      * 
      */
     private final String shareType;
@@ -30,16 +30,16 @@ public final class ShareSettingsResponse {
     }
 
     /**
-     * A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
+     * @return A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
      * 
-    */
+     */
     public Map<String,String> projectMap() {
         return this.projectMap;
     }
     /**
-     * Type of sharing for this shared-reservation
+     * @return Type of sharing for this shared-reservation
      * 
-    */
+     */
     public String shareType() {
         return this.shareType;
     }

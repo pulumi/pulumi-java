@@ -27,6 +27,10 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="diskSizeGb", required=true)
     private String diskSizeGb;
 
+    /**
+     * @return Requested disk size for the VM that runs the build. Note that this is *NOT* &#34;disk free&#34;; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 1000GB; builds that request more than the maximum are rejected with an error.
+     * 
+     */
     public String diskSizeGb() {
         return this.diskSizeGb;
     }
@@ -38,6 +42,10 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="dynamicSubstitutions", required=true)
     private Boolean dynamicSubstitutions;
 
+    /**
+     * @return Option to specify whether or not to apply bash style string operations to the substitutions. NOTE: this is always enabled for triggered builds and cannot be overridden in the build configuration file.
+     * 
+     */
     public Boolean dynamicSubstitutions() {
         return this.dynamicSubstitutions;
     }
@@ -49,6 +57,10 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="env", required=true)
     private List<String> env;
 
+    /**
+     * @return A list of global environment variable definitions that will exist for all build steps in this build. If a variable is defined in both globally and in a build step, the variable will use the build step value. The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
+     * 
+     */
     public List<String> env() {
         return this.env;
     }
@@ -60,6 +72,10 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="logStreamingOption", required=true)
     private String logStreamingOption;
 
+    /**
+     * @return Option to define build log streaming behavior to Google Cloud Storage.
+     * 
+     */
     public String logStreamingOption() {
         return this.logStreamingOption;
     }
@@ -71,6 +87,10 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="logging", required=true)
     private String logging;
 
+    /**
+     * @return Option to specify the logging mode, which determines if and where build logs are stored.
+     * 
+     */
     public String logging() {
         return this.logging;
     }
@@ -82,6 +102,10 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="machineType", required=true)
     private String machineType;
 
+    /**
+     * @return Compute Engine machine type on which to run the build.
+     * 
+     */
     public String machineType() {
         return this.machineType;
     }
@@ -93,6 +117,10 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="pool", required=true)
     private PoolOptionResponse pool;
 
+    /**
+     * @return Optional. Specification for execution on a `WorkerPool`. See [running builds in a private pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more information.
+     * 
+     */
     public PoolOptionResponse pool() {
         return this.pool;
     }
@@ -104,6 +132,10 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="requestedVerifyOption", required=true)
     private String requestedVerifyOption;
 
+    /**
+     * @return Requested verifiability options.
+     * 
+     */
     public String requestedVerifyOption() {
         return this.requestedVerifyOption;
     }
@@ -115,6 +147,10 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="secretEnv", required=true)
     private List<String> secretEnv;
 
+    /**
+     * @return A list of global environment variables, which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build&#39;s `Secret`. These variables will be available to all build steps in this build.
+     * 
+     */
     public List<String> secretEnv() {
         return this.secretEnv;
     }
@@ -126,6 +162,10 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceProvenanceHash", required=true)
     private List<String> sourceProvenanceHash;
 
+    /**
+     * @return Requested hash for SourceProvenance.
+     * 
+     */
     public List<String> sourceProvenanceHash() {
         return this.sourceProvenanceHash;
     }
@@ -137,6 +177,10 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="substitutionOption", required=true)
     private String substitutionOption;
 
+    /**
+     * @return Option to specify behavior when there is an error in the substitution checks. NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build configuration file.
+     * 
+     */
     public String substitutionOption() {
         return this.substitutionOption;
     }
@@ -148,6 +192,10 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="volumes", required=true)
     private List<VolumeResponse> volumes;
 
+    /**
+     * @return Global list of volumes to mount for ALL build steps Each volume is created as an empty volume prior to starting the build process. Upon completion of the build, volumes and their contents are discarded. Global volume names and paths cannot conflict with the volumes defined a build step. Using a global volume in a build with only one step is not valid as it is indicative of a build request with an incorrect configuration.
+     * 
+     */
     public List<VolumeResponse> volumes() {
         return this.volumes;
     }
@@ -159,6 +207,10 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="workerPool", required=true)
     private String workerPool;
 
+    /**
+     * @return This field deprecated; please use `pool.name` instead.
+     * 
+     */
     public String workerPool() {
         return this.workerPool;
     }
@@ -199,82 +251,184 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
             $ = new BuildOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskSizeGb Requested disk size for the VM that runs the build. Note that this is *NOT* &#34;disk free&#34;; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 1000GB; builds that request more than the maximum are rejected with an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(String diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param dynamicSubstitutions Option to specify whether or not to apply bash style string operations to the substitutions. NOTE: this is always enabled for triggered builds and cannot be overridden in the build configuration file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dynamicSubstitutions(Boolean dynamicSubstitutions) {
             $.dynamicSubstitutions = dynamicSubstitutions;
             return this;
         }
 
+        /**
+         * @param env A list of global environment variable definitions that will exist for all build steps in this build. If a variable is defined in both globally and in a build step, the variable will use the build step value. The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(List<String> env) {
             $.env = env;
             return this;
         }
 
+        /**
+         * @param env A list of global environment variable definitions that will exist for all build steps in this build. If a variable is defined in both globally and in a build step, the variable will use the build step value. The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(String... env) {
             return env(List.of(env));
         }
 
+        /**
+         * @param logStreamingOption Option to define build log streaming behavior to Google Cloud Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStreamingOption(String logStreamingOption) {
             $.logStreamingOption = logStreamingOption;
             return this;
         }
 
+        /**
+         * @param logging Option to specify the logging mode, which determines if and where build logs are stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logging(String logging) {
             $.logging = logging;
             return this;
         }
 
+        /**
+         * @param machineType Compute Engine machine type on which to run the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param pool Optional. Specification for execution on a `WorkerPool`. See [running builds in a private pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pool(PoolOptionResponse pool) {
             $.pool = pool;
             return this;
         }
 
+        /**
+         * @param requestedVerifyOption Requested verifiability options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedVerifyOption(String requestedVerifyOption) {
             $.requestedVerifyOption = requestedVerifyOption;
             return this;
         }
 
+        /**
+         * @param secretEnv A list of global environment variables, which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build&#39;s `Secret`. These variables will be available to all build steps in this build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretEnv(List<String> secretEnv) {
             $.secretEnv = secretEnv;
             return this;
         }
 
+        /**
+         * @param secretEnv A list of global environment variables, which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build&#39;s `Secret`. These variables will be available to all build steps in this build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretEnv(String... secretEnv) {
             return secretEnv(List.of(secretEnv));
         }
 
+        /**
+         * @param sourceProvenanceHash Requested hash for SourceProvenance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceProvenanceHash(List<String> sourceProvenanceHash) {
             $.sourceProvenanceHash = sourceProvenanceHash;
             return this;
         }
 
+        /**
+         * @param sourceProvenanceHash Requested hash for SourceProvenance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceProvenanceHash(String... sourceProvenanceHash) {
             return sourceProvenanceHash(List.of(sourceProvenanceHash));
         }
 
+        /**
+         * @param substitutionOption Option to specify behavior when there is an error in the substitution checks. NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build configuration file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder substitutionOption(String substitutionOption) {
             $.substitutionOption = substitutionOption;
             return this;
         }
 
+        /**
+         * @param volumes Global list of volumes to mount for ALL build steps Each volume is created as an empty volume prior to starting the build process. Upon completion of the build, volumes and their contents are discarded. Global volume names and paths cannot conflict with the volumes defined a build step. Using a global volume in a build with only one step is not valid as it is indicative of a build request with an incorrect configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(List<VolumeResponse> volumes) {
             $.volumes = volumes;
             return this;
         }
 
+        /**
+         * @param volumes Global list of volumes to mount for ALL build steps Each volume is created as an empty volume prior to starting the build process. Upon completion of the build, volumes and their contents are discarded. Global volume names and paths cannot conflict with the volumes defined a build step. Using a global volume in a build with only one step is not valid as it is indicative of a build request with an incorrect configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(VolumeResponse... volumes) {
             return volumes(List.of(volumes));
         }
 
+        /**
+         * @param workerPool This field deprecated; please use `pool.name` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerPool(String workerPool) {
             $.workerPool = workerPool;
             return this;

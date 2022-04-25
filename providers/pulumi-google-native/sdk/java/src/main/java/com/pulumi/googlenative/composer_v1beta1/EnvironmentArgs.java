@@ -25,6 +25,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="config")
     private @Nullable Output<EnvironmentConfigArgs> config;
 
+    /**
+     * @return Configuration parameters for this environment.
+     * 
+     */
     public Optional<Output<EnvironmentConfigArgs>> config() {
         return Optional.ofNullable(this.config);
     }
@@ -36,6 +40,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be &lt;= 128 bytes in size.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -54,6 +62,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the environment, in the form: &#34;projects/{projectId}/locations/{locationId}/environments/{environmentId}&#34; EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -72,6 +84,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<EnvironmentState> state;
 
+    /**
+     * @return The current state of the environment.
+     * 
+     */
     public Optional<Output<EnvironmentState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -105,20 +121,44 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config Configuration parameters for this environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(@Nullable Output<EnvironmentConfigArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config Configuration parameters for this environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(EnvironmentConfigArgs config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param labels Optional. User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be &lt;= 128 bytes in size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be &lt;= 128 bytes in size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -132,11 +172,23 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the environment, in the form: &#34;projects/{projectId}/locations/{locationId}/environments/{environmentId}&#34; EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the environment, in the form: &#34;projects/{projectId}/locations/{locationId}/environments/{environmentId}&#34; EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -150,11 +202,23 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param state The current state of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<EnvironmentState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The current state of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(EnvironmentState state) {
             return state(Output.of(state));
         }

@@ -26,6 +26,10 @@ public final class ServerTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="allowOpen")
     private @Nullable Output<Boolean> allowOpen;
 
+    /**
+     * @return  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.
+     * 
+     */
     public Optional<Output<Boolean>> allowOpen() {
         return Optional.ofNullable(this.allowOpen);
     }
@@ -37,6 +41,10 @@ public final class ServerTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Free-text description of the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class ServerTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Set of label tags associated with the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -66,6 +78,10 @@ public final class ServerTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="mtlsPolicy")
     private @Nullable Output<MTLSPolicyArgs> mtlsPolicy;
 
+    /**
+     * @return  Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections.
+     * 
+     */
     public Optional<Output<MTLSPolicyArgs>> mtlsPolicy() {
         return Optional.ofNullable(this.mtlsPolicy);
     }
@@ -77,6 +93,10 @@ public final class ServerTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the ServerTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -95,6 +115,10 @@ public final class ServerTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="serverCertificate")
     private @Nullable Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> serverCertificate;
 
+    /**
+     * @return  Defines a mechanism to provision server identity (public and private keys). Cannot be combined with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
+     * 
+     */
     public Optional<Output<GoogleCloudNetworksecurityV1CertificateProviderArgs>> serverCertificate() {
         return Optional.ofNullable(this.serverCertificate);
     }
@@ -138,29 +162,65 @@ public final class ServerTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
             $ = new ServerTlsPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowOpen  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowOpen(@Nullable Output<Boolean> allowOpen) {
             $.allowOpen = allowOpen;
             return this;
         }
 
+        /**
+         * @param allowOpen  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowOpen(Boolean allowOpen) {
             return allowOpen(Output.of(allowOpen));
         }
 
+        /**
+         * @param description Free-text description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Free-text description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param labels Set of label tags associated with the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Set of label tags associated with the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -174,20 +234,44 @@ public final class ServerTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
             return location(Output.of(location));
         }
 
+        /**
+         * @param mtlsPolicy  Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mtlsPolicy(@Nullable Output<MTLSPolicyArgs> mtlsPolicy) {
             $.mtlsPolicy = mtlsPolicy;
             return this;
         }
 
+        /**
+         * @param mtlsPolicy  Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mtlsPolicy(MTLSPolicyArgs mtlsPolicy) {
             return mtlsPolicy(Output.of(mtlsPolicy));
         }
 
+        /**
+         * @param name Name of the ServerTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the ServerTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -201,11 +285,23 @@ public final class ServerTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
             return project(Output.of(project));
         }
 
+        /**
+         * @param serverCertificate  Defines a mechanism to provision server identity (public and private keys). Cannot be combined with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCertificate(@Nullable Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> serverCertificate) {
             $.serverCertificate = serverCertificate;
             return this;
         }
 
+        /**
+         * @param serverCertificate  Defines a mechanism to provision server identity (public and private keys). Cannot be combined with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCertificate(GoogleCloudNetworksecurityV1CertificateProviderArgs serverCertificate) {
             return serverCertificate(Output.of(serverCertificate));
         }

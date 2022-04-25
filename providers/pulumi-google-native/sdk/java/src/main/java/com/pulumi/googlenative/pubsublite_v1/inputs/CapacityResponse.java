@@ -23,6 +23,10 @@ public final class CapacityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="publishMibPerSec", required=true)
     private Integer publishMibPerSec;
 
+    /**
+     * @return Publish throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.
+     * 
+     */
     public Integer publishMibPerSec() {
         return this.publishMibPerSec;
     }
@@ -34,6 +38,10 @@ public final class CapacityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subscribeMibPerSec", required=true)
     private Integer subscribeMibPerSec;
 
+    /**
+     * @return Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 32.
+     * 
+     */
     public Integer subscribeMibPerSec() {
         return this.subscribeMibPerSec;
     }
@@ -63,11 +71,23 @@ public final class CapacityResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CapacityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publishMibPerSec Publish throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishMibPerSec(Integer publishMibPerSec) {
             $.publishMibPerSec = publishMibPerSec;
             return this;
         }
 
+        /**
+         * @param subscribeMibPerSec Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 32.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscribeMibPerSec(Integer subscribeMibPerSec) {
             $.subscribeMibPerSec = subscribeMibPerSec;
             return this;

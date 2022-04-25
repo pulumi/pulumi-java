@@ -24,6 +24,10 @@ public final class ValidationCAResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="certificateProviderInstance", required=true)
     private CertificateProviderInstanceResponse certificateProviderInstance;
 
+    /**
+     * @return The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
+     * 
+     */
     public CertificateProviderInstanceResponse certificateProviderInstance() {
         return this.certificateProviderInstance;
     }
@@ -35,6 +39,10 @@ public final class ValidationCAResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="grpcEndpoint", required=true)
     private GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse grpcEndpoint;
 
+    /**
+     * @return gRPC specific configuration to access the gRPC server to obtain the CA certificate.
+     * 
+     */
     public GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse grpcEndpoint() {
         return this.grpcEndpoint;
     }
@@ -64,11 +72,23 @@ public final class ValidationCAResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ValidationCAResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateProviderInstance The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateProviderInstance(CertificateProviderInstanceResponse certificateProviderInstance) {
             $.certificateProviderInstance = certificateProviderInstance;
             return this;
         }
 
+        /**
+         * @param grpcEndpoint gRPC specific configuration to access the gRPC server to obtain the CA certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grpcEndpoint(GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse grpcEndpoint) {
             $.grpcEndpoint = grpcEndpoint;
             return this;

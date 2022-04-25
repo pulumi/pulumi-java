@@ -17,42 +17,42 @@ import java.util.Objects;
 @CustomType
 public final class OSPolicyResourcePackageResourceResponse {
     /**
-     * A package managed by Apt.
+     * @return A package managed by Apt.
      * 
      */
     private final OSPolicyResourcePackageResourceAPTResponse apt;
     /**
-     * A deb package file.
+     * @return A deb package file.
      * 
      */
     private final OSPolicyResourcePackageResourceDebResponse deb;
     /**
-     * The desired state the agent should maintain for this package.
+     * @return The desired state the agent should maintain for this package.
      * 
      */
     private final String desiredState;
     /**
-     * A package managed by GooGet.
+     * @return A package managed by GooGet.
      * 
      */
     private final OSPolicyResourcePackageResourceGooGetResponse googet;
     /**
-     * An MSI package.
+     * @return An MSI package.
      * 
      */
     private final OSPolicyResourcePackageResourceMSIResponse msi;
     /**
-     * An rpm package file.
+     * @return An rpm package file.
      * 
      */
     private final OSPolicyResourcePackageResourceRPMResponse rpm;
     /**
-     * A package managed by YUM.
+     * @return A package managed by YUM.
      * 
      */
     private final OSPolicyResourcePackageResourceYUMResponse yum;
     /**
-     * A package managed by Zypper.
+     * @return A package managed by Zypper.
      * 
      */
     private final OSPolicyResourcePackageResourceZypperResponse zypper;
@@ -78,58 +78,58 @@ public final class OSPolicyResourcePackageResourceResponse {
     }
 
     /**
-     * A package managed by Apt.
+     * @return A package managed by Apt.
      * 
-    */
+     */
     public OSPolicyResourcePackageResourceAPTResponse apt() {
         return this.apt;
     }
     /**
-     * A deb package file.
+     * @return A deb package file.
      * 
-    */
+     */
     public OSPolicyResourcePackageResourceDebResponse deb() {
         return this.deb;
     }
     /**
-     * The desired state the agent should maintain for this package.
+     * @return The desired state the agent should maintain for this package.
      * 
-    */
+     */
     public String desiredState() {
         return this.desiredState;
     }
     /**
-     * A package managed by GooGet.
+     * @return A package managed by GooGet.
      * 
-    */
+     */
     public OSPolicyResourcePackageResourceGooGetResponse googet() {
         return this.googet;
     }
     /**
-     * An MSI package.
+     * @return An MSI package.
      * 
-    */
+     */
     public OSPolicyResourcePackageResourceMSIResponse msi() {
         return this.msi;
     }
     /**
-     * An rpm package file.
+     * @return An rpm package file.
      * 
-    */
+     */
     public OSPolicyResourcePackageResourceRPMResponse rpm() {
         return this.rpm;
     }
     /**
-     * A package managed by YUM.
+     * @return A package managed by YUM.
      * 
-    */
+     */
     public OSPolicyResourcePackageResourceYUMResponse yum() {
         return this.yum;
     }
     /**
-     * A package managed by Zypper.
+     * @return A package managed by Zypper.
      * 
-    */
+     */
     public OSPolicyResourcePackageResourceZypperResponse zypper() {
         return this.zypper;
     }

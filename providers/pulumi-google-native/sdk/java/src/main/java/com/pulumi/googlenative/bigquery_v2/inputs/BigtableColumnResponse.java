@@ -20,6 +20,10 @@ public final class BigtableColumnResponse extends com.pulumi.resources.InvokeArg
     @Import(name="encoding", required=true)
     private String encoding;
 
+    /**
+     * @return [Optional] The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. &#39;encoding&#39; can also be set at the column family level. However, the setting at this level takes precedence if &#39;encoding&#39; is set at both levels.
+     * 
+     */
     public String encoding() {
         return this.encoding;
     }
@@ -31,6 +35,10 @@ public final class BigtableColumnResponse extends com.pulumi.resources.InvokeArg
     @Import(name="fieldName", required=true)
     private String fieldName;
 
+    /**
+     * @return [Optional] If the qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as the column field name and is used as field name in queries.
+     * 
+     */
     public String fieldName() {
         return this.fieldName;
     }
@@ -42,6 +50,10 @@ public final class BigtableColumnResponse extends com.pulumi.resources.InvokeArg
     @Import(name="onlyReadLatest", required=true)
     private Boolean onlyReadLatest;
 
+    /**
+     * @return [Optional] If this is set, only the latest version of value in this column are exposed. &#39;onlyReadLatest&#39; can also be set at the column family level. However, the setting at this level takes precedence if &#39;onlyReadLatest&#39; is set at both levels.
+     * 
+     */
     public Boolean onlyReadLatest() {
         return this.onlyReadLatest;
     }
@@ -53,6 +65,10 @@ public final class BigtableColumnResponse extends com.pulumi.resources.InvokeArg
     @Import(name="qualifierEncoded", required=true)
     private String qualifierEncoded;
 
+    /**
+     * @return [Required] Qualifier of the column. Columns in the parent column family that has this exact qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified in the qualifier_string field. Otherwise, a base-64 encoded value must be set to qualifier_encoded. The column field name is the same as the column qualifier. However, if the qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as field_name.
+     * 
+     */
     public String qualifierEncoded() {
         return this.qualifierEncoded;
     }
@@ -71,6 +87,10 @@ public final class BigtableColumnResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return [Optional] The type to convert the value in cells of this column. The values are expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type is BYTES. &#39;type&#39; can also be set at the column family level. However, the setting at this level takes precedence if &#39;type&#39; is set at both levels.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -104,21 +124,45 @@ public final class BigtableColumnResponse extends com.pulumi.resources.InvokeArg
             $ = new BigtableColumnResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encoding [Optional] The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. &#39;encoding&#39; can also be set at the column family level. However, the setting at this level takes precedence if &#39;encoding&#39; is set at both levels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(String encoding) {
             $.encoding = encoding;
             return this;
         }
 
+        /**
+         * @param fieldName [Optional] If the qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as the column field name and is used as field name in queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldName(String fieldName) {
             $.fieldName = fieldName;
             return this;
         }
 
+        /**
+         * @param onlyReadLatest [Optional] If this is set, only the latest version of value in this column are exposed. &#39;onlyReadLatest&#39; can also be set at the column family level. However, the setting at this level takes precedence if &#39;onlyReadLatest&#39; is set at both levels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlyReadLatest(Boolean onlyReadLatest) {
             $.onlyReadLatest = onlyReadLatest;
             return this;
         }
 
+        /**
+         * @param qualifierEncoded [Required] Qualifier of the column. Columns in the parent column family that has this exact qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified in the qualifier_string field. Otherwise, a base-64 encoded value must be set to qualifier_encoded. The column field name is the same as the column qualifier. However, if the qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as field_name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder qualifierEncoded(String qualifierEncoded) {
             $.qualifierEncoded = qualifierEncoded;
             return this;
@@ -129,6 +173,12 @@ public final class BigtableColumnResponse extends com.pulumi.resources.InvokeArg
             return this;
         }
 
+        /**
+         * @param type [Optional] The type to convert the value in cells of this column. The values are expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type is BYTES. &#39;type&#39; can also be set at the column family level. However, the setting at this level takes precedence if &#39;type&#39; is set at both levels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

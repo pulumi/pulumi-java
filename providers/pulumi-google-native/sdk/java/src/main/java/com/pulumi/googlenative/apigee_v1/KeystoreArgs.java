@@ -29,6 +29,10 @@ public final class KeystoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource ID for this keystore. Values must match the regular expression `[\w[:space:]-.]{1,255}`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -75,11 +79,23 @@ public final class KeystoreArgs extends com.pulumi.resources.ResourceArgs {
             return environmentId(Output.of(environmentId));
         }
 
+        /**
+         * @param name Resource ID for this keystore. Values must match the regular expression `[\w[:space:]-.]{1,255}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource ID for this keystore. Values must match the regular expression `[\w[:space:]-.]{1,255}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

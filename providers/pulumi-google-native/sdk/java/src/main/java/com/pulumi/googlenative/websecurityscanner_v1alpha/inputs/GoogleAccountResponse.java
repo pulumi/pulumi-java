@@ -23,6 +23,10 @@ public final class GoogleAccountResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return Input only. The password of the Google account. The credential is stored encrypted and not returned in any response nor included in audit logs.
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -34,6 +38,10 @@ public final class GoogleAccountResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return The user name of the Google account.
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -63,11 +71,23 @@ public final class GoogleAccountResponse extends com.pulumi.resources.InvokeArgs
             $ = new GoogleAccountResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Input only. The password of the Google account. The credential is stored encrypted and not returned in any response nor included in audit logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param username The user name of the Google account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

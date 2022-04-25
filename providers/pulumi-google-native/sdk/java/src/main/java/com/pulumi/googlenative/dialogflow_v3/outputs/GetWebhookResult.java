@@ -13,32 +13,32 @@ import java.util.Objects;
 @CustomType
 public final class GetWebhookResult {
     /**
-     * Indicates whether the webhook is disabled.
+     * @return Indicates whether the webhook is disabled.
      * 
      */
     private final Boolean disabled;
     /**
-     * The human-readable name of the webhook, unique within the agent.
+     * @return The human-readable name of the webhook, unique within the agent.
      * 
      */
     private final String displayName;
     /**
-     * Configuration for a generic web service.
+     * @return Configuration for a generic web service.
      * 
      */
     private final GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService;
     /**
-     * The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name automatically. Format: `projects//locations//agents//webhooks/`.
+     * @return The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name automatically. Format: `projects//locations//agents//webhooks/`.
      * 
      */
     private final String name;
     /**
-     * Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
+     * @return Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
      * 
      */
     private final GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse serviceDirectory;
     /**
-     * Webhook execution timeout. Execution is considered failed if Dialogflow doesn&#39;t receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
+     * @return Webhook execution timeout. Execution is considered failed if Dialogflow doesn&#39;t receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
      * 
      */
     private final String timeout;
@@ -60,44 +60,44 @@ public final class GetWebhookResult {
     }
 
     /**
-     * Indicates whether the webhook is disabled.
+     * @return Indicates whether the webhook is disabled.
      * 
-    */
+     */
     public Boolean disabled() {
         return this.disabled;
     }
     /**
-     * The human-readable name of the webhook, unique within the agent.
+     * @return The human-readable name of the webhook, unique within the agent.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Configuration for a generic web service.
+     * @return Configuration for a generic web service.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService() {
         return this.genericWebService;
     }
     /**
-     * The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name automatically. Format: `projects//locations//agents//webhooks/`.
+     * @return The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name automatically. Format: `projects//locations//agents//webhooks/`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
+     * @return Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse serviceDirectory() {
         return this.serviceDirectory;
     }
     /**
-     * Webhook execution timeout. Execution is considered failed if Dialogflow doesn&#39;t receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
+     * @return Webhook execution timeout. Execution is considered failed if Dialogflow doesn&#39;t receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
      * 
-    */
+     */
     public String timeout() {
         return this.timeout;
     }

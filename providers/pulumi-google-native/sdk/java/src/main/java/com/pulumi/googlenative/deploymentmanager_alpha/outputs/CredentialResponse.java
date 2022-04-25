@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class CredentialResponse {
     /**
-     * Basic Auth Credential, only used by TypeProvider.
+     * @return Basic Auth Credential, only used by TypeProvider.
      * 
      */
     private final BasicAuthResponse basicAuth;
     /**
-     * Service Account Credential, only used by Deployment.
+     * @return Service Account Credential, only used by Deployment.
      * 
      */
     private final ServiceAccountResponse serviceAccount;
     /**
-     * Specify to use the project default credential, only supported by Deployment.
+     * @return Specify to use the project default credential, only supported by Deployment.
      * 
      */
     private final Boolean useProjectDefault;
@@ -38,23 +38,23 @@ public final class CredentialResponse {
     }
 
     /**
-     * Basic Auth Credential, only used by TypeProvider.
+     * @return Basic Auth Credential, only used by TypeProvider.
      * 
-    */
+     */
     public BasicAuthResponse basicAuth() {
         return this.basicAuth;
     }
     /**
-     * Service Account Credential, only used by Deployment.
+     * @return Service Account Credential, only used by Deployment.
      * 
-    */
+     */
     public ServiceAccountResponse serviceAccount() {
         return this.serviceAccount;
     }
     /**
-     * Specify to use the project default credential, only supported by Deployment.
+     * @return Specify to use the project default credential, only supported by Deployment.
      * 
-    */
+     */
     public Boolean useProjectDefault() {
         return this.useProjectDefault;
     }

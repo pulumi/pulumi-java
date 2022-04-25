@@ -27,6 +27,10 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends com.pulumi.resou
     @Import(name="artifactId", required=true)
     private Output<String> artifactId;
 
+    /**
+     * @return The id of the relevant artifact in the recipe.
+     * 
+     */
     public Output<String> artifactId() {
         return this.artifactId;
     }
@@ -38,6 +42,10 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends com.pulumi.resou
     @Import(name="destination")
     private @Nullable Output<String> destination;
 
+    /**
+     * @return Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.
+     * 
+     */
     public Optional<Output<String>> destination() {
         return Optional.ofNullable(this.destination);
     }
@@ -49,6 +57,10 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends com.pulumi.resou
     @Import(name="type", required=true)
     private Output<SoftwareRecipeStepExtractArchiveType> type;
 
+    /**
+     * @return The type of the archive to extract.
+     * 
+     */
     public Output<SoftwareRecipeStepExtractArchiveType> type() {
         return this.type;
     }
@@ -79,29 +91,65 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends com.pulumi.resou
             $ = new SoftwareRecipeStepExtractArchiveArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactId The id of the relevant artifact in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactId(Output<String> artifactId) {
             $.artifactId = artifactId;
             return this;
         }
 
+        /**
+         * @param artifactId The id of the relevant artifact in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactId(String artifactId) {
             return artifactId(Output.of(artifactId));
         }
 
+        /**
+         * @param destination Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(@Nullable Output<String> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(String destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param type The type of the archive to extract.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<SoftwareRecipeStepExtractArchiveType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the archive to extract.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(SoftwareRecipeStepExtractArchiveType type) {
             return type(Output.of(type));
         }

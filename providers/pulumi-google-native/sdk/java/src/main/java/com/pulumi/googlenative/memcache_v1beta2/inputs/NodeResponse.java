@@ -22,6 +22,10 @@ public final class NodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="host", required=true)
     private String host;
 
+    /**
+     * @return Hostname or IP address of the Memcached node used by the clients to connect to the Memcached server on this node.
+     * 
+     */
     public String host() {
         return this.host;
     }
@@ -33,6 +37,10 @@ public final class NodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nodeId", required=true)
     private String nodeId;
 
+    /**
+     * @return Identifier of the Memcached node. The node id does not include project or location like the Memcached instance name.
+     * 
+     */
     public String nodeId() {
         return this.nodeId;
     }
@@ -44,6 +52,10 @@ public final class NodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parameters", required=true)
     private MemcacheParametersResponse parameters;
 
+    /**
+     * @return User defined parameters currently applied to the node.
+     * 
+     */
     public MemcacheParametersResponse parameters() {
         return this.parameters;
     }
@@ -55,6 +67,10 @@ public final class NodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return The port number of the Memcached server on this node.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -66,6 +82,10 @@ public final class NodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Current state of the Memcached node.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -77,6 +97,10 @@ public final class NodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="updateAvailable", required=true)
     private Boolean updateAvailable;
 
+    /**
+     * @return Returns true if there is an update waiting to be applied
+     * 
+     */
     public Boolean updateAvailable() {
         return this.updateAvailable;
     }
@@ -88,6 +112,10 @@ public final class NodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="zone", required=true)
     private String zone;
 
+    /**
+     * @return Location (GCP Zone) for the Memcached node.
+     * 
+     */
     public String zone() {
         return this.zone;
     }
@@ -122,36 +150,78 @@ public final class NodeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new NodeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param host Hostname or IP address of the Memcached node used by the clients to connect to the Memcached server on this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param nodeId Identifier of the Memcached node. The node id does not include project or location like the Memcached instance name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeId(String nodeId) {
             $.nodeId = nodeId;
             return this;
         }
 
+        /**
+         * @param parameters User defined parameters currently applied to the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(MemcacheParametersResponse parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param port The port number of the Memcached server on this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param state Current state of the Memcached node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param updateAvailable Returns true if there is an update waiting to be applied
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateAvailable(Boolean updateAvailable) {
             $.updateAvailable = updateAvailable;
             return this;
         }
 
+        /**
+         * @param zone Location (GCP Zone) for the Memcached node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             $.zone = zone;
             return this;

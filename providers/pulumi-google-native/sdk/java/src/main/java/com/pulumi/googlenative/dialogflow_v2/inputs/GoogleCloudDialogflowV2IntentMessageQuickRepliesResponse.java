@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse exte
     @Import(name="quickReplies", required=true)
     private List<String> quickReplies;
 
+    /**
+     * @return Optional. The collection of quick replies.
+     * 
+     */
     public List<String> quickReplies() {
         return this.quickReplies;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse exte
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return Optional. The title of the collection of quick replies.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -64,15 +72,33 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse exte
             $ = new GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param quickReplies Optional. The collection of quick replies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quickReplies(List<String> quickReplies) {
             $.quickReplies = quickReplies;
             return this;
         }
 
+        /**
+         * @param quickReplies Optional. The collection of quick replies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quickReplies(String... quickReplies) {
             return quickReplies(List.of(quickReplies));
         }
 
+        /**
+         * @param title Optional. The title of the collection of quick replies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

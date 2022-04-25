@@ -24,6 +24,10 @@ public final class EncryptionInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="encryptionStatus", required=true)
     private StatusResponse encryptionStatus;
 
+    /**
+     * @return The status of encrypt/decrypt calls on underlying data for this resource. Regardless of status, the existing data is always encrypted at rest.
+     * 
+     */
     public StatusResponse encryptionStatus() {
         return this.encryptionStatus;
     }
@@ -35,6 +39,10 @@ public final class EncryptionInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="encryptionType", required=true)
     private String encryptionType;
 
+    /**
+     * @return The type of encryption used to protect this resource.
+     * 
+     */
     public String encryptionType() {
         return this.encryptionType;
     }
@@ -46,6 +54,10 @@ public final class EncryptionInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="kmsKeyVersion", required=true)
     private String kmsKeyVersion;
 
+    /**
+     * @return The version of the Cloud KMS key specified in the parent cluster that is in use for the data underlying this table.
+     * 
+     */
     public String kmsKeyVersion() {
         return this.kmsKeyVersion;
     }
@@ -76,16 +88,34 @@ public final class EncryptionInfoResponse extends com.pulumi.resources.InvokeArg
             $ = new EncryptionInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionStatus The status of encrypt/decrypt calls on underlying data for this resource. Regardless of status, the existing data is always encrypted at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionStatus(StatusResponse encryptionStatus) {
             $.encryptionStatus = encryptionStatus;
             return this;
         }
 
+        /**
+         * @param encryptionType The type of encryption used to protect this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionType(String encryptionType) {
             $.encryptionType = encryptionType;
             return this;
         }
 
+        /**
+         * @param kmsKeyVersion The version of the Cloud KMS key specified in the parent cluster that is in use for the data underlying this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyVersion(String kmsKeyVersion) {
             $.kmsKeyVersion = kmsKeyVersion;
             return this;

@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class SubjectAltNamesResponse {
     /**
-     * Contains additional subject alternative name values.
+     * @return Contains additional subject alternative name values.
      * 
      */
     private final List<X509ExtensionResponse> customSans;
     /**
-     * Contains only valid, fully-qualified host names.
+     * @return Contains only valid, fully-qualified host names.
      * 
      */
     private final List<String> dnsNames;
     /**
-     * Contains only valid RFC 2822 E-mail addresses.
+     * @return Contains only valid RFC 2822 E-mail addresses.
      * 
      */
     private final List<String> emailAddresses;
     /**
-     * Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
+     * @return Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
      * 
      */
     private final List<String> ipAddresses;
     /**
-     * Contains only valid RFC 3986 URIs.
+     * @return Contains only valid RFC 3986 URIs.
      * 
      */
     private final List<String> uris;
@@ -52,37 +52,37 @@ public final class SubjectAltNamesResponse {
     }
 
     /**
-     * Contains additional subject alternative name values.
+     * @return Contains additional subject alternative name values.
      * 
-    */
+     */
     public List<X509ExtensionResponse> customSans() {
         return this.customSans;
     }
     /**
-     * Contains only valid, fully-qualified host names.
+     * @return Contains only valid, fully-qualified host names.
      * 
-    */
+     */
     public List<String> dnsNames() {
         return this.dnsNames;
     }
     /**
-     * Contains only valid RFC 2822 E-mail addresses.
+     * @return Contains only valid RFC 2822 E-mail addresses.
      * 
-    */
+     */
     public List<String> emailAddresses() {
         return this.emailAddresses;
     }
     /**
-     * Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
+     * @return Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
      * 
-    */
+     */
     public List<String> ipAddresses() {
         return this.ipAddresses;
     }
     /**
-     * Contains only valid RFC 3986 URIs.
+     * @return Contains only valid RFC 3986 URIs.
      * 
-    */
+     */
     public List<String> uris() {
         return this.uris;
     }

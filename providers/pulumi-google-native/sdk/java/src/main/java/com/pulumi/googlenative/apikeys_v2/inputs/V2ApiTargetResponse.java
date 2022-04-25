@@ -24,6 +24,10 @@ public final class V2ApiTargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="methods", required=true)
     private List<String> methods;
 
+    /**
+     * @return Optional. List of one or more methods that can be called. If empty, all methods for the service are allowed. A wildcard (*) can be used as the last symbol. Valid examples: `google.cloud.translate.v2.TranslateService.GetSupportedLanguage` `TranslateText` `Get*` `translate.googleapis.com.Get*`
+     * 
+     */
     public List<String> methods() {
         return this.methods;
     }
@@ -35,6 +39,10 @@ public final class V2ApiTargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="service", required=true)
     private String service;
 
+    /**
+     * @return The service for this restriction. It should be the canonical service name, for example: `translate.googleapis.com`. You can use [`gcloud services list`](/sdk/gcloud/reference/services/list) to get a list of services that are enabled in the project.
+     * 
+     */
     public String service() {
         return this.service;
     }
@@ -64,15 +72,33 @@ public final class V2ApiTargetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new V2ApiTargetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param methods Optional. List of one or more methods that can be called. If empty, all methods for the service are allowed. A wildcard (*) can be used as the last symbol. Valid examples: `google.cloud.translate.v2.TranslateService.GetSupportedLanguage` `TranslateText` `Get*` `translate.googleapis.com.Get*`
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(List<String> methods) {
             $.methods = methods;
             return this;
         }
 
+        /**
+         * @param methods Optional. List of one or more methods that can be called. If empty, all methods for the service are allowed. A wildcard (*) can be used as the last symbol. Valid examples: `google.cloud.translate.v2.TranslateService.GetSupportedLanguage` `TranslateText` `Get*` `translate.googleapis.com.Get*`
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(String... methods) {
             return methods(List.of(methods));
         }
 
+        /**
+         * @param service The service for this restriction. It should be the canonical service name, for example: `translate.googleapis.com`. You can use [`gcloud services list`](/sdk/gcloud/reference/services/list) to get a list of services that are enabled in the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             $.service = service;
             return this;

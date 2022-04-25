@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationResponse extends com.
     @Import(name="infoTypes", required=true)
     private List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
+    /**
+     * @return InfoTypes to apply the transformation to. An empty list will cause this transformation to apply to all findings that correspond to infoTypes that were requested in `InspectConfig`.
+     * 
+     */
     public List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes() {
         return this.infoTypes;
     }
@@ -36,6 +40,10 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationResponse extends com.
     @Import(name="primitiveTransformation", required=true)
     private GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
 
+    /**
+     * @return Primitive transformation to apply to the infoType.
+     * 
+     */
     public GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation() {
         return this.primitiveTransformation;
     }
@@ -65,15 +73,33 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationResponse extends com.
             $ = new GooglePrivacyDlpV2InfoTypeTransformationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param infoTypes InfoTypes to apply the transformation to. An empty list will cause this transformation to apply to all findings that correspond to infoTypes that were requested in `InspectConfig`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
             $.infoTypes = infoTypes;
             return this;
         }
 
+        /**
+         * @param infoTypes InfoTypes to apply the transformation to. An empty list will cause this transformation to apply to all findings that correspond to infoTypes that were requested in `InspectConfig`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(GooglePrivacyDlpV2InfoTypeResponse... infoTypes) {
             return infoTypes(List.of(infoTypes));
         }
 
+        /**
+         * @param primitiveTransformation Primitive transformation to apply to the infoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
             $.primitiveTransformation = primitiveTransformation;
             return this;

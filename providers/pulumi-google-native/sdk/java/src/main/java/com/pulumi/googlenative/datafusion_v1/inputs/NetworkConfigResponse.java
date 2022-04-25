@@ -23,6 +23,10 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ipAllocation", required=true)
     private String ipAllocation;
 
+    /**
+     * @return The IP range in CIDR notation to use for the managed Data Fusion instance nodes. This range must not overlap with any other ranges used in the customer network.
+     * 
+     */
     public String ipAllocation() {
         return this.ipAllocation;
     }
@@ -34,6 +38,10 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="network", required=true)
     private String network;
 
+    /**
+     * @return Name of the network in the customer project with which the Tenant Project will be peered for executing pipelines. In case of shared VPC where the network resides in another host project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
+     * 
+     */
     public String network() {
         return this.network;
     }
@@ -63,11 +71,23 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new NetworkConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAllocation The IP range in CIDR notation to use for the managed Data Fusion instance nodes. This range must not overlap with any other ranges used in the customer network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocation(String ipAllocation) {
             $.ipAllocation = ipAllocation;
             return this;
         }
 
+        /**
+         * @param network Name of the network in the customer project with which the Tenant Project will be peered for executing pipelines. In case of shared VPC where the network resides in another host project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             $.network = network;
             return this;

@@ -24,6 +24,10 @@ public final class StatefulPolicyPreservedStateResponse extends com.pulumi.resou
     @Import(name="disks", required=true)
     private Map<String,String> disks;
 
+    /**
+     * @return Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
+     * 
+     */
     public Map<String,String> disks() {
         return this.disks;
     }
@@ -52,6 +56,12 @@ public final class StatefulPolicyPreservedStateResponse extends com.pulumi.resou
             $ = new StatefulPolicyPreservedStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disks Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(Map<String,String> disks) {
             $.disks = disks;
             return this;

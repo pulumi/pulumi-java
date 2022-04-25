@@ -23,6 +23,10 @@ public final class ContainerInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="image", required=true)
     private String image;
 
+    /**
+     * @return URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest. Examples: &#34;gcr.io/my-project/image:tag&#34; or &#34;gcr.io/my-project/image@digest&#34;
+     * 
+     */
     public String image() {
         return this.image;
     }
@@ -51,6 +55,12 @@ public final class ContainerInfoResponse extends com.pulumi.resources.InvokeArgs
             $ = new ContainerInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param image URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest. Examples: &#34;gcr.io/my-project/image:tag&#34; or &#34;gcr.io/my-project/image@digest&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             $.image = image;
             return this;

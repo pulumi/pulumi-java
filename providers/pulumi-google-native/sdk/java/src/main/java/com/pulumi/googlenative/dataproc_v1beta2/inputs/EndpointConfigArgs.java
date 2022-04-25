@@ -26,6 +26,10 @@ public final class EndpointConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enableHttpPortAccess")
     private @Nullable Output<Boolean> enableHttpPortAccess;
 
+    /**
+     * @return Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
+     * 
+     */
     public Optional<Output<Boolean>> enableHttpPortAccess() {
         return Optional.ofNullable(this.enableHttpPortAccess);
     }
@@ -54,11 +58,23 @@ public final class EndpointConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new EndpointConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableHttpPortAccess Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHttpPortAccess(@Nullable Output<Boolean> enableHttpPortAccess) {
             $.enableHttpPortAccess = enableHttpPortAccess;
             return this;
         }
 
+        /**
+         * @param enableHttpPortAccess Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHttpPortAccess(Boolean enableHttpPortAccess) {
             return enableHttpPortAccess(Output.of(enableHttpPortAccess));
         }

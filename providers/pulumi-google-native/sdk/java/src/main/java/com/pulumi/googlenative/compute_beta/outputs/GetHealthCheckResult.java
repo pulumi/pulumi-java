@@ -18,23 +18,23 @@ import java.util.Objects;
 @CustomType
 public final class GetHealthCheckResult {
     /**
-     * How often (in seconds) to send a health check. The default value is 5 seconds.
+     * @return How often (in seconds) to send a health check. The default value is 5 seconds.
      * 
      */
     private final Integer checkIntervalSec;
     /**
-     * Creation timestamp in 3339 text format.
+     * @return Creation timestamp in 3339 text format.
      * 
      */
     private final String creationTimestamp;
     /**
-     * An optional description of this resource. Provide this property when you create the resource.
+     * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
     private final String description;
     private final GRPCHealthCheckResponse grpcHealthCheck;
     /**
-     * A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+     * @return A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
      * 
      */
     private final Integer healthyThreshold;
@@ -42,44 +42,44 @@ public final class GetHealthCheckResult {
     private final HTTPHealthCheckResponse httpHealthCheck;
     private final HTTPSHealthCheckResponse httpsHealthCheck;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String kind;
     /**
-     * Configure logging on this health check.
+     * @return Configure logging on this health check.
      * 
      */
     private final HealthCheckLogConfigResponse logConfig;
     /**
-     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This regular expression describes a name where the first character is a lowercase letter, and all following characters are a dash, lowercase letter, or digit, except the last character, which isn&#39;t a dash.
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This regular expression describes a name where the first character is a lowercase letter, and all following characters are a dash, lowercase letter, or digit, except the last character, which isn&#39;t a dash.
      * 
      */
     private final String name;
     /**
-     * Region where the health check resides. Not applicable to global health checks.
+     * @return Region where the health check resides. Not applicable to global health checks.
      * 
      */
     private final String region;
     /**
-     * Server-defined URL for the resource.
+     * @return Server-defined URL for the resource.
      * 
      */
     private final String selfLink;
     private final SSLHealthCheckResponse sslHealthCheck;
     private final TCPHealthCheckResponse tcpHealthCheck;
     /**
-     * How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than checkIntervalSec.
+     * @return How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than checkIntervalSec.
      * 
      */
     private final Integer timeoutSec;
     /**
-     * Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. Exactly one of the protocol-specific health check field must be specified, which must match type field.
+     * @return Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. Exactly one of the protocol-specific health check field must be specified, which must match type field.
      * 
      */
     private final String type;
     /**
-     * A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+     * @return A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
      * 
      */
     private final Integer unhealthyThreshold;
@@ -125,23 +125,23 @@ public final class GetHealthCheckResult {
     }
 
     /**
-     * How often (in seconds) to send a health check. The default value is 5 seconds.
+     * @return How often (in seconds) to send a health check. The default value is 5 seconds.
      * 
-    */
+     */
     public Integer checkIntervalSec() {
         return this.checkIntervalSec;
     }
     /**
-     * Creation timestamp in 3339 text format.
+     * @return Creation timestamp in 3339 text format.
      * 
-    */
+     */
     public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
-     * An optional description of this resource. Provide this property when you create the resource.
+     * @return An optional description of this resource. Provide this property when you create the resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
@@ -149,9 +149,9 @@ public final class GetHealthCheckResult {
         return this.grpcHealthCheck;
     }
     /**
-     * A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+     * @return A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
      * 
-    */
+     */
     public Integer healthyThreshold() {
         return this.healthyThreshold;
     }
@@ -165,37 +165,37 @@ public final class GetHealthCheckResult {
         return this.httpsHealthCheck;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Configure logging on this health check.
+     * @return Configure logging on this health check.
      * 
-    */
+     */
     public HealthCheckLogConfigResponse logConfig() {
         return this.logConfig;
     }
     /**
-     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This regular expression describes a name where the first character is a lowercase letter, and all following characters are a dash, lowercase letter, or digit, except the last character, which isn&#39;t a dash.
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This regular expression describes a name where the first character is a lowercase letter, and all following characters are a dash, lowercase letter, or digit, except the last character, which isn&#39;t a dash.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Region where the health check resides. Not applicable to global health checks.
+     * @return Region where the health check resides. Not applicable to global health checks.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * Server-defined URL for the resource.
+     * @return Server-defined URL for the resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
@@ -206,23 +206,23 @@ public final class GetHealthCheckResult {
         return this.tcpHealthCheck;
     }
     /**
-     * How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than checkIntervalSec.
+     * @return How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than checkIntervalSec.
      * 
-    */
+     */
     public Integer timeoutSec() {
         return this.timeoutSec;
     }
     /**
-     * Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. Exactly one of the protocol-specific health check field must be specified, which must match type field.
+     * @return Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. Exactly one of the protocol-specific health check field must be specified, which must match type field.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+     * @return A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
      * 
-    */
+     */
     public Integer unhealthyThreshold() {
         return this.unhealthyThreshold;
     }

@@ -25,6 +25,10 @@ public final class GoogleCloudMlV1_Measurement_MetricArgs extends com.pulumi.res
     @Import(name="metric", required=true)
     private Output<String> metric;
 
+    /**
+     * @return Metric name.
+     * 
+     */
     public Output<String> metric() {
         return this.metric;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudMlV1_Measurement_MetricArgs extends com.pulumi.res
     @Import(name="value", required=true)
     private Output<Double> value;
 
+    /**
+     * @return The value for this metric.
+     * 
+     */
     public Output<Double> value() {
         return this.value;
     }
@@ -65,20 +73,44 @@ public final class GoogleCloudMlV1_Measurement_MetricArgs extends com.pulumi.res
             $ = new GoogleCloudMlV1_Measurement_MetricArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metric Metric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(Output<String> metric) {
             $.metric = metric;
             return this;
         }
 
+        /**
+         * @param metric Metric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(String metric) {
             return metric(Output.of(metric));
         }
 
+        /**
+         * @param value The value for this metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<Double> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value for this metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Double value) {
             return value(Output.of(value));
         }

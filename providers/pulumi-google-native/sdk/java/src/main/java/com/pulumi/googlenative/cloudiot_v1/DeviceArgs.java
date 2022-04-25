@@ -29,6 +29,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blocked")
     private @Nullable Output<Boolean> blocked;
 
+    /**
+     * @return If a device is blocked, connections or requests from this device will fail. Can be used to temporarily prevent the device from connecting if, for example, the sensor is generating bad data and needs maintenance.
+     * 
+     */
     public Optional<Output<Boolean>> blocked() {
         return Optional.ofNullable(this.blocked);
     }
@@ -40,6 +44,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="config")
     private @Nullable Output<DeviceConfigArgs> config;
 
+    /**
+     * @return The most recent device configuration, which is eventually sent from Cloud IoT Core to the device. If not present on creation, the configuration will be initialized with an empty payload and version value of `1`. To update this field after creation, use the `DeviceManager.ModifyCloudToDeviceConfig` method.
+     * 
+     */
     public Optional<Output<DeviceConfigArgs>> config() {
         return Optional.ofNullable(this.config);
     }
@@ -51,6 +59,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
     private @Nullable Output<List<DeviceCredentialArgs>> credentials;
 
+    /**
+     * @return The credentials used to authenticate this device. To allow credential rotation without interruption, multiple device credentials can be bound to this device. No more than 3 credentials can be bound to a single device at a time. When new credentials are added to a device, they are verified against the registry credentials. For details, see the description of the `DeviceRegistry.credentials` field.
+     * 
+     */
     public Optional<Output<List<DeviceCredentialArgs>>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -62,6 +74,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayConfig")
     private @Nullable Output<GatewayConfigArgs> gatewayConfig;
 
+    /**
+     * @return Gateway-related configuration and state.
+     * 
+     */
     public Optional<Output<GatewayConfigArgs>> gatewayConfig() {
         return Optional.ofNullable(this.gatewayConfig);
     }
@@ -73,6 +89,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The user-defined device identifier. The device ID must be unique within a device registry.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -91,6 +111,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logLevel")
     private @Nullable Output<DeviceLogLevel> logLevel;
 
+    /**
+     * @return **Beta Feature** The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be used.
+     * 
+     */
     public Optional<Output<DeviceLogLevel>> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
@@ -102,6 +126,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return The metadata key-value pairs assigned to the device. This metadata is not interpreted or indexed by Cloud IoT Core. It can be used to add contextual information for the device. Keys must conform to the regular expression a-zA-Z+ and be less than 128 bytes in length. Values are free-form strings. Each value must be less than or equal to 32 KB in size. The total size of all keys and values must be less than 256 KB, and the maximum number of key-value pairs is 500.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -113,6 +141,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource path name. For example, `projects/p1/locations/us-central1/registries/registry0/devices/dev0` or `projects/p1/locations/us-central1/registries/registry0/devices/{num_id}`. When `name` is populated as a response from the service, it always ends in the device numeric ID.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -165,51 +197,117 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blocked If a device is blocked, connections or requests from this device will fail. Can be used to temporarily prevent the device from connecting if, for example, the sensor is generating bad data and needs maintenance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blocked(@Nullable Output<Boolean> blocked) {
             $.blocked = blocked;
             return this;
         }
 
+        /**
+         * @param blocked If a device is blocked, connections or requests from this device will fail. Can be used to temporarily prevent the device from connecting if, for example, the sensor is generating bad data and needs maintenance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blocked(Boolean blocked) {
             return blocked(Output.of(blocked));
         }
 
+        /**
+         * @param config The most recent device configuration, which is eventually sent from Cloud IoT Core to the device. If not present on creation, the configuration will be initialized with an empty payload and version value of `1`. To update this field after creation, use the `DeviceManager.ModifyCloudToDeviceConfig` method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(@Nullable Output<DeviceConfigArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config The most recent device configuration, which is eventually sent from Cloud IoT Core to the device. If not present on creation, the configuration will be initialized with an empty payload and version value of `1`. To update this field after creation, use the `DeviceManager.ModifyCloudToDeviceConfig` method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(DeviceConfigArgs config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param credentials The credentials used to authenticate this device. To allow credential rotation without interruption, multiple device credentials can be bound to this device. No more than 3 credentials can be bound to a single device at a time. When new credentials are added to a device, they are verified against the registry credentials. For details, see the description of the `DeviceRegistry.credentials` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable Output<List<DeviceCredentialArgs>> credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param credentials The credentials used to authenticate this device. To allow credential rotation without interruption, multiple device credentials can be bound to this device. No more than 3 credentials can be bound to a single device at a time. When new credentials are added to a device, they are verified against the registry credentials. For details, see the description of the `DeviceRegistry.credentials` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(List<DeviceCredentialArgs> credentials) {
             return credentials(Output.of(credentials));
         }
 
+        /**
+         * @param credentials The credentials used to authenticate this device. To allow credential rotation without interruption, multiple device credentials can be bound to this device. No more than 3 credentials can be bound to a single device at a time. When new credentials are added to a device, they are verified against the registry credentials. For details, see the description of the `DeviceRegistry.credentials` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(DeviceCredentialArgs... credentials) {
             return credentials(List.of(credentials));
         }
 
+        /**
+         * @param gatewayConfig Gateway-related configuration and state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayConfig(@Nullable Output<GatewayConfigArgs> gatewayConfig) {
             $.gatewayConfig = gatewayConfig;
             return this;
         }
 
+        /**
+         * @param gatewayConfig Gateway-related configuration and state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayConfig(GatewayConfigArgs gatewayConfig) {
             return gatewayConfig(Output.of(gatewayConfig));
         }
 
+        /**
+         * @param id The user-defined device identifier. The device ID must be unique within a device registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The user-defined device identifier. The device ID must be unique within a device registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
@@ -223,29 +321,65 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param logLevel **Beta Feature** The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(@Nullable Output<DeviceLogLevel> logLevel) {
             $.logLevel = logLevel;
             return this;
         }
 
+        /**
+         * @param logLevel **Beta Feature** The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(DeviceLogLevel logLevel) {
             return logLevel(Output.of(logLevel));
         }
 
+        /**
+         * @param metadata The metadata key-value pairs assigned to the device. This metadata is not interpreted or indexed by Cloud IoT Core. It can be used to add contextual information for the device. Keys must conform to the regular expression a-zA-Z+ and be less than 128 bytes in length. Values are free-form strings. Each value must be less than or equal to 32 KB in size. The total size of all keys and values must be less than 256 KB, and the maximum number of key-value pairs is 500.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The metadata key-value pairs assigned to the device. This metadata is not interpreted or indexed by Cloud IoT Core. It can be used to add contextual information for the device. Keys must conform to the regular expression a-zA-Z+ and be less than 128 bytes in length. Values are free-form strings. Each value must be less than or equal to 32 KB in size. The total size of all keys and values must be less than 256 KB, and the maximum number of key-value pairs is 500.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param name The resource path name. For example, `projects/p1/locations/us-central1/registries/registry0/devices/dev0` or `projects/p1/locations/us-central1/registries/registry0/devices/{num_id}`. When `name` is populated as a response from the service, it always ends in the device numeric ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource path name. For example, `projects/p1/locations/us-central1/registries/registry0/devices/dev0` or `projects/p1/locations/us-central1/registries/registry0/devices/{num_id}`. When `name` is populated as a response from the service, it always ends in the device numeric ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

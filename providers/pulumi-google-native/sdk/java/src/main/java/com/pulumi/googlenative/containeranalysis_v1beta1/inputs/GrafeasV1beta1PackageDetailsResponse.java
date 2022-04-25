@@ -23,6 +23,10 @@ public final class GrafeasV1beta1PackageDetailsResponse extends com.pulumi.resou
     @Import(name="installation", required=true)
     private InstallationResponse installation;
 
+    /**
+     * @return Where the package was installed.
+     * 
+     */
     public InstallationResponse installation() {
         return this.installation;
     }
@@ -51,6 +55,12 @@ public final class GrafeasV1beta1PackageDetailsResponse extends com.pulumi.resou
             $ = new GrafeasV1beta1PackageDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param installation Where the package was installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installation(InstallationResponse installation) {
             $.installation = installation;
             return this;

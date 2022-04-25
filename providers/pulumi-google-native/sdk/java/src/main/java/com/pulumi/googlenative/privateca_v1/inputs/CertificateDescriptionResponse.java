@@ -29,6 +29,10 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
     @Import(name="aiaIssuingCertificateUrls", required=true)
     private List<String> aiaIssuingCertificateUrls;
 
+    /**
+     * @return Describes lists of issuer CA certificate URLs that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+     * 
+     */
     public List<String> aiaIssuingCertificateUrls() {
         return this.aiaIssuingCertificateUrls;
     }
@@ -40,6 +44,10 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
     @Import(name="authorityKeyId", required=true)
     private KeyIdResponse authorityKeyId;
 
+    /**
+     * @return Identifies the subject_key_id of the parent certificate, per https://tools.ietf.org/html/rfc5280#section-4.2.1.1
+     * 
+     */
     public KeyIdResponse authorityKeyId() {
         return this.authorityKeyId;
     }
@@ -51,6 +59,10 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
     @Import(name="certFingerprint", required=true)
     private CertificateFingerprintResponse certFingerprint;
 
+    /**
+     * @return The hash of the x.509 certificate.
+     * 
+     */
     public CertificateFingerprintResponse certFingerprint() {
         return this.certFingerprint;
     }
@@ -62,6 +74,10 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
     @Import(name="crlDistributionPoints", required=true)
     private List<String> crlDistributionPoints;
 
+    /**
+     * @return Describes a list of locations to obtain CRL information, i.e. the DistributionPoint.fullName described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13
+     * 
+     */
     public List<String> crlDistributionPoints() {
         return this.crlDistributionPoints;
     }
@@ -73,6 +89,10 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
     @Import(name="publicKey", required=true)
     private PublicKeyResponse publicKey;
 
+    /**
+     * @return The public key that corresponds to an issued certificate.
+     * 
+     */
     public PublicKeyResponse publicKey() {
         return this.publicKey;
     }
@@ -84,6 +104,10 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
     @Import(name="subjectDescription", required=true)
     private SubjectDescriptionResponse subjectDescription;
 
+    /**
+     * @return Describes some of the values in a certificate that are related to the subject and lifetime.
+     * 
+     */
     public SubjectDescriptionResponse subjectDescription() {
         return this.subjectDescription;
     }
@@ -95,6 +119,10 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
     @Import(name="subjectKeyId", required=true)
     private KeyIdResponse subjectKeyId;
 
+    /**
+     * @return Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.
+     * 
+     */
     public KeyIdResponse subjectKeyId() {
         return this.subjectKeyId;
     }
@@ -106,6 +134,10 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
     @Import(name="x509Description", required=true)
     private X509ParametersResponse x509Description;
 
+    /**
+     * @return Describes some of the technical X.509 fields in a certificate.
+     * 
+     */
     public X509ParametersResponse x509Description() {
         return this.x509Description;
     }
@@ -141,49 +173,109 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
             $ = new CertificateDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aiaIssuingCertificateUrls Describes lists of issuer CA certificate URLs that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aiaIssuingCertificateUrls(List<String> aiaIssuingCertificateUrls) {
             $.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
             return this;
         }
 
+        /**
+         * @param aiaIssuingCertificateUrls Describes lists of issuer CA certificate URLs that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aiaIssuingCertificateUrls(String... aiaIssuingCertificateUrls) {
             return aiaIssuingCertificateUrls(List.of(aiaIssuingCertificateUrls));
         }
 
+        /**
+         * @param authorityKeyId Identifies the subject_key_id of the parent certificate, per https://tools.ietf.org/html/rfc5280#section-4.2.1.1
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorityKeyId(KeyIdResponse authorityKeyId) {
             $.authorityKeyId = authorityKeyId;
             return this;
         }
 
+        /**
+         * @param certFingerprint The hash of the x.509 certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certFingerprint(CertificateFingerprintResponse certFingerprint) {
             $.certFingerprint = certFingerprint;
             return this;
         }
 
+        /**
+         * @param crlDistributionPoints Describes a list of locations to obtain CRL information, i.e. the DistributionPoint.fullName described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13
+         * 
+         * @return builder
+         * 
+         */
         public Builder crlDistributionPoints(List<String> crlDistributionPoints) {
             $.crlDistributionPoints = crlDistributionPoints;
             return this;
         }
 
+        /**
+         * @param crlDistributionPoints Describes a list of locations to obtain CRL information, i.e. the DistributionPoint.fullName described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13
+         * 
+         * @return builder
+         * 
+         */
         public Builder crlDistributionPoints(String... crlDistributionPoints) {
             return crlDistributionPoints(List.of(crlDistributionPoints));
         }
 
+        /**
+         * @param publicKey The public key that corresponds to an issued certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(PublicKeyResponse publicKey) {
             $.publicKey = publicKey;
             return this;
         }
 
+        /**
+         * @param subjectDescription Describes some of the values in a certificate that are related to the subject and lifetime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectDescription(SubjectDescriptionResponse subjectDescription) {
             $.subjectDescription = subjectDescription;
             return this;
         }
 
+        /**
+         * @param subjectKeyId Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectKeyId(KeyIdResponse subjectKeyId) {
             $.subjectKeyId = subjectKeyId;
             return this;
         }
 
+        /**
+         * @param x509Description Describes some of the technical X.509 fields in a certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x509Description(X509ParametersResponse x509Description) {
             $.x509Description = x509Description;
             return this;

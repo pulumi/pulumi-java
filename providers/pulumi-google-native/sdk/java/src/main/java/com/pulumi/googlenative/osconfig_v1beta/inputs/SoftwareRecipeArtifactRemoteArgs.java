@@ -26,6 +26,10 @@ public final class SoftwareRecipeArtifactRemoteArgs extends com.pulumi.resources
     @Import(name="checksum")
     private @Nullable Output<String> checksum;
 
+    /**
+     * @return Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn&#39;t match the artifact then the recipe installation fails before running any of the steps.
+     * 
+     */
     public Optional<Output<String>> checksum() {
         return Optional.ofNullable(this.checksum);
     }
@@ -37,6 +41,10 @@ public final class SoftwareRecipeArtifactRemoteArgs extends com.pulumi.resources
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -66,20 +74,44 @@ public final class SoftwareRecipeArtifactRemoteArgs extends com.pulumi.resources
             $ = new SoftwareRecipeArtifactRemoteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param checksum Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn&#39;t match the artifact then the recipe installation fails before running any of the steps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checksum(@Nullable Output<String> checksum) {
             $.checksum = checksum;
             return this;
         }
 
+        /**
+         * @param checksum Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn&#39;t match the artifact then the recipe installation fails before running any of the steps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checksum(String checksum) {
             return checksum(Output.of(checksum));
         }
 
+        /**
+         * @param uri URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

@@ -14,47 +14,47 @@ import java.util.Objects;
 @CustomType
 public final class JobStatusResponse {
     /**
-     * Optional. The number of actively running instances. +optional
+     * @return Optional. The number of actively running instances. +optional
      * 
      */
     private final Integer active;
     /**
-     * Optional. Represents time when the job was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+     * @return Optional. Represents time when the job was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
      * 
      */
     private final String completionTime;
     /**
-     * Optional. The latest available observations of a job&#39;s current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+     * @return Optional. The latest available observations of a job&#39;s current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
      * 
      */
     private final List<JobConditionResponse> conditions;
     /**
-     * Optional. The number of instances which reached phase Failed. +optional
+     * @return Optional. The number of instances which reached phase Failed. +optional
      * 
      */
     private final Integer failed;
     /**
-     * Optional. ImageDigest holds the resolved digest for the image specified within .Spec.Template.Spec.Container.Image. The digest is resolved during the creation of the Job. This field holds the digest value regardless of whether a tag or digest was originally specified in the Container object.
+     * @return Optional. ImageDigest holds the resolved digest for the image specified within .Spec.Template.Spec.Container.Image. The digest is resolved during the creation of the Job. This field holds the digest value regardless of whether a tag or digest was originally specified in the Container object.
      * 
      */
     private final String imageDigest;
     /**
-     * Optional. Status of completed, failed, and running instances. +optional
+     * @return Optional. Status of completed, failed, and running instances. +optional
      * 
      */
     private final List<InstanceStatusResponse> instances;
     /**
-     * Optional. The &#39;generation&#39; of the job that was last processed by the controller.
+     * @return Optional. The &#39;generation&#39; of the job that was last processed by the controller.
      * 
      */
     private final Integer observedGeneration;
     /**
-     * Optional. Represents time when the job was acknowledged by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+     * @return Optional. Represents time when the job was acknowledged by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
      * 
      */
     private final String startTime;
     /**
-     * Optional. The number of instances which reached phase Succeeded. +optional
+     * @return Optional. The number of instances which reached phase Succeeded. +optional
      * 
      */
     private final Integer succeeded;
@@ -82,65 +82,65 @@ public final class JobStatusResponse {
     }
 
     /**
-     * Optional. The number of actively running instances. +optional
+     * @return Optional. The number of actively running instances. +optional
      * 
-    */
+     */
     public Integer active() {
         return this.active;
     }
     /**
-     * Optional. Represents time when the job was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+     * @return Optional. Represents time when the job was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
      * 
-    */
+     */
     public String completionTime() {
         return this.completionTime;
     }
     /**
-     * Optional. The latest available observations of a job&#39;s current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+     * @return Optional. The latest available observations of a job&#39;s current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
      * 
-    */
+     */
     public List<JobConditionResponse> conditions() {
         return this.conditions;
     }
     /**
-     * Optional. The number of instances which reached phase Failed. +optional
+     * @return Optional. The number of instances which reached phase Failed. +optional
      * 
-    */
+     */
     public Integer failed() {
         return this.failed;
     }
     /**
-     * Optional. ImageDigest holds the resolved digest for the image specified within .Spec.Template.Spec.Container.Image. The digest is resolved during the creation of the Job. This field holds the digest value regardless of whether a tag or digest was originally specified in the Container object.
+     * @return Optional. ImageDigest holds the resolved digest for the image specified within .Spec.Template.Spec.Container.Image. The digest is resolved during the creation of the Job. This field holds the digest value regardless of whether a tag or digest was originally specified in the Container object.
      * 
-    */
+     */
     public String imageDigest() {
         return this.imageDigest;
     }
     /**
-     * Optional. Status of completed, failed, and running instances. +optional
+     * @return Optional. Status of completed, failed, and running instances. +optional
      * 
-    */
+     */
     public List<InstanceStatusResponse> instances() {
         return this.instances;
     }
     /**
-     * Optional. The &#39;generation&#39; of the job that was last processed by the controller.
+     * @return Optional. The &#39;generation&#39; of the job that was last processed by the controller.
      * 
-    */
+     */
     public Integer observedGeneration() {
         return this.observedGeneration;
     }
     /**
-     * Optional. Represents time when the job was acknowledged by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+     * @return Optional. Represents time when the job was acknowledged by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Optional. The number of instances which reached phase Succeeded. +optional
+     * @return Optional. The number of instances which reached phase Succeeded. +optional
      * 
-    */
+     */
     public Integer succeeded() {
         return this.succeeded;
     }

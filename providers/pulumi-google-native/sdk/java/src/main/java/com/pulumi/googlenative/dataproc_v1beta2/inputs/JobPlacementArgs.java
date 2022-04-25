@@ -27,6 +27,10 @@ public final class JobPlacementArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterLabels")
     private @Nullable Output<Map<String,String>> clusterLabels;
 
+    /**
+     * @return Optional. Cluster labels to identify a cluster where the job will be submitted.
+     * 
+     */
     public Optional<Output<Map<String,String>>> clusterLabels() {
         return Optional.ofNullable(this.clusterLabels);
     }
@@ -38,6 +42,10 @@ public final class JobPlacementArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return The name of the cluster where the job will be submitted.
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -67,20 +75,44 @@ public final class JobPlacementArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobPlacementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterLabels Optional. Cluster labels to identify a cluster where the job will be submitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterLabels(@Nullable Output<Map<String,String>> clusterLabels) {
             $.clusterLabels = clusterLabels;
             return this;
         }
 
+        /**
+         * @param clusterLabels Optional. Cluster labels to identify a cluster where the job will be submitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterLabels(Map<String,String> clusterLabels) {
             return clusterLabels(Output.of(clusterLabels));
         }
 
+        /**
+         * @param clusterName The name of the cluster where the job will be submitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the cluster where the job will be submitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }

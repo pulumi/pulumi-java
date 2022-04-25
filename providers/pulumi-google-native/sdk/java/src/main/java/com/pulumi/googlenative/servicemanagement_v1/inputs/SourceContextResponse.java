@@ -23,6 +23,10 @@ public final class SourceContextResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="fileName", required=true)
     private String fileName;
 
+    /**
+     * @return The path-qualified name of the .proto file that contained the associated protobuf element. For example: `&#34;google/protobuf/source_context.proto&#34;`.
+     * 
+     */
     public String fileName() {
         return this.fileName;
     }
@@ -51,6 +55,12 @@ public final class SourceContextResponse extends com.pulumi.resources.InvokeArgs
             $ = new SourceContextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileName The path-qualified name of the .proto file that contained the associated protobuf element. For example: `&#34;google/protobuf/source_context.proto&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(String fileName) {
             $.fileName = fileName;
             return this;

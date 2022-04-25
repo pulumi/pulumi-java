@@ -23,6 +23,10 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekArgs extends com.pulumi.res
     @Import(name="day")
     private @Nullable Output<ResourcePolicyWeeklyCycleDayOfWeekDay> day;
 
+    /**
+     * @return Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
+     * 
+     */
     public Optional<Output<ResourcePolicyWeeklyCycleDayOfWeekDay>> day() {
         return Optional.ofNullable(this.day);
     }
@@ -34,6 +38,10 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekArgs extends com.pulumi.res
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -63,20 +71,44 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekArgs extends com.pulumi.res
             $ = new ResourcePolicyWeeklyCycleDayOfWeekArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(@Nullable Output<ResourcePolicyWeeklyCycleDayOfWeekDay> day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param day Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(ResourcePolicyWeeklyCycleDayOfWeekDay day) {
             return day(Output.of(day));
         }
 
+        /**
+         * @param startTime Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }

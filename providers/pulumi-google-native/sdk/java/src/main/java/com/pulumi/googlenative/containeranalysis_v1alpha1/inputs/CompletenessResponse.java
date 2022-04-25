@@ -23,6 +23,10 @@ public final class CompletenessResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="arguments", required=true)
     private Boolean arguments;
 
+    /**
+     * @return If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.
+     * 
+     */
     public Boolean arguments() {
         return this.arguments;
     }
@@ -34,6 +38,10 @@ public final class CompletenessResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="environment", required=true)
     private Boolean environment;
 
+    /**
+     * @return If true, the builder claims that recipe.environment is claimed to be complete.
+     * 
+     */
     public Boolean environment() {
         return this.environment;
     }
@@ -45,6 +53,10 @@ public final class CompletenessResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="materials", required=true)
     private Boolean materials;
 
+    /**
+     * @return If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called &#34;hermetic&#34;.
+     * 
+     */
     public Boolean materials() {
         return this.materials;
     }
@@ -75,16 +87,34 @@ public final class CompletenessResponse extends com.pulumi.resources.InvokeArgs 
             $ = new CompletenessResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arguments If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(Boolean arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param environment If true, the builder claims that recipe.environment is claimed to be complete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(Boolean environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param materials If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called &#34;hermetic&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder materials(Boolean materials) {
             $.materials = materials;
             return this;

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class TimeZoneResponse {
     /**
-     * Optional. IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
+     * @return Optional. IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
      * 
      */
     private final String version;
@@ -21,9 +21,9 @@ public final class TimeZoneResponse {
     }
 
     /**
-     * Optional. IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
+     * @return Optional. IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

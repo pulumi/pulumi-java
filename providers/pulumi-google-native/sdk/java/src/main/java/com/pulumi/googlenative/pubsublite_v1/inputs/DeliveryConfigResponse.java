@@ -23,6 +23,10 @@ public final class DeliveryConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="deliveryRequirement", required=true)
     private String deliveryRequirement;
 
+    /**
+     * @return The DeliveryRequirement for this subscription.
+     * 
+     */
     public String deliveryRequirement() {
         return this.deliveryRequirement;
     }
@@ -51,6 +55,12 @@ public final class DeliveryConfigResponse extends com.pulumi.resources.InvokeArg
             $ = new DeliveryConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deliveryRequirement The DeliveryRequirement for this subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryRequirement(String deliveryRequirement) {
             $.deliveryRequirement = deliveryRequirement;
             return this;

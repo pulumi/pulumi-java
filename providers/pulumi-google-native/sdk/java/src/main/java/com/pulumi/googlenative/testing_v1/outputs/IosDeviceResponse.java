@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class IosDeviceResponse {
     /**
-     * The id of the iOS device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * @return The id of the iOS device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
      */
     private final String iosModelId;
     /**
-     * The id of the iOS major software version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * @return The id of the iOS major software version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
      */
     private final String iosVersionId;
     /**
-     * The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+     * @return The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
      */
     private final String locale;
     /**
-     * How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
+     * @return How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
      */
     private final String orientation;
@@ -43,30 +43,30 @@ public final class IosDeviceResponse {
     }
 
     /**
-     * The id of the iOS device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * @return The id of the iOS device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
-    */
+     */
     public String iosModelId() {
         return this.iosModelId;
     }
     /**
-     * The id of the iOS major software version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * @return The id of the iOS major software version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
-    */
+     */
     public String iosVersionId() {
         return this.iosVersionId;
     }
     /**
-     * The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+     * @return The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
-    */
+     */
     public String locale() {
         return this.locale;
     }
     /**
-     * How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
+     * @return How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
-    */
+     */
     public String orientation() {
         return this.orientation;
     }

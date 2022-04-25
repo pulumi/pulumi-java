@@ -31,6 +31,10 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="arguments")
     private @Nullable Output<List<ArgumentArgs>> arguments;
 
+    /**
+     * @return Optional.
+     * 
+     */
     public Optional<Output<List<ArgumentArgs>>> arguments() {
         return Optional.ofNullable(this.arguments);
     }
@@ -49,6 +53,10 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="definitionBody", required=true)
     private Output<String> definitionBody;
 
+    /**
+     * @return The body of the routine. For functions, this is the expression in the AS clause. If language=SQL, it is the substring inside (but excluding) the parentheses. For example, for the function created with the following statement: `CREATE FUNCTION JoinLines(x string, y string) as (concat(x, &#34;\n&#34;, y))` The definition_body is `concat(x, &#34;\n&#34;, y)` (\n is not replaced with linebreak). If language=JAVASCRIPT, it is the evaluated string in the AS clause. For example, for the function created with the following statement: `CREATE FUNCTION f() RETURNS STRING LANGUAGE js AS &#39;return &#34;\n&#34;;\n&#39;` The definition_body is `return &#34;\n&#34;;\n` Note that both \n are replaced with linebreaks.
+     * 
+     */
     public Output<String> definitionBody() {
         return this.definitionBody;
     }
@@ -60,6 +68,10 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. The description of the routine, if defined.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -71,6 +83,10 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="determinismLevel")
     private @Nullable Output<RoutineDeterminismLevel> determinismLevel;
 
+    /**
+     * @return Optional. The determinism level of the JavaScript UDF, if defined.
+     * 
+     */
     public Optional<Output<RoutineDeterminismLevel>> determinismLevel() {
         return Optional.ofNullable(this.determinismLevel);
     }
@@ -82,6 +98,10 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="importedLibraries")
     private @Nullable Output<List<String>> importedLibraries;
 
+    /**
+     * @return Optional. If language = &#34;JAVASCRIPT&#34;, this field stores the path of the imported JAVASCRIPT libraries.
+     * 
+     */
     public Optional<Output<List<String>>> importedLibraries() {
         return Optional.ofNullable(this.importedLibraries);
     }
@@ -93,6 +113,10 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="language")
     private @Nullable Output<RoutineLanguage> language;
 
+    /**
+     * @return Optional. Defaults to &#34;SQL&#34;.
+     * 
+     */
     public Optional<Output<RoutineLanguage>> language() {
         return Optional.ofNullable(this.language);
     }
@@ -111,6 +135,10 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="returnTableType")
     private @Nullable Output<StandardSqlTableTypeArgs> returnTableType;
 
+    /**
+     * @return Optional. Can be set only if routine_type = &#34;TABLE_VALUED_FUNCTION&#34;. If absent, the return table type is inferred from definition_body at query time in each query that references this routine. If present, then the columns in the evaluated table result will be cast to match the column types specificed in return table type, at query time.
+     * 
+     */
     public Optional<Output<StandardSqlTableTypeArgs>> returnTableType() {
         return Optional.ofNullable(this.returnTableType);
     }
@@ -122,6 +150,10 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="returnType")
     private @Nullable Output<StandardSqlDataTypeArgs> returnType;
 
+    /**
+     * @return Optional if language = &#34;SQL&#34;; required otherwise. Cannot be set if routine_type = &#34;TABLE_VALUED_FUNCTION&#34;. If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: &#34;FLOAT64&#34;}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.
+     * 
+     */
     public Optional<Output<StandardSqlDataTypeArgs>> returnType() {
         return Optional.ofNullable(this.returnType);
     }
@@ -133,6 +165,10 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routineReference", required=true)
     private Output<RoutineReferenceArgs> routineReference;
 
+    /**
+     * @return Reference describing the ID of this routine.
+     * 
+     */
     public Output<RoutineReferenceArgs> routineReference() {
         return this.routineReference;
     }
@@ -144,6 +180,10 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routineType", required=true)
     private Output<RoutineRoutineType> routineType;
 
+    /**
+     * @return The type of routine.
+     * 
+     */
     public Output<RoutineRoutineType> routineType() {
         return this.routineType;
     }
@@ -155,6 +195,10 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="strictMode")
     private @Nullable Output<Boolean> strictMode;
 
+    /**
+     * @return Optional. Can be set for procedures only. If true (default), the definition body will be validated in the creation and the updates of the procedure. For procedures with an argument of ANY TYPE, the definition body validtion is not supported at creation/update time, and thus this field must be set to false explicitly.
+     * 
+     */
     public Optional<Output<Boolean>> strictMode() {
         return Optional.ofNullable(this.strictMode);
     }
@@ -195,15 +239,33 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RoutineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arguments Optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(@Nullable Output<List<ArgumentArgs>> arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param arguments Optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(List<ArgumentArgs> arguments) {
             return arguments(Output.of(arguments));
         }
 
+        /**
+         * @param arguments Optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(ArgumentArgs... arguments) {
             return arguments(List.of(arguments));
         }
@@ -217,51 +279,117 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param definitionBody The body of the routine. For functions, this is the expression in the AS clause. If language=SQL, it is the substring inside (but excluding) the parentheses. For example, for the function created with the following statement: `CREATE FUNCTION JoinLines(x string, y string) as (concat(x, &#34;\n&#34;, y))` The definition_body is `concat(x, &#34;\n&#34;, y)` (\n is not replaced with linebreak). If language=JAVASCRIPT, it is the evaluated string in the AS clause. For example, for the function created with the following statement: `CREATE FUNCTION f() RETURNS STRING LANGUAGE js AS &#39;return &#34;\n&#34;;\n&#39;` The definition_body is `return &#34;\n&#34;;\n` Note that both \n are replaced with linebreaks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definitionBody(Output<String> definitionBody) {
             $.definitionBody = definitionBody;
             return this;
         }
 
+        /**
+         * @param definitionBody The body of the routine. For functions, this is the expression in the AS clause. If language=SQL, it is the substring inside (but excluding) the parentheses. For example, for the function created with the following statement: `CREATE FUNCTION JoinLines(x string, y string) as (concat(x, &#34;\n&#34;, y))` The definition_body is `concat(x, &#34;\n&#34;, y)` (\n is not replaced with linebreak). If language=JAVASCRIPT, it is the evaluated string in the AS clause. For example, for the function created with the following statement: `CREATE FUNCTION f() RETURNS STRING LANGUAGE js AS &#39;return &#34;\n&#34;;\n&#39;` The definition_body is `return &#34;\n&#34;;\n` Note that both \n are replaced with linebreaks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definitionBody(String definitionBody) {
             return definitionBody(Output.of(definitionBody));
         }
 
+        /**
+         * @param description Optional. The description of the routine, if defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. The description of the routine, if defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param determinismLevel Optional. The determinism level of the JavaScript UDF, if defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder determinismLevel(@Nullable Output<RoutineDeterminismLevel> determinismLevel) {
             $.determinismLevel = determinismLevel;
             return this;
         }
 
+        /**
+         * @param determinismLevel Optional. The determinism level of the JavaScript UDF, if defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder determinismLevel(RoutineDeterminismLevel determinismLevel) {
             return determinismLevel(Output.of(determinismLevel));
         }
 
+        /**
+         * @param importedLibraries Optional. If language = &#34;JAVASCRIPT&#34;, this field stores the path of the imported JAVASCRIPT libraries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importedLibraries(@Nullable Output<List<String>> importedLibraries) {
             $.importedLibraries = importedLibraries;
             return this;
         }
 
+        /**
+         * @param importedLibraries Optional. If language = &#34;JAVASCRIPT&#34;, this field stores the path of the imported JAVASCRIPT libraries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importedLibraries(List<String> importedLibraries) {
             return importedLibraries(Output.of(importedLibraries));
         }
 
+        /**
+         * @param importedLibraries Optional. If language = &#34;JAVASCRIPT&#34;, this field stores the path of the imported JAVASCRIPT libraries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importedLibraries(String... importedLibraries) {
             return importedLibraries(List.of(importedLibraries));
         }
 
+        /**
+         * @param language Optional. Defaults to &#34;SQL&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder language(@Nullable Output<RoutineLanguage> language) {
             $.language = language;
             return this;
         }
 
+        /**
+         * @param language Optional. Defaults to &#34;SQL&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder language(RoutineLanguage language) {
             return language(Output.of(language));
         }
@@ -275,47 +403,107 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param returnTableType Optional. Can be set only if routine_type = &#34;TABLE_VALUED_FUNCTION&#34;. If absent, the return table type is inferred from definition_body at query time in each query that references this routine. If present, then the columns in the evaluated table result will be cast to match the column types specificed in return table type, at query time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnTableType(@Nullable Output<StandardSqlTableTypeArgs> returnTableType) {
             $.returnTableType = returnTableType;
             return this;
         }
 
+        /**
+         * @param returnTableType Optional. Can be set only if routine_type = &#34;TABLE_VALUED_FUNCTION&#34;. If absent, the return table type is inferred from definition_body at query time in each query that references this routine. If present, then the columns in the evaluated table result will be cast to match the column types specificed in return table type, at query time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnTableType(StandardSqlTableTypeArgs returnTableType) {
             return returnTableType(Output.of(returnTableType));
         }
 
+        /**
+         * @param returnType Optional if language = &#34;SQL&#34;; required otherwise. Cannot be set if routine_type = &#34;TABLE_VALUED_FUNCTION&#34;. If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: &#34;FLOAT64&#34;}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnType(@Nullable Output<StandardSqlDataTypeArgs> returnType) {
             $.returnType = returnType;
             return this;
         }
 
+        /**
+         * @param returnType Optional if language = &#34;SQL&#34;; required otherwise. Cannot be set if routine_type = &#34;TABLE_VALUED_FUNCTION&#34;. If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: &#34;FLOAT64&#34;}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnType(StandardSqlDataTypeArgs returnType) {
             return returnType(Output.of(returnType));
         }
 
+        /**
+         * @param routineReference Reference describing the ID of this routine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routineReference(Output<RoutineReferenceArgs> routineReference) {
             $.routineReference = routineReference;
             return this;
         }
 
+        /**
+         * @param routineReference Reference describing the ID of this routine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routineReference(RoutineReferenceArgs routineReference) {
             return routineReference(Output.of(routineReference));
         }
 
+        /**
+         * @param routineType The type of routine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routineType(Output<RoutineRoutineType> routineType) {
             $.routineType = routineType;
             return this;
         }
 
+        /**
+         * @param routineType The type of routine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routineType(RoutineRoutineType routineType) {
             return routineType(Output.of(routineType));
         }
 
+        /**
+         * @param strictMode Optional. Can be set for procedures only. If true (default), the definition body will be validated in the creation and the updates of the procedure. For procedures with an argument of ANY TYPE, the definition body validtion is not supported at creation/update time, and thus this field must be set to false explicitly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strictMode(@Nullable Output<Boolean> strictMode) {
             $.strictMode = strictMode;
             return this;
         }
 
+        /**
+         * @param strictMode Optional. Can be set for procedures only. If true (default), the definition body will be validated in the creation and the updates of the procedure. For procedures with an argument of ANY TYPE, the definition body validtion is not supported at creation/update time, and thus this field must be set to false explicitly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strictMode(Boolean strictMode) {
             return strictMode(Output.of(strictMode));
         }

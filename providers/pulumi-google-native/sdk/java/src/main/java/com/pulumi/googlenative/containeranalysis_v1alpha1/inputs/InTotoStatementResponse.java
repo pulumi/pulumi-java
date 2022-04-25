@@ -27,6 +27,10 @@ public final class InTotoStatementResponse extends com.pulumi.resources.InvokeAr
     @Import(name="predicateType", required=true)
     private String predicateType;
 
+    /**
+     * @return &#34;https://slsa.dev/provenance/v0.1&#34; for SlsaProvenance.
+     * 
+     */
     public String predicateType() {
         return this.predicateType;
     }
@@ -38,6 +42,10 @@ public final class InTotoStatementResponse extends com.pulumi.resources.InvokeAr
     @Import(name="provenance", required=true)
     private InTotoProvenanceResponse provenance;
 
+    /**
+     * @return provenance is a predicate of type intotoprovenance
+     * 
+     */
     public InTotoProvenanceResponse provenance() {
         return this.provenance;
     }
@@ -49,6 +57,10 @@ public final class InTotoStatementResponse extends com.pulumi.resources.InvokeAr
     @Import(name="slsaProvenance", required=true)
     private SlsaProvenanceResponse slsaProvenance;
 
+    /**
+     * @return slsa_provenance is a predicate of type slsaProvenance
+     * 
+     */
     public SlsaProvenanceResponse slsaProvenance() {
         return this.slsaProvenance;
     }
@@ -60,6 +72,10 @@ public final class InTotoStatementResponse extends com.pulumi.resources.InvokeAr
     @Import(name="subject", required=true)
     private List<SubjectResponse> subject;
 
+    /**
+     * @return subject is the subjects of the intoto statement
+     * 
+     */
     public List<SubjectResponse> subject() {
         return this.subject;
     }
@@ -71,6 +87,10 @@ public final class InTotoStatementResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Always &#34;https://in-toto.io/Statement/v0.1&#34;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -103,30 +123,66 @@ public final class InTotoStatementResponse extends com.pulumi.resources.InvokeAr
             $ = new InTotoStatementResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param predicateType &#34;https://slsa.dev/provenance/v0.1&#34; for SlsaProvenance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predicateType(String predicateType) {
             $.predicateType = predicateType;
             return this;
         }
 
+        /**
+         * @param provenance provenance is a predicate of type intotoprovenance
+         * 
+         * @return builder
+         * 
+         */
         public Builder provenance(InTotoProvenanceResponse provenance) {
             $.provenance = provenance;
             return this;
         }
 
+        /**
+         * @param slsaProvenance slsa_provenance is a predicate of type slsaProvenance
+         * 
+         * @return builder
+         * 
+         */
         public Builder slsaProvenance(SlsaProvenanceResponse slsaProvenance) {
             $.slsaProvenance = slsaProvenance;
             return this;
         }
 
+        /**
+         * @param subject subject is the subjects of the intoto statement
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(List<SubjectResponse> subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param subject subject is the subjects of the intoto statement
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(SubjectResponse... subject) {
             return subject(List.of(subject));
         }
 
+        /**
+         * @param type Always &#34;https://in-toto.io/Statement/v0.1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -26,6 +26,10 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends com.pulum
     @Import(name="framework")
     private @Nullable Output<String> framework;
 
+    /**
+     * @return Framework on which the built-in algorithm was trained.
+     * 
+     */
     public Optional<Output<String>> framework() {
         return Optional.ofNullable(this.framework);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends com.pulum
     @Import(name="modelPath")
     private @Nullable Output<String> modelPath;
 
+    /**
+     * @return The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don&#39;t use hyperparameter tuning.
+     * 
+     */
     public Optional<Output<String>> modelPath() {
         return Optional.ofNullable(this.modelPath);
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends com.pulum
     @Import(name="pythonVersion")
     private @Nullable Output<String> pythonVersion;
 
+    /**
+     * @return Python version on which the built-in algorithm was trained.
+     * 
+     */
     public Optional<Output<String>> pythonVersion() {
         return Optional.ofNullable(this.pythonVersion);
     }
@@ -59,6 +71,10 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends com.pulum
     @Import(name="runtimeVersion")
     private @Nullable Output<String> runtimeVersion;
 
+    /**
+     * @return AI Platform runtime version on which the built-in algorithm was trained.
+     * 
+     */
     public Optional<Output<String>> runtimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
@@ -90,38 +106,86 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends com.pulum
             $ = new GoogleCloudMlV1__BuiltInAlgorithmOutputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param framework Framework on which the built-in algorithm was trained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder framework(@Nullable Output<String> framework) {
             $.framework = framework;
             return this;
         }
 
+        /**
+         * @param framework Framework on which the built-in algorithm was trained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder framework(String framework) {
             return framework(Output.of(framework));
         }
 
+        /**
+         * @param modelPath The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don&#39;t use hyperparameter tuning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelPath(@Nullable Output<String> modelPath) {
             $.modelPath = modelPath;
             return this;
         }
 
+        /**
+         * @param modelPath The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don&#39;t use hyperparameter tuning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelPath(String modelPath) {
             return modelPath(Output.of(modelPath));
         }
 
+        /**
+         * @param pythonVersion Python version on which the built-in algorithm was trained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pythonVersion(@Nullable Output<String> pythonVersion) {
             $.pythonVersion = pythonVersion;
             return this;
         }
 
+        /**
+         * @param pythonVersion Python version on which the built-in algorithm was trained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pythonVersion(String pythonVersion) {
             return pythonVersion(Output.of(pythonVersion));
         }
 
+        /**
+         * @param runtimeVersion AI Platform runtime version on which the built-in algorithm was trained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(@Nullable Output<String> runtimeVersion) {
             $.runtimeVersion = runtimeVersion;
             return this;
         }
 
+        /**
+         * @param runtimeVersion AI Platform runtime version on which the built-in algorithm was trained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(String runtimeVersion) {
             return runtimeVersion(Output.of(runtimeVersion));
         }

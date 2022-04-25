@@ -23,6 +23,10 @@ public final class RsaKeyTypeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxModulusSize", required=true)
     private String maxModulusSize;
 
+    /**
+     * @return Optional. The maximum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.
+     * 
+     */
     public String maxModulusSize() {
         return this.maxModulusSize;
     }
@@ -34,6 +38,10 @@ public final class RsaKeyTypeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minModulusSize", required=true)
     private String minModulusSize;
 
+    /**
+     * @return Optional. The minimum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service-level min RSA modulus size will continue to apply.
+     * 
+     */
     public String minModulusSize() {
         return this.minModulusSize;
     }
@@ -63,11 +71,23 @@ public final class RsaKeyTypeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RsaKeyTypeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxModulusSize Optional. The maximum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxModulusSize(String maxModulusSize) {
             $.maxModulusSize = maxModulusSize;
             return this;
         }
 
+        /**
+         * @param minModulusSize Optional. The minimum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service-level min RSA modulus size will continue to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minModulusSize(String minModulusSize) {
             $.minModulusSize = minModulusSize;
             return this;

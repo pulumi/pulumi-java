@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2RecordConditionResponse extends com.pulumi.
     @Import(name="expressions", required=true)
     private GooglePrivacyDlpV2ExpressionsResponse expressions;
 
+    /**
+     * @return An expression.
+     * 
+     */
     public GooglePrivacyDlpV2ExpressionsResponse expressions() {
         return this.expressions;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2RecordConditionResponse extends com.pulumi.
             $ = new GooglePrivacyDlpV2RecordConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expressions An expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressions(GooglePrivacyDlpV2ExpressionsResponse expressions) {
             $.expressions = expressions;
             return this;

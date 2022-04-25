@@ -26,6 +26,10 @@ public final class VmwareSourceDetailsArgs extends com.pulumi.resources.Resource
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Input only. The credentials password. This is write only and can not be read in a GET operation.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -37,6 +41,10 @@ public final class VmwareSourceDetailsArgs extends com.pulumi.resources.Resource
     @Import(name="thumbprint")
     private @Nullable Output<String> thumbprint;
 
+    /**
+     * @return The thumbprint representing the certificate for the vcenter.
+     * 
+     */
     public Optional<Output<String>> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -48,6 +56,10 @@ public final class VmwareSourceDetailsArgs extends com.pulumi.resources.Resource
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return The credentials username.
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -59,6 +71,10 @@ public final class VmwareSourceDetailsArgs extends com.pulumi.resources.Resource
     @Import(name="vcenterIp")
     private @Nullable Output<String> vcenterIp;
 
+    /**
+     * @return The ip address of the vcenter this Source represents.
+     * 
+     */
     public Optional<Output<String>> vcenterIp() {
         return Optional.ofNullable(this.vcenterIp);
     }
@@ -90,38 +106,86 @@ public final class VmwareSourceDetailsArgs extends com.pulumi.resources.Resource
             $ = new VmwareSourceDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Input only. The credentials password. This is write only and can not be read in a GET operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Input only. The credentials password. This is write only and can not be read in a GET operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param thumbprint The thumbprint representing the certificate for the vcenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param thumbprint The thumbprint representing the certificate for the vcenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             return thumbprint(Output.of(thumbprint));
         }
 
+        /**
+         * @param username The credentials username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The credentials username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }
 
+        /**
+         * @param vcenterIp The ip address of the vcenter this Source represents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vcenterIp(@Nullable Output<String> vcenterIp) {
             $.vcenterIp = vcenterIp;
             return this;
         }
 
+        /**
+         * @param vcenterIp The ip address of the vcenter this Source represents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vcenterIp(String vcenterIp) {
             return vcenterIp(Output.of(vcenterIp));
         }

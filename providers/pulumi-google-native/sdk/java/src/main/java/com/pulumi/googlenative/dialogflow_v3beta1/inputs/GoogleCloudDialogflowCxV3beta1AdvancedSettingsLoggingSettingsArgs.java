@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
     @Import(name="enableInteractionLogging")
     private @Nullable Output<Boolean> enableInteractionLogging;
 
+    /**
+     * @return If true, DF Interaction logging is currently enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableInteractionLogging() {
         return Optional.ofNullable(this.enableInteractionLogging);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
     @Import(name="enableStackdriverLogging")
     private @Nullable Output<Boolean> enableStackdriverLogging;
 
+    /**
+     * @return If true, StackDriver logging is currently enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableStackdriverLogging() {
         return Optional.ofNullable(this.enableStackdriverLogging);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
             $ = new GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableInteractionLogging If true, DF Interaction logging is currently enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableInteractionLogging(@Nullable Output<Boolean> enableInteractionLogging) {
             $.enableInteractionLogging = enableInteractionLogging;
             return this;
         }
 
+        /**
+         * @param enableInteractionLogging If true, DF Interaction logging is currently enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableInteractionLogging(Boolean enableInteractionLogging) {
             return enableInteractionLogging(Output.of(enableInteractionLogging));
         }
 
+        /**
+         * @param enableStackdriverLogging If true, StackDriver logging is currently enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
             $.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
 
+        /**
+         * @param enableStackdriverLogging If true, StackDriver logging is currently enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
             return enableStackdriverLogging(Output.of(enableStackdriverLogging));
         }

@@ -23,6 +23,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return A user-assigned name for this group, used only for display purposes.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -34,6 +38,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filter")
     private @Nullable Output<String> filter;
 
+    /**
+     * @return The filter used to determine which monitored resources belong to this group.
+     * 
+     */
     public Optional<Output<String>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -45,6 +53,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isCluster")
     private @Nullable Output<Boolean> isCluster;
 
+    /**
+     * @return If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups that are clusters.
+     * 
+     */
     public Optional<Output<Boolean>> isCluster() {
         return Optional.ofNullable(this.isCluster);
     }
@@ -56,6 +68,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentName")
     private @Nullable Output<String> parentName;
 
+    /**
+     * @return The name of the group&#39;s parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, &#34;&#34;.
+     * 
+     */
     public Optional<Output<String>> parentName() {
         return Optional.ofNullable(this.parentName);
     }
@@ -103,38 +119,86 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName A user-assigned name for this group, used only for display purposes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName A user-assigned name for this group, used only for display purposes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param filter The filter used to determine which monitored resources belong to this group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<String> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter The filter used to determine which monitored resources belong to this group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param isCluster If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups that are clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCluster(@Nullable Output<Boolean> isCluster) {
             $.isCluster = isCluster;
             return this;
         }
 
+        /**
+         * @param isCluster If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups that are clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCluster(Boolean isCluster) {
             return isCluster(Output.of(isCluster));
         }
 
+        /**
+         * @param parentName The name of the group&#39;s parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, &#34;&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentName(@Nullable Output<String> parentName) {
             $.parentName = parentName;
             return this;
         }
 
+        /**
+         * @param parentName The name of the group&#39;s parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, &#34;&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentName(String parentName) {
             return parentName(Output.of(parentName));
         }

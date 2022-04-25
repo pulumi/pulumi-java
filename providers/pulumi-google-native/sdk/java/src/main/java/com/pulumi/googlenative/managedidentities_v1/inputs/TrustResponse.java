@@ -25,6 +25,10 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The time the instance was created.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -36,6 +40,10 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastTrustHeartbeatTime", required=true)
     private String lastTrustHeartbeatTime;
 
+    /**
+     * @return The last heartbeat time when the trust was known to be connected.
+     * 
+     */
     public String lastTrustHeartbeatTime() {
         return this.lastTrustHeartbeatTime;
     }
@@ -47,6 +55,10 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="selectiveAuthentication", required=true)
     private Boolean selectiveAuthentication;
 
+    /**
+     * @return Optional. The trust authentication type, which decides whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
+     * 
+     */
     public Boolean selectiveAuthentication() {
         return this.selectiveAuthentication;
     }
@@ -58,6 +70,10 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The current state of the trust.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -69,6 +85,10 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="stateDescription", required=true)
     private String stateDescription;
 
+    /**
+     * @return Additional information about the current state of the trust, if available.
+     * 
+     */
     public String stateDescription() {
         return this.stateDescription;
     }
@@ -80,6 +100,10 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetDnsIpAddresses", required=true)
     private List<String> targetDnsIpAddresses;
 
+    /**
+     * @return The target DNS server IP addresses which can resolve the remote domain involved in the trust.
+     * 
+     */
     public List<String> targetDnsIpAddresses() {
         return this.targetDnsIpAddresses;
     }
@@ -91,6 +115,10 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetDomainName", required=true)
     private String targetDomainName;
 
+    /**
+     * @return The fully qualified target domain name which will be in trust with the current domain.
+     * 
+     */
     public String targetDomainName() {
         return this.targetDomainName;
     }
@@ -102,6 +130,10 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="trustDirection", required=true)
     private String trustDirection;
 
+    /**
+     * @return The trust direction, which decides if the current domain is trusted, trusting, or both.
+     * 
+     */
     public String trustDirection() {
         return this.trustDirection;
     }
@@ -113,6 +145,10 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="trustHandshakeSecret", required=true)
     private String trustHandshakeSecret;
 
+    /**
+     * @return The trust secret used for the handshake with the target domain. This will not be stored.
+     * 
+     */
     public String trustHandshakeSecret() {
         return this.trustHandshakeSecret;
     }
@@ -124,6 +160,10 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="trustType", required=true)
     private String trustType;
 
+    /**
+     * @return The type of trust represented by the trust resource.
+     * 
+     */
     public String trustType() {
         return this.trustType;
     }
@@ -135,6 +175,10 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return The last update time.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -173,60 +217,132 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TrustResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime The time the instance was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param lastTrustHeartbeatTime The last heartbeat time when the trust was known to be connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTrustHeartbeatTime(String lastTrustHeartbeatTime) {
             $.lastTrustHeartbeatTime = lastTrustHeartbeatTime;
             return this;
         }
 
+        /**
+         * @param selectiveAuthentication Optional. The trust authentication type, which decides whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectiveAuthentication(Boolean selectiveAuthentication) {
             $.selectiveAuthentication = selectiveAuthentication;
             return this;
         }
 
+        /**
+         * @param state The current state of the trust.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param stateDescription Additional information about the current state of the trust, if available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateDescription(String stateDescription) {
             $.stateDescription = stateDescription;
             return this;
         }
 
+        /**
+         * @param targetDnsIpAddresses The target DNS server IP addresses which can resolve the remote domain involved in the trust.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDnsIpAddresses(List<String> targetDnsIpAddresses) {
             $.targetDnsIpAddresses = targetDnsIpAddresses;
             return this;
         }
 
+        /**
+         * @param targetDnsIpAddresses The target DNS server IP addresses which can resolve the remote domain involved in the trust.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDnsIpAddresses(String... targetDnsIpAddresses) {
             return targetDnsIpAddresses(List.of(targetDnsIpAddresses));
         }
 
+        /**
+         * @param targetDomainName The fully qualified target domain name which will be in trust with the current domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDomainName(String targetDomainName) {
             $.targetDomainName = targetDomainName;
             return this;
         }
 
+        /**
+         * @param trustDirection The trust direction, which decides if the current domain is trusted, trusting, or both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustDirection(String trustDirection) {
             $.trustDirection = trustDirection;
             return this;
         }
 
+        /**
+         * @param trustHandshakeSecret The trust secret used for the handshake with the target domain. This will not be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustHandshakeSecret(String trustHandshakeSecret) {
             $.trustHandshakeSecret = trustHandshakeSecret;
             return this;
         }
 
+        /**
+         * @param trustType The type of trust represented by the trust resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustType(String trustType) {
             $.trustType = trustType;
             return this;
         }
 
+        /**
+         * @param updateTime The last update time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;

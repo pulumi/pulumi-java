@@ -23,6 +23,10 @@ public final class DataCatalogConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class DataCatalogConfigResponse extends com.pulumi.resources.Invoke
             $ = new DataCatalogConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

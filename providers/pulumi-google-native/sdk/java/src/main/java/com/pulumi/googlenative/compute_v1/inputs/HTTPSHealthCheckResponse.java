@@ -20,6 +20,10 @@ public final class HTTPSHealthCheckResponse extends com.pulumi.resources.InvokeA
     @Import(name="host", required=true)
     private String host;
 
+    /**
+     * @return The value of the host header in the HTTPS health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.
+     * 
+     */
     public String host() {
         return this.host;
     }
@@ -31,6 +35,10 @@ public final class HTTPSHealthCheckResponse extends com.pulumi.resources.InvokeA
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -42,6 +50,10 @@ public final class HTTPSHealthCheckResponse extends com.pulumi.resources.InvokeA
     @Import(name="portName", required=true)
     private String portName;
 
+    /**
+     * @return Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
+     * 
+     */
     public String portName() {
         return this.portName;
     }
@@ -53,6 +65,10 @@ public final class HTTPSHealthCheckResponse extends com.pulumi.resources.InvokeA
     @Import(name="portSpecification", required=true)
     private String portSpecification;
 
+    /**
+     * @return Specifies how port is selected for health checking, can be one of following values: USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. If not specified, HTTPS health check follows behavior specified in port and portName fields.
+     * 
+     */
     public String portSpecification() {
         return this.portSpecification;
     }
@@ -64,6 +80,10 @@ public final class HTTPSHealthCheckResponse extends com.pulumi.resources.InvokeA
     @Import(name="proxyHeader", required=true)
     private String proxyHeader;
 
+    /**
+     * @return Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
+     * 
+     */
     public String proxyHeader() {
         return this.proxyHeader;
     }
@@ -75,6 +95,10 @@ public final class HTTPSHealthCheckResponse extends com.pulumi.resources.InvokeA
     @Import(name="requestPath", required=true)
     private String requestPath;
 
+    /**
+     * @return The request path of the HTTPS health check request. The default value is /.
+     * 
+     */
     public String requestPath() {
         return this.requestPath;
     }
@@ -86,6 +110,10 @@ public final class HTTPSHealthCheckResponse extends com.pulumi.resources.InvokeA
     @Import(name="response", required=true)
     private String response;
 
+    /**
+     * @return The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.
+     * 
+     */
     public String response() {
         return this.response;
     }
@@ -120,36 +148,78 @@ public final class HTTPSHealthCheckResponse extends com.pulumi.resources.InvokeA
             $ = new HTTPSHealthCheckResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param host The value of the host header in the HTTPS health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param port The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param portName Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portName(String portName) {
             $.portName = portName;
             return this;
         }
 
+        /**
+         * @param portSpecification Specifies how port is selected for health checking, can be one of following values: USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. If not specified, HTTPS health check follows behavior specified in port and portName fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portSpecification(String portSpecification) {
             $.portSpecification = portSpecification;
             return this;
         }
 
+        /**
+         * @param proxyHeader Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyHeader(String proxyHeader) {
             $.proxyHeader = proxyHeader;
             return this;
         }
 
+        /**
+         * @param requestPath The request path of the HTTPS health check request. The default value is /.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestPath(String requestPath) {
             $.requestPath = requestPath;
             return this;
         }
 
+        /**
+         * @param response The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.
+         * 
+         * @return builder
+         * 
+         */
         public Builder response(String response) {
             $.response = response;
             return this;

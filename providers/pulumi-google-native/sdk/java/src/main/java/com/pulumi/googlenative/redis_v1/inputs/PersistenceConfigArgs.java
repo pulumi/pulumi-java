@@ -28,6 +28,10 @@ public final class PersistenceConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="persistenceMode")
     private @Nullable Output<PersistenceConfigPersistenceMode> persistenceMode;
 
+    /**
+     * @return Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.
+     * 
+     */
     public Optional<Output<PersistenceConfigPersistenceMode>> persistenceMode() {
         return Optional.ofNullable(this.persistenceMode);
     }
@@ -39,6 +43,10 @@ public final class PersistenceConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="rdbSnapshotPeriod")
     private @Nullable Output<PersistenceConfigRdbSnapshotPeriod> rdbSnapshotPeriod;
 
+    /**
+     * @return Optional. Period between RDB snapshots. Snapshots will be attempted every period starting from the provided snapshot start time. For example, a start time of 01/01/2033 06:45 and SIX_HOURS snapshot period will do nothing until 01/01/2033, and then trigger snapshots every day at 06:45, 12:45, 18:45, and 00:45 the next day, and so on. If not provided, TWENTY_FOUR_HOURS will be used as default.
+     * 
+     */
     public Optional<Output<PersistenceConfigRdbSnapshotPeriod>> rdbSnapshotPeriod() {
         return Optional.ofNullable(this.rdbSnapshotPeriod);
     }
@@ -50,6 +58,10 @@ public final class PersistenceConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="rdbSnapshotStartTime")
     private @Nullable Output<String> rdbSnapshotStartTime;
 
+    /**
+     * @return Optional. Date and time that the first snapshot was/will be attempted, and to which future snapshots will be aligned. If not provided, the current time will be used.
+     * 
+     */
     public Optional<Output<String>> rdbSnapshotStartTime() {
         return Optional.ofNullable(this.rdbSnapshotStartTime);
     }
@@ -80,29 +92,65 @@ public final class PersistenceConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new PersistenceConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param persistenceMode Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder persistenceMode(@Nullable Output<PersistenceConfigPersistenceMode> persistenceMode) {
             $.persistenceMode = persistenceMode;
             return this;
         }
 
+        /**
+         * @param persistenceMode Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder persistenceMode(PersistenceConfigPersistenceMode persistenceMode) {
             return persistenceMode(Output.of(persistenceMode));
         }
 
+        /**
+         * @param rdbSnapshotPeriod Optional. Period between RDB snapshots. Snapshots will be attempted every period starting from the provided snapshot start time. For example, a start time of 01/01/2033 06:45 and SIX_HOURS snapshot period will do nothing until 01/01/2033, and then trigger snapshots every day at 06:45, 12:45, 18:45, and 00:45 the next day, and so on. If not provided, TWENTY_FOUR_HOURS will be used as default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbSnapshotPeriod(@Nullable Output<PersistenceConfigRdbSnapshotPeriod> rdbSnapshotPeriod) {
             $.rdbSnapshotPeriod = rdbSnapshotPeriod;
             return this;
         }
 
+        /**
+         * @param rdbSnapshotPeriod Optional. Period between RDB snapshots. Snapshots will be attempted every period starting from the provided snapshot start time. For example, a start time of 01/01/2033 06:45 and SIX_HOURS snapshot period will do nothing until 01/01/2033, and then trigger snapshots every day at 06:45, 12:45, 18:45, and 00:45 the next day, and so on. If not provided, TWENTY_FOUR_HOURS will be used as default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbSnapshotPeriod(PersistenceConfigRdbSnapshotPeriod rdbSnapshotPeriod) {
             return rdbSnapshotPeriod(Output.of(rdbSnapshotPeriod));
         }
 
+        /**
+         * @param rdbSnapshotStartTime Optional. Date and time that the first snapshot was/will be attempted, and to which future snapshots will be aligned. If not provided, the current time will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbSnapshotStartTime(@Nullable Output<String> rdbSnapshotStartTime) {
             $.rdbSnapshotStartTime = rdbSnapshotStartTime;
             return this;
         }
 
+        /**
+         * @param rdbSnapshotStartTime Optional. Date and time that the first snapshot was/will be attempted, and to which future snapshots will be aligned. If not provided, the current time will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbSnapshotStartTime(String rdbSnapshotStartTime) {
             return rdbSnapshotStartTime(Output.of(rdbSnapshotStartTime));
         }

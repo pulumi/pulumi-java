@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudRunOpV2EnvVarSourceResponse {
     /**
-     * Selects a secret and a specific version from Cloud Secret Manager.
+     * @return Selects a secret and a specific version from Cloud Secret Manager.
      * 
      */
     private final GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef;
@@ -21,9 +21,9 @@ public final class GoogleCloudRunOpV2EnvVarSourceResponse {
     }
 
     /**
-     * Selects a secret and a specific version from Cloud Secret Manager.
+     * @return Selects a secret and a specific version from Cloud Secret Manager.
      * 
-    */
+     */
     public GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef() {
         return this.secretKeyRef;
     }

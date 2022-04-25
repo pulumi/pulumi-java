@@ -27,6 +27,10 @@ public final class IstioConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="auth")
     private @Nullable Output<IstioConfigAuth> auth;
 
+    /**
+     * @return The specified Istio auth mode, either none, or mutual TLS.
+     * 
+     */
     public Optional<Output<IstioConfigAuth>> auth() {
         return Optional.ofNullable(this.auth);
     }
@@ -38,6 +42,10 @@ public final class IstioConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
+    /**
+     * @return Whether Istio is enabled for this cluster.
+     * 
+     */
     public Optional<Output<Boolean>> disabled() {
         return Optional.ofNullable(this.disabled);
     }
@@ -67,20 +75,44 @@ public final class IstioConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IstioConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auth The specified Istio auth mode, either none, or mutual TLS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(@Nullable Output<IstioConfigAuth> auth) {
             $.auth = auth;
             return this;
         }
 
+        /**
+         * @param auth The specified Istio auth mode, either none, or mutual TLS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(IstioConfigAuth auth) {
             return auth(Output.of(auth));
         }
 
+        /**
+         * @param disabled Whether Istio is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param disabled Whether Istio is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             return disabled(Output.of(disabled));
         }

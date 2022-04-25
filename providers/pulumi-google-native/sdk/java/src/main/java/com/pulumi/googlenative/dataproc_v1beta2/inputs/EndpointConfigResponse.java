@@ -25,6 +25,10 @@ public final class EndpointConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="enableHttpPortAccess", required=true)
     private Boolean enableHttpPortAccess;
 
+    /**
+     * @return Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
+     * 
+     */
     public Boolean enableHttpPortAccess() {
         return this.enableHttpPortAccess;
     }
@@ -36,6 +40,10 @@ public final class EndpointConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="httpPorts", required=true)
     private Map<String,String> httpPorts;
 
+    /**
+     * @return The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
+     * 
+     */
     public Map<String,String> httpPorts() {
         return this.httpPorts;
     }
@@ -65,11 +73,23 @@ public final class EndpointConfigResponse extends com.pulumi.resources.InvokeArg
             $ = new EndpointConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableHttpPortAccess Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHttpPortAccess(Boolean enableHttpPortAccess) {
             $.enableHttpPortAccess = enableHttpPortAccess;
             return this;
         }
 
+        /**
+         * @param httpPorts The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpPorts(Map<String,String> httpPorts) {
             $.httpPorts = httpPorts;
             return this;

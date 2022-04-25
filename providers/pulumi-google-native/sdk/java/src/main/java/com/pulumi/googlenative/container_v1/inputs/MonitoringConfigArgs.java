@@ -26,6 +26,10 @@ public final class MonitoringConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="componentConfig")
     private @Nullable Output<MonitoringComponentConfigArgs> componentConfig;
 
+    /**
+     * @return Monitoring components configuration
+     * 
+     */
     public Optional<Output<MonitoringComponentConfigArgs>> componentConfig() {
         return Optional.ofNullable(this.componentConfig);
     }
@@ -54,11 +58,23 @@ public final class MonitoringConfigArgs extends com.pulumi.resources.ResourceArg
             $ = new MonitoringConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentConfig Monitoring components configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentConfig(@Nullable Output<MonitoringComponentConfigArgs> componentConfig) {
             $.componentConfig = componentConfig;
             return this;
         }
 
+        /**
+         * @param componentConfig Monitoring components configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentConfig(MonitoringComponentConfigArgs componentConfig) {
             return componentConfig(Output.of(componentConfig));
         }

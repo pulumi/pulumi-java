@@ -29,6 +29,10 @@ public final class Hl7SchemaConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="messageSchemaConfigs")
     private @Nullable Output<Map<String,String>> messageSchemaConfigs;
 
+    /**
+     * @return Map from each HL7v2 message type and trigger event pair, such as ADT_A04, to its schema configuration root group.
+     * 
+     */
     public Optional<Output<Map<String,String>>> messageSchemaConfigs() {
         return Optional.ofNullable(this.messageSchemaConfigs);
     }
@@ -40,6 +44,10 @@ public final class Hl7SchemaConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="version")
     private @Nullable Output<List<VersionSourceArgs>> version;
 
+    /**
+     * @return Each VersionSource is tested and only if they all match is the schema used for the message.
+     * 
+     */
     public Optional<Output<List<VersionSourceArgs>>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -69,24 +77,54 @@ public final class Hl7SchemaConfigArgs extends com.pulumi.resources.ResourceArgs
             $ = new Hl7SchemaConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param messageSchemaConfigs Map from each HL7v2 message type and trigger event pair, such as ADT_A04, to its schema configuration root group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageSchemaConfigs(@Nullable Output<Map<String,String>> messageSchemaConfigs) {
             $.messageSchemaConfigs = messageSchemaConfigs;
             return this;
         }
 
+        /**
+         * @param messageSchemaConfigs Map from each HL7v2 message type and trigger event pair, such as ADT_A04, to its schema configuration root group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageSchemaConfigs(Map<String,String> messageSchemaConfigs) {
             return messageSchemaConfigs(Output.of(messageSchemaConfigs));
         }
 
+        /**
+         * @param version Each VersionSource is tested and only if they all match is the schema used for the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<List<VersionSourceArgs>> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Each VersionSource is tested and only if they all match is the schema used for the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(List<VersionSourceArgs> version) {
             return version(Output.of(version));
         }
 
+        /**
+         * @param version Each VersionSource is tested and only if they all match is the schema used for the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(VersionSourceArgs... version) {
             return version(List.of(version));
         }

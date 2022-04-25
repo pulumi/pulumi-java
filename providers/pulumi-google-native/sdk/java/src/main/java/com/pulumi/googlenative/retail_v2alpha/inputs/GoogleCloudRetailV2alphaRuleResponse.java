@@ -31,6 +31,10 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
     @Import(name="boostAction", required=true)
     private GoogleCloudRetailV2alphaRuleBoostActionResponse boostAction;
 
+    /**
+     * @return A boost action.
+     * 
+     */
     public GoogleCloudRetailV2alphaRuleBoostActionResponse boostAction() {
         return this.boostAction;
     }
@@ -42,6 +46,10 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
     @Import(name="condition", required=true)
     private GoogleCloudRetailV2alphaConditionResponse condition;
 
+    /**
+     * @return The condition that triggers the rule. If the condition is empty, the rule will always apply.
+     * 
+     */
     public GoogleCloudRetailV2alphaConditionResponse condition() {
         return this.condition;
     }
@@ -53,6 +61,10 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
     @Import(name="doNotAssociateAction", required=true)
     private GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction;
 
+    /**
+     * @return Prevents term from being associated with other terms.
+     * 
+     */
     public GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction() {
         return this.doNotAssociateAction;
     }
@@ -64,6 +76,10 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
     @Import(name="filterAction", required=true)
     private GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction;
 
+    /**
+     * @return Filters results.
+     * 
+     */
     public GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction() {
         return this.filterAction;
     }
@@ -75,6 +91,10 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
     @Import(name="ignoreAction", required=true)
     private GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction;
 
+    /**
+     * @return Ignores specific terms from query during search.
+     * 
+     */
     public GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction() {
         return this.ignoreAction;
     }
@@ -86,6 +106,10 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
     @Import(name="onewaySynonymsAction", required=true)
     private GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction;
 
+    /**
+     * @return Treats specific term as a synonym with a group of terms. Group of terms will not be treated as synonyms with the specific term.
+     * 
+     */
     public GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction() {
         return this.onewaySynonymsAction;
     }
@@ -97,6 +121,10 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
     @Import(name="redirectAction", required=true)
     private GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction;
 
+    /**
+     * @return Redirects a shopper to a specific page.
+     * 
+     */
     public GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction() {
         return this.redirectAction;
     }
@@ -108,6 +136,10 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
     @Import(name="replacementAction", required=true)
     private GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction;
 
+    /**
+     * @return Replaces specific terms in the query.
+     * 
+     */
     public GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction() {
         return this.replacementAction;
     }
@@ -119,6 +151,10 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
     @Import(name="twowaySynonymsAction", required=true)
     private GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction;
 
+    /**
+     * @return Treats a set of terms as synonyms of one another.
+     * 
+     */
     public GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction() {
         return this.twowaySynonymsAction;
     }
@@ -155,46 +191,100 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
             $ = new GoogleCloudRetailV2alphaRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param boostAction A boost action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boostAction(GoogleCloudRetailV2alphaRuleBoostActionResponse boostAction) {
             $.boostAction = boostAction;
             return this;
         }
 
+        /**
+         * @param condition The condition that triggers the rule. If the condition is empty, the rule will always apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(GoogleCloudRetailV2alphaConditionResponse condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param doNotAssociateAction Prevents term from being associated with other terms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doNotAssociateAction(GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction) {
             $.doNotAssociateAction = doNotAssociateAction;
             return this;
         }
 
+        /**
+         * @param filterAction Filters results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterAction(GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction) {
             $.filterAction = filterAction;
             return this;
         }
 
+        /**
+         * @param ignoreAction Ignores specific terms from query during search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreAction(GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction) {
             $.ignoreAction = ignoreAction;
             return this;
         }
 
+        /**
+         * @param onewaySynonymsAction Treats specific term as a synonym with a group of terms. Group of terms will not be treated as synonyms with the specific term.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onewaySynonymsAction(GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction) {
             $.onewaySynonymsAction = onewaySynonymsAction;
             return this;
         }
 
+        /**
+         * @param redirectAction Redirects a shopper to a specific page.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectAction(GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction) {
             $.redirectAction = redirectAction;
             return this;
         }
 
+        /**
+         * @param replacementAction Replaces specific terms in the query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replacementAction(GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction) {
             $.replacementAction = replacementAction;
             return this;
         }
 
+        /**
+         * @param twowaySynonymsAction Treats a set of terms as synonyms of one another.
+         * 
+         * @return builder
+         * 
+         */
         public Builder twowaySynonymsAction(GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction) {
             $.twowaySynonymsAction = twowaySynonymsAction;
             return this;

@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. Description of the carousel item. Maximum of four lines of text.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
     @Import(name="footer")
     private @Nullable Output<String> footer;
 
+    /**
+     * @return Optional. Text that appears at the bottom of the Browse Carousel Card. Maximum of one line of text.
+     * 
+     */
     public Optional<Output<String>> footer() {
         return Optional.ofNullable(this.footer);
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
     @Import(name="image")
     private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
 
+    /**
+     * @return Optional. Hero image for the carousel item.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -61,6 +73,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
     @Import(name="openUriAction", required=true)
     private Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs> openUriAction;
 
+    /**
+     * @return Action to present to the user.
+     * 
+     */
     public Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs> openUriAction() {
         return this.openUriAction;
     }
@@ -72,6 +88,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
     @Import(name="title", required=true)
     private Output<String> title;
 
+    /**
+     * @return Title of the carousel item. Maximum of two lines of text.
+     * 
+     */
     public Output<String> title() {
         return this.title;
     }
@@ -104,47 +124,107 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
             $ = new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. Description of the carousel item. Maximum of four lines of text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. Description of the carousel item. Maximum of four lines of text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param footer Optional. Text that appears at the bottom of the Browse Carousel Card. Maximum of one line of text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder footer(@Nullable Output<String> footer) {
             $.footer = footer;
             return this;
         }
 
+        /**
+         * @param footer Optional. Text that appears at the bottom of the Browse Carousel Card. Maximum of one line of text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder footer(String footer) {
             return footer(Output.of(footer));
         }
 
+        /**
+         * @param image Optional. Hero image for the carousel item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image Optional. Hero image for the carousel item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(GoogleCloudDialogflowV2beta1IntentMessageImageArgs image) {
             return image(Output.of(image));
         }
 
+        /**
+         * @param openUriAction Action to present to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openUriAction(Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs> openUriAction) {
             $.openUriAction = openUriAction;
             return this;
         }
 
+        /**
+         * @param openUriAction Action to present to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openUriAction(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs openUriAction) {
             return openUriAction(Output.of(openUriAction));
         }
 
+        /**
+         * @param title Title of the carousel item. Maximum of two lines of text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Title of the carousel item. Maximum of two lines of text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

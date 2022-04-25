@@ -27,6 +27,10 @@ public final class CommonFeatureSpecArgs extends com.pulumi.resources.ResourceAr
     @Import(name="appdevexperience")
     private @Nullable Output<AppDevExperienceFeatureSpecArgs> appdevexperience;
 
+    /**
+     * @return Appdevexperience specific spec.
+     * 
+     */
     public Optional<Output<AppDevExperienceFeatureSpecArgs>> appdevexperience() {
         return Optional.ofNullable(this.appdevexperience);
     }
@@ -38,6 +42,10 @@ public final class CommonFeatureSpecArgs extends com.pulumi.resources.ResourceAr
     @Import(name="multiclusteringress")
     private @Nullable Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress;
 
+    /**
+     * @return Multicluster Ingress-specific spec.
+     * 
+     */
     public Optional<Output<MultiClusterIngressFeatureSpecArgs>> multiclusteringress() {
         return Optional.ofNullable(this.multiclusteringress);
     }
@@ -67,20 +75,44 @@ public final class CommonFeatureSpecArgs extends com.pulumi.resources.ResourceAr
             $ = new CommonFeatureSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appdevexperience Appdevexperience specific spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appdevexperience(@Nullable Output<AppDevExperienceFeatureSpecArgs> appdevexperience) {
             $.appdevexperience = appdevexperience;
             return this;
         }
 
+        /**
+         * @param appdevexperience Appdevexperience specific spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appdevexperience(AppDevExperienceFeatureSpecArgs appdevexperience) {
             return appdevexperience(Output.of(appdevexperience));
         }
 
+        /**
+         * @param multiclusteringress Multicluster Ingress-specific spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiclusteringress(@Nullable Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress) {
             $.multiclusteringress = multiclusteringress;
             return this;
         }
 
+        /**
+         * @param multiclusteringress Multicluster Ingress-specific spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiclusteringress(MultiClusterIngressFeatureSpecArgs multiclusteringress) {
             return multiclusteringress(Output.of(multiclusteringress));
         }

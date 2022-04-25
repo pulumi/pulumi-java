@@ -19,6 +19,10 @@ public final class OperationErrorErrorsItemResponse extends com.pulumi.resources
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return The error type identifier for this error.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -30,6 +34,10 @@ public final class OperationErrorErrorsItemResponse extends com.pulumi.resources
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return Indicates the field in the request that caused the error. This property is optional.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -41,6 +49,10 @@ public final class OperationErrorErrorsItemResponse extends com.pulumi.resources
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return An optional, human-readable error message.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -71,16 +83,34 @@ public final class OperationErrorErrorsItemResponse extends com.pulumi.resources
             $ = new OperationErrorErrorsItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code The error type identifier for this error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param location Indicates the field in the request that caused the error. This property is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param message An optional, human-readable error message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;

@@ -23,6 +23,10 @@ public final class SchematizedDataResponse extends com.pulumi.resources.InvokeAr
     @Import(name="data", required=true)
     private String data;
 
+    /**
+     * @return JSON output of the parser.
+     * 
+     */
     public String data() {
         return this.data;
     }
@@ -34,6 +38,10 @@ public final class SchematizedDataResponse extends com.pulumi.resources.InvokeAr
     @Import(name="error", required=true)
     private String error;
 
+    /**
+     * @return The error output of the parser.
+     * 
+     */
     public String error() {
         return this.error;
     }
@@ -63,11 +71,23 @@ public final class SchematizedDataResponse extends com.pulumi.resources.InvokeAr
             $ = new SchematizedDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param data JSON output of the parser.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param error The error output of the parser.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(String error) {
             $.error = error;
             return this;

@@ -23,6 +23,10 @@ public final class ApigatewayApiConfigFileResponse extends com.pulumi.resources.
     @Import(name="contents", required=true)
     private String contents;
 
+    /**
+     * @return The bytes that constitute the file.
+     * 
+     */
     public String contents() {
         return this.contents;
     }
@@ -34,6 +38,10 @@ public final class ApigatewayApiConfigFileResponse extends com.pulumi.resources.
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The file path (full or relative path). This is typically the path of the file when it is uploaded.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -63,11 +71,23 @@ public final class ApigatewayApiConfigFileResponse extends com.pulumi.resources.
             $ = new ApigatewayApiConfigFileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contents The bytes that constitute the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contents(String contents) {
             $.contents = contents;
             return this;
         }
 
+        /**
+         * @param path The file path (full or relative path). This is typically the path of the file when it is uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;

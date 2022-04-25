@@ -29,6 +29,10 @@ public final class HttpRetryPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="numRetries")
     private @Nullable Output<Integer> numRetries;
 
+    /**
+     * @return Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.
+     * 
+     */
     public Optional<Output<Integer>> numRetries() {
         return Optional.ofNullable(this.numRetries);
     }
@@ -40,6 +44,10 @@ public final class HttpRetryPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="perTryTimeout")
     private @Nullable Output<DurationArgs> perTryTimeout;
 
+    /**
+     * @return Specifies a non-zero timeout per retry attempt. If not specified, will use the timeout set in the HttpRouteAction field. If timeout in the HttpRouteAction field is not set, this field uses the largest timeout among all backend services associated with the route. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
+     * 
+     */
     public Optional<Output<DurationArgs>> perTryTimeout() {
         return Optional.ofNullable(this.perTryTimeout);
     }
@@ -51,6 +59,10 @@ public final class HttpRetryPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="retryConditions")
     private @Nullable Output<List<String>> retryConditions;
 
+    /**
+     * @return Specifies one or more conditions when this retry policy applies. Valid values are: - 5xx: retry is attempted if the instance or endpoint responds with any 5xx response code, or if the instance or endpoint does not respond at all. For example, disconnects, reset, read timeout, connection failure, and refused streams. - gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504. - connect-failure: a retry is attempted on failures connecting to the instance or endpoint. For example, connection timeouts. - retriable-4xx: a retry is attempted if the instance or endpoint responds with a 4xx response code. The only error that you can retry is error code 409. - refused-stream: a retry is attempted if the instance or endpoint resets the stream with a REFUSED_STREAM error code. This reset type indicates that it is safe to retry. - cancelled: a retry is attempted if the gRPC status code in the response header is set to cancelled. - deadline-exceeded: a retry is attempted if the gRPC status code in the response header is set to deadline-exceeded. - internal: a retry is attempted if the gRPC status code in the response header is set to internal. - resource-exhausted: a retry is attempted if the gRPC status code in the response header is set to resource-exhausted. - unavailable: a retry is attempted if the gRPC status code in the response header is set to unavailable. Only the following codes are supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true. - cancelled - deadline-exceeded - internal - resource-exhausted - unavailable
+     * 
+     */
     public Optional<Output<List<String>>> retryConditions() {
         return Optional.ofNullable(this.retryConditions);
     }
@@ -81,33 +93,75 @@ public final class HttpRetryPolicyArgs extends com.pulumi.resources.ResourceArgs
             $ = new HttpRetryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param numRetries Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numRetries(@Nullable Output<Integer> numRetries) {
             $.numRetries = numRetries;
             return this;
         }
 
+        /**
+         * @param numRetries Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numRetries(Integer numRetries) {
             return numRetries(Output.of(numRetries));
         }
 
+        /**
+         * @param perTryTimeout Specifies a non-zero timeout per retry attempt. If not specified, will use the timeout set in the HttpRouteAction field. If timeout in the HttpRouteAction field is not set, this field uses the largest timeout among all backend services associated with the route. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perTryTimeout(@Nullable Output<DurationArgs> perTryTimeout) {
             $.perTryTimeout = perTryTimeout;
             return this;
         }
 
+        /**
+         * @param perTryTimeout Specifies a non-zero timeout per retry attempt. If not specified, will use the timeout set in the HttpRouteAction field. If timeout in the HttpRouteAction field is not set, this field uses the largest timeout among all backend services associated with the route. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perTryTimeout(DurationArgs perTryTimeout) {
             return perTryTimeout(Output.of(perTryTimeout));
         }
 
+        /**
+         * @param retryConditions Specifies one or more conditions when this retry policy applies. Valid values are: - 5xx: retry is attempted if the instance or endpoint responds with any 5xx response code, or if the instance or endpoint does not respond at all. For example, disconnects, reset, read timeout, connection failure, and refused streams. - gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504. - connect-failure: a retry is attempted on failures connecting to the instance or endpoint. For example, connection timeouts. - retriable-4xx: a retry is attempted if the instance or endpoint responds with a 4xx response code. The only error that you can retry is error code 409. - refused-stream: a retry is attempted if the instance or endpoint resets the stream with a REFUSED_STREAM error code. This reset type indicates that it is safe to retry. - cancelled: a retry is attempted if the gRPC status code in the response header is set to cancelled. - deadline-exceeded: a retry is attempted if the gRPC status code in the response header is set to deadline-exceeded. - internal: a retry is attempted if the gRPC status code in the response header is set to internal. - resource-exhausted: a retry is attempted if the gRPC status code in the response header is set to resource-exhausted. - unavailable: a retry is attempted if the gRPC status code in the response header is set to unavailable. Only the following codes are supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true. - cancelled - deadline-exceeded - internal - resource-exhausted - unavailable
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryConditions(@Nullable Output<List<String>> retryConditions) {
             $.retryConditions = retryConditions;
             return this;
         }
 
+        /**
+         * @param retryConditions Specifies one or more conditions when this retry policy applies. Valid values are: - 5xx: retry is attempted if the instance or endpoint responds with any 5xx response code, or if the instance or endpoint does not respond at all. For example, disconnects, reset, read timeout, connection failure, and refused streams. - gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504. - connect-failure: a retry is attempted on failures connecting to the instance or endpoint. For example, connection timeouts. - retriable-4xx: a retry is attempted if the instance or endpoint responds with a 4xx response code. The only error that you can retry is error code 409. - refused-stream: a retry is attempted if the instance or endpoint resets the stream with a REFUSED_STREAM error code. This reset type indicates that it is safe to retry. - cancelled: a retry is attempted if the gRPC status code in the response header is set to cancelled. - deadline-exceeded: a retry is attempted if the gRPC status code in the response header is set to deadline-exceeded. - internal: a retry is attempted if the gRPC status code in the response header is set to internal. - resource-exhausted: a retry is attempted if the gRPC status code in the response header is set to resource-exhausted. - unavailable: a retry is attempted if the gRPC status code in the response header is set to unavailable. Only the following codes are supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true. - cancelled - deadline-exceeded - internal - resource-exhausted - unavailable
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryConditions(List<String> retryConditions) {
             return retryConditions(Output.of(retryConditions));
         }
 
+        /**
+         * @param retryConditions Specifies one or more conditions when this retry policy applies. Valid values are: - 5xx: retry is attempted if the instance or endpoint responds with any 5xx response code, or if the instance or endpoint does not respond at all. For example, disconnects, reset, read timeout, connection failure, and refused streams. - gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504. - connect-failure: a retry is attempted on failures connecting to the instance or endpoint. For example, connection timeouts. - retriable-4xx: a retry is attempted if the instance or endpoint responds with a 4xx response code. The only error that you can retry is error code 409. - refused-stream: a retry is attempted if the instance or endpoint resets the stream with a REFUSED_STREAM error code. This reset type indicates that it is safe to retry. - cancelled: a retry is attempted if the gRPC status code in the response header is set to cancelled. - deadline-exceeded: a retry is attempted if the gRPC status code in the response header is set to deadline-exceeded. - internal: a retry is attempted if the gRPC status code in the response header is set to internal. - resource-exhausted: a retry is attempted if the gRPC status code in the response header is set to resource-exhausted. - unavailable: a retry is attempted if the gRPC status code in the response header is set to unavailable. Only the following codes are supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true. - cancelled - deadline-exceeded - internal - resource-exhausted - unavailable
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryConditions(String... retryConditions) {
             return retryConditions(List.of(retryConditions));
         }

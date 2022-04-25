@@ -33,6 +33,10 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="groupPlacementPolicy")
     private @Nullable Output<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy;
 
+    /**
+     * @return Resource policy for instances for placement configuration.
+     * 
+     */
     public Optional<Output<ResourcePolicyGroupPlacementPolicyArgs>> groupPlacementPolicy() {
         return Optional.ofNullable(this.groupPlacementPolicy);
     }
@@ -44,6 +48,10 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="instanceSchedulePolicy")
     private @Nullable Output<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy;
 
+    /**
+     * @return Resource policy for scheduling instance operations.
+     * 
+     */
     public Optional<Output<ResourcePolicyInstanceSchedulePolicyArgs>> instanceSchedulePolicy() {
         return Optional.ofNullable(this.instanceSchedulePolicy);
     }
@@ -55,6 +63,10 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -87,6 +99,10 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="snapshotSchedulePolicy")
     private @Nullable Output<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy;
 
+    /**
+     * @return Resource policy for persistent disks for creating snapshots.
+     * 
+     */
     public Optional<Output<ResourcePolicySnapshotSchedulePolicyArgs>> snapshotSchedulePolicy() {
         return Optional.ofNullable(this.snapshotSchedulePolicy);
     }
@@ -98,6 +114,10 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="vmMaintenancePolicy")
     private @Nullable Output<ResourcePolicyVmMaintenancePolicyArgs> vmMaintenancePolicy;
 
+    /**
+     * @return Resource policy applicable to VMs for infrastructure maintenance.
+     * 
+     */
     public Optional<Output<ResourcePolicyVmMaintenancePolicyArgs>> vmMaintenancePolicy() {
         return Optional.ofNullable(this.vmMaintenancePolicy);
     }
@@ -143,29 +163,65 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
             return description(Output.of(description));
         }
 
+        /**
+         * @param groupPlacementPolicy Resource policy for instances for placement configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupPlacementPolicy(@Nullable Output<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy) {
             $.groupPlacementPolicy = groupPlacementPolicy;
             return this;
         }
 
+        /**
+         * @param groupPlacementPolicy Resource policy for instances for placement configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupPlacementPolicy(ResourcePolicyGroupPlacementPolicyArgs groupPlacementPolicy) {
             return groupPlacementPolicy(Output.of(groupPlacementPolicy));
         }
 
+        /**
+         * @param instanceSchedulePolicy Resource policy for scheduling instance operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceSchedulePolicy(@Nullable Output<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy) {
             $.instanceSchedulePolicy = instanceSchedulePolicy;
             return this;
         }
 
+        /**
+         * @param instanceSchedulePolicy Resource policy for scheduling instance operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceSchedulePolicy(ResourcePolicyInstanceSchedulePolicyArgs instanceSchedulePolicy) {
             return instanceSchedulePolicy(Output.of(instanceSchedulePolicy));
         }
 
+        /**
+         * @param name The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -197,20 +253,44 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param snapshotSchedulePolicy Resource policy for persistent disks for creating snapshots.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotSchedulePolicy(@Nullable Output<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy) {
             $.snapshotSchedulePolicy = snapshotSchedulePolicy;
             return this;
         }
 
+        /**
+         * @param snapshotSchedulePolicy Resource policy for persistent disks for creating snapshots.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotSchedulePolicy(ResourcePolicySnapshotSchedulePolicyArgs snapshotSchedulePolicy) {
             return snapshotSchedulePolicy(Output.of(snapshotSchedulePolicy));
         }
 
+        /**
+         * @param vmMaintenancePolicy Resource policy applicable to VMs for infrastructure maintenance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmMaintenancePolicy(@Nullable Output<ResourcePolicyVmMaintenancePolicyArgs> vmMaintenancePolicy) {
             $.vmMaintenancePolicy = vmMaintenancePolicy;
             return this;
         }
 
+        /**
+         * @param vmMaintenancePolicy Resource policy applicable to VMs for infrastructure maintenance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmMaintenancePolicy(ResourcePolicyVmMaintenancePolicyArgs vmMaintenancePolicy) {
             return vmMaintenancePolicy(Output.of(vmMaintenancePolicy));
         }

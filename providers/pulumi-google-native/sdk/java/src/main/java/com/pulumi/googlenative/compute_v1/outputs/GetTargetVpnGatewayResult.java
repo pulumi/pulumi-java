@@ -11,52 +11,52 @@ import java.util.Objects;
 @CustomType
 public final class GetTargetVpnGatewayResult {
     /**
-     * Creation timestamp in RFC3339 text format.
+     * @return Creation timestamp in RFC3339 text format.
      * 
      */
     private final String creationTimestamp;
     /**
-     * An optional description of this resource. Provide this property when you create the resource.
+     * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
     private final String description;
     /**
-     * A list of URLs to the ForwardingRule resources. ForwardingRules are created using compute.forwardingRules.insert and associated with a VPN gateway.
+     * @return A list of URLs to the ForwardingRule resources. ForwardingRules are created using compute.forwardingRules.insert and associated with a VPN gateway.
      * 
      */
     private final List<String> forwardingRules;
     /**
-     * Type of resource. Always compute#targetVpnGateway for target VPN gateways.
+     * @return Type of resource. Always compute#targetVpnGateway for target VPN gateways.
      * 
      */
     private final String kind;
     /**
-     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
     private final String name;
     /**
-     * URL of the network to which this VPN gateway is attached. Provided by the client when the VPN gateway is created.
+     * @return URL of the network to which this VPN gateway is attached. Provided by the client when the VPN gateway is created.
      * 
      */
     private final String network;
     /**
-     * URL of the region where the target VPN gateway resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
+     * @return URL of the region where the target VPN gateway resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
      */
     private final String region;
     /**
-     * Server-defined URL for the resource.
+     * @return Server-defined URL for the resource.
      * 
      */
     private final String selfLink;
     /**
-     * The status of the VPN gateway, which can be one of the following: CREATING, READY, FAILED, or DELETING.
+     * @return The status of the VPN gateway, which can be one of the following: CREATING, READY, FAILED, or DELETING.
      * 
      */
     private final String status;
     /**
-     * A list of URLs to VpnTunnel resources. VpnTunnels are created using the compute.vpntunnels.insert method and associated with a VPN gateway.
+     * @return A list of URLs to VpnTunnel resources. VpnTunnels are created using the compute.vpntunnels.insert method and associated with a VPN gateway.
      * 
      */
     private final List<String> tunnels;
@@ -86,72 +86,72 @@ public final class GetTargetVpnGatewayResult {
     }
 
     /**
-     * Creation timestamp in RFC3339 text format.
+     * @return Creation timestamp in RFC3339 text format.
      * 
-    */
+     */
     public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
-     * An optional description of this resource. Provide this property when you create the resource.
+     * @return An optional description of this resource. Provide this property when you create the resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * A list of URLs to the ForwardingRule resources. ForwardingRules are created using compute.forwardingRules.insert and associated with a VPN gateway.
+     * @return A list of URLs to the ForwardingRule resources. ForwardingRules are created using compute.forwardingRules.insert and associated with a VPN gateway.
      * 
-    */
+     */
     public List<String> forwardingRules() {
         return this.forwardingRules;
     }
     /**
-     * Type of resource. Always compute#targetVpnGateway for target VPN gateways.
+     * @return Type of resource. Always compute#targetVpnGateway for target VPN gateways.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * URL of the network to which this VPN gateway is attached. Provided by the client when the VPN gateway is created.
+     * @return URL of the network to which this VPN gateway is attached. Provided by the client when the VPN gateway is created.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
     /**
-     * URL of the region where the target VPN gateway resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
+     * @return URL of the region where the target VPN gateway resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * Server-defined URL for the resource.
+     * @return Server-defined URL for the resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * The status of the VPN gateway, which can be one of the following: CREATING, READY, FAILED, or DELETING.
+     * @return The status of the VPN gateway, which can be one of the following: CREATING, READY, FAILED, or DELETING.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * A list of URLs to VpnTunnel resources. VpnTunnels are created using the compute.vpntunnels.insert method and associated with a VPN gateway.
+     * @return A list of URLs to VpnTunnel resources. VpnTunnels are created using the compute.vpntunnels.insert method and associated with a VPN gateway.
      * 
-    */
+     */
     public List<String> tunnels() {
         return this.tunnels;
     }

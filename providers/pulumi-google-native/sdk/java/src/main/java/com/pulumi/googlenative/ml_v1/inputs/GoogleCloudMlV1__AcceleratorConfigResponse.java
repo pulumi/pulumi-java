@@ -23,6 +23,10 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse extends com.pulumi
     @Import(name="count", required=true)
     private String count;
 
+    /**
+     * @return The number of accelerators to attach to each machine running the job.
+     * 
+     */
     public String count() {
         return this.count;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse extends com.pulumi
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of accelerator to use.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse extends com.pulumi
             $ = new GoogleCloudMlV1__AcceleratorConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count The number of accelerators to attach to each machine running the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(String count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param type The type of accelerator to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

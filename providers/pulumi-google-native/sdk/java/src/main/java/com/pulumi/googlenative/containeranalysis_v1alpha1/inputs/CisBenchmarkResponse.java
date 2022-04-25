@@ -24,6 +24,10 @@ public final class CisBenchmarkResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="profileLevel", required=true)
     private Integer profileLevel;
 
+    /**
+     * @return The profile level of this CIS benchmark check.
+     * 
+     */
     public Integer profileLevel() {
         return this.profileLevel;
     }
@@ -35,6 +39,10 @@ public final class CisBenchmarkResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="severity", required=true)
     private String severity;
 
+    /**
+     * @return The severity level of this CIS benchmark check.
+     * 
+     */
     public String severity() {
         return this.severity;
     }
@@ -64,11 +72,23 @@ public final class CisBenchmarkResponse extends com.pulumi.resources.InvokeArgs 
             $ = new CisBenchmarkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param profileLevel The profile level of this CIS benchmark check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileLevel(Integer profileLevel) {
             $.profileLevel = profileLevel;
             return this;
         }
 
+        /**
+         * @param severity The severity level of this CIS benchmark check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             $.severity = severity;
             return this;

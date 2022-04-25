@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class SpecificationResponse {
     /**
-     * An Android mobile test execution specification.
+     * @return An Android mobile test execution specification.
      * 
      */
     private final AndroidTestResponse androidTest;
     /**
-     * An iOS mobile test execution specification.
+     * @return An iOS mobile test execution specification.
      * 
      */
     private final IosTestResponse iosTest;
@@ -30,16 +30,16 @@ public final class SpecificationResponse {
     }
 
     /**
-     * An Android mobile test execution specification.
+     * @return An Android mobile test execution specification.
      * 
-    */
+     */
     public AndroidTestResponse androidTest() {
         return this.androidTest;
     }
     /**
-     * An iOS mobile test execution specification.
+     * @return An iOS mobile test execution specification.
      * 
-    */
+     */
     public IosTestResponse iosTest() {
         return this.iosTest;
     }

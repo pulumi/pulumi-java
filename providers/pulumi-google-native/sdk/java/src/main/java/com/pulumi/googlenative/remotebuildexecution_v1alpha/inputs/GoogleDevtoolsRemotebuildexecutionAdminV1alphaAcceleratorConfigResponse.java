@@ -23,6 +23,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
     @Import(name="acceleratorCount", required=true)
     private String acceleratorCount;
 
+    /**
+     * @return The number of guest accelerator cards exposed to each VM.
+     * 
+     */
     public String acceleratorCount() {
         return this.acceleratorCount;
     }
@@ -34,6 +38,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
     @Import(name="acceleratorType", required=true)
     private String acceleratorType;
 
+    /**
+     * @return The type of accelerator to attach to each VM, e.g. &#34;nvidia-tesla-k80&#34; for nVidia Tesla K80.
+     * 
+     */
     public String acceleratorType() {
         return this.acceleratorType;
     }
@@ -63,11 +71,23 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
             $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorCount The number of guest accelerator cards exposed to each VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorCount(String acceleratorCount) {
             $.acceleratorCount = acceleratorCount;
             return this;
         }
 
+        /**
+         * @param acceleratorType The type of accelerator to attach to each VM, e.g. &#34;nvidia-tesla-k80&#34; for nVidia Tesla K80.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(String acceleratorType) {
             $.acceleratorType = acceleratorType;
             return this;

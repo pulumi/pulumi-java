@@ -23,6 +23,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudSql")
     private @Nullable Output<CloudSqlPropertiesArgs> cloudSql;
 
+    /**
+     * @return Cloud SQL properties.
+     * 
+     */
     public Optional<Output<CloudSqlPropertiesArgs>> cloudSql() {
         return Optional.ofNullable(this.cloudSql);
     }
@@ -41,6 +45,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User provided description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -52,6 +60,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return User provided display name for the connection.
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -70,6 +82,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -111,11 +127,23 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudSql Cloud SQL properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSql(@Nullable Output<CloudSqlPropertiesArgs> cloudSql) {
             $.cloudSql = cloudSql;
             return this;
         }
 
+        /**
+         * @param cloudSql Cloud SQL properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSql(CloudSqlPropertiesArgs cloudSql) {
             return cloudSql(Output.of(cloudSql));
         }
@@ -129,20 +157,44 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
             return connectionId(Output.of(connectionId));
         }
 
+        /**
+         * @param description User provided description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User provided description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param friendlyName User provided display name for the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName User provided display name for the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
@@ -156,11 +208,23 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

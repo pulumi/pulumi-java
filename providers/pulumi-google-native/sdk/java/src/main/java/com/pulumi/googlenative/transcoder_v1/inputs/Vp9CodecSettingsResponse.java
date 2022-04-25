@@ -25,6 +25,10 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="bitrateBps", required=true)
     private Integer bitrateBps;
 
+    /**
+     * @return The video bitrate in bits per second. The minimum value is 1,000. The maximum value is 480,000,000.
+     * 
+     */
     public Integer bitrateBps() {
         return this.bitrateBps;
     }
@@ -36,6 +40,10 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="crfLevel", required=true)
     private Integer crfLevel;
 
+    /**
+     * @return Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21. *Note*: This field is not supported.
+     * 
+     */
     public Integer crfLevel() {
         return this.crfLevel;
     }
@@ -47,6 +55,10 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="frameRate", required=true)
     private Double frameRate;
 
+    /**
+     * @return The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculating frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.
+     * 
+     */
     public Double frameRate() {
         return this.frameRate;
     }
@@ -58,6 +70,10 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="gopDuration", required=true)
     private String gopDuration;
 
+    /**
+     * @return Select the GOP size based on the specified duration. The default is `3s`. Note that `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
+     * 
+     */
     public String gopDuration() {
         return this.gopDuration;
     }
@@ -69,6 +85,10 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="gopFrameCount", required=true)
     private Integer gopFrameCount;
 
+    /**
+     * @return Select the GOP size based on the specified frame count. Must be greater than zero.
+     * 
+     */
     public Integer gopFrameCount() {
         return this.gopFrameCount;
     }
@@ -80,6 +100,10 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="heightPixels", required=true)
     private Integer heightPixels;
 
+    /**
+     * @return The height of the video in pixels. Must be an even integer. When not specified, the height is adjusted to match the specified width and input aspect ratio. If both are omitted, the input height is used.
+     * 
+     */
     public Integer heightPixels() {
         return this.heightPixels;
     }
@@ -91,6 +115,10 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="pixelFormat", required=true)
     private String pixelFormat;
 
+    /**
+     * @return Pixel format to use. The default is `yuv420p`. Supported pixel formats: - `yuv420p` pixel format - `yuv422p` pixel format - `yuv444p` pixel format - `yuv420p10` 10-bit HDR pixel format - `yuv422p10` 10-bit HDR pixel format - `yuv444p10` 10-bit HDR pixel format - `yuv420p12` 12-bit HDR pixel format - `yuv422p12` 12-bit HDR pixel format - `yuv444p12` 12-bit HDR pixel format
+     * 
+     */
     public String pixelFormat() {
         return this.pixelFormat;
     }
@@ -102,6 +130,10 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="profile", required=true)
     private String profile;
 
+    /**
+     * @return Enforces the specified codec profile. The following profiles are supported: * `profile0` (default) * `profile1` * `profile2` * `profile3` The available options are [WebM-compatible](https://www.webmproject.org/vp9/profiles/). Note that certain values for this field may cause the transcoder to override other fields you set in the `Vp9CodecSettings` message.
+     * 
+     */
     public String profile() {
         return this.profile;
     }
@@ -113,6 +145,10 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="rateControlMode", required=true)
     private String rateControlMode;
 
+    /**
+     * @return Specify the `rate_control_mode`. The default is `vbr`. Supported rate control modes: - `vbr` - variable bitrate
+     * 
+     */
     public String rateControlMode() {
         return this.rateControlMode;
     }
@@ -124,6 +160,10 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="widthPixels", required=true)
     private Integer widthPixels;
 
+    /**
+     * @return The width of the video in pixels. Must be an even integer. When not specified, the width is adjusted to match the specified height and input aspect ratio. If both are omitted, the input width is used.
+     * 
+     */
     public Integer widthPixels() {
         return this.widthPixels;
     }
@@ -161,51 +201,111 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
             $ = new Vp9CodecSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bitrateBps The video bitrate in bits per second. The minimum value is 1,000. The maximum value is 480,000,000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrateBps(Integer bitrateBps) {
             $.bitrateBps = bitrateBps;
             return this;
         }
 
+        /**
+         * @param crfLevel Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21. *Note*: This field is not supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crfLevel(Integer crfLevel) {
             $.crfLevel = crfLevel;
             return this;
         }
 
+        /**
+         * @param frameRate The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculating frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameRate(Double frameRate) {
             $.frameRate = frameRate;
             return this;
         }
 
+        /**
+         * @param gopDuration Select the GOP size based on the specified duration. The default is `3s`. Note that `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gopDuration(String gopDuration) {
             $.gopDuration = gopDuration;
             return this;
         }
 
+        /**
+         * @param gopFrameCount Select the GOP size based on the specified frame count. Must be greater than zero.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gopFrameCount(Integer gopFrameCount) {
             $.gopFrameCount = gopFrameCount;
             return this;
         }
 
+        /**
+         * @param heightPixels The height of the video in pixels. Must be an even integer. When not specified, the height is adjusted to match the specified width and input aspect ratio. If both are omitted, the input height is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder heightPixels(Integer heightPixels) {
             $.heightPixels = heightPixels;
             return this;
         }
 
+        /**
+         * @param pixelFormat Pixel format to use. The default is `yuv420p`. Supported pixel formats: - `yuv420p` pixel format - `yuv422p` pixel format - `yuv444p` pixel format - `yuv420p10` 10-bit HDR pixel format - `yuv422p10` 10-bit HDR pixel format - `yuv444p10` 10-bit HDR pixel format - `yuv420p12` 12-bit HDR pixel format - `yuv422p12` 12-bit HDR pixel format - `yuv444p12` 12-bit HDR pixel format
+         * 
+         * @return builder
+         * 
+         */
         public Builder pixelFormat(String pixelFormat) {
             $.pixelFormat = pixelFormat;
             return this;
         }
 
+        /**
+         * @param profile Enforces the specified codec profile. The following profiles are supported: * `profile0` (default) * `profile1` * `profile2` * `profile3` The available options are [WebM-compatible](https://www.webmproject.org/vp9/profiles/). Note that certain values for this field may cause the transcoder to override other fields you set in the `Vp9CodecSettings` message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profile(String profile) {
             $.profile = profile;
             return this;
         }
 
+        /**
+         * @param rateControlMode Specify the `rate_control_mode`. The default is `vbr`. Supported rate control modes: - `vbr` - variable bitrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateControlMode(String rateControlMode) {
             $.rateControlMode = rateControlMode;
             return this;
         }
 
+        /**
+         * @param widthPixels The width of the video in pixels. Must be an even integer. When not specified, the width is adjusted to match the specified height and input aspect ratio. If both are omitted, the input width is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widthPixels(Integer widthPixels) {
             $.widthPixels = widthPixels;
             return this;

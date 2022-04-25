@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2ConversationPhoneNumberResponse extend
     @Import(name="phoneNumber", required=true)
     private String phoneNumber;
 
+    /**
+     * @return The phone number to connect to this conversation.
+     * 
+     */
     public String phoneNumber() {
         return this.phoneNumber;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowV2ConversationPhoneNumberResponse extend
             $ = new GoogleCloudDialogflowV2ConversationPhoneNumberResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param phoneNumber The phone number to connect to this conversation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(String phoneNumber) {
             $.phoneNumber = phoneNumber;
             return this;

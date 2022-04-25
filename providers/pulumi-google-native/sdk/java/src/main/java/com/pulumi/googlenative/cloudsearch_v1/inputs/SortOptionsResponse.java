@@ -19,6 +19,10 @@ public final class SortOptionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="operatorName", required=true)
     private String operatorName;
 
+    /**
+     * @return Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.
+     * 
+     */
     public String operatorName() {
         return this.operatorName;
     }
@@ -30,6 +34,10 @@ public final class SortOptionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sortOrder", required=true)
     private String sortOrder;
 
+    /**
+     * @return Ascending is the default sort order
+     * 
+     */
     public String sortOrder() {
         return this.sortOrder;
     }
@@ -59,11 +67,23 @@ public final class SortOptionsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SortOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operatorName Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorName(String operatorName) {
             $.operatorName = operatorName;
             return this;
         }
 
+        /**
+         * @param sortOrder Ascending is the default sort order
+         * 
+         * @return builder
+         * 
+         */
         public Builder sortOrder(String sortOrder) {
             $.sortOrder = sortOrder;
             return this;

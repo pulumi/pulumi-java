@@ -33,6 +33,10 @@ public final class CaPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="issuancePolicy")
     private @Nullable Output<IssuancePolicyArgs> issuancePolicy;
 
+    /**
+     * @return Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
+     * 
+     */
     public Optional<Output<IssuancePolicyArgs>> issuancePolicy() {
         return Optional.ofNullable(this.issuancePolicy);
     }
@@ -44,6 +48,10 @@ public final class CaPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. Labels with user-defined metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -69,6 +77,10 @@ public final class CaPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publishingOptions")
     private @Nullable Output<PublishingOptionsArgs> publishingOptions;
 
+    /**
+     * @return Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
+     * 
+     */
     public Optional<Output<PublishingOptionsArgs>> publishingOptions() {
         return Optional.ofNullable(this.publishingOptions);
     }
@@ -87,6 +99,10 @@ public final class CaPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier", required=true)
     private Output<CaPoolTier> tier;
 
+    /**
+     * @return Immutable. The Tier of this CaPool.
+     * 
+     */
     public Output<CaPoolTier> tier() {
         return this.tier;
     }
@@ -131,20 +147,44 @@ public final class CaPoolArgs extends com.pulumi.resources.ResourceArgs {
             return caPoolId(Output.of(caPoolId));
         }
 
+        /**
+         * @param issuancePolicy Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuancePolicy(@Nullable Output<IssuancePolicyArgs> issuancePolicy) {
             $.issuancePolicy = issuancePolicy;
             return this;
         }
 
+        /**
+         * @param issuancePolicy Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuancePolicy(IssuancePolicyArgs issuancePolicy) {
             return issuancePolicy(Output.of(issuancePolicy));
         }
 
+        /**
+         * @param labels Optional. Labels with user-defined metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. Labels with user-defined metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -167,11 +207,23 @@ public final class CaPoolArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param publishingOptions Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishingOptions(@Nullable Output<PublishingOptionsArgs> publishingOptions) {
             $.publishingOptions = publishingOptions;
             return this;
         }
 
+        /**
+         * @param publishingOptions Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishingOptions(PublishingOptionsArgs publishingOptions) {
             return publishingOptions(Output.of(publishingOptions));
         }
@@ -185,11 +237,23 @@ public final class CaPoolArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param tier Immutable. The Tier of this CaPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Output<CaPoolTier> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier Immutable. The Tier of this CaPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(CaPoolTier tier) {
             return tier(Output.of(tier));
         }

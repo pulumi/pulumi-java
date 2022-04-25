@@ -23,6 +23,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deliveryConfig")
     private @Nullable Output<DeliveryConfigArgs> deliveryConfig;
 
+    /**
+     * @return The settings for this subscription&#39;s message delivery.
+     * 
+     */
     public Optional<Output<DeliveryConfigArgs>> deliveryConfig() {
         return Optional.ofNullable(this.deliveryConfig);
     }
@@ -41,6 +45,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -73,6 +81,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topic")
     private @Nullable Output<String> topic;
 
+    /**
+     * @return The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
+     * 
+     */
     public Optional<Output<String>> topic() {
         return Optional.ofNullable(this.topic);
     }
@@ -107,11 +119,23 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deliveryConfig The settings for this subscription&#39;s message delivery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryConfig(@Nullable Output<DeliveryConfigArgs> deliveryConfig) {
             $.deliveryConfig = deliveryConfig;
             return this;
         }
 
+        /**
+         * @param deliveryConfig The settings for this subscription&#39;s message delivery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryConfig(DeliveryConfigArgs deliveryConfig) {
             return deliveryConfig(Output.of(deliveryConfig));
         }
@@ -125,11 +149,23 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -161,11 +197,23 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
             return subscriptionId(Output.of(subscriptionId));
         }
 
+        /**
+         * @param topic The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(@Nullable Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }

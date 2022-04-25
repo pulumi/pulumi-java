@@ -27,6 +27,10 @@ public final class VpcAccessConnectorArgs extends com.pulumi.resources.ResourceA
     @Import(name="egressSetting")
     private @Nullable Output<VpcAccessConnectorEgressSetting> egressSetting;
 
+    /**
+     * @return The egress setting for the connector, controlling what traffic is diverted through it.
+     * 
+     */
     public Optional<Output<VpcAccessConnectorEgressSetting>> egressSetting() {
         return Optional.ofNullable(this.egressSetting);
     }
@@ -38,6 +42,10 @@ public final class VpcAccessConnectorArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -67,20 +75,44 @@ public final class VpcAccessConnectorArgs extends com.pulumi.resources.ResourceA
             $ = new VpcAccessConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param egressSetting The egress setting for the connector, controlling what traffic is diverted through it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressSetting(@Nullable Output<VpcAccessConnectorEgressSetting> egressSetting) {
             $.egressSetting = egressSetting;
             return this;
         }
 
+        /**
+         * @param egressSetting The egress setting for the connector, controlling what traffic is diverted through it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressSetting(VpcAccessConnectorEgressSetting egressSetting) {
             return egressSetting(Output.of(egressSetting));
         }
 
+        /**
+         * @param name Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -26,6 +26,10 @@ public final class VertexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="x")
     private @Nullable Output<Integer> x;
 
+    /**
+     * @return X coordinate.
+     * 
+     */
     public Optional<Output<Integer>> x() {
         return Optional.ofNullable(this.x);
     }
@@ -37,6 +41,10 @@ public final class VertexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="y")
     private @Nullable Output<Integer> y;
 
+    /**
+     * @return Y coordinate.
+     * 
+     */
     public Optional<Output<Integer>> y() {
         return Optional.ofNullable(this.y);
     }
@@ -66,20 +74,44 @@ public final class VertexArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VertexArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param x X coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x(@Nullable Output<Integer> x) {
             $.x = x;
             return this;
         }
 
+        /**
+         * @param x X coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x(Integer x) {
             return x(Output.of(x));
         }
 
+        /**
+         * @param y Y coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder y(@Nullable Output<Integer> y) {
             $.y = y;
             return this;
         }
 
+        /**
+         * @param y Y coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder y(Integer y) {
             return y(Output.of(y));
         }

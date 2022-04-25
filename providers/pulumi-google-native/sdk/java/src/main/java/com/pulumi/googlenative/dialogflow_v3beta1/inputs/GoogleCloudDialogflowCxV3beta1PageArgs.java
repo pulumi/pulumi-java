@@ -31,6 +31,10 @@ public final class GoogleCloudDialogflowCxV3beta1PageArgs extends com.pulumi.res
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The human-readable name of the page, unique within the agent.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -42,6 +46,10 @@ public final class GoogleCloudDialogflowCxV3beta1PageArgs extends com.pulumi.res
     @Import(name="entryFulfillment")
     private @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> entryFulfillment;
 
+    /**
+     * @return The fulfillment to call when the session is entering the page.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs>> entryFulfillment() {
         return Optional.ofNullable(this.entryFulfillment);
     }
@@ -53,6 +61,10 @@ public final class GoogleCloudDialogflowCxV3beta1PageArgs extends com.pulumi.res
     @Import(name="eventHandlers")
     private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> eventHandlers;
 
+    /**
+     * @return Handlers associated with the page to handle events such as webhook errors, no match or no input.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>>> eventHandlers() {
         return Optional.ofNullable(this.eventHandlers);
     }
@@ -64,6 +76,10 @@ public final class GoogleCloudDialogflowCxV3beta1PageArgs extends com.pulumi.res
     @Import(name="form")
     private @Nullable Output<GoogleCloudDialogflowCxV3beta1FormArgs> form;
 
+    /**
+     * @return The form associated with the page, used for collecting parameters relevant to the page.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3beta1FormArgs>> form() {
         return Optional.ofNullable(this.form);
     }
@@ -75,6 +91,10 @@ public final class GoogleCloudDialogflowCxV3beta1PageArgs extends com.pulumi.res
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The unique identifier of the page. Required for the Pages.UpdatePage method. Pages.CreatePage populates the name automatically. Format: `projects//locations//agents//flows//pages/`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -86,6 +106,10 @@ public final class GoogleCloudDialogflowCxV3beta1PageArgs extends com.pulumi.res
     @Import(name="transitionRouteGroups")
     private @Nullable Output<List<String>> transitionRouteGroups;
 
+    /**
+     * @return Ordered list of `TransitionRouteGroups` associated with the page. Transition route groups must be unique within a page. * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page&#39;s transition route -&gt; page&#39;s transition route group -&gt; flow&#39;s transition routes. * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+     * 
+     */
     public Optional<Output<List<String>>> transitionRouteGroups() {
         return Optional.ofNullable(this.transitionRouteGroups);
     }
@@ -97,6 +121,10 @@ public final class GoogleCloudDialogflowCxV3beta1PageArgs extends com.pulumi.res
     @Import(name="transitionRoutes")
     private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1TransitionRouteArgs>> transitionRoutes;
 
+    /**
+     * @return A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow. When we are in a certain page, the TransitionRoutes are evalauted in the following order: * TransitionRoutes defined in the page with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in flow with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in the page with only condition specified. * TransitionRoutes defined in the transition route groups with only condition specified.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowCxV3beta1TransitionRouteArgs>>> transitionRoutes() {
         return Optional.ofNullable(this.transitionRoutes);
     }
@@ -131,77 +159,179 @@ public final class GoogleCloudDialogflowCxV3beta1PageArgs extends com.pulumi.res
             $ = new GoogleCloudDialogflowCxV3beta1PageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The human-readable name of the page, unique within the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The human-readable name of the page, unique within the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param entryFulfillment The fulfillment to call when the session is entering the page.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryFulfillment(@Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> entryFulfillment) {
             $.entryFulfillment = entryFulfillment;
             return this;
         }
 
+        /**
+         * @param entryFulfillment The fulfillment to call when the session is entering the page.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryFulfillment(GoogleCloudDialogflowCxV3beta1FulfillmentArgs entryFulfillment) {
             return entryFulfillment(Output.of(entryFulfillment));
         }
 
+        /**
+         * @param eventHandlers Handlers associated with the page to handle events such as webhook errors, no match or no input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHandlers(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> eventHandlers) {
             $.eventHandlers = eventHandlers;
             return this;
         }
 
+        /**
+         * @param eventHandlers Handlers associated with the page to handle events such as webhook errors, no match or no input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHandlers(List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs> eventHandlers) {
             return eventHandlers(Output.of(eventHandlers));
         }
 
+        /**
+         * @param eventHandlers Handlers associated with the page to handle events such as webhook errors, no match or no input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHandlers(GoogleCloudDialogflowCxV3beta1EventHandlerArgs... eventHandlers) {
             return eventHandlers(List.of(eventHandlers));
         }
 
+        /**
+         * @param form The form associated with the page, used for collecting parameters relevant to the page.
+         * 
+         * @return builder
+         * 
+         */
         public Builder form(@Nullable Output<GoogleCloudDialogflowCxV3beta1FormArgs> form) {
             $.form = form;
             return this;
         }
 
+        /**
+         * @param form The form associated with the page, used for collecting parameters relevant to the page.
+         * 
+         * @return builder
+         * 
+         */
         public Builder form(GoogleCloudDialogflowCxV3beta1FormArgs form) {
             return form(Output.of(form));
         }
 
+        /**
+         * @param name The unique identifier of the page. Required for the Pages.UpdatePage method. Pages.CreatePage populates the name automatically. Format: `projects//locations//agents//flows//pages/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique identifier of the page. Required for the Pages.UpdatePage method. Pages.CreatePage populates the name automatically. Format: `projects//locations//agents//flows//pages/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param transitionRouteGroups Ordered list of `TransitionRouteGroups` associated with the page. Transition route groups must be unique within a page. * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page&#39;s transition route -&gt; page&#39;s transition route group -&gt; flow&#39;s transition routes. * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionRouteGroups(@Nullable Output<List<String>> transitionRouteGroups) {
             $.transitionRouteGroups = transitionRouteGroups;
             return this;
         }
 
+        /**
+         * @param transitionRouteGroups Ordered list of `TransitionRouteGroups` associated with the page. Transition route groups must be unique within a page. * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page&#39;s transition route -&gt; page&#39;s transition route group -&gt; flow&#39;s transition routes. * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionRouteGroups(List<String> transitionRouteGroups) {
             return transitionRouteGroups(Output.of(transitionRouteGroups));
         }
 
+        /**
+         * @param transitionRouteGroups Ordered list of `TransitionRouteGroups` associated with the page. Transition route groups must be unique within a page. * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page&#39;s transition route -&gt; page&#39;s transition route group -&gt; flow&#39;s transition routes. * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionRouteGroups(String... transitionRouteGroups) {
             return transitionRouteGroups(List.of(transitionRouteGroups));
         }
 
+        /**
+         * @param transitionRoutes A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow. When we are in a certain page, the TransitionRoutes are evalauted in the following order: * TransitionRoutes defined in the page with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in flow with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in the page with only condition specified. * TransitionRoutes defined in the transition route groups with only condition specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionRoutes(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1TransitionRouteArgs>> transitionRoutes) {
             $.transitionRoutes = transitionRoutes;
             return this;
         }
 
+        /**
+         * @param transitionRoutes A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow. When we are in a certain page, the TransitionRoutes are evalauted in the following order: * TransitionRoutes defined in the page with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in flow with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in the page with only condition specified. * TransitionRoutes defined in the transition route groups with only condition specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionRoutes(List<GoogleCloudDialogflowCxV3beta1TransitionRouteArgs> transitionRoutes) {
             return transitionRoutes(Output.of(transitionRoutes));
         }
 
+        /**
+         * @param transitionRoutes A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow. When we are in a certain page, the TransitionRoutes are evalauted in the following order: * TransitionRoutes defined in the page with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in flow with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in the page with only condition specified. * TransitionRoutes defined in the transition route groups with only condition specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionRoutes(GoogleCloudDialogflowCxV3beta1TransitionRouteArgs... transitionRoutes) {
             return transitionRoutes(List.of(transitionRoutes));
         }

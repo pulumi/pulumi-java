@@ -23,6 +23,10 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends com.pulumi
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the category.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends com.pulumi
     @Import(name="siteId", required=true)
     private String siteId;
 
+    /**
+     * @return Name of the portal.
+     * 
+     */
     public String siteId() {
         return this.siteId;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends com.pulumi
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return Time the category was last modified in milliseconds since epoch.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -75,16 +87,34 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends com.pulumi
             $ = new GoogleCloudApigeeV1ApiCategoryDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param siteId Name of the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteId(String siteId) {
             $.siteId = siteId;
             return this;
         }
 
+        /**
+         * @param updateTime Time the category was last modified in milliseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;

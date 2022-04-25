@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class SourceResponse {
     /**
-     * `File` set constituting the `Source` bundle.
+     * @return `File` set constituting the `Source` bundle.
      * 
      */
     private final List<FileResponse> files;
@@ -22,9 +22,9 @@ public final class SourceResponse {
     }
 
     /**
-     * `File` set constituting the `Source` bundle.
+     * @return `File` set constituting the `Source` bundle.
      * 
-    */
+     */
     public List<FileResponse> files() {
         return this.files;
     }

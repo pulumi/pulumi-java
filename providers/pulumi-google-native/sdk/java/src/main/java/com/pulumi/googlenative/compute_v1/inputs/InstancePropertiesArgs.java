@@ -38,6 +38,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="advancedMachineFeatures")
     private @Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
+    /**
+     * @return Controls for advanced machine-related behavior features. Note that for MachineImage, this is not supported yet.
+     * 
+     */
     public Optional<Output<AdvancedMachineFeaturesArgs>> advancedMachineFeatures() {
         return Optional.ofNullable(this.advancedMachineFeatures);
     }
@@ -49,6 +53,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="canIpForward")
     private @Nullable Output<Boolean> canIpForward;
 
+    /**
+     * @return Enables instances created based on these properties to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
+     * 
+     */
     public Optional<Output<Boolean>> canIpForward() {
         return Optional.ofNullable(this.canIpForward);
     }
@@ -60,6 +68,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="confidentialInstanceConfig")
     private @Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
+    /**
+     * @return Specifies the Confidential Instance options. Note that for MachineImage, this is not supported yet.
+     * 
+     */
     public Optional<Output<ConfidentialInstanceConfigArgs>> confidentialInstanceConfig() {
         return Optional.ofNullable(this.confidentialInstanceConfig);
     }
@@ -71,6 +83,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional text description for the instances that are created from these properties.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -82,6 +98,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="disks")
     private @Nullable Output<List<AttachedDiskArgs>> disks;
 
+    /**
+     * @return An array of disks that are associated with the instances that are created from these properties.
+     * 
+     */
     public Optional<Output<List<AttachedDiskArgs>>> disks() {
         return Optional.ofNullable(this.disks);
     }
@@ -93,6 +113,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="guestAccelerators")
     private @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators;
 
+    /**
+     * @return A list of guest accelerator cards&#39; type and count to use for instances created from these properties.
+     * 
+     */
     public Optional<Output<List<AcceleratorConfigArgs>>> guestAccelerators() {
         return Optional.ofNullable(this.guestAccelerators);
     }
@@ -104,6 +128,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels to apply to instances that are created from these properties.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -115,6 +143,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="machineType")
     private @Nullable Output<String> machineType;
 
+    /**
+     * @return The machine type to use for instances that are created from these properties.
+     * 
+     */
     public Optional<Output<String>> machineType() {
         return Optional.ofNullable(this.machineType);
     }
@@ -126,6 +158,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="metadata")
     private @Nullable Output<MetadataArgs> metadata;
 
+    /**
+     * @return The metadata key/value pairs to assign to instances that are created from these properties. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
+     * 
+     */
     public Optional<Output<MetadataArgs>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -137,6 +173,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="minCpuPlatform")
     private @Nullable Output<String> minCpuPlatform;
 
+    /**
+     * @return Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
+     * 
+     */
     public Optional<Output<String>> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
@@ -148,6 +188,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="networkInterfaces")
     private @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
+    /**
+     * @return An array of network access configurations for this interface.
+     * 
+     */
     public Optional<Output<List<NetworkInterfaceArgs>>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
@@ -159,6 +203,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="networkPerformanceConfig")
     private @Nullable Output<NetworkPerformanceConfigArgs> networkPerformanceConfig;
 
+    /**
+     * @return Note that for MachineImage, this is not supported yet.
+     * 
+     */
     public Optional<Output<NetworkPerformanceConfigArgs>> networkPerformanceConfig() {
         return Optional.ofNullable(this.networkPerformanceConfig);
     }
@@ -170,6 +218,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="privateIpv6GoogleAccess")
     private @Nullable Output<InstancePropertiesPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
+    /**
+     * @return The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as default. Note that for MachineImage, this is not supported yet.
+     * 
+     */
     public Optional<Output<InstancePropertiesPrivateIpv6GoogleAccess>> privateIpv6GoogleAccess() {
         return Optional.ofNullable(this.privateIpv6GoogleAccess);
     }
@@ -181,6 +233,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="reservationAffinity")
     private @Nullable Output<ReservationAffinityArgs> reservationAffinity;
 
+    /**
+     * @return Specifies the reservations that instances can consume from. Note that for MachineImage, this is not supported yet.
+     * 
+     */
     public Optional<Output<ReservationAffinityArgs>> reservationAffinity() {
         return Optional.ofNullable(this.reservationAffinity);
     }
@@ -192,6 +248,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceManagerTags")
     private @Nullable Output<Map<String,String>> resourceManagerTags;
 
+    /**
+     * @return Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
+     * 
+     */
     public Optional<Output<Map<String,String>>> resourceManagerTags() {
         return Optional.ofNullable(this.resourceManagerTags);
     }
@@ -203,6 +263,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourcePolicies")
     private @Nullable Output<List<String>> resourcePolicies;
 
+    /**
+     * @return Resource policies (names, not URLs) applied to instances created from these properties. Note that for MachineImage, this is not supported yet.
+     * 
+     */
     public Optional<Output<List<String>>> resourcePolicies() {
         return Optional.ofNullable(this.resourcePolicies);
     }
@@ -214,6 +278,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="scheduling")
     private @Nullable Output<SchedulingArgs> scheduling;
 
+    /**
+     * @return Specifies the scheduling options for the instances that are created from these properties.
+     * 
+     */
     public Optional<Output<SchedulingArgs>> scheduling() {
         return Optional.ofNullable(this.scheduling);
     }
@@ -225,6 +293,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="serviceAccounts")
     private @Nullable Output<List<ServiceAccountArgs>> serviceAccounts;
 
+    /**
+     * @return A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from these properties. Use metadata queries to obtain the access tokens for these instances.
+     * 
+     */
     public Optional<Output<List<ServiceAccountArgs>>> serviceAccounts() {
         return Optional.ofNullable(this.serviceAccounts);
     }
@@ -236,6 +308,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="shieldedInstanceConfig")
     private @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
+    /**
+     * @return Note that for MachineImage, this is not supported yet.
+     * 
+     */
     public Optional<Output<ShieldedInstanceConfigArgs>> shieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
@@ -247,6 +323,10 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<TagsArgs> tags;
 
+    /**
+     * @return A list of tags to apply to the instances that are created from these properties. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
+     * 
+     */
     public Optional<Output<TagsArgs>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -294,202 +374,472 @@ public final class InstancePropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new InstancePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advancedMachineFeatures Controls for advanced machine-related behavior features. Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedMachineFeatures(@Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures) {
             $.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
 
+        /**
+         * @param advancedMachineFeatures Controls for advanced machine-related behavior features. Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedMachineFeatures(AdvancedMachineFeaturesArgs advancedMachineFeatures) {
             return advancedMachineFeatures(Output.of(advancedMachineFeatures));
         }
 
+        /**
+         * @param canIpForward Enables instances created based on these properties to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canIpForward(@Nullable Output<Boolean> canIpForward) {
             $.canIpForward = canIpForward;
             return this;
         }
 
+        /**
+         * @param canIpForward Enables instances created based on these properties to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canIpForward(Boolean canIpForward) {
             return canIpForward(Output.of(canIpForward));
         }
 
+        /**
+         * @param confidentialInstanceConfig Specifies the Confidential Instance options. Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidentialInstanceConfig(@Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
             $.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
 
+        /**
+         * @param confidentialInstanceConfig Specifies the Confidential Instance options. Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidentialInstanceConfig(ConfidentialInstanceConfigArgs confidentialInstanceConfig) {
             return confidentialInstanceConfig(Output.of(confidentialInstanceConfig));
         }
 
+        /**
+         * @param description An optional text description for the instances that are created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional text description for the instances that are created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param disks An array of disks that are associated with the instances that are created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(@Nullable Output<List<AttachedDiskArgs>> disks) {
             $.disks = disks;
             return this;
         }
 
+        /**
+         * @param disks An array of disks that are associated with the instances that are created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(List<AttachedDiskArgs> disks) {
             return disks(Output.of(disks));
         }
 
+        /**
+         * @param disks An array of disks that are associated with the instances that are created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(AttachedDiskArgs... disks) {
             return disks(List.of(disks));
         }
 
+        /**
+         * @param guestAccelerators A list of guest accelerator cards&#39; type and count to use for instances created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(@Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators) {
             $.guestAccelerators = guestAccelerators;
             return this;
         }
 
+        /**
+         * @param guestAccelerators A list of guest accelerator cards&#39; type and count to use for instances created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(List<AcceleratorConfigArgs> guestAccelerators) {
             return guestAccelerators(Output.of(guestAccelerators));
         }
 
+        /**
+         * @param guestAccelerators A list of guest accelerator cards&#39; type and count to use for instances created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(AcceleratorConfigArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
 
+        /**
+         * @param labels Labels to apply to instances that are created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels to apply to instances that are created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param machineType The machine type to use for instances that are created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(@Nullable Output<String> machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param machineType The machine type to use for instances that are created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             return machineType(Output.of(machineType));
         }
 
+        /**
+         * @param metadata The metadata key/value pairs to assign to instances that are created from these properties. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<MetadataArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The metadata key/value pairs to assign to instances that are created from these properties. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(MetadataArgs metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param minCpuPlatform Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             $.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
+        /**
+         * @param minCpuPlatform Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(String minCpuPlatform) {
             return minCpuPlatform(Output.of(minCpuPlatform));
         }
 
+        /**
+         * @param networkInterfaces An array of network access configurations for this interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces An array of network access configurations for this interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(List<NetworkInterfaceArgs> networkInterfaces) {
             return networkInterfaces(Output.of(networkInterfaces));
         }
 
+        /**
+         * @param networkInterfaces An array of network access configurations for this interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(NetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
+        /**
+         * @param networkPerformanceConfig Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPerformanceConfig(@Nullable Output<NetworkPerformanceConfigArgs> networkPerformanceConfig) {
             $.networkPerformanceConfig = networkPerformanceConfig;
             return this;
         }
 
+        /**
+         * @param networkPerformanceConfig Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPerformanceConfig(NetworkPerformanceConfigArgs networkPerformanceConfig) {
             return networkPerformanceConfig(Output.of(networkPerformanceConfig));
         }
 
+        /**
+         * @param privateIpv6GoogleAccess The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as default. Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpv6GoogleAccess(@Nullable Output<InstancePropertiesPrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
             $.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
+        /**
+         * @param privateIpv6GoogleAccess The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as default. Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpv6GoogleAccess(InstancePropertiesPrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
             return privateIpv6GoogleAccess(Output.of(privateIpv6GoogleAccess));
         }
 
+        /**
+         * @param reservationAffinity Specifies the reservations that instances can consume from. Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationAffinity(@Nullable Output<ReservationAffinityArgs> reservationAffinity) {
             $.reservationAffinity = reservationAffinity;
             return this;
         }
 
+        /**
+         * @param reservationAffinity Specifies the reservations that instances can consume from. Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationAffinity(ReservationAffinityArgs reservationAffinity) {
             return reservationAffinity(Output.of(reservationAffinity));
         }
 
+        /**
+         * @param resourceManagerTags Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceManagerTags(@Nullable Output<Map<String,String>> resourceManagerTags) {
             $.resourceManagerTags = resourceManagerTags;
             return this;
         }
 
+        /**
+         * @param resourceManagerTags Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceManagerTags(Map<String,String> resourceManagerTags) {
             return resourceManagerTags(Output.of(resourceManagerTags));
         }
 
+        /**
+         * @param resourcePolicies Resource policies (names, not URLs) applied to instances created from these properties. Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(@Nullable Output<List<String>> resourcePolicies) {
             $.resourcePolicies = resourcePolicies;
             return this;
         }
 
+        /**
+         * @param resourcePolicies Resource policies (names, not URLs) applied to instances created from these properties. Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(List<String> resourcePolicies) {
             return resourcePolicies(Output.of(resourcePolicies));
         }
 
+        /**
+         * @param resourcePolicies Resource policies (names, not URLs) applied to instances created from these properties. Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(String... resourcePolicies) {
             return resourcePolicies(List.of(resourcePolicies));
         }
 
+        /**
+         * @param scheduling Specifies the scheduling options for the instances that are created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(@Nullable Output<SchedulingArgs> scheduling) {
             $.scheduling = scheduling;
             return this;
         }
 
+        /**
+         * @param scheduling Specifies the scheduling options for the instances that are created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(SchedulingArgs scheduling) {
             return scheduling(Output.of(scheduling));
         }
 
+        /**
+         * @param serviceAccounts A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from these properties. Use metadata queries to obtain the access tokens for these instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccounts(@Nullable Output<List<ServiceAccountArgs>> serviceAccounts) {
             $.serviceAccounts = serviceAccounts;
             return this;
         }
 
+        /**
+         * @param serviceAccounts A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from these properties. Use metadata queries to obtain the access tokens for these instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccounts(List<ServiceAccountArgs> serviceAccounts) {
             return serviceAccounts(Output.of(serviceAccounts));
         }
 
+        /**
+         * @param serviceAccounts A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from these properties. Use metadata queries to obtain the access tokens for these instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccounts(ServiceAccountArgs... serviceAccounts) {
             return serviceAccounts(List.of(serviceAccounts));
         }
 
+        /**
+         * @param shieldedInstanceConfig Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(@Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
+        /**
+         * @param shieldedInstanceConfig Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(ShieldedInstanceConfigArgs shieldedInstanceConfig) {
             return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
 
+        /**
+         * @param tags A list of tags to apply to the instances that are created from these properties. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<TagsArgs> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of tags to apply to the instances that are created from these properties. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(TagsArgs tags) {
             return tags(Output.of(tags));
         }

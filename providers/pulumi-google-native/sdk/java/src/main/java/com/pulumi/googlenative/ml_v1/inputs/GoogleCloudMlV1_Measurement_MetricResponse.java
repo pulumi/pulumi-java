@@ -24,6 +24,10 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse extends com.pulumi
     @Import(name="metric", required=true)
     private String metric;
 
+    /**
+     * @return Metric name.
+     * 
+     */
     public String metric() {
         return this.metric;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse extends com.pulumi
     @Import(name="value", required=true)
     private Double value;
 
+    /**
+     * @return The value for this metric.
+     * 
+     */
     public Double value() {
         return this.value;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse extends com.pulumi
             $ = new GoogleCloudMlV1_Measurement_MetricResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metric Metric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(String metric) {
             $.metric = metric;
             return this;
         }
 
+        /**
+         * @param value The value for this metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Double value) {
             $.value = value;
             return this;

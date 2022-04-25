@@ -26,6 +26,10 @@ public final class KeyUsageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="baseKeyUsage", required=true)
     private KeyUsageOptionsResponse baseKeyUsage;
 
+    /**
+     * @return Describes high-level ways in which a key may be used.
+     * 
+     */
     public KeyUsageOptionsResponse baseKeyUsage() {
         return this.baseKeyUsage;
     }
@@ -37,6 +41,10 @@ public final class KeyUsageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="extendedKeyUsage", required=true)
     private ExtendedKeyUsageOptionsResponse extendedKeyUsage;
 
+    /**
+     * @return Detailed scenarios in which a key may be used.
+     * 
+     */
     public ExtendedKeyUsageOptionsResponse extendedKeyUsage() {
         return this.extendedKeyUsage;
     }
@@ -48,6 +56,10 @@ public final class KeyUsageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="unknownExtendedKeyUsages", required=true)
     private List<ObjectIdResponse> unknownExtendedKeyUsages;
 
+    /**
+     * @return Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
+     * 
+     */
     public List<ObjectIdResponse> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages;
     }
@@ -78,21 +90,45 @@ public final class KeyUsageResponse extends com.pulumi.resources.InvokeArgs {
             $ = new KeyUsageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseKeyUsage Describes high-level ways in which a key may be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseKeyUsage(KeyUsageOptionsResponse baseKeyUsage) {
             $.baseKeyUsage = baseKeyUsage;
             return this;
         }
 
+        /**
+         * @param extendedKeyUsage Detailed scenarios in which a key may be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedKeyUsage(ExtendedKeyUsageOptionsResponse extendedKeyUsage) {
             $.extendedKeyUsage = extendedKeyUsage;
             return this;
         }
 
+        /**
+         * @param unknownExtendedKeyUsages Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unknownExtendedKeyUsages(List<ObjectIdResponse> unknownExtendedKeyUsages) {
             $.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
 
+        /**
+         * @param unknownExtendedKeyUsages Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unknownExtendedKeyUsages(ObjectIdResponse... unknownExtendedKeyUsages) {
             return unknownExtendedKeyUsages(List.of(unknownExtendedKeyUsages));
         }

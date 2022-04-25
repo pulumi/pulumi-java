@@ -24,6 +24,10 @@ public final class ThresholdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="color", required=true)
     private String color;
 
+    /**
+     * @return The state color for this threshold. Color is not allowed in a XyChart.
+     * 
+     */
     public String color() {
         return this.color;
     }
@@ -35,6 +39,10 @@ public final class ThresholdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="direction", required=true)
     private String direction;
 
+    /**
+     * @return The direction for the current threshold. Direction is not allowed in a XyChart.
+     * 
+     */
     public String direction() {
         return this.direction;
     }
@@ -46,6 +54,10 @@ public final class ThresholdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="label", required=true)
     private String label;
 
+    /**
+     * @return A label for the threshold.
+     * 
+     */
     public String label() {
         return this.label;
     }
@@ -57,6 +69,10 @@ public final class ThresholdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetAxis", required=true)
     private String targetAxis;
 
+    /**
+     * @return The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
+     * 
+     */
     public String targetAxis() {
         return this.targetAxis;
     }
@@ -68,6 +84,10 @@ public final class ThresholdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private Double value;
 
+    /**
+     * @return The value of the threshold. The value should be defined in the native scale of the metric.
+     * 
+     */
     public Double value() {
         return this.value;
     }
@@ -100,26 +120,56 @@ public final class ThresholdResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ThresholdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param color The state color for this threshold. Color is not allowed in a XyChart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder color(String color) {
             $.color = color;
             return this;
         }
 
+        /**
+         * @param direction The direction for the current threshold. Direction is not allowed in a XyChart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param label A label for the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param targetAxis The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAxis(String targetAxis) {
             $.targetAxis = targetAxis;
             return this;
         }
 
+        /**
+         * @param value The value of the threshold. The value should be defined in the native scale of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Double value) {
             $.value = value;
             return this;

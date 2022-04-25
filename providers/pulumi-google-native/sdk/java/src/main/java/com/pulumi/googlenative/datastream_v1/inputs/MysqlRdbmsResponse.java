@@ -24,6 +24,10 @@ public final class MysqlRdbmsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mysqlDatabases", required=true)
     private List<MysqlDatabaseResponse> mysqlDatabases;
 
+    /**
+     * @return Mysql databases on the server
+     * 
+     */
     public List<MysqlDatabaseResponse> mysqlDatabases() {
         return this.mysqlDatabases;
     }
@@ -52,11 +56,23 @@ public final class MysqlRdbmsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MysqlRdbmsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mysqlDatabases Mysql databases on the server
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlDatabases(List<MysqlDatabaseResponse> mysqlDatabases) {
             $.mysqlDatabases = mysqlDatabases;
             return this;
         }
 
+        /**
+         * @param mysqlDatabases Mysql databases on the server
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlDatabases(MysqlDatabaseResponse... mysqlDatabases) {
             return mysqlDatabases(List.of(mysqlDatabases));
         }

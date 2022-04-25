@@ -28,6 +28,10 @@ public final class CertificateConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="publicKey")
     private @Nullable Output<PublicKeyArgs> publicKey;
 
+    /**
+     * @return Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.
+     * 
+     */
     public Optional<Output<PublicKeyArgs>> publicKey() {
         return Optional.ofNullable(this.publicKey);
     }
@@ -39,6 +43,10 @@ public final class CertificateConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="subjectConfig", required=true)
     private Output<SubjectConfigArgs> subjectConfig;
 
+    /**
+     * @return Specifies some of the values in a certificate that are related to the subject.
+     * 
+     */
     public Output<SubjectConfigArgs> subjectConfig() {
         return this.subjectConfig;
     }
@@ -50,6 +58,10 @@ public final class CertificateConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="x509Config", required=true)
     private Output<X509ParametersArgs> x509Config;
 
+    /**
+     * @return Describes how some of the technical X.509 fields in a certificate should be populated.
+     * 
+     */
     public Output<X509ParametersArgs> x509Config() {
         return this.x509Config;
     }
@@ -80,29 +92,65 @@ public final class CertificateConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new CertificateConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicKey Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(@Nullable Output<PublicKeyArgs> publicKey) {
             $.publicKey = publicKey;
             return this;
         }
 
+        /**
+         * @param publicKey Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(PublicKeyArgs publicKey) {
             return publicKey(Output.of(publicKey));
         }
 
+        /**
+         * @param subjectConfig Specifies some of the values in a certificate that are related to the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectConfig(Output<SubjectConfigArgs> subjectConfig) {
             $.subjectConfig = subjectConfig;
             return this;
         }
 
+        /**
+         * @param subjectConfig Specifies some of the values in a certificate that are related to the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectConfig(SubjectConfigArgs subjectConfig) {
             return subjectConfig(Output.of(subjectConfig));
         }
 
+        /**
+         * @param x509Config Describes how some of the technical X.509 fields in a certificate should be populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x509Config(Output<X509ParametersArgs> x509Config) {
             $.x509Config = x509Config;
             return this;
         }
 
+        /**
+         * @param x509Config Describes how some of the technical X.509 fields in a certificate should be populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x509Config(X509ParametersArgs x509Config) {
             return x509Config(Output.of(x509Config));
         }

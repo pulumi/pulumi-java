@@ -26,6 +26,10 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
     @Import(name="annotationSpecSet", required=true)
     private Output<String> annotationSpecSet;
 
+    /**
+     * @return Annotation spec set resource name.
+     * 
+     */
     public Output<String> annotationSpecSet() {
         return this.annotationSpecSet;
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
     @Import(name="instructionMessage")
     private @Nullable Output<String> instructionMessage;
 
+    /**
+     * @return Optional. Instruction message showed on contributors UI.
+     * 
+     */
     public Optional<Output<String>> instructionMessage() {
         return Optional.ofNullable(this.instructionMessage);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
             $ = new GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotationSpecSet Annotation spec set resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationSpecSet(Output<String> annotationSpecSet) {
             $.annotationSpecSet = annotationSpecSet;
             return this;
         }
 
+        /**
+         * @param annotationSpecSet Annotation spec set resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationSpecSet(String annotationSpecSet) {
             return annotationSpecSet(Output.of(annotationSpecSet));
         }
 
+        /**
+         * @param instructionMessage Optional. Instruction message showed on contributors UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instructionMessage(@Nullable Output<String> instructionMessage) {
             $.instructionMessage = instructionMessage;
             return this;
         }
 
+        /**
+         * @param instructionMessage Optional. Instruction message showed on contributors UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instructionMessage(String instructionMessage) {
             return instructionMessage(Output.of(instructionMessage));
         }

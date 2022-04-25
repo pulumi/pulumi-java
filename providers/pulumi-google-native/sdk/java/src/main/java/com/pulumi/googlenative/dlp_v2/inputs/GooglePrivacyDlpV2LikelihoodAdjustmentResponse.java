@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse extends com.pu
     @Import(name="fixedLikelihood", required=true)
     private String fixedLikelihood;
 
+    /**
+     * @return Set the likelihood of a finding to a fixed value.
+     * 
+     */
     public String fixedLikelihood() {
         return this.fixedLikelihood;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse extends com.pu
     @Import(name="relativeLikelihood", required=true)
     private Integer relativeLikelihood;
 
+    /**
+     * @return Increase or decrease the likelihood by the specified number of levels. For example, if a finding would be `POSSIBLE` without the detection rule and `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1 followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will result in a final likelihood of `LIKELY`.
+     * 
+     */
     public Integer relativeLikelihood() {
         return this.relativeLikelihood;
     }
@@ -64,11 +72,23 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse extends com.pu
             $ = new GooglePrivacyDlpV2LikelihoodAdjustmentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fixedLikelihood Set the likelihood of a finding to a fixed value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedLikelihood(String fixedLikelihood) {
             $.fixedLikelihood = fixedLikelihood;
             return this;
         }
 
+        /**
+         * @param relativeLikelihood Increase or decrease the likelihood by the specified number of levels. For example, if a finding would be `POSSIBLE` without the detection rule and `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1 followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will result in a final likelihood of `LIKELY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeLikelihood(Integer relativeLikelihood) {
             $.relativeLikelihood = relativeLikelihood;
             return this;

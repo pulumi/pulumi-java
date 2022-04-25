@@ -19,6 +19,10 @@ public final class InstanceGroupManagerAllInstancesConfigResponse extends com.pu
     @Import(name="properties", required=true)
     private InstancePropertiesPatchResponse properties;
 
+    /**
+     * @return Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.
+     * 
+     */
     public InstancePropertiesPatchResponse properties() {
         return this.properties;
     }
@@ -47,6 +51,12 @@ public final class InstanceGroupManagerAllInstancesConfigResponse extends com.pu
             $ = new InstanceGroupManagerAllInstancesConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(InstancePropertiesPatchResponse properties) {
             $.properties = properties;
             return this;

@@ -26,6 +26,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="allowOpenGop", required=true)
     private Boolean allowOpenGop;
 
+    /**
+     * @return Specifies whether an open Group of Pictures (GOP) structure should be allowed or not. The default is `false`.
+     * 
+     */
     public Boolean allowOpenGop() {
         return this.allowOpenGop;
     }
@@ -37,6 +41,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="aqStrength", required=true)
     private Double aqStrength;
 
+    /**
+     * @return Specify the intensity of the adaptive quantizer (AQ). Must be between 0 and 1, where 0 disables the quantizer and 1 maximizes the quantizer. A higher value equals a lower bitrate but smoother image. The default is 0.
+     * 
+     */
     public Double aqStrength() {
         return this.aqStrength;
     }
@@ -48,6 +56,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="bFrameCount", required=true)
     private Integer bFrameCount;
 
+    /**
+     * @return The number of consecutive B-frames. Must be greater than or equal to zero. Must be less than `VideoStream.gop_frame_count` if set. The default is 0.
+     * 
+     */
     public Integer bFrameCount() {
         return this.bFrameCount;
     }
@@ -59,6 +71,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="bPyramid", required=true)
     private Boolean bPyramid;
 
+    /**
+     * @return Allow B-pyramid for reference frame selection. This may not be supported on all decoders. The default is `false`.
+     * 
+     */
     public Boolean bPyramid() {
         return this.bPyramid;
     }
@@ -70,6 +86,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="bitrateBps", required=true)
     private Integer bitrateBps;
 
+    /**
+     * @return The video bitrate in bits per second. The minimum value is 1,000. The maximum value is 800,000,000.
+     * 
+     */
     public Integer bitrateBps() {
         return this.bitrateBps;
     }
@@ -81,6 +101,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="crfLevel", required=true)
     private Integer crfLevel;
 
+    /**
+     * @return Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21.
+     * 
+     */
     public Integer crfLevel() {
         return this.crfLevel;
     }
@@ -92,6 +116,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="enableTwoPass", required=true)
     private Boolean enableTwoPass;
 
+    /**
+     * @return Use two-pass encoding strategy to achieve better video quality. `VideoStream.rate_control_mode` must be `vbr`. The default is `false`.
+     * 
+     */
     public Boolean enableTwoPass() {
         return this.enableTwoPass;
     }
@@ -103,6 +131,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="entropyCoder", required=true)
     private String entropyCoder;
 
+    /**
+     * @return The entropy coder to use. The default is `cabac`. Supported entropy coders: - `cavlc` - `cabac`
+     * 
+     */
     public String entropyCoder() {
         return this.entropyCoder;
     }
@@ -114,6 +146,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="frameRate", required=true)
     private Double frameRate;
 
+    /**
+     * @return The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculating frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.
+     * 
+     */
     public Double frameRate() {
         return this.frameRate;
     }
@@ -125,6 +161,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="gopDuration", required=true)
     private String gopDuration;
 
+    /**
+     * @return Select the GOP size based on the specified duration. The default is `3s`. Note that `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
+     * 
+     */
     public String gopDuration() {
         return this.gopDuration;
     }
@@ -136,6 +176,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="gopFrameCount", required=true)
     private Integer gopFrameCount;
 
+    /**
+     * @return Select the GOP size based on the specified frame count. Must be greater than zero.
+     * 
+     */
     public Integer gopFrameCount() {
         return this.gopFrameCount;
     }
@@ -147,6 +191,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="heightPixels", required=true)
     private Integer heightPixels;
 
+    /**
+     * @return The height of the video in pixels. Must be an even integer. When not specified, the height is adjusted to match the specified width and input aspect ratio. If both are omitted, the input height is used.
+     * 
+     */
     public Integer heightPixels() {
         return this.heightPixels;
     }
@@ -158,6 +206,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="pixelFormat", required=true)
     private String pixelFormat;
 
+    /**
+     * @return Pixel format to use. The default is `yuv420p`. Supported pixel formats: - `yuv420p` pixel format - `yuv422p` pixel format - `yuv444p` pixel format - `yuv420p10` 10-bit HDR pixel format - `yuv422p10` 10-bit HDR pixel format - `yuv444p10` 10-bit HDR pixel format - `yuv420p12` 12-bit HDR pixel format - `yuv422p12` 12-bit HDR pixel format - `yuv444p12` 12-bit HDR pixel format
+     * 
+     */
     public String pixelFormat() {
         return this.pixelFormat;
     }
@@ -169,6 +221,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="preset", required=true)
     private String preset;
 
+    /**
+     * @return Enforces the specified codec preset. The default is `veryfast`. The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Preset). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
+     * 
+     */
     public String preset() {
         return this.preset;
     }
@@ -180,6 +236,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="profile", required=true)
     private String profile;
 
+    /**
+     * @return Enforces the specified codec profile. The following profiles are supported: * `baseline` * `main` * `high` (default) The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
+     * 
+     */
     public String profile() {
         return this.profile;
     }
@@ -191,6 +251,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="rateControlMode", required=true)
     private String rateControlMode;
 
+    /**
+     * @return Specify the `rate_control_mode`. The default is `vbr`. Supported rate control modes: - `vbr` - variable bitrate - `crf` - constant rate factor
+     * 
+     */
     public String rateControlMode() {
         return this.rateControlMode;
     }
@@ -202,6 +266,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="tune", required=true)
     private String tune;
 
+    /**
+     * @return Enforces the specified codec tune. The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
+     * 
+     */
     public String tune() {
         return this.tune;
     }
@@ -213,6 +281,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="vbvFullnessBits", required=true)
     private Integer vbvFullnessBits;
 
+    /**
+     * @return Initial fullness of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to 90% of `VideoStream.vbv_size_bits`.
+     * 
+     */
     public Integer vbvFullnessBits() {
         return this.vbvFullnessBits;
     }
@@ -224,6 +296,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="vbvSizeBits", required=true)
     private Integer vbvSizeBits;
 
+    /**
+     * @return Size of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to `VideoStream.bitrate_bps`.
+     * 
+     */
     public Integer vbvSizeBits() {
         return this.vbvSizeBits;
     }
@@ -235,6 +311,10 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="widthPixels", required=true)
     private Integer widthPixels;
 
+    /**
+     * @return The width of the video in pixels. Must be an even integer. When not specified, the width is adjusted to match the specified height and input aspect ratio. If both are omitted, the input width is used.
+     * 
+     */
     public Integer widthPixels() {
         return this.widthPixels;
     }
@@ -282,101 +362,221 @@ public final class H264CodecSettingsResponse extends com.pulumi.resources.Invoke
             $ = new H264CodecSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowOpenGop Specifies whether an open Group of Pictures (GOP) structure should be allowed or not. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowOpenGop(Boolean allowOpenGop) {
             $.allowOpenGop = allowOpenGop;
             return this;
         }
 
+        /**
+         * @param aqStrength Specify the intensity of the adaptive quantizer (AQ). Must be between 0 and 1, where 0 disables the quantizer and 1 maximizes the quantizer. A higher value equals a lower bitrate but smoother image. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aqStrength(Double aqStrength) {
             $.aqStrength = aqStrength;
             return this;
         }
 
+        /**
+         * @param bFrameCount The number of consecutive B-frames. Must be greater than or equal to zero. Must be less than `VideoStream.gop_frame_count` if set. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bFrameCount(Integer bFrameCount) {
             $.bFrameCount = bFrameCount;
             return this;
         }
 
+        /**
+         * @param bPyramid Allow B-pyramid for reference frame selection. This may not be supported on all decoders. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bPyramid(Boolean bPyramid) {
             $.bPyramid = bPyramid;
             return this;
         }
 
+        /**
+         * @param bitrateBps The video bitrate in bits per second. The minimum value is 1,000. The maximum value is 800,000,000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrateBps(Integer bitrateBps) {
             $.bitrateBps = bitrateBps;
             return this;
         }
 
+        /**
+         * @param crfLevel Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crfLevel(Integer crfLevel) {
             $.crfLevel = crfLevel;
             return this;
         }
 
+        /**
+         * @param enableTwoPass Use two-pass encoding strategy to achieve better video quality. `VideoStream.rate_control_mode` must be `vbr`. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableTwoPass(Boolean enableTwoPass) {
             $.enableTwoPass = enableTwoPass;
             return this;
         }
 
+        /**
+         * @param entropyCoder The entropy coder to use. The default is `cabac`. Supported entropy coders: - `cavlc` - `cabac`
+         * 
+         * @return builder
+         * 
+         */
         public Builder entropyCoder(String entropyCoder) {
             $.entropyCoder = entropyCoder;
             return this;
         }
 
+        /**
+         * @param frameRate The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculating frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameRate(Double frameRate) {
             $.frameRate = frameRate;
             return this;
         }
 
+        /**
+         * @param gopDuration Select the GOP size based on the specified duration. The default is `3s`. Note that `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gopDuration(String gopDuration) {
             $.gopDuration = gopDuration;
             return this;
         }
 
+        /**
+         * @param gopFrameCount Select the GOP size based on the specified frame count. Must be greater than zero.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gopFrameCount(Integer gopFrameCount) {
             $.gopFrameCount = gopFrameCount;
             return this;
         }
 
+        /**
+         * @param heightPixels The height of the video in pixels. Must be an even integer. When not specified, the height is adjusted to match the specified width and input aspect ratio. If both are omitted, the input height is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder heightPixels(Integer heightPixels) {
             $.heightPixels = heightPixels;
             return this;
         }
 
+        /**
+         * @param pixelFormat Pixel format to use. The default is `yuv420p`. Supported pixel formats: - `yuv420p` pixel format - `yuv422p` pixel format - `yuv444p` pixel format - `yuv420p10` 10-bit HDR pixel format - `yuv422p10` 10-bit HDR pixel format - `yuv444p10` 10-bit HDR pixel format - `yuv420p12` 12-bit HDR pixel format - `yuv422p12` 12-bit HDR pixel format - `yuv444p12` 12-bit HDR pixel format
+         * 
+         * @return builder
+         * 
+         */
         public Builder pixelFormat(String pixelFormat) {
             $.pixelFormat = pixelFormat;
             return this;
         }
 
+        /**
+         * @param preset Enforces the specified codec preset. The default is `veryfast`. The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Preset). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preset(String preset) {
             $.preset = preset;
             return this;
         }
 
+        /**
+         * @param profile Enforces the specified codec profile. The following profiles are supported: * `baseline` * `main` * `high` (default) The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profile(String profile) {
             $.profile = profile;
             return this;
         }
 
+        /**
+         * @param rateControlMode Specify the `rate_control_mode`. The default is `vbr`. Supported rate control modes: - `vbr` - variable bitrate - `crf` - constant rate factor
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateControlMode(String rateControlMode) {
             $.rateControlMode = rateControlMode;
             return this;
         }
 
+        /**
+         * @param tune Enforces the specified codec tune. The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tune(String tune) {
             $.tune = tune;
             return this;
         }
 
+        /**
+         * @param vbvFullnessBits Initial fullness of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to 90% of `VideoStream.vbv_size_bits`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vbvFullnessBits(Integer vbvFullnessBits) {
             $.vbvFullnessBits = vbvFullnessBits;
             return this;
         }
 
+        /**
+         * @param vbvSizeBits Size of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to `VideoStream.bitrate_bps`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vbvSizeBits(Integer vbvSizeBits) {
             $.vbvSizeBits = vbvSizeBits;
             return this;
         }
 
+        /**
+         * @param widthPixels The width of the video in pixels. Must be an even integer. When not specified, the width is adjusted to match the specified height and input aspect ratio. If both are omitted, the input width is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widthPixels(Integer widthPixels) {
             $.widthPixels = widthPixels;
             return this;

@@ -23,6 +23,10 @@ public final class RevocationDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="revocationState", required=true)
     private String revocationState;
 
+    /**
+     * @return Indicates why a Certificate was revoked.
+     * 
+     */
     public String revocationState() {
         return this.revocationState;
     }
@@ -34,6 +38,10 @@ public final class RevocationDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="revocationTime", required=true)
     private String revocationTime;
 
+    /**
+     * @return The time at which this Certificate was revoked.
+     * 
+     */
     public String revocationTime() {
         return this.revocationTime;
     }
@@ -63,11 +71,23 @@ public final class RevocationDetailsResponse extends com.pulumi.resources.Invoke
             $ = new RevocationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param revocationState Indicates why a Certificate was revoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revocationState(String revocationState) {
             $.revocationState = revocationState;
             return this;
         }
 
+        /**
+         * @param revocationTime The time at which this Certificate was revoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revocationTime(String revocationTime) {
             $.revocationTime = revocationTime;
             return this;

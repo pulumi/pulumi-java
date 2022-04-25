@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3RolloutStateResponse extends com.pul
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Start time of the current step.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowCxV3RolloutStateResponse extends com.pul
     @Import(name="step", required=true)
     private String step;
 
+    /**
+     * @return Display name of the current auto rollout step.
+     * 
+     */
     public String step() {
         return this.step;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudDialogflowCxV3RolloutStateResponse extends com.pul
     @Import(name="stepIndex", required=true)
     private Integer stepIndex;
 
+    /**
+     * @return Index of the current step in the auto rollout steps list.
+     * 
+     */
     public Integer stepIndex() {
         return this.stepIndex;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudDialogflowCxV3RolloutStateResponse extends com.pul
             $ = new GoogleCloudDialogflowCxV3RolloutStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param startTime Start time of the current step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param step Display name of the current auto rollout step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder step(String step) {
             $.step = step;
             return this;
         }
 
+        /**
+         * @param stepIndex Index of the current step in the auto rollout steps list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepIndex(Integer stepIndex) {
             $.stepIndex = stepIndex;
             return this;

@@ -14,27 +14,27 @@ import java.util.Objects;
 @CustomType
 public final class AndroidTestResponse {
     /**
-     * Information about the application under test.
+     * @return Information about the application under test.
      * 
      */
     private final AndroidAppInfoResponse androidAppInfo;
     /**
-     * An Android instrumentation test.
+     * @return An Android instrumentation test.
      * 
      */
     private final AndroidInstrumentationTestResponse androidInstrumentationTest;
     /**
-     * An Android robo test.
+     * @return An Android robo test.
      * 
      */
     private final AndroidRoboTestResponse androidRoboTest;
     /**
-     * An Android test loop.
+     * @return An Android test loop.
      * 
      */
     private final AndroidTestLoopResponse androidTestLoop;
     /**
-     * Max time a test is allowed to run before it is automatically cancelled.
+     * @return Max time a test is allowed to run before it is automatically cancelled.
      * 
      */
     private final DurationResponse testTimeout;
@@ -54,37 +54,37 @@ public final class AndroidTestResponse {
     }
 
     /**
-     * Information about the application under test.
+     * @return Information about the application under test.
      * 
-    */
+     */
     public AndroidAppInfoResponse androidAppInfo() {
         return this.androidAppInfo;
     }
     /**
-     * An Android instrumentation test.
+     * @return An Android instrumentation test.
      * 
-    */
+     */
     public AndroidInstrumentationTestResponse androidInstrumentationTest() {
         return this.androidInstrumentationTest;
     }
     /**
-     * An Android robo test.
+     * @return An Android robo test.
      * 
-    */
+     */
     public AndroidRoboTestResponse androidRoboTest() {
         return this.androidRoboTest;
     }
     /**
-     * An Android test loop.
+     * @return An Android test loop.
      * 
-    */
+     */
     public AndroidTestLoopResponse androidTestLoop() {
         return this.androidTestLoop;
     }
     /**
-     * Max time a test is allowed to run before it is automatically cancelled.
+     * @return Max time a test is allowed to run before it is automatically cancelled.
      * 
-    */
+     */
     public DurationResponse testTimeout() {
         return this.testTimeout;
     }

@@ -26,6 +26,10 @@ public final class AppEngineHttpQueueArgs extends com.pulumi.resources.ResourceA
     @Import(name="appEngineRoutingOverride")
     private @Nullable Output<AppEngineRoutingArgs> appEngineRoutingOverride;
 
+    /**
+     * @return Overrides for the task-level app_engine_routing. If set, `app_engine_routing_override` is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.
+     * 
+     */
     public Optional<Output<AppEngineRoutingArgs>> appEngineRoutingOverride() {
         return Optional.ofNullable(this.appEngineRoutingOverride);
     }
@@ -54,11 +58,23 @@ public final class AppEngineHttpQueueArgs extends com.pulumi.resources.ResourceA
             $ = new AppEngineHttpQueueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appEngineRoutingOverride Overrides for the task-level app_engine_routing. If set, `app_engine_routing_override` is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appEngineRoutingOverride(@Nullable Output<AppEngineRoutingArgs> appEngineRoutingOverride) {
             $.appEngineRoutingOverride = appEngineRoutingOverride;
             return this;
         }
 
+        /**
+         * @param appEngineRoutingOverride Overrides for the task-level app_engine_routing. If set, `app_engine_routing_override` is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appEngineRoutingOverride(AppEngineRoutingArgs appEngineRoutingOverride) {
             return appEngineRoutingOverride(Output.of(appEngineRoutingOverride));
         }

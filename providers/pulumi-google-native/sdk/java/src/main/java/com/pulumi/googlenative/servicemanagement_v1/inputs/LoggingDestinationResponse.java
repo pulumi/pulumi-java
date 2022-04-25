@@ -24,6 +24,10 @@ public final class LoggingDestinationResponse extends com.pulumi.resources.Invok
     @Import(name="logs", required=true)
     private List<String> logs;
 
+    /**
+     * @return Names of the logs to be sent to this destination. Each name must be defined in the Service.logs section. If the log name is not a domain scoped name, it will be automatically prefixed with the service name followed by &#34;/&#34;.
+     * 
+     */
     public List<String> logs() {
         return this.logs;
     }
@@ -35,6 +39,10 @@ public final class LoggingDestinationResponse extends com.pulumi.resources.Invok
     @Import(name="monitoredResource", required=true)
     private String monitoredResource;
 
+    /**
+     * @return The monitored resource type. The type must be defined in the Service.monitored_resources section.
+     * 
+     */
     public String monitoredResource() {
         return this.monitoredResource;
     }
@@ -64,15 +72,33 @@ public final class LoggingDestinationResponse extends com.pulumi.resources.Invok
             $ = new LoggingDestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logs Names of the logs to be sent to this destination. Each name must be defined in the Service.logs section. If the log name is not a domain scoped name, it will be automatically prefixed with the service name followed by &#34;/&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logs(List<String> logs) {
             $.logs = logs;
             return this;
         }
 
+        /**
+         * @param logs Names of the logs to be sent to this destination. Each name must be defined in the Service.logs section. If the log name is not a domain scoped name, it will be automatically prefixed with the service name followed by &#34;/&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logs(String... logs) {
             return logs(List.of(logs));
         }
 
+        /**
+         * @param monitoredResource The monitored resource type. The type must be defined in the Service.monitored_resources section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoredResource(String monitoredResource) {
             $.monitoredResource = monitoredResource;
             return this;

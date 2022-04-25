@@ -25,6 +25,10 @@ public final class PasswordValidationPolicyResponse extends com.pulumi.resources
     @Import(name="complexity", required=true)
     private String complexity;
 
+    /**
+     * @return The complexity of the password.
+     * 
+     */
     public String complexity() {
         return this.complexity;
     }
@@ -36,6 +40,10 @@ public final class PasswordValidationPolicyResponse extends com.pulumi.resources
     @Import(name="disallowUsernameSubstring", required=true)
     private Boolean disallowUsernameSubstring;
 
+    /**
+     * @return Disallow username as a part of the password.
+     * 
+     */
     public Boolean disallowUsernameSubstring() {
         return this.disallowUsernameSubstring;
     }
@@ -47,6 +55,10 @@ public final class PasswordValidationPolicyResponse extends com.pulumi.resources
     @Import(name="minLength", required=true)
     private Integer minLength;
 
+    /**
+     * @return Minimum number of characters allowed.
+     * 
+     */
     public Integer minLength() {
         return this.minLength;
     }
@@ -58,6 +70,10 @@ public final class PasswordValidationPolicyResponse extends com.pulumi.resources
     @Import(name="passwordChangeInterval", required=true)
     private String passwordChangeInterval;
 
+    /**
+     * @return Minimum interval after which the password can be changed. This flag is only supported for PostgresSQL.
+     * 
+     */
     public String passwordChangeInterval() {
         return this.passwordChangeInterval;
     }
@@ -69,6 +85,10 @@ public final class PasswordValidationPolicyResponse extends com.pulumi.resources
     @Import(name="reuseInterval", required=true)
     private Integer reuseInterval;
 
+    /**
+     * @return Number of previous passwords that cannot be reused.
+     * 
+     */
     public Integer reuseInterval() {
         return this.reuseInterval;
     }
@@ -101,26 +121,56 @@ public final class PasswordValidationPolicyResponse extends com.pulumi.resources
             $ = new PasswordValidationPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param complexity The complexity of the password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complexity(String complexity) {
             $.complexity = complexity;
             return this;
         }
 
+        /**
+         * @param disallowUsernameSubstring Disallow username as a part of the password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disallowUsernameSubstring(Boolean disallowUsernameSubstring) {
             $.disallowUsernameSubstring = disallowUsernameSubstring;
             return this;
         }
 
+        /**
+         * @param minLength Minimum number of characters allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minLength(Integer minLength) {
             $.minLength = minLength;
             return this;
         }
 
+        /**
+         * @param passwordChangeInterval Minimum interval after which the password can be changed. This flag is only supported for PostgresSQL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwordChangeInterval(String passwordChangeInterval) {
             $.passwordChangeInterval = passwordChangeInterval;
             return this;
         }
 
+        /**
+         * @param reuseInterval Number of previous passwords that cannot be reused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reuseInterval(Integer reuseInterval) {
             $.reuseInterval = reuseInterval;
             return this;

@@ -25,6 +25,10 @@ public final class IngressToResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="operations", required=true)
     private List<ApiOperationResponse> operations;
 
+    /**
+     * @return A list of ApiOperations allowed to be performed by the sources specified in corresponding IngressFrom in this ServicePerimeter.
+     * 
+     */
     public List<ApiOperationResponse> operations() {
         return this.operations;
     }
@@ -36,6 +40,10 @@ public final class IngressToResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resources", required=true)
     private List<String> resources;
 
+    /**
+     * @return A list of resources, currently only projects in the form `projects/`, protected by this ServicePerimeter that are allowed to be accessed by sources defined in the corresponding IngressFrom. If a single `*` is specified, then access to all resources inside the perimeter are allowed.
+     * 
+     */
     public List<String> resources() {
         return this.resources;
     }
@@ -65,20 +73,44 @@ public final class IngressToResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IngressToResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operations A list of ApiOperations allowed to be performed by the sources specified in corresponding IngressFrom in this ServicePerimeter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operations(List<ApiOperationResponse> operations) {
             $.operations = operations;
             return this;
         }
 
+        /**
+         * @param operations A list of ApiOperations allowed to be performed by the sources specified in corresponding IngressFrom in this ServicePerimeter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operations(ApiOperationResponse... operations) {
             return operations(List.of(operations));
         }
 
+        /**
+         * @param resources A list of resources, currently only projects in the form `projects/`, protected by this ServicePerimeter that are allowed to be accessed by sources defined in the corresponding IngressFrom. If a single `*` is specified, then access to all resources inside the perimeter are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(List<String> resources) {
             $.resources = resources;
             return this;
         }
 
+        /**
+         * @param resources A list of resources, currently only projects in the form `projects/`, protected by this ServicePerimeter that are allowed to be accessed by sources defined in the corresponding IngressFrom. If a single `*` is specified, then access to all resources inside the perimeter are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(String... resources) {
             return resources(List.of(resources));
         }

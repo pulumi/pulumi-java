@@ -25,6 +25,10 @@ public final class MembershipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authority")
     private @Nullable Output<AuthorityArgs> authority;
 
+    /**
+     * @return Optional. How to identify workloads from this Membership. See the documentation on Workload Identity for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity
+     * 
+     */
     public Optional<Output<AuthorityArgs>> authority() {
         return Optional.ofNullable(this.authority);
     }
@@ -36,6 +40,10 @@ public final class MembershipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpoint")
     private @Nullable Output<MembershipEndpointArgs> endpoint;
 
+    /**
+     * @return Optional. Endpoint information to reach this member.
+     * 
+     */
     public Optional<Output<MembershipEndpointArgs>> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -47,6 +55,10 @@ public final class MembershipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="externalId")
     private @Nullable Output<String> externalId;
 
+    /**
+     * @return Optional. An externally-generated and managed ID for this Membership. This ID may be modified after creation, but this is not recommended. The ID must match the regex: `a-zA-Z0-9*` If this Membership represents a Kubernetes cluster, this value should be set to the UID of the `kube-system` namespace object.
+     * 
+     */
     public Optional<Output<String>> externalId() {
         return Optional.ofNullable(this.externalId);
     }
@@ -58,6 +70,10 @@ public final class MembershipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. GCP labels for this membership.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -121,38 +137,86 @@ public final class MembershipArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MembershipArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authority Optional. How to identify workloads from this Membership. See the documentation on Workload Identity for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder authority(@Nullable Output<AuthorityArgs> authority) {
             $.authority = authority;
             return this;
         }
 
+        /**
+         * @param authority Optional. How to identify workloads from this Membership. See the documentation on Workload Identity for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder authority(AuthorityArgs authority) {
             return authority(Output.of(authority));
         }
 
+        /**
+         * @param endpoint Optional. Endpoint information to reach this member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable Output<MembershipEndpointArgs> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint Optional. Endpoint information to reach this member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(MembershipEndpointArgs endpoint) {
             return endpoint(Output.of(endpoint));
         }
 
+        /**
+         * @param externalId Optional. An externally-generated and managed ID for this Membership. This ID may be modified after creation, but this is not recommended. The ID must match the regex: `a-zA-Z0-9*` If this Membership represents a Kubernetes cluster, this value should be set to the UID of the `kube-system` namespace object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalId(@Nullable Output<String> externalId) {
             $.externalId = externalId;
             return this;
         }
 
+        /**
+         * @param externalId Optional. An externally-generated and managed ID for this Membership. This ID may be modified after creation, but this is not recommended. The ID must match the regex: `a-zA-Z0-9*` If this Membership represents a Kubernetes cluster, this value should be set to the UID of the `kube-system` namespace object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalId(String externalId) {
             return externalId(Output.of(externalId));
         }
 
+        /**
+         * @param labels Optional. GCP labels for this membership.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. GCP labels for this membership.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }

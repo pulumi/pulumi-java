@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class RoboStartingIntentResponse {
     /**
-     * An intent that starts the main launcher activity.
+     * @return An intent that starts the main launcher activity.
      * 
      */
     private final LauncherActivityIntentResponse launcherActivity;
     /**
-     * An intent that starts an activity with specific details.
+     * @return An intent that starts an activity with specific details.
      * 
      */
     private final StartActivityIntentResponse startActivity;
     /**
-     * Timeout in seconds for each intent.
+     * @return Timeout in seconds for each intent.
      * 
      */
     private final String timeout;
@@ -38,23 +38,23 @@ public final class RoboStartingIntentResponse {
     }
 
     /**
-     * An intent that starts the main launcher activity.
+     * @return An intent that starts the main launcher activity.
      * 
-    */
+     */
     public LauncherActivityIntentResponse launcherActivity() {
         return this.launcherActivity;
     }
     /**
-     * An intent that starts an activity with specific details.
+     * @return An intent that starts an activity with specific details.
      * 
-    */
+     */
     public StartActivityIntentResponse startActivity() {
         return this.startActivity;
     }
     /**
-     * Timeout in seconds for each intent.
+     * @return Timeout in seconds for each intent.
      * 
-    */
+     */
     public String timeout() {
         return this.timeout;
     }

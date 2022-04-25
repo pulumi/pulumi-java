@@ -27,6 +27,10 @@ public final class HttpFaultInjectionArgs extends com.pulumi.resources.ResourceA
     @Import(name="abort")
     private @Nullable Output<HttpFaultAbortArgs> abort;
 
+    /**
+     * @return The specification for how client requests are aborted as part of fault injection.
+     * 
+     */
     public Optional<Output<HttpFaultAbortArgs>> abort() {
         return Optional.ofNullable(this.abort);
     }
@@ -38,6 +42,10 @@ public final class HttpFaultInjectionArgs extends com.pulumi.resources.ResourceA
     @Import(name="delay")
     private @Nullable Output<HttpFaultDelayArgs> delay;
 
+    /**
+     * @return The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
+     * 
+     */
     public Optional<Output<HttpFaultDelayArgs>> delay() {
         return Optional.ofNullable(this.delay);
     }
@@ -67,20 +75,44 @@ public final class HttpFaultInjectionArgs extends com.pulumi.resources.ResourceA
             $ = new HttpFaultInjectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param abort The specification for how client requests are aborted as part of fault injection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abort(@Nullable Output<HttpFaultAbortArgs> abort) {
             $.abort = abort;
             return this;
         }
 
+        /**
+         * @param abort The specification for how client requests are aborted as part of fault injection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abort(HttpFaultAbortArgs abort) {
             return abort(Output.of(abort));
         }
 
+        /**
+         * @param delay The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delay(@Nullable Output<HttpFaultDelayArgs> delay) {
             $.delay = delay;
             return this;
         }
 
+        /**
+         * @param delay The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delay(HttpFaultDelayArgs delay) {
             return delay(Output.of(delay));
         }

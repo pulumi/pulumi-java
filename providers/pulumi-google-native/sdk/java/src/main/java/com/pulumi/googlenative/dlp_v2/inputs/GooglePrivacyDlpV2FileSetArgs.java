@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2FileSetArgs extends com.pulumi.resources.Re
     @Import(name="regexFileSet")
     private @Nullable Output<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet;
 
+    /**
+     * @return The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs>> regexFileSet() {
         return Optional.ofNullable(this.regexFileSet);
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2FileSetArgs extends com.pulumi.resources.Re
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return The Cloud Storage url of the file(s) to scan, in the format `gs:///`. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`. Exactly one of `url` or `regex_file_set` must be set.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -67,20 +75,44 @@ public final class GooglePrivacyDlpV2FileSetArgs extends com.pulumi.resources.Re
             $ = new GooglePrivacyDlpV2FileSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param regexFileSet The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexFileSet(@Nullable Output<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet) {
             $.regexFileSet = regexFileSet;
             return this;
         }
 
+        /**
+         * @param regexFileSet The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexFileSet(GooglePrivacyDlpV2CloudStorageRegexFileSetArgs regexFileSet) {
             return regexFileSet(Output.of(regexFileSet));
         }
 
+        /**
+         * @param url The Cloud Storage url of the file(s) to scan, in the format `gs:///`. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`. Exactly one of `url` or `regex_file_set` must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The Cloud Storage url of the file(s) to scan, in the format `gs:///`. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`. Exactly one of `url` or `regex_file_set` must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

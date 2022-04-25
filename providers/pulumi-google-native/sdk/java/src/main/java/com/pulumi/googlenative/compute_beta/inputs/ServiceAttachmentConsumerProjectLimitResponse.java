@@ -20,6 +20,10 @@ public final class ServiceAttachmentConsumerProjectLimitResponse extends com.pul
     @Import(name="connectionLimit", required=true)
     private Integer connectionLimit;
 
+    /**
+     * @return The value of the limit to set.
+     * 
+     */
     public Integer connectionLimit() {
         return this.connectionLimit;
     }
@@ -31,6 +35,10 @@ public final class ServiceAttachmentConsumerProjectLimitResponse extends com.pul
     @Import(name="projectIdOrNum", required=true)
     private String projectIdOrNum;
 
+    /**
+     * @return The project id or number for the project to set the limit for.
+     * 
+     */
     public String projectIdOrNum() {
         return this.projectIdOrNum;
     }
@@ -60,11 +68,23 @@ public final class ServiceAttachmentConsumerProjectLimitResponse extends com.pul
             $ = new ServiceAttachmentConsumerProjectLimitResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionLimit The value of the limit to set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionLimit(Integer connectionLimit) {
             $.connectionLimit = connectionLimit;
             return this;
         }
 
+        /**
+         * @param projectIdOrNum The project id or number for the project to set the limit for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectIdOrNum(String projectIdOrNum) {
             $.projectIdOrNum = projectIdOrNum;
             return this;

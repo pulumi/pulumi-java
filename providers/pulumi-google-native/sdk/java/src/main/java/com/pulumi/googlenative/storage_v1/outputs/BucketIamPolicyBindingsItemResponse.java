@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class BucketIamPolicyBindingsItemResponse {
     /**
-     * The condition that is associated with this binding. NOTE: an unsatisfied condition will not allow user access via current binding. Different bindings, including their conditions, are examined independently.
+     * @return The condition that is associated with this binding. NOTE: an unsatisfied condition will not allow user access via current binding. Different bindings, including their conditions, are examined independently.
      * 
      */
     private final ExprResponse condition;
     /**
-     * A collection of identifiers for members who may assume the provided role. Recognized identifiers are as follows:
+     * @return A collection of identifiers for members who may assume the provided role. Recognized identifiers are as follows:
      * - allUsers — A special identifier that represents anyone on the internet; with or without a Google account.
      * - allAuthenticatedUsers — A special identifier that represents anyone who is authenticated with a Google account or a service account.
      * - user:emailid — An email address that represents a specific account. For example, user:alice@gmail.com or user:joe@example.com.
@@ -31,7 +31,7 @@ public final class BucketIamPolicyBindingsItemResponse {
      */
     private final List<String> members;
     /**
-     * The role to which members belong. Two types of roles are supported: new IAM roles, which grant permissions that do not map directly to those provided by ACLs, and legacy IAM roles, which do map directly to ACL permissions. All roles are of the format roles/storage.specificRole.
+     * @return The role to which members belong. Two types of roles are supported: new IAM roles, which grant permissions that do not map directly to those provided by ACLs, and legacy IAM roles, which do map directly to ACL permissions. All roles are of the format roles/storage.specificRole.
      * The new IAM roles are:
      * - roles/storage.admin — Full control of Google Cloud Storage resources.
      * - roles/storage.objectViewer — Read-Only access to Google Cloud Storage objects.
@@ -57,14 +57,14 @@ public final class BucketIamPolicyBindingsItemResponse {
     }
 
     /**
-     * The condition that is associated with this binding. NOTE: an unsatisfied condition will not allow user access via current binding. Different bindings, including their conditions, are examined independently.
+     * @return The condition that is associated with this binding. NOTE: an unsatisfied condition will not allow user access via current binding. Different bindings, including their conditions, are examined independently.
      * 
-    */
+     */
     public ExprResponse condition() {
         return this.condition;
     }
     /**
-     * A collection of identifiers for members who may assume the provided role. Recognized identifiers are as follows:
+     * @return A collection of identifiers for members who may assume the provided role. Recognized identifiers are as follows:
      * - allUsers — A special identifier that represents anyone on the internet; with or without a Google account.
      * - allAuthenticatedUsers — A special identifier that represents anyone who is authenticated with a Google account or a service account.
      * - user:emailid — An email address that represents a specific account. For example, user:alice@gmail.com or user:joe@example.com.
@@ -75,12 +75,12 @@ public final class BucketIamPolicyBindingsItemResponse {
      * - projectEditor:projectid — Editors of the given project. For example, projectEditor:my-example-project
      * - projectViewer:projectid — Viewers of the given project. For example, projectViewer:my-example-project
      * 
-    */
+     */
     public List<String> members() {
         return this.members;
     }
     /**
-     * The role to which members belong. Two types of roles are supported: new IAM roles, which grant permissions that do not map directly to those provided by ACLs, and legacy IAM roles, which do map directly to ACL permissions. All roles are of the format roles/storage.specificRole.
+     * @return The role to which members belong. Two types of roles are supported: new IAM roles, which grant permissions that do not map directly to those provided by ACLs, and legacy IAM roles, which do map directly to ACL permissions. All roles are of the format roles/storage.specificRole.
      * The new IAM roles are:
      * - roles/storage.admin — Full control of Google Cloud Storage resources.
      * - roles/storage.objectViewer — Read-Only access to Google Cloud Storage objects.
@@ -92,7 +92,7 @@ public final class BucketIamPolicyBindingsItemResponse {
      * - roles/storage.legacyBucketWriter — Read access to buckets with object listing/creation/deletion. Equivalent to an ACL entry on a bucket with the WRITER role.
      * - roles/storage.legacyBucketOwner — Read and write access to existing buckets with object listing/creation/deletion. Equivalent to an ACL entry on a bucket with the OWNER role.
      * 
-    */
+     */
     public String role() {
         return this.role;
     }

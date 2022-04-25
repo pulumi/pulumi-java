@@ -26,6 +26,10 @@ public final class AudioStreamResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bitrateBps", required=true)
     private Integer bitrateBps;
 
+    /**
+     * @return Audio bitrate in bits per second. Must be between 1 and 10,000,000.
+     * 
+     */
     public Integer bitrateBps() {
         return this.bitrateBps;
     }
@@ -37,6 +41,10 @@ public final class AudioStreamResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="channelCount", required=true)
     private Integer channelCount;
 
+    /**
+     * @return Number of audio channels. Must be between 1 and 6. The default is 2.
+     * 
+     */
     public Integer channelCount() {
         return this.channelCount;
     }
@@ -48,6 +56,10 @@ public final class AudioStreamResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="channelLayout", required=true)
     private List<String> channelLayout;
 
+    /**
+     * @return A list of channel names specifying layout of the audio channels. This only affects the metadata embedded in the container headers, if supported by the specified format. The default is `[&#34;fl&#34;, &#34;fr&#34;]`. Supported channel names: - `fl` - Front left channel - `fr` - Front right channel - `sl` - Side left channel - `sr` - Side right channel - `fc` - Front center channel - `lfe` - Low frequency
+     * 
+     */
     public List<String> channelLayout() {
         return this.channelLayout;
     }
@@ -59,6 +71,10 @@ public final class AudioStreamResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="codec", required=true)
     private String codec;
 
+    /**
+     * @return The codec for this audio stream. The default is `aac`. Supported audio codecs: - `aac` - `aac-he` - `aac-he-v2` - `mp3` - `ac3` - `eac3`
+     * 
+     */
     public String codec() {
         return this.codec;
     }
@@ -70,6 +86,10 @@ public final class AudioStreamResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mapping", required=true)
     private List<AudioMappingResponse> mapping;
 
+    /**
+     * @return The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
+     * 
+     */
     public List<AudioMappingResponse> mapping() {
         return this.mapping;
     }
@@ -81,6 +101,10 @@ public final class AudioStreamResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sampleRateHertz", required=true)
     private Integer sampleRateHertz;
 
+    /**
+     * @return The audio sample rate in Hertz. The default is 48000 Hertz.
+     * 
+     */
     public Integer sampleRateHertz() {
         return this.sampleRateHertz;
     }
@@ -114,39 +138,87 @@ public final class AudioStreamResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AudioStreamResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bitrateBps Audio bitrate in bits per second. Must be between 1 and 10,000,000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrateBps(Integer bitrateBps) {
             $.bitrateBps = bitrateBps;
             return this;
         }
 
+        /**
+         * @param channelCount Number of audio channels. Must be between 1 and 6. The default is 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelCount(Integer channelCount) {
             $.channelCount = channelCount;
             return this;
         }
 
+        /**
+         * @param channelLayout A list of channel names specifying layout of the audio channels. This only affects the metadata embedded in the container headers, if supported by the specified format. The default is `[&#34;fl&#34;, &#34;fr&#34;]`. Supported channel names: - `fl` - Front left channel - `fr` - Front right channel - `sl` - Side left channel - `sr` - Side right channel - `fc` - Front center channel - `lfe` - Low frequency
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelLayout(List<String> channelLayout) {
             $.channelLayout = channelLayout;
             return this;
         }
 
+        /**
+         * @param channelLayout A list of channel names specifying layout of the audio channels. This only affects the metadata embedded in the container headers, if supported by the specified format. The default is `[&#34;fl&#34;, &#34;fr&#34;]`. Supported channel names: - `fl` - Front left channel - `fr` - Front right channel - `sl` - Side left channel - `sr` - Side right channel - `fc` - Front center channel - `lfe` - Low frequency
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelLayout(String... channelLayout) {
             return channelLayout(List.of(channelLayout));
         }
 
+        /**
+         * @param codec The codec for this audio stream. The default is `aac`. Supported audio codecs: - `aac` - `aac-he` - `aac-he-v2` - `mp3` - `ac3` - `eac3`
+         * 
+         * @return builder
+         * 
+         */
         public Builder codec(String codec) {
             $.codec = codec;
             return this;
         }
 
+        /**
+         * @param mapping The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapping(List<AudioMappingResponse> mapping) {
             $.mapping = mapping;
             return this;
         }
 
+        /**
+         * @param mapping The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapping(AudioMappingResponse... mapping) {
             return mapping(List.of(mapping));
         }
 
+        /**
+         * @param sampleRateHertz The audio sample rate in Hertz. The default is 48000 Hertz.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleRateHertz(Integer sampleRateHertz) {
             $.sampleRateHertz = sampleRateHertz;
             return this;

@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class EnvelopeResponse {
     /**
-     * The bytes being signed
+     * @return The bytes being signed
      * 
      */
     private final String payload;
     /**
-     * The type of payload being signed
+     * @return The type of payload being signed
      * 
      */
     private final String payloadType;
     /**
-     * The signatures over the payload
+     * @return The signatures over the payload
      * 
      */
     private final List<EnvelopeSignatureResponse> signatures;
@@ -38,23 +38,23 @@ public final class EnvelopeResponse {
     }
 
     /**
-     * The bytes being signed
+     * @return The bytes being signed
      * 
-    */
+     */
     public String payload() {
         return this.payload;
     }
     /**
-     * The type of payload being signed
+     * @return The type of payload being signed
      * 
-    */
+     */
     public String payloadType() {
         return this.payloadType;
     }
     /**
-     * The signatures over the payload
+     * @return The signatures over the payload
      * 
-    */
+     */
     public List<EnvelopeSignatureResponse> signatures() {
         return this.signatures;
     }

@@ -23,6 +23,10 @@ public final class OidcTokenResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="audience", required=true)
     private String audience;
 
+    /**
+     * @return Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.
+     * 
+     */
     public String audience() {
         return this.audience;
     }
@@ -34,6 +38,10 @@ public final class OidcTokenResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceAccountEmail", required=true)
     private String serviceAccountEmail;
 
+    /**
+     * @return [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OIDC token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.
+     * 
+     */
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
@@ -63,11 +71,23 @@ public final class OidcTokenResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OidcTokenResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audience Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(String audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param serviceAccountEmail [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OIDC token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             $.serviceAccountEmail = serviceAccountEmail;
             return this;

@@ -13,37 +13,37 @@ import java.util.Objects;
 @CustomType
 public final class WindowsUpdateResponse {
     /**
-     * The list of categories to which the update belongs.
+     * @return The list of categories to which the update belongs.
      * 
      */
     private final List<CategoryResponse> categories;
     /**
-     * The localized description of the update.
+     * @return The localized description of the update.
      * 
      */
     private final String description;
     /**
-     * Required - The unique identifier for the update.
+     * @return Required - The unique identifier for the update.
      * 
      */
     private final IdentityResponse identity;
     /**
-     * The Microsoft Knowledge Base article IDs that are associated with the update.
+     * @return The Microsoft Knowledge Base article IDs that are associated with the update.
      * 
      */
     private final List<String> kbArticleIds;
     /**
-     * The last published timestamp of the update.
+     * @return The last published timestamp of the update.
      * 
      */
     private final String lastPublishedTimestamp;
     /**
-     * The hyperlink to the support information for the update.
+     * @return The hyperlink to the support information for the update.
      * 
      */
     private final String supportUrl;
     /**
-     * The localized title of the update.
+     * @return The localized title of the update.
      * 
      */
     private final String title;
@@ -67,51 +67,51 @@ public final class WindowsUpdateResponse {
     }
 
     /**
-     * The list of categories to which the update belongs.
+     * @return The list of categories to which the update belongs.
      * 
-    */
+     */
     public List<CategoryResponse> categories() {
         return this.categories;
     }
     /**
-     * The localized description of the update.
+     * @return The localized description of the update.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Required - The unique identifier for the update.
+     * @return Required - The unique identifier for the update.
      * 
-    */
+     */
     public IdentityResponse identity() {
         return this.identity;
     }
     /**
-     * The Microsoft Knowledge Base article IDs that are associated with the update.
+     * @return The Microsoft Knowledge Base article IDs that are associated with the update.
      * 
-    */
+     */
     public List<String> kbArticleIds() {
         return this.kbArticleIds;
     }
     /**
-     * The last published timestamp of the update.
+     * @return The last published timestamp of the update.
      * 
-    */
+     */
     public String lastPublishedTimestamp() {
         return this.lastPublishedTimestamp;
     }
     /**
-     * The hyperlink to the support information for the update.
+     * @return The hyperlink to the support information for the update.
      * 
-    */
+     */
     public String supportUrl() {
         return this.supportUrl;
     }
     /**
-     * The localized title of the update.
+     * @return The localized title of the update.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

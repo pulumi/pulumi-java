@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends com
     @Import(name="condition")
     private @Nullable Output<String> condition;
 
+    /**
+     * @return The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
+     * 
+     */
     public Optional<Output<String>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends com
     @Import(name="intent")
     private @Nullable Output<String> intent;
 
+    /**
+     * @return The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates that the transition can only happen when the given intent is matched. At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
+     * 
+     */
     public Optional<Output<String>> intent() {
         return Optional.ofNullable(this.intent);
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends com
     @Import(name="targetFlow")
     private @Nullable Output<String> targetFlow;
 
+    /**
+     * @return The target flow to transition to. Format: `projects//locations//agents//flows/`.
+     * 
+     */
     public Optional<Output<String>> targetFlow() {
         return Optional.ofNullable(this.targetFlow);
     }
@@ -60,6 +72,10 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends com
     @Import(name="targetPage")
     private @Nullable Output<String> targetPage;
 
+    /**
+     * @return The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
+     * 
+     */
     public Optional<Output<String>> targetPage() {
         return Optional.ofNullable(this.targetPage);
     }
@@ -71,6 +87,10 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends com
     @Import(name="triggerFulfillment")
     private @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment;
 
+    /**
+     * @return The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment` and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs>> triggerFulfillment() {
         return Optional.ofNullable(this.triggerFulfillment);
     }
@@ -103,47 +123,107 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends com
             $ = new GoogleCloudDialogflowCxV3beta1TransitionRouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<String> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(String condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param intent The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates that the transition can only happen when the given intent is matched. At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intent(@Nullable Output<String> intent) {
             $.intent = intent;
             return this;
         }
 
+        /**
+         * @param intent The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates that the transition can only happen when the given intent is matched. At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intent(String intent) {
             return intent(Output.of(intent));
         }
 
+        /**
+         * @param targetFlow The target flow to transition to. Format: `projects//locations//agents//flows/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetFlow(@Nullable Output<String> targetFlow) {
             $.targetFlow = targetFlow;
             return this;
         }
 
+        /**
+         * @param targetFlow The target flow to transition to. Format: `projects//locations//agents//flows/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetFlow(String targetFlow) {
             return targetFlow(Output.of(targetFlow));
         }
 
+        /**
+         * @param targetPage The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPage(@Nullable Output<String> targetPage) {
             $.targetPage = targetPage;
             return this;
         }
 
+        /**
+         * @param targetPage The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPage(String targetPage) {
             return targetPage(Output.of(targetPage));
         }
 
+        /**
+         * @param triggerFulfillment The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment` and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerFulfillment(@Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment) {
             $.triggerFulfillment = triggerFulfillment;
             return this;
         }
 
+        /**
+         * @param triggerFulfillment The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment` and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerFulfillment(GoogleCloudDialogflowCxV3beta1FulfillmentArgs triggerFulfillment) {
             return triggerFulfillment(Output.of(triggerFulfillment));
         }

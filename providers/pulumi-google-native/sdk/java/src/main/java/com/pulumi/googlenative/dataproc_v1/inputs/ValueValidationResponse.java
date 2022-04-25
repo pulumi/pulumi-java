@@ -24,6 +24,10 @@ public final class ValueValidationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="values", required=true)
     private List<String> values;
 
+    /**
+     * @return List of allowed values for the parameter.
+     * 
+     */
     public List<String> values() {
         return this.values;
     }
@@ -52,11 +56,23 @@ public final class ValueValidationResponse extends com.pulumi.resources.InvokeAr
             $ = new ValueValidationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param values List of allowed values for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values List of allowed values for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

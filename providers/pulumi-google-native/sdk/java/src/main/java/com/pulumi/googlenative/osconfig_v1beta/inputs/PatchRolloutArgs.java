@@ -27,6 +27,10 @@ public final class PatchRolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disruptionBudget")
     private @Nullable Output<FixedOrPercentArgs> disruptionBudget;
 
+    /**
+     * @return The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of `10`, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.
+     * 
+     */
     public Optional<Output<FixedOrPercentArgs>> disruptionBudget() {
         return Optional.ofNullable(this.disruptionBudget);
     }
@@ -38,6 +42,10 @@ public final class PatchRolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mode")
     private @Nullable Output<PatchRolloutMode> mode;
 
+    /**
+     * @return Mode of the patch rollout.
+     * 
+     */
     public Optional<Output<PatchRolloutMode>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -67,20 +75,44 @@ public final class PatchRolloutArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PatchRolloutArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disruptionBudget The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of `10`, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disruptionBudget(@Nullable Output<FixedOrPercentArgs> disruptionBudget) {
             $.disruptionBudget = disruptionBudget;
             return this;
         }
 
+        /**
+         * @param disruptionBudget The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of `10`, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disruptionBudget(FixedOrPercentArgs disruptionBudget) {
             return disruptionBudget(Output.of(disruptionBudget));
         }
 
+        /**
+         * @param mode Mode of the patch rollout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<PatchRolloutMode> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Mode of the patch rollout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(PatchRolloutMode mode) {
             return mode(Output.of(mode));
         }

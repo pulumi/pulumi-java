@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class Hl7TypesConfigResponse {
     /**
-     * The HL7v2 type definitions.
+     * @return The HL7v2 type definitions.
      * 
      */
     private final List<TypeResponse> type;
     /**
-     * The version selectors that this config applies to. A message must match ALL version sources to apply.
+     * @return The version selectors that this config applies to. A message must match ALL version sources to apply.
      * 
      */
     private final List<VersionSourceResponse> version;
@@ -31,16 +31,16 @@ public final class Hl7TypesConfigResponse {
     }
 
     /**
-     * The HL7v2 type definitions.
+     * @return The HL7v2 type definitions.
      * 
-    */
+     */
     public List<TypeResponse> type() {
         return this.type;
     }
     /**
-     * The version selectors that this config applies to. A message must match ALL version sources to apply.
+     * @return The version selectors that this config applies to. A message must match ALL version sources to apply.
      * 
-    */
+     */
     public List<VersionSourceResponse> version() {
         return this.version;
     }

@@ -24,6 +24,10 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="affectedLocation", required=true)
     private VulnerabilityLocationResponse affectedLocation;
 
+    /**
+     * @return The location of the vulnerability.
+     * 
+     */
     public VulnerabilityLocationResponse affectedLocation() {
         return this.affectedLocation;
     }
@@ -35,6 +39,10 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="effectiveSeverity", required=true)
     private String effectiveSeverity;
 
+    /**
+     * @return The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when it is not available.
+     * 
+     */
     public String effectiveSeverity() {
         return this.effectiveSeverity;
     }
@@ -46,6 +54,10 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fixedLocation", required=true)
     private VulnerabilityLocationResponse fixedLocation;
 
+    /**
+     * @return The location of the available fix for vulnerability.
+     * 
+     */
     public VulnerabilityLocationResponse fixedLocation() {
         return this.fixedLocation;
     }
@@ -57,6 +69,10 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="packageType", required=true)
     private String packageType;
 
+    /**
+     * @return The type of package (e.g. OS, MAVEN, GO).
+     * 
+     */
     public String packageType() {
         return this.packageType;
     }
@@ -88,21 +104,45 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
             $ = new PackageIssueResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param affectedLocation The location of the vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affectedLocation(VulnerabilityLocationResponse affectedLocation) {
             $.affectedLocation = affectedLocation;
             return this;
         }
 
+        /**
+         * @param effectiveSeverity The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when it is not available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder effectiveSeverity(String effectiveSeverity) {
             $.effectiveSeverity = effectiveSeverity;
             return this;
         }
 
+        /**
+         * @param fixedLocation The location of the available fix for vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedLocation(VulnerabilityLocationResponse fixedLocation) {
             $.fixedLocation = fixedLocation;
             return this;
         }
 
+        /**
+         * @param packageType The type of package (e.g. OS, MAVEN, GO).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageType(String packageType) {
             $.packageType = packageType;
             return this;

@@ -23,6 +23,10 @@ public final class BinaryAuthorizationResponse extends com.pulumi.resources.Invo
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binauthz.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class BinaryAuthorizationResponse extends com.pulumi.resources.Invo
             $ = new BinaryAuthorizationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binauthz.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

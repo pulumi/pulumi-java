@@ -28,6 +28,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudSqlInstance")
     private @Nullable Output<String> cloudSqlInstance;
 
+    /**
+     * @return A [Cloud SQL](https://cloud.google.com/sql) instance URI.
+     * 
+     */
     public Optional<Output<String>> cloudSqlInstance() {
         return Optional.ofNullable(this.cloudSqlInstance);
     }
@@ -39,6 +43,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gkeMasterCluster")
     private @Nullable Output<String> gkeMasterCluster;
 
+    /**
+     * @return A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture).
+     * 
+     */
     public Optional<Output<String>> gkeMasterCluster() {
         return Optional.ofNullable(this.gkeMasterCluster);
     }
@@ -50,6 +58,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instance")
     private @Nullable Output<String> instance;
 
+    /**
+     * @return A Compute Engine instance URI.
+     * 
+     */
     public Optional<Output<String>> instance() {
         return Optional.ofNullable(this.instance);
     }
@@ -61,6 +73,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test&#39;s destination is a [global load balancer VIP](/load-balancing/docs/load-balancing-overview).
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -72,6 +88,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return A Compute Engine network URI.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -83,6 +103,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkType")
     private @Nullable Output<EndpointNetworkType> networkType;
 
+    /**
+     * @return Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.
+     * 
+     */
     public Optional<Output<EndpointNetworkType>> networkType() {
         return Optional.ofNullable(this.networkType);
     }
@@ -94,6 +118,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -105,6 +133,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -140,74 +172,170 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudSqlInstance A [Cloud SQL](https://cloud.google.com/sql) instance URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSqlInstance(@Nullable Output<String> cloudSqlInstance) {
             $.cloudSqlInstance = cloudSqlInstance;
             return this;
         }
 
+        /**
+         * @param cloudSqlInstance A [Cloud SQL](https://cloud.google.com/sql) instance URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSqlInstance(String cloudSqlInstance) {
             return cloudSqlInstance(Output.of(cloudSqlInstance));
         }
 
+        /**
+         * @param gkeMasterCluster A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeMasterCluster(@Nullable Output<String> gkeMasterCluster) {
             $.gkeMasterCluster = gkeMasterCluster;
             return this;
         }
 
+        /**
+         * @param gkeMasterCluster A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeMasterCluster(String gkeMasterCluster) {
             return gkeMasterCluster(Output.of(gkeMasterCluster));
         }
 
+        /**
+         * @param instance A Compute Engine instance URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(@Nullable Output<String> instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param instance A Compute Engine instance URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             return instance(Output.of(instance));
         }
 
+        /**
+         * @param ipAddress The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test&#39;s destination is a [global load balancer VIP](/load-balancing/docs/load-balancing-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test&#39;s destination is a [global load balancer VIP](/load-balancing/docs/load-balancing-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param network A Compute Engine network URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network A Compute Engine network URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param networkType Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkType(@Nullable Output<EndpointNetworkType> networkType) {
             $.networkType = networkType;
             return this;
         }
 
+        /**
+         * @param networkType Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkType(EndpointNetworkType networkType) {
             return networkType(Output.of(networkType));
         }
 
+        /**
+         * @param port The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param project Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

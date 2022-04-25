@@ -23,6 +23,10 @@ public final class NodeInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="zone", required=true)
     private String zone;
 
+    /**
+     * @return Location of the node.
+     * 
+     */
     public String zone() {
         return this.zone;
     }
@@ -51,6 +55,12 @@ public final class NodeInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new NodeInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param zone Location of the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             $.zone = zone;
             return this;

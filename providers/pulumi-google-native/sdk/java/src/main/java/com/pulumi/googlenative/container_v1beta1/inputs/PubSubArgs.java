@@ -28,6 +28,10 @@ public final class PubSubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Enable notifications for Pub/Sub.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -39,6 +43,10 @@ public final class PubSubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filter")
     private @Nullable Output<FilterArgs> filter;
 
+    /**
+     * @return Allows filtering to one or more specific event types. If no filter is specified, or if a filter is specified with no event types, all event types will be sent
+     * 
+     */
     public Optional<Output<FilterArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -50,6 +58,10 @@ public final class PubSubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topic")
     private @Nullable Output<String> topic;
 
+    /**
+     * @return The desired Pub/Sub topic to which notifications will be sent by GKE. Format is `projects/{project}/topics/{topic}`.
+     * 
+     */
     public Optional<Output<String>> topic() {
         return Optional.ofNullable(this.topic);
     }
@@ -80,29 +92,65 @@ public final class PubSubArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PubSubArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Enable notifications for Pub/Sub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Enable notifications for Pub/Sub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param filter Allows filtering to one or more specific event types. If no filter is specified, or if a filter is specified with no event types, all event types will be sent
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<FilterArgs> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter Allows filtering to one or more specific event types. If no filter is specified, or if a filter is specified with no event types, all event types will be sent
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(FilterArgs filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param topic The desired Pub/Sub topic to which notifications will be sent by GKE. Format is `projects/{project}/topics/{topic}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(@Nullable Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic The desired Pub/Sub topic to which notifications will be sent by GKE. Format is `projects/{project}/topics/{topic}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }

@@ -27,6 +27,10 @@ public final class JsonFileFormatArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="compression")
     private @Nullable Output<JsonFileFormatCompression> compression;
 
+    /**
+     * @return Compression of the loaded JSON file.
+     * 
+     */
     public Optional<Output<JsonFileFormatCompression>> compression() {
         return Optional.ofNullable(this.compression);
     }
@@ -38,6 +42,10 @@ public final class JsonFileFormatArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="schemaFileFormat")
     private @Nullable Output<JsonFileFormatSchemaFileFormat> schemaFileFormat;
 
+    /**
+     * @return The schema file format along JSON data files.
+     * 
+     */
     public Optional<Output<JsonFileFormatSchemaFileFormat>> schemaFileFormat() {
         return Optional.ofNullable(this.schemaFileFormat);
     }
@@ -67,20 +75,44 @@ public final class JsonFileFormatArgs extends com.pulumi.resources.ResourceArgs 
             $ = new JsonFileFormatArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compression Compression of the loaded JSON file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compression(@Nullable Output<JsonFileFormatCompression> compression) {
             $.compression = compression;
             return this;
         }
 
+        /**
+         * @param compression Compression of the loaded JSON file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compression(JsonFileFormatCompression compression) {
             return compression(Output.of(compression));
         }
 
+        /**
+         * @param schemaFileFormat The schema file format along JSON data files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaFileFormat(@Nullable Output<JsonFileFormatSchemaFileFormat> schemaFileFormat) {
             $.schemaFileFormat = schemaFileFormat;
             return this;
         }
 
+        /**
+         * @param schemaFileFormat The schema file format along JSON data files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaFileFormat(JsonFileFormatSchemaFileFormat schemaFileFormat) {
             return schemaFileFormat(Output.of(schemaFileFormat));
         }

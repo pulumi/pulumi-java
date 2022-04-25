@@ -27,6 +27,10 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends co
     @Import(name="testingChallenge")
     private @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge;
 
+    /**
+     * @return For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+     * 
+     */
     public Optional<Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge>> testingChallenge() {
         return Optional.ofNullable(this.testingChallenge);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends co
     @Import(name="testingScore")
     private @Nullable Output<Double> testingScore;
 
+    /**
+     * @return All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
+     * 
+     */
     public Optional<Output<Double>> testingScore() {
         return Optional.ofNullable(this.testingScore);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends co
             $ = new GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param testingChallenge For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testingChallenge(@Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge) {
             $.testingChallenge = testingChallenge;
             return this;
         }
 
+        /**
+         * @param testingChallenge For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testingChallenge(GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge testingChallenge) {
             return testingChallenge(Output.of(testingChallenge));
         }
 
+        /**
+         * @param testingScore All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testingScore(@Nullable Output<Double> testingScore) {
             $.testingScore = testingScore;
             return this;
         }
 
+        /**
+         * @param testingScore All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testingScore(Double testingScore) {
             return testingScore(Output.of(testingScore));
         }

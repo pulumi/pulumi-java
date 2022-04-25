@@ -26,6 +26,10 @@ public final class DeliveryConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="deliveryRequirement")
     private @Nullable Output<DeliveryConfigDeliveryRequirement> deliveryRequirement;
 
+    /**
+     * @return The DeliveryRequirement for this subscription.
+     * 
+     */
     public Optional<Output<DeliveryConfigDeliveryRequirement>> deliveryRequirement() {
         return Optional.ofNullable(this.deliveryRequirement);
     }
@@ -54,11 +58,23 @@ public final class DeliveryConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DeliveryConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deliveryRequirement The DeliveryRequirement for this subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryRequirement(@Nullable Output<DeliveryConfigDeliveryRequirement> deliveryRequirement) {
             $.deliveryRequirement = deliveryRequirement;
             return this;
         }
 
+        /**
+         * @param deliveryRequirement The DeliveryRequirement for this subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryRequirement(DeliveryConfigDeliveryRequirement deliveryRequirement) {
             return deliveryRequirement(Output.of(deliveryRequirement));
         }

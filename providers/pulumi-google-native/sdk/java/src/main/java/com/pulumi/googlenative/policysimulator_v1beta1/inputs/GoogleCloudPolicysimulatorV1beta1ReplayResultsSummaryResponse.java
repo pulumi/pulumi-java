@@ -24,6 +24,10 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
     @Import(name="differenceCount", required=true)
     private Integer differenceCount;
 
+    /**
+     * @return The number of replayed log entries with a difference between baseline and simulated policies.
+     * 
+     */
     public Integer differenceCount() {
         return this.differenceCount;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
     @Import(name="errorCount", required=true)
     private Integer errorCount;
 
+    /**
+     * @return The number of log entries that could not be replayed.
+     * 
+     */
     public Integer errorCount() {
         return this.errorCount;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
     @Import(name="logCount", required=true)
     private Integer logCount;
 
+    /**
+     * @return The total number of log entries replayed.
+     * 
+     */
     public Integer logCount() {
         return this.logCount;
     }
@@ -57,6 +69,10 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
     @Import(name="newestDate", required=true)
     private GoogleTypeDateResponse newestDate;
 
+    /**
+     * @return The date of the newest log entry replayed.
+     * 
+     */
     public GoogleTypeDateResponse newestDate() {
         return this.newestDate;
     }
@@ -68,6 +84,10 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
     @Import(name="oldestDate", required=true)
     private GoogleTypeDateResponse oldestDate;
 
+    /**
+     * @return The date of the oldest log entry replayed.
+     * 
+     */
     public GoogleTypeDateResponse oldestDate() {
         return this.oldestDate;
     }
@@ -79,6 +99,10 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
     @Import(name="unchangedCount", required=true)
     private Integer unchangedCount;
 
+    /**
+     * @return The number of replayed log entries with no difference between baseline and simulated policies.
+     * 
+     */
     public Integer unchangedCount() {
         return this.unchangedCount;
     }
@@ -112,31 +136,67 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
             $ = new GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param differenceCount The number of replayed log entries with a difference between baseline and simulated policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder differenceCount(Integer differenceCount) {
             $.differenceCount = differenceCount;
             return this;
         }
 
+        /**
+         * @param errorCount The number of log entries that could not be replayed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCount(Integer errorCount) {
             $.errorCount = errorCount;
             return this;
         }
 
+        /**
+         * @param logCount The total number of log entries replayed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logCount(Integer logCount) {
             $.logCount = logCount;
             return this;
         }
 
+        /**
+         * @param newestDate The date of the newest log entry replayed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newestDate(GoogleTypeDateResponse newestDate) {
             $.newestDate = newestDate;
             return this;
         }
 
+        /**
+         * @param oldestDate The date of the oldest log entry replayed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oldestDate(GoogleTypeDateResponse oldestDate) {
             $.oldestDate = oldestDate;
             return this;
         }
 
+        /**
+         * @param unchangedCount The number of replayed log entries with no difference between baseline and simulated policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unchangedCount(Integer unchangedCount) {
             $.unchangedCount = unchangedCount;
             return this;

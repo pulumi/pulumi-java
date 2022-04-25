@@ -22,6 +22,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Format: `projects/{project_id}/releases/{release_id}`
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -40,6 +44,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rulesetName")
     private @Nullable Output<String> rulesetName;
 
+    /**
+     * @return Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to be created.
+     * 
+     */
     public Optional<Output<String>> rulesetName() {
         return Optional.ofNullable(this.rulesetName);
     }
@@ -70,11 +78,23 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReleaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Format: `projects/{project_id}/releases/{release_id}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Format: `projects/{project_id}/releases/{release_id}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -88,11 +108,23 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param rulesetName Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesetName(@Nullable Output<String> rulesetName) {
             $.rulesetName = rulesetName;
             return this;
         }
 
+        /**
+         * @param rulesetName Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesetName(String rulesetName) {
             return rulesetName(Output.of(rulesetName));
         }

@@ -22,6 +22,10 @@ public final class PacketMirroringMirroredResourceInfoResponse extends com.pulum
     @Import(name="instances", required=true)
     private List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances;
 
+    /**
+     * @return A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring. Note that this config will apply only to those network interfaces of the Instances that belong to the network specified in this packetMirroring. You may specify a maximum of 50 Instances.
+     * 
+     */
     public List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances() {
         return this.instances;
     }
@@ -33,6 +37,10 @@ public final class PacketMirroringMirroredResourceInfoResponse extends com.pulum
     @Import(name="subnetworks", required=true)
     private List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks;
 
+    /**
+     * @return A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in the same region as this packetMirroring. You may specify a maximum of 5 subnetworks.
+     * 
+     */
     public List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks() {
         return this.subnetworks;
     }
@@ -44,6 +52,10 @@ public final class PacketMirroringMirroredResourceInfoResponse extends com.pulum
     @Import(name="tags", required=true)
     private List<String> tags;
 
+    /**
+     * @return A set of mirrored tags. Traffic from/to all VM instances that have one or more of these tags will be mirrored.
+     * 
+     */
     public List<String> tags() {
         return this.tags;
     }
@@ -74,29 +86,65 @@ public final class PacketMirroringMirroredResourceInfoResponse extends com.pulum
             $ = new PacketMirroringMirroredResourceInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instances A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring. Note that this config will apply only to those network interfaces of the Instances that belong to the network specified in this packetMirroring. You may specify a maximum of 50 Instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring. Note that this config will apply only to those network interfaces of the Instances that belong to the network specified in this packetMirroring. You may specify a maximum of 50 Instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(PacketMirroringMirroredResourceInfoInstanceInfoResponse... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param subnetworks A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in the same region as this packetMirroring. You may specify a maximum of 5 subnetworks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworks(List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks) {
             $.subnetworks = subnetworks;
             return this;
         }
 
+        /**
+         * @param subnetworks A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in the same region as this packetMirroring. You may specify a maximum of 5 subnetworks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworks(PacketMirroringMirroredResourceInfoSubnetInfoResponse... subnetworks) {
             return subnetworks(List.of(subnetworks));
         }
 
+        /**
+         * @param tags A set of mirrored tags. Traffic from/to all VM instances that have one or more of these tags will be mirrored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A set of mirrored tags. Traffic from/to all VM instances that have one or more of these tags will be mirrored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }

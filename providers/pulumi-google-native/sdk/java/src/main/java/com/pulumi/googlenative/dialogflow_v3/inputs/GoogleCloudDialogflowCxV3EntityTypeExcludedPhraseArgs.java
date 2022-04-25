@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseArgs extends
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The word or phrase to be excluded.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseArgs extends
             $ = new GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value The word or phrase to be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The word or phrase to be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

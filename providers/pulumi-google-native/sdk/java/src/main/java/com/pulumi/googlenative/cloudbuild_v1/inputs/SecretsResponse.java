@@ -25,6 +25,10 @@ public final class SecretsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inline", required=true)
     private List<InlineSecretResponse> inline;
 
+    /**
+     * @return Secrets encrypted with KMS key and the associated secret environment variable.
+     * 
+     */
     public List<InlineSecretResponse> inline() {
         return this.inline;
     }
@@ -36,6 +40,10 @@ public final class SecretsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="secretManager", required=true)
     private List<SecretManagerSecretResponse> secretManager;
 
+    /**
+     * @return Secrets in Secret Manager and associated secret environment variable.
+     * 
+     */
     public List<SecretManagerSecretResponse> secretManager() {
         return this.secretManager;
     }
@@ -65,20 +73,44 @@ public final class SecretsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SecretsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inline Secrets encrypted with KMS key and the associated secret environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inline(List<InlineSecretResponse> inline) {
             $.inline = inline;
             return this;
         }
 
+        /**
+         * @param inline Secrets encrypted with KMS key and the associated secret environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inline(InlineSecretResponse... inline) {
             return inline(List.of(inline));
         }
 
+        /**
+         * @param secretManager Secrets in Secret Manager and associated secret environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretManager(List<SecretManagerSecretResponse> secretManager) {
             $.secretManager = secretManager;
             return this;
         }
 
+        /**
+         * @param secretManager Secrets in Secret Manager and associated secret environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretManager(SecretManagerSecretResponse... secretManager) {
             return secretManager(List.of(secretManager));
         }

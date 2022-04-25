@@ -26,6 +26,10 @@ public final class RouterApplianceInstanceArgs extends com.pulumi.resources.Reso
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return The IP address of the network interface to use for peering.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -44,6 +48,10 @@ public final class RouterApplianceInstanceArgs extends com.pulumi.resources.Reso
     @Import(name="virtualMachine")
     private @Nullable Output<String> virtualMachine;
 
+    /**
+     * @return The URI of the virtual machine resource
+     * 
+     */
     public Optional<Output<String>> virtualMachine() {
         return Optional.ofNullable(this.virtualMachine);
     }
@@ -74,11 +82,23 @@ public final class RouterApplianceInstanceArgs extends com.pulumi.resources.Reso
             $ = new RouterApplianceInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAddress The IP address of the network interface to use for peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress The IP address of the network interface to use for peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
@@ -92,11 +112,23 @@ public final class RouterApplianceInstanceArgs extends com.pulumi.resources.Reso
             return networkInterface(Output.of(networkInterface));
         }
 
+        /**
+         * @param virtualMachine The URI of the virtual machine resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachine(@Nullable Output<String> virtualMachine) {
             $.virtualMachine = virtualMachine;
             return this;
         }
 
+        /**
+         * @param virtualMachine The URI of the virtual machine resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachine(String virtualMachine) {
             return virtualMachine(Output.of(virtualMachine));
         }

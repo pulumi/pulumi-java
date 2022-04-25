@@ -13,42 +13,42 @@ import java.util.Objects;
 @CustomType
 public final class SecurityPolicyRuleRateLimitOptionsResponse {
     /**
-     * Can only be specified if the action for the rule is &#34;rate_based_ban&#34;. If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
+     * @return Can only be specified if the action for the rule is &#34;rate_based_ban&#34;. If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
      * 
      */
     private final Integer banDurationSec;
     /**
-     * Can only be specified if the action for the rule is &#34;rate_based_ban&#34;. If specified, the key will be banned for the configured &#39;ban_duration_sec&#39; when the number of requests that exceed the &#39;rate_limit_threshold&#39; also exceed this &#39;ban_threshold&#39;.
+     * @return Can only be specified if the action for the rule is &#34;rate_based_ban&#34;. If specified, the key will be banned for the configured &#39;ban_duration_sec&#39; when the number of requests that exceed the &#39;rate_limit_threshold&#39; also exceed this &#39;ban_threshold&#39;.
      * 
      */
     private final SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold;
     /**
-     * Action to take for requests that are under the configured rate limit threshold. Valid option is &#34;allow&#34; only.
+     * @return Action to take for requests that are under the configured rate limit threshold. Valid option is &#34;allow&#34; only.
      * 
      */
     private final String conformAction;
     /**
-     * Determines the key to enforce the rate_limit_threshold on. Possible values are: - ALL: A single rate limit threshold is applied to all the requests matching this rule. This is the default value if this field &#39;enforce_on_key&#39; is not configured. - IP: The source IP address of the request is the key. Each IP has this limit enforced separately. - HTTP_HEADER: The value of the HTTP header whose name is configured under &#34;enforce_on_key_name&#34;. The key value is truncated to the first 128 bytes of the header value. If no such header is present in the request, the key type defaults to ALL. - XFF_IP: The first IP address (i.e. the originating client IP address) specified in the list of IPs under X-Forwarded-For HTTP header. If no such header is present or the value is not a valid IP, the key type defaults to ALL. - HTTP_COOKIE: The value of the HTTP cookie whose name is configured under &#34;enforce_on_key_name&#34;. The key value is truncated to the first 128 bytes of the cookie value. If no such cookie is present in the request, the key type defaults to ALL.
+     * @return Determines the key to enforce the rate_limit_threshold on. Possible values are: - ALL: A single rate limit threshold is applied to all the requests matching this rule. This is the default value if this field &#39;enforce_on_key&#39; is not configured. - IP: The source IP address of the request is the key. Each IP has this limit enforced separately. - HTTP_HEADER: The value of the HTTP header whose name is configured under &#34;enforce_on_key_name&#34;. The key value is truncated to the first 128 bytes of the header value. If no such header is present in the request, the key type defaults to ALL. - XFF_IP: The first IP address (i.e. the originating client IP address) specified in the list of IPs under X-Forwarded-For HTTP header. If no such header is present or the value is not a valid IP, the key type defaults to ALL. - HTTP_COOKIE: The value of the HTTP cookie whose name is configured under &#34;enforce_on_key_name&#34;. The key value is truncated to the first 128 bytes of the cookie value. If no such cookie is present in the request, the key type defaults to ALL.
      * 
      */
     private final String enforceOnKey;
     /**
-     * Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
+     * @return Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
      * 
      */
     private final String enforceOnKeyName;
     /**
-     * Action to take for requests that are above the configured rate limit threshold, to either deny with a specified HTTP response code, or redirect to a different endpoint. Valid options are &#34;deny()&#34; where valid values for status are 403, 404, 429, and 502, and &#34;redirect&#34; where the redirect parameters come from exceed_redirect_options below.
+     * @return Action to take for requests that are above the configured rate limit threshold, to either deny with a specified HTTP response code, or redirect to a different endpoint. Valid options are &#34;deny()&#34; where valid values for status are 403, 404, 429, and 502, and &#34;redirect&#34; where the redirect parameters come from exceed_redirect_options below.
      * 
      */
     private final String exceedAction;
     /**
-     * Parameters defining the redirect action that is used as the exceed action. Cannot be specified if the exceed action is not redirect.
+     * @return Parameters defining the redirect action that is used as the exceed action. Cannot be specified if the exceed action is not redirect.
      * 
      */
     private final SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions;
     /**
-     * Threshold at which to begin ratelimiting.
+     * @return Threshold at which to begin ratelimiting.
      * 
      */
     private final SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold;
@@ -74,58 +74,58 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse {
     }
 
     /**
-     * Can only be specified if the action for the rule is &#34;rate_based_ban&#34;. If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
+     * @return Can only be specified if the action for the rule is &#34;rate_based_ban&#34;. If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
      * 
-    */
+     */
     public Integer banDurationSec() {
         return this.banDurationSec;
     }
     /**
-     * Can only be specified if the action for the rule is &#34;rate_based_ban&#34;. If specified, the key will be banned for the configured &#39;ban_duration_sec&#39; when the number of requests that exceed the &#39;rate_limit_threshold&#39; also exceed this &#39;ban_threshold&#39;.
+     * @return Can only be specified if the action for the rule is &#34;rate_based_ban&#34;. If specified, the key will be banned for the configured &#39;ban_duration_sec&#39; when the number of requests that exceed the &#39;rate_limit_threshold&#39; also exceed this &#39;ban_threshold&#39;.
      * 
-    */
+     */
     public SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold() {
         return this.banThreshold;
     }
     /**
-     * Action to take for requests that are under the configured rate limit threshold. Valid option is &#34;allow&#34; only.
+     * @return Action to take for requests that are under the configured rate limit threshold. Valid option is &#34;allow&#34; only.
      * 
-    */
+     */
     public String conformAction() {
         return this.conformAction;
     }
     /**
-     * Determines the key to enforce the rate_limit_threshold on. Possible values are: - ALL: A single rate limit threshold is applied to all the requests matching this rule. This is the default value if this field &#39;enforce_on_key&#39; is not configured. - IP: The source IP address of the request is the key. Each IP has this limit enforced separately. - HTTP_HEADER: The value of the HTTP header whose name is configured under &#34;enforce_on_key_name&#34;. The key value is truncated to the first 128 bytes of the header value. If no such header is present in the request, the key type defaults to ALL. - XFF_IP: The first IP address (i.e. the originating client IP address) specified in the list of IPs under X-Forwarded-For HTTP header. If no such header is present or the value is not a valid IP, the key type defaults to ALL. - HTTP_COOKIE: The value of the HTTP cookie whose name is configured under &#34;enforce_on_key_name&#34;. The key value is truncated to the first 128 bytes of the cookie value. If no such cookie is present in the request, the key type defaults to ALL.
+     * @return Determines the key to enforce the rate_limit_threshold on. Possible values are: - ALL: A single rate limit threshold is applied to all the requests matching this rule. This is the default value if this field &#39;enforce_on_key&#39; is not configured. - IP: The source IP address of the request is the key. Each IP has this limit enforced separately. - HTTP_HEADER: The value of the HTTP header whose name is configured under &#34;enforce_on_key_name&#34;. The key value is truncated to the first 128 bytes of the header value. If no such header is present in the request, the key type defaults to ALL. - XFF_IP: The first IP address (i.e. the originating client IP address) specified in the list of IPs under X-Forwarded-For HTTP header. If no such header is present or the value is not a valid IP, the key type defaults to ALL. - HTTP_COOKIE: The value of the HTTP cookie whose name is configured under &#34;enforce_on_key_name&#34;. The key value is truncated to the first 128 bytes of the cookie value. If no such cookie is present in the request, the key type defaults to ALL.
      * 
-    */
+     */
     public String enforceOnKey() {
         return this.enforceOnKey;
     }
     /**
-     * Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
+     * @return Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
      * 
-    */
+     */
     public String enforceOnKeyName() {
         return this.enforceOnKeyName;
     }
     /**
-     * Action to take for requests that are above the configured rate limit threshold, to either deny with a specified HTTP response code, or redirect to a different endpoint. Valid options are &#34;deny()&#34; where valid values for status are 403, 404, 429, and 502, and &#34;redirect&#34; where the redirect parameters come from exceed_redirect_options below.
+     * @return Action to take for requests that are above the configured rate limit threshold, to either deny with a specified HTTP response code, or redirect to a different endpoint. Valid options are &#34;deny()&#34; where valid values for status are 403, 404, 429, and 502, and &#34;redirect&#34; where the redirect parameters come from exceed_redirect_options below.
      * 
-    */
+     */
     public String exceedAction() {
         return this.exceedAction;
     }
     /**
-     * Parameters defining the redirect action that is used as the exceed action. Cannot be specified if the exceed action is not redirect.
+     * @return Parameters defining the redirect action that is used as the exceed action. Cannot be specified if the exceed action is not redirect.
      * 
-    */
+     */
     public SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions() {
         return this.exceedRedirectOptions;
     }
     /**
-     * Threshold at which to begin ratelimiting.
+     * @return Threshold at which to begin ratelimiting.
      * 
-    */
+     */
     public SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold() {
         return this.rateLimitThreshold;
     }

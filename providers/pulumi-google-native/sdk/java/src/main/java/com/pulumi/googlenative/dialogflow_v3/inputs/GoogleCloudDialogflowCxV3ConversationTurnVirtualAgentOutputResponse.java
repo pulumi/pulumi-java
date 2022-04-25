@@ -30,6 +30,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
     @Import(name="currentPage", required=true)
     private GoogleCloudDialogflowCxV3PageResponse currentPage;
 
+    /**
+     * @return The Page on which the utterance was spoken. Only name and displayName will be set.
+     * 
+     */
     public GoogleCloudDialogflowCxV3PageResponse currentPage() {
         return this.currentPage;
     }
@@ -41,6 +45,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
     @Import(name="diagnosticInfo", required=true)
     private Map<String,String> diagnosticInfo;
 
+    /**
+     * @return Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.
+     * 
+     */
     public Map<String,String> diagnosticInfo() {
         return this.diagnosticInfo;
     }
@@ -52,6 +60,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
     @Import(name="differences", required=true)
     private List<GoogleCloudDialogflowCxV3TestRunDifferenceResponse> differences;
 
+    /**
+     * @return If this is part of a result conversation turn, the list of differences between the original run and the replay for this output, if any.
+     * 
+     */
     public List<GoogleCloudDialogflowCxV3TestRunDifferenceResponse> differences() {
         return this.differences;
     }
@@ -63,6 +75,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
     @Import(name="sessionParameters", required=true)
     private Map<String,String> sessionParameters;
 
+    /**
+     * @return The session parameters available to the bot at this point.
+     * 
+     */
     public Map<String,String> sessionParameters() {
         return this.sessionParameters;
     }
@@ -74,6 +90,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
     @Import(name="status", required=true)
     private GoogleRpcStatusResponse status;
 
+    /**
+     * @return Response error from the agent in the test result. If set, other output is empty.
+     * 
+     */
     public GoogleRpcStatusResponse status() {
         return this.status;
     }
@@ -85,6 +105,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
     @Import(name="textResponses", required=true)
     private List<GoogleCloudDialogflowCxV3ResponseMessageTextResponse> textResponses;
 
+    /**
+     * @return The text responses from the agent for the turn.
+     * 
+     */
     public List<GoogleCloudDialogflowCxV3ResponseMessageTextResponse> textResponses() {
         return this.textResponses;
     }
@@ -96,6 +120,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
     @Import(name="triggeredIntent", required=true)
     private GoogleCloudDialogflowCxV3IntentResponse triggeredIntent;
 
+    /**
+     * @return The Intent that triggered the response. Only name and displayName will be set.
+     * 
+     */
     public GoogleCloudDialogflowCxV3IntentResponse triggeredIntent() {
         return this.triggeredIntent;
     }
@@ -130,44 +158,98 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
             $ = new GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentPage The Page on which the utterance was spoken. Only name and displayName will be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentPage(GoogleCloudDialogflowCxV3PageResponse currentPage) {
             $.currentPage = currentPage;
             return this;
         }
 
+        /**
+         * @param diagnosticInfo Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnosticInfo(Map<String,String> diagnosticInfo) {
             $.diagnosticInfo = diagnosticInfo;
             return this;
         }
 
+        /**
+         * @param differences If this is part of a result conversation turn, the list of differences between the original run and the replay for this output, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder differences(List<GoogleCloudDialogflowCxV3TestRunDifferenceResponse> differences) {
             $.differences = differences;
             return this;
         }
 
+        /**
+         * @param differences If this is part of a result conversation turn, the list of differences between the original run and the replay for this output, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder differences(GoogleCloudDialogflowCxV3TestRunDifferenceResponse... differences) {
             return differences(List.of(differences));
         }
 
+        /**
+         * @param sessionParameters The session parameters available to the bot at this point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionParameters(Map<String,String> sessionParameters) {
             $.sessionParameters = sessionParameters;
             return this;
         }
 
+        /**
+         * @param status Response error from the agent in the test result. If set, other output is empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(GoogleRpcStatusResponse status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param textResponses The text responses from the agent for the turn.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textResponses(List<GoogleCloudDialogflowCxV3ResponseMessageTextResponse> textResponses) {
             $.textResponses = textResponses;
             return this;
         }
 
+        /**
+         * @param textResponses The text responses from the agent for the turn.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textResponses(GoogleCloudDialogflowCxV3ResponseMessageTextResponse... textResponses) {
             return textResponses(List.of(textResponses));
         }
 
+        /**
+         * @param triggeredIntent The Intent that triggered the response. Only name and displayName will be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggeredIntent(GoogleCloudDialogflowCxV3IntentResponse triggeredIntent) {
             $.triggeredIntent = triggeredIntent;
             return this;

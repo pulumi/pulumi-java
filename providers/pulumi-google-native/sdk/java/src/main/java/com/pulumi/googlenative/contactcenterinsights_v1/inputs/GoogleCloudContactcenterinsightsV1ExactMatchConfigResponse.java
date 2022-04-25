@@ -23,6 +23,10 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse ex
     @Import(name="caseSensitive", required=true)
     private Boolean caseSensitive;
 
+    /**
+     * @return Whether to consider case sensitivity when performing an exact match.
+     * 
+     */
     public Boolean caseSensitive() {
         return this.caseSensitive;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse ex
             $ = new GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caseSensitive Whether to consider case sensitivity when performing an exact match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caseSensitive(Boolean caseSensitive) {
             $.caseSensitive = caseSensitive;
             return this;

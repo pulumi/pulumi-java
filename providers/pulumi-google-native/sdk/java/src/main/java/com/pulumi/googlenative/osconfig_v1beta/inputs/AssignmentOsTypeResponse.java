@@ -23,6 +23,10 @@ public final class AssignmentOsTypeResponse extends com.pulumi.resources.InvokeA
     @Import(name="osArchitecture", required=true)
     private String osArchitecture;
 
+    /**
+     * @return Targets VM instances with OS Inventory enabled and having the following OS architecture.
+     * 
+     */
     public String osArchitecture() {
         return this.osArchitecture;
     }
@@ -34,6 +38,10 @@ public final class AssignmentOsTypeResponse extends com.pulumi.resources.InvokeA
     @Import(name="osShortName", required=true)
     private String osShortName;
 
+    /**
+     * @return Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
+     * 
+     */
     public String osShortName() {
         return this.osShortName;
     }
@@ -45,6 +53,10 @@ public final class AssignmentOsTypeResponse extends com.pulumi.resources.InvokeA
     @Import(name="osVersion", required=true)
     private String osVersion;
 
+    /**
+     * @return Targets VM instances with OS Inventory enabled and having the following following OS version.
+     * 
+     */
     public String osVersion() {
         return this.osVersion;
     }
@@ -75,16 +87,34 @@ public final class AssignmentOsTypeResponse extends com.pulumi.resources.InvokeA
             $ = new AssignmentOsTypeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param osArchitecture Targets VM instances with OS Inventory enabled and having the following OS architecture.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osArchitecture(String osArchitecture) {
             $.osArchitecture = osArchitecture;
             return this;
         }
 
+        /**
+         * @param osShortName Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osShortName(String osShortName) {
             $.osShortName = osShortName;
             return this;
         }
 
+        /**
+         * @param osVersion Targets VM instances with OS Inventory enabled and having the following following OS version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osVersion(String osVersion) {
             $.osVersion = osVersion;
             return this;

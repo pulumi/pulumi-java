@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class RelationshipNoteResponse {
     /**
-     * The type of relationship between the source and target SPDX elements
+     * @return The type of relationship between the source and target SPDX elements
      * 
      */
     private final String type;
@@ -21,9 +21,9 @@ public final class RelationshipNoteResponse {
     }
 
     /**
-     * The type of relationship between the source and target SPDX elements
+     * @return The type of relationship between the source and target SPDX elements
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

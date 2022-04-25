@@ -31,6 +31,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customAttributes")
     private @Nullable Output<Map<String,String>> customAttributes;
 
+    /**
+     * @return An optional list of additional attributes to attach to each Cloud PubSub message published for this notification subscription.
+     * 
+     */
     public Optional<Output<Map<String,String>>> customAttributes() {
         return Optional.ofNullable(this.customAttributes);
     }
@@ -42,6 +46,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return HTTP 1.1 Entity tag for this subscription notification.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -53,6 +61,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventTypes")
     private @Nullable Output<List<String>> eventTypes;
 
+    /**
+     * @return If present, only send notifications about listed event types. If empty, sent notifications for all event types.
+     * 
+     */
     public Optional<Output<List<String>>> eventTypes() {
         return Optional.ofNullable(this.eventTypes);
     }
@@ -64,6 +76,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The ID of the notification.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -75,6 +91,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return The kind of item this is. For notifications, this is always storage#notification.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -86,6 +106,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectNamePrefix")
     private @Nullable Output<String> objectNamePrefix;
 
+    /**
+     * @return If present, only apply this notification configuration to object names that begin with this prefix.
+     * 
+     */
     public Optional<Output<String>> objectNamePrefix() {
         return Optional.ofNullable(this.objectNamePrefix);
     }
@@ -97,6 +121,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="payloadFormat")
     private @Nullable Output<String> payloadFormat;
 
+    /**
+     * @return The desired content of the Payload.
+     * 
+     */
     public Optional<Output<String>> payloadFormat() {
         return Optional.ofNullable(this.payloadFormat);
     }
@@ -115,6 +143,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The canonical URL of this notification.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -126,6 +158,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topic")
     private @Nullable Output<String> topic;
 
+    /**
+     * @return The Cloud PubSub topic to which this subscription publishes. Formatted as: &#39;//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}&#39;
+     * 
+     */
     public Optional<Output<String>> topic() {
         return Optional.ofNullable(this.topic);
     }
@@ -181,69 +217,159 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param customAttributes An optional list of additional attributes to attach to each Cloud PubSub message published for this notification subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customAttributes(@Nullable Output<Map<String,String>> customAttributes) {
             $.customAttributes = customAttributes;
             return this;
         }
 
+        /**
+         * @param customAttributes An optional list of additional attributes to attach to each Cloud PubSub message published for this notification subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customAttributes(Map<String,String> customAttributes) {
             return customAttributes(Output.of(customAttributes));
         }
 
+        /**
+         * @param etag HTTP 1.1 Entity tag for this subscription notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag HTTP 1.1 Entity tag for this subscription notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param eventTypes If present, only send notifications about listed event types. If empty, sent notifications for all event types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTypes(@Nullable Output<List<String>> eventTypes) {
             $.eventTypes = eventTypes;
             return this;
         }
 
+        /**
+         * @param eventTypes If present, only send notifications about listed event types. If empty, sent notifications for all event types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTypes(List<String> eventTypes) {
             return eventTypes(Output.of(eventTypes));
         }
 
+        /**
+         * @param eventTypes If present, only send notifications about listed event types. If empty, sent notifications for all event types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTypes(String... eventTypes) {
             return eventTypes(List.of(eventTypes));
         }
 
+        /**
+         * @param id The ID of the notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The ID of the notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param kind The kind of item this is. For notifications, this is always storage#notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of item this is. For notifications, this is always storage#notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param objectNamePrefix If present, only apply this notification configuration to object names that begin with this prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectNamePrefix(@Nullable Output<String> objectNamePrefix) {
             $.objectNamePrefix = objectNamePrefix;
             return this;
         }
 
+        /**
+         * @param objectNamePrefix If present, only apply this notification configuration to object names that begin with this prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectNamePrefix(String objectNamePrefix) {
             return objectNamePrefix(Output.of(objectNamePrefix));
         }
 
+        /**
+         * @param payloadFormat The desired content of the Payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payloadFormat(@Nullable Output<String> payloadFormat) {
             $.payloadFormat = payloadFormat;
             return this;
         }
 
+        /**
+         * @param payloadFormat The desired content of the Payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payloadFormat(String payloadFormat) {
             return payloadFormat(Output.of(payloadFormat));
         }
@@ -257,20 +383,44 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
             return provisionalUserProject(Output.of(provisionalUserProject));
         }
 
+        /**
+         * @param selfLink The canonical URL of this notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The canonical URL of this notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param topic The Cloud PubSub topic to which this subscription publishes. Formatted as: &#39;//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(@Nullable Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic The Cloud PubSub topic to which this subscription publishes. Formatted as: &#39;//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }

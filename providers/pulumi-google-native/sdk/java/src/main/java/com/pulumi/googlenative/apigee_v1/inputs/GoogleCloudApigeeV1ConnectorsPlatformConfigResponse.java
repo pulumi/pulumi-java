@@ -24,6 +24,10 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse extends c
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Flag that specifies whether the Connectors Platform add-on is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse extends c
     @Import(name="expiresAt", required=true)
     private String expiresAt;
 
+    /**
+     * @return Time at which the Connectors Platform add-on expires in milliseconds since epoch. If unspecified, the add-on will never expire.
+     * 
+     */
     public String expiresAt() {
         return this.expiresAt;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse extends c
             $ = new GoogleCloudApigeeV1ConnectorsPlatformConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Flag that specifies whether the Connectors Platform add-on is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param expiresAt Time at which the Connectors Platform add-on expires in milliseconds since epoch. If unspecified, the add-on will never expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiresAt(String expiresAt) {
             $.expiresAt = expiresAt;
             return this;

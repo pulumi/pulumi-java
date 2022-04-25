@@ -26,6 +26,10 @@ public final class GuestOsFeatureArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type")
     private @Nullable Output<GuestOsFeatureType> type;
 
+    /**
+     * @return The ID of a supported feature. To add multiple values, use commas to separate values. Set to one or more of the following values: - VIRTIO_SCSI_MULTIQUEUE - WINDOWS - MULTI_IP_SUBNET - UEFI_COMPATIBLE - SECURE_BOOT - GVNIC - SEV_CAPABLE - SUSPEND_RESUME_COMPATIBLE For more information, see Enabling guest operating system features.
+     * 
+     */
     public Optional<Output<GuestOsFeatureType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -54,11 +58,23 @@ public final class GuestOsFeatureArgs extends com.pulumi.resources.ResourceArgs 
             $ = new GuestOsFeatureArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The ID of a supported feature. To add multiple values, use commas to separate values. Set to one or more of the following values: - VIRTIO_SCSI_MULTIQUEUE - WINDOWS - MULTI_IP_SUBNET - UEFI_COMPATIBLE - SECURE_BOOT - GVNIC - SEV_CAPABLE - SUSPEND_RESUME_COMPATIBLE For more information, see Enabling guest operating system features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<GuestOsFeatureType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The ID of a supported feature. To add multiple values, use commas to separate values. Set to one or more of the following values: - VIRTIO_SCSI_MULTIQUEUE - WINDOWS - MULTI_IP_SUBNET - UEFI_COMPATIBLE - SECURE_BOOT - GVNIC - SEV_CAPABLE - SUSPEND_RESUME_COMPATIBLE For more information, see Enabling guest operating system features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(GuestOsFeatureType type) {
             return type(Output.of(type));
         }

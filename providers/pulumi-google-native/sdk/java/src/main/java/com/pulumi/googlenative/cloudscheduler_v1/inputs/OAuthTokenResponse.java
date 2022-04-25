@@ -23,6 +23,10 @@ public final class OAuthTokenResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return OAuth scope to be used for generating OAuth access token. If not specified, &#34;https://www.googleapis.com/auth/cloud-platform&#34; will be used.
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -34,6 +38,10 @@ public final class OAuthTokenResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceAccountEmail", required=true)
     private String serviceAccountEmail;
 
+    /**
+     * @return [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OAuth token. The service account must be within the same project as the job. The caller must have iam.serviceAccounts.actAs permission for the service account.
+     * 
+     */
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
@@ -63,11 +71,23 @@ public final class OAuthTokenResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OAuthTokenResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scope OAuth scope to be used for generating OAuth access token. If not specified, &#34;https://www.googleapis.com/auth/cloud-platform&#34; will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param serviceAccountEmail [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OAuth token. The service account must be within the same project as the job. The caller must have iam.serviceAccounts.actAs permission for the service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             $.serviceAccountEmail = serviceAccountEmail;
             return this;

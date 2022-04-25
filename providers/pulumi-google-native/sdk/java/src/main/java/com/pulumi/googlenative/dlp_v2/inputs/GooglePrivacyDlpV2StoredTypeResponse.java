@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2StoredTypeResponse extends com.pulumi.resou
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -34,6 +38,10 @@ public final class GooglePrivacyDlpV2StoredTypeResponse extends com.pulumi.resou
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,11 +71,23 @@ public final class GooglePrivacyDlpV2StoredTypeResponse extends com.pulumi.resou
             $ = new GooglePrivacyDlpV2StoredTypeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param name Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

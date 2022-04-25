@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDatacatalogV1DataSourceResponse {
     /**
-     * Full name of a resource as defined by the service. For example: `//bigquery.googleapis.com/projects/{PROJECT_ID}/locations/{LOCATION}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
+     * @return Full name of a resource as defined by the service. For example: `//bigquery.googleapis.com/projects/{PROJECT_ID}/locations/{LOCATION}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
      * 
      */
     private final String resource;
     /**
-     * Service that physically stores the data.
+     * @return Service that physically stores the data.
      * 
      */
     private final String service;
@@ -29,16 +29,16 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse {
     }
 
     /**
-     * Full name of a resource as defined by the service. For example: `//bigquery.googleapis.com/projects/{PROJECT_ID}/locations/{LOCATION}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
+     * @return Full name of a resource as defined by the service. For example: `//bigquery.googleapis.com/projects/{PROJECT_ID}/locations/{LOCATION}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
      * 
-    */
+     */
     public String resource() {
         return this.resource;
     }
     /**
-     * Service that physically stores the data.
+     * @return Service that physically stores the data.
      * 
-    */
+     */
     public String service() {
         return this.service;
     }

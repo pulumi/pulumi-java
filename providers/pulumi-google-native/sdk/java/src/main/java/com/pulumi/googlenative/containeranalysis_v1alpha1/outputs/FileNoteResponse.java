@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class FileNoteResponse {
     /**
-     * Provide a unique identifier to match analysis information on each specific file in a package
+     * @return Provide a unique identifier to match analysis information on each specific file in a package
      * 
      */
     private final List<String> checksum;
     /**
-     * This field provides information about the type of file identified
+     * @return This field provides information about the type of file identified
      * 
      */
     private final String fileType;
     /**
-     * Identify the full path and filename that corresponds to the file information in this section
+     * @return Identify the full path and filename that corresponds to the file information in this section
      * 
      */
     private final String title;
@@ -37,23 +37,23 @@ public final class FileNoteResponse {
     }
 
     /**
-     * Provide a unique identifier to match analysis information on each specific file in a package
+     * @return Provide a unique identifier to match analysis information on each specific file in a package
      * 
-    */
+     */
     public List<String> checksum() {
         return this.checksum;
     }
     /**
-     * This field provides information about the type of file identified
+     * @return This field provides information about the type of file identified
      * 
-    */
+     */
     public String fileType() {
         return this.fileType;
     }
     /**
-     * Identify the full path and filename that corresponds to the file information in this section
+     * @return Identify the full path and filename that corresponds to the file information in this section
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

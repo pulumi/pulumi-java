@@ -31,6 +31,10 @@ public final class ReusableConfigValuesArgs extends com.pulumi.resources.Resourc
     @Import(name="additionalExtensions")
     private @Nullable Output<List<X509ExtensionArgs>> additionalExtensions;
 
+    /**
+     * @return Optional. Describes custom X.509 extensions.
+     * 
+     */
     public Optional<Output<List<X509ExtensionArgs>>> additionalExtensions() {
         return Optional.ofNullable(this.additionalExtensions);
     }
@@ -42,6 +46,10 @@ public final class ReusableConfigValuesArgs extends com.pulumi.resources.Resourc
     @Import(name="aiaOcspServers")
     private @Nullable Output<List<String>> aiaOcspServers;
 
+    /**
+     * @return Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+     * 
+     */
     public Optional<Output<List<String>>> aiaOcspServers() {
         return Optional.ofNullable(this.aiaOcspServers);
     }
@@ -53,6 +61,10 @@ public final class ReusableConfigValuesArgs extends com.pulumi.resources.Resourc
     @Import(name="caOptions")
     private @Nullable Output<CaOptionsArgs> caOptions;
 
+    /**
+     * @return Optional. Describes options in this ReusableConfigValues that are relevant in a CA certificate.
+     * 
+     */
     public Optional<Output<CaOptionsArgs>> caOptions() {
         return Optional.ofNullable(this.caOptions);
     }
@@ -64,6 +76,10 @@ public final class ReusableConfigValuesArgs extends com.pulumi.resources.Resourc
     @Import(name="keyUsage")
     private @Nullable Output<KeyUsageArgs> keyUsage;
 
+    /**
+     * @return Optional. Indicates the intended use for keys that correspond to a certificate.
+     * 
+     */
     public Optional<Output<KeyUsageArgs>> keyUsage() {
         return Optional.ofNullable(this.keyUsage);
     }
@@ -75,6 +91,10 @@ public final class ReusableConfigValuesArgs extends com.pulumi.resources.Resourc
     @Import(name="policyIds")
     private @Nullable Output<List<ObjectIdArgs>> policyIds;
 
+    /**
+     * @return Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+     * 
+     */
     public Optional<Output<List<ObjectIdArgs>>> policyIds() {
         return Optional.ofNullable(this.policyIds);
     }
@@ -107,59 +127,137 @@ public final class ReusableConfigValuesArgs extends com.pulumi.resources.Resourc
             $ = new ReusableConfigValuesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalExtensions Optional. Describes custom X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExtensions(@Nullable Output<List<X509ExtensionArgs>> additionalExtensions) {
             $.additionalExtensions = additionalExtensions;
             return this;
         }
 
+        /**
+         * @param additionalExtensions Optional. Describes custom X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExtensions(List<X509ExtensionArgs> additionalExtensions) {
             return additionalExtensions(Output.of(additionalExtensions));
         }
 
+        /**
+         * @param additionalExtensions Optional. Describes custom X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExtensions(X509ExtensionArgs... additionalExtensions) {
             return additionalExtensions(List.of(additionalExtensions));
         }
 
+        /**
+         * @param aiaOcspServers Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aiaOcspServers(@Nullable Output<List<String>> aiaOcspServers) {
             $.aiaOcspServers = aiaOcspServers;
             return this;
         }
 
+        /**
+         * @param aiaOcspServers Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aiaOcspServers(List<String> aiaOcspServers) {
             return aiaOcspServers(Output.of(aiaOcspServers));
         }
 
+        /**
+         * @param aiaOcspServers Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aiaOcspServers(String... aiaOcspServers) {
             return aiaOcspServers(List.of(aiaOcspServers));
         }
 
+        /**
+         * @param caOptions Optional. Describes options in this ReusableConfigValues that are relevant in a CA certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caOptions(@Nullable Output<CaOptionsArgs> caOptions) {
             $.caOptions = caOptions;
             return this;
         }
 
+        /**
+         * @param caOptions Optional. Describes options in this ReusableConfigValues that are relevant in a CA certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caOptions(CaOptionsArgs caOptions) {
             return caOptions(Output.of(caOptions));
         }
 
+        /**
+         * @param keyUsage Optional. Indicates the intended use for keys that correspond to a certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUsage(@Nullable Output<KeyUsageArgs> keyUsage) {
             $.keyUsage = keyUsage;
             return this;
         }
 
+        /**
+         * @param keyUsage Optional. Indicates the intended use for keys that correspond to a certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUsage(KeyUsageArgs keyUsage) {
             return keyUsage(Output.of(keyUsage));
         }
 
+        /**
+         * @param policyIds Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyIds(@Nullable Output<List<ObjectIdArgs>> policyIds) {
             $.policyIds = policyIds;
             return this;
         }
 
+        /**
+         * @param policyIds Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyIds(List<ObjectIdArgs> policyIds) {
             return policyIds(Output.of(policyIds));
         }
 
+        /**
+         * @param policyIds Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyIds(ObjectIdArgs... policyIds) {
             return policyIds(List.of(policyIds));
         }

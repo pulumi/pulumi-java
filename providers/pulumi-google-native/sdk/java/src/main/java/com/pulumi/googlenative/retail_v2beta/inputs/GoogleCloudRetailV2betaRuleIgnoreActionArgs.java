@@ -27,6 +27,10 @@ public final class GoogleCloudRetailV2betaRuleIgnoreActionArgs extends com.pulum
     @Import(name="ignoreTerms")
     private @Nullable Output<List<String>> ignoreTerms;
 
+    /**
+     * @return Terms to ignore in the search query.
+     * 
+     */
     public Optional<Output<List<String>>> ignoreTerms() {
         return Optional.ofNullable(this.ignoreTerms);
     }
@@ -55,15 +59,33 @@ public final class GoogleCloudRetailV2betaRuleIgnoreActionArgs extends com.pulum
             $ = new GoogleCloudRetailV2betaRuleIgnoreActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ignoreTerms Terms to ignore in the search query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreTerms(@Nullable Output<List<String>> ignoreTerms) {
             $.ignoreTerms = ignoreTerms;
             return this;
         }
 
+        /**
+         * @param ignoreTerms Terms to ignore in the search query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreTerms(List<String> ignoreTerms) {
             return ignoreTerms(Output.of(ignoreTerms));
         }
 
+        /**
+         * @param ignoreTerms Terms to ignore in the search query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreTerms(String... ignoreTerms) {
             return ignoreTerms(List.of(ignoreTerms));
         }

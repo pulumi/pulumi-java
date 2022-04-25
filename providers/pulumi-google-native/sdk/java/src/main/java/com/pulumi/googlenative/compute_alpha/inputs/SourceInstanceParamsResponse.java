@@ -24,6 +24,10 @@ public final class SourceInstanceParamsResponse extends com.pulumi.resources.Inv
     @Import(name="diskConfigs", required=true)
     private List<DiskInstantiationConfigResponse> diskConfigs;
 
+    /**
+     * @return Attached disks configuration. If not provided, defaults are applied: For boot disk and any other R/W disks, new custom images will be created from each disk. For read-only disks, they will be attached in read-only mode. Local SSD disks will be created as blank volumes.
+     * 
+     */
     public List<DiskInstantiationConfigResponse> diskConfigs() {
         return this.diskConfigs;
     }
@@ -52,11 +56,23 @@ public final class SourceInstanceParamsResponse extends com.pulumi.resources.Inv
             $ = new SourceInstanceParamsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskConfigs Attached disks configuration. If not provided, defaults are applied: For boot disk and any other R/W disks, new custom images will be created from each disk. For read-only disks, they will be attached in read-only mode. Local SSD disks will be created as blank volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfigs(List<DiskInstantiationConfigResponse> diskConfigs) {
             $.diskConfigs = diskConfigs;
             return this;
         }
 
+        /**
+         * @param diskConfigs Attached disks configuration. If not provided, defaults are applied: For boot disk and any other R/W disks, new custom images will be created from each disk. For read-only disks, they will be attached in read-only mode. Local SSD disks will be created as blank volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfigs(DiskInstantiationConfigResponse... diskConfigs) {
             return diskConfigs(List.of(diskConfigs));
         }

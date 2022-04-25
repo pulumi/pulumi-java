@@ -24,6 +24,10 @@ public final class PipelineParameterResponse extends com.pulumi.resources.Invoke
     @Import(name="defaultValue", required=true)
     private String defaultValue;
 
+    /**
+     * @return The default value for this parameter. Can be overridden at runtime. If `localCopy` is present, then this must be a Google Cloud Storage path beginning with `gs://`.
+     * 
+     */
     public String defaultValue() {
         return this.defaultValue;
     }
@@ -35,6 +39,10 @@ public final class PipelineParameterResponse extends com.pulumi.resources.Invoke
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Human-readable description.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -46,6 +54,10 @@ public final class PipelineParameterResponse extends com.pulumi.resources.Invoke
     @Import(name="localCopy", required=true)
     private LocalCopyResponse localCopy;
 
+    /**
+     * @return If present, this parameter is marked for copying to and from the VM. `LocalCopy` indicates where on the VM the file should be. The value given to this parameter (either at runtime or using `defaultValue`) must be the remote path where the file should be.
+     * 
+     */
     public LocalCopyResponse localCopy() {
         return this.localCopy;
     }
@@ -57,6 +69,10 @@ public final class PipelineParameterResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the parameter - the pipeline runner uses this string as the key to the input and output maps in RunPipeline.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -88,21 +104,45 @@ public final class PipelineParameterResponse extends com.pulumi.resources.Invoke
             $ = new PipelineParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultValue The default value for this parameter. Can be overridden at runtime. If `localCopy` is present, then this must be a Google Cloud Storage path beginning with `gs://`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(String defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param description Human-readable description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param localCopy If present, this parameter is marked for copying to and from the VM. `LocalCopy` indicates where on the VM the file should be. The value given to this parameter (either at runtime or using `defaultValue`) must be the remote path where the file should be.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localCopy(LocalCopyResponse localCopy) {
             $.localCopy = localCopy;
             return this;
         }
 
+        /**
+         * @param name Name of the parameter - the pipeline runner uses this string as the key to the input and output maps in RunPipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

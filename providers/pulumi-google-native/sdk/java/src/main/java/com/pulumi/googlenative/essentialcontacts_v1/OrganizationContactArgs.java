@@ -25,6 +25,10 @@ public final class OrganizationContactArgs extends com.pulumi.resources.Resource
     @Import(name="email", required=true)
     private Output<String> email;
 
+    /**
+     * @return The email address to send notifications to. This does not need to be a Google account.
+     * 
+     */
     public Output<String> email() {
         return this.email;
     }
@@ -36,6 +40,10 @@ public final class OrganizationContactArgs extends com.pulumi.resources.Resource
     @Import(name="languageTag")
     private @Nullable Output<String> languageTag;
 
+    /**
+     * @return The preferred language for notifications, as a ISO 639-1 language code. See [Supported languages](https://cloud.google.com/resource-manager/docs/managing-notification-contacts#supported-languages) for a list of supported languages.
+     * 
+     */
     public Optional<Output<String>> languageTag() {
         return Optional.ofNullable(this.languageTag);
     }
@@ -47,6 +55,10 @@ public final class OrganizationContactArgs extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class OrganizationContactArgs extends com.pulumi.resources.Resource
     @Import(name="notificationCategorySubscriptions")
     private @Nullable Output<List<OrganizationContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
 
+    /**
+     * @return The categories of notifications that the contact will receive communications for.
+     * 
+     */
     public Optional<Output<List<OrganizationContactNotificationCategorySubscriptionsItem>>> notificationCategorySubscriptions() {
         return Optional.ofNullable(this.notificationCategorySubscriptions);
     }
@@ -76,6 +92,10 @@ public final class OrganizationContactArgs extends com.pulumi.resources.Resource
     @Import(name="validateTime")
     private @Nullable Output<String> validateTime;
 
+    /**
+     * @return The last time the validation_state was updated, either manually or automatically. A contact is considered stale if its validation state was updated more than 1 year ago.
+     * 
+     */
     public Optional<Output<String>> validateTime() {
         return Optional.ofNullable(this.validateTime);
     }
@@ -87,6 +107,10 @@ public final class OrganizationContactArgs extends com.pulumi.resources.Resource
     @Import(name="validationState")
     private @Nullable Output<OrganizationContactValidationState> validationState;
 
+    /**
+     * @return The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.
+     * 
+     */
     public Optional<Output<OrganizationContactValidationState>> validationState() {
         return Optional.ofNullable(this.validationState);
     }
@@ -121,42 +145,96 @@ public final class OrganizationContactArgs extends com.pulumi.resources.Resource
             $ = new OrganizationContactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email The email address to send notifications to. This does not need to be a Google account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email The email address to send notifications to. This does not need to be a Google account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param languageTag The preferred language for notifications, as a ISO 639-1 language code. See [Supported languages](https://cloud.google.com/resource-manager/docs/managing-notification-contacts#supported-languages) for a list of supported languages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageTag(@Nullable Output<String> languageTag) {
             $.languageTag = languageTag;
             return this;
         }
 
+        /**
+         * @param languageTag The preferred language for notifications, as a ISO 639-1 language code. See [Supported languages](https://cloud.google.com/resource-manager/docs/managing-notification-contacts#supported-languages) for a list of supported languages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageTag(String languageTag) {
             return languageTag(Output.of(languageTag));
         }
 
+        /**
+         * @param name The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param notificationCategorySubscriptions The categories of notifications that the contact will receive communications for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationCategorySubscriptions(@Nullable Output<List<OrganizationContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions) {
             $.notificationCategorySubscriptions = notificationCategorySubscriptions;
             return this;
         }
 
+        /**
+         * @param notificationCategorySubscriptions The categories of notifications that the contact will receive communications for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationCategorySubscriptions(List<OrganizationContactNotificationCategorySubscriptionsItem> notificationCategorySubscriptions) {
             return notificationCategorySubscriptions(Output.of(notificationCategorySubscriptions));
         }
 
+        /**
+         * @param notificationCategorySubscriptions The categories of notifications that the contact will receive communications for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationCategorySubscriptions(OrganizationContactNotificationCategorySubscriptionsItem... notificationCategorySubscriptions) {
             return notificationCategorySubscriptions(List.of(notificationCategorySubscriptions));
         }
@@ -170,20 +248,44 @@ public final class OrganizationContactArgs extends com.pulumi.resources.Resource
             return organizationId(Output.of(organizationId));
         }
 
+        /**
+         * @param validateTime The last time the validation_state was updated, either manually or automatically. A contact is considered stale if its validation state was updated more than 1 year ago.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateTime(@Nullable Output<String> validateTime) {
             $.validateTime = validateTime;
             return this;
         }
 
+        /**
+         * @param validateTime The last time the validation_state was updated, either manually or automatically. A contact is considered stale if its validation state was updated more than 1 year ago.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateTime(String validateTime) {
             return validateTime(Output.of(validateTime));
         }
 
+        /**
+         * @param validationState The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationState(@Nullable Output<OrganizationContactValidationState> validationState) {
             $.validationState = validationState;
             return this;
         }
 
+        /**
+         * @param validationState The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationState(OrganizationContactValidationState validationState) {
             return validationState(Output.of(validationState));
         }

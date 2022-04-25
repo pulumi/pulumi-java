@@ -23,6 +23,10 @@ public final class RegistryCredentialResponse extends com.pulumi.resources.Invok
     @Import(name="publicKeyCertificate", required=true)
     private PublicKeyCertificateResponse publicKeyCertificate;
 
+    /**
+     * @return A public key certificate used to verify the device credentials.
+     * 
+     */
     public PublicKeyCertificateResponse publicKeyCertificate() {
         return this.publicKeyCertificate;
     }
@@ -51,6 +55,12 @@ public final class RegistryCredentialResponse extends com.pulumi.resources.Invok
             $ = new RegistryCredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicKeyCertificate A public key certificate used to verify the device credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyCertificate(PublicKeyCertificateResponse publicKeyCertificate) {
             $.publicKeyCertificate = publicKeyCertificate;
             return this;

@@ -23,6 +23,10 @@ public final class AliasContextResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return The alias kind.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -34,6 +38,10 @@ public final class AliasContextResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The alias name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,11 +71,23 @@ public final class AliasContextResponse extends com.pulumi.resources.InvokeArgs 
             $ = new AliasContextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind The alias kind.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name The alias name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

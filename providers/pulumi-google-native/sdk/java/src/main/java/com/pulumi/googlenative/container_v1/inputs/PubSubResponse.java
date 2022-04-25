@@ -25,6 +25,10 @@ public final class PubSubResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Enable notifications for Pub/Sub.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -36,6 +40,10 @@ public final class PubSubResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="filter", required=true)
     private FilterResponse filter;
 
+    /**
+     * @return Allows filtering to one or more specific event types. If no filter is specified, or if a filter is specified with no event types, all event types will be sent
+     * 
+     */
     public FilterResponse filter() {
         return this.filter;
     }
@@ -47,6 +55,10 @@ public final class PubSubResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="topic", required=true)
     private String topic;
 
+    /**
+     * @return The desired Pub/Sub topic to which notifications will be sent by GKE. Format is `projects/{project}/topics/{topic}`.
+     * 
+     */
     public String topic() {
         return this.topic;
     }
@@ -77,16 +89,34 @@ public final class PubSubResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PubSubResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Enable notifications for Pub/Sub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param filter Allows filtering to one or more specific event types. If no filter is specified, or if a filter is specified with no event types, all event types will be sent
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(FilterResponse filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param topic The desired Pub/Sub topic to which notifications will be sent by GKE. Format is `projects/{project}/topics/{topic}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             $.topic = topic;
             return this;

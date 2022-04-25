@@ -28,6 +28,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
     @Import(name="config")
     private @Nullable Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config;
 
+    /**
+     * @return Provides additional information about the rule that specifies how to apply the rule.
+     * 
+     */
     public Optional<Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs>> config() {
         return Optional.ofNullable(this.config);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
     @Import(name="negated")
     private @Nullable Output<Boolean> negated;
 
+    /**
+     * @return Specifies whether the phrase must be missing from the transcript segment or present in the transcript segment.
+     * 
+     */
     public Optional<Output<Boolean>> negated() {
         return Optional.ofNullable(this.negated);
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
     @Import(name="query", required=true)
     private Output<String> query;
 
+    /**
+     * @return The phrase to be matched.
+     * 
+     */
     public Output<String> query() {
         return this.query;
     }
@@ -80,29 +92,65 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
             $ = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config Provides additional information about the rule that specifies how to apply the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(@Nullable Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config Provides additional information about the rule that specifies how to apply the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param negated Specifies whether the phrase must be missing from the transcript segment or present in the transcript segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder negated(@Nullable Output<Boolean> negated) {
             $.negated = negated;
             return this;
         }
 
+        /**
+         * @param negated Specifies whether the phrase must be missing from the transcript segment or present in the transcript segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder negated(Boolean negated) {
             return negated(Output.of(negated));
         }
 
+        /**
+         * @param query The phrase to be matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query The phrase to be matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }

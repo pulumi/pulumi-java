@@ -23,6 +23,10 @@ public final class CaseClassificationResponse extends com.pulumi.resources.Invok
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The display name of the classification.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -51,6 +55,12 @@ public final class CaseClassificationResponse extends com.pulumi.resources.Invok
             $ = new CaseClassificationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The display name of the classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;

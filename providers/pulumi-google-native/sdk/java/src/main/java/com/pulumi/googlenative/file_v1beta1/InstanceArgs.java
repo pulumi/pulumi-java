@@ -27,6 +27,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the instance (2048 characters or less).
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -49,6 +57,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileShares")
     private @Nullable Output<List<FileShareConfigArgs>> fileShares;
 
+    /**
+     * @return File system shares on the instance. For this version, only a single file share is supported.
+     * 
+     */
     public Optional<Output<List<FileShareConfigArgs>>> fileShares() {
         return Optional.ofNullable(this.fileShares);
     }
@@ -67,6 +79,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyName")
     private @Nullable Output<String> kmsKeyName;
 
+    /**
+     * @return KMS key name used for data encryption.
+     * 
+     */
     public Optional<Output<String>> kmsKeyName() {
         return Optional.ofNullable(this.kmsKeyName);
     }
@@ -78,6 +94,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Resource labels to represent user provided metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -96,6 +116,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networks")
     private @Nullable Output<List<NetworkConfigArgs>> networks;
 
+    /**
+     * @return VPC networks to which the instance is connected. For this version, only a single network is supported.
+     * 
+     */
     public Optional<Output<List<NetworkConfigArgs>>> networks() {
         return Optional.ofNullable(this.networks);
     }
@@ -114,6 +138,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier")
     private @Nullable Output<InstanceTier> tier;
 
+    /**
+     * @return The service tier of the instance.
+     * 
+     */
     public Optional<Output<InstanceTier>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -151,33 +179,75 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the instance (2048 characters or less).
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the instance (2048 characters or less).
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param etag Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param fileShares File system shares on the instance. For this version, only a single file share is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShares(@Nullable Output<List<FileShareConfigArgs>> fileShares) {
             $.fileShares = fileShares;
             return this;
         }
 
+        /**
+         * @param fileShares File system shares on the instance. For this version, only a single file share is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShares(List<FileShareConfigArgs> fileShares) {
             return fileShares(Output.of(fileShares));
         }
 
+        /**
+         * @param fileShares File system shares on the instance. For this version, only a single file share is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShares(FileShareConfigArgs... fileShares) {
             return fileShares(List.of(fileShares));
         }
@@ -191,20 +261,44 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param kmsKeyName KMS key name used for data encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName KMS key name used for data encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }
 
+        /**
+         * @param labels Resource labels to represent user provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Resource labels to represent user provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -218,15 +312,33 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param networks VPC networks to which the instance is connected. For this version, only a single network is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(@Nullable Output<List<NetworkConfigArgs>> networks) {
             $.networks = networks;
             return this;
         }
 
+        /**
+         * @param networks VPC networks to which the instance is connected. For this version, only a single network is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(List<NetworkConfigArgs> networks) {
             return networks(Output.of(networks));
         }
 
+        /**
+         * @param networks VPC networks to which the instance is connected. For this version, only a single network is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(NetworkConfigArgs... networks) {
             return networks(List.of(networks));
         }
@@ -240,11 +352,23 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param tier The service tier of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<InstanceTier> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier The service tier of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(InstanceTier tier) {
             return tier(Output.of(tier));
         }

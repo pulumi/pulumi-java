@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class GetAttestorResult {
     /**
-     * Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
+     * @return Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
      * 
      */
     private final String description;
     /**
-     * The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
+     * @return The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
      * 
      */
     private final String name;
     /**
-     * Time when the attestor was last updated.
+     * @return Time when the attestor was last updated.
      * 
      */
     private final String updateTime;
     /**
-     * A Drydock ATTESTATION_AUTHORITY Note, created by the user.
+     * @return A Drydock ATTESTATION_AUTHORITY Note, created by the user.
      * 
      */
     private final UserOwnedDrydockNoteResponse userOwnedDrydockNote;
@@ -44,30 +44,30 @@ public final class GetAttestorResult {
     }
 
     /**
-     * Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
+     * @return Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
+     * @return The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Time when the attestor was last updated.
+     * @return Time when the attestor was last updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * A Drydock ATTESTATION_AUTHORITY Note, created by the user.
+     * @return A Drydock ATTESTATION_AUTHORITY Note, created by the user.
      * 
-    */
+     */
     public UserOwnedDrydockNoteResponse userOwnedDrydockNote() {
         return this.userOwnedDrydockNote;
     }

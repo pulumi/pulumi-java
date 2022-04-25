@@ -23,6 +23,10 @@ public final class AutoscalingLimitsResponse extends com.pulumi.resources.Invoke
     @Import(name="maxServeNodes", required=true)
     private Integer maxServeNodes;
 
+    /**
+     * @return Maximum number of nodes to scale up to.
+     * 
+     */
     public Integer maxServeNodes() {
         return this.maxServeNodes;
     }
@@ -34,6 +38,10 @@ public final class AutoscalingLimitsResponse extends com.pulumi.resources.Invoke
     @Import(name="minServeNodes", required=true)
     private Integer minServeNodes;
 
+    /**
+     * @return Minimum number of nodes to scale down to.
+     * 
+     */
     public Integer minServeNodes() {
         return this.minServeNodes;
     }
@@ -63,11 +71,23 @@ public final class AutoscalingLimitsResponse extends com.pulumi.resources.Invoke
             $ = new AutoscalingLimitsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxServeNodes Maximum number of nodes to scale up to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxServeNodes(Integer maxServeNodes) {
             $.maxServeNodes = maxServeNodes;
             return this;
         }
 
+        /**
+         * @param minServeNodes Minimum number of nodes to scale down to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minServeNodes(Integer minServeNodes) {
             $.minServeNodes = minServeNodes;
             return this;

@@ -12,32 +12,32 @@ import java.util.Objects;
 @CustomType
 public final class OracleProfileResponse {
     /**
-     * Connection string attributes
+     * @return Connection string attributes
      * 
      */
     private final Map<String,String> connectionAttributes;
     /**
-     * Database for the Oracle connection.
+     * @return Database for the Oracle connection.
      * 
      */
     private final String databaseService;
     /**
-     * Hostname for the Oracle connection.
+     * @return Hostname for the Oracle connection.
      * 
      */
     private final String hostname;
     /**
-     * Password for the Oracle connection.
+     * @return Password for the Oracle connection.
      * 
      */
     private final String password;
     /**
-     * Port for the Oracle connection, default value is 1521.
+     * @return Port for the Oracle connection, default value is 1521.
      * 
      */
     private final Integer port;
     /**
-     * Username for the Oracle connection.
+     * @return Username for the Oracle connection.
      * 
      */
     private final String username;
@@ -59,44 +59,44 @@ public final class OracleProfileResponse {
     }
 
     /**
-     * Connection string attributes
+     * @return Connection string attributes
      * 
-    */
+     */
     public Map<String,String> connectionAttributes() {
         return this.connectionAttributes;
     }
     /**
-     * Database for the Oracle connection.
+     * @return Database for the Oracle connection.
      * 
-    */
+     */
     public String databaseService() {
         return this.databaseService;
     }
     /**
-     * Hostname for the Oracle connection.
+     * @return Hostname for the Oracle connection.
      * 
-    */
+     */
     public String hostname() {
         return this.hostname;
     }
     /**
-     * Password for the Oracle connection.
+     * @return Password for the Oracle connection.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * Port for the Oracle connection, default value is 1521.
+     * @return Port for the Oracle connection, default value is 1521.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * Username for the Oracle connection.
+     * @return Username for the Oracle connection.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse exte
     @Import(name="status", required=true)
     private GoogleRpcStatusResponse status;
 
+    /**
+     * @return The status of a reload attempt or the initial load.
+     * 
+     */
     public GoogleRpcStatusResponse status() {
         return this.status;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse exte
     @Import(name="time", required=true)
     private String time;
 
+    /**
+     * @return The time of a reload attempt. This reload may have been triggered automatically or manually and may not have succeeded.
+     * 
+     */
     public String time() {
         return this.time;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse exte
             $ = new GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status The status of a reload attempt or the initial load.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(GoogleRpcStatusResponse status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param time The time of a reload attempt. This reload may have been triggered automatically or manually and may not have succeeded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(String time) {
             $.time = time;
             return this;

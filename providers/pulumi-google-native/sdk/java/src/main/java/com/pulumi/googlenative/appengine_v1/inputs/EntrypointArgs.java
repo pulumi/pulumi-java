@@ -26,6 +26,10 @@ public final class EntrypointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shell")
     private @Nullable Output<String> shell;
 
+    /**
+     * @return The format should be a shell command that can be fed to bash -c.
+     * 
+     */
     public Optional<Output<String>> shell() {
         return Optional.ofNullable(this.shell);
     }
@@ -54,11 +58,23 @@ public final class EntrypointArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EntrypointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param shell The format should be a shell command that can be fed to bash -c.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shell(@Nullable Output<String> shell) {
             $.shell = shell;
             return this;
         }
 
+        /**
+         * @param shell The format should be a shell command that can be fed to bash -c.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shell(String shell) {
             return shell(Output.of(shell));
         }

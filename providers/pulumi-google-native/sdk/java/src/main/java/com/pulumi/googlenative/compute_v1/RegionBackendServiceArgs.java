@@ -42,6 +42,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="affinityCookieTtlSec")
     private @Nullable Output<Integer> affinityCookieTtlSec;
 
+    /**
+     * @return Lifetime of cookies in seconds. This setting is applicable to external and internal HTTP(S) load balancers and Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session affinity. If set to 0, the cookie is non-persistent and lasts only until the end of the browser session (or equivalent). The maximum allowed value is one day (86,400). Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * 
+     */
     public Optional<Output<Integer>> affinityCookieTtlSec() {
         return Optional.ofNullable(this.affinityCookieTtlSec);
     }
@@ -53,6 +57,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="backends")
     private @Nullable Output<List<BackendArgs>> backends;
 
+    /**
+     * @return The list of backends that serve this BackendService.
+     * 
+     */
     public Optional<Output<List<BackendArgs>>> backends() {
         return Optional.ofNullable(this.backends);
     }
@@ -64,6 +72,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="cdnPolicy")
     private @Nullable Output<BackendServiceCdnPolicyArgs> cdnPolicy;
 
+    /**
+     * @return Cloud CDN configuration for this BackendService. Only available for specified load balancer types.
+     * 
+     */
     public Optional<Output<BackendServiceCdnPolicyArgs>> cdnPolicy() {
         return Optional.ofNullable(this.cdnPolicy);
     }
@@ -89,6 +101,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="connectionTrackingPolicy")
     private @Nullable Output<BackendServiceConnectionTrackingPolicyArgs> connectionTrackingPolicy;
 
+    /**
+     * @return Connection Tracking configuration for this BackendService. Connection tracking policy settings are only available for Network Load Balancing and Internal TCP/UDP Load Balancing.
+     * 
+     */
     public Optional<Output<BackendServiceConnectionTrackingPolicyArgs>> connectionTrackingPolicy() {
         return Optional.ofNullable(this.connectionTrackingPolicy);
     }
@@ -100,6 +116,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="consistentHash")
     private @Nullable Output<ConsistentHashLoadBalancerSettingsArgs> consistentHash;
 
+    /**
+     * @return Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular destination host will be lost when one or more hosts are added/removed from the destination service. This field specifies parameters that control consistent hashing. This field is only applicable when localityLbPolicy is set to MAGLEV or RING_HASH. This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+     * 
+     */
     public Optional<Output<ConsistentHashLoadBalancerSettingsArgs>> consistentHash() {
         return Optional.ofNullable(this.consistentHash);
     }
@@ -111,6 +131,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="customRequestHeaders")
     private @Nullable Output<List<String>> customRequestHeaders;
 
+    /**
+     * @return Headers that the load balancer adds to proxied requests. See [Creating custom headers](https://cloud.google.com/load-balancing/docs/custom-headers).
+     * 
+     */
     public Optional<Output<List<String>>> customRequestHeaders() {
         return Optional.ofNullable(this.customRequestHeaders);
     }
@@ -122,6 +146,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="customResponseHeaders")
     private @Nullable Output<List<String>> customResponseHeaders;
 
+    /**
+     * @return Headers that the load balancer adds to proxied responses. See [Creating custom headers](https://cloud.google.com/load-balancing/docs/custom-headers).
+     * 
+     */
     public Optional<Output<List<String>>> customResponseHeaders() {
         return Optional.ofNullable(this.customResponseHeaders);
     }
@@ -133,6 +161,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -144,6 +176,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="enableCDN")
     private @Nullable Output<Boolean> enableCDN;
 
+    /**
+     * @return If true, enables Cloud CDN for the backend service of an external HTTP(S) load balancer.
+     * 
+     */
     public Optional<Output<Boolean>> enableCDN() {
         return Optional.ofNullable(this.enableCDN);
     }
@@ -155,6 +191,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="failoverPolicy")
     private @Nullable Output<BackendServiceFailoverPolicyArgs> failoverPolicy;
 
+    /**
+     * @return Requires at least one backend instance group to be defined as a backup (failover) backend. For load balancers that have configurable failover: [Internal TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network/networklb-failover-overview).
+     * 
+     */
     public Optional<Output<BackendServiceFailoverPolicyArgs>> failoverPolicy() {
         return Optional.ofNullable(this.failoverPolicy);
     }
@@ -166,6 +206,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="healthChecks")
     private @Nullable Output<List<String>> healthChecks;
 
+    /**
+     * @return The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy) resource for health checking this backend service. Not all backend services support legacy health checks. See Load balancer guide. Currently, at most one health check can be specified for each backend service. Backend services with instance group or zonal NEG backends must have a health check. Backend services with internet or serverless NEG backends must not have a health check.
+     * 
+     */
     public Optional<Output<List<String>>> healthChecks() {
         return Optional.ofNullable(this.healthChecks);
     }
@@ -177,6 +221,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="iap")
     private @Nullable Output<BackendServiceIAPArgs> iap;
 
+    /**
+     * @return The configurations for Identity-Aware Proxy on this resource. Not available for Internal TCP/UDP Load Balancing and Network Load Balancing.
+     * 
+     */
     public Optional<Output<BackendServiceIAPArgs>> iap() {
         return Optional.ofNullable(this.iap);
     }
@@ -188,6 +236,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="loadBalancingScheme")
     private @Nullable Output<RegionBackendServiceLoadBalancingScheme> loadBalancingScheme;
 
+    /**
+     * @return Specifies the load balancer type. A backend service created for one type of load balancer cannot be used with another. For more information, refer to Choosing a load balancer.
+     * 
+     */
     public Optional<Output<RegionBackendServiceLoadBalancingScheme>> loadBalancingScheme() {
         return Optional.ofNullable(this.loadBalancingScheme);
     }
@@ -199,6 +251,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="localityLbPolicy")
     private @Nullable Output<RegionBackendServiceLocalityLbPolicy> localityLbPolicy;
 
+    /**
+     * @return The load balancing algorithm used within the scope of the locality. The possible values are: - ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. - LEAST_REQUEST: An O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests. - RING_HASH: The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests. - RANDOM: The load balancer selects a random healthy host. - ORIGINAL_DESTINATION: Backend host is selected based on the client connection metadata, i.e., connections are opened to the same address as the destination address of the incoming connection before the connection was redirected to the load balancer. - MAGLEV: used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host selection times. For more information about Maglev, see https://ai.google/research/pubs/pub44824 This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. If sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session affinity settings will not take effect. Only ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * 
+     */
     public Optional<Output<RegionBackendServiceLocalityLbPolicy>> localityLbPolicy() {
         return Optional.ofNullable(this.localityLbPolicy);
     }
@@ -210,6 +266,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="logConfig")
     private @Nullable Output<BackendServiceLogConfigArgs> logConfig;
 
+    /**
+     * @return This field denotes the logging options for the load balancer traffic served by this backend service. If logging is enabled, logs will be exported to Stackdriver.
+     * 
+     */
     public Optional<Output<BackendServiceLogConfigArgs>> logConfig() {
         return Optional.ofNullable(this.logConfig);
     }
@@ -221,6 +281,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="maxStreamDuration")
     private @Nullable Output<DurationArgs> maxStreamDuration;
 
+    /**
+     * @return Specifies the default maximum duration (timeout) for streams to this service. Duration is computed from the beginning of the stream until the response has been completely processed, including all retries. A stream that does not complete in this duration is closed. If not specified, there will be no timeout limit, i.e. the maximum duration is infinite. This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service. This field is only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
+     * 
+     */
     public Optional<Output<DurationArgs>> maxStreamDuration() {
         return Optional.ofNullable(this.maxStreamDuration);
     }
@@ -232,6 +296,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -243,6 +311,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return The URL of the network to which this backend service belongs. This field can only be specified when the load balancing scheme is set to INTERNAL.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -254,6 +326,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="outlierDetection")
     private @Nullable Output<OutlierDetectionArgs> outlierDetection;
 
+    /**
+     * @return Settings controlling the eviction of unhealthy hosts from the load balancing pool for the backend service. If not set, this feature is considered disabled. This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * 
+     */
     public Optional<Output<OutlierDetectionArgs>> outlierDetection() {
         return Optional.ofNullable(this.outlierDetection);
     }
@@ -265,6 +341,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="portName")
     private @Nullable Output<String> portName;
 
+    /**
+     * @return A named port on a backend instance group representing the port for communication to the backend VMs in that group. The named port must be [defined on each backend instance group](https://cloud.google.com/load-balancing/docs/backend-service#named_ports). This parameter has no meaning if the backends are NEGs. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port_name.
+     * 
+     */
     public Optional<Output<String>> portName() {
         return Optional.ofNullable(this.portName);
     }
@@ -283,6 +363,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="protocol")
     private @Nullable Output<RegionBackendServiceProtocol> protocol;
 
+    /**
+     * @return The protocol this BackendService uses to communicate with backends. Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, UDP or GRPC. depending on the chosen load balancer or Traffic Director configuration. Refer to the documentation for the load balancers or for Traffic Director for more information. Must be set to GRPC when the backend service is referenced by a URL map that is bound to target gRPC proxy.
+     * 
+     */
     public Optional<Output<RegionBackendServiceProtocol>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -308,6 +392,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="securitySettings")
     private @Nullable Output<SecuritySettingsArgs> securitySettings;
 
+    /**
+     * @return This field specifies the security settings that apply to this backend service. This field is applicable to a global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+     * 
+     */
     public Optional<Output<SecuritySettingsArgs>> securitySettings() {
         return Optional.ofNullable(this.securitySettings);
     }
@@ -319,6 +407,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="sessionAffinity")
     private @Nullable Output<RegionBackendServiceSessionAffinity> sessionAffinity;
 
+    /**
+     * @return Type of session affinity to use. The default is NONE. Only NONE and HEADER_FIELD are supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. For more details, see: [Session Affinity](https://cloud.google.com/load-balancing/docs/backend-service#session_affinity).
+     * 
+     */
     public Optional<Output<RegionBackendServiceSessionAffinity>> sessionAffinity() {
         return Optional.ofNullable(this.sessionAffinity);
     }
@@ -337,6 +429,10 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="timeoutSec")
     private @Nullable Output<Integer> timeoutSec;
 
+    /**
+     * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
+     * 
+     */
     public Optional<Output<Integer>> timeoutSec() {
         return Optional.ofNullable(this.timeoutSec);
     }
@@ -394,33 +490,75 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
             $ = new RegionBackendServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param affinityCookieTtlSec Lifetime of cookies in seconds. This setting is applicable to external and internal HTTP(S) load balancers and Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session affinity. If set to 0, the cookie is non-persistent and lasts only until the end of the browser session (or equivalent). The maximum allowed value is one day (86,400). Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affinityCookieTtlSec(@Nullable Output<Integer> affinityCookieTtlSec) {
             $.affinityCookieTtlSec = affinityCookieTtlSec;
             return this;
         }
 
+        /**
+         * @param affinityCookieTtlSec Lifetime of cookies in seconds. This setting is applicable to external and internal HTTP(S) load balancers and Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session affinity. If set to 0, the cookie is non-persistent and lasts only until the end of the browser session (or equivalent). The maximum allowed value is one day (86,400). Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affinityCookieTtlSec(Integer affinityCookieTtlSec) {
             return affinityCookieTtlSec(Output.of(affinityCookieTtlSec));
         }
 
+        /**
+         * @param backends The list of backends that serve this BackendService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backends(@Nullable Output<List<BackendArgs>> backends) {
             $.backends = backends;
             return this;
         }
 
+        /**
+         * @param backends The list of backends that serve this BackendService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backends(List<BackendArgs> backends) {
             return backends(Output.of(backends));
         }
 
+        /**
+         * @param backends The list of backends that serve this BackendService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backends(BackendArgs... backends) {
             return backends(List.of(backends));
         }
 
+        /**
+         * @param cdnPolicy Cloud CDN configuration for this BackendService. Only available for specified load balancer types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cdnPolicy(@Nullable Output<BackendServiceCdnPolicyArgs> cdnPolicy) {
             $.cdnPolicy = cdnPolicy;
             return this;
         }
 
+        /**
+         * @param cdnPolicy Cloud CDN configuration for this BackendService. Only available for specified load balancer types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cdnPolicy(BackendServiceCdnPolicyArgs cdnPolicy) {
             return cdnPolicy(Output.of(cdnPolicy));
         }
@@ -443,167 +581,389 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
             return connectionDraining(Output.of(connectionDraining));
         }
 
+        /**
+         * @param connectionTrackingPolicy Connection Tracking configuration for this BackendService. Connection tracking policy settings are only available for Network Load Balancing and Internal TCP/UDP Load Balancing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionTrackingPolicy(@Nullable Output<BackendServiceConnectionTrackingPolicyArgs> connectionTrackingPolicy) {
             $.connectionTrackingPolicy = connectionTrackingPolicy;
             return this;
         }
 
+        /**
+         * @param connectionTrackingPolicy Connection Tracking configuration for this BackendService. Connection tracking policy settings are only available for Network Load Balancing and Internal TCP/UDP Load Balancing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionTrackingPolicy(BackendServiceConnectionTrackingPolicyArgs connectionTrackingPolicy) {
             return connectionTrackingPolicy(Output.of(connectionTrackingPolicy));
         }
 
+        /**
+         * @param consistentHash Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular destination host will be lost when one or more hosts are added/removed from the destination service. This field specifies parameters that control consistent hashing. This field is only applicable when localityLbPolicy is set to MAGLEV or RING_HASH. This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consistentHash(@Nullable Output<ConsistentHashLoadBalancerSettingsArgs> consistentHash) {
             $.consistentHash = consistentHash;
             return this;
         }
 
+        /**
+         * @param consistentHash Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular destination host will be lost when one or more hosts are added/removed from the destination service. This field specifies parameters that control consistent hashing. This field is only applicable when localityLbPolicy is set to MAGLEV or RING_HASH. This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consistentHash(ConsistentHashLoadBalancerSettingsArgs consistentHash) {
             return consistentHash(Output.of(consistentHash));
         }
 
+        /**
+         * @param customRequestHeaders Headers that the load balancer adds to proxied requests. See [Creating custom headers](https://cloud.google.com/load-balancing/docs/custom-headers).
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRequestHeaders(@Nullable Output<List<String>> customRequestHeaders) {
             $.customRequestHeaders = customRequestHeaders;
             return this;
         }
 
+        /**
+         * @param customRequestHeaders Headers that the load balancer adds to proxied requests. See [Creating custom headers](https://cloud.google.com/load-balancing/docs/custom-headers).
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRequestHeaders(List<String> customRequestHeaders) {
             return customRequestHeaders(Output.of(customRequestHeaders));
         }
 
+        /**
+         * @param customRequestHeaders Headers that the load balancer adds to proxied requests. See [Creating custom headers](https://cloud.google.com/load-balancing/docs/custom-headers).
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRequestHeaders(String... customRequestHeaders) {
             return customRequestHeaders(List.of(customRequestHeaders));
         }
 
+        /**
+         * @param customResponseHeaders Headers that the load balancer adds to proxied responses. See [Creating custom headers](https://cloud.google.com/load-balancing/docs/custom-headers).
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponseHeaders(@Nullable Output<List<String>> customResponseHeaders) {
             $.customResponseHeaders = customResponseHeaders;
             return this;
         }
 
+        /**
+         * @param customResponseHeaders Headers that the load balancer adds to proxied responses. See [Creating custom headers](https://cloud.google.com/load-balancing/docs/custom-headers).
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponseHeaders(List<String> customResponseHeaders) {
             return customResponseHeaders(Output.of(customResponseHeaders));
         }
 
+        /**
+         * @param customResponseHeaders Headers that the load balancer adds to proxied responses. See [Creating custom headers](https://cloud.google.com/load-balancing/docs/custom-headers).
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponseHeaders(String... customResponseHeaders) {
             return customResponseHeaders(List.of(customResponseHeaders));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enableCDN If true, enables Cloud CDN for the backend service of an external HTTP(S) load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCDN(@Nullable Output<Boolean> enableCDN) {
             $.enableCDN = enableCDN;
             return this;
         }
 
+        /**
+         * @param enableCDN If true, enables Cloud CDN for the backend service of an external HTTP(S) load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCDN(Boolean enableCDN) {
             return enableCDN(Output.of(enableCDN));
         }
 
+        /**
+         * @param failoverPolicy Requires at least one backend instance group to be defined as a backup (failover) backend. For load balancers that have configurable failover: [Internal TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network/networklb-failover-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverPolicy(@Nullable Output<BackendServiceFailoverPolicyArgs> failoverPolicy) {
             $.failoverPolicy = failoverPolicy;
             return this;
         }
 
+        /**
+         * @param failoverPolicy Requires at least one backend instance group to be defined as a backup (failover) backend. For load balancers that have configurable failover: [Internal TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network/networklb-failover-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverPolicy(BackendServiceFailoverPolicyArgs failoverPolicy) {
             return failoverPolicy(Output.of(failoverPolicy));
         }
 
+        /**
+         * @param healthChecks The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy) resource for health checking this backend service. Not all backend services support legacy health checks. See Load balancer guide. Currently, at most one health check can be specified for each backend service. Backend services with instance group or zonal NEG backends must have a health check. Backend services with internet or serverless NEG backends must not have a health check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthChecks(@Nullable Output<List<String>> healthChecks) {
             $.healthChecks = healthChecks;
             return this;
         }
 
+        /**
+         * @param healthChecks The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy) resource for health checking this backend service. Not all backend services support legacy health checks. See Load balancer guide. Currently, at most one health check can be specified for each backend service. Backend services with instance group or zonal NEG backends must have a health check. Backend services with internet or serverless NEG backends must not have a health check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthChecks(List<String> healthChecks) {
             return healthChecks(Output.of(healthChecks));
         }
 
+        /**
+         * @param healthChecks The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy) resource for health checking this backend service. Not all backend services support legacy health checks. See Load balancer guide. Currently, at most one health check can be specified for each backend service. Backend services with instance group or zonal NEG backends must have a health check. Backend services with internet or serverless NEG backends must not have a health check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthChecks(String... healthChecks) {
             return healthChecks(List.of(healthChecks));
         }
 
+        /**
+         * @param iap The configurations for Identity-Aware Proxy on this resource. Not available for Internal TCP/UDP Load Balancing and Network Load Balancing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iap(@Nullable Output<BackendServiceIAPArgs> iap) {
             $.iap = iap;
             return this;
         }
 
+        /**
+         * @param iap The configurations for Identity-Aware Proxy on this resource. Not available for Internal TCP/UDP Load Balancing and Network Load Balancing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iap(BackendServiceIAPArgs iap) {
             return iap(Output.of(iap));
         }
 
+        /**
+         * @param loadBalancingScheme Specifies the load balancer type. A backend service created for one type of load balancer cannot be used with another. For more information, refer to Choosing a load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingScheme(@Nullable Output<RegionBackendServiceLoadBalancingScheme> loadBalancingScheme) {
             $.loadBalancingScheme = loadBalancingScheme;
             return this;
         }
 
+        /**
+         * @param loadBalancingScheme Specifies the load balancer type. A backend service created for one type of load balancer cannot be used with another. For more information, refer to Choosing a load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingScheme(RegionBackendServiceLoadBalancingScheme loadBalancingScheme) {
             return loadBalancingScheme(Output.of(loadBalancingScheme));
         }
 
+        /**
+         * @param localityLbPolicy The load balancing algorithm used within the scope of the locality. The possible values are: - ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. - LEAST_REQUEST: An O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests. - RING_HASH: The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests. - RANDOM: The load balancer selects a random healthy host. - ORIGINAL_DESTINATION: Backend host is selected based on the client connection metadata, i.e., connections are opened to the same address as the destination address of the incoming connection before the connection was redirected to the load balancer. - MAGLEV: used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host selection times. For more information about Maglev, see https://ai.google/research/pubs/pub44824 This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. If sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session affinity settings will not take effect. Only ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localityLbPolicy(@Nullable Output<RegionBackendServiceLocalityLbPolicy> localityLbPolicy) {
             $.localityLbPolicy = localityLbPolicy;
             return this;
         }
 
+        /**
+         * @param localityLbPolicy The load balancing algorithm used within the scope of the locality. The possible values are: - ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. - LEAST_REQUEST: An O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests. - RING_HASH: The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests. - RANDOM: The load balancer selects a random healthy host. - ORIGINAL_DESTINATION: Backend host is selected based on the client connection metadata, i.e., connections are opened to the same address as the destination address of the incoming connection before the connection was redirected to the load balancer. - MAGLEV: used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host selection times. For more information about Maglev, see https://ai.google/research/pubs/pub44824 This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. If sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session affinity settings will not take effect. Only ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localityLbPolicy(RegionBackendServiceLocalityLbPolicy localityLbPolicy) {
             return localityLbPolicy(Output.of(localityLbPolicy));
         }
 
+        /**
+         * @param logConfig This field denotes the logging options for the load balancer traffic served by this backend service. If logging is enabled, logs will be exported to Stackdriver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(@Nullable Output<BackendServiceLogConfigArgs> logConfig) {
             $.logConfig = logConfig;
             return this;
         }
 
+        /**
+         * @param logConfig This field denotes the logging options for the load balancer traffic served by this backend service. If logging is enabled, logs will be exported to Stackdriver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(BackendServiceLogConfigArgs logConfig) {
             return logConfig(Output.of(logConfig));
         }
 
+        /**
+         * @param maxStreamDuration Specifies the default maximum duration (timeout) for streams to this service. Duration is computed from the beginning of the stream until the response has been completely processed, including all retries. A stream that does not complete in this duration is closed. If not specified, there will be no timeout limit, i.e. the maximum duration is infinite. This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service. This field is only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxStreamDuration(@Nullable Output<DurationArgs> maxStreamDuration) {
             $.maxStreamDuration = maxStreamDuration;
             return this;
         }
 
+        /**
+         * @param maxStreamDuration Specifies the default maximum duration (timeout) for streams to this service. Duration is computed from the beginning of the stream until the response has been completely processed, including all retries. A stream that does not complete in this duration is closed. If not specified, there will be no timeout limit, i.e. the maximum duration is infinite. This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service. This field is only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxStreamDuration(DurationArgs maxStreamDuration) {
             return maxStreamDuration(Output.of(maxStreamDuration));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param network The URL of the network to which this backend service belongs. This field can only be specified when the load balancing scheme is set to INTERNAL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The URL of the network to which this backend service belongs. This field can only be specified when the load balancing scheme is set to INTERNAL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param outlierDetection Settings controlling the eviction of unhealthy hosts from the load balancing pool for the backend service. If not set, this feature is considered disabled. This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outlierDetection(@Nullable Output<OutlierDetectionArgs> outlierDetection) {
             $.outlierDetection = outlierDetection;
             return this;
         }
 
+        /**
+         * @param outlierDetection Settings controlling the eviction of unhealthy hosts from the load balancing pool for the backend service. If not set, this feature is considered disabled. This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outlierDetection(OutlierDetectionArgs outlierDetection) {
             return outlierDetection(Output.of(outlierDetection));
         }
 
+        /**
+         * @param portName A named port on a backend instance group representing the port for communication to the backend VMs in that group. The named port must be [defined on each backend instance group](https://cloud.google.com/load-balancing/docs/backend-service#named_ports). This parameter has no meaning if the backends are NEGs. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port_name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portName(@Nullable Output<String> portName) {
             $.portName = portName;
             return this;
         }
 
+        /**
+         * @param portName A named port on a backend instance group representing the port for communication to the backend VMs in that group. The named port must be [defined on each backend instance group](https://cloud.google.com/load-balancing/docs/backend-service#named_ports). This parameter has no meaning if the backends are NEGs. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port_name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portName(String portName) {
             return portName(Output.of(portName));
         }
@@ -617,11 +977,23 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
             return project(Output.of(project));
         }
 
+        /**
+         * @param protocol The protocol this BackendService uses to communicate with backends. Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, UDP or GRPC. depending on the chosen load balancer or Traffic Director configuration. Refer to the documentation for the load balancers or for Traffic Director for more information. Must be set to GRPC when the backend service is referenced by a URL map that is bound to target gRPC proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<RegionBackendServiceProtocol> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol The protocol this BackendService uses to communicate with backends. Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, UDP or GRPC. depending on the chosen load balancer or Traffic Director configuration. Refer to the documentation for the load balancers or for Traffic Director for more information. Must be set to GRPC when the backend service is referenced by a URL map that is bound to target gRPC proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(RegionBackendServiceProtocol protocol) {
             return protocol(Output.of(protocol));
         }
@@ -644,20 +1016,44 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param securitySettings This field specifies the security settings that apply to this backend service. This field is applicable to a global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securitySettings(@Nullable Output<SecuritySettingsArgs> securitySettings) {
             $.securitySettings = securitySettings;
             return this;
         }
 
+        /**
+         * @param securitySettings This field specifies the security settings that apply to this backend service. This field is applicable to a global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securitySettings(SecuritySettingsArgs securitySettings) {
             return securitySettings(Output.of(securitySettings));
         }
 
+        /**
+         * @param sessionAffinity Type of session affinity to use. The default is NONE. Only NONE and HEADER_FIELD are supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. For more details, see: [Session Affinity](https://cloud.google.com/load-balancing/docs/backend-service#session_affinity).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinity(@Nullable Output<RegionBackendServiceSessionAffinity> sessionAffinity) {
             $.sessionAffinity = sessionAffinity;
             return this;
         }
 
+        /**
+         * @param sessionAffinity Type of session affinity to use. The default is NONE. Only NONE and HEADER_FIELD are supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. For more details, see: [Session Affinity](https://cloud.google.com/load-balancing/docs/backend-service#session_affinity).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinity(RegionBackendServiceSessionAffinity sessionAffinity) {
             return sessionAffinity(Output.of(sessionAffinity));
         }
@@ -671,11 +1067,23 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
             return subsetting(Output.of(subsetting));
         }
 
+        /**
+         * @param timeoutSec Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
             $.timeoutSec = timeoutSec;
             return this;
         }
 
+        /**
+         * @param timeoutSec Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSec(Integer timeoutSec) {
             return timeoutSec(Output.of(timeoutSec));
         }

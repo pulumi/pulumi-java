@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudApigeeV1AttributeResponse {
     /**
-     * API key of the attribute.
+     * @return API key of the attribute.
      * 
      */
     private final String name;
     /**
-     * Value of the attribute.
+     * @return Value of the attribute.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class GoogleCloudApigeeV1AttributeResponse {
     }
 
     /**
-     * API key of the attribute.
+     * @return API key of the attribute.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Value of the attribute.
+     * @return Value of the attribute.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

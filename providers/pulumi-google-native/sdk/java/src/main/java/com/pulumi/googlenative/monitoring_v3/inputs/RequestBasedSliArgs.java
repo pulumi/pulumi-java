@@ -27,6 +27,10 @@ public final class RequestBasedSliArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="distributionCut")
     private @Nullable Output<DistributionCutArgs> distributionCut;
 
+    /**
+     * @return distribution_cut is used when good_service is a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution.
+     * 
+     */
     public Optional<Output<DistributionCutArgs>> distributionCut() {
         return Optional.ofNullable(this.distributionCut);
     }
@@ -38,6 +42,10 @@ public final class RequestBasedSliArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="goodTotalRatio")
     private @Nullable Output<TimeSeriesRatioArgs> goodTotalRatio;
 
+    /**
+     * @return good_total_ratio is used when the ratio of good_service to total_service is computed from two TimeSeries.
+     * 
+     */
     public Optional<Output<TimeSeriesRatioArgs>> goodTotalRatio() {
         return Optional.ofNullable(this.goodTotalRatio);
     }
@@ -67,20 +75,44 @@ public final class RequestBasedSliArgs extends com.pulumi.resources.ResourceArgs
             $ = new RequestBasedSliArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributionCut distribution_cut is used when good_service is a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionCut(@Nullable Output<DistributionCutArgs> distributionCut) {
             $.distributionCut = distributionCut;
             return this;
         }
 
+        /**
+         * @param distributionCut distribution_cut is used when good_service is a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionCut(DistributionCutArgs distributionCut) {
             return distributionCut(Output.of(distributionCut));
         }
 
+        /**
+         * @param goodTotalRatio good_total_ratio is used when the ratio of good_service to total_service is computed from two TimeSeries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goodTotalRatio(@Nullable Output<TimeSeriesRatioArgs> goodTotalRatio) {
             $.goodTotalRatio = goodTotalRatio;
             return this;
         }
 
+        /**
+         * @param goodTotalRatio good_total_ratio is used when the ratio of good_service to total_service is computed from two TimeSeries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goodTotalRatio(TimeSeriesRatioArgs goodTotalRatio) {
             return goodTotalRatio(Output.of(goodTotalRatio));
         }

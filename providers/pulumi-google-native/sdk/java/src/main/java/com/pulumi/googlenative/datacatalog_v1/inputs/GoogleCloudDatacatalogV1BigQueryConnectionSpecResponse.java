@@ -25,6 +25,10 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
     @Import(name="cloudSql", required=true)
     private GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql;
 
+    /**
+     * @return Specification for the BigQuery connection to a Cloud SQL instance.
+     * 
+     */
     public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql() {
         return this.cloudSql;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
     @Import(name="connectionType", required=true)
     private String connectionType;
 
+    /**
+     * @return The type of the BigQuery connection.
+     * 
+     */
     public String connectionType() {
         return this.connectionType;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
     @Import(name="hasCredential", required=true)
     private Boolean hasCredential;
 
+    /**
+     * @return True if there are credentials attached to the BigQuery connection; false otherwise.
+     * 
+     */
     public Boolean hasCredential() {
         return this.hasCredential;
     }
@@ -77,16 +89,34 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
             $ = new GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudSql Specification for the BigQuery connection to a Cloud SQL instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSql(GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql) {
             $.cloudSql = cloudSql;
             return this;
         }
 
+        /**
+         * @param connectionType The type of the BigQuery connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionType(String connectionType) {
             $.connectionType = connectionType;
             return this;
         }
 
+        /**
+         * @param hasCredential True if there are credentials attached to the BigQuery connection; false otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasCredential(Boolean hasCredential) {
             $.hasCredential = hasCredential;
             return this;

@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class NetworkEndpointGroupAppEngineResponse {
     /**
-     * Optional serving service. The service name is case-sensitive and must be 1-63 characters long. Example value: &#34;default&#34;, &#34;my-service&#34;.
+     * @return Optional serving service. The service name is case-sensitive and must be 1-63 characters long. Example value: &#34;default&#34;, &#34;my-service&#34;.
      * 
      */
     private final String service;
     /**
-     * A template to parse service and version fields from a request URL. URL mask allows for routing to multiple App Engine services without having to create multiple Network Endpoint Groups and backend services. For example, the request URLs &#34;foo1-dot-appname.appspot.com/v1&#34; and &#34;foo1-dot-appname.appspot.com/v2&#34; can be backed by the same Serverless NEG with URL mask &#34;-dot-appname.appspot.com/&#34;. The URL mask will parse them to { service = &#34;foo1&#34;, version = &#34;v1&#34; } and { service = &#34;foo1&#34;, version = &#34;v2&#34; } respectively.
+     * @return A template to parse service and version fields from a request URL. URL mask allows for routing to multiple App Engine services without having to create multiple Network Endpoint Groups and backend services. For example, the request URLs &#34;foo1-dot-appname.appspot.com/v1&#34; and &#34;foo1-dot-appname.appspot.com/v2&#34; can be backed by the same Serverless NEG with URL mask &#34;-dot-appname.appspot.com/&#34;. The URL mask will parse them to { service = &#34;foo1&#34;, version = &#34;v1&#34; } and { service = &#34;foo1&#34;, version = &#34;v2&#34; } respectively.
      * 
      */
     private final String urlMask;
     /**
-     * Optional serving version. The version name is case-sensitive and must be 1-100 characters long. Example value: &#34;v1&#34;, &#34;v2&#34;.
+     * @return Optional serving version. The version name is case-sensitive and must be 1-100 characters long. Example value: &#34;v1&#34;, &#34;v2&#34;.
      * 
      */
     private final String version;
@@ -36,23 +36,23 @@ public final class NetworkEndpointGroupAppEngineResponse {
     }
 
     /**
-     * Optional serving service. The service name is case-sensitive and must be 1-63 characters long. Example value: &#34;default&#34;, &#34;my-service&#34;.
+     * @return Optional serving service. The service name is case-sensitive and must be 1-63 characters long. Example value: &#34;default&#34;, &#34;my-service&#34;.
      * 
-    */
+     */
     public String service() {
         return this.service;
     }
     /**
-     * A template to parse service and version fields from a request URL. URL mask allows for routing to multiple App Engine services without having to create multiple Network Endpoint Groups and backend services. For example, the request URLs &#34;foo1-dot-appname.appspot.com/v1&#34; and &#34;foo1-dot-appname.appspot.com/v2&#34; can be backed by the same Serverless NEG with URL mask &#34;-dot-appname.appspot.com/&#34;. The URL mask will parse them to { service = &#34;foo1&#34;, version = &#34;v1&#34; } and { service = &#34;foo1&#34;, version = &#34;v2&#34; } respectively.
+     * @return A template to parse service and version fields from a request URL. URL mask allows for routing to multiple App Engine services without having to create multiple Network Endpoint Groups and backend services. For example, the request URLs &#34;foo1-dot-appname.appspot.com/v1&#34; and &#34;foo1-dot-appname.appspot.com/v2&#34; can be backed by the same Serverless NEG with URL mask &#34;-dot-appname.appspot.com/&#34;. The URL mask will parse them to { service = &#34;foo1&#34;, version = &#34;v1&#34; } and { service = &#34;foo1&#34;, version = &#34;v2&#34; } respectively.
      * 
-    */
+     */
     public String urlMask() {
         return this.urlMask;
     }
     /**
-     * Optional serving version. The version name is case-sensitive and must be 1-100 characters long. Example value: &#34;v1&#34;, &#34;v2&#34;.
+     * @return Optional serving version. The version name is case-sensitive and must be 1-100 characters long. Example value: &#34;v1&#34;, &#34;v2&#34;.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

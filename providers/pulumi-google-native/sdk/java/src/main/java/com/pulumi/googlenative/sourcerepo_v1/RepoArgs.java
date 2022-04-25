@@ -24,6 +24,10 @@ public final class RepoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mirrorConfig")
     private @Nullable Output<MirrorConfigArgs> mirrorConfig;
 
+    /**
+     * @return How this repository mirrors a repository managed by another service. Read-only field.
+     * 
+     */
     public Optional<Output<MirrorConfigArgs>> mirrorConfig() {
         return Optional.ofNullable(this.mirrorConfig);
     }
@@ -35,6 +39,10 @@ public final class RepoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +61,10 @@ public final class RepoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pubsubConfigs")
     private @Nullable Output<Map<String,String>> pubsubConfigs;
 
+    /**
+     * @return How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
+     * 
+     */
     public Optional<Output<Map<String,String>>> pubsubConfigs() {
         return Optional.ofNullable(this.pubsubConfigs);
     }
@@ -64,6 +76,10 @@ public final class RepoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="size")
     private @Nullable Output<String> size;
 
+    /**
+     * @return The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
+     * 
+     */
     public Optional<Output<String>> size() {
         return Optional.ofNullable(this.size);
     }
@@ -75,6 +91,10 @@ public final class RepoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return URL to clone the repository from Google Cloud Source Repositories. Read-only field.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -108,20 +128,44 @@ public final class RepoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RepoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mirrorConfig How this repository mirrors a repository managed by another service. Read-only field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mirrorConfig(@Nullable Output<MirrorConfigArgs> mirrorConfig) {
             $.mirrorConfig = mirrorConfig;
             return this;
         }
 
+        /**
+         * @param mirrorConfig How this repository mirrors a repository managed by another service. Read-only field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mirrorConfig(MirrorConfigArgs mirrorConfig) {
             return mirrorConfig(Output.of(mirrorConfig));
         }
 
+        /**
+         * @param name Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -135,29 +179,65 @@ public final class RepoArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param pubsubConfigs How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubConfigs(@Nullable Output<Map<String,String>> pubsubConfigs) {
             $.pubsubConfigs = pubsubConfigs;
             return this;
         }
 
+        /**
+         * @param pubsubConfigs How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubConfigs(Map<String,String> pubsubConfigs) {
             return pubsubConfigs(Output.of(pubsubConfigs));
         }
 
+        /**
+         * @param size The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable Output<String> size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param size The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(String size) {
             return size(Output.of(size));
         }
 
+        /**
+         * @param url URL to clone the repository from Google Cloud Source Repositories. Read-only field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url URL to clone the repository from Google Cloud Source Repositories. Read-only field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

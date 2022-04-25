@@ -23,6 +23,10 @@ public final class PushConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pushEndpoint", required=true)
     private String pushEndpoint;
 
+    /**
+     * @return A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use &#34;https://example.com/push&#34;.
+     * 
+     */
     public String pushEndpoint() {
         return this.pushEndpoint;
     }
@@ -51,6 +55,12 @@ public final class PushConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PushConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pushEndpoint A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use &#34;https://example.com/push&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushEndpoint(String pushEndpoint) {
             $.pushEndpoint = pushEndpoint;
             return this;

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class CisBenchmarkResponse {
     /**
-     * The profile level of this CIS benchmark check.
+     * @return The profile level of this CIS benchmark check.
      * 
      */
     private final Integer profileLevel;
     /**
-     * The severity level of this CIS benchmark check.
+     * @return The severity level of this CIS benchmark check.
      * 
      */
     private final String severity;
@@ -30,16 +30,16 @@ public final class CisBenchmarkResponse {
     }
 
     /**
-     * The profile level of this CIS benchmark check.
+     * @return The profile level of this CIS benchmark check.
      * 
-    */
+     */
     public Integer profileLevel() {
         return this.profileLevel;
     }
     /**
-     * The severity level of this CIS benchmark check.
+     * @return The severity level of this CIS benchmark check.
      * 
-    */
+     */
     public String severity() {
         return this.severity;
     }

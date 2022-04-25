@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class EnvironmentVariableResponse {
     /**
-     * Key for the environment variable.
+     * @return Key for the environment variable.
      * 
      */
     private final String key;
     /**
-     * Value for the environment variable.
+     * @return Value for the environment variable.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class EnvironmentVariableResponse {
     }
 
     /**
-     * Key for the environment variable.
+     * @return Key for the environment variable.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Value for the environment variable.
+     * @return Value for the environment variable.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

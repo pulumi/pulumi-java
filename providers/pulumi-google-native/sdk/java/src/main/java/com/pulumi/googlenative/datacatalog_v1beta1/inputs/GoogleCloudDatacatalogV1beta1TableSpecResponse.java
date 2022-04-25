@@ -23,6 +23,10 @@ public final class GoogleCloudDatacatalogV1beta1TableSpecResponse extends com.pu
     @Import(name="groupedEntry", required=true)
     private String groupedEntry;
 
+    /**
+     * @return If the table is a dated shard, i.e., with name pattern `[prefix]YYYYMMDD`, `grouped_entry` is the Data Catalog resource name of the date sharded grouped entry, for example, `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`. Otherwise, `grouped_entry` is empty.
+     * 
+     */
     public String groupedEntry() {
         return this.groupedEntry;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDatacatalogV1beta1TableSpecResponse extends com.pu
             $ = new GoogleCloudDatacatalogV1beta1TableSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupedEntry If the table is a dated shard, i.e., with name pattern `[prefix]YYYYMMDD`, `grouped_entry` is the Data Catalog resource name of the date sharded grouped entry, for example, `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`. Otherwise, `grouped_entry` is empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupedEntry(String groupedEntry) {
             $.groupedEntry = groupedEntry;
             return this;

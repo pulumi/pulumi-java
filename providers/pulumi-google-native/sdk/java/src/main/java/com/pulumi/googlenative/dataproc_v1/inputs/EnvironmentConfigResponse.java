@@ -24,6 +24,10 @@ public final class EnvironmentConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="executionConfig", required=true)
     private ExecutionConfigResponse executionConfig;
 
+    /**
+     * @return Optional. Execution configuration for a workload.
+     * 
+     */
     public ExecutionConfigResponse executionConfig() {
         return this.executionConfig;
     }
@@ -35,6 +39,10 @@ public final class EnvironmentConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="peripheralsConfig", required=true)
     private PeripheralsConfigResponse peripheralsConfig;
 
+    /**
+     * @return Optional. Peripherals configuration that workload has access to.
+     * 
+     */
     public PeripheralsConfigResponse peripheralsConfig() {
         return this.peripheralsConfig;
     }
@@ -64,11 +72,23 @@ public final class EnvironmentConfigResponse extends com.pulumi.resources.Invoke
             $ = new EnvironmentConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param executionConfig Optional. Execution configuration for a workload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionConfig(ExecutionConfigResponse executionConfig) {
             $.executionConfig = executionConfig;
             return this;
         }
 
+        /**
+         * @param peripheralsConfig Optional. Peripherals configuration that workload has access to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peripheralsConfig(PeripheralsConfigResponse peripheralsConfig) {
             $.peripheralsConfig = peripheralsConfig;
             return this;

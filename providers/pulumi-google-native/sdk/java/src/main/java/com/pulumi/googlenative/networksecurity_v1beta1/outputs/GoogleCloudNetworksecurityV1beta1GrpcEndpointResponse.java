@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse {
     /**
-     * The target URI of the gRPC endpoint. Only UDS path is supported, and should start with “unix:”.
+     * @return The target URI of the gRPC endpoint. Only UDS path is supported, and should start with “unix:”.
      * 
      */
     private final String targetUri;
@@ -21,9 +21,9 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse {
     }
 
     /**
-     * The target URI of the gRPC endpoint. Only UDS path is supported, and should start with “unix:”.
+     * @return The target URI of the gRPC endpoint. Only UDS path is supported, and should start with “unix:”.
      * 
-    */
+     */
     public String targetUri() {
         return this.targetUri;
     }

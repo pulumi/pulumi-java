@@ -23,6 +23,10 @@ public final class GKEResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cluster", required=true)
     private String cluster;
 
+    /**
+     * @return The name of the cluster the GKE service is running in. The cluster must be running in the same project as the trigger being created.
+     * 
+     */
     public String cluster() {
         return this.cluster;
     }
@@ -34,6 +38,10 @@ public final class GKEResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The name of the Google Compute Engine in which the cluster resides, which can either be compute zone (for example, us-central1-a) for the zonal clusters or region (for example, us-central1) for regional clusters.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -45,6 +53,10 @@ public final class GKEResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="namespace", required=true)
     private String namespace;
 
+    /**
+     * @return The namespace the GKE service is running in.
+     * 
+     */
     public String namespace() {
         return this.namespace;
     }
@@ -56,6 +68,10 @@ public final class GKEResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return Optional. The relative path on the GKE service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: &#34;/route&#34;, &#34;route&#34;, &#34;route/subroute&#34;.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -67,6 +83,10 @@ public final class GKEResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="service", required=true)
     private String service;
 
+    /**
+     * @return Name of the GKE service.
+     * 
+     */
     public String service() {
         return this.service;
     }
@@ -99,26 +119,56 @@ public final class GKEResponse extends com.pulumi.resources.InvokeArgs {
             $ = new GKEResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cluster The name of the cluster the GKE service is running in. The cluster must be running in the same project as the trigger being created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param location The name of the Google Compute Engine in which the cluster resides, which can either be compute zone (for example, us-central1-a) for the zonal clusters or region (for example, us-central1) for regional clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param namespace The namespace the GKE service is running in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param path Optional. The relative path on the GKE service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: &#34;/route&#34;, &#34;route&#34;, &#34;route/subroute&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param service Name of the GKE service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             $.service = service;
             return this;

@@ -24,6 +24,10 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceResponse extends com.pulumi
     @Import(name="connections", required=true)
     private List<String> connections;
 
+    /**
+     * @return The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}
+     * 
+     */
     public List<String> connections() {
         return this.connections;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceResponse extends com.pulumi
             $ = new GoogleCloudRunOpV2CloudSqlInstanceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connections The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(List<String> connections) {
             $.connections = connections;
             return this;
         }
 
+        /**
+         * @param connections The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(String... connections) {
             return connections(List.of(connections));
         }

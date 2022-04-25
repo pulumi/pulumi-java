@@ -25,6 +25,10 @@ public final class SessionEntityTypeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="entities", required=true)
     private Output<List<GoogleCloudDialogflowV2beta1EntityTypeEntityArgs>> entities;
 
+    /**
+     * @return The collection of entities associated with this session entity type.
+     * 
+     */
     public Output<List<GoogleCloudDialogflowV2beta1EntityTypeEntityArgs>> entities() {
         return this.entities;
     }
@@ -36,6 +40,10 @@ public final class SessionEntityTypeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="entityOverrideMode", required=true)
     private Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode;
 
+    /**
+     * @return Indicates whether the additional data should override or supplement the custom entity type definition.
+     * 
+     */
     public Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode() {
         return this.entityOverrideMode;
     }
@@ -61,6 +69,10 @@ public final class SessionEntityTypeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The unique identifier of this session entity type. Supported formats: - `projects//agent/sessions//entityTypes/` - `projects//locations//agent/sessions//entityTypes/` - `projects//agent/environments//users//sessions//entityTypes/` - `projects//locations//agent/environments/ /users//sessions//entityTypes/` If `Location ID` is not specified we assume default &#39;us&#39; location. If `Environment ID` is not specified, we assume default &#39;draft&#39; environment. If `User ID` is not specified, we assume default &#39;-&#39; user. `` must be the display name of an existing entity type in the same agent that will be overridden or supplemented.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -117,24 +129,54 @@ public final class SessionEntityTypeArgs extends com.pulumi.resources.ResourceAr
             $ = new SessionEntityTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param entities The collection of entities associated with this session entity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entities(Output<List<GoogleCloudDialogflowV2beta1EntityTypeEntityArgs>> entities) {
             $.entities = entities;
             return this;
         }
 
+        /**
+         * @param entities The collection of entities associated with this session entity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entities(List<GoogleCloudDialogflowV2beta1EntityTypeEntityArgs> entities) {
             return entities(Output.of(entities));
         }
 
+        /**
+         * @param entities The collection of entities associated with this session entity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entities(GoogleCloudDialogflowV2beta1EntityTypeEntityArgs... entities) {
             return entities(List.of(entities));
         }
 
+        /**
+         * @param entityOverrideMode Indicates whether the additional data should override or supplement the custom entity type definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityOverrideMode(Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode) {
             $.entityOverrideMode = entityOverrideMode;
             return this;
         }
 
+        /**
+         * @param entityOverrideMode Indicates whether the additional data should override or supplement the custom entity type definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityOverrideMode(SessionEntityTypeEntityOverrideMode entityOverrideMode) {
             return entityOverrideMode(Output.of(entityOverrideMode));
         }
@@ -157,11 +199,23 @@ public final class SessionEntityTypeArgs extends com.pulumi.resources.ResourceAr
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The unique identifier of this session entity type. Supported formats: - `projects//agent/sessions//entityTypes/` - `projects//locations//agent/sessions//entityTypes/` - `projects//agent/environments//users//sessions//entityTypes/` - `projects//locations//agent/environments/ /users//sessions//entityTypes/` If `Location ID` is not specified we assume default &#39;us&#39; location. If `Environment ID` is not specified, we assume default &#39;draft&#39; environment. If `User ID` is not specified, we assume default &#39;-&#39; user. `` must be the display name of an existing entity type in the same agent that will be overridden or supplemented.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique identifier of this session entity type. Supported formats: - `projects//agent/sessions//entityTypes/` - `projects//locations//agent/sessions//entityTypes/` - `projects//agent/environments//users//sessions//entityTypes/` - `projects//locations//agent/environments/ /users//sessions//entityTypes/` If `Location ID` is not specified we assume default &#39;us&#39; location. If `Environment ID` is not specified, we assume default &#39;draft&#39; environment. If `User ID` is not specified, we assume default &#39;-&#39; user. `` must be the display name of an existing entity type in the same agent that will be overridden or supplemented.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

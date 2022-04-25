@@ -25,6 +25,10 @@ public final class ComplianceOccurrenceResponse extends com.pulumi.resources.Inv
     @Import(name="nonComplianceReason", required=true)
     private String nonComplianceReason;
 
+    /**
+     * @return The reason for non compliance of these files.
+     * 
+     */
     public String nonComplianceReason() {
         return this.nonComplianceReason;
     }
@@ -36,6 +40,10 @@ public final class ComplianceOccurrenceResponse extends com.pulumi.resources.Inv
     @Import(name="nonCompliantFiles", required=true)
     private List<NonCompliantFileResponse> nonCompliantFiles;
 
+    /**
+     * @return A list of files which are violating compliance checks.
+     * 
+     */
     public List<NonCompliantFileResponse> nonCompliantFiles() {
         return this.nonCompliantFiles;
     }
@@ -65,16 +73,34 @@ public final class ComplianceOccurrenceResponse extends com.pulumi.resources.Inv
             $ = new ComplianceOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nonComplianceReason The reason for non compliance of these files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonComplianceReason(String nonComplianceReason) {
             $.nonComplianceReason = nonComplianceReason;
             return this;
         }
 
+        /**
+         * @param nonCompliantFiles A list of files which are violating compliance checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonCompliantFiles(List<NonCompliantFileResponse> nonCompliantFiles) {
             $.nonCompliantFiles = nonCompliantFiles;
             return this;
         }
 
+        /**
+         * @param nonCompliantFiles A list of files which are violating compliance checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonCompliantFiles(NonCompliantFileResponse... nonCompliantFiles) {
             return nonCompliantFiles(List.of(nonCompliantFiles));
         }

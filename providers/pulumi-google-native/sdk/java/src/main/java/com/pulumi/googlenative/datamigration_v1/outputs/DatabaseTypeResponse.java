@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DatabaseTypeResponse {
     /**
-     * The database engine.
+     * @return The database engine.
      * 
      */
     private final String engine;
     /**
-     * The database provider.
+     * @return The database provider.
      * 
      */
     private final String provider;
@@ -29,16 +29,16 @@ public final class DatabaseTypeResponse {
     }
 
     /**
-     * The database engine.
+     * @return The database engine.
      * 
-    */
+     */
     public String engine() {
         return this.engine;
     }
     /**
-     * The database provider.
+     * @return The database provider.
      * 
-    */
+     */
     public String provider() {
         return this.provider;
     }

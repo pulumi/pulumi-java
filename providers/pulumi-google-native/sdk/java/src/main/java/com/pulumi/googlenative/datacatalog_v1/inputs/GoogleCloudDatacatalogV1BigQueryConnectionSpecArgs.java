@@ -28,6 +28,10 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends co
     @Import(name="cloudSql")
     private @Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> cloudSql;
 
+    /**
+     * @return Specification for the BigQuery connection to a Cloud SQL instance.
+     * 
+     */
     public Optional<Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs>> cloudSql() {
         return Optional.ofNullable(this.cloudSql);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends co
     @Import(name="connectionType")
     private @Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> connectionType;
 
+    /**
+     * @return The type of the BigQuery connection.
+     * 
+     */
     public Optional<Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType>> connectionType() {
         return Optional.ofNullable(this.connectionType);
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends co
     @Import(name="hasCredential")
     private @Nullable Output<Boolean> hasCredential;
 
+    /**
+     * @return True if there are credentials attached to the BigQuery connection; false otherwise.
+     * 
+     */
     public Optional<Output<Boolean>> hasCredential() {
         return Optional.ofNullable(this.hasCredential);
     }
@@ -80,29 +92,65 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends co
             $ = new GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudSql Specification for the BigQuery connection to a Cloud SQL instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSql(@Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> cloudSql) {
             $.cloudSql = cloudSql;
             return this;
         }
 
+        /**
+         * @param cloudSql Specification for the BigQuery connection to a Cloud SQL instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSql(GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs cloudSql) {
             return cloudSql(Output.of(cloudSql));
         }
 
+        /**
+         * @param connectionType The type of the BigQuery connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionType(@Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> connectionType) {
             $.connectionType = connectionType;
             return this;
         }
 
+        /**
+         * @param connectionType The type of the BigQuery connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionType(GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType connectionType) {
             return connectionType(Output.of(connectionType));
         }
 
+        /**
+         * @param hasCredential True if there are credentials attached to the BigQuery connection; false otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasCredential(@Nullable Output<Boolean> hasCredential) {
             $.hasCredential = hasCredential;
             return this;
         }
 
+        /**
+         * @param hasCredential True if there are credentials attached to the BigQuery connection; false otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasCredential(Boolean hasCredential) {
             return hasCredential(Output.of(hasCredential));
         }

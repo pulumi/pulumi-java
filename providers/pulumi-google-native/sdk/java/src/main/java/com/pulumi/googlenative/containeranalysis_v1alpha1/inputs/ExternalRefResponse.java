@@ -23,6 +23,10 @@ public final class ExternalRefResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="category", required=true)
     private String category;
 
+    /**
+     * @return An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package
+     * 
+     */
     public String category() {
         return this.category;
     }
@@ -34,6 +38,10 @@ public final class ExternalRefResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="comment", required=true)
     private String comment;
 
+    /**
+     * @return Human-readable information about the purpose and target of the reference
+     * 
+     */
     public String comment() {
         return this.comment;
     }
@@ -45,6 +53,10 @@ public final class ExternalRefResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="locator", required=true)
     private String locator;
 
+    /**
+     * @return The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location
+     * 
+     */
     public String locator() {
         return this.locator;
     }
@@ -56,6 +68,10 @@ public final class ExternalRefResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of category (e.g. &#39;npm&#39; for the PACKAGE_MANAGER category)
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -87,21 +103,45 @@ public final class ExternalRefResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ExternalRefResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param category An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(String category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param comment Human-readable information about the purpose and target of the reference
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(String comment) {
             $.comment = comment;
             return this;
         }
 
+        /**
+         * @param locator The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location
+         * 
+         * @return builder
+         * 
+         */
         public Builder locator(String locator) {
             $.locator = locator;
             return this;
         }
 
+        /**
+         * @param type Type of category (e.g. &#39;npm&#39; for the PACKAGE_MANAGER category)
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

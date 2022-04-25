@@ -24,6 +24,10 @@ public final class SegmentSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="individualSegments", required=true)
     private Boolean individualSegments;
 
+    /**
+     * @return Create an individual segment file. The default is `false`.
+     * 
+     */
     public Boolean individualSegments() {
         return this.individualSegments;
     }
@@ -35,6 +39,10 @@ public final class SegmentSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="segmentDuration", required=true)
     private String segmentDuration;
 
+    /**
+     * @return Duration of the segments in seconds. The default is `6.0s`. Note that `segmentDuration` must be greater than or equal to [`gopDuration`](#videostream), and `segmentDuration` must be divisible by [`gopDuration`](#videostream).
+     * 
+     */
     public String segmentDuration() {
         return this.segmentDuration;
     }
@@ -64,11 +72,23 @@ public final class SegmentSettingsResponse extends com.pulumi.resources.InvokeAr
             $ = new SegmentSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param individualSegments Create an individual segment file. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder individualSegments(Boolean individualSegments) {
             $.individualSegments = individualSegments;
             return this;
         }
 
+        /**
+         * @param segmentDuration Duration of the segments in seconds. The default is `6.0s`. Note that `segmentDuration` must be greater than or equal to [`gopDuration`](#videostream), and `segmentDuration` must be divisible by [`gopDuration`](#videostream).
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentDuration(String segmentDuration) {
             $.segmentDuration = segmentDuration;
             return this;

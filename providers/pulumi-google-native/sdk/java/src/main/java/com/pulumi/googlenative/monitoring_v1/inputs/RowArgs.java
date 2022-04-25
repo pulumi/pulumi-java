@@ -28,6 +28,10 @@ public final class RowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="weight")
     private @Nullable Output<String> weight;
 
+    /**
+     * @return The relative weight of this row. The row weight is used to adjust the height of rows on the screen (relative to peers). Greater the weight, greater the height of the row on the screen. If omitted, a value of 1 is used while rendering.
+     * 
+     */
     public Optional<Output<String>> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -39,6 +43,10 @@ public final class RowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="widgets")
     private @Nullable Output<List<WidgetArgs>> widgets;
 
+    /**
+     * @return The display widgets arranged horizontally in this row.
+     * 
+     */
     public Optional<Output<List<WidgetArgs>>> widgets() {
         return Optional.ofNullable(this.widgets);
     }
@@ -68,24 +76,54 @@ public final class RowArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param weight The relative weight of this row. The row weight is used to adjust the height of rows on the screen (relative to peers). Greater the weight, greater the height of the row on the screen. If omitted, a value of 1 is used while rendering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(@Nullable Output<String> weight) {
             $.weight = weight;
             return this;
         }
 
+        /**
+         * @param weight The relative weight of this row. The row weight is used to adjust the height of rows on the screen (relative to peers). Greater the weight, greater the height of the row on the screen. If omitted, a value of 1 is used while rendering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(String weight) {
             return weight(Output.of(weight));
         }
 
+        /**
+         * @param widgets The display widgets arranged horizontally in this row.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widgets(@Nullable Output<List<WidgetArgs>> widgets) {
             $.widgets = widgets;
             return this;
         }
 
+        /**
+         * @param widgets The display widgets arranged horizontally in this row.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widgets(List<WidgetArgs> widgets) {
             return widgets(Output.of(widgets));
         }
 
+        /**
+         * @param widgets The display widgets arranged horizontally in this row.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widgets(WidgetArgs... widgets) {
             return widgets(List.of(widgets));
         }

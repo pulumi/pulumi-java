@@ -24,6 +24,10 @@ public final class BucketRetentionPolicyResponse extends com.pulumi.resources.In
     @Import(name="effectiveTime", required=true)
     private String effectiveTime;
 
+    /**
+     * @return Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.
+     * 
+     */
     public String effectiveTime() {
         return this.effectiveTime;
     }
@@ -35,6 +39,10 @@ public final class BucketRetentionPolicyResponse extends com.pulumi.resources.In
     @Import(name="isLocked", required=true)
     private Boolean isLocked;
 
+    /**
+     * @return Once locked, an object retention policy cannot be modified.
+     * 
+     */
     public Boolean isLocked() {
         return this.isLocked;
     }
@@ -46,6 +54,10 @@ public final class BucketRetentionPolicyResponse extends com.pulumi.resources.In
     @Import(name="retentionPeriod", required=true)
     private String retentionPeriod;
 
+    /**
+     * @return The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.
+     * 
+     */
     public String retentionPeriod() {
         return this.retentionPeriod;
     }
@@ -76,16 +88,34 @@ public final class BucketRetentionPolicyResponse extends com.pulumi.resources.In
             $ = new BucketRetentionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param effectiveTime Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder effectiveTime(String effectiveTime) {
             $.effectiveTime = effectiveTime;
             return this;
         }
 
+        /**
+         * @param isLocked Once locked, an object retention policy cannot be modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLocked(Boolean isLocked) {
             $.isLocked = isLocked;
             return this;
         }
 
+        /**
+         * @param retentionPeriod The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPeriod(String retentionPeriod) {
             $.retentionPeriod = retentionPeriod;
             return this;

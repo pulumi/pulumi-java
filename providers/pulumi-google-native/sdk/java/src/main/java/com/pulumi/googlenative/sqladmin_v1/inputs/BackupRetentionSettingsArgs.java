@@ -27,6 +27,10 @@ public final class BackupRetentionSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="retainedBackups")
     private @Nullable Output<Integer> retainedBackups;
 
+    /**
+     * @return Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is &#39;COUNT&#39;, we will retain this many backups.
+     * 
+     */
     public Optional<Output<Integer>> retainedBackups() {
         return Optional.ofNullable(this.retainedBackups);
     }
@@ -38,6 +42,10 @@ public final class BackupRetentionSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="retentionUnit")
     private @Nullable Output<BackupRetentionSettingsRetentionUnit> retentionUnit;
 
+    /**
+     * @return The unit that &#39;retained_backups&#39; represents.
+     * 
+     */
     public Optional<Output<BackupRetentionSettingsRetentionUnit>> retentionUnit() {
         return Optional.ofNullable(this.retentionUnit);
     }
@@ -67,20 +75,44 @@ public final class BackupRetentionSettingsArgs extends com.pulumi.resources.Reso
             $ = new BackupRetentionSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param retainedBackups Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is &#39;COUNT&#39;, we will retain this many backups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retainedBackups(@Nullable Output<Integer> retainedBackups) {
             $.retainedBackups = retainedBackups;
             return this;
         }
 
+        /**
+         * @param retainedBackups Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is &#39;COUNT&#39;, we will retain this many backups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retainedBackups(Integer retainedBackups) {
             return retainedBackups(Output.of(retainedBackups));
         }
 
+        /**
+         * @param retentionUnit The unit that &#39;retained_backups&#39; represents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionUnit(@Nullable Output<BackupRetentionSettingsRetentionUnit> retentionUnit) {
             $.retentionUnit = retentionUnit;
             return this;
         }
 
+        /**
+         * @param retentionUnit The unit that &#39;retained_backups&#39; represents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionUnit(BackupRetentionSettingsRetentionUnit retentionUnit) {
             return retentionUnit(Output.of(retentionUnit));
         }

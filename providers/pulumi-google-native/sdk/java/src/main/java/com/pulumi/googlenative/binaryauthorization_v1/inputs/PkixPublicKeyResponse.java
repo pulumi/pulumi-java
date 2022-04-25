@@ -23,6 +23,10 @@ public final class PkixPublicKeyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="publicKeyPem", required=true)
     private String publicKeyPem;
 
+    /**
+     * @return A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13
+     * 
+     */
     public String publicKeyPem() {
         return this.publicKeyPem;
     }
@@ -34,6 +38,10 @@ public final class PkixPublicKeyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="signatureAlgorithm", required=true)
     private String signatureAlgorithm;
 
+    /**
+     * @return The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).
+     * 
+     */
     public String signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
@@ -63,11 +71,23 @@ public final class PkixPublicKeyResponse extends com.pulumi.resources.InvokeArgs
             $ = new PkixPublicKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicKeyPem A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyPem(String publicKeyPem) {
             $.publicKeyPem = publicKeyPem;
             return this;
         }
 
+        /**
+         * @param signatureAlgorithm The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureAlgorithm(String signatureAlgorithm) {
             $.signatureAlgorithm = signatureAlgorithm;
             return this;

@@ -24,6 +24,10 @@ public final class ApkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
     private FileReferenceResponse location;
 
+    /**
+     * @return The path to an APK to be installed on the device before the test begins.
+     * 
+     */
     public FileReferenceResponse location() {
         return this.location;
     }
@@ -35,6 +39,10 @@ public final class ApkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="packageName", required=true)
     private String packageName;
 
+    /**
+     * @return The java package for the APK to be installed. Value is determined by examining the application&#39;s manifest.
+     * 
+     */
     public String packageName() {
         return this.packageName;
     }
@@ -64,11 +72,23 @@ public final class ApkResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ApkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The path to an APK to be installed on the device before the test begins.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(FileReferenceResponse location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param packageName The java package for the APK to be installed. Value is determined by examining the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(String packageName) {
             $.packageName = packageName;
             return this;

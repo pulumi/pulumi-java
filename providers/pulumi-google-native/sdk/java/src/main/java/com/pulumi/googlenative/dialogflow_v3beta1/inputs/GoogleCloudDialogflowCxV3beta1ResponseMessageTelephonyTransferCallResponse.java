@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransfe
     @Import(name="phoneNumber", required=true)
     private String phoneNumber;
 
+    /**
+     * @return Transfer the call to a phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
+     * 
+     */
     public String phoneNumber() {
         return this.phoneNumber;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransfe
             $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param phoneNumber Transfer the call to a phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(String phoneNumber) {
             $.phoneNumber = phoneNumber;
             return this;

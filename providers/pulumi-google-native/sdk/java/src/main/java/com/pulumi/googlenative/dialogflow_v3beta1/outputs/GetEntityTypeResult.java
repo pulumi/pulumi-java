@@ -14,42 +14,42 @@ import java.util.Objects;
 @CustomType
 public final class GetEntityTypeResult {
     /**
-     * Indicates whether the entity type can be automatically expanded.
+     * @return Indicates whether the entity type can be automatically expanded.
      * 
      */
     private final String autoExpansionMode;
     /**
-     * The human-readable name of the entity type, unique within the agent.
+     * @return The human-readable name of the entity type, unique within the agent.
      * 
      */
     private final String displayName;
     /**
-     * Enables fuzzy entity extraction during classification.
+     * @return Enables fuzzy entity extraction during classification.
      * 
      */
     private final Boolean enableFuzzyExtraction;
     /**
-     * The collection of entity entries associated with the entity type.
+     * @return The collection of entity entries associated with the entity type.
      * 
      */
     private final List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse> entities;
     /**
-     * Collection of exceptional words and phrases that shouldn&#39;t be matched. For example, if you have a size entity type with entry `giant`(an adjective), you might consider adding `giants`(a noun) as an exclusion. If the kind of entity type is `KIND_MAP`, then the phrases specified by entities and excluded phrases should be mutually exclusive.
+     * @return Collection of exceptional words and phrases that shouldn&#39;t be matched. For example, if you have a size entity type with entry `giant`(an adjective), you might consider adding `giants`(a noun) as an exclusion. If the kind of entity type is `KIND_MAP`, then the phrases specified by entities and excluded phrases should be mutually exclusive.
      * 
      */
     private final List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse> excludedPhrases;
     /**
-     * Indicates the kind of entity type.
+     * @return Indicates the kind of entity type.
      * 
      */
     private final String kind;
     /**
-     * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType. Format: `projects//locations//agents//entityTypes/`.
+     * @return The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType. Format: `projects//locations//agents//entityTypes/`.
      * 
      */
     private final String name;
     /**
-     * Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name during logging.
+     * @return Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name during logging.
      * 
      */
     private final Boolean redact;
@@ -75,58 +75,58 @@ public final class GetEntityTypeResult {
     }
 
     /**
-     * Indicates whether the entity type can be automatically expanded.
+     * @return Indicates whether the entity type can be automatically expanded.
      * 
-    */
+     */
     public String autoExpansionMode() {
         return this.autoExpansionMode;
     }
     /**
-     * The human-readable name of the entity type, unique within the agent.
+     * @return The human-readable name of the entity type, unique within the agent.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Enables fuzzy entity extraction during classification.
+     * @return Enables fuzzy entity extraction during classification.
      * 
-    */
+     */
     public Boolean enableFuzzyExtraction() {
         return this.enableFuzzyExtraction;
     }
     /**
-     * The collection of entity entries associated with the entity type.
+     * @return The collection of entity entries associated with the entity type.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse> entities() {
         return this.entities;
     }
     /**
-     * Collection of exceptional words and phrases that shouldn&#39;t be matched. For example, if you have a size entity type with entry `giant`(an adjective), you might consider adding `giants`(a noun) as an exclusion. If the kind of entity type is `KIND_MAP`, then the phrases specified by entities and excluded phrases should be mutually exclusive.
+     * @return Collection of exceptional words and phrases that shouldn&#39;t be matched. For example, if you have a size entity type with entry `giant`(an adjective), you might consider adding `giants`(a noun) as an exclusion. If the kind of entity type is `KIND_MAP`, then the phrases specified by entities and excluded phrases should be mutually exclusive.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse> excludedPhrases() {
         return this.excludedPhrases;
     }
     /**
-     * Indicates the kind of entity type.
+     * @return Indicates the kind of entity type.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType. Format: `projects//locations//agents//entityTypes/`.
+     * @return The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType. Format: `projects//locations//agents//entityTypes/`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name during logging.
+     * @return Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name during logging.
      * 
-    */
+     */
     public Boolean redact() {
         return this.redact;
     }

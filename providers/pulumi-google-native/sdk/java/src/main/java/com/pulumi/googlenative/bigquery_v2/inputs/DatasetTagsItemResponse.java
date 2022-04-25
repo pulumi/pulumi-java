@@ -19,6 +19,10 @@ public final class DatasetTagsItemResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tagKey", required=true)
     private String tagKey;
 
+    /**
+     * @return [Required] The namespaced friendly name of the tag key, e.g. &#34;12345/environment&#34; where 12345 is org id.
+     * 
+     */
     public String tagKey() {
         return this.tagKey;
     }
@@ -30,6 +34,10 @@ public final class DatasetTagsItemResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tagValue", required=true)
     private String tagValue;
 
+    /**
+     * @return [Required] Friendly short name of the tag value, e.g. &#34;production&#34;.
+     * 
+     */
     public String tagValue() {
         return this.tagValue;
     }
@@ -59,11 +67,23 @@ public final class DatasetTagsItemResponse extends com.pulumi.resources.InvokeAr
             $ = new DatasetTagsItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tagKey [Required] The namespaced friendly name of the tag key, e.g. &#34;12345/environment&#34; where 12345 is org id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagKey(String tagKey) {
             $.tagKey = tagKey;
             return this;
         }
 
+        /**
+         * @param tagValue [Required] Friendly short name of the tag value, e.g. &#34;production&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagValue(String tagValue) {
             $.tagValue = tagValue;
             return this;

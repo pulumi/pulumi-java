@@ -26,6 +26,10 @@ public final class OSPolicyResourceFileResponse extends com.pulumi.resources.Inv
     @Import(name="allowInsecure", required=true)
     private Boolean allowInsecure;
 
+    /**
+     * @return Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+     * 
+     */
     public Boolean allowInsecure() {
         return this.allowInsecure;
     }
@@ -37,6 +41,10 @@ public final class OSPolicyResourceFileResponse extends com.pulumi.resources.Inv
     @Import(name="gcs", required=true)
     private OSPolicyResourceFileGcsResponse gcs;
 
+    /**
+     * @return A Cloud Storage object.
+     * 
+     */
     public OSPolicyResourceFileGcsResponse gcs() {
         return this.gcs;
     }
@@ -48,6 +56,10 @@ public final class OSPolicyResourceFileResponse extends com.pulumi.resources.Inv
     @Import(name="localPath", required=true)
     private String localPath;
 
+    /**
+     * @return A local path within the VM to use.
+     * 
+     */
     public String localPath() {
         return this.localPath;
     }
@@ -59,6 +71,10 @@ public final class OSPolicyResourceFileResponse extends com.pulumi.resources.Inv
     @Import(name="remote", required=true)
     private OSPolicyResourceFileRemoteResponse remote;
 
+    /**
+     * @return A generic remote file.
+     * 
+     */
     public OSPolicyResourceFileRemoteResponse remote() {
         return this.remote;
     }
@@ -90,21 +106,45 @@ public final class OSPolicyResourceFileResponse extends com.pulumi.resources.Inv
             $ = new OSPolicyResourceFileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowInsecure Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowInsecure(Boolean allowInsecure) {
             $.allowInsecure = allowInsecure;
             return this;
         }
 
+        /**
+         * @param gcs A Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcs(OSPolicyResourceFileGcsResponse gcs) {
             $.gcs = gcs;
             return this;
         }
 
+        /**
+         * @param localPath A local path within the VM to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localPath(String localPath) {
             $.localPath = localPath;
             return this;
         }
 
+        /**
+         * @param remote A generic remote file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remote(OSPolicyResourceFileRemoteResponse remote) {
             $.remote = remote;
             return this;

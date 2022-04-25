@@ -23,6 +23,10 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
     @Import(name="transcriptIndex", required=true)
     private Integer transcriptIndex;
 
+    /**
+     * @return The index in the sequence of transcribed pieces of the conversation where the boundary is located. This index starts at zero.
+     * 
+     */
     public Integer transcriptIndex() {
         return this.transcriptIndex;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
     @Import(name="wordIndex", required=true)
     private Integer wordIndex;
 
+    /**
+     * @return The word index of this boundary with respect to the first word in the transcript piece. This index starts at zero.
+     * 
+     */
     public Integer wordIndex() {
         return this.wordIndex;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
             $ = new GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param transcriptIndex The index in the sequence of transcribed pieces of the conversation where the boundary is located. This index starts at zero.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transcriptIndex(Integer transcriptIndex) {
             $.transcriptIndex = transcriptIndex;
             return this;
         }
 
+        /**
+         * @param wordIndex The word index of this boundary with respect to the first word in the transcript piece. This index starts at zero.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wordIndex(Integer wordIndex) {
             $.wordIndex = wordIndex;
             return this;

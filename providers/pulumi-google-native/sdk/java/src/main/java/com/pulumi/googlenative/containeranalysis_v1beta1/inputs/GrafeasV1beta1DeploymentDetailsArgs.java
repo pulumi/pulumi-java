@@ -24,6 +24,10 @@ public final class GrafeasV1beta1DeploymentDetailsArgs extends com.pulumi.resour
     @Import(name="deployment", required=true)
     private Output<DeploymentArgs> deployment;
 
+    /**
+     * @return Deployment history for the resource.
+     * 
+     */
     public Output<DeploymentArgs> deployment() {
         return this.deployment;
     }
@@ -52,11 +56,23 @@ public final class GrafeasV1beta1DeploymentDetailsArgs extends com.pulumi.resour
             $ = new GrafeasV1beta1DeploymentDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deployment Deployment history for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deployment(Output<DeploymentArgs> deployment) {
             $.deployment = deployment;
             return this;
         }
 
+        /**
+         * @param deployment Deployment history for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deployment(DeploymentArgs deployment) {
             return deployment(Output.of(deployment));
         }

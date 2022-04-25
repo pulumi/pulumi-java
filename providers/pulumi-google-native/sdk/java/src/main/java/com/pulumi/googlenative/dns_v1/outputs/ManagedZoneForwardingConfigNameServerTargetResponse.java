@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ManagedZoneForwardingConfigNameServerTargetResponse {
     /**
-     * Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
+     * @return Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
      * 
      */
     private final String forwardingPath;
     /**
-     * IPv4 address of a target name server.
+     * @return IPv4 address of a target name server.
      * 
      */
     private final String ipv4Address;
@@ -32,16 +32,16 @@ public final class ManagedZoneForwardingConfigNameServerTargetResponse {
     }
 
     /**
-     * Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
+     * @return Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
      * 
-    */
+     */
     public String forwardingPath() {
         return this.forwardingPath;
     }
     /**
-     * IPv4 address of a target name server.
+     * @return IPv4 address of a target name server.
      * 
-    */
+     */
     public String ipv4Address() {
         return this.ipv4Address;
     }

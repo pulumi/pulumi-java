@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse {
     /**
-     * The uri to open on the user device
+     * @return The uri to open on the user device
      * 
      */
     private final String uri;
@@ -21,9 +21,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
     }
 
     /**
-     * The uri to open on the user device
+     * @return The uri to open on the user device
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

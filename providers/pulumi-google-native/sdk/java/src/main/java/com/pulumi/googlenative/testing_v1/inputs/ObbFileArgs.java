@@ -25,6 +25,10 @@ public final class ObbFileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="obb", required=true)
     private Output<FileReferenceArgs> obb;
 
+    /**
+     * @return Opaque Binary Blob (OBB) file(s) to install on the device.
+     * 
+     */
     public Output<FileReferenceArgs> obb() {
         return this.obb;
     }
@@ -36,6 +40,10 @@ public final class ObbFileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="obbFileName", required=true)
     private Output<String> obbFileName;
 
+    /**
+     * @return OBB file name which must conform to the format as specified by Android e.g. [main|patch].0300110.com.example.android.obb which will be installed into \/Android/obb/\/ on the device.
+     * 
+     */
     public Output<String> obbFileName() {
         return this.obbFileName;
     }
@@ -65,20 +73,44 @@ public final class ObbFileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ObbFileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param obb Opaque Binary Blob (OBB) file(s) to install on the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder obb(Output<FileReferenceArgs> obb) {
             $.obb = obb;
             return this;
         }
 
+        /**
+         * @param obb Opaque Binary Blob (OBB) file(s) to install on the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder obb(FileReferenceArgs obb) {
             return obb(Output.of(obb));
         }
 
+        /**
+         * @param obbFileName OBB file name which must conform to the format as specified by Android e.g. [main|patch].0300110.com.example.android.obb which will be installed into \/Android/obb/\/ on the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder obbFileName(Output<String> obbFileName) {
             $.obbFileName = obbFileName;
             return this;
         }
 
+        /**
+         * @param obbFileName OBB file name which must conform to the format as specified by Android e.g. [main|patch].0300110.com.example.android.obb which will be installed into \/Android/obb/\/ on the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder obbFileName(String obbFileName) {
             return obbFileName(Output.of(obbFileName));
         }

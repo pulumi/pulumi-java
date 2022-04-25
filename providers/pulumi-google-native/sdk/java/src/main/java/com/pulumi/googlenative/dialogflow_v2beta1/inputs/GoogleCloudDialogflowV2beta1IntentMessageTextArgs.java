@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTextArgs extends com
     @Import(name="text")
     private @Nullable Output<List<String>> text;
 
+    /**
+     * @return Optional. The collection of the agent&#39;s responses.
+     * 
+     */
     public Optional<Output<List<String>>> text() {
         return Optional.ofNullable(this.text);
     }
@@ -55,15 +59,33 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTextArgs extends com
             $ = new GoogleCloudDialogflowV2beta1IntentMessageTextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param text Optional. The collection of the agent&#39;s responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(@Nullable Output<List<String>> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text Optional. The collection of the agent&#39;s responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(List<String> text) {
             return text(Output.of(text));
         }
 
+        /**
+         * @param text Optional. The collection of the agent&#39;s responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String... text) {
             return text(List.of(text));
         }

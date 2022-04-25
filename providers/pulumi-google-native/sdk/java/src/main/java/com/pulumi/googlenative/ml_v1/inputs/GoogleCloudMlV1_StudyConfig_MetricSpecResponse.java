@@ -23,6 +23,10 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse extends com.pu
     @Import(name="goal", required=true)
     private String goal;
 
+    /**
+     * @return The optimization goal of the metric.
+     * 
+     */
     public String goal() {
         return this.goal;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse extends com.pu
     @Import(name="metric", required=true)
     private String metric;
 
+    /**
+     * @return The name of the metric.
+     * 
+     */
     public String metric() {
         return this.metric;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse extends com.pu
             $ = new GoogleCloudMlV1_StudyConfig_MetricSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param goal The optimization goal of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goal(String goal) {
             $.goal = goal;
             return this;
         }
 
+        /**
+         * @param metric The name of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(String metric) {
             $.metric = metric;
             return this;

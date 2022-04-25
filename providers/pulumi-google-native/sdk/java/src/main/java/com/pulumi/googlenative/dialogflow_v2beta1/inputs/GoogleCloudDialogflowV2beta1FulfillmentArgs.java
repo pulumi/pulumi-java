@@ -30,6 +30,10 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentArgs extends com.pulum
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The human-readable name of the fulfillment, unique within the agent. This field is not used for Fulfillment in an Environment.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -41,6 +45,10 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentArgs extends com.pulum
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether fulfillment is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -52,6 +60,10 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentArgs extends com.pulum
     @Import(name="features")
     private @Nullable Output<List<GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs>> features;
 
+    /**
+     * @return The field defines whether the fulfillment is enabled for certain features.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs>>> features() {
         return Optional.ofNullable(this.features);
     }
@@ -63,6 +75,10 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentArgs extends com.pulum
     @Import(name="genericWebService")
     private @Nullable Output<GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs> genericWebService;
 
+    /**
+     * @return Configuration for a generic web service.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs>> genericWebService() {
         return Optional.ofNullable(this.genericWebService);
     }
@@ -74,6 +90,10 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentArgs extends com.pulum
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The unique identifier of the fulfillment. Supported formats: - `projects//agent/fulfillment` - `projects//locations//agent/fulfillment` This field is not used for Fulfillment in an Environment.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -106,51 +126,117 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentArgs extends com.pulum
             $ = new GoogleCloudDialogflowV2beta1FulfillmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The human-readable name of the fulfillment, unique within the agent. This field is not used for Fulfillment in an Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The human-readable name of the fulfillment, unique within the agent. This field is not used for Fulfillment in an Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param enabled Whether fulfillment is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether fulfillment is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param features The field defines whether the fulfillment is enabled for certain features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder features(@Nullable Output<List<GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs>> features) {
             $.features = features;
             return this;
         }
 
+        /**
+         * @param features The field defines whether the fulfillment is enabled for certain features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder features(List<GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs> features) {
             return features(Output.of(features));
         }
 
+        /**
+         * @param features The field defines whether the fulfillment is enabled for certain features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder features(GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs... features) {
             return features(List.of(features));
         }
 
+        /**
+         * @param genericWebService Configuration for a generic web service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder genericWebService(@Nullable Output<GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs> genericWebService) {
             $.genericWebService = genericWebService;
             return this;
         }
 
+        /**
+         * @param genericWebService Configuration for a generic web service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder genericWebService(GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs genericWebService) {
             return genericWebService(Output.of(genericWebService));
         }
 
+        /**
+         * @param name The unique identifier of the fulfillment. Supported formats: - `projects//agent/fulfillment` - `projects//locations//agent/fulfillment` This field is not used for Fulfillment in an Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique identifier of the fulfillment. Supported formats: - `projects//agent/fulfillment` - `projects//locations//agent/fulfillment` This field is not used for Fulfillment in an Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

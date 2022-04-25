@@ -36,6 +36,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Display name.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -54,6 +58,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="forwardSshConnectivity")
     private @Nullable Output<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity;
 
+    /**
+     * @return Forward SSH tunnel connectivity.
+     * 
+     */
     public Optional<Output<ForwardSshTunnelConnectivityArgs>> forwardSshConnectivity() {
         return Optional.ofNullable(this.forwardSshConnectivity);
     }
@@ -65,6 +73,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="gcsProfile")
     private @Nullable Output<GcsProfileArgs> gcsProfile;
 
+    /**
+     * @return Cloud Storage ConnectionProfile configuration.
+     * 
+     */
     public Optional<Output<GcsProfileArgs>> gcsProfile() {
         return Optional.ofNullable(this.gcsProfile);
     }
@@ -76,6 +88,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -94,6 +110,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="mysqlProfile")
     private @Nullable Output<MysqlProfileArgs> mysqlProfile;
 
+    /**
+     * @return MySQL ConnectionProfile configuration.
+     * 
+     */
     public Optional<Output<MysqlProfileArgs>> mysqlProfile() {
         return Optional.ofNullable(this.mysqlProfile);
     }
@@ -105,6 +125,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="oracleProfile")
     private @Nullable Output<OracleProfileArgs> oracleProfile;
 
+    /**
+     * @return Oracle ConnectionProfile configuration.
+     * 
+     */
     public Optional<Output<OracleProfileArgs>> oracleProfile() {
         return Optional.ofNullable(this.oracleProfile);
     }
@@ -116,6 +140,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="privateConnectivity")
     private @Nullable Output<PrivateConnectivityArgs> privateConnectivity;
 
+    /**
+     * @return Private connectivity.
+     * 
+     */
     public Optional<Output<PrivateConnectivityArgs>> privateConnectivity() {
         return Optional.ofNullable(this.privateConnectivity);
     }
@@ -141,6 +169,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="staticServiceIpConnectivity")
     private @Nullable Output<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity;
 
+    /**
+     * @return Static Service IP connectivity.
+     * 
+     */
     public Optional<Output<StaticServiceIpConnectivityArgs>> staticServiceIpConnectivity() {
         return Optional.ofNullable(this.staticServiceIpConnectivity);
     }
@@ -198,11 +230,23 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
             return connectionProfileId(Output.of(connectionProfileId));
         }
 
+        /**
+         * @param displayName Display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
@@ -216,29 +260,65 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
             return force(Output.of(force));
         }
 
+        /**
+         * @param forwardSshConnectivity Forward SSH tunnel connectivity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardSshConnectivity(@Nullable Output<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity) {
             $.forwardSshConnectivity = forwardSshConnectivity;
             return this;
         }
 
+        /**
+         * @param forwardSshConnectivity Forward SSH tunnel connectivity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardSshConnectivity(ForwardSshTunnelConnectivityArgs forwardSshConnectivity) {
             return forwardSshConnectivity(Output.of(forwardSshConnectivity));
         }
 
+        /**
+         * @param gcsProfile Cloud Storage ConnectionProfile configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsProfile(@Nullable Output<GcsProfileArgs> gcsProfile) {
             $.gcsProfile = gcsProfile;
             return this;
         }
 
+        /**
+         * @param gcsProfile Cloud Storage ConnectionProfile configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsProfile(GcsProfileArgs gcsProfile) {
             return gcsProfile(Output.of(gcsProfile));
         }
 
+        /**
+         * @param labels Labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -252,29 +332,65 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
             return location(Output.of(location));
         }
 
+        /**
+         * @param mysqlProfile MySQL ConnectionProfile configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlProfile(@Nullable Output<MysqlProfileArgs> mysqlProfile) {
             $.mysqlProfile = mysqlProfile;
             return this;
         }
 
+        /**
+         * @param mysqlProfile MySQL ConnectionProfile configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlProfile(MysqlProfileArgs mysqlProfile) {
             return mysqlProfile(Output.of(mysqlProfile));
         }
 
+        /**
+         * @param oracleProfile Oracle ConnectionProfile configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleProfile(@Nullable Output<OracleProfileArgs> oracleProfile) {
             $.oracleProfile = oracleProfile;
             return this;
         }
 
+        /**
+         * @param oracleProfile Oracle ConnectionProfile configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleProfile(OracleProfileArgs oracleProfile) {
             return oracleProfile(Output.of(oracleProfile));
         }
 
+        /**
+         * @param privateConnectivity Private connectivity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateConnectivity(@Nullable Output<PrivateConnectivityArgs> privateConnectivity) {
             $.privateConnectivity = privateConnectivity;
             return this;
         }
 
+        /**
+         * @param privateConnectivity Private connectivity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateConnectivity(PrivateConnectivityArgs privateConnectivity) {
             return privateConnectivity(Output.of(privateConnectivity));
         }
@@ -297,11 +413,23 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param staticServiceIpConnectivity Static Service IP connectivity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticServiceIpConnectivity(@Nullable Output<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity) {
             $.staticServiceIpConnectivity = staticServiceIpConnectivity;
             return this;
         }
 
+        /**
+         * @param staticServiceIpConnectivity Static Service IP connectivity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticServiceIpConnectivity(StaticServiceIpConnectivityArgs staticServiceIpConnectivity) {
             return staticServiceIpConnectivity(Output.of(staticServiceIpConnectivity));
         }

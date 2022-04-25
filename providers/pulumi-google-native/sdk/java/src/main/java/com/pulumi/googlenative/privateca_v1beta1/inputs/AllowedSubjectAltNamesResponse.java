@@ -25,6 +25,10 @@ public final class AllowedSubjectAltNamesResponse extends com.pulumi.resources.I
     @Import(name="allowCustomSans", required=true)
     private Boolean allowCustomSans;
 
+    /**
+     * @return Optional. Specifies if to allow custom X509Extension values.
+     * 
+     */
     public Boolean allowCustomSans() {
         return this.allowCustomSans;
     }
@@ -36,6 +40,10 @@ public final class AllowedSubjectAltNamesResponse extends com.pulumi.resources.I
     @Import(name="allowGlobbingDnsWildcards", required=true)
     private Boolean allowGlobbingDnsWildcards;
 
+    /**
+     * @return Optional. Specifies if glob patterns used for allowed_dns_names allow wildcard certificates. If this is set, certificate requests with wildcard domains will be permitted to match a glob pattern specified in allowed_dns_names. Otherwise, certificate requests with wildcard domains will be permitted only if allowed_dns_names contains a literal wildcard.
+     * 
+     */
     public Boolean allowGlobbingDnsWildcards() {
         return this.allowGlobbingDnsWildcards;
     }
@@ -47,6 +55,10 @@ public final class AllowedSubjectAltNamesResponse extends com.pulumi.resources.I
     @Import(name="allowedDnsNames", required=true)
     private List<String> allowedDnsNames;
 
+    /**
+     * @return Optional. Contains valid, fully-qualified host names. Glob patterns are also supported. To allow an explicit wildcard certificate, escape with backlash (i.e. `\*`). E.g. for globbed entries: `*bar.com` will allow `foo.bar.com`, but not `*.bar.com`, unless the allow_globbing_dns_wildcards field is set. E.g. for wildcard entries: `\*.bar.com` will allow `*.bar.com`, but not `foo.bar.com`.
+     * 
+     */
     public List<String> allowedDnsNames() {
         return this.allowedDnsNames;
     }
@@ -58,6 +70,10 @@ public final class AllowedSubjectAltNamesResponse extends com.pulumi.resources.I
     @Import(name="allowedEmailAddresses", required=true)
     private List<String> allowedEmailAddresses;
 
+    /**
+     * @return Optional. Contains valid RFC 2822 E-mail addresses. Glob patterns are also supported.
+     * 
+     */
     public List<String> allowedEmailAddresses() {
         return this.allowedEmailAddresses;
     }
@@ -69,6 +85,10 @@ public final class AllowedSubjectAltNamesResponse extends com.pulumi.resources.I
     @Import(name="allowedIps", required=true)
     private List<String> allowedIps;
 
+    /**
+     * @return Optional. Contains valid 32-bit IPv4 addresses and subnet ranges or RFC 4291 IPv6 addresses and subnet ranges. Subnet ranges are specified using the &#39;/&#39; notation (e.g. 10.0.0.0/8, 2001:700:300:1800::/64). Glob patterns are supported only for ip address entries (i.e. not for subnet ranges).
+     * 
+     */
     public List<String> allowedIps() {
         return this.allowedIps;
     }
@@ -80,6 +100,10 @@ public final class AllowedSubjectAltNamesResponse extends com.pulumi.resources.I
     @Import(name="allowedUris", required=true)
     private List<String> allowedUris;
 
+    /**
+     * @return Optional. Contains valid RFC 3986 URIs. Glob patterns are also supported. To match across path seperators (i.e. &#39;/&#39;) use the double star glob pattern (i.e. &#39;**&#39;).
+     * 
+     */
     public List<String> allowedUris() {
         return this.allowedUris;
     }
@@ -113,48 +137,108 @@ public final class AllowedSubjectAltNamesResponse extends com.pulumi.resources.I
             $ = new AllowedSubjectAltNamesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowCustomSans Optional. Specifies if to allow custom X509Extension values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowCustomSans(Boolean allowCustomSans) {
             $.allowCustomSans = allowCustomSans;
             return this;
         }
 
+        /**
+         * @param allowGlobbingDnsWildcards Optional. Specifies if glob patterns used for allowed_dns_names allow wildcard certificates. If this is set, certificate requests with wildcard domains will be permitted to match a glob pattern specified in allowed_dns_names. Otherwise, certificate requests with wildcard domains will be permitted only if allowed_dns_names contains a literal wildcard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowGlobbingDnsWildcards(Boolean allowGlobbingDnsWildcards) {
             $.allowGlobbingDnsWildcards = allowGlobbingDnsWildcards;
             return this;
         }
 
+        /**
+         * @param allowedDnsNames Optional. Contains valid, fully-qualified host names. Glob patterns are also supported. To allow an explicit wildcard certificate, escape with backlash (i.e. `\*`). E.g. for globbed entries: `*bar.com` will allow `foo.bar.com`, but not `*.bar.com`, unless the allow_globbing_dns_wildcards field is set. E.g. for wildcard entries: `\*.bar.com` will allow `*.bar.com`, but not `foo.bar.com`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedDnsNames(List<String> allowedDnsNames) {
             $.allowedDnsNames = allowedDnsNames;
             return this;
         }
 
+        /**
+         * @param allowedDnsNames Optional. Contains valid, fully-qualified host names. Glob patterns are also supported. To allow an explicit wildcard certificate, escape with backlash (i.e. `\*`). E.g. for globbed entries: `*bar.com` will allow `foo.bar.com`, but not `*.bar.com`, unless the allow_globbing_dns_wildcards field is set. E.g. for wildcard entries: `\*.bar.com` will allow `*.bar.com`, but not `foo.bar.com`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedDnsNames(String... allowedDnsNames) {
             return allowedDnsNames(List.of(allowedDnsNames));
         }
 
+        /**
+         * @param allowedEmailAddresses Optional. Contains valid RFC 2822 E-mail addresses. Glob patterns are also supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedEmailAddresses(List<String> allowedEmailAddresses) {
             $.allowedEmailAddresses = allowedEmailAddresses;
             return this;
         }
 
+        /**
+         * @param allowedEmailAddresses Optional. Contains valid RFC 2822 E-mail addresses. Glob patterns are also supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedEmailAddresses(String... allowedEmailAddresses) {
             return allowedEmailAddresses(List.of(allowedEmailAddresses));
         }
 
+        /**
+         * @param allowedIps Optional. Contains valid 32-bit IPv4 addresses and subnet ranges or RFC 4291 IPv6 addresses and subnet ranges. Subnet ranges are specified using the &#39;/&#39; notation (e.g. 10.0.0.0/8, 2001:700:300:1800::/64). Glob patterns are supported only for ip address entries (i.e. not for subnet ranges).
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedIps(List<String> allowedIps) {
             $.allowedIps = allowedIps;
             return this;
         }
 
+        /**
+         * @param allowedIps Optional. Contains valid 32-bit IPv4 addresses and subnet ranges or RFC 4291 IPv6 addresses and subnet ranges. Subnet ranges are specified using the &#39;/&#39; notation (e.g. 10.0.0.0/8, 2001:700:300:1800::/64). Glob patterns are supported only for ip address entries (i.e. not for subnet ranges).
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedIps(String... allowedIps) {
             return allowedIps(List.of(allowedIps));
         }
 
+        /**
+         * @param allowedUris Optional. Contains valid RFC 3986 URIs. Glob patterns are also supported. To match across path seperators (i.e. &#39;/&#39;) use the double star glob pattern (i.e. &#39;**&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedUris(List<String> allowedUris) {
             $.allowedUris = allowedUris;
             return this;
         }
 
+        /**
+         * @param allowedUris Optional. Contains valid RFC 3986 URIs. Glob patterns are also supported. To match across path seperators (i.e. &#39;/&#39;) use the double star glob pattern (i.e. &#39;**&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedUris(String... allowedUris) {
             return allowedUris(List.of(allowedUris));
         }

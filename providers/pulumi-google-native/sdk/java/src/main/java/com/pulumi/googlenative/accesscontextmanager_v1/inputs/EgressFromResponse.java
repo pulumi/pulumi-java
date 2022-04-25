@@ -24,6 +24,10 @@ public final class EgressFromResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="identities", required=true)
     private List<String> identities;
 
+    /**
+     * @return A list of identities that are allowed access through this [EgressPolicy]. Should be in the format of email address. The email address should represent individual user or service account only.
+     * 
+     */
     public List<String> identities() {
         return this.identities;
     }
@@ -35,6 +39,10 @@ public final class EgressFromResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="identityType", required=true)
     private String identityType;
 
+    /**
+     * @return Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+     * 
+     */
     public String identityType() {
         return this.identityType;
     }
@@ -64,15 +72,33 @@ public final class EgressFromResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EgressFromResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identities A list of identities that are allowed access through this [EgressPolicy]. Should be in the format of email address. The email address should represent individual user or service account only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identities(List<String> identities) {
             $.identities = identities;
             return this;
         }
 
+        /**
+         * @param identities A list of identities that are allowed access through this [EgressPolicy]. Should be in the format of email address. The email address should represent individual user or service account only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identities(String... identities) {
             return identities(List.of(identities));
         }
 
+        /**
+         * @param identityType Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityType(String identityType) {
             $.identityType = identityType;
             return this;

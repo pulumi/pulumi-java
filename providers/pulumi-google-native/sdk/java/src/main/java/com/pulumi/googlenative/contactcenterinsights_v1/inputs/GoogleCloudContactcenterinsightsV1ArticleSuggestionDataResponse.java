@@ -25,6 +25,10 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
     @Import(name="confidenceScore", required=true)
     private Double confidenceScore;
 
+    /**
+     * @return The system&#39;s confidence score that this article is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+     * 
+     */
     public Double confidenceScore() {
         return this.confidenceScore;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
     @Import(name="metadata", required=true)
     private Map<String,String> metadata;
 
+    /**
+     * @return Map that contains metadata about the Article Suggestion and the document that it originates from.
+     * 
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
     @Import(name="queryRecord", required=true)
     private String queryRecord;
 
+    /**
+     * @return Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
+     * 
+     */
     public String queryRecord() {
         return this.queryRecord;
     }
@@ -58,6 +70,10 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
     @Import(name="source", required=true)
     private String source;
 
+    /**
+     * @return The knowledge document that this answer was extracted from. Format: projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}
+     * 
+     */
     public String source() {
         return this.source;
     }
@@ -69,6 +85,10 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return Article title.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -80,6 +100,10 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return Article URI.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -113,31 +137,67 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
             $ = new GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param confidenceScore The system&#39;s confidence score that this article is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidenceScore(Double confidenceScore) {
             $.confidenceScore = confidenceScore;
             return this;
         }
 
+        /**
+         * @param metadata Map that contains metadata about the Article Suggestion and the document that it originates from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param queryRecord Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryRecord(String queryRecord) {
             $.queryRecord = queryRecord;
             return this;
         }
 
+        /**
+         * @param source The knowledge document that this answer was extracted from. Format: projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param title Article title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param uri Article URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

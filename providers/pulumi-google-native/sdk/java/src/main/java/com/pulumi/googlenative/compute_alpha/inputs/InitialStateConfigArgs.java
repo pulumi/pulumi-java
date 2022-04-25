@@ -27,6 +27,10 @@ public final class InitialStateConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="dbs")
     private @Nullable Output<List<FileContentBufferArgs>> dbs;
 
+    /**
+     * @return The Key Database (db).
+     * 
+     */
     public Optional<Output<List<FileContentBufferArgs>>> dbs() {
         return Optional.ofNullable(this.dbs);
     }
@@ -38,6 +42,10 @@ public final class InitialStateConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="dbxs")
     private @Nullable Output<List<FileContentBufferArgs>> dbxs;
 
+    /**
+     * @return The forbidden key database (dbx).
+     * 
+     */
     public Optional<Output<List<FileContentBufferArgs>>> dbxs() {
         return Optional.ofNullable(this.dbxs);
     }
@@ -49,6 +57,10 @@ public final class InitialStateConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="keks")
     private @Nullable Output<List<FileContentBufferArgs>> keks;
 
+    /**
+     * @return The Key Exchange Key (KEK).
+     * 
+     */
     public Optional<Output<List<FileContentBufferArgs>>> keks() {
         return Optional.ofNullable(this.keks);
     }
@@ -60,6 +72,10 @@ public final class InitialStateConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="pk")
     private @Nullable Output<FileContentBufferArgs> pk;
 
+    /**
+     * @return The Platform Key (PK).
+     * 
+     */
     public Optional<Output<FileContentBufferArgs>> pk() {
         return Optional.ofNullable(this.pk);
     }
@@ -91,50 +107,116 @@ public final class InitialStateConfigArgs extends com.pulumi.resources.ResourceA
             $ = new InitialStateConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dbs The Key Database (db).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbs(@Nullable Output<List<FileContentBufferArgs>> dbs) {
             $.dbs = dbs;
             return this;
         }
 
+        /**
+         * @param dbs The Key Database (db).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbs(List<FileContentBufferArgs> dbs) {
             return dbs(Output.of(dbs));
         }
 
+        /**
+         * @param dbs The Key Database (db).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbs(FileContentBufferArgs... dbs) {
             return dbs(List.of(dbs));
         }
 
+        /**
+         * @param dbxs The forbidden key database (dbx).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbxs(@Nullable Output<List<FileContentBufferArgs>> dbxs) {
             $.dbxs = dbxs;
             return this;
         }
 
+        /**
+         * @param dbxs The forbidden key database (dbx).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbxs(List<FileContentBufferArgs> dbxs) {
             return dbxs(Output.of(dbxs));
         }
 
+        /**
+         * @param dbxs The forbidden key database (dbx).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbxs(FileContentBufferArgs... dbxs) {
             return dbxs(List.of(dbxs));
         }
 
+        /**
+         * @param keks The Key Exchange Key (KEK).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keks(@Nullable Output<List<FileContentBufferArgs>> keks) {
             $.keks = keks;
             return this;
         }
 
+        /**
+         * @param keks The Key Exchange Key (KEK).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keks(List<FileContentBufferArgs> keks) {
             return keks(Output.of(keks));
         }
 
+        /**
+         * @param keks The Key Exchange Key (KEK).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keks(FileContentBufferArgs... keks) {
             return keks(List.of(keks));
         }
 
+        /**
+         * @param pk The Platform Key (PK).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pk(@Nullable Output<FileContentBufferArgs> pk) {
             $.pk = pk;
             return this;
         }
 
+        /**
+         * @param pk The Platform Key (PK).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pk(FileContentBufferArgs pk) {
             return pk(Output.of(pk));
         }

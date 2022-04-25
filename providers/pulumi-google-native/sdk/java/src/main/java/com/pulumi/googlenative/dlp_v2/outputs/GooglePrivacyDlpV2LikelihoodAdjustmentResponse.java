@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse {
     /**
-     * Set the likelihood of a finding to a fixed value.
+     * @return Set the likelihood of a finding to a fixed value.
      * 
      */
     private final String fixedLikelihood;
     /**
-     * Increase or decrease the likelihood by the specified number of levels. For example, if a finding would be `POSSIBLE` without the detection rule and `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1 followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will result in a final likelihood of `LIKELY`.
+     * @return Increase or decrease the likelihood by the specified number of levels. For example, if a finding would be `POSSIBLE` without the detection rule and `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1 followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will result in a final likelihood of `LIKELY`.
      * 
      */
     private final Integer relativeLikelihood;
@@ -30,16 +30,16 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse {
     }
 
     /**
-     * Set the likelihood of a finding to a fixed value.
+     * @return Set the likelihood of a finding to a fixed value.
      * 
-    */
+     */
     public String fixedLikelihood() {
         return this.fixedLikelihood;
     }
     /**
-     * Increase or decrease the likelihood by the specified number of levels. For example, if a finding would be `POSSIBLE` without the detection rule and `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1 followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will result in a final likelihood of `LIKELY`.
+     * @return Increase or decrease the likelihood by the specified number of levels. For example, if a finding would be `POSSIBLE` without the detection rule and `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1 followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will result in a final likelihood of `LIKELY`.
      * 
-    */
+     */
     public Integer relativeLikelihood() {
         return this.relativeLikelihood;
     }

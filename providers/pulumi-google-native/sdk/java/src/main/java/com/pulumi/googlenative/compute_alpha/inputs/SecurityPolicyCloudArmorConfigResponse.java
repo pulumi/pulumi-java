@@ -23,6 +23,10 @@ public final class SecurityPolicyCloudArmorConfigResponse extends com.pulumi.res
     @Import(name="enableMl", required=true)
     private Boolean enableMl;
 
+    /**
+     * @return If set to true, enables Cloud Armor Machine Learning.
+     * 
+     */
     public Boolean enableMl() {
         return this.enableMl;
     }
@@ -51,6 +55,12 @@ public final class SecurityPolicyCloudArmorConfigResponse extends com.pulumi.res
             $ = new SecurityPolicyCloudArmorConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableMl If set to true, enables Cloud Armor Machine Learning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableMl(Boolean enableMl) {
             $.enableMl = enableMl;
             return this;

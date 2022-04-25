@@ -27,6 +27,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Source name for content indexed by the Indexing API.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="predefinedSource")
     private @Nullable Output<SourcePredefinedSource> predefinedSource;
 
+    /**
+     * @return Predefined content source for Google Apps.
+     * 
+     */
     public Optional<Output<SourcePredefinedSource>> predefinedSource() {
         return Optional.ofNullable(this.predefinedSource);
     }
@@ -67,20 +75,44 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Source name for content indexed by the Indexing API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Source name for content indexed by the Indexing API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param predefinedSource Predefined content source for Google Apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedSource(@Nullable Output<SourcePredefinedSource> predefinedSource) {
             $.predefinedSource = predefinedSource;
             return this;
         }
 
+        /**
+         * @param predefinedSource Predefined content source for Google Apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedSource(SourcePredefinedSource predefinedSource) {
             return predefinedSource(Output.of(predefinedSource));
         }

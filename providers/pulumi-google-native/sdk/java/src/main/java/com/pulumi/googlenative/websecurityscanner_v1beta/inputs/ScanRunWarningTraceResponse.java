@@ -23,6 +23,10 @@ public final class ScanRunWarningTraceResponse extends com.pulumi.resources.Invo
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return Indicates the warning code.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -51,6 +55,12 @@ public final class ScanRunWarningTraceResponse extends com.pulumi.resources.Invo
             $ = new ScanRunWarningTraceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Indicates the warning code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;

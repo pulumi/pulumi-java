@@ -24,6 +24,10 @@ public final class MetadataLabelsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="labelName", required=true)
     private Output<String> labelName;
 
+    /**
+     * @return Label name presented as key in xDS Node Metadata.
+     * 
+     */
     public Output<String> labelName() {
         return this.labelName;
     }
@@ -35,6 +39,10 @@ public final class MetadataLabelsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="labelValue", required=true)
     private Output<String> labelValue;
 
+    /**
+     * @return Label value presented as value corresponding to the above key, in xDS Node Metadata.
+     * 
+     */
     public Output<String> labelValue() {
         return this.labelValue;
     }
@@ -64,20 +72,44 @@ public final class MetadataLabelsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MetadataLabelsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labelName Label name presented as key in xDS Node Metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelName(Output<String> labelName) {
             $.labelName = labelName;
             return this;
         }
 
+        /**
+         * @param labelName Label name presented as key in xDS Node Metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelName(String labelName) {
             return labelName(Output.of(labelName));
         }
 
+        /**
+         * @param labelValue Label value presented as value corresponding to the above key, in xDS Node Metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelValue(Output<String> labelValue) {
             $.labelValue = labelValue;
             return this;
         }
 
+        /**
+         * @param labelValue Label value presented as value corresponding to the above key, in xDS Node Metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelValue(String labelValue) {
             return labelValue(Output.of(labelValue));
         }

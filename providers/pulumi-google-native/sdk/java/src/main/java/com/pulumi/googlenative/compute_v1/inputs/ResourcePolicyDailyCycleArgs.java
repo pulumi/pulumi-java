@@ -27,6 +27,10 @@ public final class ResourcePolicyDailyCycleArgs extends com.pulumi.resources.Res
     @Import(name="daysInCycle")
     private @Nullable Output<Integer> daysInCycle;
 
+    /**
+     * @return Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.
+     * 
+     */
     public Optional<Output<Integer>> daysInCycle() {
         return Optional.ofNullable(this.daysInCycle);
     }
@@ -38,6 +42,10 @@ public final class ResourcePolicyDailyCycleArgs extends com.pulumi.resources.Res
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -67,20 +75,44 @@ public final class ResourcePolicyDailyCycleArgs extends com.pulumi.resources.Res
             $ = new ResourcePolicyDailyCycleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysInCycle Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysInCycle(@Nullable Output<Integer> daysInCycle) {
             $.daysInCycle = daysInCycle;
             return this;
         }
 
+        /**
+         * @param daysInCycle Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysInCycle(Integer daysInCycle) {
             return daysInCycle(Output.of(daysInCycle));
         }
 
+        /**
+         * @param startTime Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
