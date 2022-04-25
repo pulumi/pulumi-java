@@ -23,6 +23,11 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaArgs extends com.pulumi.
     @Import(name="maxModulusSize")
     private @Nullable Output<String> maxModulusSize;
 
+    /**
+     * @return The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the
+     * service will not enforce an explicit upper bound on RSA modulus sizes.
+     * 
+     */
     public Optional<Output<String>> maxModulusSize() {
         return Optional.ofNullable(this.maxModulusSize);
     }
@@ -35,6 +40,11 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaArgs extends com.pulumi.
     @Import(name="minModulusSize")
     private @Nullable Output<String> minModulusSize;
 
+    /**
+     * @return The minimum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the
+     * service-level min RSA modulus size will continue to apply.
+     * 
+     */
     public Optional<Output<String>> minModulusSize() {
         return Optional.ofNullable(this.minModulusSize);
     }
@@ -64,20 +74,48 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaArgs extends com.pulumi.
             $ = new CaPoolIssuancePolicyAllowedKeyTypeRsaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxModulusSize The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the
+         * service will not enforce an explicit upper bound on RSA modulus sizes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxModulusSize(@Nullable Output<String> maxModulusSize) {
             $.maxModulusSize = maxModulusSize;
             return this;
         }
 
+        /**
+         * @param maxModulusSize The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the
+         * service will not enforce an explicit upper bound on RSA modulus sizes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxModulusSize(String maxModulusSize) {
             return maxModulusSize(Output.of(maxModulusSize));
         }
 
+        /**
+         * @param minModulusSize The minimum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the
+         * service-level min RSA modulus size will continue to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minModulusSize(@Nullable Output<String> minModulusSize) {
             $.minModulusSize = minModulusSize;
             return this;
         }
 
+        /**
+         * @param minModulusSize The minimum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the
+         * service-level min RSA modulus size will continue to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minModulusSize(String minModulusSize) {
             return minModulusSize(Output.of(minModulusSize));
         }

@@ -21,6 +21,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
     private Output<String> email;
 
+    /**
+     * @return The email address to send notifications to. This does not need to be a Google account.
+     * 
+     */
     public Output<String> email() {
         return this.email;
     }
@@ -32,6 +36,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="languageTag", required=true)
     private Output<String> languageTag;
 
+    /**
+     * @return The preferred language for notifications, as a ISO 639-1 language code. See Supported languages for a list of supported languages.
+     * 
+     */
     public Output<String> languageTag() {
         return this.languageTag;
     }
@@ -43,6 +51,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationCategorySubscriptions", required=true)
     private Output<List<String>> notificationCategorySubscriptions;
 
+    /**
+     * @return The categories of notifications that the contact will receive communications for.
+     * 
+     */
     public Output<List<String>> notificationCategorySubscriptions() {
         return this.notificationCategorySubscriptions;
     }
@@ -54,6 +66,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
     private Output<String> parent;
 
+    /**
+     * @return The resource to save this contact for. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+     * 
+     */
     public Output<String> parent() {
         return this.parent;
     }
@@ -85,42 +101,96 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email The email address to send notifications to. This does not need to be a Google account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email The email address to send notifications to. This does not need to be a Google account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param languageTag The preferred language for notifications, as a ISO 639-1 language code. See Supported languages for a list of supported languages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageTag(Output<String> languageTag) {
             $.languageTag = languageTag;
             return this;
         }
 
+        /**
+         * @param languageTag The preferred language for notifications, as a ISO 639-1 language code. See Supported languages for a list of supported languages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageTag(String languageTag) {
             return languageTag(Output.of(languageTag));
         }
 
+        /**
+         * @param notificationCategorySubscriptions The categories of notifications that the contact will receive communications for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationCategorySubscriptions(Output<List<String>> notificationCategorySubscriptions) {
             $.notificationCategorySubscriptions = notificationCategorySubscriptions;
             return this;
         }
 
+        /**
+         * @param notificationCategorySubscriptions The categories of notifications that the contact will receive communications for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationCategorySubscriptions(List<String> notificationCategorySubscriptions) {
             return notificationCategorySubscriptions(Output.of(notificationCategorySubscriptions));
         }
 
+        /**
+         * @param notificationCategorySubscriptions The categories of notifications that the contact will receive communications for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationCategorySubscriptions(String... notificationCategorySubscriptions) {
             return notificationCategorySubscriptions(List.of(notificationCategorySubscriptions));
         }
 
+        /**
+         * @param parent The resource to save this contact for. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The resource to save this contact for. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }

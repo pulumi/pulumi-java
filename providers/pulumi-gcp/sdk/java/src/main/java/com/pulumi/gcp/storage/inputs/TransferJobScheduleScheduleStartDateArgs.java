@@ -20,6 +20,10 @@ public final class TransferJobScheduleScheduleStartDateArgs extends com.pulumi.r
     @Import(name="day", required=true)
     private Output<Integer> day;
 
+    /**
+     * @return Day of month. Must be from 1 to 31 and valid for the year and month.
+     * 
+     */
     public Output<Integer> day() {
         return this.day;
     }
@@ -31,6 +35,10 @@ public final class TransferJobScheduleScheduleStartDateArgs extends com.pulumi.r
     @Import(name="month", required=true)
     private Output<Integer> month;
 
+    /**
+     * @return Month of year. Must be from 1 to 12.
+     * 
+     */
     public Output<Integer> month() {
         return this.month;
     }
@@ -42,6 +50,10 @@ public final class TransferJobScheduleScheduleStartDateArgs extends com.pulumi.r
     @Import(name="year", required=true)
     private Output<Integer> year;
 
+    /**
+     * @return Year of date. Must be from 1 to 9999.
+     * 
+     */
     public Output<Integer> year() {
         return this.year;
     }
@@ -72,29 +84,65 @@ public final class TransferJobScheduleScheduleStartDateArgs extends com.pulumi.r
             $ = new TransferJobScheduleScheduleStartDateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day Day of month. Must be from 1 to 31 and valid for the year and month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(Output<Integer> day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param day Day of month. Must be from 1 to 31 and valid for the year and month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(Integer day) {
             return day(Output.of(day));
         }
 
+        /**
+         * @param month Month of year. Must be from 1 to 12.
+         * 
+         * @return builder
+         * 
+         */
         public Builder month(Output<Integer> month) {
             $.month = month;
             return this;
         }
 
+        /**
+         * @param month Month of year. Must be from 1 to 12.
+         * 
+         * @return builder
+         * 
+         */
         public Builder month(Integer month) {
             return month(Output.of(month));
         }
 
+        /**
+         * @param year Year of date. Must be from 1 to 9999.
+         * 
+         * @return builder
+         * 
+         */
         public Builder year(Output<Integer> year) {
             $.year = year;
             return this;
         }
 
+        /**
+         * @param year Year of date. Must be from 1 to 9999.
+         * 
+         * @return builder
+         * 
+         */
         public Builder year(Integer year) {
             return year(Output.of(year));
         }

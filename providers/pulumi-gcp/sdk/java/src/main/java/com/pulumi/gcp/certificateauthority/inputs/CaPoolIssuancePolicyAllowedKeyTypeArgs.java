@@ -24,6 +24,11 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends com.pulumi.res
     @Import(name="ellipticCurve")
     private @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> ellipticCurve;
 
+    /**
+     * @return Represents an allowed Elliptic Curve key type.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs>> ellipticCurve() {
         return Optional.ofNullable(this.ellipticCurve);
     }
@@ -36,6 +41,11 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends com.pulumi.res
     @Import(name="rsa")
     private @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> rsa;
 
+    /**
+     * @return Describes an RSA key that may be used in a Certificate issued from a CaPool.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs>> rsa() {
         return Optional.ofNullable(this.rsa);
     }
@@ -65,20 +75,48 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends com.pulumi.res
             $ = new CaPoolIssuancePolicyAllowedKeyTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ellipticCurve Represents an allowed Elliptic Curve key type.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ellipticCurve(@Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> ellipticCurve) {
             $.ellipticCurve = ellipticCurve;
             return this;
         }
 
+        /**
+         * @param ellipticCurve Represents an allowed Elliptic Curve key type.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ellipticCurve(CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs ellipticCurve) {
             return ellipticCurve(Output.of(ellipticCurve));
         }
 
+        /**
+         * @param rsa Describes an RSA key that may be used in a Certificate issued from a CaPool.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rsa(@Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> rsa) {
             $.rsa = rsa;
             return this;
         }
 
+        /**
+         * @param rsa Describes an RSA key that may be used in a Certificate issued from a CaPool.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rsa(CaPoolIssuancePolicyAllowedKeyTypeRsaArgs rsa) {
             return rsa(Output.of(rsa));
         }

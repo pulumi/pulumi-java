@@ -23,6 +23,10 @@ public final class ConnectivityTestDestinationArgs extends com.pulumi.resources.
     @Import(name="instance")
     private @Nullable Output<String> instance;
 
+    /**
+     * @return A Compute Engine instance URI.
+     * 
+     */
     public Optional<Output<String>> instance() {
         return Optional.ofNullable(this.instance);
     }
@@ -36,6 +40,12 @@ public final class ConnectivityTestDestinationArgs extends com.pulumi.resources.
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return The IP address of the endpoint, which can be an external or
+     * internal IP. An IPv6 address is only allowed when the test&#39;s
+     * destination is a global load balancer VIP.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -47,6 +57,10 @@ public final class ConnectivityTestDestinationArgs extends com.pulumi.resources.
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return A Compute Engine network URI.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -59,6 +73,11 @@ public final class ConnectivityTestDestinationArgs extends com.pulumi.resources.
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The IP protocol port of the endpoint. Only applicable when
+     * protocol is TCP or UDP.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -77,6 +96,17 @@ public final class ConnectivityTestDestinationArgs extends com.pulumi.resources.
     @Import(name="projectId")
     private @Nullable Output<String> projectId;
 
+    /**
+     * @return Project ID where the endpoint is located. The Project ID can be
+     * derived from the URI if you provide a VM instance or network URI.
+     * The following are two cases where you must provide the project ID:
+     * 1. Only the IP address is specified, and the IP address is within
+     *    a GCP project. 2. When you are using Shared VPC and the IP address
+     *    that you provide is from the service project. In this case, the
+     *    network that the IP address resides in is defined in the host
+     *    project.
+     * 
+     */
     public Optional<Output<String>> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -109,47 +139,127 @@ public final class ConnectivityTestDestinationArgs extends com.pulumi.resources.
             $ = new ConnectivityTestDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instance A Compute Engine instance URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(@Nullable Output<String> instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param instance A Compute Engine instance URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             return instance(Output.of(instance));
         }
 
+        /**
+         * @param ipAddress The IP address of the endpoint, which can be an external or
+         * internal IP. An IPv6 address is only allowed when the test&#39;s
+         * destination is a global load balancer VIP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress The IP address of the endpoint, which can be an external or
+         * internal IP. An IPv6 address is only allowed when the test&#39;s
+         * destination is a global load balancer VIP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param network A Compute Engine network URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network A Compute Engine network URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param port The IP protocol port of the endpoint. Only applicable when
+         * protocol is TCP or UDP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The IP protocol port of the endpoint. Only applicable when
+         * protocol is TCP or UDP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param projectId Project ID where the endpoint is located. The Project ID can be
+         * derived from the URI if you provide a VM instance or network URI.
+         * The following are two cases where you must provide the project ID:
+         * 1. Only the IP address is specified, and the IP address is within
+         *    a GCP project. 2. When you are using Shared VPC and the IP address
+         *    that you provide is from the service project. In this case, the
+         *    network that the IP address resides in is defined in the host
+         *    project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(@Nullable Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId Project ID where the endpoint is located. The Project ID can be
+         * derived from the URI if you provide a VM instance or network URI.
+         * The following are two cases where you must provide the project ID:
+         * 1. Only the IP address is specified, and the IP address is within
+         *    a GCP project. 2. When you are using Shared VPC and the IP address
+         *    that you provide is from the service project. In this case, the
+         *    network that the IP address resides in is defined in the host
+         *    project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }

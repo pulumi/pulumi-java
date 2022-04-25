@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RouterPeerAdvertisedIpRange {
     /**
-     * User-specified description for the IP range.
+     * @return User-specified description for the IP range.
      * 
      */
     private final @Nullable String description;
     /**
-     * The IP range to advertise. The value must be a
+     * @return The IP range to advertise. The value must be a
      * CIDR-formatted string.
      * 
      */
@@ -32,17 +32,17 @@ public final class RouterPeerAdvertisedIpRange {
     }
 
     /**
-     * User-specified description for the IP range.
+     * @return User-specified description for the IP range.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The IP range to advertise. The value must be a
+     * @return The IP range to advertise. The value must be a
      * CIDR-formatted string.
      * 
-    */
+     */
     public String range() {
         return this.range;
     }

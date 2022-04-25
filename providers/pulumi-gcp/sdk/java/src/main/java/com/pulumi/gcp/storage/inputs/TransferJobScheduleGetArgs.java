@@ -24,6 +24,10 @@ public final class TransferJobScheduleGetArgs extends com.pulumi.resources.Resou
     @Import(name="scheduleEndDate")
     private @Nullable Output<TransferJobScheduleScheduleEndDateGetArgs> scheduleEndDate;
 
+    /**
+     * @return The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
+     * 
+     */
     public Optional<Output<TransferJobScheduleScheduleEndDateGetArgs>> scheduleEndDate() {
         return Optional.ofNullable(this.scheduleEndDate);
     }
@@ -35,6 +39,10 @@ public final class TransferJobScheduleGetArgs extends com.pulumi.resources.Resou
     @Import(name="scheduleStartDate", required=true)
     private Output<TransferJobScheduleScheduleStartDateGetArgs> scheduleStartDate;
 
+    /**
+     * @return The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
+     * 
+     */
     public Output<TransferJobScheduleScheduleStartDateGetArgs> scheduleStartDate() {
         return this.scheduleStartDate;
     }
@@ -46,6 +54,10 @@ public final class TransferJobScheduleGetArgs extends com.pulumi.resources.Resou
     @Import(name="startTimeOfDay")
     private @Nullable Output<TransferJobScheduleStartTimeOfDayGetArgs> startTimeOfDay;
 
+    /**
+     * @return The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer&#39;s start time in a day is specified in your local timezone. Structure documented below.
+     * 
+     */
     public Optional<Output<TransferJobScheduleStartTimeOfDayGetArgs>> startTimeOfDay() {
         return Optional.ofNullable(this.startTimeOfDay);
     }
@@ -76,29 +88,65 @@ public final class TransferJobScheduleGetArgs extends com.pulumi.resources.Resou
             $ = new TransferJobScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scheduleEndDate The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleEndDate(@Nullable Output<TransferJobScheduleScheduleEndDateGetArgs> scheduleEndDate) {
             $.scheduleEndDate = scheduleEndDate;
             return this;
         }
 
+        /**
+         * @param scheduleEndDate The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleEndDate(TransferJobScheduleScheduleEndDateGetArgs scheduleEndDate) {
             return scheduleEndDate(Output.of(scheduleEndDate));
         }
 
+        /**
+         * @param scheduleStartDate The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleStartDate(Output<TransferJobScheduleScheduleStartDateGetArgs> scheduleStartDate) {
             $.scheduleStartDate = scheduleStartDate;
             return this;
         }
 
+        /**
+         * @param scheduleStartDate The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleStartDate(TransferJobScheduleScheduleStartDateGetArgs scheduleStartDate) {
             return scheduleStartDate(Output.of(scheduleStartDate));
         }
 
+        /**
+         * @param startTimeOfDay The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer&#39;s start time in a day is specified in your local timezone. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeOfDay(@Nullable Output<TransferJobScheduleStartTimeOfDayGetArgs> startTimeOfDay) {
             $.startTimeOfDay = startTimeOfDay;
             return this;
         }
 
+        /**
+         * @param startTimeOfDay The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer&#39;s start time in a day is specified in your local timezone. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeOfDay(TransferJobScheduleStartTimeOfDayGetArgs startTimeOfDay) {
             return startTimeOfDay(Output.of(startTimeOfDay));
         }

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StandardAppVersionLibrary {
     /**
-     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
      */
     private final @Nullable String name;
     /**
-     * Version of the library to select, or &#34;latest&#34;.
+     * @return Version of the library to select, or &#34;latest&#34;.
      * 
      */
     private final @Nullable String version;
@@ -31,16 +31,16 @@ public final class StandardAppVersionLibrary {
     }
 
     /**
-     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Version of the library to select, or &#34;latest&#34;.
+     * @return Version of the library to select, or &#34;latest&#34;.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

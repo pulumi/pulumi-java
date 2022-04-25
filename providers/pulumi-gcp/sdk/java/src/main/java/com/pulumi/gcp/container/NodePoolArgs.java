@@ -30,6 +30,11 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoscaling")
     private @Nullable Output<NodePoolAutoscalingArgs> autoscaling;
 
+    /**
+     * @return Configuration required by cluster autoscaler to adjust
+     * the size of the node pool to the current cluster usage. Structure is documented below.
+     * 
+     */
     public Optional<Output<NodePoolAutoscalingArgs>> autoscaling() {
         return Optional.ofNullable(this.autoscaling);
     }
@@ -41,6 +46,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cluster", required=true)
     private Output<String> cluster;
 
+    /**
+     * @return The cluster to create the node pool for. Cluster must be present in `location` provided for clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
+     * 
+     */
     public Output<String> cluster() {
         return this.cluster;
     }
@@ -58,6 +67,16 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="initialNodeCount")
     private @Nullable Output<Integer> initialNodeCount;
 
+    /**
+     * @return The initial number of nodes for the pool. In
+     * regional or multi-zonal clusters, this is the number of nodes per zone. Changing
+     * this will force recreation of the resource. WARNING: Resizing your node pool manually
+     * may change this value in your existing cluster, which will trigger destruction
+     * and recreation on the next provider run (to rectify the discrepancy).  If you don&#39;t
+     * need this value, don&#39;t set it.  If you do need it, you can use a lifecycle block to
+     * ignore subsqeuent changes to this field.
+     * 
+     */
     public Optional<Output<Integer>> initialNodeCount() {
         return Optional.ofNullable(this.initialNodeCount);
     }
@@ -69,6 +88,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location (region or zone) of the cluster.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -81,6 +104,11 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="management")
     private @Nullable Output<NodePoolManagementArgs> management;
 
+    /**
+     * @return Node management configuration, wherein auto-repair and
+     * auto-upgrade is configured. Structure is documented below.
+     * 
+     */
     public Optional<Output<NodePoolManagementArgs>> management() {
         return Optional.ofNullable(this.management);
     }
@@ -96,6 +124,14 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxPodsPerNode")
     private @Nullable Output<Integer> maxPodsPerNode;
 
+    /**
+     * @return The maximum number of pods per node in this node pool.
+     * Note that this does not work on node pools which are &#34;route-based&#34; - that is, node
+     * pools belonging to clusters that do not have IP Aliasing enabled.
+     * See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr)
+     * for more information.
+     * 
+     */
     public Optional<Output<Integer>> maxPodsPerNode() {
         return Optional.ofNullable(this.maxPodsPerNode);
     }
@@ -108,6 +144,11 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the node pool. If left blank, the provider will
+     * auto-generate a unique name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -120,6 +161,11 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
     private @Nullable Output<String> namePrefix;
 
+    /**
+     * @return Creates a unique name for the node pool beginning
+     * with the specified prefix. Conflicts with `name`.
+     * 
+     */
     public Optional<Output<String>> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
@@ -132,6 +178,11 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkConfig")
     private @Nullable Output<NodePoolNetworkConfigArgs> networkConfig;
 
+    /**
+     * @return The network configuration of the pool. See
+     * gcp.container.Cluster for schema.
+     * 
+     */
     public Optional<Output<NodePoolNetworkConfigArgs>> networkConfig() {
         return Optional.ofNullable(this.networkConfig);
     }
@@ -144,6 +195,11 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeConfig")
     private @Nullable Output<NodePoolNodeConfigArgs> nodeConfig;
 
+    /**
+     * @return Parameters used in creating the node pool. See
+     * gcp.container.Cluster for schema.
+     * 
+     */
     public Optional<Output<NodePoolNodeConfigArgs>> nodeConfig() {
         return Optional.ofNullable(this.nodeConfig);
     }
@@ -156,6 +212,11 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeCount")
     private @Nullable Output<Integer> nodeCount;
 
+    /**
+     * @return The number of nodes per instance group. This field can be used to
+     * update the number of nodes per instance group but should not be used alongside `autoscaling`.
+     * 
+     */
     public Optional<Output<Integer>> nodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }
@@ -170,6 +231,13 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeLocations")
     private @Nullable Output<List<String>> nodeLocations;
 
+    /**
+     * @return The list of zones in which the node pool&#39;s nodes should be located. Nodes must
+     * be in the region of their regional cluster or in the same region as their
+     * cluster&#39;s zone for zonal clusters. If unspecified, the cluster-level
+     * `node_locations` will be used.
+     * 
+     */
     public Optional<Output<List<String>>> nodeLocations() {
         return Optional.ofNullable(this.nodeLocations);
     }
@@ -182,6 +250,11 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which to create the node pool. If blank,
+     * the provider-configured project will be used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -195,6 +268,12 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="upgradeSettings")
     private @Nullable Output<NodePoolUpgradeSettingsArgs> upgradeSettings;
 
+    /**
+     * @return Specify node upgrade settings to change how many nodes GKE attempts to
+     * upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
+     * The maximum number of nodes upgraded simultaneously is limited to 20. Structure is documented below.
+     * 
+     */
     public Optional<Output<NodePoolUpgradeSettingsArgs>> upgradeSettings() {
         return Optional.ofNullable(this.upgradeSettings);
     }
@@ -211,6 +290,15 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The Kubernetes version for the nodes in this pool. Note that if this field
+     * and `auto_upgrade` are both specified, they will fight each other for what the node version should
+     * be, so setting both is highly discouraged. While a fuzzy version can be specified, it&#39;s
+     * recommended that you specify explicit versions as the provider will see spurious diffs
+     * when fuzzy versions are used. See the `gcp.container.getEngineVersions` data source&#39;s
+     * `version_prefix` field to approximate fuzzy versions in a provider-compatible way.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -253,141 +341,386 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NodePoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscaling Configuration required by cluster autoscaler to adjust
+         * the size of the node pool to the current cluster usage. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaling(@Nullable Output<NodePoolAutoscalingArgs> autoscaling) {
             $.autoscaling = autoscaling;
             return this;
         }
 
+        /**
+         * @param autoscaling Configuration required by cluster autoscaler to adjust
+         * the size of the node pool to the current cluster usage. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaling(NodePoolAutoscalingArgs autoscaling) {
             return autoscaling(Output.of(autoscaling));
         }
 
+        /**
+         * @param cluster The cluster to create the node pool for. Cluster must be present in `location` provided for clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(Output<String> cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param cluster The cluster to create the node pool for. Cluster must be present in `location` provided for clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             return cluster(Output.of(cluster));
         }
 
+        /**
+         * @param initialNodeCount The initial number of nodes for the pool. In
+         * regional or multi-zonal clusters, this is the number of nodes per zone. Changing
+         * this will force recreation of the resource. WARNING: Resizing your node pool manually
+         * may change this value in your existing cluster, which will trigger destruction
+         * and recreation on the next provider run (to rectify the discrepancy).  If you don&#39;t
+         * need this value, don&#39;t set it.  If you do need it, you can use a lifecycle block to
+         * ignore subsqeuent changes to this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialNodeCount(@Nullable Output<Integer> initialNodeCount) {
             $.initialNodeCount = initialNodeCount;
             return this;
         }
 
+        /**
+         * @param initialNodeCount The initial number of nodes for the pool. In
+         * regional or multi-zonal clusters, this is the number of nodes per zone. Changing
+         * this will force recreation of the resource. WARNING: Resizing your node pool manually
+         * may change this value in your existing cluster, which will trigger destruction
+         * and recreation on the next provider run (to rectify the discrepancy).  If you don&#39;t
+         * need this value, don&#39;t set it.  If you do need it, you can use a lifecycle block to
+         * ignore subsqeuent changes to this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialNodeCount(Integer initialNodeCount) {
             return initialNodeCount(Output.of(initialNodeCount));
         }
 
+        /**
+         * @param location The location (region or zone) of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location (region or zone) of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param management Node management configuration, wherein auto-repair and
+         * auto-upgrade is configured. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder management(@Nullable Output<NodePoolManagementArgs> management) {
             $.management = management;
             return this;
         }
 
+        /**
+         * @param management Node management configuration, wherein auto-repair and
+         * auto-upgrade is configured. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder management(NodePoolManagementArgs management) {
             return management(Output.of(management));
         }
 
+        /**
+         * @param maxPodsPerNode The maximum number of pods per node in this node pool.
+         * Note that this does not work on node pools which are &#34;route-based&#34; - that is, node
+         * pools belonging to clusters that do not have IP Aliasing enabled.
+         * See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr)
+         * for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPodsPerNode(@Nullable Output<Integer> maxPodsPerNode) {
             $.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
 
+        /**
+         * @param maxPodsPerNode The maximum number of pods per node in this node pool.
+         * Note that this does not work on node pools which are &#34;route-based&#34; - that is, node
+         * pools belonging to clusters that do not have IP Aliasing enabled.
+         * See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr)
+         * for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPodsPerNode(Integer maxPodsPerNode) {
             return maxPodsPerNode(Output.of(maxPodsPerNode));
         }
 
+        /**
+         * @param name The name of the node pool. If left blank, the provider will
+         * auto-generate a unique name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the node pool. If left blank, the provider will
+         * auto-generate a unique name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namePrefix Creates a unique name for the node pool beginning
+         * with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param namePrefix Creates a unique name for the node pool beginning
+         * with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 
+        /**
+         * @param networkConfig The network configuration of the pool. See
+         * gcp.container.Cluster for schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(@Nullable Output<NodePoolNetworkConfigArgs> networkConfig) {
             $.networkConfig = networkConfig;
             return this;
         }
 
+        /**
+         * @param networkConfig The network configuration of the pool. See
+         * gcp.container.Cluster for schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(NodePoolNetworkConfigArgs networkConfig) {
             return networkConfig(Output.of(networkConfig));
         }
 
+        /**
+         * @param nodeConfig Parameters used in creating the node pool. See
+         * gcp.container.Cluster for schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeConfig(@Nullable Output<NodePoolNodeConfigArgs> nodeConfig) {
             $.nodeConfig = nodeConfig;
             return this;
         }
 
+        /**
+         * @param nodeConfig Parameters used in creating the node pool. See
+         * gcp.container.Cluster for schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeConfig(NodePoolNodeConfigArgs nodeConfig) {
             return nodeConfig(Output.of(nodeConfig));
         }
 
+        /**
+         * @param nodeCount The number of nodes per instance group. This field can be used to
+         * update the number of nodes per instance group but should not be used alongside `autoscaling`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
             $.nodeCount = nodeCount;
             return this;
         }
 
+        /**
+         * @param nodeCount The number of nodes per instance group. This field can be used to
+         * update the number of nodes per instance group but should not be used alongside `autoscaling`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeCount(Integer nodeCount) {
             return nodeCount(Output.of(nodeCount));
         }
 
+        /**
+         * @param nodeLocations The list of zones in which the node pool&#39;s nodes should be located. Nodes must
+         * be in the region of their regional cluster or in the same region as their
+         * cluster&#39;s zone for zonal clusters. If unspecified, the cluster-level
+         * `node_locations` will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeLocations(@Nullable Output<List<String>> nodeLocations) {
             $.nodeLocations = nodeLocations;
             return this;
         }
 
+        /**
+         * @param nodeLocations The list of zones in which the node pool&#39;s nodes should be located. Nodes must
+         * be in the region of their regional cluster or in the same region as their
+         * cluster&#39;s zone for zonal clusters. If unspecified, the cluster-level
+         * `node_locations` will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeLocations(List<String> nodeLocations) {
             return nodeLocations(Output.of(nodeLocations));
         }
 
+        /**
+         * @param nodeLocations The list of zones in which the node pool&#39;s nodes should be located. Nodes must
+         * be in the region of their regional cluster or in the same region as their
+         * cluster&#39;s zone for zonal clusters. If unspecified, the cluster-level
+         * `node_locations` will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeLocations(String... nodeLocations) {
             return nodeLocations(List.of(nodeLocations));
         }
 
+        /**
+         * @param project The ID of the project in which to create the node pool. If blank,
+         * the provider-configured project will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which to create the node pool. If blank,
+         * the provider-configured project will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param upgradeSettings Specify node upgrade settings to change how many nodes GKE attempts to
+         * upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
+         * The maximum number of nodes upgraded simultaneously is limited to 20. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeSettings(@Nullable Output<NodePoolUpgradeSettingsArgs> upgradeSettings) {
             $.upgradeSettings = upgradeSettings;
             return this;
         }
 
+        /**
+         * @param upgradeSettings Specify node upgrade settings to change how many nodes GKE attempts to
+         * upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
+         * The maximum number of nodes upgraded simultaneously is limited to 20. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeSettings(NodePoolUpgradeSettingsArgs upgradeSettings) {
             return upgradeSettings(Output.of(upgradeSettings));
         }
 
+        /**
+         * @param version The Kubernetes version for the nodes in this pool. Note that if this field
+         * and `auto_upgrade` are both specified, they will fight each other for what the node version should
+         * be, so setting both is highly discouraged. While a fuzzy version can be specified, it&#39;s
+         * recommended that you specify explicit versions as the provider will see spurious diffs
+         * when fuzzy versions are used. See the `gcp.container.getEngineVersions` data source&#39;s
+         * `version_prefix` field to approximate fuzzy versions in a provider-compatible way.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The Kubernetes version for the nodes in this pool. Note that if this field
+         * and `auto_upgrade` are both specified, they will fight each other for what the node version should
+         * be, so setting both is highly discouraged. While a fuzzy version can be specified, it&#39;s
+         * recommended that you specify explicit versions as the provider will see spurious diffs
+         * when fuzzy versions are used. See the `gcp.container.getEngineVersions` data source&#39;s
+         * `version_prefix` field to approximate fuzzy versions in a provider-compatible way.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

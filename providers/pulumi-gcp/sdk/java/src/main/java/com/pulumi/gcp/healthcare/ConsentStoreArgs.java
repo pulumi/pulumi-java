@@ -25,6 +25,11 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataset", required=true)
     private Output<String> dataset;
 
+    /**
+     * @return Identifies the dataset addressed by this request. Must be in the format
+     * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
+     * 
+     */
     public Output<String> dataset() {
         return this.dataset;
     }
@@ -37,6 +42,11 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultConsentTtl")
     private @Nullable Output<String> defaultConsentTtl;
 
+    /**
+     * @return Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     * 
+     */
     public Optional<Output<String>> defaultConsentTtl() {
         return Optional.ofNullable(this.defaultConsentTtl);
     }
@@ -48,6 +58,10 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableConsentCreateOnUpdate")
     private @Nullable Output<Boolean> enableConsentCreateOnUpdate;
 
+    /**
+     * @return If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist.
+     * 
+     */
     public Optional<Output<Boolean>> enableConsentCreateOnUpdate() {
         return Optional.ofNullable(this.enableConsentCreateOnUpdate);
     }
@@ -66,6 +80,17 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return User-supplied key-value pairs used to organize Consent stores.
+     * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+     * conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}`
+     * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+     * bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}`
+     * No more than 64 labels can be associated with a given store.
+     * An object containing a list of &#34;key&#34;: value pairs.
+     * Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -78,6 +103,11 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of this ConsentStore, for example:
+     * &#34;consent1&#34;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -110,47 +140,127 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConsentStoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataset Identifies the dataset addressed by this request. Must be in the format
+         * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(Output<String> dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param dataset Identifies the dataset addressed by this request. Must be in the format
+         * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(String dataset) {
             return dataset(Output.of(dataset));
         }
 
+        /**
+         * @param defaultConsentTtl Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultConsentTtl(@Nullable Output<String> defaultConsentTtl) {
             $.defaultConsentTtl = defaultConsentTtl;
             return this;
         }
 
+        /**
+         * @param defaultConsentTtl Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultConsentTtl(String defaultConsentTtl) {
             return defaultConsentTtl(Output.of(defaultConsentTtl));
         }
 
+        /**
+         * @param enableConsentCreateOnUpdate If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableConsentCreateOnUpdate(@Nullable Output<Boolean> enableConsentCreateOnUpdate) {
             $.enableConsentCreateOnUpdate = enableConsentCreateOnUpdate;
             return this;
         }
 
+        /**
+         * @param enableConsentCreateOnUpdate If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableConsentCreateOnUpdate(Boolean enableConsentCreateOnUpdate) {
             return enableConsentCreateOnUpdate(Output.of(enableConsentCreateOnUpdate));
         }
 
+        /**
+         * @param labels User-supplied key-value pairs used to organize Consent stores.
+         * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+         * conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}`
+         * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+         * bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}`
+         * No more than 64 labels can be associated with a given store.
+         * An object containing a list of &#34;key&#34;: value pairs.
+         * Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels User-supplied key-value pairs used to organize Consent stores.
+         * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+         * conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}`
+         * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+         * bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}`
+         * No more than 64 labels can be associated with a given store.
+         * An object containing a list of &#34;key&#34;: value pairs.
+         * Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param name The name of this ConsentStore, for example:
+         * &#34;consent1&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of this ConsentStore, for example:
+         * &#34;consent1&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -21,6 +21,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArg
     @Import(name="tableReference", required=true)
     private Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs> tableReference;
 
+    /**
+     * @return Set of files to scan.
+     * Structure is documented below.
+     * 
+     */
     public Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs> tableReference() {
         return this.tableReference;
     }
@@ -49,11 +54,25 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArg
             $ = new PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tableReference Set of files to scan.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableReference(Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs> tableReference) {
             $.tableReference = tableReference;
             return this;
         }
 
+        /**
+         * @param tableReference Set of files to scan.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableReference(PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs tableReference) {
             return tableReference(Output.of(tableReference));
         }

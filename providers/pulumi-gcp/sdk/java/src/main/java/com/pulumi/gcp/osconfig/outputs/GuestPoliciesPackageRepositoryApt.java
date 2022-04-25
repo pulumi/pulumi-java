@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GuestPoliciesPackageRepositoryApt {
     /**
-     * Type of archive files in this repository. The default behavior is DEB.
+     * @return Type of archive files in this repository. The default behavior is DEB.
      * Default value is `DEB`.
      * Possible values are `DEB` and `DEB_SRC`.
      * 
      */
     private final @Nullable String archiveType;
     /**
-     * List of components for this repository. Must contain at least one item.
+     * @return List of components for this repository. Must contain at least one item.
      * 
      */
     private final List<String> components;
     /**
-     * Distribution of this repository.
+     * @return Distribution of this repository.
      * 
      */
     private final String distribution;
     /**
-     * URI of the key file for this repository. The agent maintains a keyring at
+     * @return URI of the key file for this repository. The agent maintains a keyring at
      * /etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg containing all the keys in any applied guest policy.
      * 
      */
     private final @Nullable String gpgKey;
     /**
-     * URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
+     * @return URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
      * 
      */
     private final String uri;
@@ -56,40 +56,40 @@ public final class GuestPoliciesPackageRepositoryApt {
     }
 
     /**
-     * Type of archive files in this repository. The default behavior is DEB.
+     * @return Type of archive files in this repository. The default behavior is DEB.
      * Default value is `DEB`.
      * Possible values are `DEB` and `DEB_SRC`.
      * 
-    */
+     */
     public Optional<String> archiveType() {
         return Optional.ofNullable(this.archiveType);
     }
     /**
-     * List of components for this repository. Must contain at least one item.
+     * @return List of components for this repository. Must contain at least one item.
      * 
-    */
+     */
     public List<String> components() {
         return this.components;
     }
     /**
-     * Distribution of this repository.
+     * @return Distribution of this repository.
      * 
-    */
+     */
     public String distribution() {
         return this.distribution;
     }
     /**
-     * URI of the key file for this repository. The agent maintains a keyring at
+     * @return URI of the key file for this repository. The agent maintains a keyring at
      * /etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg containing all the keys in any applied guest policy.
      * 
-    */
+     */
     public Optional<String> gpgKey() {
         return Optional.ofNullable(this.gpgKey);
     }
     /**
-     * URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
+     * @return URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

@@ -26,6 +26,14 @@ public final class TableEncryptionConfigurationArgs extends com.pulumi.resources
     @Import(name="kmsKeyName", required=true)
     private Output<String> kmsKeyName;
 
+    /**
+     * @return The self link or full name of a key which should be used to
+     * encrypt this table.  Note that the default bigquery service account will need to have
+     * encrypt/decrypt permissions on this key - you may want to see the
+     * `gcp.bigquery.getDefaultServiceAccount` datasource and the
+     * `gcp.kms.CryptoKeyIAMBinding` resource.
+     * 
+     */
     public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -37,6 +45,10 @@ public final class TableEncryptionConfigurationArgs extends com.pulumi.resources
     @Import(name="kmsKeyVersion")
     private @Nullable Output<String> kmsKeyVersion;
 
+    /**
+     * @return The self link or full name of the kms key version used to encrypt this table.
+     * 
+     */
     public Optional<Output<String>> kmsKeyVersion() {
         return Optional.ofNullable(this.kmsKeyVersion);
     }
@@ -66,20 +78,52 @@ public final class TableEncryptionConfigurationArgs extends com.pulumi.resources
             $ = new TableEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName The self link or full name of a key which should be used to
+         * encrypt this table.  Note that the default bigquery service account will need to have
+         * encrypt/decrypt permissions on this key - you may want to see the
+         * `gcp.bigquery.getDefaultServiceAccount` datasource and the
+         * `gcp.kms.CryptoKeyIAMBinding` resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName The self link or full name of a key which should be used to
+         * encrypt this table.  Note that the default bigquery service account will need to have
+         * encrypt/decrypt permissions on this key - you may want to see the
+         * `gcp.bigquery.getDefaultServiceAccount` datasource and the
+         * `gcp.kms.CryptoKeyIAMBinding` resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }
 
+        /**
+         * @param kmsKeyVersion The self link or full name of the kms key version used to encrypt this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyVersion(@Nullable Output<String> kmsKeyVersion) {
             $.kmsKeyVersion = kmsKeyVersion;
             return this;
         }
 
+        /**
+         * @param kmsKeyVersion The self link or full name of the kms key version used to encrypt this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyVersion(String kmsKeyVersion) {
             return kmsKeyVersion(Output.of(kmsKeyVersion));
         }

@@ -24,6 +24,13 @@ public final class EntityTypeEntityArgs extends com.pulumi.resources.ResourceArg
     @Import(name="synonyms", required=true)
     private Output<List<String>> synonyms;
 
+    /**
+     * @return A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym
+     * could be green onions.
+     * For KIND_LIST entity types:
+     * * This collection must contain exactly one synonym equal to value.
+     * 
+     */
     public Output<List<String>> synonyms() {
         return this.synonyms;
     }
@@ -40,6 +47,15 @@ public final class EntityTypeEntityArgs extends com.pulumi.resources.ResourceArg
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The primary value associated with this entity entry. For example, if the entity type is vegetable, the value
+     * could be scallions.
+     * For KIND_MAP entity types:
+     * * A reference value to be used in place of synonyms.
+     *   For KIND_LIST entity types:
+     * * A string that can contain references to other entity types (with or without aliases).
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -69,24 +85,73 @@ public final class EntityTypeEntityArgs extends com.pulumi.resources.ResourceArg
             $ = new EntityTypeEntityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param synonyms A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym
+         * could be green onions.
+         * For KIND_LIST entity types:
+         * * This collection must contain exactly one synonym equal to value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(Output<List<String>> synonyms) {
             $.synonyms = synonyms;
             return this;
         }
 
+        /**
+         * @param synonyms A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym
+         * could be green onions.
+         * For KIND_LIST entity types:
+         * * This collection must contain exactly one synonym equal to value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(List<String> synonyms) {
             return synonyms(Output.of(synonyms));
         }
 
+        /**
+         * @param synonyms A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym
+         * could be green onions.
+         * For KIND_LIST entity types:
+         * * This collection must contain exactly one synonym equal to value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
         }
 
+        /**
+         * @param value The primary value associated with this entity entry. For example, if the entity type is vegetable, the value
+         * could be scallions.
+         * For KIND_MAP entity types:
+         * * A reference value to be used in place of synonyms.
+         *   For KIND_LIST entity types:
+         * * A string that can contain references to other entity types (with or without aliases).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The primary value associated with this entity entry. For example, if the entity type is vegetable, the value
+         * could be scallions.
+         * For KIND_MAP entity types:
+         * * A reference value to be used in place of synonyms.
+         *   For KIND_LIST entity types:
+         * * A string that can contain references to other entity types (with or without aliases).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

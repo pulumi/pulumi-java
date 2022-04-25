@@ -24,6 +24,10 @@ public final class TenantInboundSamlConfigSpConfigGetArgs extends com.pulumi.res
     @Import(name="callbackUri", required=true)
     private Output<String> callbackUri;
 
+    /**
+     * @return Callback URI where responses from IDP are handled. Must start with `https://`.
+     * 
+     */
     public Output<String> callbackUri() {
         return this.callbackUri;
     }
@@ -37,6 +41,12 @@ public final class TenantInboundSamlConfigSpConfigGetArgs extends com.pulumi.res
     @Import(name="spCertificates")
     private @Nullable Output<List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs>> spCertificates;
 
+    /**
+     * @return -
+     * The IDP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs>>> spCertificates() {
         return Optional.ofNullable(this.spCertificates);
     }
@@ -48,6 +58,10 @@ public final class TenantInboundSamlConfigSpConfigGetArgs extends com.pulumi.res
     @Import(name="spEntityId", required=true)
     private Output<String> spEntityId;
 
+    /**
+     * @return Unique identifier for all SAML entities.
+     * 
+     */
     public Output<String> spEntityId() {
         return this.spEntityId;
     }
@@ -78,33 +92,81 @@ public final class TenantInboundSamlConfigSpConfigGetArgs extends com.pulumi.res
             $ = new TenantInboundSamlConfigSpConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param callbackUri Callback URI where responses from IDP are handled. Must start with `https://`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callbackUri(Output<String> callbackUri) {
             $.callbackUri = callbackUri;
             return this;
         }
 
+        /**
+         * @param callbackUri Callback URI where responses from IDP are handled. Must start with `https://`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callbackUri(String callbackUri) {
             return callbackUri(Output.of(callbackUri));
         }
 
+        /**
+         * @param spCertificates -
+         * The IDP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spCertificates(@Nullable Output<List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs>> spCertificates) {
             $.spCertificates = spCertificates;
             return this;
         }
 
+        /**
+         * @param spCertificates -
+         * The IDP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spCertificates(List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs> spCertificates) {
             return spCertificates(Output.of(spCertificates));
         }
 
+        /**
+         * @param spCertificates -
+         * The IDP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spCertificates(TenantInboundSamlConfigSpConfigSpCertificateGetArgs... spCertificates) {
             return spCertificates(List.of(spCertificates));
         }
 
+        /**
+         * @param spEntityId Unique identifier for all SAML entities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spEntityId(Output<String> spEntityId) {
             $.spEntityId = spEntityId;
             return this;
         }
 
+        /**
+         * @param spEntityId Unique identifier for all SAML entities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spEntityId(String spEntityId) {
             return spEntityId(Output.of(spEntityId));
         }

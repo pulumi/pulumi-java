@@ -25,6 +25,10 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Human friendly display name.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -36,6 +40,10 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return If this config allows users to sign in with the provider.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -48,6 +56,11 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
     @Import(name="idpConfig")
     private @Nullable Output<InboundSamlConfigIdpConfigGetArgs> idpConfig;
 
+    /**
+     * @return SAML IdP configuration when the project acts as the relying party
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<InboundSamlConfigIdpConfigGetArgs>> idpConfig() {
         return Optional.ofNullable(this.idpConfig);
     }
@@ -61,6 +74,12 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the InboundSamlConfig resource. Must start with &#39;saml.&#39; and can only have alphanumeric characters,
+     * hyphens, underscores or periods. The part after &#39;saml.&#39; must also start with a lowercase letter, end with an
+     * alphanumeric character, and have at least 2 characters.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -73,6 +92,11 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -86,6 +110,12 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
     @Import(name="spConfig")
     private @Nullable Output<InboundSamlConfigSpConfigGetArgs> spConfig;
 
+    /**
+     * @return SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+     * and accept an authentication assertion issued by a SAML identity provider.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<InboundSamlConfigSpConfigGetArgs>> spConfig() {
         return Optional.ofNullable(this.spConfig);
     }
@@ -119,56 +149,140 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
             $ = new InboundSamlConfigState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Human friendly display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Human friendly display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param enabled If this config allows users to sign in with the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled If this config allows users to sign in with the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param idpConfig SAML IdP configuration when the project acts as the relying party
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idpConfig(@Nullable Output<InboundSamlConfigIdpConfigGetArgs> idpConfig) {
             $.idpConfig = idpConfig;
             return this;
         }
 
+        /**
+         * @param idpConfig SAML IdP configuration when the project acts as the relying party
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idpConfig(InboundSamlConfigIdpConfigGetArgs idpConfig) {
             return idpConfig(Output.of(idpConfig));
         }
 
+        /**
+         * @param name The name of the InboundSamlConfig resource. Must start with &#39;saml.&#39; and can only have alphanumeric characters,
+         * hyphens, underscores or periods. The part after &#39;saml.&#39; must also start with a lowercase letter, end with an
+         * alphanumeric character, and have at least 2 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the InboundSamlConfig resource. Must start with &#39;saml.&#39; and can only have alphanumeric characters,
+         * hyphens, underscores or periods. The part after &#39;saml.&#39; must also start with a lowercase letter, end with an
+         * alphanumeric character, and have at least 2 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param spConfig SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+         * and accept an authentication assertion issued by a SAML identity provider.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spConfig(@Nullable Output<InboundSamlConfigSpConfigGetArgs> spConfig) {
             $.spConfig = spConfig;
             return this;
         }
 
+        /**
+         * @param spConfig SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+         * and accept an authentication assertion issued by a SAML identity provider.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spConfig(InboundSamlConfigSpConfigGetArgs spConfig) {
             return spConfig(Output.of(spConfig));
         }

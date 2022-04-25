@@ -20,6 +20,10 @@ public final class ClusterNotificationConfigGetArgs extends com.pulumi.resources
     @Import(name="pubsub", required=true)
     private Output<ClusterNotificationConfigPubsubGetArgs> pubsub;
 
+    /**
+     * @return The pubsub config for the cluster&#39;s upgrade notifications.
+     * 
+     */
     public Output<ClusterNotificationConfigPubsubGetArgs> pubsub() {
         return this.pubsub;
     }
@@ -48,11 +52,23 @@ public final class ClusterNotificationConfigGetArgs extends com.pulumi.resources
             $ = new ClusterNotificationConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pubsub The pubsub config for the cluster&#39;s upgrade notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsub(Output<ClusterNotificationConfigPubsubGetArgs> pubsub) {
             $.pubsub = pubsub;
             return this;
         }
 
+        /**
+         * @param pubsub The pubsub config for the cluster&#39;s upgrade notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsub(ClusterNotificationConfigPubsubGetArgs pubsub) {
             return pubsub(Output.of(pubsub));
         }

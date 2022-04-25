@@ -23,6 +23,10 @@ public final class BucketRetentionPolicyGetArgs extends com.pulumi.resources.Res
     @Import(name="isLocked")
     private @Nullable Output<Boolean> isLocked;
 
+    /**
+     * @return If set to `true`, the bucket will be [locked](https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket) and permanently restrict edits to the bucket&#39;s retention policy.  Caution: Locking a bucket is an irreversible action.
+     * 
+     */
     public Optional<Output<Boolean>> isLocked() {
         return Optional.ofNullable(this.isLocked);
     }
@@ -34,6 +38,10 @@ public final class BucketRetentionPolicyGetArgs extends com.pulumi.resources.Res
     @Import(name="retentionPeriod", required=true)
     private Output<Integer> retentionPeriod;
 
+    /**
+     * @return The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.
+     * 
+     */
     public Output<Integer> retentionPeriod() {
         return this.retentionPeriod;
     }
@@ -63,20 +71,44 @@ public final class BucketRetentionPolicyGetArgs extends com.pulumi.resources.Res
             $ = new BucketRetentionPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isLocked If set to `true`, the bucket will be [locked](https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket) and permanently restrict edits to the bucket&#39;s retention policy.  Caution: Locking a bucket is an irreversible action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLocked(@Nullable Output<Boolean> isLocked) {
             $.isLocked = isLocked;
             return this;
         }
 
+        /**
+         * @param isLocked If set to `true`, the bucket will be [locked](https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket) and permanently restrict edits to the bucket&#39;s retention policy.  Caution: Locking a bucket is an irreversible action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLocked(Boolean isLocked) {
             return isLocked(Output.of(isLocked));
         }
 
+        /**
+         * @param retentionPeriod The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPeriod(Output<Integer> retentionPeriod) {
             $.retentionPeriod = retentionPeriod;
             return this;
         }
 
+        /**
+         * @param retentionPeriod The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPeriod(Integer retentionPeriod) {
             return retentionPeriod(Output.of(retentionPeriod));
         }

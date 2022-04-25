@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcs {
     /**
-     * Required. Bucket of the Cloud Storage object.
+     * @return Required. Bucket of the Cloud Storage object.
      * 
      */
     private final String bucket;
     /**
-     * Generation number of the Cloud Storage object.
+     * @return Generation number of the Cloud Storage object.
      * 
      */
     private final @Nullable Integer generation;
     /**
-     * Required. Name of the Cloud Storage object.
+     * @return Required. Name of the Cloud Storage object.
      * 
      */
     private final String object;
@@ -39,23 +39,23 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcs {
     }
 
     /**
-     * Required. Bucket of the Cloud Storage object.
+     * @return Required. Bucket of the Cloud Storage object.
      * 
-    */
+     */
     public String bucket() {
         return this.bucket;
     }
     /**
-     * Generation number of the Cloud Storage object.
+     * @return Generation number of the Cloud Storage object.
      * 
-    */
+     */
     public Optional<Integer> generation() {
         return Optional.ofNullable(this.generation);
     }
     /**
-     * Required. Name of the Cloud Storage object.
+     * @return Required. Name of the Cloud Storage object.
      * 
-    */
+     */
     public String object() {
         return this.object;
     }

@@ -26,6 +26,10 @@ public final class GroupMembershipArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="group", required=true)
     private Output<String> group;
 
+    /**
+     * @return The name of the Group to create this membership in.
+     * 
+     */
     public Output<String> group() {
         return this.group;
     }
@@ -38,6 +42,11 @@ public final class GroupMembershipArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="memberKey")
     private @Nullable Output<GroupMembershipMemberKeyArgs> memberKey;
 
+    /**
+     * @return EntityKey of the member.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GroupMembershipMemberKeyArgs>> memberKey() {
         return Optional.ofNullable(this.memberKey);
     }
@@ -50,6 +59,11 @@ public final class GroupMembershipArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="preferredMemberKey")
     private @Nullable Output<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey;
 
+    /**
+     * @return EntityKey of the member.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GroupMembershipPreferredMemberKeyArgs>> preferredMemberKey() {
         return Optional.ofNullable(this.preferredMemberKey);
     }
@@ -63,6 +77,12 @@ public final class GroupMembershipArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="roles", required=true)
     private Output<List<GroupMembershipRoleArgs>> roles;
 
+    /**
+     * @return The MembershipRoles that apply to the Membership.
+     * Must not contain duplicate MembershipRoles with the same name.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<GroupMembershipRoleArgs>> roles() {
         return this.roles;
     }
@@ -94,42 +114,106 @@ public final class GroupMembershipArgs extends com.pulumi.resources.ResourceArgs
             $ = new GroupMembershipArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param group The name of the Group to create this membership in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(Output<String> group) {
             $.group = group;
             return this;
         }
 
+        /**
+         * @param group The name of the Group to create this membership in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(String group) {
             return group(Output.of(group));
         }
 
+        /**
+         * @param memberKey EntityKey of the member.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberKey(@Nullable Output<GroupMembershipMemberKeyArgs> memberKey) {
             $.memberKey = memberKey;
             return this;
         }
 
+        /**
+         * @param memberKey EntityKey of the member.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberKey(GroupMembershipMemberKeyArgs memberKey) {
             return memberKey(Output.of(memberKey));
         }
 
+        /**
+         * @param preferredMemberKey EntityKey of the member.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredMemberKey(@Nullable Output<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey) {
             $.preferredMemberKey = preferredMemberKey;
             return this;
         }
 
+        /**
+         * @param preferredMemberKey EntityKey of the member.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredMemberKey(GroupMembershipPreferredMemberKeyArgs preferredMemberKey) {
             return preferredMemberKey(Output.of(preferredMemberKey));
         }
 
+        /**
+         * @param roles The MembershipRoles that apply to the Membership.
+         * Must not contain duplicate MembershipRoles with the same name.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(Output<List<GroupMembershipRoleArgs>> roles) {
             $.roles = roles;
             return this;
         }
 
+        /**
+         * @param roles The MembershipRoles that apply to the Membership.
+         * Must not contain duplicate MembershipRoles with the same name.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(List<GroupMembershipRoleArgs> roles) {
             return roles(Output.of(roles));
         }
 
+        /**
+         * @param roles The MembershipRoles that apply to the Membership.
+         * Must not contain duplicate MembershipRoles with the same name.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(GroupMembershipRoleArgs... roles) {
             return roles(List.of(roles));
         }

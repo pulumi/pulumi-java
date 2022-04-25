@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StandardAppVersionDeploymentZip {
     /**
-     * files count
+     * @return files count
      * 
      */
     private final @Nullable Integer filesCount;
     /**
-     * Source URL
+     * @return Source URL
      * 
      */
     private final String sourceUrl;
@@ -32,16 +32,16 @@ public final class StandardAppVersionDeploymentZip {
     }
 
     /**
-     * files count
+     * @return files count
      * 
-    */
+     */
     public Optional<Integer> filesCount() {
         return Optional.ofNullable(this.filesCount);
     }
     /**
-     * Source URL
+     * @return Source URL
      * 
-    */
+     */
     public String sourceUrl() {
         return this.sourceUrl;
     }

@@ -24,6 +24,11 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="condition")
     private @Nullable Output<IAMMemberConditionArgs> condition;
 
+    /**
+     * @return An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<IAMMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -43,6 +48,11 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project", required=true)
     private Output<String> project;
 
+    /**
+     * @return The project id of the target project. This is not
+     * inferred from the provider.
+     * 
+     */
     public Output<String> project() {
         return this.project;
     }
@@ -56,6 +66,12 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.projects.IAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -87,11 +103,25 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IAMMemberArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<IAMMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(IAMMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
@@ -105,20 +135,50 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
             return member(Output.of(member));
         }
 
+        /**
+         * @param project The project id of the target project. This is not
+         * inferred from the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project id of the target project. This is not
+         * inferred from the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.projects.IAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.projects.IAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

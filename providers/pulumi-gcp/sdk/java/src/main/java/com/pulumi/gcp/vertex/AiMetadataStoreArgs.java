@@ -23,6 +23,10 @@ public final class AiMetadataStoreArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the MetadataStore.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,11 @@ public final class AiMetadataStoreArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="encryptionSpec")
     private @Nullable Output<AiMetadataStoreEncryptionSpecArgs> encryptionSpec;
 
+    /**
+     * @return Customer-managed encryption key spec for a MetadataStore. If set, this MetadataStore and all sub-resources of this MetadataStore will be secured by this key.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AiMetadataStoreEncryptionSpecArgs>> encryptionSpec() {
         return Optional.ofNullable(this.encryptionSpec);
     }
@@ -46,6 +55,10 @@ public final class AiMetadataStoreArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the MetadataStore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +71,11 @@ public final class AiMetadataStoreArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -69,6 +87,10 @@ public final class AiMetadataStoreArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The region of the Metadata Store. eg us-central1
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -101,47 +123,111 @@ public final class AiMetadataStoreArgs extends com.pulumi.resources.ResourceArgs
             $ = new AiMetadataStoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the MetadataStore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the MetadataStore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encryptionSpec Customer-managed encryption key spec for a MetadataStore. If set, this MetadataStore and all sub-resources of this MetadataStore will be secured by this key.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSpec(@Nullable Output<AiMetadataStoreEncryptionSpecArgs> encryptionSpec) {
             $.encryptionSpec = encryptionSpec;
             return this;
         }
 
+        /**
+         * @param encryptionSpec Customer-managed encryption key spec for a MetadataStore. If set, this MetadataStore and all sub-resources of this MetadataStore will be secured by this key.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSpec(AiMetadataStoreEncryptionSpecArgs encryptionSpec) {
             return encryptionSpec(Output.of(encryptionSpec));
         }
 
+        /**
+         * @param name The name of the MetadataStore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the MetadataStore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The region of the Metadata Store. eg us-central1
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The region of the Metadata Store. eg us-central1
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }

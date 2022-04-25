@@ -24,6 +24,11 @@ public final class RegionBackendServiceCircuitBreakersGetArgs extends com.pulumi
     @Import(name="connectTimeout")
     private @Nullable Output<RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs> connectTimeout;
 
+    /**
+     * @return The timeout for new network connections to hosts.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs>> connectTimeout() {
         return Optional.ofNullable(this.connectTimeout);
     }
@@ -36,6 +41,11 @@ public final class RegionBackendServiceCircuitBreakersGetArgs extends com.pulumi
     @Import(name="maxConnections")
     private @Nullable Output<Integer> maxConnections;
 
+    /**
+     * @return The maximum number of connections to the backend cluster.
+     * Defaults to 1024.
+     * 
+     */
     public Optional<Output<Integer>> maxConnections() {
         return Optional.ofNullable(this.maxConnections);
     }
@@ -48,6 +58,11 @@ public final class RegionBackendServiceCircuitBreakersGetArgs extends com.pulumi
     @Import(name="maxPendingRequests")
     private @Nullable Output<Integer> maxPendingRequests;
 
+    /**
+     * @return The maximum number of pending requests to the backend cluster.
+     * Defaults to 1024.
+     * 
+     */
     public Optional<Output<Integer>> maxPendingRequests() {
         return Optional.ofNullable(this.maxPendingRequests);
     }
@@ -60,6 +75,11 @@ public final class RegionBackendServiceCircuitBreakersGetArgs extends com.pulumi
     @Import(name="maxRequests")
     private @Nullable Output<Integer> maxRequests;
 
+    /**
+     * @return The maximum number of parallel requests to the backend cluster.
+     * Defaults to 1024.
+     * 
+     */
     public Optional<Output<Integer>> maxRequests() {
         return Optional.ofNullable(this.maxRequests);
     }
@@ -74,6 +94,13 @@ public final class RegionBackendServiceCircuitBreakersGetArgs extends com.pulumi
     @Import(name="maxRequestsPerConnection")
     private @Nullable Output<Integer> maxRequestsPerConnection;
 
+    /**
+     * @return Maximum requests for a single backend connection. This parameter
+     * is respected by both the HTTP/1.1 and HTTP/2 implementations. If
+     * not specified, there is no limit. Setting this parameter to 1
+     * will effectively disable keep alive.
+     * 
+     */
     public Optional<Output<Integer>> maxRequestsPerConnection() {
         return Optional.ofNullable(this.maxRequestsPerConnection);
     }
@@ -86,6 +113,11 @@ public final class RegionBackendServiceCircuitBreakersGetArgs extends com.pulumi
     @Import(name="maxRetries")
     private @Nullable Output<Integer> maxRetries;
 
+    /**
+     * @return The maximum number of parallel retries to the backend cluster.
+     * Defaults to 3.
+     * 
+     */
     public Optional<Output<Integer>> maxRetries() {
         return Optional.ofNullable(this.maxRetries);
     }
@@ -119,56 +151,144 @@ public final class RegionBackendServiceCircuitBreakersGetArgs extends com.pulumi
             $ = new RegionBackendServiceCircuitBreakersGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectTimeout The timeout for new network connections to hosts.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectTimeout(@Nullable Output<RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs> connectTimeout) {
             $.connectTimeout = connectTimeout;
             return this;
         }
 
+        /**
+         * @param connectTimeout The timeout for new network connections to hosts.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectTimeout(RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs connectTimeout) {
             return connectTimeout(Output.of(connectTimeout));
         }
 
+        /**
+         * @param maxConnections The maximum number of connections to the backend cluster.
+         * Defaults to 1024.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConnections(@Nullable Output<Integer> maxConnections) {
             $.maxConnections = maxConnections;
             return this;
         }
 
+        /**
+         * @param maxConnections The maximum number of connections to the backend cluster.
+         * Defaults to 1024.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConnections(Integer maxConnections) {
             return maxConnections(Output.of(maxConnections));
         }
 
+        /**
+         * @param maxPendingRequests The maximum number of pending requests to the backend cluster.
+         * Defaults to 1024.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPendingRequests(@Nullable Output<Integer> maxPendingRequests) {
             $.maxPendingRequests = maxPendingRequests;
             return this;
         }
 
+        /**
+         * @param maxPendingRequests The maximum number of pending requests to the backend cluster.
+         * Defaults to 1024.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPendingRequests(Integer maxPendingRequests) {
             return maxPendingRequests(Output.of(maxPendingRequests));
         }
 
+        /**
+         * @param maxRequests The maximum number of parallel requests to the backend cluster.
+         * Defaults to 1024.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRequests(@Nullable Output<Integer> maxRequests) {
             $.maxRequests = maxRequests;
             return this;
         }
 
+        /**
+         * @param maxRequests The maximum number of parallel requests to the backend cluster.
+         * Defaults to 1024.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRequests(Integer maxRequests) {
             return maxRequests(Output.of(maxRequests));
         }
 
+        /**
+         * @param maxRequestsPerConnection Maximum requests for a single backend connection. This parameter
+         * is respected by both the HTTP/1.1 and HTTP/2 implementations. If
+         * not specified, there is no limit. Setting this parameter to 1
+         * will effectively disable keep alive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRequestsPerConnection(@Nullable Output<Integer> maxRequestsPerConnection) {
             $.maxRequestsPerConnection = maxRequestsPerConnection;
             return this;
         }
 
+        /**
+         * @param maxRequestsPerConnection Maximum requests for a single backend connection. This parameter
+         * is respected by both the HTTP/1.1 and HTTP/2 implementations. If
+         * not specified, there is no limit. Setting this parameter to 1
+         * will effectively disable keep alive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRequestsPerConnection(Integer maxRequestsPerConnection) {
             return maxRequestsPerConnection(Output.of(maxRequestsPerConnection));
         }
 
+        /**
+         * @param maxRetries The maximum number of parallel retries to the backend cluster.
+         * Defaults to 3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
             $.maxRetries = maxRetries;
             return this;
         }
 
+        /**
+         * @param maxRetries The maximum number of parallel retries to the backend cluster.
+         * Defaults to 3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRetries(Integer maxRetries) {
             return maxRetries(Output.of(maxRetries));
         }

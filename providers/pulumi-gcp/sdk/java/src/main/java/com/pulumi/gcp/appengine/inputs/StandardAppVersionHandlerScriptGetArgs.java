@@ -20,6 +20,10 @@ public final class StandardAppVersionHandlerScriptGetArgs extends com.pulumi.res
     @Import(name="scriptPath", required=true)
     private Output<String> scriptPath;
 
+    /**
+     * @return Path to the script from the application root directory.
+     * 
+     */
     public Output<String> scriptPath() {
         return this.scriptPath;
     }
@@ -48,11 +52,23 @@ public final class StandardAppVersionHandlerScriptGetArgs extends com.pulumi.res
             $ = new StandardAppVersionHandlerScriptGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scriptPath Path to the script from the application root directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptPath(Output<String> scriptPath) {
             $.scriptPath = scriptPath;
             return this;
         }
 
+        /**
+         * @param scriptPath Path to the script from the application root directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptPath(String scriptPath) {
             return scriptPath(Output.of(scriptPath));
         }

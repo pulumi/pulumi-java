@@ -38,6 +38,23 @@ public final class AlertPolicyConditionConditionAbsentGetArgs extends com.pulumi
     @Import(name="aggregations")
     private @Nullable Output<List<AlertPolicyConditionConditionAbsentAggregationGetArgs>> aggregations;
 
+    /**
+     * @return Specifies the alignment of data points in
+     * individual time series as well as how to
+     * combine the retrieved time series together
+     * (such as when aggregating multiple streams
+     * on each resource to a single stream for each
+     * resource or when aggregating streams across
+     * all members of a group of resources).
+     * Multiple aggregations are applied in the
+     * order specified.This field is similar to the
+     * one in the MetricService.ListTimeSeries
+     * request. It is advisable to use the
+     * ListTimeSeries method when debugging this
+     * field.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<AlertPolicyConditionConditionAbsentAggregationGetArgs>>> aggregations() {
         return Optional.ofNullable(this.aggregations);
     }
@@ -63,6 +80,24 @@ public final class AlertPolicyConditionConditionAbsentGetArgs extends com.pulumi
     @Import(name="duration", required=true)
     private Output<String> duration;
 
+    /**
+     * @return The amount of time that a time series must
+     * violate the threshold to be considered
+     * failing. Currently, only values that are a
+     * multiple of a minute--e.g., 0, 60, 120, or
+     * 300 seconds--are supported. If an invalid
+     * value is given, an error will be returned.
+     * When choosing a duration, it is useful to
+     * keep in mind the frequency of the underlying
+     * time series data (which may also be affected
+     * by any alignments specified in the
+     * aggregations field); a good duration is long
+     * enough so that a single outlier does not
+     * generate spurious alerts, but short enough
+     * that unhealthy states are detected and
+     * alerted on quickly.
+     * 
+     */
     public Output<String> duration() {
         return this.duration;
     }
@@ -74,6 +109,10 @@ public final class AlertPolicyConditionConditionAbsentGetArgs extends com.pulumi
     @Import(name="filter")
     private @Nullable Output<String> filter;
 
+    /**
+     * @return A logs-based filter.
+     * 
+     */
     public Optional<Output<String>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -93,6 +132,18 @@ public final class AlertPolicyConditionConditionAbsentGetArgs extends com.pulumi
     @Import(name="trigger")
     private @Nullable Output<AlertPolicyConditionConditionAbsentTriggerGetArgs> trigger;
 
+    /**
+     * @return The number/percent of time series for which
+     * the comparison must hold in order for the
+     * condition to trigger. If unspecified, then
+     * the condition will trigger if the comparison
+     * is true for any of the time series that have
+     * been identified by filter and aggregations,
+     * or by the ratio, if denominator_filter and
+     * denominator_aggregations are specified.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AlertPolicyConditionConditionAbsentTriggerGetArgs>> trigger() {
         return Optional.ofNullable(this.trigger);
     }
@@ -124,42 +175,179 @@ public final class AlertPolicyConditionConditionAbsentGetArgs extends com.pulumi
             $ = new AlertPolicyConditionConditionAbsentGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aggregations Specifies the alignment of data points in
+         * individual time series as well as how to
+         * combine the retrieved time series together
+         * (such as when aggregating multiple streams
+         * on each resource to a single stream for each
+         * resource or when aggregating streams across
+         * all members of a group of resources).
+         * Multiple aggregations are applied in the
+         * order specified.This field is similar to the
+         * one in the MetricService.ListTimeSeries
+         * request. It is advisable to use the
+         * ListTimeSeries method when debugging this
+         * field.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregations(@Nullable Output<List<AlertPolicyConditionConditionAbsentAggregationGetArgs>> aggregations) {
             $.aggregations = aggregations;
             return this;
         }
 
+        /**
+         * @param aggregations Specifies the alignment of data points in
+         * individual time series as well as how to
+         * combine the retrieved time series together
+         * (such as when aggregating multiple streams
+         * on each resource to a single stream for each
+         * resource or when aggregating streams across
+         * all members of a group of resources).
+         * Multiple aggregations are applied in the
+         * order specified.This field is similar to the
+         * one in the MetricService.ListTimeSeries
+         * request. It is advisable to use the
+         * ListTimeSeries method when debugging this
+         * field.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregations(List<AlertPolicyConditionConditionAbsentAggregationGetArgs> aggregations) {
             return aggregations(Output.of(aggregations));
         }
 
+        /**
+         * @param aggregations Specifies the alignment of data points in
+         * individual time series as well as how to
+         * combine the retrieved time series together
+         * (such as when aggregating multiple streams
+         * on each resource to a single stream for each
+         * resource or when aggregating streams across
+         * all members of a group of resources).
+         * Multiple aggregations are applied in the
+         * order specified.This field is similar to the
+         * one in the MetricService.ListTimeSeries
+         * request. It is advisable to use the
+         * ListTimeSeries method when debugging this
+         * field.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregations(AlertPolicyConditionConditionAbsentAggregationGetArgs... aggregations) {
             return aggregations(List.of(aggregations));
         }
 
+        /**
+         * @param duration The amount of time that a time series must
+         * violate the threshold to be considered
+         * failing. Currently, only values that are a
+         * multiple of a minute--e.g., 0, 60, 120, or
+         * 300 seconds--are supported. If an invalid
+         * value is given, an error will be returned.
+         * When choosing a duration, it is useful to
+         * keep in mind the frequency of the underlying
+         * time series data (which may also be affected
+         * by any alignments specified in the
+         * aggregations field); a good duration is long
+         * enough so that a single outlier does not
+         * generate spurious alerts, but short enough
+         * that unhealthy states are detected and
+         * alerted on quickly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(Output<String> duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param duration The amount of time that a time series must
+         * violate the threshold to be considered
+         * failing. Currently, only values that are a
+         * multiple of a minute--e.g., 0, 60, 120, or
+         * 300 seconds--are supported. If an invalid
+         * value is given, an error will be returned.
+         * When choosing a duration, it is useful to
+         * keep in mind the frequency of the underlying
+         * time series data (which may also be affected
+         * by any alignments specified in the
+         * aggregations field); a good duration is long
+         * enough so that a single outlier does not
+         * generate spurious alerts, but short enough
+         * that unhealthy states are detected and
+         * alerted on quickly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             return duration(Output.of(duration));
         }
 
+        /**
+         * @param filter A logs-based filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<String> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter A logs-based filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param trigger The number/percent of time series for which
+         * the comparison must hold in order for the
+         * condition to trigger. If unspecified, then
+         * the condition will trigger if the comparison
+         * is true for any of the time series that have
+         * been identified by filter and aggregations,
+         * or by the ratio, if denominator_filter and
+         * denominator_aggregations are specified.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trigger(@Nullable Output<AlertPolicyConditionConditionAbsentTriggerGetArgs> trigger) {
             $.trigger = trigger;
             return this;
         }
 
+        /**
+         * @param trigger The number/percent of time series for which
+         * the comparison must hold in order for the
+         * condition to trigger. If unspecified, then
+         * the condition will trigger if the comparison
+         * is true for any of the time series that have
+         * been identified by filter and aggregations,
+         * or by the ratio, if denominator_filter and
+         * denominator_aggregations are specified.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trigger(AlertPolicyConditionConditionAbsentTriggerGetArgs trigger) {
             return trigger(Output.of(trigger));
         }

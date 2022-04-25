@@ -37,6 +37,24 @@ public final class RegionBackendServiceConnectionTrackingPolicyArgs extends com.
     @Import(name="connectionPersistenceOnUnhealthyBackends")
     private @Nullable Output<String> connectionPersistenceOnUnhealthyBackends;
 
+    /**
+     * @return Specifies connection persistence when backends are unhealthy.
+     * If set to `DEFAULT_FOR_PROTOCOL`, the existing connections persist on
+     * unhealthy backends only for connection-oriented protocols (TCP and SCTP)
+     * and only if the Tracking Mode is PER_CONNECTION (default tracking mode)
+     * or the Session Affinity is configured for 5-tuple. They do not persist
+     * for UDP.
+     * If set to `NEVER_PERSIST`, after a backend becomes unhealthy, the existing
+     * connections on the unhealthy backend are never persisted on the unhealthy
+     * backend. They are always diverted to newly selected healthy backends
+     * (unless all backends are unhealthy).
+     * If set to `ALWAYS_PERSIST`, existing connections always persist on
+     * unhealthy backends regardless of protocol and session affinity. It is
+     * generally not recommended to use this mode overriding the default.
+     * Default value is `DEFAULT_FOR_PROTOCOL`.
+     * Possible values are `DEFAULT_FOR_PROTOCOL`, `NEVER_PERSIST`, and `ALWAYS_PERSIST`.
+     * 
+     */
     public Optional<Output<String>> connectionPersistenceOnUnhealthyBackends() {
         return Optional.ofNullable(this.connectionPersistenceOnUnhealthyBackends);
     }
@@ -51,6 +69,13 @@ public final class RegionBackendServiceConnectionTrackingPolicyArgs extends com.
     @Import(name="idleTimeoutSec")
     private @Nullable Output<Integer> idleTimeoutSec;
 
+    /**
+     * @return Specifies how long to keep a Connection Tracking entry while there is
+     * no matching traffic (in seconds).
+     * For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours.
+     * For NLB the minimum(default) is 60 seconds and the maximum is 16 hours.
+     * 
+     */
     public Optional<Output<Integer>> idleTimeoutSec() {
         return Optional.ofNullable(this.idleTimeoutSec);
     }
@@ -68,6 +93,16 @@ public final class RegionBackendServiceConnectionTrackingPolicyArgs extends com.
     @Import(name="trackingMode")
     private @Nullable Output<String> trackingMode;
 
+    /**
+     * @return Specifies the key used for connection tracking. There are two options:
+     * `PER_CONNECTION`: The Connection Tracking is performed as per the
+     * Connection Key (default Hash Method) for the specific protocol.
+     * `PER_SESSION`: The Connection Tracking is performed as per the
+     * configured Session Affinity. It matches the configured Session Affinity.
+     * Default value is `PER_CONNECTION`.
+     * Possible values are `PER_CONNECTION` and `PER_SESSION`.
+     * 
+     */
     public Optional<Output<String>> trackingMode() {
         return Optional.ofNullable(this.trackingMode);
     }
@@ -98,29 +133,111 @@ public final class RegionBackendServiceConnectionTrackingPolicyArgs extends com.
             $ = new RegionBackendServiceConnectionTrackingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionPersistenceOnUnhealthyBackends Specifies connection persistence when backends are unhealthy.
+         * If set to `DEFAULT_FOR_PROTOCOL`, the existing connections persist on
+         * unhealthy backends only for connection-oriented protocols (TCP and SCTP)
+         * and only if the Tracking Mode is PER_CONNECTION (default tracking mode)
+         * or the Session Affinity is configured for 5-tuple. They do not persist
+         * for UDP.
+         * If set to `NEVER_PERSIST`, after a backend becomes unhealthy, the existing
+         * connections on the unhealthy backend are never persisted on the unhealthy
+         * backend. They are always diverted to newly selected healthy backends
+         * (unless all backends are unhealthy).
+         * If set to `ALWAYS_PERSIST`, existing connections always persist on
+         * unhealthy backends regardless of protocol and session affinity. It is
+         * generally not recommended to use this mode overriding the default.
+         * Default value is `DEFAULT_FOR_PROTOCOL`.
+         * Possible values are `DEFAULT_FOR_PROTOCOL`, `NEVER_PERSIST`, and `ALWAYS_PERSIST`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionPersistenceOnUnhealthyBackends(@Nullable Output<String> connectionPersistenceOnUnhealthyBackends) {
             $.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
             return this;
         }
 
+        /**
+         * @param connectionPersistenceOnUnhealthyBackends Specifies connection persistence when backends are unhealthy.
+         * If set to `DEFAULT_FOR_PROTOCOL`, the existing connections persist on
+         * unhealthy backends only for connection-oriented protocols (TCP and SCTP)
+         * and only if the Tracking Mode is PER_CONNECTION (default tracking mode)
+         * or the Session Affinity is configured for 5-tuple. They do not persist
+         * for UDP.
+         * If set to `NEVER_PERSIST`, after a backend becomes unhealthy, the existing
+         * connections on the unhealthy backend are never persisted on the unhealthy
+         * backend. They are always diverted to newly selected healthy backends
+         * (unless all backends are unhealthy).
+         * If set to `ALWAYS_PERSIST`, existing connections always persist on
+         * unhealthy backends regardless of protocol and session affinity. It is
+         * generally not recommended to use this mode overriding the default.
+         * Default value is `DEFAULT_FOR_PROTOCOL`.
+         * Possible values are `DEFAULT_FOR_PROTOCOL`, `NEVER_PERSIST`, and `ALWAYS_PERSIST`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionPersistenceOnUnhealthyBackends(String connectionPersistenceOnUnhealthyBackends) {
             return connectionPersistenceOnUnhealthyBackends(Output.of(connectionPersistenceOnUnhealthyBackends));
         }
 
+        /**
+         * @param idleTimeoutSec Specifies how long to keep a Connection Tracking entry while there is
+         * no matching traffic (in seconds).
+         * For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours.
+         * For NLB the minimum(default) is 60 seconds and the maximum is 16 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeoutSec(@Nullable Output<Integer> idleTimeoutSec) {
             $.idleTimeoutSec = idleTimeoutSec;
             return this;
         }
 
+        /**
+         * @param idleTimeoutSec Specifies how long to keep a Connection Tracking entry while there is
+         * no matching traffic (in seconds).
+         * For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours.
+         * For NLB the minimum(default) is 60 seconds and the maximum is 16 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeoutSec(Integer idleTimeoutSec) {
             return idleTimeoutSec(Output.of(idleTimeoutSec));
         }
 
+        /**
+         * @param trackingMode Specifies the key used for connection tracking. There are two options:
+         * `PER_CONNECTION`: The Connection Tracking is performed as per the
+         * Connection Key (default Hash Method) for the specific protocol.
+         * `PER_SESSION`: The Connection Tracking is performed as per the
+         * configured Session Affinity. It matches the configured Session Affinity.
+         * Default value is `PER_CONNECTION`.
+         * Possible values are `PER_CONNECTION` and `PER_SESSION`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackingMode(@Nullable Output<String> trackingMode) {
             $.trackingMode = trackingMode;
             return this;
         }
 
+        /**
+         * @param trackingMode Specifies the key used for connection tracking. There are two options:
+         * `PER_CONNECTION`: The Connection Tracking is performed as per the
+         * Connection Key (default Hash Method) for the specific protocol.
+         * `PER_SESSION`: The Connection Tracking is performed as per the
+         * configured Session Affinity. It matches the configured Session Affinity.
+         * Default value is `PER_CONNECTION`.
+         * Possible values are `PER_CONNECTION` and `PER_SESSION`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackingMode(String trackingMode) {
             return trackingMode(Output.of(trackingMode));
         }

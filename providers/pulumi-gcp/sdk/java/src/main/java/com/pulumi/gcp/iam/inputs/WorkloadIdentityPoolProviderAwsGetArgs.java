@@ -20,6 +20,10 @@ public final class WorkloadIdentityPoolProviderAwsGetArgs extends com.pulumi.res
     @Import(name="accountId", required=true)
     private Output<String> accountId;
 
+    /**
+     * @return The AWS account ID.
+     * 
+     */
     public Output<String> accountId() {
         return this.accountId;
     }
@@ -48,11 +52,23 @@ public final class WorkloadIdentityPoolProviderAwsGetArgs extends com.pulumi.res
             $ = new WorkloadIdentityPoolProviderAwsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The AWS account ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId The AWS account ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }

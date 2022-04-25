@@ -26,6 +26,11 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceG
     @Import(name="availability")
     private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityGetArgs> availability;
 
+    /**
+     * @return Availability based SLI, dervied from count of requests made to this service that return successfully.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityGetArgs>> availability() {
         return Optional.ofNullable(this.availability);
     }
@@ -38,6 +43,11 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceG
     @Import(name="latency")
     private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyGetArgs> latency;
 
+    /**
+     * @return Parameters for a latency threshold SLI.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyGetArgs>> latency() {
         return Optional.ofNullable(this.latency);
     }
@@ -54,6 +64,15 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceG
     @Import(name="locations")
     private @Nullable Output<List<String>> locations;
 
+    /**
+     * @return An optional set of locations to which this SLI is relevant.
+     * Telemetry from other locations will not be used to calculate
+     * performance for this SLI. If omitted, this SLI applies to all
+     * locations in which the Service has activity. For service types
+     * that don&#39;t support breaking down by location, setting this
+     * field will result in an error.
+     * 
+     */
     public Optional<Output<List<String>>> locations() {
         return Optional.ofNullable(this.locations);
     }
@@ -70,6 +89,15 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceG
     @Import(name="methods")
     private @Nullable Output<List<String>> methods;
 
+    /**
+     * @return An optional set of RPCs to which this SLI is relevant.
+     * Telemetry from other methods will not be used to calculate
+     * performance for this SLI. If omitted, this SLI applies to all
+     * the Service&#39;s methods. For service types that don&#39;t support
+     * breaking down by method, setting this field will result in an
+     * error.
+     * 
+     */
     public Optional<Output<List<String>>> methods() {
         return Optional.ofNullable(this.methods);
     }
@@ -86,6 +114,15 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceG
     @Import(name="versions")
     private @Nullable Output<List<String>> versions;
 
+    /**
+     * @return The set of API versions to which this SLI is relevant.
+     * Telemetry from other API versions will not be used to
+     * calculate performance for this SLI. If omitted,
+     * this SLI applies to all API versions. For service types
+     * that don&#39;t support breaking down by version, setting this
+     * field will result in an error.
+     * 
+     */
     public Optional<Output<List<String>>> versions() {
         return Optional.ofNullable(this.versions);
     }
@@ -118,59 +155,186 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceG
             $ = new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availability Availability based SLI, dervied from count of requests made to this service that return successfully.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availability(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityGetArgs> availability) {
             $.availability = availability;
             return this;
         }
 
+        /**
+         * @param availability Availability based SLI, dervied from count of requests made to this service that return successfully.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availability(SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityGetArgs availability) {
             return availability(Output.of(availability));
         }
 
+        /**
+         * @param latency Parameters for a latency threshold SLI.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latency(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyGetArgs> latency) {
             $.latency = latency;
             return this;
         }
 
+        /**
+         * @param latency Parameters for a latency threshold SLI.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latency(SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyGetArgs latency) {
             return latency(Output.of(latency));
         }
 
+        /**
+         * @param locations An optional set of locations to which this SLI is relevant.
+         * Telemetry from other locations will not be used to calculate
+         * performance for this SLI. If omitted, this SLI applies to all
+         * locations in which the Service has activity. For service types
+         * that don&#39;t support breaking down by location, setting this
+         * field will result in an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(@Nullable Output<List<String>> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations An optional set of locations to which this SLI is relevant.
+         * Telemetry from other locations will not be used to calculate
+         * performance for this SLI. If omitted, this SLI applies to all
+         * locations in which the Service has activity. For service types
+         * that don&#39;t support breaking down by location, setting this
+         * field will result in an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(List<String> locations) {
             return locations(Output.of(locations));
         }
 
+        /**
+         * @param locations An optional set of locations to which this SLI is relevant.
+         * Telemetry from other locations will not be used to calculate
+         * performance for this SLI. If omitted, this SLI applies to all
+         * locations in which the Service has activity. For service types
+         * that don&#39;t support breaking down by location, setting this
+         * field will result in an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param methods An optional set of RPCs to which this SLI is relevant.
+         * Telemetry from other methods will not be used to calculate
+         * performance for this SLI. If omitted, this SLI applies to all
+         * the Service&#39;s methods. For service types that don&#39;t support
+         * breaking down by method, setting this field will result in an
+         * error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(@Nullable Output<List<String>> methods) {
             $.methods = methods;
             return this;
         }
 
+        /**
+         * @param methods An optional set of RPCs to which this SLI is relevant.
+         * Telemetry from other methods will not be used to calculate
+         * performance for this SLI. If omitted, this SLI applies to all
+         * the Service&#39;s methods. For service types that don&#39;t support
+         * breaking down by method, setting this field will result in an
+         * error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(List<String> methods) {
             return methods(Output.of(methods));
         }
 
+        /**
+         * @param methods An optional set of RPCs to which this SLI is relevant.
+         * Telemetry from other methods will not be used to calculate
+         * performance for this SLI. If omitted, this SLI applies to all
+         * the Service&#39;s methods. For service types that don&#39;t support
+         * breaking down by method, setting this field will result in an
+         * error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(String... methods) {
             return methods(List.of(methods));
         }
 
+        /**
+         * @param versions The set of API versions to which this SLI is relevant.
+         * Telemetry from other API versions will not be used to
+         * calculate performance for this SLI. If omitted,
+         * this SLI applies to all API versions. For service types
+         * that don&#39;t support breaking down by version, setting this
+         * field will result in an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versions(@Nullable Output<List<String>> versions) {
             $.versions = versions;
             return this;
         }
 
+        /**
+         * @param versions The set of API versions to which this SLI is relevant.
+         * Telemetry from other API versions will not be used to
+         * calculate performance for this SLI. If omitted,
+         * this SLI applies to all API versions. For service types
+         * that don&#39;t support breaking down by version, setting this
+         * field will result in an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versions(List<String> versions) {
             return versions(Output.of(versions));
         }
 
+        /**
+         * @param versions The set of API versions to which this SLI is relevant.
+         * Telemetry from other API versions will not be used to
+         * calculate performance for this SLI. If omitted,
+         * this SLI applies to all API versions. For service types
+         * that don&#39;t support breaking down by version, setting this
+         * field will result in an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versions(String... versions) {
             return versions(List.of(versions));
         }

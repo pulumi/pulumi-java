@@ -25,6 +25,13 @@ public final class InstanceNetworkInterfaceAliasIpRangeGetArgs extends com.pulum
     @Import(name="ipCidrRange", required=true)
     private Output<String> ipCidrRange;
 
+    /**
+     * @return The IP CIDR range represented by this alias IP range. This IP CIDR range
+     * must belong to the specified subnetwork and cannot contain IP addresses reserved by
+     * system or used by other network interfaces. This range may be a single IP address
+     * (e.g. 10.2.3.4), a netmask (e.g. /24) or a CIDR format string (e.g. 10.1.2.0/24).
+     * 
+     */
     public Output<String> ipCidrRange() {
         return this.ipCidrRange;
     }
@@ -38,6 +45,12 @@ public final class InstanceNetworkInterfaceAliasIpRangeGetArgs extends com.pulum
     @Import(name="subnetworkRangeName")
     private @Nullable Output<String> subnetworkRangeName;
 
+    /**
+     * @return The subnetwork secondary range name specifying
+     * the secondary range from which to allocate the IP CIDR range for this alias IP
+     * range. If left unspecified, the primary range of the subnetwork will be used.
+     * 
+     */
     public Optional<Output<String>> subnetworkRangeName() {
         return Optional.ofNullable(this.subnetworkRangeName);
     }
@@ -67,20 +80,54 @@ public final class InstanceNetworkInterfaceAliasIpRangeGetArgs extends com.pulum
             $ = new InstanceNetworkInterfaceAliasIpRangeGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipCidrRange The IP CIDR range represented by this alias IP range. This IP CIDR range
+         * must belong to the specified subnetwork and cannot contain IP addresses reserved by
+         * system or used by other network interfaces. This range may be a single IP address
+         * (e.g. 10.2.3.4), a netmask (e.g. /24) or a CIDR format string (e.g. 10.1.2.0/24).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipCidrRange(Output<String> ipCidrRange) {
             $.ipCidrRange = ipCidrRange;
             return this;
         }
 
+        /**
+         * @param ipCidrRange The IP CIDR range represented by this alias IP range. This IP CIDR range
+         * must belong to the specified subnetwork and cannot contain IP addresses reserved by
+         * system or used by other network interfaces. This range may be a single IP address
+         * (e.g. 10.2.3.4), a netmask (e.g. /24) or a CIDR format string (e.g. 10.1.2.0/24).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipCidrRange(String ipCidrRange) {
             return ipCidrRange(Output.of(ipCidrRange));
         }
 
+        /**
+         * @param subnetworkRangeName The subnetwork secondary range name specifying
+         * the secondary range from which to allocate the IP CIDR range for this alias IP
+         * range. If left unspecified, the primary range of the subnetwork will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworkRangeName(@Nullable Output<String> subnetworkRangeName) {
             $.subnetworkRangeName = subnetworkRangeName;
             return this;
         }
 
+        /**
+         * @param subnetworkRangeName The subnetwork secondary range name specifying
+         * the secondary range from which to allocate the IP CIDR range for this alias IP
+         * range. If left unspecified, the primary range of the subnetwork will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworkRangeName(String subnetworkRangeName) {
             return subnetworkRangeName(Output.of(subnetworkRangeName));
         }

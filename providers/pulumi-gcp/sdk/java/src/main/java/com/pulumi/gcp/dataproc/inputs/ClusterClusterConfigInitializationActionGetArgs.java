@@ -24,6 +24,11 @@ public final class ClusterClusterConfigInitializationActionGetArgs extends com.p
     @Import(name="script", required=true)
     private Output<String> script;
 
+    /**
+     * @return The script to be executed during initialization of the cluster.
+     * The script must be a GCS file with a gs:// prefix.
+     * 
+     */
     public Output<String> script() {
         return this.script;
     }
@@ -37,6 +42,12 @@ public final class ClusterClusterConfigInitializationActionGetArgs extends com.p
     @Import(name="timeoutSec")
     private @Nullable Output<Integer> timeoutSec;
 
+    /**
+     * @return The maximum duration (in seconds) which `script` is
+     * allowed to take to execute its action. GCP will default to a predetermined
+     * computed value if not set (currently 300).
+     * 
+     */
     public Optional<Output<Integer>> timeoutSec() {
         return Optional.ofNullable(this.timeoutSec);
     }
@@ -66,20 +77,50 @@ public final class ClusterClusterConfigInitializationActionGetArgs extends com.p
             $ = new ClusterClusterConfigInitializationActionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param script The script to be executed during initialization of the cluster.
+         * The script must be a GCS file with a gs:// prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(Output<String> script) {
             $.script = script;
             return this;
         }
 
+        /**
+         * @param script The script to be executed during initialization of the cluster.
+         * The script must be a GCS file with a gs:// prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(String script) {
             return script(Output.of(script));
         }
 
+        /**
+         * @param timeoutSec The maximum duration (in seconds) which `script` is
+         * allowed to take to execute its action. GCP will default to a predetermined
+         * computed value if not set (currently 300).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
             $.timeoutSec = timeoutSec;
             return this;
         }
 
+        /**
+         * @param timeoutSec The maximum duration (in seconds) which `script` is
+         * allowed to take to execute its action. GCP will default to a predetermined
+         * computed value if not set (currently 300).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSec(Integer timeoutSec) {
             return timeoutSec(Output.of(timeoutSec));
         }

@@ -31,6 +31,10 @@ public final class IAMBindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="members", required=true)
     private Output<List<String>> members;
 
+    /**
+     * @return A list of users that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+     * 
+     */
     public Output<List<String>> members() {
         return this.members;
     }
@@ -42,6 +46,10 @@ public final class IAMBindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="orgId", required=true)
     private Output<String> orgId;
 
+    /**
+     * @return The numeric ID of the organization in which you want to create a custom role.
+     * 
+     */
     public Output<String> orgId() {
         return this.orgId;
     }
@@ -55,6 +63,12 @@ public final class IAMBindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.organizations.IAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -95,33 +109,79 @@ public final class IAMBindingArgs extends com.pulumi.resources.ResourceArgs {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param members A list of users that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(Output<List<String>> members) {
             $.members = members;
             return this;
         }
 
+        /**
+         * @param members A list of users that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(List<String> members) {
             return members(Output.of(members));
         }
 
+        /**
+         * @param members A list of users that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(String... members) {
             return members(List.of(members));
         }
 
+        /**
+         * @param orgId The numeric ID of the organization in which you want to create a custom role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgId(Output<String> orgId) {
             $.orgId = orgId;
             return this;
         }
 
+        /**
+         * @param orgId The numeric ID of the organization in which you want to create a custom role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgId(String orgId) {
             return orgId(Output.of(orgId));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.organizations.IAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.organizations.IAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

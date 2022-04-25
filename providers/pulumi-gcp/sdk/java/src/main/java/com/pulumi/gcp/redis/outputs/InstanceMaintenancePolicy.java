@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceMaintenancePolicy {
     /**
-     * - 
+     * @return -
      * Output only. The time when the policy was created.
      * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
      * resolution and up to nine fractional digits.
@@ -22,14 +22,14 @@ public final class InstanceMaintenancePolicy {
      */
     private final @Nullable String createTime;
     /**
-     * Optional. Description of what this policy is for.
+     * @return Optional. Description of what this policy is for.
      * Create/Update methods return INVALID_ARGUMENT if the
      * length is greater than 512.
      * 
      */
     private final @Nullable String description;
     /**
-     * - 
+     * @return -
      * Output only. The time when the policy was last updated.
      * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
      * resolution and up to nine fractional digits.
@@ -37,7 +37,7 @@ public final class InstanceMaintenancePolicy {
      */
     private final @Nullable String updateTime;
     /**
-     * Optional. Maintenance window that is applied to resources covered by this policy.
+     * @return Optional. Maintenance window that is applied to resources covered by this policy.
      * Minimum 1. For the current version, the maximum number
      * of weekly_window is expected to be one.
      * Structure is documented below.
@@ -58,41 +58,41 @@ public final class InstanceMaintenancePolicy {
     }
 
     /**
-     * - 
+     * @return -
      * Output only. The time when the policy was created.
      * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
-    */
+     */
     public Optional<String> createTime() {
         return Optional.ofNullable(this.createTime);
     }
     /**
-     * Optional. Description of what this policy is for.
+     * @return Optional. Description of what this policy is for.
      * Create/Update methods return INVALID_ARGUMENT if the
      * length is greater than 512.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * - 
+     * @return -
      * Output only. The time when the policy was last updated.
      * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
-    */
+     */
     public Optional<String> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
     /**
-     * Optional. Maintenance window that is applied to resources covered by this policy.
+     * @return Optional. Maintenance window that is applied to resources covered by this policy.
      * Minimum 1. For the current version, the maximum number
      * of weekly_window is expected to be one.
      * Structure is documented below.
      * 
-    */
+     */
     public List<InstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows() {
         return this.weeklyMaintenanceWindows == null ? List.of() : this.weeklyMaintenanceWindows;
     }

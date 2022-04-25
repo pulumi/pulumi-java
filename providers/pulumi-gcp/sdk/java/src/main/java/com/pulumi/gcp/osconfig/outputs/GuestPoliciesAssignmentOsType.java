@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GuestPoliciesAssignmentOsType {
     /**
-     * Targets VM instances with OS Inventory enabled and having the following OS architecture.
+     * @return Targets VM instances with OS Inventory enabled and having the following OS architecture.
      * 
      */
     private final @Nullable String osArchitecture;
     /**
-     * Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
+     * @return Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
      * 
      */
     private final @Nullable String osShortName;
     /**
-     * Targets VM instances with OS Inventory enabled and having the following following OS version.
+     * @return Targets VM instances with OS Inventory enabled and having the following following OS version.
      * 
      */
     private final @Nullable String osVersion;
@@ -38,23 +38,23 @@ public final class GuestPoliciesAssignmentOsType {
     }
 
     /**
-     * Targets VM instances with OS Inventory enabled and having the following OS architecture.
+     * @return Targets VM instances with OS Inventory enabled and having the following OS architecture.
      * 
-    */
+     */
     public Optional<String> osArchitecture() {
         return Optional.ofNullable(this.osArchitecture);
     }
     /**
-     * Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
+     * @return Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
      * 
-    */
+     */
     public Optional<String> osShortName() {
         return Optional.ofNullable(this.osShortName);
     }
     /**
-     * Targets VM instances with OS Inventory enabled and having the following following OS version.
+     * @return Targets VM instances with OS Inventory enabled and having the following following OS version.
      * 
-    */
+     */
     public Optional<String> osVersion() {
         return Optional.ofNullable(this.osVersion);
     }

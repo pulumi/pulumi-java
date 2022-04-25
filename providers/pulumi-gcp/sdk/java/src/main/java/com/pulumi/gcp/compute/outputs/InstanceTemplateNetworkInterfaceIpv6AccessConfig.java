@@ -14,7 +14,7 @@ public final class InstanceTemplateNetworkInterfaceIpv6AccessConfig {
     private final @Nullable String externalIpv6;
     private final @Nullable String externalIpv6PrefixLength;
     /**
-     * The service-level to be provided for IPv6 traffic when the
+     * @return The service-level to be provided for IPv6 traffic when the
      * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
      * 
      */
@@ -40,10 +40,10 @@ public final class InstanceTemplateNetworkInterfaceIpv6AccessConfig {
         return Optional.ofNullable(this.externalIpv6PrefixLength);
     }
     /**
-     * The service-level to be provided for IPv6 traffic when the
+     * @return The service-level to be provided for IPv6 traffic when the
      * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
      * 
-    */
+     */
     public String networkTier() {
         return this.networkTier;
     }

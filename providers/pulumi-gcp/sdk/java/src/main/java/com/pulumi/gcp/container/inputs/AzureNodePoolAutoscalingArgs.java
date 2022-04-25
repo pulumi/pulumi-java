@@ -20,6 +20,10 @@ public final class AzureNodePoolAutoscalingArgs extends com.pulumi.resources.Res
     @Import(name="maxNodeCount", required=true)
     private Output<Integer> maxNodeCount;
 
+    /**
+     * @return Required. Maximum number of nodes in the node pool. Must be &gt;= min_node_count.
+     * 
+     */
     public Output<Integer> maxNodeCount() {
         return this.maxNodeCount;
     }
@@ -31,6 +35,10 @@ public final class AzureNodePoolAutoscalingArgs extends com.pulumi.resources.Res
     @Import(name="minNodeCount", required=true)
     private Output<Integer> minNodeCount;
 
+    /**
+     * @return Required. Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.
+     * 
+     */
     public Output<Integer> minNodeCount() {
         return this.minNodeCount;
     }
@@ -60,20 +68,44 @@ public final class AzureNodePoolAutoscalingArgs extends com.pulumi.resources.Res
             $ = new AzureNodePoolAutoscalingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxNodeCount Required. Maximum number of nodes in the node pool. Must be &gt;= min_node_count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNodeCount(Output<Integer> maxNodeCount) {
             $.maxNodeCount = maxNodeCount;
             return this;
         }
 
+        /**
+         * @param maxNodeCount Required. Maximum number of nodes in the node pool. Must be &gt;= min_node_count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNodeCount(Integer maxNodeCount) {
             return maxNodeCount(Output.of(maxNodeCount));
         }
 
+        /**
+         * @param minNodeCount Required. Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodeCount(Output<Integer> minNodeCount) {
             $.minNodeCount = minNodeCount;
             return this;
         }
 
+        /**
+         * @param minNodeCount Required. Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodeCount(Integer minNodeCount) {
             return minNodeCount(Output.of(minNodeCount));
         }

@@ -22,6 +22,10 @@ public final class ClusterDnsConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="clusterDns")
     private @Nullable Output<String> clusterDns;
 
+    /**
+     * @return Which in-cluster DNS provider should be used. `PROVIDER_UNSPECIFIED` (default) or `PLATFORM_DEFAULT` or `CLOUD_DNS`.
+     * 
+     */
     public Optional<Output<String>> clusterDns() {
         return Optional.ofNullable(this.clusterDns);
     }
@@ -33,6 +37,10 @@ public final class ClusterDnsConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="clusterDnsDomain")
     private @Nullable Output<String> clusterDnsDomain;
 
+    /**
+     * @return The suffix used for all cluster service records.
+     * 
+     */
     public Optional<Output<String>> clusterDnsDomain() {
         return Optional.ofNullable(this.clusterDnsDomain);
     }
@@ -44,6 +52,10 @@ public final class ClusterDnsConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="clusterDnsScope")
     private @Nullable Output<String> clusterDnsScope;
 
+    /**
+     * @return The scope of access to cluster DNS records. `DNS_SCOPE_UNSPECIFIED` (default) or `CLUSTER_SCOPE` or `VPC_SCOPE`.
+     * 
+     */
     public Optional<Output<String>> clusterDnsScope() {
         return Optional.ofNullable(this.clusterDnsScope);
     }
@@ -74,29 +86,65 @@ public final class ClusterDnsConfigArgs extends com.pulumi.resources.ResourceArg
             $ = new ClusterDnsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterDns Which in-cluster DNS provider should be used. `PROVIDER_UNSPECIFIED` (default) or `PLATFORM_DEFAULT` or `CLOUD_DNS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterDns(@Nullable Output<String> clusterDns) {
             $.clusterDns = clusterDns;
             return this;
         }
 
+        /**
+         * @param clusterDns Which in-cluster DNS provider should be used. `PROVIDER_UNSPECIFIED` (default) or `PLATFORM_DEFAULT` or `CLOUD_DNS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterDns(String clusterDns) {
             return clusterDns(Output.of(clusterDns));
         }
 
+        /**
+         * @param clusterDnsDomain The suffix used for all cluster service records.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterDnsDomain(@Nullable Output<String> clusterDnsDomain) {
             $.clusterDnsDomain = clusterDnsDomain;
             return this;
         }
 
+        /**
+         * @param clusterDnsDomain The suffix used for all cluster service records.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterDnsDomain(String clusterDnsDomain) {
             return clusterDnsDomain(Output.of(clusterDnsDomain));
         }
 
+        /**
+         * @param clusterDnsScope The scope of access to cluster DNS records. `DNS_SCOPE_UNSPECIFIED` (default) or `CLUSTER_SCOPE` or `VPC_SCOPE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterDnsScope(@Nullable Output<String> clusterDnsScope) {
             $.clusterDnsScope = clusterDnsScope;
             return this;
         }
 
+        /**
+         * @param clusterDnsScope The scope of access to cluster DNS records. `DNS_SCOPE_UNSPECIFIED` (default) or `CLUSTER_SCOPE` or `VPC_SCOPE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterDnsScope(String clusterDnsScope) {
             return clusterDnsScope(Output.of(clusterDnsScope));
         }

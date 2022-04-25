@@ -25,6 +25,10 @@ public final class GCPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="columnFamily")
     private @Nullable Output<String> columnFamily;
 
+    /**
+     * @return The name of the column family.
+     * 
+     */
     public Optional<Output<String>> columnFamily() {
         return Optional.ofNullable(this.columnFamily);
     }
@@ -36,6 +40,10 @@ public final class GCPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceName")
     private @Nullable Output<String> instanceName;
 
+    /**
+     * @return The name of the Bigtable instance.
+     * 
+     */
     public Optional<Output<String>> instanceName() {
         return Optional.ofNullable(this.instanceName);
     }
@@ -47,6 +55,10 @@ public final class GCPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxAge")
     private @Nullable Output<GCPolicyMaxAgeGetArgs> maxAge;
 
+    /**
+     * @return GC policy that applies to all cells older than the given age.
+     * 
+     */
     public Optional<Output<GCPolicyMaxAgeGetArgs>> maxAge() {
         return Optional.ofNullable(this.maxAge);
     }
@@ -58,6 +70,10 @@ public final class GCPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxVersions")
     private @Nullable Output<List<GCPolicyMaxVersionGetArgs>> maxVersions;
 
+    /**
+     * @return GC policy that applies to all versions of a cell except for the most recent.
+     * 
+     */
     public Optional<Output<List<GCPolicyMaxVersionGetArgs>>> maxVersions() {
         return Optional.ofNullable(this.maxVersions);
     }
@@ -69,6 +85,10 @@ public final class GCPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="mode")
     private @Nullable Output<String> mode;
 
+    /**
+     * @return If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
+     * 
+     */
     public Optional<Output<String>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -80,6 +100,10 @@ public final class GCPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -91,6 +115,10 @@ public final class GCPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="table")
     private @Nullable Output<String> table;
 
+    /**
+     * @return The name of the table.
+     * 
+     */
     public Optional<Output<String>> table() {
         return Optional.ofNullable(this.table);
     }
@@ -125,69 +153,159 @@ public final class GCPolicyState extends com.pulumi.resources.ResourceArgs {
             $ = new GCPolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columnFamily The name of the column family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnFamily(@Nullable Output<String> columnFamily) {
             $.columnFamily = columnFamily;
             return this;
         }
 
+        /**
+         * @param columnFamily The name of the column family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnFamily(String columnFamily) {
             return columnFamily(Output.of(columnFamily));
         }
 
+        /**
+         * @param instanceName The name of the Bigtable instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(@Nullable Output<String> instanceName) {
             $.instanceName = instanceName;
             return this;
         }
 
+        /**
+         * @param instanceName The name of the Bigtable instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(String instanceName) {
             return instanceName(Output.of(instanceName));
         }
 
+        /**
+         * @param maxAge GC policy that applies to all cells older than the given age.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAge(@Nullable Output<GCPolicyMaxAgeGetArgs> maxAge) {
             $.maxAge = maxAge;
             return this;
         }
 
+        /**
+         * @param maxAge GC policy that applies to all cells older than the given age.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAge(GCPolicyMaxAgeGetArgs maxAge) {
             return maxAge(Output.of(maxAge));
         }
 
+        /**
+         * @param maxVersions GC policy that applies to all versions of a cell except for the most recent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxVersions(@Nullable Output<List<GCPolicyMaxVersionGetArgs>> maxVersions) {
             $.maxVersions = maxVersions;
             return this;
         }
 
+        /**
+         * @param maxVersions GC policy that applies to all versions of a cell except for the most recent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxVersions(List<GCPolicyMaxVersionGetArgs> maxVersions) {
             return maxVersions(Output.of(maxVersions));
         }
 
+        /**
+         * @param maxVersions GC policy that applies to all versions of a cell except for the most recent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxVersions(GCPolicyMaxVersionGetArgs... maxVersions) {
             return maxVersions(List.of(maxVersions));
         }
 
+        /**
+         * @param mode If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<String> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param table The name of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(@Nullable Output<String> table) {
             $.table = table;
             return this;
         }
 
+        /**
+         * @param table The name of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(String table) {
             return table(Output.of(table));
         }

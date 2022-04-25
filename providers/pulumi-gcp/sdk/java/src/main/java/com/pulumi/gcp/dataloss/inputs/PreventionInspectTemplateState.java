@@ -23,6 +23,10 @@ public final class PreventionInspectTemplateState extends com.pulumi.resources.R
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the inspect template.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class PreventionInspectTemplateState extends com.pulumi.resources.R
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return User set display name of the inspect template.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -46,6 +54,11 @@ public final class PreventionInspectTemplateState extends com.pulumi.resources.R
     @Import(name="inspectConfig")
     private @Nullable Output<PreventionInspectTemplateInspectConfigGetArgs> inspectConfig;
 
+    /**
+     * @return The core content of the template.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionInspectTemplateInspectConfigGetArgs>> inspectConfig() {
         return Optional.ofNullable(this.inspectConfig);
     }
@@ -58,6 +71,11 @@ public final class PreventionInspectTemplateState extends com.pulumi.resources.R
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+     * or `projects/project-id/storedInfoTypes/432452342`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -73,6 +91,14 @@ public final class PreventionInspectTemplateState extends com.pulumi.resources.R
     @Import(name="parent")
     private @Nullable Output<String> parent;
 
+    /**
+     * @return The parent of the inspect template in any of the following formats:
+     * * `projects/{{project}}`
+     * * `projects/{{project}}/locations/{{location}}`
+     * * `organizations/{{organization_id}}`
+     * * `organizations/{{organization_id}}/locations/{{location}}`
+     * 
+     */
     public Optional<Output<String>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -105,47 +131,119 @@ public final class PreventionInspectTemplateState extends com.pulumi.resources.R
             $ = new PreventionInspectTemplateState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description of the inspect template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the inspect template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName User set display name of the inspect template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User set display name of the inspect template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param inspectConfig The core content of the template.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectConfig(@Nullable Output<PreventionInspectTemplateInspectConfigGetArgs> inspectConfig) {
             $.inspectConfig = inspectConfig;
             return this;
         }
 
+        /**
+         * @param inspectConfig The core content of the template.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectConfig(PreventionInspectTemplateInspectConfigGetArgs inspectConfig) {
             return inspectConfig(Output.of(inspectConfig));
         }
 
+        /**
+         * @param name Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+         * or `projects/project-id/storedInfoTypes/432452342`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+         * or `projects/project-id/storedInfoTypes/432452342`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parent The parent of the inspect template in any of the following formats:
+         * * `projects/{{project}}`
+         * * `projects/{{project}}/locations/{{location}}`
+         * * `organizations/{{organization_id}}`
+         * * `organizations/{{organization_id}}/locations/{{location}}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The parent of the inspect template in any of the following formats:
+         * * `projects/{{project}}`
+         * * `projects/{{project}}/locations/{{location}}`
+         * * `organizations/{{organization_id}}`
+         * * `organizations/{{organization_id}}/locations/{{location}}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }

@@ -30,6 +30,10 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
     @Import(name="databaseEncryption")
     private @Nullable Output<AzureClusterControlPlaneDatabaseEncryptionArgs> databaseEncryption;
 
+    /**
+     * @return Optional. Configuration related to application-layer secrets encryption.
+     * 
+     */
     public Optional<Output<AzureClusterControlPlaneDatabaseEncryptionArgs>> databaseEncryption() {
         return Optional.ofNullable(this.databaseEncryption);
     }
@@ -41,6 +45,10 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
     @Import(name="mainVolume")
     private @Nullable Output<AzureClusterControlPlaneMainVolumeArgs> mainVolume;
 
+    /**
+     * @return Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster&#39;s etcd state. When unspecified, it defaults to a 8-GiB Azure Disk.
+     * 
+     */
     public Optional<Output<AzureClusterControlPlaneMainVolumeArgs>> mainVolume() {
         return Optional.ofNullable(this.mainVolume);
     }
@@ -52,6 +60,10 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
     @Import(name="proxyConfig")
     private @Nullable Output<AzureClusterControlPlaneProxyConfigArgs> proxyConfig;
 
+    /**
+     * @return Proxy configuration for outbound HTTP(S) traffic.
+     * 
+     */
     public Optional<Output<AzureClusterControlPlaneProxyConfigArgs>> proxyConfig() {
         return Optional.ofNullable(this.proxyConfig);
     }
@@ -63,6 +75,10 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
     @Import(name="replicaPlacements")
     private @Nullable Output<List<AzureClusterControlPlaneReplicaPlacementArgs>> replicaPlacements;
 
+    /**
+     * @return Configuration for where to place the control plane replicas. Up to three replica placement instances can be specified. If replica_placements is set, the replica placement instances will be applied to the three control plane replicas as evenly as possible.
+     * 
+     */
     public Optional<Output<List<AzureClusterControlPlaneReplicaPlacementArgs>>> replicaPlacements() {
         return Optional.ofNullable(this.replicaPlacements);
     }
@@ -74,6 +90,10 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
     @Import(name="rootVolume")
     private @Nullable Output<AzureClusterControlPlaneRootVolumeArgs> rootVolume;
 
+    /**
+     * @return Optional. Configuration related to the root volume provisioned for each control plane replica. When unspecified, it defaults to 32-GiB Azure Disk.
+     * 
+     */
     public Optional<Output<AzureClusterControlPlaneRootVolumeArgs>> rootVolume() {
         return Optional.ofNullable(this.rootVolume);
     }
@@ -85,6 +105,10 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
     @Import(name="sshConfig", required=true)
     private Output<AzureClusterControlPlaneSshConfigArgs> sshConfig;
 
+    /**
+     * @return Required. SSH configuration for how to access the underlying control plane machines.
+     * 
+     */
     public Output<AzureClusterControlPlaneSshConfigArgs> sshConfig() {
         return this.sshConfig;
     }
@@ -96,6 +120,10 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
     @Import(name="subnetId", required=true)
     private Output<String> subnetId;
 
+    /**
+     * @return For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
+     * 
+     */
     public Output<String> subnetId() {
         return this.subnetId;
     }
@@ -107,6 +135,10 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Optional. A set of tags to apply to all underlying control plane Azure resources.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -118,6 +150,10 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
     @Import(name="version", required=true)
     private Output<String> version;
 
+    /**
+     * @return Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
+     * 
+     */
     public Output<String> version() {
         return this.version;
     }
@@ -129,6 +165,10 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
     @Import(name="vmSize")
     private @Nullable Output<String> vmSize;
 
+    /**
+     * @return Optional. The Azure VM size name. Example: `Standard_DS2_v2`. For available VM sizes, see https://docs.microsoft.com/en-us/azure/virtual-machines/vm-naming-conventions. When unspecified, it defaults to `Standard_DS2_v2`.
+     * 
+     */
     public Optional<Output<String>> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -166,96 +206,222 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
             $ = new AzureClusterControlPlaneArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseEncryption Optional. Configuration related to application-layer secrets encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseEncryption(@Nullable Output<AzureClusterControlPlaneDatabaseEncryptionArgs> databaseEncryption) {
             $.databaseEncryption = databaseEncryption;
             return this;
         }
 
+        /**
+         * @param databaseEncryption Optional. Configuration related to application-layer secrets encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseEncryption(AzureClusterControlPlaneDatabaseEncryptionArgs databaseEncryption) {
             return databaseEncryption(Output.of(databaseEncryption));
         }
 
+        /**
+         * @param mainVolume Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster&#39;s etcd state. When unspecified, it defaults to a 8-GiB Azure Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainVolume(@Nullable Output<AzureClusterControlPlaneMainVolumeArgs> mainVolume) {
             $.mainVolume = mainVolume;
             return this;
         }
 
+        /**
+         * @param mainVolume Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster&#39;s etcd state. When unspecified, it defaults to a 8-GiB Azure Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainVolume(AzureClusterControlPlaneMainVolumeArgs mainVolume) {
             return mainVolume(Output.of(mainVolume));
         }
 
+        /**
+         * @param proxyConfig Proxy configuration for outbound HTTP(S) traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyConfig(@Nullable Output<AzureClusterControlPlaneProxyConfigArgs> proxyConfig) {
             $.proxyConfig = proxyConfig;
             return this;
         }
 
+        /**
+         * @param proxyConfig Proxy configuration for outbound HTTP(S) traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyConfig(AzureClusterControlPlaneProxyConfigArgs proxyConfig) {
             return proxyConfig(Output.of(proxyConfig));
         }
 
+        /**
+         * @param replicaPlacements Configuration for where to place the control plane replicas. Up to three replica placement instances can be specified. If replica_placements is set, the replica placement instances will be applied to the three control plane replicas as evenly as possible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaPlacements(@Nullable Output<List<AzureClusterControlPlaneReplicaPlacementArgs>> replicaPlacements) {
             $.replicaPlacements = replicaPlacements;
             return this;
         }
 
+        /**
+         * @param replicaPlacements Configuration for where to place the control plane replicas. Up to three replica placement instances can be specified. If replica_placements is set, the replica placement instances will be applied to the three control plane replicas as evenly as possible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaPlacements(List<AzureClusterControlPlaneReplicaPlacementArgs> replicaPlacements) {
             return replicaPlacements(Output.of(replicaPlacements));
         }
 
+        /**
+         * @param replicaPlacements Configuration for where to place the control plane replicas. Up to three replica placement instances can be specified. If replica_placements is set, the replica placement instances will be applied to the three control plane replicas as evenly as possible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaPlacements(AzureClusterControlPlaneReplicaPlacementArgs... replicaPlacements) {
             return replicaPlacements(List.of(replicaPlacements));
         }
 
+        /**
+         * @param rootVolume Optional. Configuration related to the root volume provisioned for each control plane replica. When unspecified, it defaults to 32-GiB Azure Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootVolume(@Nullable Output<AzureClusterControlPlaneRootVolumeArgs> rootVolume) {
             $.rootVolume = rootVolume;
             return this;
         }
 
+        /**
+         * @param rootVolume Optional. Configuration related to the root volume provisioned for each control plane replica. When unspecified, it defaults to 32-GiB Azure Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootVolume(AzureClusterControlPlaneRootVolumeArgs rootVolume) {
             return rootVolume(Output.of(rootVolume));
         }
 
+        /**
+         * @param sshConfig Required. SSH configuration for how to access the underlying control plane machines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshConfig(Output<AzureClusterControlPlaneSshConfigArgs> sshConfig) {
             $.sshConfig = sshConfig;
             return this;
         }
 
+        /**
+         * @param sshConfig Required. SSH configuration for how to access the underlying control plane machines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshConfig(AzureClusterControlPlaneSshConfigArgs sshConfig) {
             return sshConfig(Output.of(sshConfig));
         }
 
+        /**
+         * @param subnetId For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }
 
+        /**
+         * @param tags Optional. A set of tags to apply to all underlying control plane Azure resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Optional. A set of tags to apply to all underlying control plane Azure resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param version Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }
 
+        /**
+         * @param vmSize Optional. The Azure VM size name. Example: `Standard_DS2_v2`. For available VM sizes, see https://docs.microsoft.com/en-us/azure/virtual-machines/vm-naming-conventions. When unspecified, it defaults to `Standard_DS2_v2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(@Nullable Output<String> vmSize) {
             $.vmSize = vmSize;
             return this;
         }
 
+        /**
+         * @param vmSize Optional. The Azure VM size name. Example: `Standard_DS2_v2`. For available VM sizes, see https://docs.microsoft.com/en-us/azure/virtual-machines/vm-naming-conventions. When unspecified, it defaults to `Standard_DS2_v2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(String vmSize) {
             return vmSize(Output.of(vmSize));
         }

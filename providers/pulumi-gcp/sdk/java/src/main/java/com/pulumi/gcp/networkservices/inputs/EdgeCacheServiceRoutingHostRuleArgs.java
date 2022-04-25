@@ -23,6 +23,10 @@ public final class EdgeCacheServiceRoutingHostRuleArgs extends com.pulumi.resour
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A human-readable description of the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,13 @@ public final class EdgeCacheServiceRoutingHostRuleArgs extends com.pulumi.resour
     @Import(name="hosts", required=true)
     private Output<List<String>> hosts;
 
+    /**
+     * @return The list of host patterns to match.
+     * Host patterns must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*).
+     * The only accepted ports are :80 and :443.
+     * Hosts are matched against the HTTP Host header, or for HTTP/2 and HTTP/3, the &#34;:authority&#34; header, from the incoming request.
+     * 
+     */
     public Output<List<String>> hosts() {
         return this.hosts;
     }
@@ -48,6 +59,10 @@ public final class EdgeCacheServiceRoutingHostRuleArgs extends com.pulumi.resour
     @Import(name="pathMatcher", required=true)
     private Output<String> pathMatcher;
 
+    /**
+     * @return The name of the pathMatcher associated with this hostRule.
+     * 
+     */
     public Output<String> pathMatcher() {
         return this.pathMatcher;
     }
@@ -78,33 +93,84 @@ public final class EdgeCacheServiceRoutingHostRuleArgs extends com.pulumi.resour
             $ = new EdgeCacheServiceRoutingHostRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A human-readable description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A human-readable description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param hosts The list of host patterns to match.
+         * Host patterns must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*).
+         * The only accepted ports are :80 and :443.
+         * Hosts are matched against the HTTP Host header, or for HTTP/2 and HTTP/3, the &#34;:authority&#34; header, from the incoming request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(Output<List<String>> hosts) {
             $.hosts = hosts;
             return this;
         }
 
+        /**
+         * @param hosts The list of host patterns to match.
+         * Host patterns must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*).
+         * The only accepted ports are :80 and :443.
+         * Hosts are matched against the HTTP Host header, or for HTTP/2 and HTTP/3, the &#34;:authority&#34; header, from the incoming request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(List<String> hosts) {
             return hosts(Output.of(hosts));
         }
 
+        /**
+         * @param hosts The list of host patterns to match.
+         * Host patterns must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*).
+         * The only accepted ports are :80 and :443.
+         * Hosts are matched against the HTTP Host header, or for HTTP/2 and HTTP/3, the &#34;:authority&#34; header, from the incoming request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(String... hosts) {
             return hosts(List.of(hosts));
         }
 
+        /**
+         * @param pathMatcher The name of the pathMatcher associated with this hostRule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMatcher(Output<String> pathMatcher) {
             $.pathMatcher = pathMatcher;
             return this;
         }
 
+        /**
+         * @param pathMatcher The name of the pathMatcher associated with this hostRule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMatcher(String pathMatcher) {
             return pathMatcher(Output.of(pathMatcher));
         }

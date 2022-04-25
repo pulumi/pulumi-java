@@ -27,6 +27,12 @@ public final class ClusterMaintenancePolicyGetArgs extends com.pulumi.resources.
     @Import(name="dailyMaintenanceWindow")
     private @Nullable Output<ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs> dailyMaintenanceWindow;
 
+    /**
+     * @return Time window specified for daily maintenance operations.
+     * Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format &#34;HH:MM”,
+     * where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
+     * 
+     */
     public Optional<Output<ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs>> dailyMaintenanceWindow() {
         return Optional.ofNullable(this.dailyMaintenanceWindow);
     }
@@ -38,6 +44,10 @@ public final class ClusterMaintenancePolicyGetArgs extends com.pulumi.resources.
     @Import(name="maintenanceExclusions")
     private @Nullable Output<List<ClusterMaintenancePolicyMaintenanceExclusionGetArgs>> maintenanceExclusions;
 
+    /**
+     * @return Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
+     * 
+     */
     public Optional<Output<List<ClusterMaintenancePolicyMaintenanceExclusionGetArgs>>> maintenanceExclusions() {
         return Optional.ofNullable(this.maintenanceExclusions);
     }
@@ -49,6 +59,10 @@ public final class ClusterMaintenancePolicyGetArgs extends com.pulumi.resources.
     @Import(name="recurringWindow")
     private @Nullable Output<ClusterMaintenancePolicyRecurringWindowGetArgs> recurringWindow;
 
+    /**
+     * @return Time window for recurring maintenance operations.
+     * 
+     */
     public Optional<Output<ClusterMaintenancePolicyRecurringWindowGetArgs>> recurringWindow() {
         return Optional.ofNullable(this.recurringWindow);
     }
@@ -79,33 +93,79 @@ public final class ClusterMaintenancePolicyGetArgs extends com.pulumi.resources.
             $ = new ClusterMaintenancePolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dailyMaintenanceWindow Time window specified for daily maintenance operations.
+         * Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format &#34;HH:MM”,
+         * where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailyMaintenanceWindow(@Nullable Output<ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs> dailyMaintenanceWindow) {
             $.dailyMaintenanceWindow = dailyMaintenanceWindow;
             return this;
         }
 
+        /**
+         * @param dailyMaintenanceWindow Time window specified for daily maintenance operations.
+         * Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format &#34;HH:MM”,
+         * where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailyMaintenanceWindow(ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs dailyMaintenanceWindow) {
             return dailyMaintenanceWindow(Output.of(dailyMaintenanceWindow));
         }
 
+        /**
+         * @param maintenanceExclusions Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceExclusions(@Nullable Output<List<ClusterMaintenancePolicyMaintenanceExclusionGetArgs>> maintenanceExclusions) {
             $.maintenanceExclusions = maintenanceExclusions;
             return this;
         }
 
+        /**
+         * @param maintenanceExclusions Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceExclusions(List<ClusterMaintenancePolicyMaintenanceExclusionGetArgs> maintenanceExclusions) {
             return maintenanceExclusions(Output.of(maintenanceExclusions));
         }
 
+        /**
+         * @param maintenanceExclusions Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceExclusions(ClusterMaintenancePolicyMaintenanceExclusionGetArgs... maintenanceExclusions) {
             return maintenanceExclusions(List.of(maintenanceExclusions));
         }
 
+        /**
+         * @param recurringWindow Time window for recurring maintenance operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurringWindow(@Nullable Output<ClusterMaintenancePolicyRecurringWindowGetArgs> recurringWindow) {
             $.recurringWindow = recurringWindow;
             return this;
         }
 
+        /**
+         * @param recurringWindow Time window for recurring maintenance operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurringWindow(ClusterMaintenancePolicyRecurringWindowGetArgs recurringWindow) {
             return recurringWindow(Output.of(recurringWindow));
         }

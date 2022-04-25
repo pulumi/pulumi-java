@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AlertPolicyConditionConditionAbsent {
     /**
-     * Specifies the alignment of data points in
+     * @return Specifies the alignment of data points in
      * individual time series as well as how to
      * combine the retrieved time series together
      * (such as when aggregating multiple streams
@@ -33,7 +33,7 @@ public final class AlertPolicyConditionConditionAbsent {
      */
     private final @Nullable List<AlertPolicyConditionConditionAbsentAggregation> aggregations;
     /**
-     * The amount of time that a time series must
+     * @return The amount of time that a time series must
      * violate the threshold to be considered
      * failing. Currently, only values that are a
      * multiple of a minute--e.g., 0, 60, 120, or
@@ -52,12 +52,12 @@ public final class AlertPolicyConditionConditionAbsent {
      */
     private final String duration;
     /**
-     * A logs-based filter.
+     * @return A logs-based filter.
      * 
      */
     private final @Nullable String filter;
     /**
-     * The number/percent of time series for which
+     * @return The number/percent of time series for which
      * the comparison must hold in order for the
      * condition to trigger. If unspecified, then
      * the condition will trigger if the comparison
@@ -83,7 +83,7 @@ public final class AlertPolicyConditionConditionAbsent {
     }
 
     /**
-     * Specifies the alignment of data points in
+     * @return Specifies the alignment of data points in
      * individual time series as well as how to
      * combine the retrieved time series together
      * (such as when aggregating multiple streams
@@ -98,12 +98,12 @@ public final class AlertPolicyConditionConditionAbsent {
      * field.
      * Structure is documented below.
      * 
-    */
+     */
     public List<AlertPolicyConditionConditionAbsentAggregation> aggregations() {
         return this.aggregations == null ? List.of() : this.aggregations;
     }
     /**
-     * The amount of time that a time series must
+     * @return The amount of time that a time series must
      * violate the threshold to be considered
      * failing. Currently, only values that are a
      * multiple of a minute--e.g., 0, 60, 120, or
@@ -119,19 +119,19 @@ public final class AlertPolicyConditionConditionAbsent {
      * that unhealthy states are detected and
      * alerted on quickly.
      * 
-    */
+     */
     public String duration() {
         return this.duration;
     }
     /**
-     * A logs-based filter.
+     * @return A logs-based filter.
      * 
-    */
+     */
     public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * The number/percent of time series for which
+     * @return The number/percent of time series for which
      * the comparison must hold in order for the
      * condition to trigger. If unspecified, then
      * the condition will trigger if the comparison
@@ -141,7 +141,7 @@ public final class AlertPolicyConditionConditionAbsent {
      * denominator_aggregations are specified.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<AlertPolicyConditionConditionAbsentTrigger> trigger() {
         return Optional.ofNullable(this.trigger);
     }

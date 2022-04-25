@@ -21,6 +21,11 @@ public final class ApiConfigGatewayConfigGetArgs extends com.pulumi.resources.Re
     @Import(name="backendConfig", required=true)
     private Output<ApiConfigGatewayConfigBackendConfigGetArgs> backendConfig;
 
+    /**
+     * @return Backend settings that are applied to all backends of the Gateway.
+     * Structure is documented below.
+     * 
+     */
     public Output<ApiConfigGatewayConfigBackendConfigGetArgs> backendConfig() {
         return this.backendConfig;
     }
@@ -49,11 +54,25 @@ public final class ApiConfigGatewayConfigGetArgs extends com.pulumi.resources.Re
             $ = new ApiConfigGatewayConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendConfig Backend settings that are applied to all backends of the Gateway.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendConfig(Output<ApiConfigGatewayConfigBackendConfigGetArgs> backendConfig) {
             $.backendConfig = backendConfig;
             return this;
         }
 
+        /**
+         * @param backendConfig Backend settings that are applied to all backends of the Gateway.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendConfig(ApiConfigGatewayConfigBackendConfigGetArgs backendConfig) {
             return backendConfig(Output.of(backendConfig));
         }

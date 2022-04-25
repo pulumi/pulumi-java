@@ -23,6 +23,10 @@ public final class WorkloadIdentityPoolState extends com.pulumi.resources.Resour
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the pool. Cannot exceed 256 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,12 @@ public final class WorkloadIdentityPoolState extends com.pulumi.resources.Resour
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
+    /**
+     * @return Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
+     * existing tokens to access resources. If the pool is re-enabled, existing tokens grant
+     * access again.
+     * 
+     */
     public Optional<Output<Boolean>> disabled() {
         return Optional.ofNullable(this.disabled);
     }
@@ -47,6 +57,10 @@ public final class WorkloadIdentityPoolState extends com.pulumi.resources.Resour
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return A display name for the pool. Cannot exceed 32 characters.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -59,6 +73,11 @@ public final class WorkloadIdentityPoolState extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the pool as
+     * &#39;projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}&#39;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -71,6 +90,11 @@ public final class WorkloadIdentityPoolState extends com.pulumi.resources.Resour
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -86,6 +110,14 @@ public final class WorkloadIdentityPoolState extends com.pulumi.resources.Resour
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return The state of the pool. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The pool is active, and may be used in Google
+     * Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30
+     * days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
+     * pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
+     * tokens to access resources. If the pool is undeleted, existing tokens grant access again.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -99,6 +131,12 @@ public final class WorkloadIdentityPoolState extends com.pulumi.resources.Resour
     @Import(name="workloadIdentityPoolId")
     private @Nullable Output<String> workloadIdentityPoolId;
 
+    /**
+     * @return The ID to use for the pool, which becomes the final component of the resource name. This
+     * value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
+     * `gcp-` is reserved for use by Google, and may not be specified.
+     * 
+     */
     public Optional<Output<String>> workloadIdentityPoolId() {
         return Optional.ofNullable(this.workloadIdentityPoolId);
     }
@@ -133,65 +171,169 @@ public final class WorkloadIdentityPoolState extends com.pulumi.resources.Resour
             $ = new WorkloadIdentityPoolState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description of the pool. Cannot exceed 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the pool. Cannot exceed 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param disabled Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
+         * existing tokens to access resources. If the pool is re-enabled, existing tokens grant
+         * access again.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param disabled Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
+         * existing tokens to access resources. If the pool is re-enabled, existing tokens grant
+         * access again.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             return disabled(Output.of(disabled));
         }
 
+        /**
+         * @param displayName A display name for the pool. Cannot exceed 32 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName A display name for the pool. Cannot exceed 32 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param name The resource name of the pool as
+         * &#39;projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the pool as
+         * &#39;projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param state The state of the pool. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The pool is active, and may be used in Google
+         * Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30
+         * days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
+         * pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
+         * tokens to access resources. If the pool is undeleted, existing tokens grant access again.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of the pool. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The pool is active, and may be used in Google
+         * Cloud policies. * DELETED: The pool is soft-deleted. Soft-deleted pools are permanently deleted after approximately 30
+         * days. You can restore a soft-deleted pool using UndeleteWorkloadIdentityPool. You cannot reuse the ID of a soft-deleted
+         * pool until it is permanently deleted. While a pool is deleted, you cannot use it to exchange tokens, or use existing
+         * tokens to access resources. If the pool is undeleted, existing tokens grant access again.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param workloadIdentityPoolId The ID to use for the pool, which becomes the final component of the resource name. This
+         * value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
+         * `gcp-` is reserved for use by Google, and may not be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadIdentityPoolId(@Nullable Output<String> workloadIdentityPoolId) {
             $.workloadIdentityPoolId = workloadIdentityPoolId;
             return this;
         }
 
+        /**
+         * @param workloadIdentityPoolId The ID to use for the pool, which becomes the final component of the resource name. This
+         * value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
+         * `gcp-` is reserved for use by Google, and may not be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadIdentityPoolId(String workloadIdentityPoolId) {
             return workloadIdentityPoolId(Output.of(workloadIdentityPoolId));
         }

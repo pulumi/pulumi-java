@@ -26,6 +26,10 @@ public final class GetFunctionSourceRepository extends com.pulumi.resources.Invo
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return The URL pointing to the hosted repository where the function is defined.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -60,6 +64,12 @@ public final class GetFunctionSourceRepository extends com.pulumi.resources.Invo
             return this;
         }
 
+        /**
+         * @param url The URL pointing to the hosted repository where the function is defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

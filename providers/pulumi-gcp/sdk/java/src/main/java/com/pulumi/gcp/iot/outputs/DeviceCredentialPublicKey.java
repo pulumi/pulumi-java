@@ -10,13 +10,13 @@ import java.util.Objects;
 @CustomType
 public final class DeviceCredentialPublicKey {
     /**
-     * The format of the key.
+     * @return The format of the key.
      * Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`.
      * 
      */
     private final String format;
     /**
-     * The key data.
+     * @return The key data.
      * 
      */
     private final String key;
@@ -30,17 +30,17 @@ public final class DeviceCredentialPublicKey {
     }
 
     /**
-     * The format of the key.
+     * @return The format of the key.
      * Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`.
      * 
-    */
+     */
     public String format() {
         return this.format;
     }
     /**
-     * The key data.
+     * @return The key data.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }

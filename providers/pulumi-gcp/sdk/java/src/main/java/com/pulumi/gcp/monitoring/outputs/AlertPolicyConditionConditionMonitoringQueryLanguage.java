@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
     /**
-     * The amount of time that a time series must
+     * @return The amount of time that a time series must
      * violate the threshold to be considered
      * failing. Currently, only values that are a
      * multiple of a minute--e.g., 0, 60, 120, or
@@ -32,12 +32,12 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
      */
     private final String duration;
     /**
-     * Monitoring Query Language query that outputs a boolean stream.
+     * @return Monitoring Query Language query that outputs a boolean stream.
      * 
      */
     private final String query;
     /**
-     * The number/percent of time series for which
+     * @return The number/percent of time series for which
      * the comparison must hold in order for the
      * condition to trigger. If unspecified, then
      * the condition will trigger if the comparison
@@ -61,7 +61,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
     }
 
     /**
-     * The amount of time that a time series must
+     * @return The amount of time that a time series must
      * violate the threshold to be considered
      * failing. Currently, only values that are a
      * multiple of a minute--e.g., 0, 60, 120, or
@@ -77,19 +77,19 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
      * that unhealthy states are detected and
      * alerted on quickly.
      * 
-    */
+     */
     public String duration() {
         return this.duration;
     }
     /**
-     * Monitoring Query Language query that outputs a boolean stream.
+     * @return Monitoring Query Language query that outputs a boolean stream.
      * 
-    */
+     */
     public String query() {
         return this.query;
     }
     /**
-     * The number/percent of time series for which
+     * @return The number/percent of time series for which
      * the comparison must hold in order for the
      * condition to trigger. If unspecified, then
      * the condition will trigger if the comparison
@@ -99,7 +99,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
      * denominator_aggregations are specified.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<AlertPolicyConditionConditionMonitoringQueryLanguageTrigger> trigger() {
         return Optional.ofNullable(this.trigger);
     }

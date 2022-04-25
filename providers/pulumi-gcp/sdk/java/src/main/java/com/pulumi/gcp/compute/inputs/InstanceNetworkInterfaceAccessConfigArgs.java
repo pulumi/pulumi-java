@@ -23,6 +23,11 @@ public final class InstanceNetworkInterfaceAccessConfigArgs extends com.pulumi.r
     @Import(name="natIp")
     private @Nullable Output<String> natIp;
 
+    /**
+     * @return The IP address that will be 1:1 mapped to the instance&#39;s
+     * network ip. If not given, one will be generated.
+     * 
+     */
     public Optional<Output<String>> natIp() {
         return Optional.ofNullable(this.natIp);
     }
@@ -35,6 +40,11 @@ public final class InstanceNetworkInterfaceAccessConfigArgs extends com.pulumi.r
     @Import(name="networkTier")
     private @Nullable Output<String> networkTier;
 
+    /**
+     * @return The service-level to be provided for IPv6 traffic when the
+     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * 
+     */
     public Optional<Output<String>> networkTier() {
         return Optional.ofNullable(this.networkTier);
     }
@@ -47,6 +57,11 @@ public final class InstanceNetworkInterfaceAccessConfigArgs extends com.pulumi.r
     @Import(name="publicPtrDomainName")
     private @Nullable Output<String> publicPtrDomainName;
 
+    /**
+     * @return The domain name to be used when creating DNSv6
+     * records for the external IPv6 ranges..
+     * 
+     */
     public Optional<Output<String>> publicPtrDomainName() {
         return Optional.ofNullable(this.publicPtrDomainName);
     }
@@ -77,29 +92,71 @@ public final class InstanceNetworkInterfaceAccessConfigArgs extends com.pulumi.r
             $ = new InstanceNetworkInterfaceAccessConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param natIp The IP address that will be 1:1 mapped to the instance&#39;s
+         * network ip. If not given, one will be generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natIp(@Nullable Output<String> natIp) {
             $.natIp = natIp;
             return this;
         }
 
+        /**
+         * @param natIp The IP address that will be 1:1 mapped to the instance&#39;s
+         * network ip. If not given, one will be generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natIp(String natIp) {
             return natIp(Output.of(natIp));
         }
 
+        /**
+         * @param networkTier The service-level to be provided for IPv6 traffic when the
+         * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTier(@Nullable Output<String> networkTier) {
             $.networkTier = networkTier;
             return this;
         }
 
+        /**
+         * @param networkTier The service-level to be provided for IPv6 traffic when the
+         * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTier(String networkTier) {
             return networkTier(Output.of(networkTier));
         }
 
+        /**
+         * @param publicPtrDomainName The domain name to be used when creating DNSv6
+         * records for the external IPv6 ranges..
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicPtrDomainName(@Nullable Output<String> publicPtrDomainName) {
             $.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
 
+        /**
+         * @param publicPtrDomainName The domain name to be used when creating DNSv6
+         * records for the external IPv6 ranges..
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicPtrDomainName(String publicPtrDomainName) {
             return publicPtrDomainName(Output.of(publicPtrDomainName));
         }

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PolicyAlternativeNameServerConfigTargetNameServer {
     /**
-     * Forwarding path for this TargetNameServer. If unset or `default` Cloud DNS will make forwarding
+     * @return Forwarding path for this TargetNameServer. If unset or `default` Cloud DNS will make forwarding
      * decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
      * to the Internet. When set to `private`, Cloud DNS will always send queries through VPC for this target
      * Possible values are `default` and `private`.
@@ -20,7 +20,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer {
      */
     private final @Nullable String forwardingPath;
     /**
-     * IPv4 address to forward to.
+     * @return IPv4 address to forward to.
      * 
      */
     private final String ipv4Address;
@@ -34,19 +34,19 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer {
     }
 
     /**
-     * Forwarding path for this TargetNameServer. If unset or `default` Cloud DNS will make forwarding
+     * @return Forwarding path for this TargetNameServer. If unset or `default` Cloud DNS will make forwarding
      * decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
      * to the Internet. When set to `private`, Cloud DNS will always send queries through VPC for this target
      * Possible values are `default` and `private`.
      * 
-    */
+     */
     public Optional<String> forwardingPath() {
         return Optional.ofNullable(this.forwardingPath);
     }
     /**
-     * IPv4 address to forward to.
+     * @return IPv4 address to forward to.
      * 
-    */
+     */
     public String ipv4Address() {
         return this.ipv4Address;
     }

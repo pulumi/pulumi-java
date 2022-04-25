@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PreventionInspectTemplateInspectConfigRuleSetInfoType {
     /**
-     * Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+     * @return Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
      * or `projects/project-id/storedInfoTypes/432452342`.
      * 
      */
@@ -22,10 +22,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetInfoType {
     }
 
     /**
-     * Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
+     * @return Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
      * or `projects/project-id/storedInfoTypes/432452342`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

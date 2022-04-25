@@ -25,6 +25,10 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
     @Import(name="certificateId")
     private @Nullable Output<Integer> certificateId;
 
+    /**
+     * @return The unique identifier for the resource.
+     * 
+     */
     public Optional<Output<Integer>> certificateId() {
         return Optional.ofNullable(this.certificateId);
     }
@@ -36,6 +40,10 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
     @Import(name="creationTimestamp")
     private @Nullable Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> creationTimestamp() {
         return Optional.ofNullable(this.creationTimestamp);
     }
@@ -47,6 +55,10 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -58,6 +70,10 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
     @Import(name="expireTime")
     private @Nullable Output<String> expireTime;
 
+    /**
+     * @return Expire time of the certificate.
+     * 
+     */
     public Optional<Output<String>> expireTime() {
         return Optional.ofNullable(this.expireTime);
     }
@@ -71,6 +87,12 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
     @Import(name="managed")
     private @Nullable Output<ManagedSslCertificateManagedGetArgs> managed;
 
+    /**
+     * @return Properties relevant to a managed certificate.  These will be used if the
+     * certificate is managed (as indicated by a value of `MANAGED` in `type`).
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ManagedSslCertificateManagedGetArgs>> managed() {
         return Optional.ofNullable(this.managed);
     }
@@ -88,6 +110,16 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -100,6 +132,11 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -111,6 +148,10 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -122,6 +163,10 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
     @Import(name="subjectAlternativeNames")
     private @Nullable Output<List<String>> subjectAlternativeNames;
 
+    /**
+     * @return Domains associated with the certificate via Subject Alternative Name.
+     * 
+     */
     public Optional<Output<List<String>>> subjectAlternativeNames() {
         return Optional.ofNullable(this.subjectAlternativeNames);
     }
@@ -136,6 +181,13 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Enum field whose value is always `MANAGED` - used to signal to the API
+     * which type this is.
+     * Default value is `MANAGED`.
+     * Possible values are `MANAGED`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -173,96 +225,246 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
             $ = new ManagedSslCertificateState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateId The unique identifier for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(@Nullable Output<Integer> certificateId) {
             $.certificateId = certificateId;
             return this;
         }
 
+        /**
+         * @param certificateId The unique identifier for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(Integer certificateId) {
             return certificateId(Output.of(certificateId));
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             $.creationTimestamp = creationTimestamp;
             return this;
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(String creationTimestamp) {
             return creationTimestamp(Output.of(creationTimestamp));
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param expireTime Expire time of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(@Nullable Output<String> expireTime) {
             $.expireTime = expireTime;
             return this;
         }
 
+        /**
+         * @param expireTime Expire time of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(String expireTime) {
             return expireTime(Output.of(expireTime));
         }
 
+        /**
+         * @param managed Properties relevant to a managed certificate.  These will be used if the
+         * certificate is managed (as indicated by a value of `MANAGED` in `type`).
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managed(@Nullable Output<ManagedSslCertificateManagedGetArgs> managed) {
             $.managed = managed;
             return this;
         }
 
+        /**
+         * @param managed Properties relevant to a managed certificate.  These will be used if the
+         * certificate is managed (as indicated by a value of `MANAGED` in `type`).
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managed(ManagedSslCertificateManagedGetArgs managed) {
             return managed(Output.of(managed));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param subjectAlternativeNames Domains associated with the certificate via Subject Alternative Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(@Nullable Output<List<String>> subjectAlternativeNames) {
             $.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
+        /**
+         * @param subjectAlternativeNames Domains associated with the certificate via Subject Alternative Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(List<String> subjectAlternativeNames) {
             return subjectAlternativeNames(Output.of(subjectAlternativeNames));
         }
 
+        /**
+         * @param subjectAlternativeNames Domains associated with the certificate via Subject Alternative Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
             return subjectAlternativeNames(List.of(subjectAlternativeNames));
         }
 
+        /**
+         * @param type Enum field whose value is always `MANAGED` - used to signal to the API
+         * which type this is.
+         * Default value is `MANAGED`.
+         * Possible values are `MANAGED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Enum field whose value is always `MANAGED` - used to signal to the API
+         * which type this is.
+         * Default value is `MANAGED`.
+         * Possible values are `MANAGED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

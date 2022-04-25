@@ -22,6 +22,10 @@ public final class UptimeCheckConfigContentMatcherGetArgs extends com.pulumi.res
     @Import(name="content", required=true)
     private Output<String> content;
 
+    /**
+     * @return String or regex content to match (max 1024 bytes)
+     * 
+     */
     public Output<String> content() {
         return this.content;
     }
@@ -35,6 +39,12 @@ public final class UptimeCheckConfigContentMatcherGetArgs extends com.pulumi.res
     @Import(name="matcher")
     private @Nullable Output<String> matcher;
 
+    /**
+     * @return The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+     * Default value is `CONTAINS_STRING`.
+     * Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, and `NOT_MATCHES_REGEX`.
+     * 
+     */
     public Optional<Output<String>> matcher() {
         return Optional.ofNullable(this.matcher);
     }
@@ -64,20 +74,48 @@ public final class UptimeCheckConfigContentMatcherGetArgs extends com.pulumi.res
             $ = new UptimeCheckConfigContentMatcherGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content String or regex content to match (max 1024 bytes)
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content String or regex content to match (max 1024 bytes)
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param matcher The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+         * Default value is `CONTAINS_STRING`.
+         * Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, and `NOT_MATCHES_REGEX`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matcher(@Nullable Output<String> matcher) {
             $.matcher = matcher;
             return this;
         }
 
+        /**
+         * @param matcher The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+         * Default value is `CONTAINS_STRING`.
+         * Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, and `NOT_MATCHES_REGEX`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matcher(String matcher) {
             return matcher(Output.of(matcher));
         }

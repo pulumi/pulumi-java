@@ -20,6 +20,10 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjec
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return Bucket of the Cloud Storage object.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -31,6 +35,10 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjec
     @Import(name="generationNumber", required=true)
     private Output<String> generationNumber;
 
+    /**
+     * @return Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
+     * 
+     */
     public Output<String> generationNumber() {
         return this.generationNumber;
     }
@@ -42,6 +50,10 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjec
     @Import(name="object", required=true)
     private Output<String> object;
 
+    /**
+     * @return Name of the Cloud Storage object.
+     * 
+     */
     public Output<String> object() {
         return this.object;
     }
@@ -72,29 +84,65 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjec
             $ = new PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket Bucket of the Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket Bucket of the Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param generationNumber Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generationNumber(Output<String> generationNumber) {
             $.generationNumber = generationNumber;
             return this;
         }
 
+        /**
+         * @param generationNumber Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generationNumber(String generationNumber) {
             return generationNumber(Output.of(generationNumber));
         }
 
+        /**
+         * @param object Name of the Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(Output<String> object) {
             $.object = object;
             return this;
         }
 
+        /**
+         * @param object Name of the Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(String object) {
             return object(Output.of(object));
         }

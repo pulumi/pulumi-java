@@ -24,6 +24,12 @@ public final class RuntimeAccessConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="accessType")
     private @Nullable Output<String> accessType;
 
+    /**
+     * @return The type of access mode this instance. For valid values, see
+     * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
+     * rest/v1/projects.locations.runtimes#RuntimeAccessType`.
+     * 
+     */
     public Optional<Output<String>> accessType() {
         return Optional.ofNullable(this.accessType);
     }
@@ -36,6 +42,11 @@ public final class RuntimeAccessConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="proxyUri")
     private @Nullable Output<String> proxyUri;
 
+    /**
+     * @return -
+     * The proxy endpoint that is used to access the runtime.
+     * 
+     */
     public Optional<Output<String>> proxyUri() {
         return Optional.ofNullable(this.proxyUri);
     }
@@ -48,6 +59,11 @@ public final class RuntimeAccessConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="runtimeOwner")
     private @Nullable Output<String> runtimeOwner;
 
+    /**
+     * @return The owner of this runtime after creation. Format: `alias@example.com`.
+     * Currently supports one owner only.
+     * 
+     */
     public Optional<Output<String>> runtimeOwner() {
         return Optional.ofNullable(this.runtimeOwner);
     }
@@ -78,29 +94,73 @@ public final class RuntimeAccessConfigGetArgs extends com.pulumi.resources.Resou
             $ = new RuntimeAccessConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessType The type of access mode this instance. For valid values, see
+         * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
+         * rest/v1/projects.locations.runtimes#RuntimeAccessType`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(@Nullable Output<String> accessType) {
             $.accessType = accessType;
             return this;
         }
 
+        /**
+         * @param accessType The type of access mode this instance. For valid values, see
+         * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
+         * rest/v1/projects.locations.runtimes#RuntimeAccessType`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(String accessType) {
             return accessType(Output.of(accessType));
         }
 
+        /**
+         * @param proxyUri -
+         * The proxy endpoint that is used to access the runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyUri(@Nullable Output<String> proxyUri) {
             $.proxyUri = proxyUri;
             return this;
         }
 
+        /**
+         * @param proxyUri -
+         * The proxy endpoint that is used to access the runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyUri(String proxyUri) {
             return proxyUri(Output.of(proxyUri));
         }
 
+        /**
+         * @param runtimeOwner The owner of this runtime after creation. Format: `alias@example.com`.
+         * Currently supports one owner only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeOwner(@Nullable Output<String> runtimeOwner) {
             $.runtimeOwner = runtimeOwner;
             return this;
         }
 
+        /**
+         * @param runtimeOwner The owner of this runtime after creation. Format: `alias@example.com`.
+         * Currently supports one owner only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeOwner(String runtimeOwner) {
             return runtimeOwner(Output.of(runtimeOwner));
         }

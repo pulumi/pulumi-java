@@ -25,6 +25,11 @@ public final class ServicePerimetersState extends com.pulumi.resources.ResourceA
     @Import(name="parent")
     private @Nullable Output<String> parent;
 
+    /**
+     * @return The AccessPolicy this ServicePerimeter lives in.
+     * Format: accessPolicies/{policy_id}
+     * 
+     */
     public Optional<Output<String>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -37,6 +42,11 @@ public final class ServicePerimetersState extends com.pulumi.resources.ResourceA
     @Import(name="servicePerimeters")
     private @Nullable Output<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters;
 
+    /**
+     * @return The desired Service Perimeters that should replace all existing Service Perimeters in the Access Policy.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<ServicePerimetersServicePerimeterGetArgs>>> servicePerimeters() {
         return Optional.ofNullable(this.servicePerimeters);
     }
@@ -66,24 +76,59 @@ public final class ServicePerimetersState extends com.pulumi.resources.ResourceA
             $ = new ServicePerimetersState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parent The AccessPolicy this ServicePerimeter lives in.
+         * Format: accessPolicies/{policy_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The AccessPolicy this ServicePerimeter lives in.
+         * Format: accessPolicies/{policy_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param servicePerimeters The desired Service Perimeters that should replace all existing Service Perimeters in the Access Policy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePerimeters(@Nullable Output<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters) {
             $.servicePerimeters = servicePerimeters;
             return this;
         }
 
+        /**
+         * @param servicePerimeters The desired Service Perimeters that should replace all existing Service Perimeters in the Access Policy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePerimeters(List<ServicePerimetersServicePerimeterGetArgs> servicePerimeters) {
             return servicePerimeters(Output.of(servicePerimeters));
         }
 
+        /**
+         * @param servicePerimeters The desired Service Perimeters that should replace all existing Service Perimeters in the Access Policy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePerimeters(ServicePerimetersServicePerimeterGetArgs... servicePerimeters) {
             return servicePerimeters(List.of(servicePerimeters));
         }

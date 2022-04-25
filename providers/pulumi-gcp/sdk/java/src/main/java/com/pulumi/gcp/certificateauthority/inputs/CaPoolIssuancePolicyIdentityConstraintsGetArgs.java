@@ -24,6 +24,11 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends com.pu
     @Import(name="allowSubjectAltNamesPassthrough", required=true)
     private Output<Boolean> allowSubjectAltNamesPassthrough;
 
+    /**
+     * @return If this is set, the SubjectAltNames extension may be copied from a certificate request into the signed certificate.
+     * Otherwise, the requested SubjectAltNames will be discarded.
+     * 
+     */
     public Output<Boolean> allowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
     }
@@ -36,6 +41,11 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends com.pu
     @Import(name="allowSubjectPassthrough", required=true)
     private Output<Boolean> allowSubjectPassthrough;
 
+    /**
+     * @return If this is set, the Subject field may be copied from a certificate request into the signed certificate.
+     * Otherwise, the requested Subject will be discarded.
+     * 
+     */
     public Output<Boolean> allowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
     }
@@ -50,6 +60,13 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends com.pu
     @Import(name="celExpression")
     private @Nullable Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> celExpression;
 
+    /**
+     * @return A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a
+     * certificate is signed. To see the full allowed syntax and some examples,
+     * see https://cloud.google.com/certificate-authority-service/docs/cel-guide
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs>> celExpression() {
         return Optional.ofNullable(this.celExpression);
     }
@@ -80,29 +97,75 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends com.pu
             $ = new CaPoolIssuancePolicyIdentityConstraintsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowSubjectAltNamesPassthrough If this is set, the SubjectAltNames extension may be copied from a certificate request into the signed certificate.
+         * Otherwise, the requested SubjectAltNames will be discarded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowSubjectAltNamesPassthrough(Output<Boolean> allowSubjectAltNamesPassthrough) {
             $.allowSubjectAltNamesPassthrough = allowSubjectAltNamesPassthrough;
             return this;
         }
 
+        /**
+         * @param allowSubjectAltNamesPassthrough If this is set, the SubjectAltNames extension may be copied from a certificate request into the signed certificate.
+         * Otherwise, the requested SubjectAltNames will be discarded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
             return allowSubjectAltNamesPassthrough(Output.of(allowSubjectAltNamesPassthrough));
         }
 
+        /**
+         * @param allowSubjectPassthrough If this is set, the Subject field may be copied from a certificate request into the signed certificate.
+         * Otherwise, the requested Subject will be discarded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowSubjectPassthrough(Output<Boolean> allowSubjectPassthrough) {
             $.allowSubjectPassthrough = allowSubjectPassthrough;
             return this;
         }
 
+        /**
+         * @param allowSubjectPassthrough If this is set, the Subject field may be copied from a certificate request into the signed certificate.
+         * Otherwise, the requested Subject will be discarded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowSubjectPassthrough(Boolean allowSubjectPassthrough) {
             return allowSubjectPassthrough(Output.of(allowSubjectPassthrough));
         }
 
+        /**
+         * @param celExpression A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a
+         * certificate is signed. To see the full allowed syntax and some examples,
+         * see https://cloud.google.com/certificate-authority-service/docs/cel-guide
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder celExpression(@Nullable Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> celExpression) {
             $.celExpression = celExpression;
             return this;
         }
 
+        /**
+         * @param celExpression A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a
+         * certificate is signed. To see the full allowed syntax and some examples,
+         * see https://cloud.google.com/certificate-authority-service/docs/cel-guide
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder celExpression(CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs celExpression) {
             return celExpression(Output.of(celExpression));
         }

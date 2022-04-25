@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class SloWindowsBasedSliMetricSumInRange {
     /**
-     * Range of numerical values. The computed good_service
+     * @return Range of numerical values. The computed good_service
      * will be the count of values x in the Distribution such
      * that range.min &lt;= x &lt;= range.max. inclusive of min and
      * max. Open ranges can be defined by setting
@@ -22,7 +22,7 @@ public final class SloWindowsBasedSliMetricSumInRange {
      */
     private final SloWindowsBasedSliMetricSumInRangeRange range;
     /**
-     * A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * @return A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
      * specifying the TimeSeries to use for evaluating window
      * quality. The provided TimeSeries must have
      * ValueType = INT64 or ValueType = DOUBLE and
@@ -42,7 +42,7 @@ public final class SloWindowsBasedSliMetricSumInRange {
     }
 
     /**
-     * Range of numerical values. The computed good_service
+     * @return Range of numerical values. The computed good_service
      * will be the count of values x in the Distribution such
      * that range.min &lt;= x &lt;= range.max. inclusive of min and
      * max. Open ranges can be defined by setting
@@ -50,12 +50,12 @@ public final class SloWindowsBasedSliMetricSumInRange {
      * `range.min &lt;= X &lt;= range.max` for a good window.
      * Structure is documented below.
      * 
-    */
+     */
     public SloWindowsBasedSliMetricSumInRangeRange range() {
         return this.range;
     }
     /**
-     * A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * @return A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
      * specifying the TimeSeries to use for evaluating window
      * quality. The provided TimeSeries must have
      * ValueType = INT64 or ValueType = DOUBLE and
@@ -63,7 +63,7 @@ public final class SloWindowsBasedSliMetricSumInRange {
      * Summed value `X` should satisfy
      * `range.min &lt;= X &lt;= range.max` for a good window.
      * 
-    */
+     */
     public String timeSeries() {
         return this.timeSeries;
     }

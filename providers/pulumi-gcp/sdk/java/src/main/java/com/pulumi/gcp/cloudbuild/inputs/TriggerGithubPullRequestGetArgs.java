@@ -23,6 +23,10 @@ public final class TriggerGithubPullRequestGetArgs extends com.pulumi.resources.
     @Import(name="branch", required=true)
     private Output<String> branch;
 
+    /**
+     * @return Regex of branches to match.  Specify only one of branch or tag.
+     * 
+     */
     public Output<String> branch() {
         return this.branch;
     }
@@ -35,6 +39,11 @@ public final class TriggerGithubPullRequestGetArgs extends com.pulumi.resources.
     @Import(name="commentControl")
     private @Nullable Output<String> commentControl;
 
+    /**
+     * @return Whether to block builds on a &#34;/gcbrun&#34; comment from a repository owner or collaborator.
+     * Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY`.
+     * 
+     */
     public Optional<Output<String>> commentControl() {
         return Optional.ofNullable(this.commentControl);
     }
@@ -46,6 +55,10 @@ public final class TriggerGithubPullRequestGetArgs extends com.pulumi.resources.
     @Import(name="invertRegex")
     private @Nullable Output<Boolean> invertRegex;
 
+    /**
+     * @return Only trigger a build if the revision regex does NOT match the revision regex.
+     * 
+     */
     public Optional<Output<Boolean>> invertRegex() {
         return Optional.ofNullable(this.invertRegex);
     }
@@ -76,29 +89,67 @@ public final class TriggerGithubPullRequestGetArgs extends com.pulumi.resources.
             $ = new TriggerGithubPullRequestGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branch Regex of branches to match.  Specify only one of branch or tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branch(Output<String> branch) {
             $.branch = branch;
             return this;
         }
 
+        /**
+         * @param branch Regex of branches to match.  Specify only one of branch or tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branch(String branch) {
             return branch(Output.of(branch));
         }
 
+        /**
+         * @param commentControl Whether to block builds on a &#34;/gcbrun&#34; comment from a repository owner or collaborator.
+         * Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commentControl(@Nullable Output<String> commentControl) {
             $.commentControl = commentControl;
             return this;
         }
 
+        /**
+         * @param commentControl Whether to block builds on a &#34;/gcbrun&#34; comment from a repository owner or collaborator.
+         * Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commentControl(String commentControl) {
             return commentControl(Output.of(commentControl));
         }
 
+        /**
+         * @param invertRegex Only trigger a build if the revision regex does NOT match the revision regex.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invertRegex(@Nullable Output<Boolean> invertRegex) {
             $.invertRegex = invertRegex;
             return this;
         }
 
+        /**
+         * @param invertRegex Only trigger a build if the revision regex does NOT match the revision regex.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invertRegex(Boolean invertRegex) {
             return invertRegex(Output.of(invertRegex));
         }

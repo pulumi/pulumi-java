@@ -23,6 +23,10 @@ public final class CustomServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Name used for UI elements listing this Service.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -35,6 +39,11 @@ public final class CustomServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -47,6 +56,11 @@ public final class CustomServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceId")
     private @Nullable Output<String> serviceId;
 
+    /**
+     * @return An optional service ID to use. If not given, the server will generate a
+     * service ID.
+     * 
+     */
     public Optional<Output<String>> serviceId() {
         return Optional.ofNullable(this.serviceId);
     }
@@ -59,6 +73,11 @@ public final class CustomServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="telemetry")
     private @Nullable Output<CustomServiceTelemetryArgs> telemetry;
 
+    /**
+     * @return Configuration for how to query telemetry on a Service.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<CustomServiceTelemetryArgs>> telemetry() {
         return Optional.ofNullable(this.telemetry);
     }
@@ -90,38 +109,92 @@ public final class CustomServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CustomServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Name used for UI elements listing this Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Name used for UI elements listing this Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param serviceId An optional service ID to use. If not given, the server will generate a
+         * service ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceId(@Nullable Output<String> serviceId) {
             $.serviceId = serviceId;
             return this;
         }
 
+        /**
+         * @param serviceId An optional service ID to use. If not given, the server will generate a
+         * service ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceId(String serviceId) {
             return serviceId(Output.of(serviceId));
         }
 
+        /**
+         * @param telemetry Configuration for how to query telemetry on a Service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder telemetry(@Nullable Output<CustomServiceTelemetryArgs> telemetry) {
             $.telemetry = telemetry;
             return this;
         }
 
+        /**
+         * @param telemetry Configuration for how to query telemetry on a Service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder telemetry(CustomServiceTelemetryArgs telemetry) {
             return telemetry(Output.of(telemetry));
         }

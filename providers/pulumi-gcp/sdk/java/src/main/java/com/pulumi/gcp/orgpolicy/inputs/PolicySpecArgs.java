@@ -26,6 +26,11 @@ public final class PolicySpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return -
+     * An opaque tag indicating the current version of the `Policy`, used for concurrency control. This field is ignored if used in a `CreatePolicy` request. When the `Policy` is returned from either a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the current `Policy` to use when executing a read-modify-write loop. When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be unset.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -37,6 +42,10 @@ public final class PolicySpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inheritFromParent")
     private @Nullable Output<Boolean> inheritFromParent;
 
+    /**
+     * @return Determines the inheritance behavior for this `Policy`. If `inherit_from_parent` is true, PolicyRules set higher up in the hierarchy (up to the closest root) are inherited and present in the effective policy. If it is false, then no rules are inherited, and this Policy becomes the new root for evaluation. This field can be set only for Policies which configure list constraints.
+     * 
+     */
     public Optional<Output<Boolean>> inheritFromParent() {
         return Optional.ofNullable(this.inheritFromParent);
     }
@@ -48,6 +57,10 @@ public final class PolicySpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reset")
     private @Nullable Output<Boolean> reset;
 
+    /**
+     * @return Ignores policies set above this resource and restores the `constraint_default` enforcement behavior of the specific `Constraint` at this resource. This field can be set in policies for either list or boolean constraints. If set, `rules` must be empty and `inherit_from_parent` must be set to false.
+     * 
+     */
     public Optional<Output<Boolean>> reset() {
         return Optional.ofNullable(this.reset);
     }
@@ -59,6 +72,10 @@ public final class PolicySpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
     private @Nullable Output<List<PolicySpecRuleArgs>> rules;
 
+    /**
+     * @return Up to 10 PolicyRules are allowed. In Policies for boolean constraints, the following requirements apply: - There must be one and only one PolicyRule where condition is unset. - BooleanPolicyRules with conditions must set `enforced` to the opposite of the PolicyRule without a condition. - During policy evaluation, PolicyRules with conditions that are true for a target resource take precedence.
+     * 
+     */
     public Optional<Output<List<PolicySpecRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -71,6 +88,11 @@ public final class PolicySpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
     private @Nullable Output<String> updateTime;
 
+    /**
+     * @return -
+     * Output only. The time stamp this was previously updated. This represents the last time a call to `CreatePolicy` or `UpdatePolicy` was made for that `Policy`.
+     * 
+     */
     public Optional<Output<String>> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
@@ -103,51 +125,121 @@ public final class PolicySpecArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PolicySpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag -
+         * An opaque tag indicating the current version of the `Policy`, used for concurrency control. This field is ignored if used in a `CreatePolicy` request. When the `Policy` is returned from either a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the current `Policy` to use when executing a read-modify-write loop. When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag -
+         * An opaque tag indicating the current version of the `Policy`, used for concurrency control. This field is ignored if used in a `CreatePolicy` request. When the `Policy` is returned from either a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the current `Policy` to use when executing a read-modify-write loop. When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param inheritFromParent Determines the inheritance behavior for this `Policy`. If `inherit_from_parent` is true, PolicyRules set higher up in the hierarchy (up to the closest root) are inherited and present in the effective policy. If it is false, then no rules are inherited, and this Policy becomes the new root for evaluation. This field can be set only for Policies which configure list constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inheritFromParent(@Nullable Output<Boolean> inheritFromParent) {
             $.inheritFromParent = inheritFromParent;
             return this;
         }
 
+        /**
+         * @param inheritFromParent Determines the inheritance behavior for this `Policy`. If `inherit_from_parent` is true, PolicyRules set higher up in the hierarchy (up to the closest root) are inherited and present in the effective policy. If it is false, then no rules are inherited, and this Policy becomes the new root for evaluation. This field can be set only for Policies which configure list constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inheritFromParent(Boolean inheritFromParent) {
             return inheritFromParent(Output.of(inheritFromParent));
         }
 
+        /**
+         * @param reset Ignores policies set above this resource and restores the `constraint_default` enforcement behavior of the specific `Constraint` at this resource. This field can be set in policies for either list or boolean constraints. If set, `rules` must be empty and `inherit_from_parent` must be set to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reset(@Nullable Output<Boolean> reset) {
             $.reset = reset;
             return this;
         }
 
+        /**
+         * @param reset Ignores policies set above this resource and restores the `constraint_default` enforcement behavior of the specific `Constraint` at this resource. This field can be set in policies for either list or boolean constraints. If set, `rules` must be empty and `inherit_from_parent` must be set to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reset(Boolean reset) {
             return reset(Output.of(reset));
         }
 
+        /**
+         * @param rules Up to 10 PolicyRules are allowed. In Policies for boolean constraints, the following requirements apply: - There must be one and only one PolicyRule where condition is unset. - BooleanPolicyRules with conditions must set `enforced` to the opposite of the PolicyRule without a condition. - During policy evaluation, PolicyRules with conditions that are true for a target resource take precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<PolicySpecRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Up to 10 PolicyRules are allowed. In Policies for boolean constraints, the following requirements apply: - There must be one and only one PolicyRule where condition is unset. - BooleanPolicyRules with conditions must set `enforced` to the opposite of the PolicyRule without a condition. - During policy evaluation, PolicyRules with conditions that are true for a target resource take precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<PolicySpecRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules Up to 10 PolicyRules are allowed. In Policies for boolean constraints, the following requirements apply: - There must be one and only one PolicyRule where condition is unset. - BooleanPolicyRules with conditions must set `enforced` to the opposite of the PolicyRule without a condition. - During policy evaluation, PolicyRules with conditions that are true for a target resource take precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(PolicySpecRuleArgs... rules) {
             return rules(List.of(rules));
         }
 
+        /**
+         * @param updateTime -
+         * Output only. The time stamp this was previously updated. This represents the last time a call to `CreatePolicy` or `UpdatePolicy` was made for that `Policy`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(@Nullable Output<String> updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param updateTime -
+         * Output only. The time stamp this was previously updated. This represents the last time a call to `CreatePolicy` or `UpdatePolicy` was made for that `Policy`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             return updateTime(Output.of(updateTime));
         }

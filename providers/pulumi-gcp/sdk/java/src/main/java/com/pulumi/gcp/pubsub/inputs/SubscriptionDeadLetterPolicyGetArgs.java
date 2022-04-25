@@ -31,6 +31,18 @@ public final class SubscriptionDeadLetterPolicyGetArgs extends com.pulumi.resour
     @Import(name="deadLetterTopic")
     private @Nullable Output<String> deadLetterTopic;
 
+    /**
+     * @return The name of the topic to which dead letter messages should be published.
+     * Format is `projects/{project}/topics/{topic}`.
+     * The Cloud Pub/Sub service account associated with the enclosing subscription&#39;s
+     * parent project (i.e.,
+     * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
+     * permission to Publish() to this topic.
+     * The operation will fail if the topic does not exist.
+     * Users should ensure that there is a subscription attached to this topic
+     * since messages published to a topic with no subscriptions are lost.
+     * 
+     */
     public Optional<Output<String>> deadLetterTopic() {
         return Optional.ofNullable(this.deadLetterTopic);
     }
@@ -49,6 +61,17 @@ public final class SubscriptionDeadLetterPolicyGetArgs extends com.pulumi.resour
     @Import(name="maxDeliveryAttempts")
     private @Nullable Output<Integer> maxDeliveryAttempts;
 
+    /**
+     * @return The maximum number of delivery attempts for any message. The value must be
+     * between 5 and 100.
+     * The number of delivery attempts is defined as 1 + (the sum of number of
+     * NACKs and number of times the acknowledgement deadline has been exceeded for the message).
+     * A NACK is any call to ModifyAckDeadline with a 0 deadline. Note that
+     * client libraries may automatically extend ack_deadlines.
+     * This field will be honored on a best effort basis.
+     * If this parameter is 0, a default value of 5 is used.
+     * 
+     */
     public Optional<Output<Integer>> maxDeliveryAttempts() {
         return Optional.ofNullable(this.maxDeliveryAttempts);
     }
@@ -78,20 +101,74 @@ public final class SubscriptionDeadLetterPolicyGetArgs extends com.pulumi.resour
             $ = new SubscriptionDeadLetterPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deadLetterTopic The name of the topic to which dead letter messages should be published.
+         * Format is `projects/{project}/topics/{topic}`.
+         * The Cloud Pub/Sub service account associated with the enclosing subscription&#39;s
+         * parent project (i.e.,
+         * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
+         * permission to Publish() to this topic.
+         * The operation will fail if the topic does not exist.
+         * Users should ensure that there is a subscription attached to this topic
+         * since messages published to a topic with no subscriptions are lost.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterTopic(@Nullable Output<String> deadLetterTopic) {
             $.deadLetterTopic = deadLetterTopic;
             return this;
         }
 
+        /**
+         * @param deadLetterTopic The name of the topic to which dead letter messages should be published.
+         * Format is `projects/{project}/topics/{topic}`.
+         * The Cloud Pub/Sub service account associated with the enclosing subscription&#39;s
+         * parent project (i.e.,
+         * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
+         * permission to Publish() to this topic.
+         * The operation will fail if the topic does not exist.
+         * Users should ensure that there is a subscription attached to this topic
+         * since messages published to a topic with no subscriptions are lost.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterTopic(String deadLetterTopic) {
             return deadLetterTopic(Output.of(deadLetterTopic));
         }
 
+        /**
+         * @param maxDeliveryAttempts The maximum number of delivery attempts for any message. The value must be
+         * between 5 and 100.
+         * The number of delivery attempts is defined as 1 + (the sum of number of
+         * NACKs and number of times the acknowledgement deadline has been exceeded for the message).
+         * A NACK is any call to ModifyAckDeadline with a 0 deadline. Note that
+         * client libraries may automatically extend ack_deadlines.
+         * This field will be honored on a best effort basis.
+         * If this parameter is 0, a default value of 5 is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDeliveryAttempts(@Nullable Output<Integer> maxDeliveryAttempts) {
             $.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
         }
 
+        /**
+         * @param maxDeliveryAttempts The maximum number of delivery attempts for any message. The value must be
+         * between 5 and 100.
+         * The number of delivery attempts is defined as 1 + (the sum of number of
+         * NACKs and number of times the acknowledgement deadline has been exceeded for the message).
+         * A NACK is any call to ModifyAckDeadline with a 0 deadline. Note that
+         * client libraries may automatically extend ack_deadlines.
+         * This field will be honored on a best effort basis.
+         * If this parameter is 0, a default value of 5 is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDeliveryAttempts(Integer maxDeliveryAttempts) {
             return maxDeliveryAttempts(Output.of(maxDeliveryAttempts));
         }

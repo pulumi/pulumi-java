@@ -15,14 +15,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RouterBgp {
     /**
-     * User-specified flag to indicate which mode to use for advertisement.
+     * @return User-specified flag to indicate which mode to use for advertisement.
      * Default value is `DEFAULT`.
      * Possible values are `DEFAULT` and `CUSTOM`.
      * 
      */
     private final @Nullable String advertiseMode;
     /**
-     * User-specified list of prefix groups to advertise in custom mode.
+     * @return User-specified list of prefix groups to advertise in custom mode.
      * This field can only be populated if advertiseMode is CUSTOM and
      * is advertised to all peers of the router. These groups will be
      * advertised in addition to any specified prefixes. Leave this field
@@ -32,7 +32,7 @@ public final class RouterBgp {
      */
     private final @Nullable List<String> advertisedGroups;
     /**
-     * User-specified list of individual IP ranges to advertise in
+     * @return User-specified list of individual IP ranges to advertise in
      * custom mode. This field can only be populated if advertiseMode
      * is CUSTOM and is advertised to all peers of the router. These IP
      * ranges will be advertised in addition to any specified groups.
@@ -42,7 +42,7 @@ public final class RouterBgp {
      */
     private final @Nullable List<RouterBgpAdvertisedIpRange> advertisedIpRanges;
     /**
-     * Local BGP Autonomous System Number (ASN). Must be an RFC6996
+     * @return Local BGP Autonomous System Number (ASN). Must be an RFC6996
      * private ASN, either 16-bit or 32-bit. The value will be fixed for
      * this router resource. All VPN tunnels that link to this router
      * will have the same local ASN.
@@ -63,45 +63,45 @@ public final class RouterBgp {
     }
 
     /**
-     * User-specified flag to indicate which mode to use for advertisement.
+     * @return User-specified flag to indicate which mode to use for advertisement.
      * Default value is `DEFAULT`.
      * Possible values are `DEFAULT` and `CUSTOM`.
      * 
-    */
+     */
     public Optional<String> advertiseMode() {
         return Optional.ofNullable(this.advertiseMode);
     }
     /**
-     * User-specified list of prefix groups to advertise in custom mode.
+     * @return User-specified list of prefix groups to advertise in custom mode.
      * This field can only be populated if advertiseMode is CUSTOM and
      * is advertised to all peers of the router. These groups will be
      * advertised in addition to any specified prefixes. Leave this field
      * blank to advertise no custom groups.
      * This enum field has the one valid value: ALL_SUBNETS
      * 
-    */
+     */
     public List<String> advertisedGroups() {
         return this.advertisedGroups == null ? List.of() : this.advertisedGroups;
     }
     /**
-     * User-specified list of individual IP ranges to advertise in
+     * @return User-specified list of individual IP ranges to advertise in
      * custom mode. This field can only be populated if advertiseMode
      * is CUSTOM and is advertised to all peers of the router. These IP
      * ranges will be advertised in addition to any specified groups.
      * Leave this field blank to advertise no custom IP ranges.
      * Structure is documented below.
      * 
-    */
+     */
     public List<RouterBgpAdvertisedIpRange> advertisedIpRanges() {
         return this.advertisedIpRanges == null ? List.of() : this.advertisedIpRanges;
     }
     /**
-     * Local BGP Autonomous System Number (ASN). Must be an RFC6996
+     * @return Local BGP Autonomous System Number (ASN). Must be an RFC6996
      * private ASN, either 16-bit or 32-bit. The value will be fixed for
      * this router resource. All VPN tunnels that link to this router
      * will have the same local ASN.
      * 
-    */
+     */
     public Integer asn() {
         return this.asn;
     }

@@ -15,13 +15,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterClusterConfigPreemptibleWorkerConfig {
     /**
-     * Disk Config
+     * @return Disk Config
      * 
      */
     private final @Nullable ClusterClusterConfigPreemptibleWorkerConfigDiskConfig diskConfig;
     private final @Nullable List<String> instanceNames;
     /**
-     * Specifies the number of preemptible nodes to create.
+     * @return Specifies the number of preemptible nodes to create.
      * Defaults to 0.
      * 
      */
@@ -38,9 +38,9 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
     }
 
     /**
-     * Disk Config
+     * @return Disk Config
      * 
-    */
+     */
     public Optional<ClusterClusterConfigPreemptibleWorkerConfigDiskConfig> diskConfig() {
         return Optional.ofNullable(this.diskConfig);
     }
@@ -48,10 +48,10 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
         return this.instanceNames == null ? List.of() : this.instanceNames;
     }
     /**
-     * Specifies the number of preemptible nodes to create.
+     * @return Specifies the number of preemptible nodes to create.
      * Defaults to 0.
      * 
-    */
+     */
     public Optional<Integer> numInstances() {
         return Optional.ofNullable(this.numInstances);
     }

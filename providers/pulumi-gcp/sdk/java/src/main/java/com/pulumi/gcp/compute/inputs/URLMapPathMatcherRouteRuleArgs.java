@@ -32,6 +32,14 @@ public final class URLMapPathMatcherRouteRuleArgs extends com.pulumi.resources.R
     @Import(name="headerAction")
     private @Nullable Output<URLMapPathMatcherRouteRuleHeaderActionArgs> headerAction;
 
+    /**
+     * @return Specifies changes to request and response headers that need to take effect for
+     * the selected backendService.
+     * headerAction specified here take effect before headerAction in the enclosing
+     * HttpRouteRule, PathMatcher and UrlMap.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<URLMapPathMatcherRouteRuleHeaderActionArgs>> headerAction() {
         return Optional.ofNullable(this.headerAction);
     }
@@ -44,6 +52,11 @@ public final class URLMapPathMatcherRouteRuleArgs extends com.pulumi.resources.R
     @Import(name="matchRules")
     private @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleArgs>> matchRules;
 
+    /**
+     * @return The rules for determining a match.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<URLMapPathMatcherRouteRuleMatchRuleArgs>>> matchRules() {
         return Optional.ofNullable(this.matchRules);
     }
@@ -67,6 +80,22 @@ public final class URLMapPathMatcherRouteRuleArgs extends com.pulumi.resources.R
     @Import(name="priority", required=true)
     private Output<Integer> priority;
 
+    /**
+     * @return For routeRules within a given pathMatcher, priority determines the order
+     * in which load balancer will interpret routeRules. RouteRules are evaluated
+     * in order of priority, from the lowest to highest number. The priority of
+     * a rule decreases as its number increases (1, 2, 3, N+1). The first rule
+     * that matches the request is applied.
+     * You cannot configure two or more routeRules with the same priority.
+     * Priority for each rule must be set to a number between 0 and
+     * 2147483647 inclusive.
+     * Priority numbers can have gaps, which enable you to add or remove rules
+     * in the future without affecting the rest of the rules. For example,
+     * 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which
+     * you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
+     * future without any impact on existing rules.
+     * 
+     */
     public Output<Integer> priority() {
         return this.priority;
     }
@@ -84,6 +113,16 @@ public final class URLMapPathMatcherRouteRuleArgs extends com.pulumi.resources.R
     @Import(name="routeAction")
     private @Nullable Output<URLMapPathMatcherRouteRuleRouteActionArgs> routeAction;
 
+    /**
+     * @return In response to a matching matchRule, the load balancer performs advanced routing
+     * actions like URL rewrites, header transformations, etc. prior to forwarding the
+     * request to the selected backend. If  routeAction specifies any
+     * weightedBackendServices, service must not be set. Conversely if service is set,
+     * routeAction cannot contain any  weightedBackendServices. Only one of routeAction
+     * or urlRedirect must be set.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<URLMapPathMatcherRouteRuleRouteActionArgs>> routeAction() {
         return Optional.ofNullable(this.routeAction);
     }
@@ -95,6 +134,10 @@ public final class URLMapPathMatcherRouteRuleArgs extends com.pulumi.resources.R
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return The backend service or backend bucket link that should be matched by this test.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -109,6 +152,13 @@ public final class URLMapPathMatcherRouteRuleArgs extends com.pulumi.resources.R
     @Import(name="urlRedirect")
     private @Nullable Output<URLMapPathMatcherRouteRuleUrlRedirectArgs> urlRedirect;
 
+    /**
+     * @return When this rule is matched, the request is redirected to a URL specified by
+     * urlRedirect. If urlRedirect is specified, service or routeAction must not be
+     * set.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<URLMapPathMatcherRouteRuleUrlRedirectArgs>> urlRedirect() {
         return Optional.ofNullable(this.urlRedirect);
     }
@@ -142,60 +192,191 @@ public final class URLMapPathMatcherRouteRuleArgs extends com.pulumi.resources.R
             $ = new URLMapPathMatcherRouteRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerAction Specifies changes to request and response headers that need to take effect for
+         * the selected backendService.
+         * headerAction specified here take effect before headerAction in the enclosing
+         * HttpRouteRule, PathMatcher and UrlMap.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerAction(@Nullable Output<URLMapPathMatcherRouteRuleHeaderActionArgs> headerAction) {
             $.headerAction = headerAction;
             return this;
         }
 
+        /**
+         * @param headerAction Specifies changes to request and response headers that need to take effect for
+         * the selected backendService.
+         * headerAction specified here take effect before headerAction in the enclosing
+         * HttpRouteRule, PathMatcher and UrlMap.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerAction(URLMapPathMatcherRouteRuleHeaderActionArgs headerAction) {
             return headerAction(Output.of(headerAction));
         }
 
+        /**
+         * @param matchRules The rules for determining a match.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchRules(@Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleArgs>> matchRules) {
             $.matchRules = matchRules;
             return this;
         }
 
+        /**
+         * @param matchRules The rules for determining a match.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchRules(List<URLMapPathMatcherRouteRuleMatchRuleArgs> matchRules) {
             return matchRules(Output.of(matchRules));
         }
 
+        /**
+         * @param matchRules The rules for determining a match.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchRules(URLMapPathMatcherRouteRuleMatchRuleArgs... matchRules) {
             return matchRules(List.of(matchRules));
         }
 
+        /**
+         * @param priority For routeRules within a given pathMatcher, priority determines the order
+         * in which load balancer will interpret routeRules. RouteRules are evaluated
+         * in order of priority, from the lowest to highest number. The priority of
+         * a rule decreases as its number increases (1, 2, 3, N+1). The first rule
+         * that matches the request is applied.
+         * You cannot configure two or more routeRules with the same priority.
+         * Priority for each rule must be set to a number between 0 and
+         * 2147483647 inclusive.
+         * Priority numbers can have gaps, which enable you to add or remove rules
+         * in the future without affecting the rest of the rules. For example,
+         * 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which
+         * you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
+         * future without any impact on existing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority For routeRules within a given pathMatcher, priority determines the order
+         * in which load balancer will interpret routeRules. RouteRules are evaluated
+         * in order of priority, from the lowest to highest number. The priority of
+         * a rule decreases as its number increases (1, 2, 3, N+1). The first rule
+         * that matches the request is applied.
+         * You cannot configure two or more routeRules with the same priority.
+         * Priority for each rule must be set to a number between 0 and
+         * 2147483647 inclusive.
+         * Priority numbers can have gaps, which enable you to add or remove rules
+         * in the future without affecting the rest of the rules. For example,
+         * 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which
+         * you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
+         * future without any impact on existing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param routeAction In response to a matching matchRule, the load balancer performs advanced routing
+         * actions like URL rewrites, header transformations, etc. prior to forwarding the
+         * request to the selected backend. If  routeAction specifies any
+         * weightedBackendServices, service must not be set. Conversely if service is set,
+         * routeAction cannot contain any  weightedBackendServices. Only one of routeAction
+         * or urlRedirect must be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeAction(@Nullable Output<URLMapPathMatcherRouteRuleRouteActionArgs> routeAction) {
             $.routeAction = routeAction;
             return this;
         }
 
+        /**
+         * @param routeAction In response to a matching matchRule, the load balancer performs advanced routing
+         * actions like URL rewrites, header transformations, etc. prior to forwarding the
+         * request to the selected backend. If  routeAction specifies any
+         * weightedBackendServices, service must not be set. Conversely if service is set,
+         * routeAction cannot contain any  weightedBackendServices. Only one of routeAction
+         * or urlRedirect must be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeAction(URLMapPathMatcherRouteRuleRouteActionArgs routeAction) {
             return routeAction(Output.of(routeAction));
         }
 
+        /**
+         * @param service The backend service or backend bucket link that should be matched by this test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service The backend service or backend bucket link that should be matched by this test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param urlRedirect When this rule is matched, the request is redirected to a URL specified by
+         * urlRedirect. If urlRedirect is specified, service or routeAction must not be
+         * set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlRedirect(@Nullable Output<URLMapPathMatcherRouteRuleUrlRedirectArgs> urlRedirect) {
             $.urlRedirect = urlRedirect;
             return this;
         }
 
+        /**
+         * @param urlRedirect When this rule is matched, the request is redirected to a URL specified by
+         * urlRedirect. If urlRedirect is specified, service or routeAction must not be
+         * set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlRedirect(URLMapPathMatcherRouteRuleUrlRedirectArgs urlRedirect) {
             return urlRedirect(Output.of(urlRedirect));
         }

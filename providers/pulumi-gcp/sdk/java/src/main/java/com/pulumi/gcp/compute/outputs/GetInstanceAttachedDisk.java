@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetInstanceAttachedDisk {
     /**
-     * Name with which the attached disk is accessible
+     * @return Name with which the attached disk is accessible
      * under `/dev/disk/by-id/`
      * 
      */
@@ -19,12 +19,12 @@ public final class GetInstanceAttachedDisk {
     private final String diskEncryptionKeySha256;
     private final String kmsKeySelfLink;
     /**
-     * Read/write mode for the disk. One of `&#34;READ_ONLY&#34;` or `&#34;READ_WRITE&#34;`.
+     * @return Read/write mode for the disk. One of `&#34;READ_ONLY&#34;` or `&#34;READ_WRITE&#34;`.
      * 
      */
     private final String mode;
     /**
-     * The name or self_link of the disk attached to this instance.
+     * @return The name or self_link of the disk attached to this instance.
      * 
      */
     private final String source;
@@ -46,10 +46,10 @@ public final class GetInstanceAttachedDisk {
     }
 
     /**
-     * Name with which the attached disk is accessible
+     * @return Name with which the attached disk is accessible
      * under `/dev/disk/by-id/`
      * 
-    */
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -63,16 +63,16 @@ public final class GetInstanceAttachedDisk {
         return this.kmsKeySelfLink;
     }
     /**
-     * Read/write mode for the disk. One of `&#34;READ_ONLY&#34;` or `&#34;READ_WRITE&#34;`.
+     * @return Read/write mode for the disk. One of `&#34;READ_ONLY&#34;` or `&#34;READ_WRITE&#34;`.
      * 
-    */
+     */
     public String mode() {
         return this.mode;
     }
     /**
-     * The name or self_link of the disk attached to this instance.
+     * @return The name or self_link of the disk attached to this instance.
      * 
-    */
+     */
     public String source() {
         return this.source;
     }

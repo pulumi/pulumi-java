@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BucketLifecycleRuleAction {
     /**
-     * The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
+     * @return The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
      * 
      */
     private final @Nullable String storageClass;
     /**
-     * The type of the action of this Lifecycle Rule. Supported values include: `Delete` and `SetStorageClass`.
+     * @return The type of the action of this Lifecycle Rule. Supported values include: `Delete` and `SetStorageClass`.
      * 
      */
     private final String type;
@@ -31,16 +31,16 @@ public final class BucketLifecycleRuleAction {
     }
 
     /**
-     * The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
+     * @return The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
      * 
-    */
+     */
     public Optional<String> storageClass() {
         return Optional.ofNullable(this.storageClass);
     }
     /**
-     * The type of the action of this Lifecycle Rule. Supported values include: `Delete` and `SetStorageClass`.
+     * @return The type of the action of this Lifecycle Rule. Supported values include: `Delete` and `SetStorageClass`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

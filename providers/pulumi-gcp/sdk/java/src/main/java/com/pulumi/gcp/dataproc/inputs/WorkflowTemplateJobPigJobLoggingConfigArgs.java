@@ -23,6 +23,10 @@ public final class WorkflowTemplateJobPigJobLoggingConfigArgs extends com.pulumi
     @Import(name="driverLogLevels")
     private @Nullable Output<Map<String,String>> driverLogLevels;
 
+    /**
+     * @return The per-package log levels for the driver. This may include &#34;root&#34; package name to configure rootLogger. Examples: &#39;com.google = FATAL&#39;, &#39;root = INFO&#39;, &#39;org.apache = DEBUG&#39;
+     * 
+     */
     public Optional<Output<Map<String,String>>> driverLogLevels() {
         return Optional.ofNullable(this.driverLogLevels);
     }
@@ -51,11 +55,23 @@ public final class WorkflowTemplateJobPigJobLoggingConfigArgs extends com.pulumi
             $ = new WorkflowTemplateJobPigJobLoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param driverLogLevels The per-package log levels for the driver. This may include &#34;root&#34; package name to configure rootLogger. Examples: &#39;com.google = FATAL&#39;, &#39;root = INFO&#39;, &#39;org.apache = DEBUG&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder driverLogLevels(@Nullable Output<Map<String,String>> driverLogLevels) {
             $.driverLogLevels = driverLogLevels;
             return this;
         }
 
+        /**
+         * @param driverLogLevels The per-package log levels for the driver. This may include &#34;root&#34; package name to configure rootLogger. Examples: &#39;com.google = FATAL&#39;, &#39;root = INFO&#39;, &#39;org.apache = DEBUG&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder driverLogLevels(Map<String,String> driverLogLevels) {
             return driverLogLevels(Output.of(driverLogLevels));
         }

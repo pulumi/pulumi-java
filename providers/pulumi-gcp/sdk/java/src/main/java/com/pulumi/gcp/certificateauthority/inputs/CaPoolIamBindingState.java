@@ -24,6 +24,10 @@ public final class CaPoolIamBindingState extends com.pulumi.resources.ResourceAr
     @Import(name="caPool")
     private @Nullable Output<String> caPool;
 
+    /**
+     * @return Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     public Optional<Output<String>> caPool() {
         return Optional.ofNullable(this.caPool);
     }
@@ -42,6 +46,10 @@ public final class CaPoolIamBindingState extends com.pulumi.resources.ResourceAr
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return (Computed) The etag of the IAM policy.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -55,6 +63,12 @@ public final class CaPoolIamBindingState extends com.pulumi.resources.ResourceAr
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location of the CaPool. A full list of valid locations can be found by
+     * running `gcloud privateca locations list`.
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -74,6 +88,11 @@ public final class CaPoolIamBindingState extends com.pulumi.resources.ResourceAr
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -87,6 +106,12 @@ public final class CaPoolIamBindingState extends com.pulumi.resources.ResourceAr
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.certificateauthority.CaPoolIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -121,11 +146,23 @@ public final class CaPoolIamBindingState extends com.pulumi.resources.ResourceAr
             $ = new CaPoolIamBindingState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caPool Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder caPool(@Nullable Output<String> caPool) {
             $.caPool = caPool;
             return this;
         }
 
+        /**
+         * @param caPool Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder caPool(String caPool) {
             return caPool(Output.of(caPool));
         }
@@ -139,20 +176,48 @@ public final class CaPoolIamBindingState extends com.pulumi.resources.ResourceAr
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param etag (Computed) The etag of the IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag (Computed) The etag of the IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param location Location of the CaPool. A full list of valid locations can be found by
+         * running `gcloud privateca locations list`.
+         * Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the CaPool. A full list of valid locations can be found by
+         * running `gcloud privateca locations list`.
+         * Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
@@ -170,20 +235,50 @@ public final class CaPoolIamBindingState extends com.pulumi.resources.ResourceAr
             return members(List.of(members));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.certificateauthority.CaPoolIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.certificateauthority.CaPoolIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

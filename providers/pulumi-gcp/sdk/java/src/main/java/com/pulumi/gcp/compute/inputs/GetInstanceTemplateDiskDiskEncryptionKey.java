@@ -19,6 +19,10 @@ public final class GetInstanceTemplateDiskDiskEncryptionKey extends com.pulumi.r
     @Import(name="kmsKeySelfLink", required=true)
     private String kmsKeySelfLink;
 
+    /**
+     * @return The self link of the encryption key that is stored in Google Cloud KMS
+     * 
+     */
     public String kmsKeySelfLink() {
         return this.kmsKeySelfLink;
     }
@@ -47,6 +51,12 @@ public final class GetInstanceTemplateDiskDiskEncryptionKey extends com.pulumi.r
             $ = new GetInstanceTemplateDiskDiskEncryptionKey(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeySelfLink The self link of the encryption key that is stored in Google Cloud KMS
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeySelfLink(String kmsKeySelfLink) {
             $.kmsKeySelfLink = kmsKeySelfLink;
             return this;

@@ -24,6 +24,10 @@ public final class MangedSslCertificateArgs extends com.pulumi.resources.Resourc
     @Import(name="certificateId")
     private @Nullable Output<Integer> certificateId;
 
+    /**
+     * @return The unique identifier for the resource.
+     * 
+     */
     public Optional<Output<Integer>> certificateId() {
         return Optional.ofNullable(this.certificateId);
     }
@@ -35,6 +39,10 @@ public final class MangedSslCertificateArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,11 @@ public final class MangedSslCertificateArgs extends com.pulumi.resources.Resourc
     @Import(name="managed")
     private @Nullable Output<MangedSslCertificateManagedArgs> managed;
 
+    /**
+     * @return Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
+     * of &#39;MANAGED&#39; in &#39;type&#39;).
+     * 
+     */
     public Optional<Output<MangedSslCertificateManagedArgs>> managed() {
         return Optional.ofNullable(this.managed);
     }
@@ -62,6 +75,14 @@ public final class MangedSslCertificateArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
+     * comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+     * &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the first character must be a lowercase letter, and all following characters
+     * must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
+     * namespace as the managed SSL certificates.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -81,6 +102,11 @@ public final class MangedSslCertificateArgs extends com.pulumi.resources.Resourc
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Enum field whose value is always &#39;MANAGED&#39; - used to signal to the API which type this is. Default value: &#34;MANAGED&#34;
+     * Possible values: [&#34;MANAGED&#34;]
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -114,38 +140,96 @@ public final class MangedSslCertificateArgs extends com.pulumi.resources.Resourc
             $ = new MangedSslCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateId The unique identifier for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(@Nullable Output<Integer> certificateId) {
             $.certificateId = certificateId;
             return this;
         }
 
+        /**
+         * @param certificateId The unique identifier for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(Integer certificateId) {
             return certificateId(Output.of(certificateId));
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param managed Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
+         * of &#39;MANAGED&#39; in &#39;type&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder managed(@Nullable Output<MangedSslCertificateManagedArgs> managed) {
             $.managed = managed;
             return this;
         }
 
+        /**
+         * @param managed Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
+         * of &#39;MANAGED&#39; in &#39;type&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder managed(MangedSslCertificateManagedArgs managed) {
             return managed(Output.of(managed));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
+         * comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+         * &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the first character must be a lowercase letter, and all following characters
+         * must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
+         * namespace as the managed SSL certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
+         * comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+         * &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the first character must be a lowercase letter, and all following characters
+         * must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
+         * namespace as the managed SSL certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -159,11 +243,25 @@ public final class MangedSslCertificateArgs extends com.pulumi.resources.Resourc
             return project(Output.of(project));
         }
 
+        /**
+         * @param type Enum field whose value is always &#39;MANAGED&#39; - used to signal to the API which type this is. Default value: &#34;MANAGED&#34;
+         * Possible values: [&#34;MANAGED&#34;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Enum field whose value is always &#39;MANAGED&#39; - used to signal to the API which type this is. Default value: &#34;MANAGED&#34;
+         * Possible values: [&#34;MANAGED&#34;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

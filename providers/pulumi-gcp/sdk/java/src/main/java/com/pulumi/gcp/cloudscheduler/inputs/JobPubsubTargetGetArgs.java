@@ -24,6 +24,11 @@ public final class JobPubsubTargetGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="attributes")
     private @Nullable Output<Map<String,String>> attributes;
 
+    /**
+     * @return Attributes for PubsubMessage.
+     * Pubsub message must contain either non-empty data, or at least one attribute.
+     * 
+     */
     public Optional<Output<Map<String,String>>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -37,6 +42,12 @@ public final class JobPubsubTargetGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="data")
     private @Nullable Output<String> data;
 
+    /**
+     * @return The message payload for PubsubMessage.
+     * Pubsub message must contain either non-empty data, or at least one attribute.
+     * A base64-encoded string.
+     * 
+     */
     public Optional<Output<String>> data() {
         return Optional.ofNullable(this.data);
     }
@@ -51,6 +62,13 @@ public final class JobPubsubTargetGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="topicName", required=true)
     private Output<String> topicName;
 
+    /**
+     * @return The full resource name for the Cloud Pub/Sub topic to which
+     * messages will be published when a job is delivered. ~&gt;**NOTE:**
+     * The topic name must be in the same format as required by PubSub&#39;s
+     * PublishRequest.name, e.g. `projects/my-project/topics/my-topic`.
+     * 
+     */
     public Output<String> topicName() {
         return this.topicName;
     }
@@ -81,29 +99,77 @@ public final class JobPubsubTargetGetArgs extends com.pulumi.resources.ResourceA
             $ = new JobPubsubTargetGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes Attributes for PubsubMessage.
+         * Pubsub message must contain either non-empty data, or at least one attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes Attributes for PubsubMessage.
+         * Pubsub message must contain either non-empty data, or at least one attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(Map<String,String> attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param data The message payload for PubsubMessage.
+         * Pubsub message must contain either non-empty data, or at least one attribute.
+         * A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(@Nullable Output<String> data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param data The message payload for PubsubMessage.
+         * Pubsub message must contain either non-empty data, or at least one attribute.
+         * A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             return data(Output.of(data));
         }
 
+        /**
+         * @param topicName The full resource name for the Cloud Pub/Sub topic to which
+         * messages will be published when a job is delivered. ~&gt;**NOTE:**
+         * The topic name must be in the same format as required by PubSub&#39;s
+         * PublishRequest.name, e.g. `projects/my-project/topics/my-topic`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(Output<String> topicName) {
             $.topicName = topicName;
             return this;
         }
 
+        /**
+         * @param topicName The full resource name for the Cloud Pub/Sub topic to which
+         * messages will be published when a job is delivered. ~&gt;**NOTE:**
+         * The topic name must be in the same format as required by PubSub&#39;s
+         * PublishRequest.name, e.g. `projects/my-project/topics/my-topic`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(String topicName) {
             return topicName(Output.of(topicName));
         }

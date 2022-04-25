@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetFunctionEventTriggerFailurePolicy {
     /**
-     * Whether the function should be retried on failure.
+     * @return Whether the function should be retried on failure.
      * 
      */
     private final Boolean retry;
@@ -21,9 +21,9 @@ public final class GetFunctionEventTriggerFailurePolicy {
     }
 
     /**
-     * Whether the function should be retried on failure.
+     * @return Whether the function should be retried on failure.
      * 
-    */
+     */
     public Boolean retry() {
         return this.retry;
     }

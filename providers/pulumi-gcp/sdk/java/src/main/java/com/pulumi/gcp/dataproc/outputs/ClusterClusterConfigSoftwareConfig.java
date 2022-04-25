@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterClusterConfigSoftwareConfig {
     /**
-     * The Cloud Dataproc image version to use
+     * @return The Cloud Dataproc image version to use
      * for the cluster - this controls the sets of software versions
      * installed onto the nodes when you create clusters. If not specified, defaults to the
      * latest version. For a list of valid versions see
@@ -24,7 +24,7 @@ public final class ClusterClusterConfigSoftwareConfig {
      */
     private final @Nullable String imageVersion;
     /**
-     * The set of optional components to activate on the cluster.
+     * @return The set of optional components to activate on the cluster.
      * Accepted values are:
      * * ANACONDA
      * * DRUID
@@ -41,7 +41,7 @@ public final class ClusterClusterConfigSoftwareConfig {
      */
     private final @Nullable List<String> optionalComponents;
     /**
-     * A list of override and additional properties (key/value pairs)
+     * @return A list of override and additional properties (key/value pairs)
      * used to modify various aspects of the common configuration files used when creating
      * a cluster. For a list of valid properties please see
      * [Cluster properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties)
@@ -63,18 +63,18 @@ public final class ClusterClusterConfigSoftwareConfig {
     }
 
     /**
-     * The Cloud Dataproc image version to use
+     * @return The Cloud Dataproc image version to use
      * for the cluster - this controls the sets of software versions
      * installed onto the nodes when you create clusters. If not specified, defaults to the
      * latest version. For a list of valid versions see
      * [Cloud Dataproc versions](https://cloud.google.com/dataproc/docs/concepts/dataproc-versions)
      * 
-    */
+     */
     public Optional<String> imageVersion() {
         return Optional.ofNullable(this.imageVersion);
     }
     /**
-     * The set of optional components to activate on the cluster.
+     * @return The set of optional components to activate on the cluster.
      * Accepted values are:
      * * ANACONDA
      * * DRUID
@@ -88,17 +88,17 @@ public final class ClusterClusterConfigSoftwareConfig {
      * * ZEPPELIN
      * * ZOOKEEPER
      * 
-    */
+     */
     public List<String> optionalComponents() {
         return this.optionalComponents == null ? List.of() : this.optionalComponents;
     }
     /**
-     * A list of override and additional properties (key/value pairs)
+     * @return A list of override and additional properties (key/value pairs)
      * used to modify various aspects of the common configuration files used when creating
      * a cluster. For a list of valid properties please see
      * [Cluster properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties)
      * 
-    */
+     */
     public Map<String,String> overrideProperties() {
         return this.overrideProperties == null ? Map.of() : this.overrideProperties;
     }

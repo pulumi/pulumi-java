@@ -34,6 +34,13 @@ public final class DicomStoreIamBindingArgs extends com.pulumi.resources.Resourc
     @Import(name="dicomStoreId", required=true)
     private Output<String> dicomStoreId;
 
+    /**
+     * @return The DICOM store ID, in the form
+     * `{project_id}/{location_name}/{dataset_name}/{dicom_store_name}` or
+     * `{location_name}/{dataset_name}/{dicom_store_name}`. In the second form, the provider&#39;s
+     * project setting will be used as a fallback.
+     * 
+     */
     public Output<String> dicomStoreId() {
         return this.dicomStoreId;
     }
@@ -54,6 +61,12 @@ public final class DicomStoreIamBindingArgs extends com.pulumi.resources.Resourc
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.healthcare.DicomStoreIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -94,11 +107,29 @@ public final class DicomStoreIamBindingArgs extends com.pulumi.resources.Resourc
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param dicomStoreId The DICOM store ID, in the form
+         * `{project_id}/{location_name}/{dataset_name}/{dicom_store_name}` or
+         * `{location_name}/{dataset_name}/{dicom_store_name}`. In the second form, the provider&#39;s
+         * project setting will be used as a fallback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dicomStoreId(Output<String> dicomStoreId) {
             $.dicomStoreId = dicomStoreId;
             return this;
         }
 
+        /**
+         * @param dicomStoreId The DICOM store ID, in the form
+         * `{project_id}/{location_name}/{dataset_name}/{dicom_store_name}` or
+         * `{location_name}/{dataset_name}/{dicom_store_name}`. In the second form, the provider&#39;s
+         * project setting will be used as a fallback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dicomStoreId(String dicomStoreId) {
             return dicomStoreId(Output.of(dicomStoreId));
         }
@@ -116,11 +147,27 @@ public final class DicomStoreIamBindingArgs extends com.pulumi.resources.Resourc
             return members(List.of(members));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.healthcare.DicomStoreIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.healthcare.DicomStoreIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

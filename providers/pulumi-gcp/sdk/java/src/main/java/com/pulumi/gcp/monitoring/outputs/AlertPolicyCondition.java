@@ -16,34 +16,34 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AlertPolicyCondition {
     /**
-     * A condition that checks that a time series
+     * @return A condition that checks that a time series
      * continues to receive new data points.
      * Structure is documented below.
      * 
      */
     private final @Nullable AlertPolicyConditionConditionAbsent conditionAbsent;
     /**
-     * A condition that checks for log messages matching given constraints.
+     * @return A condition that checks for log messages matching given constraints.
      * If set, no other conditions can be present.
      * Structure is documented below.
      * 
      */
     private final @Nullable AlertPolicyConditionConditionMatchedLog conditionMatchedLog;
     /**
-     * A Monitoring Query Language query that outputs a boolean stream
+     * @return A Monitoring Query Language query that outputs a boolean stream
      * Structure is documented below.
      * 
      */
     private final @Nullable AlertPolicyConditionConditionMonitoringQueryLanguage conditionMonitoringQueryLanguage;
     /**
-     * A condition that compares a time series against a
+     * @return A condition that compares a time series against a
      * threshold.
      * Structure is documented below.
      * 
      */
     private final @Nullable AlertPolicyConditionConditionThreshold conditionThreshold;
     /**
-     * A short name or phrase used to identify the
+     * @return A short name or phrase used to identify the
      * condition in dashboards, notifications, and
      * incidents. To avoid confusion, don&#39;t use the same
      * display name for multiple conditions in the same
@@ -52,7 +52,7 @@ public final class AlertPolicyCondition {
      */
     private final String displayName;
     /**
-     * - 
+     * @return -
      * The unique resource name for this condition.
      * Its syntax is:
      * projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
@@ -80,53 +80,53 @@ public final class AlertPolicyCondition {
     }
 
     /**
-     * A condition that checks that a time series
+     * @return A condition that checks that a time series
      * continues to receive new data points.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<AlertPolicyConditionConditionAbsent> conditionAbsent() {
         return Optional.ofNullable(this.conditionAbsent);
     }
     /**
-     * A condition that checks for log messages matching given constraints.
+     * @return A condition that checks for log messages matching given constraints.
      * If set, no other conditions can be present.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<AlertPolicyConditionConditionMatchedLog> conditionMatchedLog() {
         return Optional.ofNullable(this.conditionMatchedLog);
     }
     /**
-     * A Monitoring Query Language query that outputs a boolean stream
+     * @return A Monitoring Query Language query that outputs a boolean stream
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<AlertPolicyConditionConditionMonitoringQueryLanguage> conditionMonitoringQueryLanguage() {
         return Optional.ofNullable(this.conditionMonitoringQueryLanguage);
     }
     /**
-     * A condition that compares a time series against a
+     * @return A condition that compares a time series against a
      * threshold.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<AlertPolicyConditionConditionThreshold> conditionThreshold() {
         return Optional.ofNullable(this.conditionThreshold);
     }
     /**
-     * A short name or phrase used to identify the
+     * @return A short name or phrase used to identify the
      * condition in dashboards, notifications, and
      * incidents. To avoid confusion, don&#39;t use the same
      * display name for multiple conditions in the same
      * policy.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * - 
+     * @return -
      * The unique resource name for this condition.
      * Its syntax is:
      * projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
@@ -134,7 +134,7 @@ public final class AlertPolicyCondition {
      * the condition is created as part of a new or updated alerting
      * policy.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

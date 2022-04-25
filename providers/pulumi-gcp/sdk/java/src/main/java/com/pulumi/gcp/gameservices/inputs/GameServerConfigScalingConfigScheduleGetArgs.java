@@ -24,6 +24,12 @@ public final class GameServerConfigScalingConfigScheduleGetArgs extends com.pulu
     @Import(name="cronJobDuration")
     private @Nullable Output<String> cronJobDuration;
 
+    /**
+     * @return The duration for the cron job event. The duration of the event is effective
+     * after the cron job&#39;s start time.
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     * 
+     */
     public Optional<Output<String>> cronJobDuration() {
         return Optional.ofNullable(this.cronJobDuration);
     }
@@ -37,6 +43,12 @@ public final class GameServerConfigScalingConfigScheduleGetArgs extends com.pulu
     @Import(name="cronSpec")
     private @Nullable Output<String> cronSpec;
 
+    /**
+     * @return The cron definition of the scheduled event. See
+     * https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
+     * defined by the realm.
+     * 
+     */
     public Optional<Output<String>> cronSpec() {
         return Optional.ofNullable(this.cronSpec);
     }
@@ -49,6 +61,11 @@ public final class GameServerConfigScalingConfigScheduleGetArgs extends com.pulu
     @Import(name="endTime")
     private @Nullable Output<String> endTime;
 
+    /**
+     * @return The end time of the event.
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -61,6 +78,11 @@ public final class GameServerConfigScalingConfigScheduleGetArgs extends com.pulu
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return The start time of the event.
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -92,38 +114,98 @@ public final class GameServerConfigScalingConfigScheduleGetArgs extends com.pulu
             $ = new GameServerConfigScalingConfigScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cronJobDuration The duration for the cron job event. The duration of the event is effective
+         * after the cron job&#39;s start time.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cronJobDuration(@Nullable Output<String> cronJobDuration) {
             $.cronJobDuration = cronJobDuration;
             return this;
         }
 
+        /**
+         * @param cronJobDuration The duration for the cron job event. The duration of the event is effective
+         * after the cron job&#39;s start time.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cronJobDuration(String cronJobDuration) {
             return cronJobDuration(Output.of(cronJobDuration));
         }
 
+        /**
+         * @param cronSpec The cron definition of the scheduled event. See
+         * https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
+         * defined by the realm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cronSpec(@Nullable Output<String> cronSpec) {
             $.cronSpec = cronSpec;
             return this;
         }
 
+        /**
+         * @param cronSpec The cron definition of the scheduled event. See
+         * https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
+         * defined by the realm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cronSpec(String cronSpec) {
             return cronSpec(Output.of(cronSpec));
         }
 
+        /**
+         * @param endTime The end time of the event.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime The end time of the event.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
 
+        /**
+         * @param startTime The start time of the event.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime The start time of the event.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }

@@ -20,6 +20,10 @@ public final class AwsNodePoolConfigTaintArgs extends com.pulumi.resources.Resou
     @Import(name="effect", required=true)
     private Output<String> effect;
 
+    /**
+     * @return Required. The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
+     * 
+     */
     public Output<String> effect() {
         return this.effect;
     }
@@ -31,6 +35,10 @@ public final class AwsNodePoolConfigTaintArgs extends com.pulumi.resources.Resou
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return Required. Key for the taint.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -42,6 +50,10 @@ public final class AwsNodePoolConfigTaintArgs extends com.pulumi.resources.Resou
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Required. Value for the taint.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -72,29 +84,65 @@ public final class AwsNodePoolConfigTaintArgs extends com.pulumi.resources.Resou
             $ = new AwsNodePoolConfigTaintArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param effect Required. The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
+         * 
+         * @return builder
+         * 
+         */
         public Builder effect(Output<String> effect) {
             $.effect = effect;
             return this;
         }
 
+        /**
+         * @param effect Required. The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
+         * 
+         * @return builder
+         * 
+         */
         public Builder effect(String effect) {
             return effect(Output.of(effect));
         }
 
+        /**
+         * @param key Required. Key for the taint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Required. Key for the taint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param value Required. Value for the taint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Required. Value for the taint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

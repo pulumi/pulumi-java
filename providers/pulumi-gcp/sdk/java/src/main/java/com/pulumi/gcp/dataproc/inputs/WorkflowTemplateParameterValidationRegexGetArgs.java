@@ -21,6 +21,10 @@ public final class WorkflowTemplateParameterValidationRegexGetArgs extends com.p
     @Import(name="regexes", required=true)
     private Output<List<String>> regexes;
 
+    /**
+     * @return Required. RE2 regular expressions used to validate the parameter&#39;s value. The value must match the regex in its entirety (substring matches are not sufficient).
+     * 
+     */
     public Output<List<String>> regexes() {
         return this.regexes;
     }
@@ -49,15 +53,33 @@ public final class WorkflowTemplateParameterValidationRegexGetArgs extends com.p
             $ = new WorkflowTemplateParameterValidationRegexGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param regexes Required. RE2 regular expressions used to validate the parameter&#39;s value. The value must match the regex in its entirety (substring matches are not sufficient).
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexes(Output<List<String>> regexes) {
             $.regexes = regexes;
             return this;
         }
 
+        /**
+         * @param regexes Required. RE2 regular expressions used to validate the parameter&#39;s value. The value must match the regex in its entirety (substring matches are not sufficient).
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexes(List<String> regexes) {
             return regexes(Output.of(regexes));
         }
 
+        /**
+         * @param regexes Required. RE2 regular expressions used to validate the parameter&#39;s value. The value must match the regex in its entirety (substring matches are not sufficient).
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexes(String... regexes) {
             return regexes(List.of(regexes));
         }

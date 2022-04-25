@@ -21,6 +21,10 @@ public final class MetricBucketOptionsExplicitBucketsArgs extends com.pulumi.res
     @Import(name="bounds", required=true)
     private Output<List<Double>> bounds;
 
+    /**
+     * @return The values must be monotonically increasing.
+     * 
+     */
     public Output<List<Double>> bounds() {
         return this.bounds;
     }
@@ -49,15 +53,33 @@ public final class MetricBucketOptionsExplicitBucketsArgs extends com.pulumi.res
             $ = new MetricBucketOptionsExplicitBucketsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bounds The values must be monotonically increasing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bounds(Output<List<Double>> bounds) {
             $.bounds = bounds;
             return this;
         }
 
+        /**
+         * @param bounds The values must be monotonically increasing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bounds(List<Double> bounds) {
             return bounds(Output.of(bounds));
         }
 
+        /**
+         * @param bounds The values must be monotonically increasing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bounds(Double... bounds) {
             return bounds(List.of(bounds));
         }

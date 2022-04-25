@@ -12,12 +12,12 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig {
     private final String externalIpv6;
     private final String externalIpv6PrefixLength;
     /**
-     * The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
+     * @return The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
      * 
      */
     private final String networkTier;
     /**
-     * The DNS domain name for the public PTR record.
+     * @return The DNS domain name for the public PTR record.
      * 
      */
     private final String publicPtrDomainName;
@@ -41,16 +41,16 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig {
         return this.externalIpv6PrefixLength;
     }
     /**
-     * The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
+     * @return The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
      * 
-    */
+     */
     public String networkTier() {
         return this.networkTier;
     }
     /**
-     * The DNS domain name for the public PTR record.
+     * @return The DNS domain name for the public PTR record.
      * 
-    */
+     */
     public String publicPtrDomainName() {
         return this.publicPtrDomainName;
     }

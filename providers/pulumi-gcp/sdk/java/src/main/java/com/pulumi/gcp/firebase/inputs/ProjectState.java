@@ -22,6 +22,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The GCP project display name
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -34,6 +38,11 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -45,6 +54,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectNumber")
     private @Nullable Output<String> projectNumber;
 
+    /**
+     * @return The number of the google project that firebase is enabled on.
+     * 
+     */
     public Optional<Output<String>> projectNumber() {
         return Optional.ofNullable(this.projectNumber);
     }
@@ -75,29 +88,67 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
             $ = new ProjectState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The GCP project display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The GCP project display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param projectNumber The number of the google project that firebase is enabled on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectNumber(@Nullable Output<String> projectNumber) {
             $.projectNumber = projectNumber;
             return this;
         }
 
+        /**
+         * @param projectNumber The number of the google project that firebase is enabled on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectNumber(String projectNumber) {
             return projectNumber(Output.of(projectNumber));
         }

@@ -23,6 +23,10 @@ public final class MetricBucketOptionsExponentialBucketsGetArgs extends com.pulu
     @Import(name="growthFactor")
     private @Nullable Output<Double> growthFactor;
 
+    /**
+     * @return Must be greater than 1.
+     * 
+     */
     public Optional<Output<Double>> growthFactor() {
         return Optional.ofNullable(this.growthFactor);
     }
@@ -34,6 +38,10 @@ public final class MetricBucketOptionsExponentialBucketsGetArgs extends com.pulu
     @Import(name="numFiniteBuckets")
     private @Nullable Output<Integer> numFiniteBuckets;
 
+    /**
+     * @return Must be greater than 0.
+     * 
+     */
     public Optional<Output<Integer>> numFiniteBuckets() {
         return Optional.ofNullable(this.numFiniteBuckets);
     }
@@ -45,6 +53,10 @@ public final class MetricBucketOptionsExponentialBucketsGetArgs extends com.pulu
     @Import(name="scale")
     private @Nullable Output<Double> scale;
 
+    /**
+     * @return Must be greater than 0.
+     * 
+     */
     public Optional<Output<Double>> scale() {
         return Optional.ofNullable(this.scale);
     }
@@ -75,29 +87,65 @@ public final class MetricBucketOptionsExponentialBucketsGetArgs extends com.pulu
             $ = new MetricBucketOptionsExponentialBucketsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param growthFactor Must be greater than 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder growthFactor(@Nullable Output<Double> growthFactor) {
             $.growthFactor = growthFactor;
             return this;
         }
 
+        /**
+         * @param growthFactor Must be greater than 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder growthFactor(Double growthFactor) {
             return growthFactor(Output.of(growthFactor));
         }
 
+        /**
+         * @param numFiniteBuckets Must be greater than 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numFiniteBuckets(@Nullable Output<Integer> numFiniteBuckets) {
             $.numFiniteBuckets = numFiniteBuckets;
             return this;
         }
 
+        /**
+         * @param numFiniteBuckets Must be greater than 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numFiniteBuckets(Integer numFiniteBuckets) {
             return numFiniteBuckets(Output.of(numFiniteBuckets));
         }
 
+        /**
+         * @param scale Must be greater than 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(@Nullable Output<Double> scale) {
             $.scale = scale;
             return this;
         }
 
+        /**
+         * @param scale Must be greater than 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(Double scale) {
             return scale(Output.of(scale));
         }

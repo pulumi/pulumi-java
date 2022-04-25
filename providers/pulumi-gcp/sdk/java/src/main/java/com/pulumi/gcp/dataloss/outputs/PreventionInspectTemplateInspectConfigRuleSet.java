@@ -12,13 +12,13 @@ import java.util.Objects;
 @CustomType
 public final class PreventionInspectTemplateInspectConfigRuleSet {
     /**
-     * If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+     * @return If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
      * Structure is documented below.
      * 
      */
     private final List<PreventionInspectTemplateInspectConfigRuleSetInfoType> infoTypes;
     /**
-     * Set of rules to be applied to infoTypes. The rules are applied in order.
+     * @return Set of rules to be applied to infoTypes. The rules are applied in order.
      * Structure is documented below.
      * 
      */
@@ -33,18 +33,18 @@ public final class PreventionInspectTemplateInspectConfigRuleSet {
     }
 
     /**
-     * If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+     * @return If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
      * Structure is documented below.
      * 
-    */
+     */
     public List<PreventionInspectTemplateInspectConfigRuleSetInfoType> infoTypes() {
         return this.infoTypes;
     }
     /**
-     * Set of rules to be applied to infoTypes. The rules are applied in order.
+     * @return Set of rules to be applied to infoTypes. The rules are applied in order.
      * Structure is documented below.
      * 
-    */
+     */
     public List<PreventionInspectTemplateInspectConfigRuleSetRule> rules() {
         return this.rules;
     }

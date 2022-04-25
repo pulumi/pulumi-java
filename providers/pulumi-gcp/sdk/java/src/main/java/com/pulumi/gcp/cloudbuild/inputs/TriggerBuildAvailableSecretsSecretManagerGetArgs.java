@@ -23,6 +23,13 @@ public final class TriggerBuildAvailableSecretsSecretManagerGetArgs extends com.
     @Import(name="env", required=true)
     private Output<String> env;
 
+    /**
+     * @return A list of global environment variable definitions that will exist for all build steps
+     * in this build. If a variable is defined in both globally and in a build step,
+     * the variable will use the build step value.
+     * The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
+     * 
+     */
     public Output<String> env() {
         return this.env;
     }
@@ -34,6 +41,10 @@ public final class TriggerBuildAvailableSecretsSecretManagerGetArgs extends com.
     @Import(name="versionName", required=true)
     private Output<String> versionName;
 
+    /**
+     * @return Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
+     * 
+     */
     public Output<String> versionName() {
         return this.versionName;
     }
@@ -63,20 +74,50 @@ public final class TriggerBuildAvailableSecretsSecretManagerGetArgs extends com.
             $ = new TriggerBuildAvailableSecretsSecretManagerGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param env A list of global environment variable definitions that will exist for all build steps
+         * in this build. If a variable is defined in both globally and in a build step,
+         * the variable will use the build step value.
+         * The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(Output<String> env) {
             $.env = env;
             return this;
         }
 
+        /**
+         * @param env A list of global environment variable definitions that will exist for all build steps
+         * in this build. If a variable is defined in both globally and in a build step,
+         * the variable will use the build step value.
+         * The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(String env) {
             return env(Output.of(env));
         }
 
+        /**
+         * @param versionName Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionName(Output<String> versionName) {
             $.versionName = versionName;
             return this;
         }
 
+        /**
+         * @param versionName Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionName(String versionName) {
             return versionName(Output.of(versionName));
         }

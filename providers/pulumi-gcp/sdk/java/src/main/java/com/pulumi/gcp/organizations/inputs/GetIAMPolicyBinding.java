@@ -23,6 +23,10 @@ public final class GetIAMPolicyBinding extends com.pulumi.resources.InvokeArgs {
     @Import(name="condition")
     private @Nullable GetIAMPolicyBindingCondition condition;
 
+    /**
+     * @return An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
+     * 
+     */
     public Optional<GetIAMPolicyBindingCondition> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -41,6 +45,17 @@ public final class GetIAMPolicyBinding extends com.pulumi.resources.InvokeArgs {
     @Import(name="members", required=true)
     private List<String> members;
 
+    /**
+     * @return An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+     * Each entry can have one of the following values:
+     * * **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. Some resources **don&#39;t** support this identity.
+     * * **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. Some resources **don&#39;t** support this identity.
+     * * **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com.
+     * * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
+     * * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
+     * * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+     * 
+     */
     public List<String> members() {
         return this.members;
     }
@@ -54,6 +69,12 @@ public final class GetIAMPolicyBinding extends com.pulumi.resources.InvokeArgs {
     @Import(name="role", required=true)
     private String role;
 
+    /**
+     * @return The role/permission that will be granted to the members.
+     * See the [IAM Roles](https://cloud.google.com/compute/docs/access/iam) documentation for a complete list of roles.
+     * Note that custom roles must be of the format `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public String role() {
         return this.role;
     }
@@ -84,20 +105,60 @@ public final class GetIAMPolicyBinding extends com.pulumi.resources.InvokeArgs {
             $ = new GetIAMPolicyBinding(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable GetIAMPolicyBindingCondition condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param members An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+         * Each entry can have one of the following values:
+         * * **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. Some resources **don&#39;t** support this identity.
+         * * **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. Some resources **don&#39;t** support this identity.
+         * * **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com.
+         * * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
+         * * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
+         * * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(List<String> members) {
             $.members = members;
             return this;
         }
 
+        /**
+         * @param members An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+         * Each entry can have one of the following values:
+         * * **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. Some resources **don&#39;t** support this identity.
+         * * **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. Some resources **don&#39;t** support this identity.
+         * * **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com.
+         * * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
+         * * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
+         * * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(String... members) {
             return members(List.of(members));
         }
 
+        /**
+         * @param role The role/permission that will be granted to the members.
+         * See the [IAM Roles](https://cloud.google.com/compute/docs/access/iam) documentation for a complete list of roles.
+         * Note that custom roles must be of the format `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             $.role = role;
             return this;

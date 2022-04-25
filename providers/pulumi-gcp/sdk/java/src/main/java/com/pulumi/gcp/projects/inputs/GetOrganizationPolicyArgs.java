@@ -19,6 +19,10 @@ public final class GetOrganizationPolicyArgs extends com.pulumi.resources.Invoke
     @Import(name="constraint", required=true)
     private String constraint;
 
+    /**
+     * @return (Required) The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
+     * 
+     */
     public String constraint() {
         return this.constraint;
     }
@@ -30,6 +34,10 @@ public final class GetOrganizationPolicyArgs extends com.pulumi.resources.Invoke
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return The project ID.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -59,11 +67,23 @@ public final class GetOrganizationPolicyArgs extends com.pulumi.resources.Invoke
             $ = new GetOrganizationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param constraint (Required) The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
+         * 
+         * @return builder
+         * 
+         */
         public Builder constraint(String constraint) {
             $.constraint = constraint;
             return this;
         }
 
+        /**
+         * @param project The project ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;

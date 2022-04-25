@@ -19,6 +19,10 @@ public final class GetGroupMembershipsMembershipRole extends com.pulumi.resource
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetGroupMembershipsMembershipRole extends com.pulumi.resource
             $ = new GetGroupMembershipsMembershipRole(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

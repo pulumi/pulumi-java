@@ -12,13 +12,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas {
     /**
-     * Specifies a fixed number of VM instances. This must be a positive
+     * @return Specifies a fixed number of VM instances. This must be a positive
      * integer.
      * 
      */
     private final @Nullable Integer fixed;
     /**
-     * Specifies a percentage of instances between 0 to 100%, inclusive.
+     * @return Specifies a percentage of instances between 0 to 100%, inclusive.
      * For example, specify 80 for 80%.
      * 
      */
@@ -33,18 +33,18 @@ public final class AutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownRepli
     }
 
     /**
-     * Specifies a fixed number of VM instances. This must be a positive
+     * @return Specifies a fixed number of VM instances. This must be a positive
      * integer.
      * 
-    */
+     */
     public Optional<Integer> fixed() {
         return Optional.ofNullable(this.fixed);
     }
     /**
-     * Specifies a percentage of instances between 0 to 100%, inclusive.
+     * @return Specifies a percentage of instances between 0 to 100%, inclusive.
      * For example, specify 80 for 80%.
      * 
-    */
+     */
     public Optional<Integer> percent() {
         return Optional.ofNullable(this.percent);
     }

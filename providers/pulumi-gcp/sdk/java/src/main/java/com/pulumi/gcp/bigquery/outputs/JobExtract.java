@@ -16,48 +16,48 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobExtract {
     /**
-     * The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
+     * @return The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
      * The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.
      * 
      */
     private final @Nullable String compression;
     /**
-     * The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON and AVRO for tables and SAVED_MODEL for models.
+     * @return The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON and AVRO for tables and SAVED_MODEL for models.
      * The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV.
      * The default value for models is SAVED_MODEL.
      * 
      */
     private final @Nullable String destinationFormat;
     /**
-     * A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
+     * @return A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
      * 
      */
     private final List<String> destinationUris;
     /**
-     * When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
+     * @return When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
      * Default is &#39;,&#39;
      * 
      */
     private final @Nullable String fieldDelimiter;
     /**
-     * Whether to print out a header row in the results. Default is true.
+     * @return Whether to print out a header row in the results. Default is true.
      * 
      */
     private final @Nullable Boolean printHeader;
     /**
-     * A reference to the model being exported.
+     * @return A reference to the model being exported.
      * Structure is documented below.
      * 
      */
     private final @Nullable JobExtractSourceModel sourceModel;
     /**
-     * A reference to the table being exported.
+     * @return A reference to the table being exported.
      * Structure is documented below.
      * 
      */
     private final @Nullable JobExtractSourceTable sourceTable;
     /**
-     * Whether to use logical types when extracting to AVRO format.
+     * @return Whether to use logical types when extracting to AVRO format.
      * 
      */
     private final @Nullable Boolean useAvroLogicalTypes;
@@ -83,64 +83,64 @@ public final class JobExtract {
     }
 
     /**
-     * The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
+     * @return The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
      * The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.
      * 
-    */
+     */
     public Optional<String> compression() {
         return Optional.ofNullable(this.compression);
     }
     /**
-     * The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON and AVRO for tables and SAVED_MODEL for models.
+     * @return The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON and AVRO for tables and SAVED_MODEL for models.
      * The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV.
      * The default value for models is SAVED_MODEL.
      * 
-    */
+     */
     public Optional<String> destinationFormat() {
         return Optional.ofNullable(this.destinationFormat);
     }
     /**
-     * A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
+     * @return A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
      * 
-    */
+     */
     public List<String> destinationUris() {
         return this.destinationUris;
     }
     /**
-     * When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
+     * @return When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
      * Default is &#39;,&#39;
      * 
-    */
+     */
     public Optional<String> fieldDelimiter() {
         return Optional.ofNullable(this.fieldDelimiter);
     }
     /**
-     * Whether to print out a header row in the results. Default is true.
+     * @return Whether to print out a header row in the results. Default is true.
      * 
-    */
+     */
     public Optional<Boolean> printHeader() {
         return Optional.ofNullable(this.printHeader);
     }
     /**
-     * A reference to the model being exported.
+     * @return A reference to the model being exported.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<JobExtractSourceModel> sourceModel() {
         return Optional.ofNullable(this.sourceModel);
     }
     /**
-     * A reference to the table being exported.
+     * @return A reference to the table being exported.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<JobExtractSourceTable> sourceTable() {
         return Optional.ofNullable(this.sourceTable);
     }
     /**
-     * Whether to use logical types when extracting to AVRO format.
+     * @return Whether to use logical types when extracting to AVRO format.
      * 
-    */
+     */
     public Optional<Boolean> useAvroLogicalTypes() {
         return Optional.ofNullable(this.useAvroLogicalTypes);
     }

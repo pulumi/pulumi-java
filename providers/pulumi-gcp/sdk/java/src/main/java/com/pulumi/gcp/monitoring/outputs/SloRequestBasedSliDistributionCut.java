@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class SloRequestBasedSliDistributionCut {
     /**
-     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * @return A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
      * aggregating values to quantify the good service provided.
      * Must have ValueType = DISTRIBUTION and
      * MetricKind = DELTA or MetricKind = CUMULATIVE.
@@ -19,7 +19,7 @@ public final class SloRequestBasedSliDistributionCut {
      */
     private final String distributionFilter;
     /**
-     * Range of numerical values. The computed good_service
+     * @return Range of numerical values. The computed good_service
      * will be the count of values x in the Distribution such
      * that range.min &lt;= x &lt;= range.max. inclusive of min and
      * max. Open ranges can be defined by setting
@@ -39,17 +39,17 @@ public final class SloRequestBasedSliDistributionCut {
     }
 
     /**
-     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * @return A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
      * aggregating values to quantify the good service provided.
      * Must have ValueType = DISTRIBUTION and
      * MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
-    */
+     */
     public String distributionFilter() {
         return this.distributionFilter;
     }
     /**
-     * Range of numerical values. The computed good_service
+     * @return Range of numerical values. The computed good_service
      * will be the count of values x in the Distribution such
      * that range.min &lt;= x &lt;= range.max. inclusive of min and
      * max. Open ranges can be defined by setting
@@ -57,7 +57,7 @@ public final class SloRequestBasedSliDistributionCut {
      * `range.min &lt;= X &lt;= range.max` for a good window.
      * Structure is documented below.
      * 
-    */
+     */
     public SloRequestBasedSliDistributionCutRange range() {
         return this.range;
     }

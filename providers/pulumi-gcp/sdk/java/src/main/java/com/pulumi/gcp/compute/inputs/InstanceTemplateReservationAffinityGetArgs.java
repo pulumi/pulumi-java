@@ -24,6 +24,11 @@ public final class InstanceTemplateReservationAffinityGetArgs extends com.pulumi
     @Import(name="specificReservation")
     private @Nullable Output<InstanceTemplateReservationAffinitySpecificReservationGetArgs> specificReservation;
 
+    /**
+     * @return Specifies the label selector for the reservation to use..
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<InstanceTemplateReservationAffinitySpecificReservationGetArgs>> specificReservation() {
         return Optional.ofNullable(this.specificReservation);
     }
@@ -35,6 +40,10 @@ public final class InstanceTemplateReservationAffinityGetArgs extends com.pulumi
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of reservation from which this instance can consume resources.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -64,20 +73,46 @@ public final class InstanceTemplateReservationAffinityGetArgs extends com.pulumi
             $ = new InstanceTemplateReservationAffinityGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param specificReservation Specifies the label selector for the reservation to use..
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specificReservation(@Nullable Output<InstanceTemplateReservationAffinitySpecificReservationGetArgs> specificReservation) {
             $.specificReservation = specificReservation;
             return this;
         }
 
+        /**
+         * @param specificReservation Specifies the label selector for the reservation to use..
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specificReservation(InstanceTemplateReservationAffinitySpecificReservationGetArgs specificReservation) {
             return specificReservation(Output.of(specificReservation));
         }
 
+        /**
+         * @param type The type of reservation from which this instance can consume resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of reservation from which this instance can consume resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -31,6 +31,11 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="checkIntervalSec")
     private @Nullable Output<Integer> checkIntervalSec;
 
+    /**
+     * @return How often (in seconds) to send a health check. The default value is 5
+     * seconds.
+     * 
+     */
     public Optional<Output<Integer>> checkIntervalSec() {
         return Optional.ofNullable(this.checkIntervalSec);
     }
@@ -43,6 +48,11 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when
+     * you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -55,6 +65,11 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="grpcHealthCheck")
     private @Nullable Output<HealthCheckGrpcHealthCheckArgs> grpcHealthCheck;
 
+    /**
+     * @return A nested object resource
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<HealthCheckGrpcHealthCheckArgs>> grpcHealthCheck() {
         return Optional.ofNullable(this.grpcHealthCheck);
     }
@@ -67,6 +82,11 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthyThreshold")
     private @Nullable Output<Integer> healthyThreshold;
 
+    /**
+     * @return A so-far unhealthy instance will be marked healthy after this many
+     * consecutive successes. The default value is 2.
+     * 
+     */
     public Optional<Output<Integer>> healthyThreshold() {
         return Optional.ofNullable(this.healthyThreshold);
     }
@@ -79,6 +99,11 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="http2HealthCheck")
     private @Nullable Output<HealthCheckHttp2HealthCheckArgs> http2HealthCheck;
 
+    /**
+     * @return A nested object resource
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<HealthCheckHttp2HealthCheckArgs>> http2HealthCheck() {
         return Optional.ofNullable(this.http2HealthCheck);
     }
@@ -91,6 +116,11 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpHealthCheck")
     private @Nullable Output<HealthCheckHttpHealthCheckArgs> httpHealthCheck;
 
+    /**
+     * @return A nested object resource
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<HealthCheckHttpHealthCheckArgs>> httpHealthCheck() {
         return Optional.ofNullable(this.httpHealthCheck);
     }
@@ -103,6 +133,11 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpsHealthCheck")
     private @Nullable Output<HealthCheckHttpsHealthCheckArgs> httpsHealthCheck;
 
+    /**
+     * @return A nested object resource
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<HealthCheckHttpsHealthCheckArgs>> httpsHealthCheck() {
         return Optional.ofNullable(this.httpsHealthCheck);
     }
@@ -115,6 +150,11 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logConfig")
     private @Nullable Output<HealthCheckLogConfigArgs> logConfig;
 
+    /**
+     * @return Configure logging on this health check.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<HealthCheckLogConfigArgs>> logConfig() {
         return Optional.ofNullable(this.logConfig);
     }
@@ -132,6 +172,16 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035.  Specifically, the name must be 1-63 characters long and
+     * match the regular expression `a-z?` which means
+     * the first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the
+     * last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -144,6 +194,11 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -156,6 +211,11 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sslHealthCheck")
     private @Nullable Output<HealthCheckSslHealthCheckArgs> sslHealthCheck;
 
+    /**
+     * @return A nested object resource
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<HealthCheckSslHealthCheckArgs>> sslHealthCheck() {
         return Optional.ofNullable(this.sslHealthCheck);
     }
@@ -168,6 +228,11 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tcpHealthCheck")
     private @Nullable Output<HealthCheckTcpHealthCheckArgs> tcpHealthCheck;
 
+    /**
+     * @return A nested object resource
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<HealthCheckTcpHealthCheckArgs>> tcpHealthCheck() {
         return Optional.ofNullable(this.tcpHealthCheck);
     }
@@ -181,6 +246,12 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeoutSec")
     private @Nullable Output<Integer> timeoutSec;
 
+    /**
+     * @return How long (in seconds) to wait before claiming failure.
+     * The default value is 5 seconds.  It is invalid for timeoutSec to have
+     * greater value than checkIntervalSec.
+     * 
+     */
     public Optional<Output<Integer>> timeoutSec() {
         return Optional.ofNullable(this.timeoutSec);
     }
@@ -193,6 +264,11 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="unhealthyThreshold")
     private @Nullable Output<Integer> unhealthyThreshold;
 
+    /**
+     * @return A so-far healthy instance will be marked unhealthy after this many
+     * consecutive failures. The default value is 2.
+     * 
+     */
     public Optional<Output<Integer>> unhealthyThreshold() {
         return Optional.ofNullable(this.unhealthyThreshold);
     }
@@ -234,128 +310,336 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param checkIntervalSec How often (in seconds) to send a health check. The default value is 5
+         * seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkIntervalSec(@Nullable Output<Integer> checkIntervalSec) {
             $.checkIntervalSec = checkIntervalSec;
             return this;
         }
 
+        /**
+         * @param checkIntervalSec How often (in seconds) to send a health check. The default value is 5
+         * seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkIntervalSec(Integer checkIntervalSec) {
             return checkIntervalSec(Output.of(checkIntervalSec));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when
+         * you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when
+         * you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param grpcHealthCheck A nested object resource
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grpcHealthCheck(@Nullable Output<HealthCheckGrpcHealthCheckArgs> grpcHealthCheck) {
             $.grpcHealthCheck = grpcHealthCheck;
             return this;
         }
 
+        /**
+         * @param grpcHealthCheck A nested object resource
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grpcHealthCheck(HealthCheckGrpcHealthCheckArgs grpcHealthCheck) {
             return grpcHealthCheck(Output.of(grpcHealthCheck));
         }
 
+        /**
+         * @param healthyThreshold A so-far unhealthy instance will be marked healthy after this many
+         * consecutive successes. The default value is 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
             $.healthyThreshold = healthyThreshold;
             return this;
         }
 
+        /**
+         * @param healthyThreshold A so-far unhealthy instance will be marked healthy after this many
+         * consecutive successes. The default value is 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthyThreshold(Integer healthyThreshold) {
             return healthyThreshold(Output.of(healthyThreshold));
         }
 
+        /**
+         * @param http2HealthCheck A nested object resource
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder http2HealthCheck(@Nullable Output<HealthCheckHttp2HealthCheckArgs> http2HealthCheck) {
             $.http2HealthCheck = http2HealthCheck;
             return this;
         }
 
+        /**
+         * @param http2HealthCheck A nested object resource
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder http2HealthCheck(HealthCheckHttp2HealthCheckArgs http2HealthCheck) {
             return http2HealthCheck(Output.of(http2HealthCheck));
         }
 
+        /**
+         * @param httpHealthCheck A nested object resource
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHealthCheck(@Nullable Output<HealthCheckHttpHealthCheckArgs> httpHealthCheck) {
             $.httpHealthCheck = httpHealthCheck;
             return this;
         }
 
+        /**
+         * @param httpHealthCheck A nested object resource
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHealthCheck(HealthCheckHttpHealthCheckArgs httpHealthCheck) {
             return httpHealthCheck(Output.of(httpHealthCheck));
         }
 
+        /**
+         * @param httpsHealthCheck A nested object resource
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsHealthCheck(@Nullable Output<HealthCheckHttpsHealthCheckArgs> httpsHealthCheck) {
             $.httpsHealthCheck = httpsHealthCheck;
             return this;
         }
 
+        /**
+         * @param httpsHealthCheck A nested object resource
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsHealthCheck(HealthCheckHttpsHealthCheckArgs httpsHealthCheck) {
             return httpsHealthCheck(Output.of(httpsHealthCheck));
         }
 
+        /**
+         * @param logConfig Configure logging on this health check.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(@Nullable Output<HealthCheckLogConfigArgs> logConfig) {
             $.logConfig = logConfig;
             return this;
         }
 
+        /**
+         * @param logConfig Configure logging on this health check.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(HealthCheckLogConfigArgs logConfig) {
             return logConfig(Output.of(logConfig));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035.  Specifically, the name must be 1-63 characters long and
+         * match the regular expression `a-z?` which means
+         * the first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the
+         * last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035.  Specifically, the name must be 1-63 characters long and
+         * match the regular expression `a-z?` which means
+         * the first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the
+         * last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param sslHealthCheck A nested object resource
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslHealthCheck(@Nullable Output<HealthCheckSslHealthCheckArgs> sslHealthCheck) {
             $.sslHealthCheck = sslHealthCheck;
             return this;
         }
 
+        /**
+         * @param sslHealthCheck A nested object resource
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslHealthCheck(HealthCheckSslHealthCheckArgs sslHealthCheck) {
             return sslHealthCheck(Output.of(sslHealthCheck));
         }
 
+        /**
+         * @param tcpHealthCheck A nested object resource
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpHealthCheck(@Nullable Output<HealthCheckTcpHealthCheckArgs> tcpHealthCheck) {
             $.tcpHealthCheck = tcpHealthCheck;
             return this;
         }
 
+        /**
+         * @param tcpHealthCheck A nested object resource
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpHealthCheck(HealthCheckTcpHealthCheckArgs tcpHealthCheck) {
             return tcpHealthCheck(Output.of(tcpHealthCheck));
         }
 
+        /**
+         * @param timeoutSec How long (in seconds) to wait before claiming failure.
+         * The default value is 5 seconds.  It is invalid for timeoutSec to have
+         * greater value than checkIntervalSec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
             $.timeoutSec = timeoutSec;
             return this;
         }
 
+        /**
+         * @param timeoutSec How long (in seconds) to wait before claiming failure.
+         * The default value is 5 seconds.  It is invalid for timeoutSec to have
+         * greater value than checkIntervalSec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSec(Integer timeoutSec) {
             return timeoutSec(Output.of(timeoutSec));
         }
 
+        /**
+         * @param unhealthyThreshold A so-far healthy instance will be marked unhealthy after this many
+         * consecutive failures. The default value is 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
             $.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
 
+        /**
+         * @param unhealthyThreshold A so-far healthy instance will be marked unhealthy after this many
+         * consecutive failures. The default value is 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             return unhealthyThreshold(Output.of(unhealthyThreshold));
         }

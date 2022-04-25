@@ -12,19 +12,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobQueryScriptOptions {
     /**
-     * Determines which statement in the script represents the &#34;key result&#34;,
+     * @return Determines which statement in the script represents the &#34;key result&#34;,
      * used to populate the schema and query results of the script job.
      * Possible values are `LAST` and `FIRST_SELECT`.
      * 
      */
     private final @Nullable String keyResultStatement;
     /**
-     * Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
+     * @return Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
      * 
      */
     private final @Nullable String statementByteBudget;
     /**
-     * Timeout period for each statement in a script.
+     * @return Timeout period for each statement in a script.
      * 
      */
     private final @Nullable String statementTimeoutMs;
@@ -40,25 +40,25 @@ public final class JobQueryScriptOptions {
     }
 
     /**
-     * Determines which statement in the script represents the &#34;key result&#34;,
+     * @return Determines which statement in the script represents the &#34;key result&#34;,
      * used to populate the schema and query results of the script job.
      * Possible values are `LAST` and `FIRST_SELECT`.
      * 
-    */
+     */
     public Optional<String> keyResultStatement() {
         return Optional.ofNullable(this.keyResultStatement);
     }
     /**
-     * Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
+     * @return Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
      * 
-    */
+     */
     public Optional<String> statementByteBudget() {
         return Optional.ofNullable(this.statementByteBudget);
     }
     /**
-     * Timeout period for each statement in a script.
+     * @return Timeout period for each statement in a script.
      * 
-    */
+     */
     public Optional<String> statementTimeoutMs() {
         return Optional.ofNullable(this.statementTimeoutMs);
     }

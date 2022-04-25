@@ -21,6 +21,10 @@ public final class GetRegionInstanceGroupArgs extends com.pulumi.resources.Invok
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the instance group.  One of `name` or `self_link` must be provided.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -34,6 +38,12 @@ public final class GetRegionInstanceGroupArgs extends com.pulumi.resources.Invok
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If `self_link` is provided, this value is ignored.  If neither `self_link`
+     * nor `project` are provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -47,6 +57,12 @@ public final class GetRegionInstanceGroupArgs extends com.pulumi.resources.Invok
     @Import(name="region")
     private @Nullable String region;
 
+    /**
+     * @return The region in which the resource belongs.  If `self_link`
+     * is provided, this value is ignored.  If neither `self_link` nor `region` are
+     * provided, the provider region is used.
+     * 
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
@@ -58,6 +74,10 @@ public final class GetRegionInstanceGroupArgs extends com.pulumi.resources.Invok
     @Import(name="selfLink")
     private @Nullable String selfLink;
 
+    /**
+     * @return The link to the instance group.  One of `name` or `self_link` must be provided.
+     * 
+     */
     public Optional<String> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -89,21 +109,49 @@ public final class GetRegionInstanceGroupArgs extends com.pulumi.resources.Invok
             $ = new GetRegionInstanceGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the instance group.  One of `name` or `self_link` must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If `self_link` is provided, this value is ignored.  If neither `self_link`
+         * nor `project` are provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param region The region in which the resource belongs.  If `self_link`
+         * is provided, this value is ignored.  If neither `self_link` nor `region` are
+         * provided, the provider region is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param selfLink The link to the instance group.  One of `name` or `self_link` must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable String selfLink) {
             $.selfLink = selfLink;
             return this;

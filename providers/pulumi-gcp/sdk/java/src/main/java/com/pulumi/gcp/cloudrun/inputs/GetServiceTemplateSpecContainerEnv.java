@@ -21,6 +21,10 @@ public final class GetServiceTemplateSpecContainerEnv extends com.pulumi.resourc
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the Cloud Run Service.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -65,6 +69,12 @@ public final class GetServiceTemplateSpecContainerEnv extends com.pulumi.resourc
             $ = new GetServiceTemplateSpecContainerEnv(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the Cloud Run Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

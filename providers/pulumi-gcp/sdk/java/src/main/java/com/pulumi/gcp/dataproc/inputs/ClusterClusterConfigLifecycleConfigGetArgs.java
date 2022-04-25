@@ -24,6 +24,12 @@ public final class ClusterClusterConfigLifecycleConfigGetArgs extends com.pulumi
     @Import(name="autoDeleteTime")
     private @Nullable Output<String> autoDeleteTime;
 
+    /**
+     * @return The time when cluster will be auto-deleted.
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds.
+     * Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> autoDeleteTime() {
         return Optional.ofNullable(this.autoDeleteTime);
     }
@@ -36,6 +42,11 @@ public final class ClusterClusterConfigLifecycleConfigGetArgs extends com.pulumi
     @Import(name="idleDeleteTtl")
     private @Nullable Output<String> idleDeleteTtl;
 
+    /**
+     * @return The duration to keep the cluster alive while idling
+     * (no jobs running). After this TTL, the cluster will be deleted. Valid range: [10m, 14d].
+     * 
+     */
     public Optional<Output<String>> idleDeleteTtl() {
         return Optional.ofNullable(this.idleDeleteTtl);
     }
@@ -73,20 +84,50 @@ public final class ClusterClusterConfigLifecycleConfigGetArgs extends com.pulumi
             $ = new ClusterClusterConfigLifecycleConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoDeleteTime The time when cluster will be auto-deleted.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds.
+         * Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeleteTime(@Nullable Output<String> autoDeleteTime) {
             $.autoDeleteTime = autoDeleteTime;
             return this;
         }
 
+        /**
+         * @param autoDeleteTime The time when cluster will be auto-deleted.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds.
+         * Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeleteTime(String autoDeleteTime) {
             return autoDeleteTime(Output.of(autoDeleteTime));
         }
 
+        /**
+         * @param idleDeleteTtl The duration to keep the cluster alive while idling
+         * (no jobs running). After this TTL, the cluster will be deleted. Valid range: [10m, 14d].
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleDeleteTtl(@Nullable Output<String> idleDeleteTtl) {
             $.idleDeleteTtl = idleDeleteTtl;
             return this;
         }
 
+        /**
+         * @param idleDeleteTtl The duration to keep the cluster alive while idling
+         * (no jobs running). After this TTL, the cluster will be deleted. Valid range: [10m, 14d].
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleDeleteTtl(String idleDeleteTtl) {
             return idleDeleteTtl(Output.of(idleDeleteTtl));
         }

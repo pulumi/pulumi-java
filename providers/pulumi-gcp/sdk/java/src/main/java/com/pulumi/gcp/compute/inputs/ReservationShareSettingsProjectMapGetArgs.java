@@ -22,6 +22,10 @@ public final class ReservationShareSettingsProjectMapGetArgs extends com.pulumi.
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return The identifier for this object. Format specified above.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -33,6 +37,10 @@ public final class ReservationShareSettingsProjectMapGetArgs extends com.pulumi.
     @Import(name="projectId")
     private @Nullable Output<String> projectId;
 
+    /**
+     * @return The project id/number, should be same as the key of this project config in the project map.
+     * 
+     */
     public Optional<Output<String>> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -62,20 +70,44 @@ public final class ReservationShareSettingsProjectMapGetArgs extends com.pulumi.
             $ = new ReservationShareSettingsProjectMapGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The identifier for this object. Format specified above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The identifier for this object. Format specified above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param projectId The project id/number, should be same as the key of this project config in the project map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(@Nullable Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId The project id/number, should be same as the key of this project config in the project map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }

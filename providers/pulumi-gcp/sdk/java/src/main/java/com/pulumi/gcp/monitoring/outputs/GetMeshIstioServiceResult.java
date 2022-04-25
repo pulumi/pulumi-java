@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 public final class GetMeshIstioServiceResult {
     private final String displayName;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -53,9 +53,9 @@ public final class GetMeshIstioServiceResult {
         return this.displayName;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

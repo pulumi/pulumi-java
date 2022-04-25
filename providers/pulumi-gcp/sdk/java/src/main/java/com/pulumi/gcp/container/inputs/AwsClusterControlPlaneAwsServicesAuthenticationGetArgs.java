@@ -22,6 +22,10 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationGetArgs extend
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return Required. The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -33,6 +37,10 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationGetArgs extend
     @Import(name="roleSessionName")
     private @Nullable Output<String> roleSessionName;
 
+    /**
+     * @return Optional. An identifier for the assumed role session. When unspecified, it defaults to `multicloud-service-agent`.
+     * 
+     */
     public Optional<Output<String>> roleSessionName() {
         return Optional.ofNullable(this.roleSessionName);
     }
@@ -62,20 +70,44 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationGetArgs extend
             $ = new AwsClusterControlPlaneAwsServicesAuthenticationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param roleArn Required. The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn Required. The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param roleSessionName Optional. An identifier for the assumed role session. When unspecified, it defaults to `multicloud-service-agent`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleSessionName(@Nullable Output<String> roleSessionName) {
             $.roleSessionName = roleSessionName;
             return this;
         }
 
+        /**
+         * @param roleSessionName Optional. An identifier for the assumed role session. When unspecified, it defaults to `multicloud-service-agent`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleSessionName(String roleSessionName) {
             return roleSessionName(Output.of(roleSessionName));
         }

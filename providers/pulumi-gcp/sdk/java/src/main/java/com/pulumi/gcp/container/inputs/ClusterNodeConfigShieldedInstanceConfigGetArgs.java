@@ -22,6 +22,10 @@ public final class ClusterNodeConfigShieldedInstanceConfigGetArgs extends com.pu
     @Import(name="enableIntegrityMonitoring")
     private @Nullable Output<Boolean> enableIntegrityMonitoring;
 
+    /**
+     * @return Defines if the instance has integrity monitoring enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
@@ -33,6 +37,10 @@ public final class ClusterNodeConfigShieldedInstanceConfigGetArgs extends com.pu
     @Import(name="enableSecureBoot")
     private @Nullable Output<Boolean> enableSecureBoot;
 
+    /**
+     * @return Defines if the instance has Secure Boot enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
@@ -62,20 +70,44 @@ public final class ClusterNodeConfigShieldedInstanceConfigGetArgs extends com.pu
             $ = new ClusterNodeConfigShieldedInstanceConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableIntegrityMonitoring Defines if the instance has integrity monitoring enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIntegrityMonitoring(@Nullable Output<Boolean> enableIntegrityMonitoring) {
             $.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
 
+        /**
+         * @param enableIntegrityMonitoring Defines if the instance has integrity monitoring enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
             return enableIntegrityMonitoring(Output.of(enableIntegrityMonitoring));
         }
 
+        /**
+         * @param enableSecureBoot Defines if the instance has Secure Boot enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSecureBoot(@Nullable Output<Boolean> enableSecureBoot) {
             $.enableSecureBoot = enableSecureBoot;
             return this;
         }
 
+        /**
+         * @param enableSecureBoot Defines if the instance has Secure Boot enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSecureBoot(Boolean enableSecureBoot) {
             return enableSecureBoot(Output.of(enableSecureBoot));
         }

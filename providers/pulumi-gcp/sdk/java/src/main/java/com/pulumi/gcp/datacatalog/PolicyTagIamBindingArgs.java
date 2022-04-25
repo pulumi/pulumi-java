@@ -38,6 +38,10 @@ public final class PolicyTagIamBindingArgs extends com.pulumi.resources.Resource
     @Import(name="policyTag", required=true)
     private Output<String> policyTag;
 
+    /**
+     * @return Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     public Output<String> policyTag() {
         return this.policyTag;
     }
@@ -51,6 +55,12 @@ public final class PolicyTagIamBindingArgs extends com.pulumi.resources.Resource
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.datacatalog.PolicyTagIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -104,20 +114,48 @@ public final class PolicyTagIamBindingArgs extends com.pulumi.resources.Resource
             return members(List.of(members));
         }
 
+        /**
+         * @param policyTag Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyTag(Output<String> policyTag) {
             $.policyTag = policyTag;
             return this;
         }
 
+        /**
+         * @param policyTag Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyTag(String policyTag) {
             return policyTag(Output.of(policyTag));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.datacatalog.PolicyTagIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.datacatalog.PolicyTagIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

@@ -13,19 +13,19 @@ import java.util.Objects;
 @CustomType
 public final class GetKeysResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * A list of Key-signing key (KSK) records. Structure is documented below. Additionally, the DS record is provided:
+     * @return A list of Key-signing key (KSK) records. Structure is documented below. Additionally, the DS record is provided:
      * 
      */
     private final List<GetKeysKeySigningKey> keySigningKeys;
     private final String managedZone;
     private final String project;
     /**
-     * A list of Zone-signing key (ZSK) records. Structure is documented below.
+     * @return A list of Zone-signing key (ZSK) records. Structure is documented below.
      * 
      */
     private final List<GetKeysZoneSigningKey> zoneSigningKeys;
@@ -45,16 +45,16 @@ public final class GetKeysResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A list of Key-signing key (KSK) records. Structure is documented below. Additionally, the DS record is provided:
+     * @return A list of Key-signing key (KSK) records. Structure is documented below. Additionally, the DS record is provided:
      * 
-    */
+     */
     public List<GetKeysKeySigningKey> keySigningKeys() {
         return this.keySigningKeys;
     }
@@ -65,9 +65,9 @@ public final class GetKeysResult {
         return this.project;
     }
     /**
-     * A list of Zone-signing key (ZSK) records. Structure is documented below.
+     * @return A list of Zone-signing key (ZSK) records. Structure is documented below.
      * 
-    */
+     */
     public List<GetKeysZoneSigningKey> zoneSigningKeys() {
         return this.zoneSigningKeys;
     }

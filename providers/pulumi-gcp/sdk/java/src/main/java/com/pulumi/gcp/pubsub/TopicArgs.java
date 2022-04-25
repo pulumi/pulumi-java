@@ -29,6 +29,14 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyName")
     private @Nullable Output<String> kmsKeyName;
 
+    /**
+     * @return The resource name of the Cloud KMS CryptoKey to be used to protect access
+     * to messages published on this topic. Your project&#39;s PubSub service account
+     * (`service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com`) must have
+     * `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
+     * The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`
+     * 
+     */
     public Optional<Output<String>> kmsKeyName() {
         return Optional.ofNullable(this.kmsKeyName);
     }
@@ -40,6 +48,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return A set of key/value label pairs to assign to this Topic.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -57,6 +69,16 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="messageRetentionDuration")
     private @Nullable Output<String> messageRetentionDuration;
 
+    /**
+     * @return Indicates the minimum duration to retain a message after it is published
+     * to the topic. If this field is set, messages published to the topic in
+     * the last messageRetentionDuration are always available to subscribers.
+     * For instance, it allows any attached subscription to seek to a timestamp
+     * that is up to messageRetentionDuration in the past. If this field is not
+     * set, message retention is controlled by settings on individual subscriptions.
+     * Cannot be more than 7 days or less than 10 minutes.
+     * 
+     */
     public Optional<Output<String>> messageRetentionDuration() {
         return Optional.ofNullable(this.messageRetentionDuration);
     }
@@ -71,6 +93,13 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="messageStoragePolicy")
     private @Nullable Output<TopicMessageStoragePolicyArgs> messageStoragePolicy;
 
+    /**
+     * @return Policy constraining the set of Google Cloud Platform regions where
+     * messages published to the topic may be stored. If not present, then no
+     * constraints are in effect.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<TopicMessageStoragePolicyArgs>> messageStoragePolicy() {
         return Optional.ofNullable(this.messageStoragePolicy);
     }
@@ -82,6 +111,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the topic.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -94,6 +127,11 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -106,6 +144,11 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaSettings")
     private @Nullable Output<TopicSchemaSettingsArgs> schemaSettings;
 
+    /**
+     * @return Settings for validating messages published against a schema.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<TopicSchemaSettingsArgs>> schemaSettings() {
         return Optional.ofNullable(this.schemaSettings);
     }
@@ -140,65 +183,179 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TopicArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName The resource name of the Cloud KMS CryptoKey to be used to protect access
+         * to messages published on this topic. Your project&#39;s PubSub service account
+         * (`service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com`) must have
+         * `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
+         * The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName The resource name of the Cloud KMS CryptoKey to be used to protect access
+         * to messages published on this topic. Your project&#39;s PubSub service account
+         * (`service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com`) must have
+         * `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
+         * The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }
 
+        /**
+         * @param labels A set of key/value label pairs to assign to this Topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels A set of key/value label pairs to assign to this Topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param messageRetentionDuration Indicates the minimum duration to retain a message after it is published
+         * to the topic. If this field is set, messages published to the topic in
+         * the last messageRetentionDuration are always available to subscribers.
+         * For instance, it allows any attached subscription to seek to a timestamp
+         * that is up to messageRetentionDuration in the past. If this field is not
+         * set, message retention is controlled by settings on individual subscriptions.
+         * Cannot be more than 7 days or less than 10 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageRetentionDuration(@Nullable Output<String> messageRetentionDuration) {
             $.messageRetentionDuration = messageRetentionDuration;
             return this;
         }
 
+        /**
+         * @param messageRetentionDuration Indicates the minimum duration to retain a message after it is published
+         * to the topic. If this field is set, messages published to the topic in
+         * the last messageRetentionDuration are always available to subscribers.
+         * For instance, it allows any attached subscription to seek to a timestamp
+         * that is up to messageRetentionDuration in the past. If this field is not
+         * set, message retention is controlled by settings on individual subscriptions.
+         * Cannot be more than 7 days or less than 10 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageRetentionDuration(String messageRetentionDuration) {
             return messageRetentionDuration(Output.of(messageRetentionDuration));
         }
 
+        /**
+         * @param messageStoragePolicy Policy constraining the set of Google Cloud Platform regions where
+         * messages published to the topic may be stored. If not present, then no
+         * constraints are in effect.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageStoragePolicy(@Nullable Output<TopicMessageStoragePolicyArgs> messageStoragePolicy) {
             $.messageStoragePolicy = messageStoragePolicy;
             return this;
         }
 
+        /**
+         * @param messageStoragePolicy Policy constraining the set of Google Cloud Platform regions where
+         * messages published to the topic may be stored. If not present, then no
+         * constraints are in effect.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageStoragePolicy(TopicMessageStoragePolicyArgs messageStoragePolicy) {
             return messageStoragePolicy(Output.of(messageStoragePolicy));
         }
 
+        /**
+         * @param name Name of the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param schemaSettings Settings for validating messages published against a schema.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaSettings(@Nullable Output<TopicSchemaSettingsArgs> schemaSettings) {
             $.schemaSettings = schemaSettings;
             return this;
         }
 
+        /**
+         * @param schemaSettings Settings for validating messages published against a schema.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaSettings(TopicSchemaSettingsArgs schemaSettings) {
             return schemaSettings(Output.of(schemaSettings));
         }

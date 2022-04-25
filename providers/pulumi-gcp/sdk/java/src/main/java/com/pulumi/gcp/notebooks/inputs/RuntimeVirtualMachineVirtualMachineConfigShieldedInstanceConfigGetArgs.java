@@ -27,6 +27,15 @@ public final class RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConf
     @Import(name="enableIntegrityMonitoring")
     private @Nullable Output<Boolean> enableIntegrityMonitoring;
 
+    /**
+     * @return Defines whether the instance has integrity monitoring enabled.
+     * Enables monitoring and attestation of the boot integrity of
+     * the instance. The attestation is performed against the
+     * integrity policy baseline. This baseline is initially derived
+     * from the implicitly trusted boot image when the instance is
+     * created. Enabled by default.
+     * 
+     */
     public Optional<Output<Boolean>> enableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
@@ -42,6 +51,14 @@ public final class RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConf
     @Import(name="enableSecureBoot")
     private @Nullable Output<Boolean> enableSecureBoot;
 
+    /**
+     * @return Defines whether the instance has Secure Boot enabled.Secure
+     * Boot helps ensure that the system only runs authentic software
+     * by verifying the digital signature of all boot components, and
+     * halting the boot process if signature verification fails.
+     * Disabled by default.
+     * 
+     */
     public Optional<Output<Boolean>> enableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
@@ -54,6 +71,11 @@ public final class RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConf
     @Import(name="enableVtpm")
     private @Nullable Output<Boolean> enableVtpm;
 
+    /**
+     * @return Defines whether the instance has the vTPM enabled. Enabled by
+     * default.
+     * 
+     */
     public Optional<Output<Boolean>> enableVtpm() {
         return Optional.ofNullable(this.enableVtpm);
     }
@@ -84,29 +106,85 @@ public final class RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConf
             $ = new RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableIntegrityMonitoring Defines whether the instance has integrity monitoring enabled.
+         * Enables monitoring and attestation of the boot integrity of
+         * the instance. The attestation is performed against the
+         * integrity policy baseline. This baseline is initially derived
+         * from the implicitly trusted boot image when the instance is
+         * created. Enabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIntegrityMonitoring(@Nullable Output<Boolean> enableIntegrityMonitoring) {
             $.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
 
+        /**
+         * @param enableIntegrityMonitoring Defines whether the instance has integrity monitoring enabled.
+         * Enables monitoring and attestation of the boot integrity of
+         * the instance. The attestation is performed against the
+         * integrity policy baseline. This baseline is initially derived
+         * from the implicitly trusted boot image when the instance is
+         * created. Enabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
             return enableIntegrityMonitoring(Output.of(enableIntegrityMonitoring));
         }
 
+        /**
+         * @param enableSecureBoot Defines whether the instance has Secure Boot enabled.Secure
+         * Boot helps ensure that the system only runs authentic software
+         * by verifying the digital signature of all boot components, and
+         * halting the boot process if signature verification fails.
+         * Disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSecureBoot(@Nullable Output<Boolean> enableSecureBoot) {
             $.enableSecureBoot = enableSecureBoot;
             return this;
         }
 
+        /**
+         * @param enableSecureBoot Defines whether the instance has Secure Boot enabled.Secure
+         * Boot helps ensure that the system only runs authentic software
+         * by verifying the digital signature of all boot components, and
+         * halting the boot process if signature verification fails.
+         * Disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSecureBoot(Boolean enableSecureBoot) {
             return enableSecureBoot(Output.of(enableSecureBoot));
         }
 
+        /**
+         * @param enableVtpm Defines whether the instance has the vTPM enabled. Enabled by
+         * default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableVtpm(@Nullable Output<Boolean> enableVtpm) {
             $.enableVtpm = enableVtpm;
             return this;
         }
 
+        /**
+         * @param enableVtpm Defines whether the instance has the vTPM enabled. Enabled by
+         * default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableVtpm(Boolean enableVtpm) {
             return enableVtpm(Output.of(enableVtpm));
         }

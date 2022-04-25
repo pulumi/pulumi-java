@@ -18,47 +18,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AwsNodePoolConfig {
     /**
-     * Required. The ARN of the AWS KMS key used to encrypt node pool configuration.
+     * @return Required. The ARN of the AWS KMS key used to encrypt node pool configuration.
      * 
      */
     private final AwsNodePoolConfigConfigEncryption configEncryption;
     /**
-     * Required. The name of the AWS IAM role assigned to nodes in the pool.
+     * @return Required. The name of the AWS IAM role assigned to nodes in the pool.
      * 
      */
     private final String iamInstanceProfile;
     /**
-     * Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+     * @return Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
      * 
      */
     private final @Nullable String instanceType;
     /**
-     * Optional. The initial labels assigned to nodes of this node pool. An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+     * @return Optional. The initial labels assigned to nodes of this node pool. An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     private final @Nullable Map<String,String> labels;
     /**
-     * Optional. Template for the root volume provisioned for node pool nodes. Volumes will be provisioned in the availability zone assigned to the node pool subnet. When unspecified, it defaults to 32 GiB with the GP2 volume type.
+     * @return Optional. Template for the root volume provisioned for node pool nodes. Volumes will be provisioned in the availability zone assigned to the node pool subnet. When unspecified, it defaults to 32 GiB with the GP2 volume type.
      * 
      */
     private final @Nullable AwsNodePoolConfigRootVolume rootVolume;
     /**
-     * Optional. The IDs of additional security groups to add to nodes in this pool. The manager will automatically create security groups with minimum rules needed for a functioning cluster.
+     * @return Optional. The IDs of additional security groups to add to nodes in this pool. The manager will automatically create security groups with minimum rules needed for a functioning cluster.
      * 
      */
     private final @Nullable List<String> securityGroupIds;
     /**
-     * Optional. The SSH configuration.
+     * @return Optional. The SSH configuration.
      * 
      */
     private final @Nullable AwsNodePoolConfigSshConfig sshConfig;
     /**
-     * Optional. Key/value metadata to assign to each underlying AWS resource. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
+     * @return Optional. Key/value metadata to assign to each underlying AWS resource. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Optional. The initial taints assigned to nodes of this node pool.
+     * @return Optional. The initial taints assigned to nodes of this node pool.
      * 
      */
     private final @Nullable List<AwsNodePoolConfigTaint> taints;
@@ -86,65 +86,65 @@ public final class AwsNodePoolConfig {
     }
 
     /**
-     * Required. The ARN of the AWS KMS key used to encrypt node pool configuration.
+     * @return Required. The ARN of the AWS KMS key used to encrypt node pool configuration.
      * 
-    */
+     */
     public AwsNodePoolConfigConfigEncryption configEncryption() {
         return this.configEncryption;
     }
     /**
-     * Required. The name of the AWS IAM role assigned to nodes in the pool.
+     * @return Required. The name of the AWS IAM role assigned to nodes in the pool.
      * 
-    */
+     */
     public String iamInstanceProfile() {
         return this.iamInstanceProfile;
     }
     /**
-     * Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+     * @return Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
      * 
-    */
+     */
     public Optional<String> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
-     * Optional. The initial labels assigned to nodes of this node pool. An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+     * @return Optional. The initial labels assigned to nodes of this node pool. An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
-     * Optional. Template for the root volume provisioned for node pool nodes. Volumes will be provisioned in the availability zone assigned to the node pool subnet. When unspecified, it defaults to 32 GiB with the GP2 volume type.
+     * @return Optional. Template for the root volume provisioned for node pool nodes. Volumes will be provisioned in the availability zone assigned to the node pool subnet. When unspecified, it defaults to 32 GiB with the GP2 volume type.
      * 
-    */
+     */
     public Optional<AwsNodePoolConfigRootVolume> rootVolume() {
         return Optional.ofNullable(this.rootVolume);
     }
     /**
-     * Optional. The IDs of additional security groups to add to nodes in this pool. The manager will automatically create security groups with minimum rules needed for a functioning cluster.
+     * @return Optional. The IDs of additional security groups to add to nodes in this pool. The manager will automatically create security groups with minimum rules needed for a functioning cluster.
      * 
-    */
+     */
     public List<String> securityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
-     * Optional. The SSH configuration.
+     * @return Optional. The SSH configuration.
      * 
-    */
+     */
     public Optional<AwsNodePoolConfigSshConfig> sshConfig() {
         return Optional.ofNullable(this.sshConfig);
     }
     /**
-     * Optional. Key/value metadata to assign to each underlying AWS resource. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
+     * @return Optional. Key/value metadata to assign to each underlying AWS resource. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Optional. The initial taints assigned to nodes of this node pool.
+     * @return Optional. The initial taints assigned to nodes of this node pool.
      * 
-    */
+     */
     public List<AwsNodePoolConfigTaint> taints() {
         return this.taints == null ? List.of() : this.taints;
     }

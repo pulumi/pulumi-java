@@ -26,6 +26,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="artifactGcsUri")
     private @Nullable Output<String> artifactGcsUri;
 
+    /**
+     * @return A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
+     * 
+     */
     public Optional<Output<String>> artifactGcsUri() {
         return Optional.ofNullable(this.artifactGcsUri);
     }
@@ -37,6 +41,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="endpointUri")
     private @Nullable Output<String> endpointUri;
 
+    /**
+     * @return The URI of the endpoint used to access the metastore service.
+     * 
+     */
     public Optional<Output<String>> endpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
@@ -49,6 +57,11 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="hiveMetastoreConfig")
     private @Nullable Output<MetastoreServiceHiveMetastoreConfigGetArgs> hiveMetastoreConfig;
 
+    /**
+     * @return Configuration information specific to running Hive metastore software as the metastore service.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<MetastoreServiceHiveMetastoreConfigGetArgs>> hiveMetastoreConfig() {
         return Optional.ofNullable(this.hiveMetastoreConfig);
     }
@@ -60,6 +73,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return User-defined labels for the metastore service.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -72,6 +89,11 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The  location where the autoscaling policy should reside.
+     * The default value is `global`.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -85,6 +107,12 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="maintenanceWindow")
     private @Nullable Output<MetastoreServiceMaintenanceWindowGetArgs> maintenanceWindow;
 
+    /**
+     * @return The one hour maintenance window of the metastore service.
+     * This specifies when the service can be restarted for maintenance purposes in UTC time.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<MetastoreServiceMaintenanceWindowGetArgs>> maintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
@@ -96,6 +124,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The relative resource name of the metastore service.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -108,6 +140,11 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:
+     * &#34;projects/{projectNumber}/global/networks/{network_id}&#34;.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -119,6 +156,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The TCP port at which the metastore service is reached. Default: 9083.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -131,6 +172,11 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -144,6 +190,12 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="serviceId")
     private @Nullable Output<String> serviceId;
 
+    /**
+     * @return The ID of the metastore service. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+     * and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
+     * 3 and 63 characters.
+     * 
+     */
     public Optional<Output<String>> serviceId() {
         return Optional.ofNullable(this.serviceId);
     }
@@ -155,6 +207,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return The current state of the metastore service.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -166,6 +222,10 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="stateMessage")
     private @Nullable Output<String> stateMessage;
 
+    /**
+     * @return Additional information about the current state of the metastore service, if available.
+     * 
+     */
     public Optional<Output<String>> stateMessage() {
         return Optional.ofNullable(this.stateMessage);
     }
@@ -178,6 +238,11 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="tier")
     private @Nullable Output<String> tier;
 
+    /**
+     * @return The tier of the service.
+     * Possible values are `DEVELOPER` and `ENTERPRISE`.
+     * 
+     */
     public Optional<Output<String>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -219,128 +284,314 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
             $ = new MetastoreServiceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactGcsUri A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactGcsUri(@Nullable Output<String> artifactGcsUri) {
             $.artifactGcsUri = artifactGcsUri;
             return this;
         }
 
+        /**
+         * @param artifactGcsUri A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactGcsUri(String artifactGcsUri) {
             return artifactGcsUri(Output.of(artifactGcsUri));
         }
 
+        /**
+         * @param endpointUri The URI of the endpoint used to access the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointUri(@Nullable Output<String> endpointUri) {
             $.endpointUri = endpointUri;
             return this;
         }
 
+        /**
+         * @param endpointUri The URI of the endpoint used to access the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointUri(String endpointUri) {
             return endpointUri(Output.of(endpointUri));
         }
 
+        /**
+         * @param hiveMetastoreConfig Configuration information specific to running Hive metastore software as the metastore service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hiveMetastoreConfig(@Nullable Output<MetastoreServiceHiveMetastoreConfigGetArgs> hiveMetastoreConfig) {
             $.hiveMetastoreConfig = hiveMetastoreConfig;
             return this;
         }
 
+        /**
+         * @param hiveMetastoreConfig Configuration information specific to running Hive metastore software as the metastore service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hiveMetastoreConfig(MetastoreServiceHiveMetastoreConfigGetArgs hiveMetastoreConfig) {
             return hiveMetastoreConfig(Output.of(hiveMetastoreConfig));
         }
 
+        /**
+         * @param labels User-defined labels for the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels User-defined labels for the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param location The  location where the autoscaling policy should reside.
+         * The default value is `global`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The  location where the autoscaling policy should reside.
+         * The default value is `global`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param maintenanceWindow The one hour maintenance window of the metastore service.
+         * This specifies when the service can be restarted for maintenance purposes in UTC time.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(@Nullable Output<MetastoreServiceMaintenanceWindowGetArgs> maintenanceWindow) {
             $.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
+        /**
+         * @param maintenanceWindow The one hour maintenance window of the metastore service.
+         * This specifies when the service can be restarted for maintenance purposes in UTC time.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(MetastoreServiceMaintenanceWindowGetArgs maintenanceWindow) {
             return maintenanceWindow(Output.of(maintenanceWindow));
         }
 
+        /**
+         * @param name The relative resource name of the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The relative resource name of the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param network The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:
+         * &#34;projects/{projectNumber}/global/networks/{network_id}&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:
+         * &#34;projects/{projectNumber}/global/networks/{network_id}&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param port The TCP port at which the metastore service is reached. Default: 9083.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The TCP port at which the metastore service is reached. Default: 9083.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param serviceId The ID of the metastore service. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+         * and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
+         * 3 and 63 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceId(@Nullable Output<String> serviceId) {
             $.serviceId = serviceId;
             return this;
         }
 
+        /**
+         * @param serviceId The ID of the metastore service. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+         * and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
+         * 3 and 63 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceId(String serviceId) {
             return serviceId(Output.of(serviceId));
         }
 
+        /**
+         * @param state The current state of the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The current state of the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param stateMessage Additional information about the current state of the metastore service, if available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateMessage(@Nullable Output<String> stateMessage) {
             $.stateMessage = stateMessage;
             return this;
         }
 
+        /**
+         * @param stateMessage Additional information about the current state of the metastore service, if available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateMessage(String stateMessage) {
             return stateMessage(Output.of(stateMessage));
         }
 
+        /**
+         * @param tier The tier of the service.
+         * Possible values are `DEVELOPER` and `ENTERPRISE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<String> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier The tier of the service.
+         * Possible values are `DEVELOPER` and `ENTERPRISE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Output.of(tier));
         }

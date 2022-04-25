@@ -22,6 +22,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the source (max of 1024 characters).
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,14 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The source’s display name. A source’s display name must be unique
+     * amongst its siblings, for example, two sources with the same parent
+     * can&#39;t share the same display name. The display name must start and end
+     * with a letter or digit, may contain letters, digits, spaces, hyphens,
+     * and underscores, and can be no longer than 32 characters.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -49,6 +61,11 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="organization", required=true)
     private Output<String> organization;
 
+    /**
+     * @return The organization whose Cloud Security Command Center the Source
+     * lives in.
+     * 
+     */
     public Output<String> organization() {
         return this.organization;
     }
@@ -79,29 +96,75 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the source (max of 1024 characters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the source (max of 1024 characters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The source’s display name. A source’s display name must be unique
+         * amongst its siblings, for example, two sources with the same parent
+         * can&#39;t share the same display name. The display name must start and end
+         * with a letter or digit, may contain letters, digits, spaces, hyphens,
+         * and underscores, and can be no longer than 32 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The source’s display name. A source’s display name must be unique
+         * amongst its siblings, for example, two sources with the same parent
+         * can&#39;t share the same display name. The display name must start and end
+         * with a letter or digit, may contain letters, digits, spaces, hyphens,
+         * and underscores, and can be no longer than 32 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param organization The organization whose Cloud Security Command Center the Source
+         * lives in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organization(Output<String> organization) {
             $.organization = organization;
             return this;
         }
 
+        /**
+         * @param organization The organization whose Cloud Security Command Center the Source
+         * lives in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organization(String organization) {
             return organization(Output.of(organization));
         }

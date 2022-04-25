@@ -21,6 +21,10 @@ public final class GetKMSSecretAsymmetricArgs extends com.pulumi.resources.Invok
     @Import(name="ciphertext", required=true)
     private String ciphertext;
 
+    /**
+     * @return The ciphertext to be decrypted, encoded in base64
+     * 
+     */
     public String ciphertext() {
         return this.ciphertext;
     }
@@ -32,6 +36,10 @@ public final class GetKMSSecretAsymmetricArgs extends com.pulumi.resources.Invok
     @Import(name="crc32")
     private @Nullable String crc32;
 
+    /**
+     * @return The crc32 checksum of the `ciphertext` in hexadecimal notation. If not specified, it will be computed.
+     * 
+     */
     public Optional<String> crc32() {
         return Optional.ofNullable(this.crc32);
     }
@@ -45,6 +53,12 @@ public final class GetKMSSecretAsymmetricArgs extends com.pulumi.resources.Invok
     @Import(name="cryptoKeyVersion", required=true)
     private String cryptoKeyVersion;
 
+    /**
+     * @return The id of the CryptoKey version that will be used to
+     * decrypt the provided ciphertext. This is represented by the format
+     * `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}/cryptoKeyVersions/{version}`.
+     * 
+     */
     public String cryptoKeyVersion() {
         return this.cryptoKeyVersion;
     }
@@ -75,16 +89,36 @@ public final class GetKMSSecretAsymmetricArgs extends com.pulumi.resources.Invok
             $ = new GetKMSSecretAsymmetricArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ciphertext The ciphertext to be decrypted, encoded in base64
+         * 
+         * @return builder
+         * 
+         */
         public Builder ciphertext(String ciphertext) {
             $.ciphertext = ciphertext;
             return this;
         }
 
+        /**
+         * @param crc32 The crc32 checksum of the `ciphertext` in hexadecimal notation. If not specified, it will be computed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crc32(@Nullable String crc32) {
             $.crc32 = crc32;
             return this;
         }
 
+        /**
+         * @param cryptoKeyVersion The id of the CryptoKey version that will be used to
+         * decrypt the provided ciphertext. This is represented by the format
+         * `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}/cryptoKeyVersions/{version}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKeyVersion(String cryptoKeyVersion) {
             $.cryptoKeyVersion = cryptoKeyVersion;
             return this;

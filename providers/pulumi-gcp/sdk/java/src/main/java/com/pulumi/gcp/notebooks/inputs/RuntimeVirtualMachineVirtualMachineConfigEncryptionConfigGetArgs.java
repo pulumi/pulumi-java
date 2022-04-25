@@ -26,6 +26,14 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetA
     @Import(name="kmsKey")
     private @Nullable Output<String> kmsKey;
 
+    /**
+     * @return The Cloud KMS resource identifier of the customer-managed
+     * encryption key used to protect a resource, such as a disks.
+     * It has the following format:
+     * `projects/{PROJECT_ID}/locations/{REGION}/keyRings/
+     * {KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
+     * 
+     */
     public Optional<Output<String>> kmsKey() {
         return Optional.ofNullable(this.kmsKey);
     }
@@ -54,11 +62,31 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetA
             $ = new RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKey The Cloud KMS resource identifier of the customer-managed
+         * encryption key used to protect a resource, such as a disks.
+         * It has the following format:
+         * `projects/{PROJECT_ID}/locations/{REGION}/keyRings/
+         * {KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
             $.kmsKey = kmsKey;
             return this;
         }
 
+        /**
+         * @param kmsKey The Cloud KMS resource identifier of the customer-managed
+         * encryption key used to protect a resource, such as a disks.
+         * It has the following format:
+         * `projects/{PROJECT_ID}/locations/{REGION}/keyRings/
+         * {KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(String kmsKey) {
             return kmsKey(Output.of(kmsKey));
         }

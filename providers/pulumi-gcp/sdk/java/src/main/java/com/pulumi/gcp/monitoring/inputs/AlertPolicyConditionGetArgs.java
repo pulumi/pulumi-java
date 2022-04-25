@@ -28,6 +28,12 @@ public final class AlertPolicyConditionGetArgs extends com.pulumi.resources.Reso
     @Import(name="conditionAbsent")
     private @Nullable Output<AlertPolicyConditionConditionAbsentGetArgs> conditionAbsent;
 
+    /**
+     * @return A condition that checks that a time series
+     * continues to receive new data points.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AlertPolicyConditionConditionAbsentGetArgs>> conditionAbsent() {
         return Optional.ofNullable(this.conditionAbsent);
     }
@@ -41,6 +47,12 @@ public final class AlertPolicyConditionGetArgs extends com.pulumi.resources.Reso
     @Import(name="conditionMatchedLog")
     private @Nullable Output<AlertPolicyConditionConditionMatchedLogGetArgs> conditionMatchedLog;
 
+    /**
+     * @return A condition that checks for log messages matching given constraints.
+     * If set, no other conditions can be present.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AlertPolicyConditionConditionMatchedLogGetArgs>> conditionMatchedLog() {
         return Optional.ofNullable(this.conditionMatchedLog);
     }
@@ -53,6 +65,11 @@ public final class AlertPolicyConditionGetArgs extends com.pulumi.resources.Reso
     @Import(name="conditionMonitoringQueryLanguage")
     private @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs> conditionMonitoringQueryLanguage;
 
+    /**
+     * @return A Monitoring Query Language query that outputs a boolean stream
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs>> conditionMonitoringQueryLanguage() {
         return Optional.ofNullable(this.conditionMonitoringQueryLanguage);
     }
@@ -66,6 +83,12 @@ public final class AlertPolicyConditionGetArgs extends com.pulumi.resources.Reso
     @Import(name="conditionThreshold")
     private @Nullable Output<AlertPolicyConditionConditionThresholdGetArgs> conditionThreshold;
 
+    /**
+     * @return A condition that compares a time series against a
+     * threshold.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AlertPolicyConditionConditionThresholdGetArgs>> conditionThreshold() {
         return Optional.ofNullable(this.conditionThreshold);
     }
@@ -81,6 +104,14 @@ public final class AlertPolicyConditionGetArgs extends com.pulumi.resources.Reso
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return A short name or phrase used to identify the
+     * condition in dashboards, notifications, and
+     * incidents. To avoid confusion, don&#39;t use the same
+     * display name for multiple conditions in the same
+     * policy.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -98,6 +129,16 @@ public final class AlertPolicyConditionGetArgs extends com.pulumi.resources.Reso
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return -
+     * The unique resource name for this condition.
+     * Its syntax is:
+     * projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+     * [CONDITION_ID] is assigned by Stackdriver Monitoring when
+     * the condition is created as part of a new or updated alerting
+     * policy.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -131,56 +172,162 @@ public final class AlertPolicyConditionGetArgs extends com.pulumi.resources.Reso
             $ = new AlertPolicyConditionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditionAbsent A condition that checks that a time series
+         * continues to receive new data points.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionAbsent(@Nullable Output<AlertPolicyConditionConditionAbsentGetArgs> conditionAbsent) {
             $.conditionAbsent = conditionAbsent;
             return this;
         }
 
+        /**
+         * @param conditionAbsent A condition that checks that a time series
+         * continues to receive new data points.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionAbsent(AlertPolicyConditionConditionAbsentGetArgs conditionAbsent) {
             return conditionAbsent(Output.of(conditionAbsent));
         }
 
+        /**
+         * @param conditionMatchedLog A condition that checks for log messages matching given constraints.
+         * If set, no other conditions can be present.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionMatchedLog(@Nullable Output<AlertPolicyConditionConditionMatchedLogGetArgs> conditionMatchedLog) {
             $.conditionMatchedLog = conditionMatchedLog;
             return this;
         }
 
+        /**
+         * @param conditionMatchedLog A condition that checks for log messages matching given constraints.
+         * If set, no other conditions can be present.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionMatchedLog(AlertPolicyConditionConditionMatchedLogGetArgs conditionMatchedLog) {
             return conditionMatchedLog(Output.of(conditionMatchedLog));
         }
 
+        /**
+         * @param conditionMonitoringQueryLanguage A Monitoring Query Language query that outputs a boolean stream
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionMonitoringQueryLanguage(@Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs> conditionMonitoringQueryLanguage) {
             $.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
             return this;
         }
 
+        /**
+         * @param conditionMonitoringQueryLanguage A Monitoring Query Language query that outputs a boolean stream
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionMonitoringQueryLanguage(AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs conditionMonitoringQueryLanguage) {
             return conditionMonitoringQueryLanguage(Output.of(conditionMonitoringQueryLanguage));
         }
 
+        /**
+         * @param conditionThreshold A condition that compares a time series against a
+         * threshold.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionThreshold(@Nullable Output<AlertPolicyConditionConditionThresholdGetArgs> conditionThreshold) {
             $.conditionThreshold = conditionThreshold;
             return this;
         }
 
+        /**
+         * @param conditionThreshold A condition that compares a time series against a
+         * threshold.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionThreshold(AlertPolicyConditionConditionThresholdGetArgs conditionThreshold) {
             return conditionThreshold(Output.of(conditionThreshold));
         }
 
+        /**
+         * @param displayName A short name or phrase used to identify the
+         * condition in dashboards, notifications, and
+         * incidents. To avoid confusion, don&#39;t use the same
+         * display name for multiple conditions in the same
+         * policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName A short name or phrase used to identify the
+         * condition in dashboards, notifications, and
+         * incidents. To avoid confusion, don&#39;t use the same
+         * display name for multiple conditions in the same
+         * policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param name -
+         * The unique resource name for this condition.
+         * Its syntax is:
+         * projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+         * [CONDITION_ID] is assigned by Stackdriver Monitoring when
+         * the condition is created as part of a new or updated alerting
+         * policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name -
+         * The unique resource name for this condition.
+         * Its syntax is:
+         * projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+         * [CONDITION_ID] is assigned by Stackdriver Monitoring when
+         * the condition is created as part of a new or updated alerting
+         * policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureNodePoolConfigRootVolume {
     /**
-     * Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
+     * @return Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
      * 
      */
     private final @Nullable Integer sizeGib;
@@ -23,9 +23,9 @@ public final class AzureNodePoolConfigRootVolume {
     }
 
     /**
-     * Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
+     * @return Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
      * 
-    */
+     */
     public Optional<Integer> sizeGib() {
         return Optional.ofNullable(this.sizeGib);
     }

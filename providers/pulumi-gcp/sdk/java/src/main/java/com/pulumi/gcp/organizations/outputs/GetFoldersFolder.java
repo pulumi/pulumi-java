@@ -10,42 +10,42 @@ import java.util.Objects;
 @CustomType
 public final class GetFoldersFolder {
     /**
-     * The timestamp of when the folder was created
+     * @return The timestamp of when the folder was created
      * 
      */
     private final String createTime;
     /**
-     * The timestamp of when the folder was requested to be deleted (if applicable)
+     * @return The timestamp of when the folder was requested to be deleted (if applicable)
      * 
      */
     private final String deleteTime;
     /**
-     * The display name of the folder
+     * @return The display name of the folder
      * 
      */
     private final String displayName;
     /**
-     * Entity tag identifier of the folder
+     * @return Entity tag identifier of the folder
      * 
      */
     private final String etag;
     /**
-     * The id of the folder
+     * @return The id of the folder
      * 
      */
     private final String name;
     /**
-     * The parent id of the folder
+     * @return The parent id of the folder
      * 
      */
     private final String parent;
     /**
-     * The lifecycle state of the folder
+     * @return The lifecycle state of the folder
      * 
      */
     private final String state;
     /**
-     * The timestamp of when the folder was last modified
+     * @return The timestamp of when the folder was last modified
      * 
      */
     private final String updateTime;
@@ -71,58 +71,58 @@ public final class GetFoldersFolder {
     }
 
     /**
-     * The timestamp of when the folder was created
+     * @return The timestamp of when the folder was created
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The timestamp of when the folder was requested to be deleted (if applicable)
+     * @return The timestamp of when the folder was requested to be deleted (if applicable)
      * 
-    */
+     */
     public String deleteTime() {
         return this.deleteTime;
     }
     /**
-     * The display name of the folder
+     * @return The display name of the folder
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Entity tag identifier of the folder
+     * @return Entity tag identifier of the folder
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The id of the folder
+     * @return The id of the folder
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The parent id of the folder
+     * @return The parent id of the folder
      * 
-    */
+     */
     public String parent() {
         return this.parent;
     }
     /**
-     * The lifecycle state of the folder
+     * @return The lifecycle state of the folder
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The timestamp of when the folder was last modified
+     * @return The timestamp of when the folder was last modified
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

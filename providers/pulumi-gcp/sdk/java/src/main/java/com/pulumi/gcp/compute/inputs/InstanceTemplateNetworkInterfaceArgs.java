@@ -32,6 +32,15 @@ public final class InstanceTemplateNetworkInterfaceArgs extends com.pulumi.resou
     @Import(name="accessConfigs")
     private @Nullable Output<List<InstanceTemplateNetworkInterfaceAccessConfigArgs>> accessConfigs;
 
+    /**
+     * @return Access configurations, i.e. IPs via which this
+     * instance can be accessed via the Internet. Omit to ensure that the instance
+     * is not accessible from the Internet (this means that ssh provisioners will
+     * not work unless you can send traffic to the instance&#39;s
+     * network (e.g. via tunnel or because it is running on another cloud instance
+     * on that network). This block can be repeated multiple times. Structure documented below.
+     * 
+     */
     public Optional<Output<List<InstanceTemplateNetworkInterfaceAccessConfigArgs>>> accessConfigs() {
         return Optional.ofNullable(this.accessConfigs);
     }
@@ -45,6 +54,12 @@ public final class InstanceTemplateNetworkInterfaceArgs extends com.pulumi.resou
     @Import(name="aliasIpRanges")
     private @Nullable Output<List<InstanceTemplateNetworkInterfaceAliasIpRangeArgs>> aliasIpRanges;
 
+    /**
+     * @return An
+     * array of alias IP ranges for this network interface. Can only be specified for network
+     * interfaces on subnet-mode networks. Structure documented below.
+     * 
+     */
     public Optional<Output<List<InstanceTemplateNetworkInterfaceAliasIpRangeArgs>>> aliasIpRanges() {
         return Optional.ofNullable(this.aliasIpRanges);
     }
@@ -58,6 +73,12 @@ public final class InstanceTemplateNetworkInterfaceArgs extends com.pulumi.resou
     @Import(name="ipv6AccessConfigs")
     private @Nullable Output<List<InstanceTemplateNetworkInterfaceIpv6AccessConfigArgs>> ipv6AccessConfigs;
 
+    /**
+     * @return An array of IPv6 access configurations for this interface.
+     * Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig
+     * specified, then this instance will have no external IPv6 Internet access. Structure documented below.
+     * 
+     */
     public Optional<Output<List<InstanceTemplateNetworkInterfaceIpv6AccessConfigArgs>>> ipv6AccessConfigs() {
         return Optional.ofNullable(this.ipv6AccessConfigs);
     }
@@ -77,6 +98,11 @@ public final class InstanceTemplateNetworkInterfaceArgs extends com.pulumi.resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the instance template. If you leave
+     * this blank, the provider will auto-generate a unique name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -90,6 +116,12 @@ public final class InstanceTemplateNetworkInterfaceArgs extends com.pulumi.resou
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return The name or self_link of the network to attach this interface to.
+     * Use `network` attribute for Legacy or Auto subnetted networks and
+     * `subnetwork` for custom subnetted networks.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -102,6 +134,11 @@ public final class InstanceTemplateNetworkInterfaceArgs extends com.pulumi.resou
     @Import(name="networkIp")
     private @Nullable Output<String> networkIp;
 
+    /**
+     * @return The private IP address to assign to the instance. If
+     * empty, the address will be automatically assigned.
+     * 
+     */
     public Optional<Output<String>> networkIp() {
         return Optional.ofNullable(this.networkIp);
     }
@@ -113,6 +150,10 @@ public final class InstanceTemplateNetworkInterfaceArgs extends com.pulumi.resou
     @Import(name="nicType")
     private @Nullable Output<String> nicType;
 
+    /**
+     * @return The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
+     * 
+     */
     public Optional<Output<String>> nicType() {
         return Optional.ofNullable(this.nicType);
     }
@@ -124,6 +165,10 @@ public final class InstanceTemplateNetworkInterfaceArgs extends com.pulumi.resou
     @Import(name="queueCount")
     private @Nullable Output<Integer> queueCount;
 
+    /**
+     * @return The networking queue count that&#39;s specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
+     * 
+     */
     public Optional<Output<Integer>> queueCount() {
         return Optional.ofNullable(this.queueCount);
     }
@@ -135,6 +180,10 @@ public final class InstanceTemplateNetworkInterfaceArgs extends com.pulumi.resou
     @Import(name="stackType")
     private @Nullable Output<String> stackType;
 
+    /**
+     * @return The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
+     * 
+     */
     public Optional<Output<String>> stackType() {
         return Optional.ofNullable(this.stackType);
     }
@@ -148,6 +197,12 @@ public final class InstanceTemplateNetworkInterfaceArgs extends com.pulumi.resou
     @Import(name="subnetwork")
     private @Nullable Output<String> subnetwork;
 
+    /**
+     * @return the name of the subnetwork to attach this interface
+     * to. The subnetwork must exist in the same `region` this instance will be
+     * created in. Either `network` or `subnetwork` must be provided.
+     * 
+     */
     public Optional<Output<String>> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
@@ -160,6 +215,11 @@ public final class InstanceTemplateNetworkInterfaceArgs extends com.pulumi.resou
     @Import(name="subnetworkProject")
     private @Nullable Output<String> subnetworkProject;
 
+    /**
+     * @return The ID of the project in which the subnetwork belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> subnetworkProject() {
         return Optional.ofNullable(this.subnetworkProject);
     }
@@ -199,41 +259,122 @@ public final class InstanceTemplateNetworkInterfaceArgs extends com.pulumi.resou
             $ = new InstanceTemplateNetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessConfigs Access configurations, i.e. IPs via which this
+         * instance can be accessed via the Internet. Omit to ensure that the instance
+         * is not accessible from the Internet (this means that ssh provisioners will
+         * not work unless you can send traffic to the instance&#39;s
+         * network (e.g. via tunnel or because it is running on another cloud instance
+         * on that network). This block can be repeated multiple times. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessConfigs(@Nullable Output<List<InstanceTemplateNetworkInterfaceAccessConfigArgs>> accessConfigs) {
             $.accessConfigs = accessConfigs;
             return this;
         }
 
+        /**
+         * @param accessConfigs Access configurations, i.e. IPs via which this
+         * instance can be accessed via the Internet. Omit to ensure that the instance
+         * is not accessible from the Internet (this means that ssh provisioners will
+         * not work unless you can send traffic to the instance&#39;s
+         * network (e.g. via tunnel or because it is running on another cloud instance
+         * on that network). This block can be repeated multiple times. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessConfigs(List<InstanceTemplateNetworkInterfaceAccessConfigArgs> accessConfigs) {
             return accessConfigs(Output.of(accessConfigs));
         }
 
+        /**
+         * @param accessConfigs Access configurations, i.e. IPs via which this
+         * instance can be accessed via the Internet. Omit to ensure that the instance
+         * is not accessible from the Internet (this means that ssh provisioners will
+         * not work unless you can send traffic to the instance&#39;s
+         * network (e.g. via tunnel or because it is running on another cloud instance
+         * on that network). This block can be repeated multiple times. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessConfigs(InstanceTemplateNetworkInterfaceAccessConfigArgs... accessConfigs) {
             return accessConfigs(List.of(accessConfigs));
         }
 
+        /**
+         * @param aliasIpRanges An
+         * array of alias IP ranges for this network interface. Can only be specified for network
+         * interfaces on subnet-mode networks. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasIpRanges(@Nullable Output<List<InstanceTemplateNetworkInterfaceAliasIpRangeArgs>> aliasIpRanges) {
             $.aliasIpRanges = aliasIpRanges;
             return this;
         }
 
+        /**
+         * @param aliasIpRanges An
+         * array of alias IP ranges for this network interface. Can only be specified for network
+         * interfaces on subnet-mode networks. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasIpRanges(List<InstanceTemplateNetworkInterfaceAliasIpRangeArgs> aliasIpRanges) {
             return aliasIpRanges(Output.of(aliasIpRanges));
         }
 
+        /**
+         * @param aliasIpRanges An
+         * array of alias IP ranges for this network interface. Can only be specified for network
+         * interfaces on subnet-mode networks. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasIpRanges(InstanceTemplateNetworkInterfaceAliasIpRangeArgs... aliasIpRanges) {
             return aliasIpRanges(List.of(aliasIpRanges));
         }
 
+        /**
+         * @param ipv6AccessConfigs An array of IPv6 access configurations for this interface.
+         * Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig
+         * specified, then this instance will have no external IPv6 Internet access. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6AccessConfigs(@Nullable Output<List<InstanceTemplateNetworkInterfaceIpv6AccessConfigArgs>> ipv6AccessConfigs) {
             $.ipv6AccessConfigs = ipv6AccessConfigs;
             return this;
         }
 
+        /**
+         * @param ipv6AccessConfigs An array of IPv6 access configurations for this interface.
+         * Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig
+         * specified, then this instance will have no external IPv6 Internet access. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6AccessConfigs(List<InstanceTemplateNetworkInterfaceIpv6AccessConfigArgs> ipv6AccessConfigs) {
             return ipv6AccessConfigs(Output.of(ipv6AccessConfigs));
         }
 
+        /**
+         * @param ipv6AccessConfigs An array of IPv6 access configurations for this interface.
+         * Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig
+         * specified, then this instance will have no external IPv6 Internet access. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6AccessConfigs(InstanceTemplateNetworkInterfaceIpv6AccessConfigArgs... ipv6AccessConfigs) {
             return ipv6AccessConfigs(List.of(ipv6AccessConfigs));
         }
@@ -247,74 +388,184 @@ public final class InstanceTemplateNetworkInterfaceArgs extends com.pulumi.resou
             return ipv6AccessType(Output.of(ipv6AccessType));
         }
 
+        /**
+         * @param name The name of the instance template. If you leave
+         * this blank, the provider will auto-generate a unique name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the instance template. If you leave
+         * this blank, the provider will auto-generate a unique name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param network The name or self_link of the network to attach this interface to.
+         * Use `network` attribute for Legacy or Auto subnetted networks and
+         * `subnetwork` for custom subnetted networks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The name or self_link of the network to attach this interface to.
+         * Use `network` attribute for Legacy or Auto subnetted networks and
+         * `subnetwork` for custom subnetted networks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param networkIp The private IP address to assign to the instance. If
+         * empty, the address will be automatically assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkIp(@Nullable Output<String> networkIp) {
             $.networkIp = networkIp;
             return this;
         }
 
+        /**
+         * @param networkIp The private IP address to assign to the instance. If
+         * empty, the address will be automatically assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkIp(String networkIp) {
             return networkIp(Output.of(networkIp));
         }
 
+        /**
+         * @param nicType The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(@Nullable Output<String> nicType) {
             $.nicType = nicType;
             return this;
         }
 
+        /**
+         * @param nicType The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(String nicType) {
             return nicType(Output.of(nicType));
         }
 
+        /**
+         * @param queueCount The networking queue count that&#39;s specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueCount(@Nullable Output<Integer> queueCount) {
             $.queueCount = queueCount;
             return this;
         }
 
+        /**
+         * @param queueCount The networking queue count that&#39;s specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueCount(Integer queueCount) {
             return queueCount(Output.of(queueCount));
         }
 
+        /**
+         * @param stackType The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackType(@Nullable Output<String> stackType) {
             $.stackType = stackType;
             return this;
         }
 
+        /**
+         * @param stackType The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackType(String stackType) {
             return stackType(Output.of(stackType));
         }
 
+        /**
+         * @param subnetwork the name of the subnetwork to attach this interface
+         * to. The subnetwork must exist in the same `region` this instance will be
+         * created in. Either `network` or `subnetwork` must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             $.subnetwork = subnetwork;
             return this;
         }
 
+        /**
+         * @param subnetwork the name of the subnetwork to attach this interface
+         * to. The subnetwork must exist in the same `region` this instance will be
+         * created in. Either `network` or `subnetwork` must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(String subnetwork) {
             return subnetwork(Output.of(subnetwork));
         }
 
+        /**
+         * @param subnetworkProject The ID of the project in which the subnetwork belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworkProject(@Nullable Output<String> subnetworkProject) {
             $.subnetworkProject = subnetworkProject;
             return this;
         }
 
+        /**
+         * @param subnetworkProject The ID of the project in which the subnetwork belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworkProject(String subnetworkProject) {
             return subnetworkProject(Output.of(subnetworkProject));
         }

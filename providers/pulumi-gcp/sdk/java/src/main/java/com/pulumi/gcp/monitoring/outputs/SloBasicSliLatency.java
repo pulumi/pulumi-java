@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class SloBasicSliLatency {
     /**
-     * A duration string, e.g. 10s.
+     * @return A duration string, e.g. 10s.
      * Good service is defined to be the count of requests made to
      * this service that return in no more than threshold.
      * 
@@ -23,11 +23,11 @@ public final class SloBasicSliLatency {
     }
 
     /**
-     * A duration string, e.g. 10s.
+     * @return A duration string, e.g. 10s.
      * Good service is defined to be the count of requests made to
      * this service that return in no more than threshold.
      * 
-    */
+     */
     public String threshold() {
         return this.threshold;
     }

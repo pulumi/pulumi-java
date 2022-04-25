@@ -25,6 +25,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataprocServiceAccount")
     private @Nullable Output<String> dataprocServiceAccount;
 
+    /**
+     * @return User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines.
+     * 
+     */
     public Optional<Output<String>> dataprocServiceAccount() {
         return Optional.ofNullable(this.dataprocServiceAccount);
     }
@@ -36,6 +40,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of the instance.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableStackdriverLogging")
     private @Nullable Output<Boolean> enableStackdriverLogging;
 
+    /**
+     * @return Option to enable Stackdriver Logging.
+     * 
+     */
     public Optional<Output<Boolean>> enableStackdriverLogging() {
         return Optional.ofNullable(this.enableStackdriverLogging);
     }
@@ -58,6 +70,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableStackdriverMonitoring")
     private @Nullable Output<Boolean> enableStackdriverMonitoring;
 
+    /**
+     * @return Option to enable Stackdriver Monitoring.
+     * 
+     */
     public Optional<Output<Boolean>> enableStackdriverMonitoring() {
         return Optional.ofNullable(this.enableStackdriverMonitoring);
     }
@@ -70,6 +86,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The resource labels for instance to use to annotate any related underlying resources,
+     * such as Compute Engine VMs.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -81,6 +102,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The ID of the instance or a fully qualified identifier for the instance.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -93,6 +118,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkConfig")
     private @Nullable Output<InstanceNetworkConfigArgs> networkConfig;
 
+    /**
+     * @return Network configuration options. These are required when a private Data Fusion instance is to be created.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<InstanceNetworkConfigArgs>> networkConfig() {
         return Optional.ofNullable(this.networkConfig);
     }
@@ -104,6 +134,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="options")
     private @Nullable Output<Map<String,String>> options;
 
+    /**
+     * @return Map of additional options used to configure the behavior of Data Fusion instance.
+     * 
+     */
     public Optional<Output<Map<String,String>>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -117,6 +151,12 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateInstance")
     private @Nullable Output<Boolean> privateInstance;
 
+    /**
+     * @return Specifies whether the Data Fusion instance should be private. If set to
+     * true, all Data Fusion nodes will have private IP addresses and will not be
+     * able to access the public internet.
+     * 
+     */
     public Optional<Output<Boolean>> privateInstance() {
         return Optional.ofNullable(this.privateInstance);
     }
@@ -129,6 +169,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -140,6 +185,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The region of the Data Fusion instance.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -161,6 +210,20 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Represents the type of Data Fusion instance. Each type is configured with
+     * the default settings for processing and memory.
+     * - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines
+     *   using point and click UI. However, there are certain limitations, such as fewer number
+     *   of concurrent pipelines, no support for streaming pipelines, etc.
+     * - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
+     *   available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+     * - DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
+     *   with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
+     *   pipelines at low cost.
+     *   Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -172,6 +235,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Current version of the Data Fusion.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -212,119 +279,305 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataprocServiceAccount User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataprocServiceAccount(@Nullable Output<String> dataprocServiceAccount) {
             $.dataprocServiceAccount = dataprocServiceAccount;
             return this;
         }
 
+        /**
+         * @param dataprocServiceAccount User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataprocServiceAccount(String dataprocServiceAccount) {
             return dataprocServiceAccount(Output.of(dataprocServiceAccount));
         }
 
+        /**
+         * @param description An optional description of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enableStackdriverLogging Option to enable Stackdriver Logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
             $.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
 
+        /**
+         * @param enableStackdriverLogging Option to enable Stackdriver Logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
             return enableStackdriverLogging(Output.of(enableStackdriverLogging));
         }
 
+        /**
+         * @param enableStackdriverMonitoring Option to enable Stackdriver Monitoring.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStackdriverMonitoring(@Nullable Output<Boolean> enableStackdriverMonitoring) {
             $.enableStackdriverMonitoring = enableStackdriverMonitoring;
             return this;
         }
 
+        /**
+         * @param enableStackdriverMonitoring Option to enable Stackdriver Monitoring.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStackdriverMonitoring(Boolean enableStackdriverMonitoring) {
             return enableStackdriverMonitoring(Output.of(enableStackdriverMonitoring));
         }
 
+        /**
+         * @param labels The resource labels for instance to use to annotate any related underlying resources,
+         * such as Compute Engine VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The resource labels for instance to use to annotate any related underlying resources,
+         * such as Compute Engine VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param name The ID of the instance or a fully qualified identifier for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The ID of the instance or a fully qualified identifier for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networkConfig Network configuration options. These are required when a private Data Fusion instance is to be created.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(@Nullable Output<InstanceNetworkConfigArgs> networkConfig) {
             $.networkConfig = networkConfig;
             return this;
         }
 
+        /**
+         * @param networkConfig Network configuration options. These are required when a private Data Fusion instance is to be created.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(InstanceNetworkConfigArgs networkConfig) {
             return networkConfig(Output.of(networkConfig));
         }
 
+        /**
+         * @param options Map of additional options used to configure the behavior of Data Fusion instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<Map<String,String>> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Map of additional options used to configure the behavior of Data Fusion instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(Map<String,String> options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param privateInstance Specifies whether the Data Fusion instance should be private. If set to
+         * true, all Data Fusion nodes will have private IP addresses and will not be
+         * able to access the public internet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateInstance(@Nullable Output<Boolean> privateInstance) {
             $.privateInstance = privateInstance;
             return this;
         }
 
+        /**
+         * @param privateInstance Specifies whether the Data Fusion instance should be private. If set to
+         * true, all Data Fusion nodes will have private IP addresses and will not be
+         * able to access the public internet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateInstance(Boolean privateInstance) {
             return privateInstance(Output.of(privateInstance));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The region of the Data Fusion instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The region of the Data Fusion instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param type Represents the type of Data Fusion instance. Each type is configured with
+         * the default settings for processing and memory.
+         * - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines
+         *   using point and click UI. However, there are certain limitations, such as fewer number
+         *   of concurrent pipelines, no support for streaming pipelines, etc.
+         * - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
+         *   available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+         * - DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
+         *   with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
+         *   pipelines at low cost.
+         *   Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Represents the type of Data Fusion instance. Each type is configured with
+         * the default settings for processing and memory.
+         * - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines
+         *   using point and click UI. However, there are certain limitations, such as fewer number
+         *   of concurrent pipelines, no support for streaming pipelines, etc.
+         * - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
+         *   available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+         * - DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
+         *   with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
+         *   pipelines at low cost.
+         *   Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param version Current version of the Data Fusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Current version of the Data Fusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

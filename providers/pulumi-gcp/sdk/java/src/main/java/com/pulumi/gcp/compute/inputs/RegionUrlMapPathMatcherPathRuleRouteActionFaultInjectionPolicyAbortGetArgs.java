@@ -22,6 +22,11 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
     @Import(name="httpStatus", required=true)
     private Output<Integer> httpStatus;
 
+    /**
+     * @return The HTTP status code used to abort the request. The value must be between 200
+     * and 599 inclusive.
+     * 
+     */
     public Output<Integer> httpStatus() {
         return this.httpStatus;
     }
@@ -35,6 +40,12 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
     @Import(name="percentage", required=true)
     private Output<Double> percentage;
 
+    /**
+     * @return The percentage of traffic (connections/operations/requests) on which delay will
+     * be introduced as part of fault injection. The value must be between 0.0 and
+     * 100.0 inclusive.
+     * 
+     */
     public Output<Double> percentage() {
         return this.percentage;
     }
@@ -64,20 +75,50 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
             $ = new RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpStatus The HTTP status code used to abort the request. The value must be between 200
+         * and 599 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpStatus(Output<Integer> httpStatus) {
             $.httpStatus = httpStatus;
             return this;
         }
 
+        /**
+         * @param httpStatus The HTTP status code used to abort the request. The value must be between 200
+         * and 599 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpStatus(Integer httpStatus) {
             return httpStatus(Output.of(httpStatus));
         }
 
+        /**
+         * @param percentage The percentage of traffic (connections/operations/requests) on which delay will
+         * be introduced as part of fault injection. The value must be between 0.0 and
+         * 100.0 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(Output<Double> percentage) {
             $.percentage = percentage;
             return this;
         }
 
+        /**
+         * @param percentage The percentage of traffic (connections/operations/requests) on which delay will
+         * be introduced as part of fault injection. The value must be between 0.0 and
+         * 100.0 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(Double percentage) {
             return percentage(Output.of(percentage));
         }

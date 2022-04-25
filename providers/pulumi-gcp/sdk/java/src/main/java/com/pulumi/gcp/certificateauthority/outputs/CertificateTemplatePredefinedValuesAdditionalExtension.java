@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateTemplatePredefinedValuesAdditionalExtension {
     /**
-     * Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
+     * @return Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
      * 
      */
     private final @Nullable Boolean critical;
     /**
-     * Required. The OID for this X.509 extension.
+     * @return Required. The OID for this X.509 extension.
      * 
      */
     private final CertificateTemplatePredefinedValuesAdditionalExtensionObjectId objectId;
     /**
-     * Required. The value of this X.509 extension.
+     * @return Required. The value of this X.509 extension.
      * 
      */
     private final String value;
@@ -40,23 +40,23 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtension {
     }
 
     /**
-     * Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
+     * @return Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
      * 
-    */
+     */
     public Optional<Boolean> critical() {
         return Optional.ofNullable(this.critical);
     }
     /**
-     * Required. The OID for this X.509 extension.
+     * @return Required. The OID for this X.509 extension.
      * 
-    */
+     */
     public CertificateTemplatePredefinedValuesAdditionalExtensionObjectId objectId() {
         return this.objectId;
     }
     /**
-     * Required. The value of this X.509 extension.
+     * @return Required. The value of this X.509 extension.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

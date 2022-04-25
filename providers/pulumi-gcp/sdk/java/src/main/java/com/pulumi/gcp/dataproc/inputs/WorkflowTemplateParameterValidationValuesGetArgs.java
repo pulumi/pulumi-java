@@ -21,6 +21,10 @@ public final class WorkflowTemplateParameterValidationValuesGetArgs extends com.
     @Import(name="values", required=true)
     private Output<List<String>> values;
 
+    /**
+     * @return Optional. Corresponds to the label values of reservation resource.
+     * 
+     */
     public Output<List<String>> values() {
         return this.values;
     }
@@ -49,15 +53,33 @@ public final class WorkflowTemplateParameterValidationValuesGetArgs extends com.
             $ = new WorkflowTemplateParameterValidationValuesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param values Optional. Corresponds to the label values of reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Optional. Corresponds to the label values of reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values Optional. Corresponds to the label values of reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

@@ -21,6 +21,10 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
     @Import(name="headerName", required=true)
     private Output<String> headerName;
 
+    /**
+     * @return The name of the header.
+     * 
+     */
     public Output<String> headerName() {
         return this.headerName;
     }
@@ -32,6 +36,10 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
     @Import(name="headerValue", required=true)
     private Output<String> headerValue;
 
+    /**
+     * @return The value of the header to add.
+     * 
+     */
     public Output<String> headerValue() {
         return this.headerValue;
     }
@@ -45,6 +53,12 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
     @Import(name="replace", required=true)
     private Output<Boolean> replace;
 
+    /**
+     * @return If false, headerValue is appended to any values that already exist for the
+     * header. If true, headerValue is set for the header, discarding any values that
+     * were set for that header.
+     * 
+     */
     public Output<Boolean> replace() {
         return this.replace;
     }
@@ -75,29 +89,69 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
             $ = new RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerName The name of the header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(Output<String> headerName) {
             $.headerName = headerName;
             return this;
         }
 
+        /**
+         * @param headerName The name of the header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(String headerName) {
             return headerName(Output.of(headerName));
         }
 
+        /**
+         * @param headerValue The value of the header to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerValue(Output<String> headerValue) {
             $.headerValue = headerValue;
             return this;
         }
 
+        /**
+         * @param headerValue The value of the header to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerValue(String headerValue) {
             return headerValue(Output.of(headerValue));
         }
 
+        /**
+         * @param replace If false, headerValue is appended to any values that already exist for the
+         * header. If true, headerValue is set for the header, discarding any values that
+         * were set for that header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replace(Output<Boolean> replace) {
             $.replace = replace;
             return this;
         }
 
+        /**
+         * @param replace If false, headerValue is appended to any values that already exist for the
+         * header. If true, headerValue is set for the header, discarding any values that
+         * were set for that header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replace(Boolean replace) {
             return replace(Output.of(replace));
         }

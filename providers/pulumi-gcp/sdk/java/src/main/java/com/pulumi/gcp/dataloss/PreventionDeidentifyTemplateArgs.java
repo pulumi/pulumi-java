@@ -24,6 +24,11 @@ public final class PreventionDeidentifyTemplateArgs extends com.pulumi.resources
     @Import(name="deidentifyConfig", required=true)
     private Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig;
 
+    /**
+     * @return Configuration of the deidentify template
+     * Structure is documented below.
+     * 
+     */
     public Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig() {
         return this.deidentifyConfig;
     }
@@ -35,6 +40,10 @@ public final class PreventionDeidentifyTemplateArgs extends com.pulumi.resources
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the template.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +55,10 @@ public final class PreventionDeidentifyTemplateArgs extends com.pulumi.resources
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return User set display name of the template.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -61,6 +74,14 @@ public final class PreventionDeidentifyTemplateArgs extends com.pulumi.resources
     @Import(name="parent", required=true)
     private Output<String> parent;
 
+    /**
+     * @return The parent of the template in any of the following formats:
+     * * `projects/{{project}}`
+     * * `projects/{{project}}/locations/{{location}}`
+     * * `organizations/{{organization_id}}`
+     * * `organizations/{{organization_id}}/locations/{{location}}`
+     * 
+     */
     public Output<String> parent() {
         return this.parent;
     }
@@ -92,38 +113,96 @@ public final class PreventionDeidentifyTemplateArgs extends com.pulumi.resources
             $ = new PreventionDeidentifyTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deidentifyConfig Configuration of the deidentify template
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deidentifyConfig(Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig) {
             $.deidentifyConfig = deidentifyConfig;
             return this;
         }
 
+        /**
+         * @param deidentifyConfig Configuration of the deidentify template
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deidentifyConfig(PreventionDeidentifyTemplateDeidentifyConfigArgs deidentifyConfig) {
             return deidentifyConfig(Output.of(deidentifyConfig));
         }
 
+        /**
+         * @param description A description of the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName User set display name of the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User set display name of the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param parent The parent of the template in any of the following formats:
+         * * `projects/{{project}}`
+         * * `projects/{{project}}/locations/{{location}}`
+         * * `organizations/{{organization_id}}`
+         * * `organizations/{{organization_id}}/locations/{{location}}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The parent of the template in any of the following formats:
+         * * `projects/{{project}}`
+         * * `projects/{{project}}/locations/{{location}}`
+         * * `organizations/{{organization_id}}`
+         * * `organizations/{{organization_id}}/locations/{{location}}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }

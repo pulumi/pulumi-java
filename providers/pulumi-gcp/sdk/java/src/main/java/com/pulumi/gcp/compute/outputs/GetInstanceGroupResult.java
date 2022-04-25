@@ -15,39 +15,39 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetInstanceGroupResult {
     /**
-     * Textual description of the instance group.
+     * @return Textual description of the instance group.
      * 
      */
     private final String description;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * List of instances in the group.
+     * @return List of instances in the group.
      * 
      */
     private final List<String> instances;
     private final @Nullable String name;
     /**
-     * List of named ports in the group.
+     * @return List of named ports in the group.
      * 
      */
     private final List<GetInstanceGroupNamedPort> namedPorts;
     /**
-     * The URL of the network the instance group is in.
+     * @return The URL of the network the instance group is in.
      * 
      */
     private final String network;
     private final String project;
     /**
-     * The URI of the resource.
+     * @return The URI of the resource.
      * 
      */
     private final String selfLink;
     /**
-     * The number of instances in the group.
+     * @return The number of instances in the group.
      * 
      */
     private final Integer size;
@@ -78,23 +78,23 @@ public final class GetInstanceGroupResult {
     }
 
     /**
-     * Textual description of the instance group.
+     * @return Textual description of the instance group.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * List of instances in the group.
+     * @return List of instances in the group.
      * 
-    */
+     */
     public List<String> instances() {
         return this.instances;
     }
@@ -102,16 +102,16 @@ public final class GetInstanceGroupResult {
         return Optional.ofNullable(this.name);
     }
     /**
-     * List of named ports in the group.
+     * @return List of named ports in the group.
      * 
-    */
+     */
     public List<GetInstanceGroupNamedPort> namedPorts() {
         return this.namedPorts;
     }
     /**
-     * The URL of the network the instance group is in.
+     * @return The URL of the network the instance group is in.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
@@ -119,16 +119,16 @@ public final class GetInstanceGroupResult {
         return this.project;
     }
     /**
-     * The URI of the resource.
+     * @return The URI of the resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * The number of instances in the group.
+     * @return The number of instances in the group.
      * 
-    */
+     */
     public Integer size() {
         return this.size;
     }

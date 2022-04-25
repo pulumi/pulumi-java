@@ -21,6 +21,11 @@ public final class PreventionJobTriggerInspectJobActionArgs extends com.pulumi.r
     @Import(name="saveFindings", required=true)
     private Output<PreventionJobTriggerInspectJobActionSaveFindingsArgs> saveFindings;
 
+    /**
+     * @return Schedule for triggered jobs
+     * Structure is documented below.
+     * 
+     */
     public Output<PreventionJobTriggerInspectJobActionSaveFindingsArgs> saveFindings() {
         return this.saveFindings;
     }
@@ -49,11 +54,25 @@ public final class PreventionJobTriggerInspectJobActionArgs extends com.pulumi.r
             $ = new PreventionJobTriggerInspectJobActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param saveFindings Schedule for triggered jobs
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saveFindings(Output<PreventionJobTriggerInspectJobActionSaveFindingsArgs> saveFindings) {
             $.saveFindings = saveFindings;
             return this;
         }
 
+        /**
+         * @param saveFindings Schedule for triggered jobs
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saveFindings(PreventionJobTriggerInspectJobActionSaveFindingsArgs saveFindings) {
             return saveFindings(Output.of(saveFindings));
         }

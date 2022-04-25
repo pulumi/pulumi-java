@@ -23,6 +23,10 @@ public final class PreventionInspectTemplateArgs extends com.pulumi.resources.Re
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the inspect template.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class PreventionInspectTemplateArgs extends com.pulumi.resources.Re
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return User set display name of the inspect template.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -46,6 +54,11 @@ public final class PreventionInspectTemplateArgs extends com.pulumi.resources.Re
     @Import(name="inspectConfig")
     private @Nullable Output<PreventionInspectTemplateInspectConfigArgs> inspectConfig;
 
+    /**
+     * @return The core content of the template.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionInspectTemplateInspectConfigArgs>> inspectConfig() {
         return Optional.ofNullable(this.inspectConfig);
     }
@@ -61,6 +74,14 @@ public final class PreventionInspectTemplateArgs extends com.pulumi.resources.Re
     @Import(name="parent", required=true)
     private Output<String> parent;
 
+    /**
+     * @return The parent of the inspect template in any of the following formats:
+     * * `projects/{{project}}`
+     * * `projects/{{project}}/locations/{{location}}`
+     * * `organizations/{{organization_id}}`
+     * * `organizations/{{organization_id}}/locations/{{location}}`
+     * 
+     */
     public Output<String> parent() {
         return this.parent;
     }
@@ -92,38 +113,96 @@ public final class PreventionInspectTemplateArgs extends com.pulumi.resources.Re
             $ = new PreventionInspectTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description of the inspect template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the inspect template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName User set display name of the inspect template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User set display name of the inspect template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param inspectConfig The core content of the template.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectConfig(@Nullable Output<PreventionInspectTemplateInspectConfigArgs> inspectConfig) {
             $.inspectConfig = inspectConfig;
             return this;
         }
 
+        /**
+         * @param inspectConfig The core content of the template.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectConfig(PreventionInspectTemplateInspectConfigArgs inspectConfig) {
             return inspectConfig(Output.of(inspectConfig));
         }
 
+        /**
+         * @param parent The parent of the inspect template in any of the following formats:
+         * * `projects/{{project}}`
+         * * `projects/{{project}}/locations/{{location}}`
+         * * `organizations/{{organization_id}}`
+         * * `organizations/{{organization_id}}/locations/{{location}}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The parent of the inspect template in any of the following formats:
+         * * `projects/{{project}}`
+         * * `projects/{{project}}/locations/{{location}}`
+         * * `organizations/{{organization_id}}`
+         * * `organizations/{{organization_id}}/locations/{{location}}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }

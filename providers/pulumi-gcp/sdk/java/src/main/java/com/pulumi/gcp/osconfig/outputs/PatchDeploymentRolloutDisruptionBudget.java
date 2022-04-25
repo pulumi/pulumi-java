@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PatchDeploymentRolloutDisruptionBudget {
     /**
-     * Specifies a fixed value.
+     * @return Specifies a fixed value.
      * 
      */
     private final @Nullable Integer fixed;
     /**
-     * Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+     * @return Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
      * 
      */
     private final @Nullable Integer percentage;
@@ -31,16 +31,16 @@ public final class PatchDeploymentRolloutDisruptionBudget {
     }
 
     /**
-     * Specifies a fixed value.
+     * @return Specifies a fixed value.
      * 
-    */
+     */
     public Optional<Integer> fixed() {
         return Optional.ofNullable(this.fixed);
     }
     /**
-     * Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+     * @return Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
      * 
-    */
+     */
     public Optional<Integer> percentage() {
         return Optional.ofNullable(this.percentage);
     }

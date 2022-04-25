@@ -28,6 +28,13 @@ public final class JobHttpTargetGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="body")
     private @Nullable Output<String> body;
 
+    /**
+     * @return HTTP request body.
+     * A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+     * It is an error to set body on a job with an incompatible HttpMethod.
+     * A base64-encoded string.
+     * 
+     */
     public Optional<Output<String>> body() {
         return Optional.ofNullable(this.body);
     }
@@ -40,6 +47,11 @@ public final class JobHttpTargetGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="headers")
     private @Nullable Output<Map<String,String>> headers;
 
+    /**
+     * @return This map contains the header field names and values.
+     * Repeated headers are not supported, but a header value can contain commas.
+     * 
+     */
     public Optional<Output<Map<String,String>>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -51,6 +63,10 @@ public final class JobHttpTargetGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="httpMethod")
     private @Nullable Output<String> httpMethod;
 
+    /**
+     * @return Which HTTP method to use for the request.
+     * 
+     */
     public Optional<Output<String>> httpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
@@ -64,6 +80,12 @@ public final class JobHttpTargetGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="oauthToken")
     private @Nullable Output<JobHttpTargetOauthTokenGetArgs> oauthToken;
 
+    /**
+     * @return Contains information needed for generating an OAuth token.
+     * This type of authorization should be used when sending requests to a GCP endpoint.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<JobHttpTargetOauthTokenGetArgs>> oauthToken() {
         return Optional.ofNullable(this.oauthToken);
     }
@@ -77,6 +99,12 @@ public final class JobHttpTargetGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="oidcToken")
     private @Nullable Output<JobHttpTargetOidcTokenGetArgs> oidcToken;
 
+    /**
+     * @return Contains information needed for generating an OpenID Connect token.
+     * This type of authorization should be used when sending requests to third party endpoints or Cloud Run.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<JobHttpTargetOidcTokenGetArgs>> oidcToken() {
         return Optional.ofNullable(this.oidcToken);
     }
@@ -88,6 +116,10 @@ public final class JobHttpTargetGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return The full URI path that the request will be sent to.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -121,56 +153,144 @@ public final class JobHttpTargetGetArgs extends com.pulumi.resources.ResourceArg
             $ = new JobHttpTargetGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param body HTTP request body.
+         * A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+         * It is an error to set body on a job with an incompatible HttpMethod.
+         * A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Output<String> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body HTTP request body.
+         * A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+         * It is an error to set body on a job with an incompatible HttpMethod.
+         * A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(String body) {
             return body(Output.of(body));
         }
 
+        /**
+         * @param headers This map contains the header field names and values.
+         * Repeated headers are not supported, but a header value can contain commas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers This map contains the header field names and values.
+         * Repeated headers are not supported, but a header value can contain commas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(Map<String,String> headers) {
             return headers(Output.of(headers));
         }
 
+        /**
+         * @param httpMethod Which HTTP method to use for the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
             $.httpMethod = httpMethod;
             return this;
         }
 
+        /**
+         * @param httpMethod Which HTTP method to use for the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpMethod(String httpMethod) {
             return httpMethod(Output.of(httpMethod));
         }
 
+        /**
+         * @param oauthToken Contains information needed for generating an OAuth token.
+         * This type of authorization should be used when sending requests to a GCP endpoint.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthToken(@Nullable Output<JobHttpTargetOauthTokenGetArgs> oauthToken) {
             $.oauthToken = oauthToken;
             return this;
         }
 
+        /**
+         * @param oauthToken Contains information needed for generating an OAuth token.
+         * This type of authorization should be used when sending requests to a GCP endpoint.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthToken(JobHttpTargetOauthTokenGetArgs oauthToken) {
             return oauthToken(Output.of(oauthToken));
         }
 
+        /**
+         * @param oidcToken Contains information needed for generating an OpenID Connect token.
+         * This type of authorization should be used when sending requests to third party endpoints or Cloud Run.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcToken(@Nullable Output<JobHttpTargetOidcTokenGetArgs> oidcToken) {
             $.oidcToken = oidcToken;
             return this;
         }
 
+        /**
+         * @param oidcToken Contains information needed for generating an OpenID Connect token.
+         * This type of authorization should be used when sending requests to third party endpoints or Cloud Run.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcToken(JobHttpTargetOidcTokenGetArgs oidcToken) {
             return oidcToken(Output.of(oidcToken));
         }
 
+        /**
+         * @param uri The full URI path that the request will be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The full URI path that the request will be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

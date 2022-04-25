@@ -20,6 +20,10 @@ public final class PacketMirroringCollectorIlbArgs extends com.pulumi.resources.
     @Import(name="url", required=true)
     private Output<String> url;
 
+    /**
+     * @return The URL of the instances where this rule should be active.
+     * 
+     */
     public Output<String> url() {
         return this.url;
     }
@@ -48,11 +52,23 @@ public final class PacketMirroringCollectorIlbArgs extends com.pulumi.resources.
             $ = new PacketMirroringCollectorIlbArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param url The URL of the instances where this rule should be active.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The URL of the instances where this rule should be active.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

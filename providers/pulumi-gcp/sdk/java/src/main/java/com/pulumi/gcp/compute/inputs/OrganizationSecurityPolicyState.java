@@ -22,6 +22,10 @@ public final class OrganizationSecurityPolicyState extends com.pulumi.resources.
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A textual description for the organization security policy.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -33,6 +37,10 @@ public final class OrganizationSecurityPolicyState extends com.pulumi.resources.
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return A textual name of the security policy.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -44,6 +52,10 @@ public final class OrganizationSecurityPolicyState extends com.pulumi.resources.
     @Import(name="fingerprint")
     private @Nullable Output<String> fingerprint;
 
+    /**
+     * @return Fingerprint of this resource. This field is used internally during updates of this resource.
+     * 
+     */
     public Optional<Output<String>> fingerprint() {
         return Optional.ofNullable(this.fingerprint);
     }
@@ -56,6 +68,11 @@ public final class OrganizationSecurityPolicyState extends com.pulumi.resources.
     @Import(name="parent")
     private @Nullable Output<String> parent;
 
+    /**
+     * @return The parent of this OrganizationSecurityPolicy in the Cloud Resource Hierarchy.
+     * Format: organizations/{organization_id} or folders/{folder_id}
+     * 
+     */
     public Optional<Output<String>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -67,6 +84,10 @@ public final class OrganizationSecurityPolicyState extends com.pulumi.resources.
     @Import(name="policyId")
     private @Nullable Output<String> policyId;
 
+    /**
+     * @return The unique identifier for the resource. This identifier is defined by the server.
+     * 
+     */
     public Optional<Output<String>> policyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -82,6 +103,14 @@ public final class OrganizationSecurityPolicyState extends com.pulumi.resources.
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The type indicates the intended use of the security policy.
+     * For organization security policies, the only supported type
+     * is &#34;FIREWALL&#34;.
+     * Default value is `FIREWALL`.
+     * Possible values are `FIREWALL`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -115,56 +144,138 @@ public final class OrganizationSecurityPolicyState extends com.pulumi.resources.
             $ = new OrganizationSecurityPolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A textual description for the organization security policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A textual description for the organization security policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName A textual name of the security policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName A textual name of the security policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param fingerprint Fingerprint of this resource. This field is used internally during updates of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             $.fingerprint = fingerprint;
             return this;
         }
 
+        /**
+         * @param fingerprint Fingerprint of this resource. This field is used internally during updates of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(String fingerprint) {
             return fingerprint(Output.of(fingerprint));
         }
 
+        /**
+         * @param parent The parent of this OrganizationSecurityPolicy in the Cloud Resource Hierarchy.
+         * Format: organizations/{organization_id} or folders/{folder_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The parent of this OrganizationSecurityPolicy in the Cloud Resource Hierarchy.
+         * Format: organizations/{organization_id} or folders/{folder_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param policyId The unique identifier for the resource. This identifier is defined by the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(@Nullable Output<String> policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param policyId The unique identifier for the resource. This identifier is defined by the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(String policyId) {
             return policyId(Output.of(policyId));
         }
 
+        /**
+         * @param type The type indicates the intended use of the security policy.
+         * For organization security policies, the only supported type
+         * is &#34;FIREWALL&#34;.
+         * Default value is `FIREWALL`.
+         * Possible values are `FIREWALL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type indicates the intended use of the security policy.
+         * For organization security policies, the only supported type
+         * is &#34;FIREWALL&#34;.
+         * Default value is `FIREWALL`.
+         * Possible values are `FIREWALL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

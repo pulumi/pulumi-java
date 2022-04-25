@@ -26,6 +26,14 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="charset")
     private @Nullable Output<String> charset;
 
+    /**
+     * @return The charset value. See MySQL&#39;s
+     * [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+     * and Postgres&#39; [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
+     * for more details and supported values. Postgres databases only support
+     * a value of `UTF8` at creation time.
+     * 
+     */
     public Optional<Output<String>> charset() {
         return Optional.ofNullable(this.charset);
     }
@@ -41,6 +49,14 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="collation")
     private @Nullable Output<String> collation;
 
+    /**
+     * @return The collation value. See MySQL&#39;s
+     * [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+     * and Postgres&#39; [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
+     * for more details and supported values. Postgres databases only support
+     * a value of `en_US.UTF8` at creation time.
+     * 
+     */
     public Optional<Output<String>> collation() {
         return Optional.ofNullable(this.collation);
     }
@@ -53,6 +69,11 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instance", required=true)
     private Output<String> instance;
 
+    /**
+     * @return The name of the Cloud SQL instance. This does not include the project
+     * ID.
+     * 
+     */
     public Output<String> instance() {
         return this.instance;
     }
@@ -65,6 +86,11 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the database in the Cloud SQL instance.
+     * This does not include the project ID or instance name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -77,6 +103,11 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -109,47 +140,129 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatabaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param charset The charset value. See MySQL&#39;s
+         * [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+         * and Postgres&#39; [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
+         * for more details and supported values. Postgres databases only support
+         * a value of `UTF8` at creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder charset(@Nullable Output<String> charset) {
             $.charset = charset;
             return this;
         }
 
+        /**
+         * @param charset The charset value. See MySQL&#39;s
+         * [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+         * and Postgres&#39; [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
+         * for more details and supported values. Postgres databases only support
+         * a value of `UTF8` at creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder charset(String charset) {
             return charset(Output.of(charset));
         }
 
+        /**
+         * @param collation The collation value. See MySQL&#39;s
+         * [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+         * and Postgres&#39; [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
+         * for more details and supported values. Postgres databases only support
+         * a value of `en_US.UTF8` at creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collation(@Nullable Output<String> collation) {
             $.collation = collation;
             return this;
         }
 
+        /**
+         * @param collation The collation value. See MySQL&#39;s
+         * [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+         * and Postgres&#39; [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
+         * for more details and supported values. Postgres databases only support
+         * a value of `en_US.UTF8` at creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collation(String collation) {
             return collation(Output.of(collation));
         }
 
+        /**
+         * @param instance The name of the Cloud SQL instance. This does not include the project
+         * ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(Output<String> instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param instance The name of the Cloud SQL instance. This does not include the project
+         * ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             return instance(Output.of(instance));
         }
 
+        /**
+         * @param name The name of the database in the Cloud SQL instance.
+         * This does not include the project ID or instance name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the database in the Cloud SQL instance.
+         * This does not include the project ID or instance name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

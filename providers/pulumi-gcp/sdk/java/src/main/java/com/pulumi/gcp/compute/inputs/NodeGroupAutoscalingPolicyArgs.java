@@ -24,6 +24,11 @@ public final class NodeGroupAutoscalingPolicyArgs extends com.pulumi.resources.R
     @Import(name="maxNodes")
     private @Nullable Output<Integer> maxNodes;
 
+    /**
+     * @return Maximum size of the node group. Set to a value less than or equal
+     * to 100 and greater than or equal to min-nodes.
+     * 
+     */
     public Optional<Output<Integer>> maxNodes() {
         return Optional.ofNullable(this.maxNodes);
     }
@@ -36,6 +41,11 @@ public final class NodeGroupAutoscalingPolicyArgs extends com.pulumi.resources.R
     @Import(name="minNodes")
     private @Nullable Output<Integer> minNodes;
 
+    /**
+     * @return Minimum size of the node group. Must be less
+     * than or equal to max-nodes. The default value is 0.
+     * 
+     */
     public Optional<Output<Integer>> minNodes() {
         return Optional.ofNullable(this.minNodes);
     }
@@ -53,6 +63,16 @@ public final class NodeGroupAutoscalingPolicyArgs extends com.pulumi.resources.R
     @Import(name="mode")
     private @Nullable Output<String> mode;
 
+    /**
+     * @return The autoscaling mode. Set to one of the following:
+     * - OFF: Disables the autoscaler.
+     * - ON: Enables scaling in and scaling out.
+     * - ONLY_SCALE_OUT: Enables only scaling out.
+     *   You must use this mode if your node groups are configured to
+     *   restart their hosted VMs on minimal servers.
+     *   Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
+     * 
+     */
     public Optional<Output<String>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -83,29 +103,81 @@ public final class NodeGroupAutoscalingPolicyArgs extends com.pulumi.resources.R
             $ = new NodeGroupAutoscalingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxNodes Maximum size of the node group. Set to a value less than or equal
+         * to 100 and greater than or equal to min-nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNodes(@Nullable Output<Integer> maxNodes) {
             $.maxNodes = maxNodes;
             return this;
         }
 
+        /**
+         * @param maxNodes Maximum size of the node group. Set to a value less than or equal
+         * to 100 and greater than or equal to min-nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNodes(Integer maxNodes) {
             return maxNodes(Output.of(maxNodes));
         }
 
+        /**
+         * @param minNodes Minimum size of the node group. Must be less
+         * than or equal to max-nodes. The default value is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodes(@Nullable Output<Integer> minNodes) {
             $.minNodes = minNodes;
             return this;
         }
 
+        /**
+         * @param minNodes Minimum size of the node group. Must be less
+         * than or equal to max-nodes. The default value is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodes(Integer minNodes) {
             return minNodes(Output.of(minNodes));
         }
 
+        /**
+         * @param mode The autoscaling mode. Set to one of the following:
+         * - OFF: Disables the autoscaler.
+         * - ON: Enables scaling in and scaling out.
+         * - ONLY_SCALE_OUT: Enables only scaling out.
+         *   You must use this mode if your node groups are configured to
+         *   restart their hosted VMs on minimal servers.
+         *   Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<String> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode The autoscaling mode. Set to one of the following:
+         * - OFF: Disables the autoscaler.
+         * - ON: Enables scaling in and scaling out.
+         * - ONLY_SCALE_OUT: Enables only scaling out.
+         *   You must use this mode if your node groups are configured to
+         *   restart their hosted VMs on minimal servers.
+         *   Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Output.of(mode));
         }

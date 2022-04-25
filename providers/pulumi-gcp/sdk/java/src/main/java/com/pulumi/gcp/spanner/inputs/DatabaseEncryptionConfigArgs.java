@@ -21,6 +21,11 @@ public final class DatabaseEncryptionConfigArgs extends com.pulumi.resources.Res
     @Import(name="kmsKeyName", required=true)
     private Output<String> kmsKeyName;
 
+    /**
+     * @return Fully qualified name of the KMS key to use to encrypt this database. This key must exist
+     * in the same location as the Spanner Database.
+     * 
+     */
     public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -49,11 +54,25 @@ public final class DatabaseEncryptionConfigArgs extends com.pulumi.resources.Res
             $ = new DatabaseEncryptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName Fully qualified name of the KMS key to use to encrypt this database. This key must exist
+         * in the same location as the Spanner Database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName Fully qualified name of the KMS key to use to encrypt this database. This key must exist
+         * in the same location as the Spanner Database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }

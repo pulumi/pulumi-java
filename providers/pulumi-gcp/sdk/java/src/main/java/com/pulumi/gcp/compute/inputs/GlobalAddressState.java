@@ -26,6 +26,12 @@ public final class GlobalAddressState extends com.pulumi.resources.ResourceArgs 
     @Import(name="address")
     private @Nullable Output<String> address;
 
+    /**
+     * @return The IP address or beginning of the address range represented by this
+     * resource. This can be supplied as an input to reserve a specific
+     * address or omitted to allow GCP to choose a valid one for you.
+     * 
+     */
     public Optional<Output<String>> address() {
         return Optional.ofNullable(this.address);
     }
@@ -41,6 +47,14 @@ public final class GlobalAddressState extends com.pulumi.resources.ResourceArgs 
     @Import(name="addressType")
     private @Nullable Output<String> addressType;
 
+    /**
+     * @return The type of the address to reserve.
+     * * EXTERNAL indicates public/external single IP address.
+     * * INTERNAL indicates internal IP ranges belonging to some network.
+     *   Default value is `EXTERNAL`.
+     *   Possible values are `EXTERNAL` and `INTERNAL`.
+     * 
+     */
     public Optional<Output<String>> addressType() {
         return Optional.ofNullable(this.addressType);
     }
@@ -52,6 +66,10 @@ public final class GlobalAddressState extends com.pulumi.resources.ResourceArgs 
     @Import(name="creationTimestamp")
     private @Nullable Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> creationTimestamp() {
         return Optional.ofNullable(this.creationTimestamp);
     }
@@ -63,6 +81,10 @@ public final class GlobalAddressState extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -75,6 +97,11 @@ public final class GlobalAddressState extends com.pulumi.resources.ResourceArgs 
     @Import(name="ipVersion")
     private @Nullable Output<String> ipVersion;
 
+    /**
+     * @return The IP Version that will be used by this address. The default value is `IPV4`.
+     * Possible values are `IPV4` and `IPV6`.
+     * 
+     */
     public Optional<Output<String>> ipVersion() {
         return Optional.ofNullable(this.ipVersion);
     }
@@ -86,6 +113,10 @@ public final class GlobalAddressState extends com.pulumi.resources.ResourceArgs 
     @Import(name="labelFingerprint")
     private @Nullable Output<String> labelFingerprint;
 
+    /**
+     * @return The fingerprint used for optimistic locking of this resource. Used internally during updates.
+     * 
+     */
     public Optional<Output<String>> labelFingerprint() {
         return Optional.ofNullable(this.labelFingerprint);
     }
@@ -97,6 +128,10 @@ public final class GlobalAddressState extends com.pulumi.resources.ResourceArgs 
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels to apply to this address.  A list of key-&gt;value pairs.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -114,6 +149,16 @@ public final class GlobalAddressState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035.  Specifically, the name must be 1-63 characters long and
+     * match the regular expression `a-z?` which means
+     * the first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -128,6 +173,13 @@ public final class GlobalAddressState extends com.pulumi.resources.ResourceArgs 
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return The URL of the network in which to reserve the IP range. The IP range
+     * must be in RFC1918 space. The network cannot be deleted if there are
+     * any reserved IP ranges referring to it.
+     * This should only be set when using an Internal address.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -142,6 +194,13 @@ public final class GlobalAddressState extends com.pulumi.resources.ResourceArgs 
     @Import(name="prefixLength")
     private @Nullable Output<Integer> prefixLength;
 
+    /**
+     * @return The prefix length of the IP range. If not present, it means the
+     * address field is a single IP address.
+     * This field is not applicable to addresses with addressType=EXTERNAL,
+     * or addressType=INTERNAL when purpose=PRIVATE_SERVICE_CONNECT
+     * 
+     */
     public Optional<Output<Integer>> prefixLength() {
         return Optional.ofNullable(this.prefixLength);
     }
@@ -154,6 +213,11 @@ public final class GlobalAddressState extends com.pulumi.resources.ResourceArgs 
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -167,6 +231,12 @@ public final class GlobalAddressState extends com.pulumi.resources.ResourceArgs 
     @Import(name="purpose")
     private @Nullable Output<String> purpose;
 
+    /**
+     * @return The purpose of the resource. Possible values include:
+     * * VPC_PEERING - for peer networks
+     * * PRIVATE_SERVICE_CONNECT - for Private Service Connect networks
+     * 
+     */
     public Optional<Output<String>> purpose() {
         return Optional.ofNullable(this.purpose);
     }
@@ -178,6 +248,10 @@ public final class GlobalAddressState extends com.pulumi.resources.ResourceArgs 
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -218,119 +292,319 @@ public final class GlobalAddressState extends com.pulumi.resources.ResourceArgs 
             $ = new GlobalAddressState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address The IP address or beginning of the address range represented by this
+         * resource. This can be supplied as an input to reserve a specific
+         * address or omitted to allow GCP to choose a valid one for you.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable Output<String> address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param address The IP address or beginning of the address range represented by this
+         * resource. This can be supplied as an input to reserve a specific
+         * address or omitted to allow GCP to choose a valid one for you.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(String address) {
             return address(Output.of(address));
         }
 
+        /**
+         * @param addressType The type of the address to reserve.
+         * * EXTERNAL indicates public/external single IP address.
+         * * INTERNAL indicates internal IP ranges belonging to some network.
+         *   Default value is `EXTERNAL`.
+         *   Possible values are `EXTERNAL` and `INTERNAL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressType(@Nullable Output<String> addressType) {
             $.addressType = addressType;
             return this;
         }
 
+        /**
+         * @param addressType The type of the address to reserve.
+         * * EXTERNAL indicates public/external single IP address.
+         * * INTERNAL indicates internal IP ranges belonging to some network.
+         *   Default value is `EXTERNAL`.
+         *   Possible values are `EXTERNAL` and `INTERNAL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressType(String addressType) {
             return addressType(Output.of(addressType));
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             $.creationTimestamp = creationTimestamp;
             return this;
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(String creationTimestamp) {
             return creationTimestamp(Output.of(creationTimestamp));
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param ipVersion The IP Version that will be used by this address. The default value is `IPV4`.
+         * Possible values are `IPV4` and `IPV6`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipVersion(@Nullable Output<String> ipVersion) {
             $.ipVersion = ipVersion;
             return this;
         }
 
+        /**
+         * @param ipVersion The IP Version that will be used by this address. The default value is `IPV4`.
+         * Possible values are `IPV4` and `IPV6`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipVersion(String ipVersion) {
             return ipVersion(Output.of(ipVersion));
         }
 
+        /**
+         * @param labelFingerprint The fingerprint used for optimistic locking of this resource. Used internally during updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
             $.labelFingerprint = labelFingerprint;
             return this;
         }
 
+        /**
+         * @param labelFingerprint The fingerprint used for optimistic locking of this resource. Used internally during updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelFingerprint(String labelFingerprint) {
             return labelFingerprint(Output.of(labelFingerprint));
         }
 
+        /**
+         * @param labels Labels to apply to this address.  A list of key-&gt;value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels to apply to this address.  A list of key-&gt;value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035.  Specifically, the name must be 1-63 characters long and
+         * match the regular expression `a-z?` which means
+         * the first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035.  Specifically, the name must be 1-63 characters long and
+         * match the regular expression `a-z?` which means
+         * the first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param network The URL of the network in which to reserve the IP range. The IP range
+         * must be in RFC1918 space. The network cannot be deleted if there are
+         * any reserved IP ranges referring to it.
+         * This should only be set when using an Internal address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The URL of the network in which to reserve the IP range. The IP range
+         * must be in RFC1918 space. The network cannot be deleted if there are
+         * any reserved IP ranges referring to it.
+         * This should only be set when using an Internal address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param prefixLength The prefix length of the IP range. If not present, it means the
+         * address field is a single IP address.
+         * This field is not applicable to addresses with addressType=EXTERNAL,
+         * or addressType=INTERNAL when purpose=PRIVATE_SERVICE_CONNECT
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixLength(@Nullable Output<Integer> prefixLength) {
             $.prefixLength = prefixLength;
             return this;
         }
 
+        /**
+         * @param prefixLength The prefix length of the IP range. If not present, it means the
+         * address field is a single IP address.
+         * This field is not applicable to addresses with addressType=EXTERNAL,
+         * or addressType=INTERNAL when purpose=PRIVATE_SERVICE_CONNECT
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixLength(Integer prefixLength) {
             return prefixLength(Output.of(prefixLength));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param purpose The purpose of the resource. Possible values include:
+         * * VPC_PEERING - for peer networks
+         * * PRIVATE_SERVICE_CONNECT - for Private Service Connect networks
+         * 
+         * @return builder
+         * 
+         */
         public Builder purpose(@Nullable Output<String> purpose) {
             $.purpose = purpose;
             return this;
         }
 
+        /**
+         * @param purpose The purpose of the resource. Possible values include:
+         * * VPC_PEERING - for peer networks
+         * * PRIVATE_SERVICE_CONNECT - for Private Service Connect networks
+         * 
+         * @return builder
+         * 
+         */
         public Builder purpose(String purpose) {
             return purpose(Output.of(purpose));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }

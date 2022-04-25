@@ -21,6 +21,10 @@ public final class ClusterClusterConfigMasterConfigAcceleratorGetArgs extends co
     @Import(name="acceleratorCount", required=true)
     private Output<Integer> acceleratorCount;
 
+    /**
+     * @return The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
+     * 
+     */
     public Output<Integer> acceleratorCount() {
         return this.acceleratorCount;
     }
@@ -32,6 +36,10 @@ public final class ClusterClusterConfigMasterConfigAcceleratorGetArgs extends co
     @Import(name="acceleratorType", required=true)
     private Output<String> acceleratorType;
 
+    /**
+     * @return The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
+     * 
+     */
     public Output<String> acceleratorType() {
         return this.acceleratorType;
     }
@@ -61,20 +69,44 @@ public final class ClusterClusterConfigMasterConfigAcceleratorGetArgs extends co
             $ = new ClusterClusterConfigMasterConfigAcceleratorGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorCount The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorCount(Output<Integer> acceleratorCount) {
             $.acceleratorCount = acceleratorCount;
             return this;
         }
 
+        /**
+         * @param acceleratorCount The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorCount(Integer acceleratorCount) {
             return acceleratorCount(Output.of(acceleratorCount));
         }
 
+        /**
+         * @param acceleratorType The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(Output<String> acceleratorType) {
             $.acceleratorType = acceleratorType;
             return this;
         }
 
+        /**
+         * @param acceleratorType The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(String acceleratorType) {
             return acceleratorType(Output.of(acceleratorType));
         }

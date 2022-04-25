@@ -23,6 +23,11 @@ public final class EdgeCacheOriginTimeoutGetArgs extends com.pulumi.resources.Re
     @Import(name="connectTimeout")
     private @Nullable Output<String> connectTimeout;
 
+    /**
+     * @return The maximum duration to wait for the origin connection to be established, including DNS lookup, TLS handshake and TCP/QUIC connection establishment.
+     * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
+     * 
+     */
     public Optional<Output<String>> connectTimeout() {
         return Optional.ofNullable(this.connectTimeout);
     }
@@ -35,6 +40,11 @@ public final class EdgeCacheOriginTimeoutGetArgs extends com.pulumi.resources.Re
     @Import(name="maxAttemptsTimeout")
     private @Nullable Output<String> maxAttemptsTimeout;
 
+    /**
+     * @return The maximum time across all connection attempts to the origin, including failover origins, before returning an error to the client. A HTTP 503 will be returned if the timeout is reached before a response is returned.
+     * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
+     * 
+     */
     public Optional<Output<String>> maxAttemptsTimeout() {
         return Optional.ofNullable(this.maxAttemptsTimeout);
     }
@@ -47,6 +57,11 @@ public final class EdgeCacheOriginTimeoutGetArgs extends com.pulumi.resources.Re
     @Import(name="responseTimeout")
     private @Nullable Output<String> responseTimeout;
 
+    /**
+     * @return The maximum duration to wait for data to arrive when reading from the HTTP connection/stream.
+     * Defaults to 5 seconds. The timeout must be a value between 1s and 30s.
+     * 
+     */
     public Optional<Output<String>> responseTimeout() {
         return Optional.ofNullable(this.responseTimeout);
     }
@@ -77,29 +92,71 @@ public final class EdgeCacheOriginTimeoutGetArgs extends com.pulumi.resources.Re
             $ = new EdgeCacheOriginTimeoutGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectTimeout The maximum duration to wait for the origin connection to be established, including DNS lookup, TLS handshake and TCP/QUIC connection establishment.
+         * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectTimeout(@Nullable Output<String> connectTimeout) {
             $.connectTimeout = connectTimeout;
             return this;
         }
 
+        /**
+         * @param connectTimeout The maximum duration to wait for the origin connection to be established, including DNS lookup, TLS handshake and TCP/QUIC connection establishment.
+         * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectTimeout(String connectTimeout) {
             return connectTimeout(Output.of(connectTimeout));
         }
 
+        /**
+         * @param maxAttemptsTimeout The maximum time across all connection attempts to the origin, including failover origins, before returning an error to the client. A HTTP 503 will be returned if the timeout is reached before a response is returned.
+         * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAttemptsTimeout(@Nullable Output<String> maxAttemptsTimeout) {
             $.maxAttemptsTimeout = maxAttemptsTimeout;
             return this;
         }
 
+        /**
+         * @param maxAttemptsTimeout The maximum time across all connection attempts to the origin, including failover origins, before returning an error to the client. A HTTP 503 will be returned if the timeout is reached before a response is returned.
+         * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAttemptsTimeout(String maxAttemptsTimeout) {
             return maxAttemptsTimeout(Output.of(maxAttemptsTimeout));
         }
 
+        /**
+         * @param responseTimeout The maximum duration to wait for data to arrive when reading from the HTTP connection/stream.
+         * Defaults to 5 seconds. The timeout must be a value between 1s and 30s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseTimeout(@Nullable Output<String> responseTimeout) {
             $.responseTimeout = responseTimeout;
             return this;
         }
 
+        /**
+         * @param responseTimeout The maximum duration to wait for data to arrive when reading from the HTTP connection/stream.
+         * Defaults to 5 seconds. The timeout must be a value between 1s and 30s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseTimeout(String responseTimeout) {
             return responseTimeout(Output.of(responseTimeout));
         }

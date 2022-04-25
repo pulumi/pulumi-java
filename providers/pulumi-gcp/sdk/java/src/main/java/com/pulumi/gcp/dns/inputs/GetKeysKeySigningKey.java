@@ -23,6 +23,10 @@ public final class GetKeysKeySigningKey extends com.pulumi.resources.InvokeArgs 
     @Import(name="algorithm", required=true)
     private String algorithm;
 
+    /**
+     * @return String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time. Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
+     * 
+     */
     public String algorithm() {
         return this.algorithm;
     }
@@ -34,6 +38,10 @@ public final class GetKeysKeySigningKey extends com.pulumi.resources.InvokeArgs 
     @Import(name="creationTime", required=true)
     private String creationTime;
 
+    /**
+     * @return The time that this resource was created in the control plane. This is in RFC3339 text format.
+     * 
+     */
     public String creationTime() {
         return this.creationTime;
     }
@@ -45,6 +53,10 @@ public final class GetKeysKeySigningKey extends com.pulumi.resources.InvokeArgs 
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return A mutable string of at most 1024 characters associated with this resource for the user&#39;s convenience.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -56,6 +68,10 @@ public final class GetKeysKeySigningKey extends com.pulumi.resources.InvokeArgs 
     @Import(name="digests", required=true)
     private List<GetKeysKeySigningKeyDigest> digests;
 
+    /**
+     * @return A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
+     * 
+     */
     public List<GetKeysKeySigningKeyDigest> digests() {
         return this.digests;
     }
@@ -67,6 +83,10 @@ public final class GetKeysKeySigningKey extends com.pulumi.resources.InvokeArgs 
     @Import(name="dsRecord", required=true)
     private String dsRecord;
 
+    /**
+     * @return The DS record based on the KSK record. This is used when [delegating](https://cloud.google.com/dns/docs/dnssec-advanced#subdelegation) DNSSEC-signed subdomains.
+     * 
+     */
     public String dsRecord() {
         return this.dsRecord;
     }
@@ -78,6 +98,10 @@ public final class GetKeysKeySigningKey extends com.pulumi.resources.InvokeArgs 
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Unique identifier for the resource; defined by the server.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -89,6 +113,10 @@ public final class GetKeysKeySigningKey extends com.pulumi.resources.InvokeArgs 
     @Import(name="isActive", required=true)
     private Boolean isActive;
 
+    /**
+     * @return Active keys will be used to sign subsequent changes to the ManagedZone. Inactive keys will still be present as DNSKEY Resource Records for the use of resolvers validating existing signatures.
+     * 
+     */
     public Boolean isActive() {
         return this.isActive;
     }
@@ -100,6 +128,10 @@ public final class GetKeysKeySigningKey extends com.pulumi.resources.InvokeArgs 
     @Import(name="keyLength", required=true)
     private Integer keyLength;
 
+    /**
+     * @return Length of the key in bits. Specified at creation time then immutable.
+     * 
+     */
     public Integer keyLength() {
         return this.keyLength;
     }
@@ -111,6 +143,10 @@ public final class GetKeysKeySigningKey extends com.pulumi.resources.InvokeArgs 
     @Import(name="keyTag", required=true)
     private Integer keyTag;
 
+    /**
+     * @return The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique identifier). In particular, the key tag is used in a parent zone&#39;s DS record to point at the DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the algorithm to calculate it is specified in RFC4034 Appendix B.
+     * 
+     */
     public Integer keyTag() {
         return this.keyTag;
     }
@@ -122,6 +158,10 @@ public final class GetKeysKeySigningKey extends com.pulumi.resources.InvokeArgs 
     @Import(name="publicKey", required=true)
     private String publicKey;
 
+    /**
+     * @return Base64 encoded public half of this key.
+     * 
+     */
     public String publicKey() {
         return this.publicKey;
     }
@@ -159,55 +199,121 @@ public final class GetKeysKeySigningKey extends com.pulumi.resources.InvokeArgs 
             $ = new GetKeysKeySigningKey(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time. Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(String algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param creationTime The time that this resource was created in the control plane. This is in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(String creationTime) {
             $.creationTime = creationTime;
             return this;
         }
 
+        /**
+         * @param description A mutable string of at most 1024 characters associated with this resource for the user&#39;s convenience.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param digests A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
+         * 
+         * @return builder
+         * 
+         */
         public Builder digests(List<GetKeysKeySigningKeyDigest> digests) {
             $.digests = digests;
             return this;
         }
 
+        /**
+         * @param digests A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
+         * 
+         * @return builder
+         * 
+         */
         public Builder digests(GetKeysKeySigningKeyDigest... digests) {
             return digests(List.of(digests));
         }
 
+        /**
+         * @param dsRecord The DS record based on the KSK record. This is used when [delegating](https://cloud.google.com/dns/docs/dnssec-advanced#subdelegation) DNSSEC-signed subdomains.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dsRecord(String dsRecord) {
             $.dsRecord = dsRecord;
             return this;
         }
 
+        /**
+         * @param id Unique identifier for the resource; defined by the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param isActive Active keys will be used to sign subsequent changes to the ManagedZone. Inactive keys will still be present as DNSKEY Resource Records for the use of resolvers validating existing signatures.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isActive(Boolean isActive) {
             $.isActive = isActive;
             return this;
         }
 
+        /**
+         * @param keyLength Length of the key in bits. Specified at creation time then immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyLength(Integer keyLength) {
             $.keyLength = keyLength;
             return this;
         }
 
+        /**
+         * @param keyTag The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique identifier). In particular, the key tag is used in a parent zone&#39;s DS record to point at the DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the algorithm to calculate it is specified in RFC4034 Appendix B.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyTag(Integer keyTag) {
             $.keyTag = keyTag;
             return this;
         }
 
+        /**
+         * @param publicKey Base64 encoded public half of this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(String publicKey) {
             $.publicKey = publicKey;
             return this;

@@ -19,6 +19,10 @@ public final class GetFoldersFolder extends com.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The timestamp of when the folder was created
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -30,6 +34,10 @@ public final class GetFoldersFolder extends com.pulumi.resources.InvokeArgs {
     @Import(name="deleteTime", required=true)
     private String deleteTime;
 
+    /**
+     * @return The timestamp of when the folder was requested to be deleted (if applicable)
+     * 
+     */
     public String deleteTime() {
         return this.deleteTime;
     }
@@ -41,6 +49,10 @@ public final class GetFoldersFolder extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The display name of the folder
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -52,6 +64,10 @@ public final class GetFoldersFolder extends com.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return Entity tag identifier of the folder
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -63,6 +79,10 @@ public final class GetFoldersFolder extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The id of the folder
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -74,6 +94,10 @@ public final class GetFoldersFolder extends com.pulumi.resources.InvokeArgs {
     @Import(name="parent", required=true)
     private String parent;
 
+    /**
+     * @return The parent id of the folder
+     * 
+     */
     public String parent() {
         return this.parent;
     }
@@ -85,6 +109,10 @@ public final class GetFoldersFolder extends com.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The lifecycle state of the folder
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -96,6 +124,10 @@ public final class GetFoldersFolder extends com.pulumi.resources.InvokeArgs {
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return The timestamp of when the folder was last modified
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -131,41 +163,89 @@ public final class GetFoldersFolder extends com.pulumi.resources.InvokeArgs {
             $ = new GetFoldersFolder(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime The timestamp of when the folder was created
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param deleteTime The timestamp of when the folder was requested to be deleted (if applicable)
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteTime(String deleteTime) {
             $.deleteTime = deleteTime;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the folder
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param etag Entity tag identifier of the folder
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param name The id of the folder
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parent The parent id of the folder
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param state The lifecycle state of the folder
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param updateTime The timestamp of when the folder was last modified
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;

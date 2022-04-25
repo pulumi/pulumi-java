@@ -19,6 +19,10 @@ public final class GetKMSCryptoKeyVersionPublicKey extends com.pulumi.resources.
     @Import(name="algorithm", required=true)
     private String algorithm;
 
+    /**
+     * @return The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
+     * 
+     */
     public String algorithm() {
         return this.algorithm;
     }
@@ -30,6 +34,10 @@ public final class GetKMSCryptoKeyVersionPublicKey extends com.pulumi.resources.
     @Import(name="pem", required=true)
     private String pem;
 
+    /**
+     * @return The public key, encoded in PEM format. For more information, see the RFC 7468 sections for General Considerations and Textual Encoding of Subject Public Key Info.
+     * 
+     */
     public String pem() {
         return this.pem;
     }
@@ -59,11 +67,23 @@ public final class GetKMSCryptoKeyVersionPublicKey extends com.pulumi.resources.
             $ = new GetKMSCryptoKeyVersionPublicKey(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(String algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param pem The public key, encoded in PEM format. For more information, see the RFC 7468 sections for General Considerations and Textual Encoding of Subject Public Key Info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pem(String pem) {
             $.pem = pem;
             return this;

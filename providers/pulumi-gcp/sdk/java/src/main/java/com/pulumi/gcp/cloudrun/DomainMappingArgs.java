@@ -24,6 +24,10 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return The location of the cloud run instance. eg us-central1
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -36,6 +40,11 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata", required=true)
     private Output<DomainMappingMetadataArgs> metadata;
 
+    /**
+     * @return Metadata associated with this DomainMapping.
+     * Structure is documented below.
+     * 
+     */
     public Output<DomainMappingMetadataArgs> metadata() {
         return this.metadata;
     }
@@ -47,6 +56,10 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +72,11 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -71,6 +89,11 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spec", required=true)
     private Output<DomainMappingSpecArgs> spec;
 
+    /**
+     * @return The spec for this DomainMapping.
+     * Structure is documented below.
+     * 
+     */
     public Output<DomainMappingSpecArgs> spec() {
         return this.spec;
     }
@@ -103,47 +126,113 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DomainMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The location of the cloud run instance. eg us-central1
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the cloud run instance. eg us-central1
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param metadata Metadata associated with this DomainMapping.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Output<DomainMappingMetadataArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Metadata associated with this DomainMapping.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(DomainMappingMetadataArgs metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param name Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param spec The spec for this DomainMapping.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(Output<DomainMappingSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
 
+        /**
+         * @param spec The spec for this DomainMapping.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(DomainMappingSpecArgs spec) {
             return spec(Output.of(spec));
         }

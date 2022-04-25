@@ -22,6 +22,10 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs ex
     @Import(name="allEffective")
     private @Nullable Output<Boolean> allEffective;
 
+    /**
+     * @return A bit indicating if all of the group&#39;s per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.
+     * 
+     */
     public Optional<Output<Boolean>> allEffective() {
         return Optional.ofNullable(this.allEffective);
     }
@@ -50,11 +54,23 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs ex
             $ = new InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allEffective A bit indicating if all of the group&#39;s per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allEffective(@Nullable Output<Boolean> allEffective) {
             $.allEffective = allEffective;
             return this;
         }
 
+        /**
+         * @param allEffective A bit indicating if all of the group&#39;s per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allEffective(Boolean allEffective) {
             return allEffective(Output.of(allEffective));
         }

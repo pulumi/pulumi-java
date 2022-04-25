@@ -22,6 +22,11 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
     @Import(name="keytab", required=true)
     private Output<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> keytab;
 
+    /**
+     * @return A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
+     * Structure is documented below.
+     * 
+     */
     public Output<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> keytab() {
         return this.keytab;
     }
@@ -33,6 +38,10 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
     @Import(name="krb5ConfigGcsUri", required=true)
     private Output<String> krb5ConfigGcsUri;
 
+    /**
+     * @return A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.
+     * 
+     */
     public Output<String> krb5ConfigGcsUri() {
         return this.krb5ConfigGcsUri;
     }
@@ -44,6 +53,10 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
     @Import(name="principal", required=true)
     private Output<String> principal;
 
+    /**
+     * @return A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form &#34;primary/instance@REALM&#34;, but there is no exact format.
+     * 
+     */
     public Output<String> principal() {
         return this.principal;
     }
@@ -74,29 +87,67 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
             $ = new MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keytab A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keytab(Output<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> keytab) {
             $.keytab = keytab;
             return this;
         }
 
+        /**
+         * @param keytab A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keytab(MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs keytab) {
             return keytab(Output.of(keytab));
         }
 
+        /**
+         * @param krb5ConfigGcsUri A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder krb5ConfigGcsUri(Output<String> krb5ConfigGcsUri) {
             $.krb5ConfigGcsUri = krb5ConfigGcsUri;
             return this;
         }
 
+        /**
+         * @param krb5ConfigGcsUri A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder krb5ConfigGcsUri(String krb5ConfigGcsUri) {
             return krb5ConfigGcsUri(Output.of(krb5ConfigGcsUri));
         }
 
+        /**
+         * @param principal A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form &#34;primary/instance@REALM&#34;, but there is no exact format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(Output<String> principal) {
             $.principal = principal;
             return this;
         }
 
+        /**
+         * @param principal A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form &#34;primary/instance@REALM&#34;, but there is no exact format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(String principal) {
             return principal(Output.of(principal));
         }

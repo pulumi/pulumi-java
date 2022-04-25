@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FlexibleAppVersionApiConfig {
     /**
-     * Action to take when users access resources that require authentication.
+     * @return Action to take when users access resources that require authentication.
      * Default value is `AUTH_FAIL_ACTION_REDIRECT`.
      * Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
      * 
      */
     private final @Nullable String authFailAction;
     /**
-     * Level of login required to access this resource.
+     * @return Level of login required to access this resource.
      * Default value is `LOGIN_OPTIONAL`.
      * Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
      * 
      */
     private final @Nullable String login;
     /**
-     * Path to the script from the application root directory.
+     * @return Path to the script from the application root directory.
      * 
      */
     private final String script;
     /**
-     * Security (HTTPS) enforcement for this URL.
+     * @return Security (HTTPS) enforcement for this URL.
      * Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
      * 
      */
     private final @Nullable String securityLevel;
     /**
-     * URL to serve the endpoint at.
+     * @return URL to serve the endpoint at.
      * 
      */
     private final @Nullable String url;
@@ -57,42 +57,42 @@ public final class FlexibleAppVersionApiConfig {
     }
 
     /**
-     * Action to take when users access resources that require authentication.
+     * @return Action to take when users access resources that require authentication.
      * Default value is `AUTH_FAIL_ACTION_REDIRECT`.
      * Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
      * 
-    */
+     */
     public Optional<String> authFailAction() {
         return Optional.ofNullable(this.authFailAction);
     }
     /**
-     * Level of login required to access this resource.
+     * @return Level of login required to access this resource.
      * Default value is `LOGIN_OPTIONAL`.
      * Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
      * 
-    */
+     */
     public Optional<String> login() {
         return Optional.ofNullable(this.login);
     }
     /**
-     * Path to the script from the application root directory.
+     * @return Path to the script from the application root directory.
      * 
-    */
+     */
     public String script() {
         return this.script;
     }
     /**
-     * Security (HTTPS) enforcement for this URL.
+     * @return Security (HTTPS) enforcement for this URL.
      * Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
      * 
-    */
+     */
     public Optional<String> securityLevel() {
         return Optional.ofNullable(this.securityLevel);
     }
     /**
-     * URL to serve the endpoint at.
+     * @return URL to serve the endpoint at.
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }

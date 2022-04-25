@@ -31,6 +31,18 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="attestation")
     private @Nullable Output<OccurenceAttestationGetArgs> attestation;
 
+    /**
+     * @return Occurrence that represents a single &#34;attestation&#34;. The authenticity
+     * of an attestation can be verified using the attached signature.
+     * If the verifier trusts the public key of the signer, then verifying
+     * the signature is sufficient to establish trust. In this circumstance,
+     * the authority to which this attestation is attached is primarily
+     * useful for lookup (how to find this attestation if you already
+     * know the authority and artifact to be verified) and intent (for
+     * which authority this attestation was intended to sign.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<OccurenceAttestationGetArgs>> attestation() {
         return Optional.ofNullable(this.attestation);
     }
@@ -42,6 +54,10 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return The time when the repository was created.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -54,6 +70,11 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return The note kind which explicitly denotes which of the occurrence details are specified. This field can be used as a filter
+     * in list requests.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -65,6 +86,10 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the occurrence.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -78,6 +103,12 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="noteName")
     private @Nullable Output<String> noteName;
 
+    /**
+     * @return The analysis note associated with this occurrence, in the form of
+     * projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
+     * filter in list requests.
+     * 
+     */
     public Optional<Output<String>> noteName() {
         return Optional.ofNullable(this.noteName);
     }
@@ -90,6 +121,11 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -101,6 +137,10 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="remediation")
     private @Nullable Output<String> remediation;
 
+    /**
+     * @return A description of actions that can be taken to remedy the note.
+     * 
+     */
     public Optional<Output<String>> remediation() {
         return Optional.ofNullable(this.remediation);
     }
@@ -114,6 +154,12 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceUri")
     private @Nullable Output<String> resourceUri;
 
+    /**
+     * @return Required. Immutable. A URI that represents the resource for which
+     * the occurrence applies. For example,
+     * https://gcr.io/project/image@sha256:123abc for a Docker image.
+     * 
+     */
     public Optional<Output<String>> resourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }
@@ -125,6 +171,10 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
     private @Nullable Output<String> updateTime;
 
+    /**
+     * @return The time when the repository was last updated.
+     * 
+     */
     public Optional<Output<String>> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
@@ -161,83 +211,219 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
             $ = new OccurenceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attestation Occurrence that represents a single &#34;attestation&#34;. The authenticity
+         * of an attestation can be verified using the attached signature.
+         * If the verifier trusts the public key of the signer, then verifying
+         * the signature is sufficient to establish trust. In this circumstance,
+         * the authority to which this attestation is attached is primarily
+         * useful for lookup (how to find this attestation if you already
+         * know the authority and artifact to be verified) and intent (for
+         * which authority this attestation was intended to sign.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestation(@Nullable Output<OccurenceAttestationGetArgs> attestation) {
             $.attestation = attestation;
             return this;
         }
 
+        /**
+         * @param attestation Occurrence that represents a single &#34;attestation&#34;. The authenticity
+         * of an attestation can be verified using the attached signature.
+         * If the verifier trusts the public key of the signer, then verifying
+         * the signature is sufficient to establish trust. In this circumstance,
+         * the authority to which this attestation is attached is primarily
+         * useful for lookup (how to find this attestation if you already
+         * know the authority and artifact to be verified) and intent (for
+         * which authority this attestation was intended to sign.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestation(OccurenceAttestationGetArgs attestation) {
             return attestation(Output.of(attestation));
         }
 
+        /**
+         * @param createTime The time when the repository was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime The time when the repository was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param kind The note kind which explicitly denotes which of the occurrence details are specified. This field can be used as a filter
+         * in list requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The note kind which explicitly denotes which of the occurrence details are specified. This field can be used as a filter
+         * in list requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name The name of the occurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the occurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param noteName The analysis note associated with this occurrence, in the form of
+         * projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
+         * filter in list requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteName(@Nullable Output<String> noteName) {
             $.noteName = noteName;
             return this;
         }
 
+        /**
+         * @param noteName The analysis note associated with this occurrence, in the form of
+         * projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
+         * filter in list requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noteName(String noteName) {
             return noteName(Output.of(noteName));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param remediation A description of actions that can be taken to remedy the note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediation(@Nullable Output<String> remediation) {
             $.remediation = remediation;
             return this;
         }
 
+        /**
+         * @param remediation A description of actions that can be taken to remedy the note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediation(String remediation) {
             return remediation(Output.of(remediation));
         }
 
+        /**
+         * @param resourceUri Required. Immutable. A URI that represents the resource for which
+         * the occurrence applies. For example,
+         * https://gcr.io/project/image@sha256:123abc for a Docker image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
             $.resourceUri = resourceUri;
             return this;
         }
 
+        /**
+         * @param resourceUri Required. Immutable. A URI that represents the resource for which
+         * the occurrence applies. For example,
+         * https://gcr.io/project/image@sha256:123abc for a Docker image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             return resourceUri(Output.of(resourceUri));
         }
 
+        /**
+         * @param updateTime The time when the repository was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(@Nullable Output<String> updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param updateTime The time when the repository was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             return updateTime(Output.of(updateTime));
         }

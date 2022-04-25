@@ -28,6 +28,16 @@ public final class PerInstanceConfigPreservedStateDiskGetArgs extends com.pulumi
     @Import(name="deleteRule")
     private @Nullable Output<String> deleteRule;
 
+    /**
+     * @return A value that prescribes what should happen to the stateful disk when the VM instance is deleted.
+     * The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
+     * `NEVER` - detach the disk when the VM is deleted, but do not delete the disk.
+     * `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently
+     * deleted from the instance group.
+     * Default value is `NEVER`.
+     * Possible values are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
+     * 
+     */
     public Optional<Output<String>> deleteRule() {
         return Optional.ofNullable(this.deleteRule);
     }
@@ -39,6 +49,10 @@ public final class PerInstanceConfigPreservedStateDiskGetArgs extends com.pulumi
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return A unique device name that is reflected into the /dev/ tree of a Linux operating system running within the instance.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -52,6 +66,12 @@ public final class PerInstanceConfigPreservedStateDiskGetArgs extends com.pulumi
     @Import(name="mode")
     private @Nullable Output<String> mode;
 
+    /**
+     * @return The mode of the disk.
+     * Default value is `READ_WRITE`.
+     * Possible values are `READ_ONLY` and `READ_WRITE`.
+     * 
+     */
     public Optional<Output<String>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -64,6 +84,11 @@ public final class PerInstanceConfigPreservedStateDiskGetArgs extends com.pulumi
     @Import(name="source", required=true)
     private Output<String> source;
 
+    /**
+     * @return The URI of an existing persistent disk to attach under the specified device-name in the format
+     * `projects/project-id/zones/zone/disks/disk-name`.
+     * 
+     */
     public Output<String> source() {
         return this.source;
     }
@@ -95,38 +120,104 @@ public final class PerInstanceConfigPreservedStateDiskGetArgs extends com.pulumi
             $ = new PerInstanceConfigPreservedStateDiskGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteRule A value that prescribes what should happen to the stateful disk when the VM instance is deleted.
+         * The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
+         * `NEVER` - detach the disk when the VM is deleted, but do not delete the disk.
+         * `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently
+         * deleted from the instance group.
+         * Default value is `NEVER`.
+         * Possible values are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteRule(@Nullable Output<String> deleteRule) {
             $.deleteRule = deleteRule;
             return this;
         }
 
+        /**
+         * @param deleteRule A value that prescribes what should happen to the stateful disk when the VM instance is deleted.
+         * The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
+         * `NEVER` - detach the disk when the VM is deleted, but do not delete the disk.
+         * `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently
+         * deleted from the instance group.
+         * Default value is `NEVER`.
+         * Possible values are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteRule(String deleteRule) {
             return deleteRule(Output.of(deleteRule));
         }
 
+        /**
+         * @param deviceName A unique device name that is reflected into the /dev/ tree of a Linux operating system running within the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName A unique device name that is reflected into the /dev/ tree of a Linux operating system running within the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param mode The mode of the disk.
+         * Default value is `READ_WRITE`.
+         * Possible values are `READ_ONLY` and `READ_WRITE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<String> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode The mode of the disk.
+         * Default value is `READ_WRITE`.
+         * Possible values are `READ_ONLY` and `READ_WRITE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param source The URI of an existing persistent disk to attach under the specified device-name in the format
+         * `projects/project-id/zones/zone/disks/disk-name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<String> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The URI of an existing persistent disk to attach under the specified device-name in the format
+         * `projects/project-id/zones/zone/disks/disk-name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Output.of(source));
         }

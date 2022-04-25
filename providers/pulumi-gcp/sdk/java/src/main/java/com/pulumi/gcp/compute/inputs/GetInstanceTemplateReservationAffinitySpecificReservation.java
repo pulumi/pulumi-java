@@ -20,6 +20,10 @@ public final class GetInstanceTemplateReservationAffinitySpecificReservation ext
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return The key for the node affinity label.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -56,6 +60,12 @@ public final class GetInstanceTemplateReservationAffinitySpecificReservation ext
             $ = new GetInstanceTemplateReservationAffinitySpecificReservation(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The key for the node affinity label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;

@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
     /**
-     * The size of the disk in base-2 GB.
+     * @return The size of the disk in base-2 GB.
      * 
      */
     private final Integer diskSizeGb;
     /**
-     * The disk interface to use for attaching this disk.
+     * @return The disk interface to use for attaching this disk.
      * Default value is `SCSI`.
      * Possible values are `SCSI` and `NVME`.
      * 
@@ -34,18 +34,18 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
     }
 
     /**
-     * The size of the disk in base-2 GB.
+     * @return The size of the disk in base-2 GB.
      * 
-    */
+     */
     public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
     /**
-     * The disk interface to use for attaching this disk.
+     * @return The disk interface to use for attaching this disk.
      * Default value is `SCSI`.
      * Possible values are `SCSI` and `NVME`.
      * 
-    */
+     */
     public Optional<String> interface_() {
         return Optional.ofNullable(this.interface_);
     }

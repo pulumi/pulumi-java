@@ -25,6 +25,11 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
     @Import(name="autoDelete", required=true)
     private Boolean autoDelete;
 
+    /**
+     * @return Whether or not the disk should be auto-deleted.
+     * This defaults to true.
+     * 
+     */
     public Boolean autoDelete() {
         return this.autoDelete;
     }
@@ -36,6 +41,10 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
     @Import(name="boot", required=true)
     private Boolean boot;
 
+    /**
+     * @return Indicates that this is a boot disk.
+     * 
+     */
     public Boolean boot() {
         return this.boot;
     }
@@ -49,6 +58,12 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return A unique device name that is reflected into the
+     * /dev/  tree of a Linux operating system running within the instance. If not
+     * specified, the server chooses a default device name to apply to this disk.
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -60,6 +75,10 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
     @Import(name="diskEncryptionKeys", required=true)
     private List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys;
 
+    /**
+     * @return Encrypts or decrypts a disk using a customer-supplied encryption key.
+     * 
+     */
     public List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys() {
         return this.diskEncryptionKeys;
     }
@@ -72,6 +91,11 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
     @Import(name="diskName", required=true)
     private String diskName;
 
+    /**
+     * @return Name of the disk. When not provided, this defaults
+     * to the name of the instance.
+     * 
+     */
     public String diskName() {
         return this.diskName;
     }
@@ -85,6 +109,12 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
     @Import(name="diskSizeGb", required=true)
     private Integer diskSizeGb;
 
+    /**
+     * @return The size of the image in gigabytes. If not
+     * specified, it will inherit the size of its base image. For SCRATCH disks,
+     * the size must be exactly 375GB.
+     * 
+     */
     public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
@@ -97,6 +127,11 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
     @Import(name="diskType", required=true)
     private String diskType;
 
+    /**
+     * @return The GCE disk type. Can be either `&#34;pd-ssd&#34;`,
+     * `&#34;local-ssd&#34;`, `&#34;pd-balanced&#34;` or `&#34;pd-standard&#34;`.
+     * 
+     */
     public String diskType() {
         return this.diskType;
     }
@@ -111,6 +146,13 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
     @Import(name="interface", required=true)
     private String interface_;
 
+    /**
+     * @return Specifies the disk interface to use for attaching this disk,
+     * which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
+     * and the request will fail if you attempt to attach a persistent disk in any other format
+     * than SCSI. Local SSDs can use either NVME or SCSI.
+     * 
+     */
     public String interface_() {
         return this.interface_;
     }
@@ -123,6 +165,11 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return (Optional) A set of ket/value label pairs to assign to disk created from
+     * this template
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -136,6 +183,12 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return The mode in which to attach this disk, either READ_WRITE
+     * or READ_ONLY. If you are attaching or creating a boot disk, this must
+     * read-write mode.
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -156,6 +209,12 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
     @Import(name="source", required=true)
     private String source;
 
+    /**
+     * @return The name (**not self_link**)
+     * of the disk (such as those managed by `gcp.compute.Disk`) to attach.
+     * &gt; **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
+     * 
+     */
     public String source() {
         return this.source;
     }
@@ -173,6 +232,16 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
     @Import(name="sourceImage", required=true)
     private String sourceImage;
 
+    /**
+     * @return The image from which to
+     * initialize this disk. This can be one of: the image&#39;s `self_link`,
+     * `projects/{project}/global/images/{image}`,
+     * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
+     * `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
+     * `{project}/{image}`, `{family}`, or `{image}`.
+     * &gt; **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
+     * 
+     */
     public String sourceImage() {
         return this.sourceImage;
     }
@@ -184,6 +253,10 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -225,55 +298,134 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
             $ = new GetInstanceTemplateDisk(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoDelete Whether or not the disk should be auto-deleted.
+         * This defaults to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDelete(Boolean autoDelete) {
             $.autoDelete = autoDelete;
             return this;
         }
 
+        /**
+         * @param boot Indicates that this is a boot disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boot(Boolean boot) {
             $.boot = boot;
             return this;
         }
 
+        /**
+         * @param deviceName A unique device name that is reflected into the
+         * /dev/  tree of a Linux operating system running within the instance. If not
+         * specified, the server chooses a default device name to apply to this disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param diskEncryptionKeys Encrypts or decrypts a disk using a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKeys(List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys) {
             $.diskEncryptionKeys = diskEncryptionKeys;
             return this;
         }
 
+        /**
+         * @param diskEncryptionKeys Encrypts or decrypts a disk using a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKeys(GetInstanceTemplateDiskDiskEncryptionKey... diskEncryptionKeys) {
             return diskEncryptionKeys(List.of(diskEncryptionKeys));
         }
 
+        /**
+         * @param diskName Name of the disk. When not provided, this defaults
+         * to the name of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(String diskName) {
             $.diskName = diskName;
             return this;
         }
 
+        /**
+         * @param diskSizeGb The size of the image in gigabytes. If not
+         * specified, it will inherit the size of its base image. For SCRATCH disks,
+         * the size must be exactly 375GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(Integer diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param diskType The GCE disk type. Can be either `&#34;pd-ssd&#34;`,
+         * `&#34;local-ssd&#34;`, `&#34;pd-balanced&#34;` or `&#34;pd-standard&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param interface_ Specifies the disk interface to use for attaching this disk,
+         * which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
+         * and the request will fail if you attempt to attach a persistent disk in any other format
+         * than SCSI. Local SSDs can use either NVME or SCSI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interface_(String interface_) {
             $.interface_ = interface_;
             return this;
         }
 
+        /**
+         * @param labels (Optional) A set of ket/value label pairs to assign to disk created from
+         * this template
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param mode The mode in which to attach this disk, either READ_WRITE
+         * or READ_ONLY. If you are attaching or creating a boot disk, this must
+         * read-write mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;
@@ -288,16 +440,42 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
             return resourcePolicies(List.of(resourcePolicies));
         }
 
+        /**
+         * @param source The name (**not self_link**)
+         * of the disk (such as those managed by `gcp.compute.Disk`) to attach.
+         * &gt; **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param sourceImage The image from which to
+         * initialize this disk. This can be one of: the image&#39;s `self_link`,
+         * `projects/{project}/global/images/{image}`,
+         * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
+         * `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
+         * `{project}/{image}`, `{family}`, or `{image}`.
+         * &gt; **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImage(String sourceImage) {
             $.sourceImage = sourceImage;
             return this;
         }
 
+        /**
+         * @param type The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

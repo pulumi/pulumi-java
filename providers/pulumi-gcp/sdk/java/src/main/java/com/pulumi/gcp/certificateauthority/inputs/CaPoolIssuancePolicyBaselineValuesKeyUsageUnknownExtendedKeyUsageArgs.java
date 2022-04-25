@@ -21,6 +21,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyU
     @Import(name="objectIdPaths", required=true)
     private Output<List<Integer>> objectIdPaths;
 
+    /**
+     * @return An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * 
+     */
     public Output<List<Integer>> objectIdPaths() {
         return this.objectIdPaths;
     }
@@ -49,15 +53,33 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyU
             $ = new CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectIdPaths An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectIdPaths(Output<List<Integer>> objectIdPaths) {
             $.objectIdPaths = objectIdPaths;
             return this;
         }
 
+        /**
+         * @param objectIdPaths An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectIdPaths(List<Integer> objectIdPaths) {
             return objectIdPaths(Output.of(objectIdPaths));
         }
 
+        /**
+         * @param objectIdPaths An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectIdPaths(Integer... objectIdPaths) {
             return objectIdPaths(List.of(objectIdPaths));
         }

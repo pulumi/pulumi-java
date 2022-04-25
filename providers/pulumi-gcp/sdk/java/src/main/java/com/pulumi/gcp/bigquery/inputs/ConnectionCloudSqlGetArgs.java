@@ -22,6 +22,11 @@ public final class ConnectionCloudSqlGetArgs extends com.pulumi.resources.Resour
     @Import(name="credential", required=true)
     private Output<ConnectionCloudSqlCredentialGetArgs> credential;
 
+    /**
+     * @return Cloud SQL properties.
+     * Structure is documented below.
+     * 
+     */
     public Output<ConnectionCloudSqlCredentialGetArgs> credential() {
         return this.credential;
     }
@@ -33,6 +38,10 @@ public final class ConnectionCloudSqlGetArgs extends com.pulumi.resources.Resour
     @Import(name="database", required=true)
     private Output<String> database;
 
+    /**
+     * @return Database name.
+     * 
+     */
     public Output<String> database() {
         return this.database;
     }
@@ -44,6 +53,10 @@ public final class ConnectionCloudSqlGetArgs extends com.pulumi.resources.Resour
     @Import(name="instanceId", required=true)
     private Output<String> instanceId;
 
+    /**
+     * @return Cloud SQL instance ID in the form project:location:instance.
+     * 
+     */
     public Output<String> instanceId() {
         return this.instanceId;
     }
@@ -56,6 +69,11 @@ public final class ConnectionCloudSqlGetArgs extends com.pulumi.resources.Resour
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of the Cloud SQL database.
+     * Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -87,38 +105,90 @@ public final class ConnectionCloudSqlGetArgs extends com.pulumi.resources.Resour
             $ = new ConnectionCloudSqlGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credential Cloud SQL properties.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(Output<ConnectionCloudSqlCredentialGetArgs> credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param credential Cloud SQL properties.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(ConnectionCloudSqlCredentialGetArgs credential) {
             return credential(Output.of(credential));
         }
 
+        /**
+         * @param database Database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(Output<String> database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param database Database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             return database(Output.of(database));
         }
 
+        /**
+         * @param instanceId Cloud SQL instance ID in the form project:location:instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId Cloud SQL instance ID in the form project:location:instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param type Type of the Cloud SQL database.
+         * Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of the Cloud SQL database.
+         * Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

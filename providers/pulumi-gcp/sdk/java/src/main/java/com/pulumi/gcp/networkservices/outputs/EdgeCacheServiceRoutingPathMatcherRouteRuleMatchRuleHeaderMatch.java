@@ -13,34 +13,34 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch {
     /**
-     * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
+     * @return The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
      * 
      */
     private final @Nullable String exactMatch;
     /**
-     * Headers to remove from the response prior to sending it back to the client.
+     * @return Headers to remove from the response prior to sending it back to the client.
      * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
      * 
      */
     private final String headerName;
     /**
-     * If set to false (default), the headerMatch is considered a match if the match criteria above are met.
+     * @return If set to false (default), the headerMatch is considered a match if the match criteria above are met.
      * If set to true, the headerMatch is considered a match if the match criteria above are NOT met.
      * 
      */
     private final @Nullable Boolean invertMatch;
     /**
-     * The value of the header must start with the contents of prefixMatch.
+     * @return The value of the header must start with the contents of prefixMatch.
      * 
      */
     private final @Nullable String prefixMatch;
     /**
-     * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
+     * @return Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
      * 
      */
     private final @Nullable Boolean presentMatch;
     /**
-     * The value of the header must end with the contents of suffixMatch.
+     * @return The value of the header must end with the contents of suffixMatch.
      * 
      */
     private final @Nullable String suffixMatch;
@@ -62,46 +62,46 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
     }
 
     /**
-     * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
+     * @return The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
      * 
-    */
+     */
     public Optional<String> exactMatch() {
         return Optional.ofNullable(this.exactMatch);
     }
     /**
-     * Headers to remove from the response prior to sending it back to the client.
+     * @return Headers to remove from the response prior to sending it back to the client.
      * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
      * 
-    */
+     */
     public String headerName() {
         return this.headerName;
     }
     /**
-     * If set to false (default), the headerMatch is considered a match if the match criteria above are met.
+     * @return If set to false (default), the headerMatch is considered a match if the match criteria above are met.
      * If set to true, the headerMatch is considered a match if the match criteria above are NOT met.
      * 
-    */
+     */
     public Optional<Boolean> invertMatch() {
         return Optional.ofNullable(this.invertMatch);
     }
     /**
-     * The value of the header must start with the contents of prefixMatch.
+     * @return The value of the header must start with the contents of prefixMatch.
      * 
-    */
+     */
     public Optional<String> prefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
     /**
-     * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
+     * @return Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
      * 
-    */
+     */
     public Optional<Boolean> presentMatch() {
         return Optional.ofNullable(this.presentMatch);
     }
     /**
-     * The value of the header must end with the contents of suffixMatch.
+     * @return The value of the header must end with the contents of suffixMatch.
      * 
-    */
+     */
     public Optional<String> suffixMatch() {
         return Optional.ofNullable(this.suffixMatch);
     }

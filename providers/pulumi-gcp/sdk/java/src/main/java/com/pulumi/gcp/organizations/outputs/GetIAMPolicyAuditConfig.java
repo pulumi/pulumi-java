@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class GetIAMPolicyAuditConfig {
     /**
-     * A nested block that defines the operations you&#39;d like to log.
+     * @return A nested block that defines the operations you&#39;d like to log.
      * 
      */
     private final List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs;
     /**
-     * Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
+     * @return Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
      * 
      */
     private final String service;
@@ -31,16 +31,16 @@ public final class GetIAMPolicyAuditConfig {
     }
 
     /**
-     * A nested block that defines the operations you&#39;d like to log.
+     * @return A nested block that defines the operations you&#39;d like to log.
      * 
-    */
+     */
     public List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs() {
         return this.auditLogConfigs;
     }
     /**
-     * Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
+     * @return Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
      * 
-    */
+     */
     public String service() {
         return this.service;
     }

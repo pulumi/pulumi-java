@@ -21,6 +21,10 @@ public final class GetAzureVersionsArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return The location to list versions for.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -33,6 +37,11 @@ public final class GetAzureVersionsArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return ID of the project to list available cluster versions for. Should match the project the cluster will be deployed to.
+     * Defaults to the project that the provider is authenticated with.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -62,11 +71,24 @@ public final class GetAzureVersionsArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetAzureVersionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The location to list versions for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param project ID of the project to list available cluster versions for. Should match the project the cluster will be deployed to.
+         * Defaults to the project that the provider is authenticated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;

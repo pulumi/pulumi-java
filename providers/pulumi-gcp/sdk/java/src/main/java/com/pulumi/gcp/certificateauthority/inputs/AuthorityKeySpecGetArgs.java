@@ -24,6 +24,12 @@ public final class AuthorityKeySpecGetArgs extends com.pulumi.resources.Resource
     @Import(name="algorithm")
     private @Nullable Output<String> algorithm;
 
+    /**
+     * @return The algorithm to use for creating a managed Cloud KMS key for a for a simplified
+     * experience. All managed keys will be have their ProtectionLevel as HSM.
+     * Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `RSA_PSS_3072_SHA256`, `RSA_PSS_4096_SHA256`, `RSA_PKCS1_2048_SHA256`, `RSA_PKCS1_3072_SHA256`, `RSA_PKCS1_4096_SHA256`, `EC_P256_SHA256`, and `EC_P384_SHA384`.
+     * 
+     */
     public Optional<Output<String>> algorithm() {
         return Optional.ofNullable(this.algorithm);
     }
@@ -36,6 +42,11 @@ public final class AuthorityKeySpecGetArgs extends com.pulumi.resources.Resource
     @Import(name="cloudKmsKeyVersion")
     private @Nullable Output<String> cloudKmsKeyVersion;
 
+    /**
+     * @return The resource name for an existing Cloud KMS CryptoKeyVersion in the format
+     * `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`.
+     * 
+     */
     public Optional<Output<String>> cloudKmsKeyVersion() {
         return Optional.ofNullable(this.cloudKmsKeyVersion);
     }
@@ -65,20 +76,50 @@ public final class AuthorityKeySpecGetArgs extends com.pulumi.resources.Resource
             $ = new AuthorityKeySpecGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm The algorithm to use for creating a managed Cloud KMS key for a for a simplified
+         * experience. All managed keys will be have their ProtectionLevel as HSM.
+         * Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `RSA_PSS_3072_SHA256`, `RSA_PSS_4096_SHA256`, `RSA_PKCS1_2048_SHA256`, `RSA_PKCS1_3072_SHA256`, `RSA_PKCS1_4096_SHA256`, `EC_P256_SHA256`, and `EC_P384_SHA384`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(@Nullable Output<String> algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param algorithm The algorithm to use for creating a managed Cloud KMS key for a for a simplified
+         * experience. All managed keys will be have their ProtectionLevel as HSM.
+         * Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `RSA_PSS_3072_SHA256`, `RSA_PSS_4096_SHA256`, `RSA_PKCS1_2048_SHA256`, `RSA_PKCS1_3072_SHA256`, `RSA_PKCS1_4096_SHA256`, `EC_P256_SHA256`, and `EC_P384_SHA384`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(String algorithm) {
             return algorithm(Output.of(algorithm));
         }
 
+        /**
+         * @param cloudKmsKeyVersion The resource name for an existing Cloud KMS CryptoKeyVersion in the format
+         * `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudKmsKeyVersion(@Nullable Output<String> cloudKmsKeyVersion) {
             $.cloudKmsKeyVersion = cloudKmsKeyVersion;
             return this;
         }
 
+        /**
+         * @param cloudKmsKeyVersion The resource name for an existing Cloud KMS CryptoKeyVersion in the format
+         * `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudKmsKeyVersion(String cloudKmsKeyVersion) {
             return cloudKmsKeyVersion(Output.of(cloudKmsKeyVersion));
         }

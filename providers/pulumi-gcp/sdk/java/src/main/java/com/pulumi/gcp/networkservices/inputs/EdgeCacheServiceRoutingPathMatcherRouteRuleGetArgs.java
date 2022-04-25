@@ -27,6 +27,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends co
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A human-readable description of the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -39,6 +43,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends co
     @Import(name="headerAction")
     private @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArgs> headerAction;
 
+    /**
+     * @return The header actions, including adding &amp; removing headers, for requests that match this route.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArgs>> headerAction() {
         return Optional.ofNullable(this.headerAction);
     }
@@ -52,6 +61,12 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends co
     @Import(name="matchRules", required=true)
     private Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs>> matchRules;
 
+    /**
+     * @return The list of criteria for matching attributes of a request to this routeRule. This list has OR semantics: the request matches this routeRule when any of the matchRules are satisfied. However predicates
+     * within a given matchRule have AND semantics. All predicates within a matchRule must match for the request to match the rule.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs>> matchRules() {
         return this.matchRules;
     }
@@ -64,6 +79,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends co
     @Import(name="origin")
     private @Nullable Output<String> origin;
 
+    /**
+     * @return The Origin resource that requests to this route should fetch from when a matching response is not in cache. Origins can be defined as short names (&#34;my-origin&#34;) or fully-qualified resource URLs - e.g. &#34;networkservices.googleapis.com/projects/my-project/global/edgecacheorigins/my-origin&#34;
+     * Only one of origin or urlRedirect can be set.
+     * 
+     */
     public Optional<Output<String>> origin() {
         return Optional.ofNullable(this.origin);
     }
@@ -78,6 +98,13 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends co
     @Import(name="priority", required=true)
     private Output<String> priority;
 
+    /**
+     * @return The priority of this route rule, where 1 is the highest priority.
+     * You cannot configure two or more routeRules with the same priority. Priority for each rule must be set to a number between 1 and 999 inclusive.
+     * Priority numbers can have gaps, which enable you to add or remove rules in the future without affecting the rest of the rules. For example, 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers
+     * to which you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the future without any impact on existing rules.
+     * 
+     */
     public Output<String> priority() {
         return this.priority;
     }
@@ -90,6 +117,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends co
     @Import(name="routeAction")
     private @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs> routeAction;
 
+    /**
+     * @return In response to a matching path, the routeAction performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected origin.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs>> routeAction() {
         return Optional.ofNullable(this.routeAction);
     }
@@ -102,6 +134,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends co
     @Import(name="urlRedirect")
     private @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs> urlRedirect;
 
+    /**
+     * @return The URL redirect configuration for requests that match this route.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs>> urlRedirect() {
         return Optional.ofNullable(this.urlRedirect);
     }
@@ -136,69 +173,179 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends co
             $ = new EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A human-readable description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A human-readable description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param headerAction The header actions, including adding &amp; removing headers, for requests that match this route.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerAction(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArgs> headerAction) {
             $.headerAction = headerAction;
             return this;
         }
 
+        /**
+         * @param headerAction The header actions, including adding &amp; removing headers, for requests that match this route.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerAction(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArgs headerAction) {
             return headerAction(Output.of(headerAction));
         }
 
+        /**
+         * @param matchRules The list of criteria for matching attributes of a request to this routeRule. This list has OR semantics: the request matches this routeRule when any of the matchRules are satisfied. However predicates
+         * within a given matchRule have AND semantics. All predicates within a matchRule must match for the request to match the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchRules(Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs>> matchRules) {
             $.matchRules = matchRules;
             return this;
         }
 
+        /**
+         * @param matchRules The list of criteria for matching attributes of a request to this routeRule. This list has OR semantics: the request matches this routeRule when any of the matchRules are satisfied. However predicates
+         * within a given matchRule have AND semantics. All predicates within a matchRule must match for the request to match the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchRules(List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs> matchRules) {
             return matchRules(Output.of(matchRules));
         }
 
+        /**
+         * @param matchRules The list of criteria for matching attributes of a request to this routeRule. This list has OR semantics: the request matches this routeRule when any of the matchRules are satisfied. However predicates
+         * within a given matchRule have AND semantics. All predicates within a matchRule must match for the request to match the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchRules(EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs... matchRules) {
             return matchRules(List.of(matchRules));
         }
 
+        /**
+         * @param origin The Origin resource that requests to this route should fetch from when a matching response is not in cache. Origins can be defined as short names (&#34;my-origin&#34;) or fully-qualified resource URLs - e.g. &#34;networkservices.googleapis.com/projects/my-project/global/edgecacheorigins/my-origin&#34;
+         * Only one of origin or urlRedirect can be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origin(@Nullable Output<String> origin) {
             $.origin = origin;
             return this;
         }
 
+        /**
+         * @param origin The Origin resource that requests to this route should fetch from when a matching response is not in cache. Origins can be defined as short names (&#34;my-origin&#34;) or fully-qualified resource URLs - e.g. &#34;networkservices.googleapis.com/projects/my-project/global/edgecacheorigins/my-origin&#34;
+         * Only one of origin or urlRedirect can be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origin(String origin) {
             return origin(Output.of(origin));
         }
 
+        /**
+         * @param priority The priority of this route rule, where 1 is the highest priority.
+         * You cannot configure two or more routeRules with the same priority. Priority for each rule must be set to a number between 1 and 999 inclusive.
+         * Priority numbers can have gaps, which enable you to add or remove rules in the future without affecting the rest of the rules. For example, 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers
+         * to which you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the future without any impact on existing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Output<String> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority The priority of this route rule, where 1 is the highest priority.
+         * You cannot configure two or more routeRules with the same priority. Priority for each rule must be set to a number between 1 and 999 inclusive.
+         * Priority numbers can have gaps, which enable you to add or remove rules in the future without affecting the rest of the rules. For example, 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers
+         * to which you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the future without any impact on existing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(String priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param routeAction In response to a matching path, the routeAction performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected origin.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeAction(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs> routeAction) {
             $.routeAction = routeAction;
             return this;
         }
 
+        /**
+         * @param routeAction In response to a matching path, the routeAction performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected origin.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeAction(EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs routeAction) {
             return routeAction(Output.of(routeAction));
         }
 
+        /**
+         * @param urlRedirect The URL redirect configuration for requests that match this route.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlRedirect(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs> urlRedirect) {
             $.urlRedirect = urlRedirect;
             return this;
         }
 
+        /**
+         * @param urlRedirect The URL redirect configuration for requests that match this route.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlRedirect(EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs urlRedirect) {
             return urlRedirect(Output.of(urlRedirect));
         }

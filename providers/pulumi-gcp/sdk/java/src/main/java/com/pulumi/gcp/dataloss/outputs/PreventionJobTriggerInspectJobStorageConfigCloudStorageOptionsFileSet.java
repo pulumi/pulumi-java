@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet {
     /**
-     * The regex-filtered set of files to scan.
+     * @return The regex-filtered set of files to scan.
      * Structure is documented below.
      * 
      */
     private final @Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet regexFileSet;
     /**
-     * The Cloud Storage url of the file(s) to scan, in the format `gs://&lt;bucket&gt;/&lt;path&gt;`. Trailing wildcard
+     * @return The Cloud Storage url of the file(s) to scan, in the format `gs://&lt;bucket&gt;/&lt;path&gt;`. Trailing wildcard
      * in the path is allowed.
      * If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned
      * non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is
@@ -37,21 +37,21 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     }
 
     /**
-     * The regex-filtered set of files to scan.
+     * @return The regex-filtered set of files to scan.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet> regexFileSet() {
         return Optional.ofNullable(this.regexFileSet);
     }
     /**
-     * The Cloud Storage url of the file(s) to scan, in the format `gs://&lt;bucket&gt;/&lt;path&gt;`. Trailing wildcard
+     * @return The Cloud Storage url of the file(s) to scan, in the format `gs://&lt;bucket&gt;/&lt;path&gt;`. Trailing wildcard
      * in the path is allowed.
      * If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned
      * non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is
      * equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`.
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }

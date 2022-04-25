@@ -12,18 +12,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionDiskDiskEncryptionKey {
     /**
-     * The name of the encryption key that is stored in Google Cloud KMS.
+     * @return The name of the encryption key that is stored in Google Cloud KMS.
      * 
      */
     private final @Nullable String kmsKeyName;
     /**
-     * Specifies a 256-bit customer-supplied encryption key, encoded in
+     * @return Specifies a 256-bit customer-supplied encryption key, encoded in
      * RFC 4648 base64 to either encrypt or decrypt this resource.
      * 
      */
     private final @Nullable String rawKey;
     /**
-     * - 
+     * @return -
      * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
      * encryption key that protects this resource.
      * 
@@ -41,26 +41,26 @@ public final class RegionDiskDiskEncryptionKey {
     }
 
     /**
-     * The name of the encryption key that is stored in Google Cloud KMS.
+     * @return The name of the encryption key that is stored in Google Cloud KMS.
      * 
-    */
+     */
     public Optional<String> kmsKeyName() {
         return Optional.ofNullable(this.kmsKeyName);
     }
     /**
-     * Specifies a 256-bit customer-supplied encryption key, encoded in
+     * @return Specifies a 256-bit customer-supplied encryption key, encoded in
      * RFC 4648 base64 to either encrypt or decrypt this resource.
      * 
-    */
+     */
     public Optional<String> rawKey() {
         return Optional.ofNullable(this.rawKey);
     }
     /**
-     * - 
+     * @return -
      * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
      * encryption key that protects this resource.
      * 
-    */
+     */
     public Optional<String> sha256() {
         return Optional.ofNullable(this.sha256);
     }

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class AutoscalarAutoscalingPolicyLoadBalancingUtilization {
     /**
-     * Fraction of backend capacity utilization (set in HTTP(s) load
+     * @return Fraction of backend capacity utilization (set in HTTP(s) load
      * balancing configuration) that autoscaler should maintain. Must
      * be a positive float value. If not defined, the default is 0.8.
      * 
@@ -23,11 +23,11 @@ public final class AutoscalarAutoscalingPolicyLoadBalancingUtilization {
     }
 
     /**
-     * Fraction of backend capacity utilization (set in HTTP(s) load
+     * @return Fraction of backend capacity utilization (set in HTTP(s) load
      * balancing configuration) that autoscaler should maintain. Must
      * be a positive float value. If not defined, the default is 0.8.
      * 
-    */
+     */
     public Double target() {
         return this.target;
     }

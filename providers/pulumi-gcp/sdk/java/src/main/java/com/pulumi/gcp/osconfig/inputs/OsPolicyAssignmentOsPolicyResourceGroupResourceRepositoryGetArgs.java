@@ -25,6 +25,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetA
     @Import(name="apt")
     private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptGetArgs> apt;
 
+    /**
+     * @return An Apt Repository.
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptGetArgs>> apt() {
         return Optional.ofNullable(this.apt);
     }
@@ -36,6 +40,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetA
     @Import(name="goo")
     private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooGetArgs> goo;
 
+    /**
+     * @return A Goo Repository.
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooGetArgs>> goo() {
         return Optional.ofNullable(this.goo);
     }
@@ -47,6 +55,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetA
     @Import(name="yum")
     private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumGetArgs> yum;
 
+    /**
+     * @return A Yum Repository.
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumGetArgs>> yum() {
         return Optional.ofNullable(this.yum);
     }
@@ -58,6 +70,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetA
     @Import(name="zypper")
     private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperGetArgs> zypper;
 
+    /**
+     * @return A Zypper Repository.
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperGetArgs>> zypper() {
         return Optional.ofNullable(this.zypper);
     }
@@ -89,38 +105,86 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetA
             $ = new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apt An Apt Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apt(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptGetArgs> apt) {
             $.apt = apt;
             return this;
         }
 
+        /**
+         * @param apt An Apt Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apt(OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptGetArgs apt) {
             return apt(Output.of(apt));
         }
 
+        /**
+         * @param goo A Goo Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goo(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooGetArgs> goo) {
             $.goo = goo;
             return this;
         }
 
+        /**
+         * @param goo A Goo Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goo(OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooGetArgs goo) {
             return goo(Output.of(goo));
         }
 
+        /**
+         * @param yum A Yum Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yum(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumGetArgs> yum) {
             $.yum = yum;
             return this;
         }
 
+        /**
+         * @param yum A Yum Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yum(OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumGetArgs yum) {
             return yum(Output.of(yum));
         }
 
+        /**
+         * @param zypper A Zypper Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zypper(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperGetArgs> zypper) {
             $.zypper = zypper;
             return this;
         }
 
+        /**
+         * @param zypper A Zypper Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zypper(OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperGetArgs zypper) {
             return zypper(Output.of(zypper));
         }

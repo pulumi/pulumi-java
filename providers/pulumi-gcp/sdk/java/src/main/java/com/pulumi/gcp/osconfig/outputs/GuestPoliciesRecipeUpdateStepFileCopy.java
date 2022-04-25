@@ -13,23 +13,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GuestPoliciesRecipeUpdateStepFileCopy {
     /**
-     * The id of the relevant artifact in the recipe.
+     * @return The id of the relevant artifact in the recipe.
      * 
      */
     private final String artifactId;
     /**
-     * Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
+     * @return Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
      * 
      */
     private final String destination;
     /**
-     * Whether to allow this step to overwrite existing files.If this is false and the file already exists the file
+     * @return Whether to allow this step to overwrite existing files.If this is false and the file already exists the file
      * is not overwritten and the step is considered a success. Defaults to false.
      * 
      */
     private final @Nullable Boolean overwrite;
     /**
-     * Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users
+     * @return Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users
      * for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit
      * number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one
      * bit corresponds to the execute permission. Default behavior is 755.
@@ -52,36 +52,36 @@ public final class GuestPoliciesRecipeUpdateStepFileCopy {
     }
 
     /**
-     * The id of the relevant artifact in the recipe.
+     * @return The id of the relevant artifact in the recipe.
      * 
-    */
+     */
     public String artifactId() {
         return this.artifactId;
     }
     /**
-     * Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
+     * @return Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
      * 
-    */
+     */
     public String destination() {
         return this.destination;
     }
     /**
-     * Whether to allow this step to overwrite existing files.If this is false and the file already exists the file
+     * @return Whether to allow this step to overwrite existing files.If this is false and the file already exists the file
      * is not overwritten and the step is considered a success. Defaults to false.
      * 
-    */
+     */
     public Optional<Boolean> overwrite() {
         return Optional.ofNullable(this.overwrite);
     }
     /**
-     * Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users
+     * @return Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users
      * for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit
      * number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one
      * bit corresponds to the execute permission. Default behavior is 755.
      * Below are some examples of permissions and their associated values:
      * read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
      * 
-    */
+     */
     public Optional<String> permissions() {
         return Optional.ofNullable(this.permissions);
     }

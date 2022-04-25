@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class FlexibleAppVersionEntrypoint {
     /**
-     * The format should be a shell command that can be fed to bash -c.
+     * @return The format should be a shell command that can be fed to bash -c.
      * 
      */
     private final String shell;
@@ -21,9 +21,9 @@ public final class FlexibleAppVersionEntrypoint {
     }
 
     /**
-     * The format should be a shell command that can be fed to bash -c.
+     * @return The format should be a shell command that can be fed to bash -c.
      * 
-    */
+     */
     public String shell() {
         return this.shell;
     }

@@ -15,25 +15,25 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GuestPoliciesPackageRepository {
     /**
-     * An Apt Repository.
+     * @return An Apt Repository.
      * Structure is documented below.
      * 
      */
     private final @Nullable GuestPoliciesPackageRepositoryApt apt;
     /**
-     * A Goo Repository.
+     * @return A Goo Repository.
      * Structure is documented below.
      * 
      */
     private final @Nullable GuestPoliciesPackageRepositoryGoo goo;
     /**
-     * A Yum Repository.
+     * @return A Yum Repository.
      * Structure is documented below.
      * 
      */
     private final @Nullable GuestPoliciesPackageRepositoryYum yum;
     /**
-     * A Zypper Repository.
+     * @return A Zypper Repository.
      * Structure is documented below.
      * 
      */
@@ -52,34 +52,34 @@ public final class GuestPoliciesPackageRepository {
     }
 
     /**
-     * An Apt Repository.
+     * @return An Apt Repository.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<GuestPoliciesPackageRepositoryApt> apt() {
         return Optional.ofNullable(this.apt);
     }
     /**
-     * A Goo Repository.
+     * @return A Goo Repository.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<GuestPoliciesPackageRepositoryGoo> goo() {
         return Optional.ofNullable(this.goo);
     }
     /**
-     * A Yum Repository.
+     * @return A Yum Repository.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<GuestPoliciesPackageRepositoryYum> yum() {
         return Optional.ofNullable(this.yum);
     }
     /**
-     * A Zypper Repository.
+     * @return A Zypper Repository.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<GuestPoliciesPackageRepositoryZypper> zypper() {
         return Optional.ofNullable(this.zypper);
     }

@@ -22,6 +22,10 @@ public final class JobLoadTimePartitioningGetArgs extends com.pulumi.resources.R
     @Import(name="expirationMs")
     private @Nullable Output<String> expirationMs;
 
+    /**
+     * @return Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
+     * 
+     */
     public Optional<Output<String>> expirationMs() {
         return Optional.ofNullable(this.expirationMs);
     }
@@ -35,6 +39,12 @@ public final class JobLoadTimePartitioningGetArgs extends com.pulumi.resources.R
     @Import(name="field")
     private @Nullable Output<String> field;
 
+    /**
+     * @return If not set, the table is partitioned by pseudo column &#39;_PARTITIONTIME&#39;; if set, the table is partitioned by this field.
+     * The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
+     * A wrapper is used here because an empty string is an invalid value.
+     * 
+     */
     public Optional<Output<String>> field() {
         return Optional.ofNullable(this.field);
     }
@@ -47,6 +57,11 @@ public final class JobLoadTimePartitioningGetArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The only type supported is DAY, which will generate one partition per day. Providing an empty string used to cause an error,
+     * but in OnePlatform the field will be treated as unset.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -77,29 +92,71 @@ public final class JobLoadTimePartitioningGetArgs extends com.pulumi.resources.R
             $ = new JobLoadTimePartitioningGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expirationMs Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationMs(@Nullable Output<String> expirationMs) {
             $.expirationMs = expirationMs;
             return this;
         }
 
+        /**
+         * @param expirationMs Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationMs(String expirationMs) {
             return expirationMs(Output.of(expirationMs));
         }
 
+        /**
+         * @param field If not set, the table is partitioned by pseudo column &#39;_PARTITIONTIME&#39;; if set, the table is partitioned by this field.
+         * The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
+         * A wrapper is used here because an empty string is an invalid value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(@Nullable Output<String> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field If not set, the table is partitioned by pseudo column &#39;_PARTITIONTIME&#39;; if set, the table is partitioned by this field.
+         * The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
+         * A wrapper is used here because an empty string is an invalid value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(String field) {
             return field(Output.of(field));
         }
 
+        /**
+         * @param type The only type supported is DAY, which will generate one partition per day. Providing an empty string used to cause an error,
+         * but in OnePlatform the field will be treated as unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The only type supported is DAY, which will generate one partition per day. Providing an empty string used to cause an error,
+         * but in OnePlatform the field will be treated as unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

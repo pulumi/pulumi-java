@@ -22,6 +22,10 @@ public final class TriggerPubsubConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="serviceAccountEmail")
     private @Nullable Output<String> serviceAccountEmail;
 
+    /**
+     * @return Service account that will make the push request.
+     * 
+     */
     public Optional<Output<String>> serviceAccountEmail() {
         return Optional.ofNullable(this.serviceAccountEmail);
     }
@@ -35,6 +39,12 @@ public final class TriggerPubsubConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return -
+     * Potential issues with the underlying Pub/Sub subscription configuration.
+     * Only populated on get requests.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -47,6 +57,11 @@ public final class TriggerPubsubConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="subscription")
     private @Nullable Output<String> subscription;
 
+    /**
+     * @return -
+     * Output only. Name of the subscription.
+     * 
+     */
     public Optional<Output<String>> subscription() {
         return Optional.ofNullable(this.subscription);
     }
@@ -58,6 +73,10 @@ public final class TriggerPubsubConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="topic", required=true)
     private Output<String> topic;
 
+    /**
+     * @return The name of the topic from which this subscription is receiving messages.
+     * 
+     */
     public Output<String> topic() {
         return this.topic;
     }
@@ -89,38 +108,92 @@ public final class TriggerPubsubConfigGetArgs extends com.pulumi.resources.Resou
             $ = new TriggerPubsubConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param serviceAccountEmail Service account that will make the push request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
+        /**
+         * @param serviceAccountEmail Service account that will make the push request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             return serviceAccountEmail(Output.of(serviceAccountEmail));
         }
 
+        /**
+         * @param state -
+         * Potential issues with the underlying Pub/Sub subscription configuration.
+         * Only populated on get requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state -
+         * Potential issues with the underlying Pub/Sub subscription configuration.
+         * Only populated on get requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param subscription -
+         * Output only. Name of the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscription(@Nullable Output<String> subscription) {
             $.subscription = subscription;
             return this;
         }
 
+        /**
+         * @param subscription -
+         * Output only. Name of the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscription(String subscription) {
             return subscription(Output.of(subscription));
         }
 
+        /**
+         * @param topic The name of the topic from which this subscription is receiving messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic The name of the topic from which this subscription is receiving messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }

@@ -24,6 +24,11 @@ public final class AttestorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="attestationAuthorityNote")
     private @Nullable Output<AttestorAttestationAuthorityNoteGetArgs> attestationAuthorityNote;
 
+    /**
+     * @return A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AttestorAttestationAuthorityNoteGetArgs>> attestationAuthorityNote() {
         return Optional.ofNullable(this.attestationAuthorityNote);
     }
@@ -36,6 +41,11 @@ public final class AttestorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A descriptive comment. This field may be updated. The field may be
+     * displayed in chooser dialogs.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +57,10 @@ public final class AttestorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +73,11 @@ public final class AttestorState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -90,38 +109,92 @@ public final class AttestorState extends com.pulumi.resources.ResourceArgs {
             $ = new AttestorState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attestationAuthorityNote A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestationAuthorityNote(@Nullable Output<AttestorAttestationAuthorityNoteGetArgs> attestationAuthorityNote) {
             $.attestationAuthorityNote = attestationAuthorityNote;
             return this;
         }
 
+        /**
+         * @param attestationAuthorityNote A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestationAuthorityNote(AttestorAttestationAuthorityNoteGetArgs attestationAuthorityNote) {
             return attestationAuthorityNote(Output.of(attestationAuthorityNote));
         }
 
+        /**
+         * @param description A descriptive comment. This field may be updated. The field may be
+         * displayed in chooser dialogs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A descriptive comment. This field may be updated. The field may be
+         * displayed in chooser dialogs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

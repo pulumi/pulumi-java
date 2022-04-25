@@ -23,6 +23,12 @@ public final class BackendServiceSecuritySettingsGetArgs extends com.pulumi.reso
     @Import(name="clientTlsPolicy", required=true)
     private Output<String> clientTlsPolicy;
 
+    /**
+     * @return ClientTlsPolicy is a resource that specifies how a client should authenticate
+     * connections to backends of a service. This resource itself does not affect
+     * configuration unless it is attached to a backend service resource.
+     * 
+     */
     public Output<String> clientTlsPolicy() {
         return this.clientTlsPolicy;
     }
@@ -36,6 +42,12 @@ public final class BackendServiceSecuritySettingsGetArgs extends com.pulumi.reso
     @Import(name="subjectAltNames", required=true)
     private Output<List<String>> subjectAltNames;
 
+    /**
+     * @return A list of alternate names to verify the subject identity in the certificate.
+     * If specified, the client will verify that the server certificate&#39;s subject
+     * alt name matches one of the specified values.
+     * 
+     */
     public Output<List<String>> subjectAltNames() {
         return this.subjectAltNames;
     }
@@ -65,24 +77,64 @@ public final class BackendServiceSecuritySettingsGetArgs extends com.pulumi.reso
             $ = new BackendServiceSecuritySettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientTlsPolicy ClientTlsPolicy is a resource that specifies how a client should authenticate
+         * connections to backends of a service. This resource itself does not affect
+         * configuration unless it is attached to a backend service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientTlsPolicy(Output<String> clientTlsPolicy) {
             $.clientTlsPolicy = clientTlsPolicy;
             return this;
         }
 
+        /**
+         * @param clientTlsPolicy ClientTlsPolicy is a resource that specifies how a client should authenticate
+         * connections to backends of a service. This resource itself does not affect
+         * configuration unless it is attached to a backend service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientTlsPolicy(String clientTlsPolicy) {
             return clientTlsPolicy(Output.of(clientTlsPolicy));
         }
 
+        /**
+         * @param subjectAltNames A list of alternate names to verify the subject identity in the certificate.
+         * If specified, the client will verify that the server certificate&#39;s subject
+         * alt name matches one of the specified values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAltNames(Output<List<String>> subjectAltNames) {
             $.subjectAltNames = subjectAltNames;
             return this;
         }
 
+        /**
+         * @param subjectAltNames A list of alternate names to verify the subject identity in the certificate.
+         * If specified, the client will verify that the server certificate&#39;s subject
+         * alt name matches one of the specified values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAltNames(List<String> subjectAltNames) {
             return subjectAltNames(Output.of(subjectAltNames));
         }
 
+        /**
+         * @param subjectAltNames A list of alternate names to verify the subject identity in the certificate.
+         * If specified, the client will verify that the server certificate&#39;s subject
+         * alt name matches one of the specified values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAltNames(String... subjectAltNames) {
             return subjectAltNames(List.of(subjectAltNames));
         }

@@ -23,6 +23,10 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends com.pulumi.r
     @Import(name="backupRunId", required=true)
     private Output<Integer> backupRunId;
 
+    /**
+     * @return The ID of the backup run to restore from.
+     * 
+     */
     public Output<Integer> backupRunId() {
         return this.backupRunId;
     }
@@ -35,6 +39,11 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends com.pulumi.r
     @Import(name="instanceId")
     private @Nullable Output<String> instanceId;
 
+    /**
+     * @return The ID of the instance that the backup was taken from. If left empty,
+     * this instance&#39;s ID will be used.
+     * 
+     */
     public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -46,6 +55,10 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends com.pulumi.r
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The full project ID of the source instance.`
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -76,29 +89,67 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends com.pulumi.r
             $ = new DatabaseInstanceRestoreBackupContextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupRunId The ID of the backup run to restore from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupRunId(Output<Integer> backupRunId) {
             $.backupRunId = backupRunId;
             return this;
         }
 
+        /**
+         * @param backupRunId The ID of the backup run to restore from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupRunId(Integer backupRunId) {
             return backupRunId(Output.of(backupRunId));
         }
 
+        /**
+         * @param instanceId The ID of the instance that the backup was taken from. If left empty,
+         * this instance&#39;s ID will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId The ID of the instance that the backup was taken from. If left empty,
+         * this instance&#39;s ID will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param project The full project ID of the source instance.`
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The full project ID of the source instance.`
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

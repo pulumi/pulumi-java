@@ -25,6 +25,12 @@ public final class GetInstanceTemplateScheduling extends com.pulumi.resources.In
     @Import(name="automaticRestart", required=true)
     private Boolean automaticRestart;
 
+    /**
+     * @return Specifies whether the instance should be
+     * automatically restarted if it is terminated by Compute Engine (not
+     * terminated by a user). This defaults to true.
+     * 
+     */
     public Boolean automaticRestart() {
         return this.automaticRestart;
     }
@@ -47,6 +53,14 @@ public final class GetInstanceTemplateScheduling extends com.pulumi.resources.In
     @Import(name="nodeAffinities", required=true)
     private List<GetInstanceTemplateSchedulingNodeAffinity> nodeAffinities;
 
+    /**
+     * @return Specifies node affinities or anti-affinities
+     * to determine which sole-tenant nodes your instances and managed instance
+     * groups will use as host systems. Read more on sole-tenant node creation
+     * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
+     * Structure documented below.
+     * 
+     */
     public List<GetInstanceTemplateSchedulingNodeAffinity> nodeAffinities() {
         return this.nodeAffinities;
     }
@@ -59,6 +73,11 @@ public final class GetInstanceTemplateScheduling extends com.pulumi.resources.In
     @Import(name="onHostMaintenance", required=true)
     private String onHostMaintenance;
 
+    /**
+     * @return Defines the maintenance behavior for this
+     * instance.
+     * 
+     */
     public String onHostMaintenance() {
         return this.onHostMaintenance;
     }
@@ -72,6 +91,12 @@ public final class GetInstanceTemplateScheduling extends com.pulumi.resources.In
     @Import(name="preemptible", required=true)
     private Boolean preemptible;
 
+    /**
+     * @return Allows instance to be preempted. This defaults to
+     * false. Read more on this
+     * [here](https://cloud.google.com/compute/docs/instances/preemptible).
+     * 
+     */
     public Boolean preemptible() {
         return this.preemptible;
     }
@@ -104,6 +129,14 @@ public final class GetInstanceTemplateScheduling extends com.pulumi.resources.In
             $ = new GetInstanceTemplateScheduling(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automaticRestart Specifies whether the instance should be
+         * automatically restarted if it is terminated by Compute Engine (not
+         * terminated by a user). This defaults to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticRestart(Boolean automaticRestart) {
             $.automaticRestart = automaticRestart;
             return this;
@@ -114,20 +147,55 @@ public final class GetInstanceTemplateScheduling extends com.pulumi.resources.In
             return this;
         }
 
+        /**
+         * @param nodeAffinities Specifies node affinities or anti-affinities
+         * to determine which sole-tenant nodes your instances and managed instance
+         * groups will use as host systems. Read more on sole-tenant node creation
+         * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
+         * Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinities(List<GetInstanceTemplateSchedulingNodeAffinity> nodeAffinities) {
             $.nodeAffinities = nodeAffinities;
             return this;
         }
 
+        /**
+         * @param nodeAffinities Specifies node affinities or anti-affinities
+         * to determine which sole-tenant nodes your instances and managed instance
+         * groups will use as host systems. Read more on sole-tenant node creation
+         * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
+         * Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinities(GetInstanceTemplateSchedulingNodeAffinity... nodeAffinities) {
             return nodeAffinities(List.of(nodeAffinities));
         }
 
+        /**
+         * @param onHostMaintenance Defines the maintenance behavior for this
+         * instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onHostMaintenance(String onHostMaintenance) {
             $.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
+        /**
+         * @param preemptible Allows instance to be preempted. This defaults to
+         * false. Read more on this
+         * [here](https://cloud.google.com/compute/docs/instances/preemptible).
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptible(Boolean preemptible) {
             $.preemptible = preemptible;
             return this;

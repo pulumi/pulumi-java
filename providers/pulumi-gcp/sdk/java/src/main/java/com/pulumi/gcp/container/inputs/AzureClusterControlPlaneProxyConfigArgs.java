@@ -20,6 +20,10 @@ public final class AzureClusterControlPlaneProxyConfigArgs extends com.pulumi.re
     @Import(name="resourceGroupId", required=true)
     private Output<String> resourceGroupId;
 
+    /**
+     * @return The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;`
+     * 
+     */
     public Output<String> resourceGroupId() {
         return this.resourceGroupId;
     }
@@ -31,6 +35,10 @@ public final class AzureClusterControlPlaneProxyConfigArgs extends com.pulumi.re
     @Import(name="secretId", required=true)
     private Output<String> secretId;
 
+    /**
+     * @return The URL the of the proxy setting secret with its version. Secret ids are formatted as `https:&lt;key-vault-name&gt;.vault.azure.net/secrets/&lt;secret-name&gt;/&lt;secret-version&gt;`.
+     * 
+     */
     public Output<String> secretId() {
         return this.secretId;
     }
@@ -60,20 +68,44 @@ public final class AzureClusterControlPlaneProxyConfigArgs extends com.pulumi.re
             $ = new AzureClusterControlPlaneProxyConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupId The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupId(Output<String> resourceGroupId) {
             $.resourceGroupId = resourceGroupId;
             return this;
         }
 
+        /**
+         * @param resourceGroupId The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupId(String resourceGroupId) {
             return resourceGroupId(Output.of(resourceGroupId));
         }
 
+        /**
+         * @param secretId The URL the of the proxy setting secret with its version. Secret ids are formatted as `https:&lt;key-vault-name&gt;.vault.azure.net/secrets/&lt;secret-name&gt;/&lt;secret-version&gt;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretId(Output<String> secretId) {
             $.secretId = secretId;
             return this;
         }
 
+        /**
+         * @param secretId The URL the of the proxy setting secret with its version. Secret ids are formatted as `https:&lt;key-vault-name&gt;.vault.azure.net/secrets/&lt;secret-name&gt;/&lt;secret-version&gt;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretId(String secretId) {
             return secretId(Output.of(secretId));
         }

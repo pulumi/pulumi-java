@@ -21,6 +21,10 @@ public final class GetCaCertsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="instance", required=true)
     private String instance;
 
+    /**
+     * @return The name or self link of the instance.
+     * 
+     */
     public String instance() {
         return this.instance;
     }
@@ -32,6 +36,10 @@ public final class GetCaCertsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If `project` is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -61,11 +69,23 @@ public final class GetCaCertsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCaCertsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instance The name or self link of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If `project` is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;

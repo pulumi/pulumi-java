@@ -13,40 +13,40 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFolderResult {
     /**
-     * Timestamp when the Organization was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * @return Timestamp when the Organization was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     private final String createTime;
     /**
-     * The folder&#39;s display name.
+     * @return The folder&#39;s display name.
      * 
      */
     private final String displayName;
     private final String folder;
     private final String folderId;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The Folder&#39;s current lifecycle state.
+     * @return The Folder&#39;s current lifecycle state.
      * 
      */
     private final String lifecycleState;
     private final @Nullable Boolean lookupOrganization;
     /**
-     * The resource name of the Folder in the form `folders/{folder_id}`.
+     * @return The resource name of the Folder in the form `folders/{folder_id}`.
      * 
      */
     private final String name;
     /**
-     * If `lookup_organization` is enable, the resource name of the Organization that the folder belongs.
+     * @return If `lookup_organization` is enable, the resource name of the Organization that the folder belongs.
      * 
      */
     private final String organization;
     /**
-     * The resource name of the parent Folder or Organization.
+     * @return The resource name of the parent Folder or Organization.
      * 
      */
     private final String parent;
@@ -76,16 +76,16 @@ public final class GetFolderResult {
     }
 
     /**
-     * Timestamp when the Organization was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * @return Timestamp when the Organization was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The folder&#39;s display name.
+     * @return The folder&#39;s display name.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -96,16 +96,16 @@ public final class GetFolderResult {
         return this.folderId;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Folder&#39;s current lifecycle state.
+     * @return The Folder&#39;s current lifecycle state.
      * 
-    */
+     */
     public String lifecycleState() {
         return this.lifecycleState;
     }
@@ -113,23 +113,23 @@ public final class GetFolderResult {
         return Optional.ofNullable(this.lookupOrganization);
     }
     /**
-     * The resource name of the Folder in the form `folders/{folder_id}`.
+     * @return The resource name of the Folder in the form `folders/{folder_id}`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * If `lookup_organization` is enable, the resource name of the Organization that the folder belongs.
+     * @return If `lookup_organization` is enable, the resource name of the Organization that the folder belongs.
      * 
-    */
+     */
     public String organization() {
         return this.organization;
     }
     /**
-     * The resource name of the parent Folder or Organization.
+     * @return The resource name of the parent Folder or Organization.
      * 
-    */
+     */
     public String parent() {
         return this.parent;
     }

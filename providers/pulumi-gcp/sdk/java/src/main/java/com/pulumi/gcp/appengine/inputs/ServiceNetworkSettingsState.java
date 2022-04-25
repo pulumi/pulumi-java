@@ -24,6 +24,11 @@ public final class ServiceNetworkSettingsState extends com.pulumi.resources.Reso
     @Import(name="networkSettings")
     private @Nullable Output<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings;
 
+    /**
+     * @return Ingress settings for this service. Will apply to all versions.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ServiceNetworkSettingsNetworkSettingsGetArgs>> networkSettings() {
         return Optional.ofNullable(this.networkSettings);
     }
@@ -36,6 +41,11 @@ public final class ServiceNetworkSettingsState extends com.pulumi.resources.Reso
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -47,6 +57,10 @@ public final class ServiceNetworkSettingsState extends com.pulumi.resources.Reso
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return The name of the service these settings apply to.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -77,29 +91,69 @@ public final class ServiceNetworkSettingsState extends com.pulumi.resources.Reso
             $ = new ServiceNetworkSettingsState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkSettings Ingress settings for this service. Will apply to all versions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSettings(@Nullable Output<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings) {
             $.networkSettings = networkSettings;
             return this;
         }
 
+        /**
+         * @param networkSettings Ingress settings for this service. Will apply to all versions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSettings(ServiceNetworkSettingsNetworkSettingsGetArgs networkSettings) {
             return networkSettings(Output.of(networkSettings));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param service The name of the service these settings apply to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service The name of the service these settings apply to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

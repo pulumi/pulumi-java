@@ -62,6 +62,10 @@ public final class GetProjectProject extends com.pulumi.resources.InvokeArgs {
     @Import(name="projectId", required=true)
     private String projectId;
 
+    /**
+     * @return The project id of the project.
+     * 
+     */
     public String projectId() {
         return this.projectId;
     }
@@ -126,6 +130,12 @@ public final class GetProjectProject extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param projectId The project id of the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             $.projectId = projectId;
             return this;

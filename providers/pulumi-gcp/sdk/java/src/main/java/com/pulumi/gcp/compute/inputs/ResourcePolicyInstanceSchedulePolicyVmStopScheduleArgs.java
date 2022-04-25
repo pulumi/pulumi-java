@@ -20,6 +20,10 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs extend
     @Import(name="schedule", required=true)
     private Output<String> schedule;
 
+    /**
+     * @return Specifies the frequency for the operation, using the unix-cron format.
+     * 
+     */
     public Output<String> schedule() {
         return this.schedule;
     }
@@ -48,11 +52,23 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs extend
             $ = new ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param schedule Specifies the frequency for the operation, using the unix-cron format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(Output<String> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Specifies the frequency for the operation, using the unix-cron format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             return schedule(Output.of(schedule));
         }

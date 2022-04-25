@@ -25,6 +25,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="kmsWrapped")
     private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedArgs> kmsWrapped;
 
+    /**
+     * @return Kms wrapped key
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedArgs>> kmsWrapped() {
         return Optional.ofNullable(this.kmsWrapped);
     }
@@ -37,6 +42,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="transient")
     private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientArgs> transient_;
 
+    /**
+     * @return Transient crypto key
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientArgs>> transient_() {
         return Optional.ofNullable(this.transient_);
     }
@@ -49,6 +59,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="unwrapped")
     private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedArgs> unwrapped;
 
+    /**
+     * @return Unwrapped crypto key
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedArgs>> unwrapped() {
         return Optional.ofNullable(this.unwrapped);
     }
@@ -79,29 +94,71 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsWrapped Kms wrapped key
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsWrapped(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedArgs> kmsWrapped) {
             $.kmsWrapped = kmsWrapped;
             return this;
         }
 
+        /**
+         * @param kmsWrapped Kms wrapped key
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsWrapped(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedArgs kmsWrapped) {
             return kmsWrapped(Output.of(kmsWrapped));
         }
 
+        /**
+         * @param transient_ Transient crypto key
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transient_(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientArgs> transient_) {
             $.transient_ = transient_;
             return this;
         }
 
+        /**
+         * @param transient_ Transient crypto key
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transient_(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientArgs transient_) {
             return transient_(Output.of(transient_));
         }
 
+        /**
+         * @param unwrapped Unwrapped crypto key
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unwrapped(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedArgs> unwrapped) {
             $.unwrapped = unwrapped;
             return this;
         }
 
+        /**
+         * @param unwrapped Unwrapped crypto key
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unwrapped(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedArgs unwrapped) {
             return unwrapped(Output.of(unwrapped));
         }
