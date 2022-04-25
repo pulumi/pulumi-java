@@ -19,16 +19,20 @@ You will need:
 
 ### Maven
 
-TODO
+See: [../maven/README.md]
 
 ### Gradle
 
 Set `GPR_USER` and `GPR_TOKEN` environment variables to your GitHub
-username and Personal Access Token respectively.
+username and Personal Access Token respectively, e.g.:
+```shell
+export GPR_USER=myghusername
+export GPR_TOKEN=<my github personal access token>
+```
 
 Add this to `build.gradle`:
 
-```
+```groovy
 repositories {
     maven {
         url = uri("https://maven.pkg.github.com/pulumi/pulumi-java")
@@ -43,7 +47,7 @@ repositories {
 
 You can now reference dependencies such as:
 
-```
+```groovy
 dependencies {
     implementation 'com.pulumi:pulumi:0.0.1'
 }
@@ -51,9 +55,7 @@ dependencies {
 
 ## Publishing Artifacts
 
-We intend to setup automatic publishing as a GitHub action reacting to
-a Git tag event.
-
+We intend to set up automatic publishing as a GitHub action reacting to a Git tag event.
 
 ## References
 
